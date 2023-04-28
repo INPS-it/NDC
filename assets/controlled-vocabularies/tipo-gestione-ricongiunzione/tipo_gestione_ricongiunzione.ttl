@@ -1,0 +1,659 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix inpsvoc: <https://w3id.org/italia/controlled-vocabulary/OP21/> .
+@prefix ndc: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix tgest: <https://w3id.org/italia/controlled-vocabulary/OP21/tipo_gestione_ricongiunzione/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/OP21/distribution/TGEST_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo-gestione-ricongiunzione> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo-gestione-ricongiunzione/tipo_gestione_ricongiunzione.csv> ;
+    dct:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di gestione di una pratica di ricongiunzione adottato dall'INPS"@it,
+        "This is the distribution in CSV of the management type of an aggregation application adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CSV distribution of the management type of an aggregation application adopted by INPS controlled vocabulary"@en,
+        "Distribuzione CSV del vocabolario controllato sul tipo di gestione di una pratica di ricongiunzione adottato dall'INPS"@it .
+
+<https://w3id.org/italia/data/OP21/distribution/TGEST_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo-gestione-ricongiunzione> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo-gestione-ricongiunzione/tipo_gestione_ricongiunzione.json> ;
+    dct:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di gestione di una pratica di ricongiunzione adottato dall'INPS"@it,
+        "This is the distribution in JSON_LD of the management type of an aggregation application adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di gestione di una pratica di ricongiunzione adottato dall'INPS"@it,
+        "JSON_LD distribution of the management type of an aggregation application adopted by INPS controlled vocabulary"@en .
+
+<https://w3id.org/italia/data/OP21/distribution/TGEST_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo-gestione-ricongiunzione> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo-gestione-ricongiunzione/tipo_gestione_ricongiunzione.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di gestione di una pratica di ricongiunzione adottato dall'INPS"@it,
+        "This is the distribution in RDF/turtle of the management type of an aggregation application adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di gestione di una pratica di ricongiunzione adottato dall'INPS"@it,
+        "RDF/Turtle distribution of the management type of an aggregation application adopted by INPS controlled vocabulary"@en .
+
+<https://w3id.org/italia/data/OP21/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/data/OP21/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+inpsvoc:tipo_gestione_ricongiunzione a adms:Asset,
+        dcat:Dataset,
+        skos:ConceptScheme ;
+    rdfs:label "This is the controlled vocabulary of the management type of an aggregation application adopted by INPS"@en,
+        "Vocabolario Controllato sul tipo di gestione di una pratica di ricongiunzione adottato dall'INPS"@it ;
+    skos:prefLabel "Vocabolario Controllato sul tipo di gestione di una pratica di ricongiunzione adottato dall'INPS"@it ;
+    rdfs:comment "Indica la cassa o il fondo pensionistico in cui il datore di lavoro ha versato i contributi"@it,
+        "Pension fund in which the employer paid contributions"@en ;
+    owl:versionInfo "0.3" ;
+    rdfs:isDefinedBy inpsvoc:tipo_gestione_ricongiunzione ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/data/OP21/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/data/OP21/distribution/TGEST_CSV>,
+        <https://w3id.org/italia/data/OP21/distribution/TGEST_JSON_LD>,
+        <https://w3id.org/italia/data/OP21/distribution/TGEST_RDF_TURTLE> ;
+    dcat:keyword "aggregation application"@en,
+        "ente"@it,
+        "fondo"@it,
+        "fund"@en,
+        "gestione"@it,
+        "inps"@it,
+        "institution"@en,
+        "management"@en,
+        "pratica di ricongiunzione"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/ECON>,
+        <http://publications.europa.eu/resource/authority/data-theme/GOVE>,
+        <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/data/OP21/organization/inps> ;
+    dct:description "Indica la cassa o il fondo pensionistico in cui il datore di lavoro ha versato i contributi"@it,
+        "Pension fund in which the employer paid contributions"@en ;
+    dct:identifier "https://w3id.org/italia/controlled-vocabulary/OP21/tipo_gestione_ricongiunzione" ;
+    dct:issued "2022-12-22"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2023-04-27"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/data/OP21/organization/inps> ;
+    dct:relation inpsvoc:tipo_ricongiunzione ;
+    dct:rightsHolder <https://w3id.org/italia/data/OP21/organization/inps> ;
+    dct:subject <http://eurovoc.europa.eu/878>,
+        <http://eurovoc.europa.eu/1154>,
+        <http://eurovoc.europa.eu/100212>,
+        <http://eurovoc.europa.eu/100236> ;
+    dct:title "Controlled vocabulary of the management type of an aggregation application adopted by INPS"@en,
+        "Vocabolario Controllato sul tipo di gestione di una pratica di ricongiunzione adottato dall'INPS"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    ndc:keyConcept "tipo_gestione_ricongiunzione" ;
+    skos:hasTopConcept tgest:282,
+        tgest:1067,
+        tgest:1170,
+        tgest:1173,
+        tgest:1178,
+        tgest:1180,
+        tgest:1182,
+        tgest:1186,
+        tgest:9931,
+        tgest:9934,
+        tgest:9935,
+        tgest:9936,
+        tgest:9937,
+        tgest:9939,
+        tgest:9940,
+        tgest:9941,
+        tgest:9942,
+        tgest:9943,
+        tgest:9944,
+        tgest:9950,
+        tgest:9952,
+        tgest:ART,
+        tgest:CAMERA,
+        tgest:CDCM,
+        tgest:CLERO,
+        tgest:COCO_OLD,
+        tgest:COM,
+        tgest:CORCOST,
+        tgest:CPDEL,
+        tgest:CPI,
+        tgest:CPS,
+        tgest:CPUG,
+        tgest:CTPS,
+        tgest:EXT,
+        <https://w3id.org/italia/controlled-vocabulary/OP21/tipo_gestione_ricongiunzione/F.S.>,
+        tgest:FPLD,
+        tgest:FSDI,
+        tgest:FSEL,
+        tgest:FSET,
+        tgest:FSFS,
+        tgest:FSGI1,
+        tgest:FSIDA,
+        tgest:FSIES,
+        tgest:FSIGA,
+        tgest:FSPT,
+        tgest:FSTT,
+        tgest:FSVL,
+        <https://w3id.org/italia/controlled-vocabulary/OP21/tipo_gestione_ricongiunzione/I.C.>,
+        tgest:PALS,
+        tgest:PEAU,
+        tgest:PME,
+        tgest:PMI,
+        tgest:PMM,
+        tgest:SENATO ;
+    xkos:numberOfLevels "1" .
+
+tgest:282 a skos:Concept ;
+    rdfs:label "Segretariato Generale della Presidenza della Repubblica"@it ;
+    skos:prefLabel "Segretariato Generale della Presidenza della Repubblica"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "282" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "282" ;
+    xkos:depth 1 .
+
+tgest:1067 a skos:Concept ;
+    rdfs:label "Fondo Pensioni Sicilia - trattamento di quiescenza del personale regionale"@it ;
+    skos:prefLabel "Fondo Pensioni Sicilia - trattamento di quiescenza del personale regionale"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "1067" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "1067" ;
+    xkos:depth 1 .
+
+tgest:1170 a skos:Concept ;
+    rdfs:label "ENPAP Ente Nazionale Previdenza e Assistenza Psicologi"@it ;
+    skos:prefLabel "ENPAP Ente Nazionale Previdenza e Assistenza Psicologi"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "1170" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "1170" ;
+    xkos:depth 1 .
+
+tgest:1173 a skos:Concept ;
+    rdfs:label "ENPAPI Ente Nazionale Previdenza e Assistenza Professione Infermieristica"@it ;
+    skos:prefLabel "ENPAPI Ente Nazionale Previdenza e Assistenza Professione Infermieristica"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "1173" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "1173" ;
+    xkos:depth 1 .
+
+tgest:1178 a skos:Concept ;
+    rdfs:label "EPPI Ente di Previdenza dei Periti Industriali"@it ;
+    skos:prefLabel "EPPI Ente di Previdenza dei Periti Industriali"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "1178" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "1178" ;
+    xkos:depth 1 .
+
+tgest:1180 a skos:Concept ;
+    rdfs:label "ENPAIA Gestioni Separate Periti Agrari e Agrotecnici"@it ;
+    skos:prefLabel "ENPAIA Gestioni Separate Periti Agrari e Agrotecnici"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "1180" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "1180" ;
+    xkos:depth 1 .
+
+tgest:1182 a skos:Concept ;
+    rdfs:label "ENPAB Ente Nazionale di Previdenza e Assistenza Biologi"@it ;
+    skos:prefLabel "ENPAB Ente Nazionale di Previdenza e Assistenza Biologi"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "1182" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "1182" ;
+    xkos:depth 1 .
+
+tgest:1186 a skos:Concept ;
+    rdfs:label "EPAP Ente Nazionale di Previdenza e Assistenza Pluricategoriale"@it ;
+    skos:prefLabel "EPAP Ente Nazionale di Previdenza e Assistenza Pluricategoriale"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "1186" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "1186" ;
+    xkos:depth 1 .
+
+tgest:9931 a skos:Concept ;
+    rdfs:label "INPGI Istituto Nazionale Previdenza e assistenza iscritti all'Albo Giornalisti"@it ;
+    skos:prefLabel "INPGI Istituto Nazionale Previdenza e assistenza iscritti all'Albo Giornalisti"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9931" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9931" ;
+    xkos:depth 1 .
+
+tgest:9934 a skos:Concept ;
+    rdfs:label "INARCASSA Cassa Nazionale Previdenza Assistenza Ingegneri e Architetti"@it ;
+    skos:prefLabel "INARCASSA Cassa Nazionale Previdenza Assistenza Ingegneri e Architetti"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9934" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9934" ;
+    xkos:depth 1 .
+
+tgest:9935 a skos:Concept ;
+    rdfs:label "Cassa Nazionale di Previdenza e Assistenza Forense"@it ;
+    skos:prefLabel "Cassa Nazionale di Previdenza e Assistenza Forense"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9935" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9935" ;
+    xkos:depth 1 .
+
+tgest:9936 a skos:Concept ;
+    rdfs:label "ENPAM Ente Nazionale Previdenza e Assistenza Medici e odontoiatri"@it ;
+    skos:prefLabel "ENPAM Ente Nazionale Previdenza e Assistenza Medici e odontoiatri"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9936" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9936" ;
+    xkos:depth 1 .
+
+tgest:9937 a skos:Concept ;
+    rdfs:label "ENPAV Ente Nazionale Previdenza e Assistenza Veterinari"@it ;
+    skos:prefLabel "ENPAV Ente Nazionale Previdenza e Assistenza Veterinari"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9937" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9937" ;
+    xkos:depth 1 .
+
+tgest:9939 a skos:Concept ;
+    rdfs:label "Cassa Italiana di Previdenza e Assistenza dei Geometri"@it ;
+    skos:prefLabel "Cassa Italiana di Previdenza e Assistenza dei Geometri"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9939" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9939" ;
+    xkos:depth 1 .
+
+tgest:9940 a skos:Concept ;
+    rdfs:label "Cassa Nazionale Previdenza Assistenza Ragionieri e Periti Commerciali"@it ;
+    skos:prefLabel "Cassa Nazionale Previdenza Assistenza Ragionieri e Periti Commerciali"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9940" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9940" ;
+    xkos:depth 1 .
+
+tgest:9941 a skos:Concept ;
+    rdfs:label "ENPAF Ente Nazionale di previdenza e Assistenza per i Farmacisti"@it ;
+    skos:prefLabel "ENPAF Ente Nazionale di previdenza e Assistenza per i Farmacisti"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9941" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9941" ;
+    xkos:depth 1 .
+
+tgest:9942 a skos:Concept ;
+    rdfs:label "CNPADC Cassa Nazionale Previdenza assistenza Dottori Commercialisti"@it ;
+    skos:prefLabel "CNPADC Cassa Nazionale Previdenza assistenza Dottori Commercialisti"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9942" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9942" ;
+    xkos:depth 1 .
+
+tgest:9943 a skos:Concept ;
+    rdfs:label "ENPACL Ente Nazionale Previdenza Assistenza Consulenti del Lavoro"@it ;
+    skos:prefLabel "ENPACL Ente Nazionale Previdenza Assistenza Consulenti del Lavoro"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9943" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9943" ;
+    xkos:depth 1 .
+
+tgest:9944 a skos:Concept ;
+    rdfs:label "Cassa Nazionale del Notariato"@it ;
+    skos:prefLabel "Cassa Nazionale del Notariato"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9944" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9944" ;
+    xkos:depth 1 .
+
+tgest:9950 a skos:Concept ;
+    rdfs:label "ENASARCO Ente Nazionale Assistenza Agenti e Rappresentanti di Commercio"@it ;
+    skos:prefLabel "ENASARCO Ente Nazionale Assistenza Agenti e Rappresentanti di Commercio"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9950" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9950" ;
+    xkos:depth 1 .
+
+tgest:9952 a skos:Concept ;
+    rdfs:label "ENPAIA Ente Nazionale Previdenza Addetti e Impiegati in Agricoltura"@it ;
+    skos:prefLabel "ENPAIA Ente Nazionale Previdenza Addetti e Impiegati in Agricoltura"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "9952" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "9952" ;
+    xkos:depth 1 .
+
+tgest:ART a skos:Concept ;
+    rdfs:label "Fondo lavoratori autonomi artigiani"@it ;
+    skos:prefLabel "Fondo lavoratori autonomi artigiani"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "ART" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "ART" ;
+    xkos:depth 1 .
+
+tgest:CAMERA a skos:Concept ;
+    rdfs:label "Camera dei deputati"@it ;
+    skos:prefLabel "Camera dei deputati"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "CAMERA" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "CAMERA" ;
+    xkos:depth 1 .
+
+tgest:CDCM a skos:Concept ;
+    rdfs:label "Fondo Coltivatori Diretti, Coloni, Mezzadri e imprenditori agricoli professionali"@it ;
+    skos:prefLabel "Fondo Coltivatori Diretti, Coloni, Mezzadri e imprenditori agricoli professionali"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "CDCM" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "CDCM" ;
+    xkos:depth 1 .
+
+tgest:CLERO a skos:Concept ;
+    rdfs:label "Fondo Clero"@it ;
+    skos:prefLabel "Fondo Clero"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "CLERO" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "CLERO" ;
+    xkos:depth 1 .
+
+tgest:COCO_OLD a skos:Concept ;
+    rdfs:label "Gestione separata per lavoratori parasubordinati e liberi professionisti"@it ;
+    skos:prefLabel "Gestione separata per lavoratori parasubordinati e liberi professionisti"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "COCO_OLD" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "COCO_OLD" ;
+    xkos:depth 1 .
+
+tgest:COM a skos:Concept ;
+    rdfs:label "Fondo lavoratori autonomi commercianti"@it ;
+    skos:prefLabel "Fondo lavoratori autonomi commercianti"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "COM" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "COM" ;
+    xkos:depth 1 .
+
+tgest:CORCOST a skos:Concept ;
+    rdfs:label "Corte Cosituzionale"@it ;
+    skos:prefLabel "Corte Cosituzionale"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "CORCOST" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "CORCOST" ;
+    xkos:depth 1 .
+
+tgest:CPDEL a skos:Concept ;
+    rdfs:label "Cassa Pensione Dipendenti Enti Locali"@it ;
+    skos:prefLabel "Cassa Pensione Dipendenti Enti Locali"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "CPDEL" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "CPDEL" ;
+    xkos:depth 1 .
+
+tgest:CPI a skos:Concept ;
+    rdfs:label "Cassa Pensioni Insegnanti"@it ;
+    skos:prefLabel "Cassa Pensioni Insegnanti"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "CPI" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "CPI" ;
+    xkos:depth 1 .
+
+tgest:CPS a skos:Concept ;
+    rdfs:label "Cassa Pensioni Sanitari"@it ;
+    skos:prefLabel "Cassa Pensioni Sanitari"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "CPS" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "CPS" ;
+    xkos:depth 1 .
+
+tgest:CPUG a skos:Concept ;
+    rdfs:label "Cassa Pensioni Ufficiali Giudiziari"@it ;
+    skos:prefLabel "Cassa Pensioni Ufficiali Giudiziari"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "CPUG" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "CPUG" ;
+    xkos:depth 1 .
+
+tgest:CTPS a skos:Concept ;
+    rdfs:label "Stato ovvero Cassa Trattamenti Pensionistici Statali"@it ;
+    skos:prefLabel "Stato ovvero Cassa Trattamenti Pensionistici Statali"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "CTPS" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "CTPS" ;
+    xkos:depth 1 .
+
+tgest:EXT a skos:Concept ;
+    rdfs:label "Contribuzione estera dei lavoratori migranti da certificazioni / sistema EESSI"@it ;
+    skos:prefLabel "Contribuzione estera dei lavoratori migranti da certificazioni / sistema EESSI"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "EXT" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "EXT" ;
+    xkos:depth 1 .
+
+<https://w3id.org/italia/controlled-vocabulary/OP21/tipo_gestione_ricongiunzione/F.S.> a skos:Concept ;
+    rdfs:label "Fondo sostitutivo"@it ;
+    skos:prefLabel "Fondo sostitutivo"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "F.S." ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "F.S." ;
+    xkos:depth 1 .
+
+tgest:FPLD a skos:Concept ;
+    rdfs:label "Fondo Pensioni Lavoratori Dipendenti"@it ;
+    skos:prefLabel "Fondo Pensioni Lavoratori Dipendenti"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FPLD" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FPLD" ;
+    xkos:depth 1 .
+
+tgest:FSDI a skos:Concept ;
+    rdfs:label "Fondo speciale sostitutivo Dirigenti di aziende industriali ex INPDAI"@it ;
+    skos:prefLabel "Fondo speciale sostitutivo Dirigenti di aziende industriali ex INPDAI"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FSDI" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FSDI" ;
+    xkos:depth 1 .
+
+tgest:FSEL a skos:Concept ;
+    rdfs:label "Fondo speciale sostitutivo degli Elettrici"@it ;
+    skos:prefLabel "Fondo speciale sostitutivo degli Elettrici"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FSEL" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FSEL" ;
+    xkos:depth 1 .
+
+tgest:FSET a skos:Concept ;
+    rdfs:label "Fondo speciale sostitutivo degli Autoferrotranvieri"@it ;
+    skos:prefLabel "Fondo speciale sostitutivo degli Autoferrotranvieri"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FSET" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FSET" ;
+    xkos:depth 1 .
+
+tgest:FSFS a skos:Concept ;
+    rdfs:label "Fondo speciale Ferrovie dello Stato"@it ;
+    skos:prefLabel "Fondo speciale Ferrovie dello Stato"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FSFS" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FSFS" ;
+    xkos:depth 1 .
+
+tgest:FSGI1 a skos:Concept ;
+    rdfs:label "Fondo Giornalisti dipendenti ex INPGI 1"@it ;
+    skos:prefLabel "Fondo Giornalisti dipendenti ex INPGI 1"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FSGI1" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FSGI1" ;
+    xkos:depth 1 .
+
+tgest:FSIDA a skos:Concept ;
+    rdfs:label "Fondo speciale integrativo dei Dazieri"@it ;
+    skos:prefLabel "Fondo speciale integrativo dei Dazieri"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FSIDA" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FSIDA" ;
+    xkos:depth 1 .
+
+tgest:FSIES a skos:Concept ;
+    rdfs:label "Fondo speciale integrativo degli Esattoriali"@it ;
+    skos:prefLabel "Fondo speciale integrativo degli Esattoriali"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FSIES" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FSIES" ;
+    xkos:depth 1 .
+
+tgest:FSIGA a skos:Concept ;
+    rdfs:label "Fondo speciale integrativo dei lavoratori delle Aziende del gas"@it ;
+    skos:prefLabel "Fondo speciale integrativo dei lavoratori delle Aziende del gas"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FSIGA" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FSIGA" ;
+    xkos:depth 1 .
+
+tgest:FSPT a skos:Concept ;
+    rdfs:label "Fondo speciale Quiescenza Poste ex IPOST"@it ;
+    skos:prefLabel "Fondo speciale Quiescenza Poste ex IPOST"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FSPT" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FSPT" ;
+    xkos:depth 1 .
+
+tgest:FSTT a skos:Concept ;
+    rdfs:label "Fondo speciale sostitutivo dei Telefonici"@it ;
+    skos:prefLabel "Fondo speciale sostitutivo dei Telefonici"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FSTT" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FSTT" ;
+    xkos:depth 1 .
+
+tgest:FSVL a skos:Concept ;
+    rdfs:label "Fondo speciale sostitutivo Volo"@it ;
+    skos:prefLabel "Fondo speciale sostitutivo Volo"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "FSVL" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "FSVL" ;
+    xkos:depth 1 .
+
+<https://w3id.org/italia/controlled-vocabulary/OP21/tipo_gestione_ricongiunzione/I.C.> a skos:Concept ;
+    rdfs:label "Fondo speciale sostitutivo dei dipendenti degli Enti creditizi"@it ;
+    skos:prefLabel "Fondo speciale sostitutivo dei dipendenti degli Enti creditizi"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "I.C." ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "I.C." ;
+    xkos:depth 1 .
+
+tgest:PALS a skos:Concept ;
+    rdfs:label "Lavoratori dello spettacolo e sportivi professionisti"@it ;
+    skos:prefLabel "Lavoratori dello spettacolo e sportivi professionisti"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "PALS" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "PALS" ;
+    xkos:depth 1 .
+
+tgest:PEAU a skos:Concept ;
+    rdfs:label "Fondo pescatori autonomi"@it ;
+    skos:prefLabel "Fondo pescatori autonomi"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "PEAU" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "PEAU" ;
+    xkos:depth 1 .
+
+tgest:PME a skos:Concept ;
+    rdfs:label "Previdenza marinara navigazione estera"@it ;
+    skos:prefLabel "Previdenza marinara navigazione estera"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "PME" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "PME" ;
+    xkos:depth 1 .
+
+tgest:PMI a skos:Concept ;
+    rdfs:label "Previdenza marinara"@it ;
+    skos:prefLabel "Previdenza marinara"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "PMI" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "PMI" ;
+    xkos:depth 1 .
+
+tgest:PMM a skos:Concept ;
+    rdfs:label "Previdenza marinara CEM"@it ;
+    skos:prefLabel "Previdenza marinara CEM"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "PMM" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "PMM" ;
+    xkos:depth 1 .
+
+tgest:SENATO a skos:Concept ;
+    rdfs:label "Senato della Repubblica"@it ;
+    skos:prefLabel "Senato della Repubblica"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "SENATO" ;
+    skos:inScheme inpsvoc:tipo_gestione_ricongiunzione ;
+    skos:notation "SENATO" ;
+    xkos:depth 1 .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

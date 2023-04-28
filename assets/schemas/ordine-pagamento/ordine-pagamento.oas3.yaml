@@ -1,0 +1,221 @@
+openapi: 3.0.3
+info:
+  title: Schema dell'Ordine di Pagamento
+  version: 202301.10.00
+  x-summary: Schema dell'ordine di pagamento compatibile con l'Ontologia INPS relativa a Riscatti, Ricongiunzioni, Rendite e Lavoratore Domestico.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+   L'Ordine di Pagamento è la materializzazione di un Pagamento eseguito tramite un Servizio Di Pagamento erogato da un PSP (Prestatore Servizi Pagamento).
+   È legato univocamente alle transazioni di denaro che addebitano e accreditano la somma di denaro trasferita tramite l'ordine di pagamento.
+   La metadatazione semantica degli schemi si basa sul documento
+   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
+   che introduce le keyword x-jsonld-type e x-jsonld-context.
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdOrdinePagamento:
+      type: string
+      description:
+        Campo tecnico finalizzato all'individuazione univoca di ogni record dell'Ordine di Pagamento.
+        Associato a https://w3id.org/italia/onto/OP21/identificatoreOrdinePagamento.
+      example: '987654321'
+      maxLength: 50
+      minLength: 1
+
+    OrdinePagamento:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/onto/OP21/OrdineDiPagamento
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/onto/OP21/"
+        codice_ordine_pagamento: identificatoreOrdinePagamento
+        data_ordine_pagamento: dataOrdinePagamento
+        utilizza_servizio_pagamento:
+          "@id": utilizzaServizioDiPagamento
+        esegue_accredito:
+          "@id": esegueAccredito
+        esegue_addebito:
+          "@id": esegueAddebito
+      additionalProperties: true
+      description:
+          Questo schema rappresenta l'Ordine di un Pagamento ed è associato a https://w3id.org/italia/onto/OP21/OrdineDiPagamento.
+      required:
+      - codice_ordine_pagamento
+      - data_ordine_pagamento
+      properties:
+        codice_ordine_pagamento:
+          $ref: "#/components/schemas/IdOrdinePagamento"
+        data_ordine_pagamento:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        utilizza_servizio_pagamento:
+          type: object
+          items:
+            $ref: "#/components/schemas/ServizioPagamento"
+        esegue_accredito:
+          type: object
+          items:
+            $ref: "#/components/schemas/MovimentoDiDenaro"
+        esegue_addebito:
+          type: object
+          items:
+            $ref: "#/components/schemas/MovimentoDiDenaro"
+      example:
+        codice_ordine_pagamento: '987654321'
+        data_ordine_pagamento: '2022-06-30'
+        utilizza_servizio_pagamento:
+          id_servizio_pagamento: '16986'
+        esegue_accredito:
+          id_movimento: '154864'
+          causale_movimento: 'Pagamento'
+          importo_movimento: 500.50
+          importo_commissione_movimento: 2.50
+          data_movimento: '2022-07-14'
+          invia_ricevuta_movimento:
+            id_ricevuta_accredito: '123546'
+            data_ricevuta: '2022-07-25'
+        esegue_addebito:
+          id_movimento: '54864'
+          causale_movimento: 'Pagamento'
+          importo_movimento: 500.50
+          importo_commissione_movimento: 2.50
+          data_movimento: '2022-07-14'
+          invia_ricevuta_movimento:
+            id_ricevuta_accredito: '123546'
+            data_ricevuta: '2022-07-25'
+
+    ServizioPagamento:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/onto/OP21/ServizioDiPagamento
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/onto/OP21/"
+        id_servizio_pagamento: codiceServizioDiPagamento
+      additionalProperties: true
+      description:
+          Questo schema rappresenta Servizio di pagamento offerto da un Prestatore Di Servizi Di Pagamento (PSP).
+          Lo schema è associato a https://w3id.org/italia/onto/OP21/ServizioDiPagamento.
+      required:
+      - id_servizio_pagamento
+      properties:
+        id_servizio_pagamento:
+          type: string
+          maxLength: 50
+      example:
+        id_servizio_pagamento: '16986'
+
+    MovimentoDiDenaro:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/onto/OP21/MovimentoDiDenaro
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/onto/OP21/"
+        id_movimento: identificatoreMovimento
+        causale_movimento: causaleMovimento
+        importo_movimento: importoMovimento
+        importo_commissione_movimento: importoCommissioneMovimento
+        data_movimento: dataMovimento
+        invia_ricevuta_movimento:
+          "@id": inviaRicevutaDiMovimento
+        movimento_agisce_su:
+          "@id": movimentoAgisceSu
+      additionalProperties: true
+      description:
+          Questo schema rappresenta il movimento di una somma di denaro indotto da un Ordine Di Pagamento su un Conto Corrente.
+          Tale movimento aumenta (accredito) o diminuisce (addebito) la disponibilità di denaro del Conto Corrente. Può essere addebita una commissione per l'esecuzione del movimento, solitamente nell'operazione di addebito.
+          Lo schema è associato a https://w3id.org/italia/onto/OP21/MovimentoDiDenaro.
+      required:
+      - id_movimento
+      - causale_movimento
+      - importo_movimento
+      - importo_commissione_movimento
+      - data_movimento
+      properties:
+        id_movimento:
+          type: string
+          maxLength: 50
+        causale_movimento:
+          type: string
+          maxLength: 255
+        importo_movimento:
+          type: number
+          format: double
+        importo_commissione_movimento:
+          type: number
+          format: double
+        data_movimento:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        invia_ricevuta_movimento:
+          type: object
+          items:
+            $ref: "#/components/schemas/RicevutaDiMovimento"
+        movimento_agisce_su:
+          type: object
+          items:
+            $ref: "#/components/schemas/ContoCorrente"
+      example:
+        id_movimento: '154864'
+        causale_movimento: 'Pagamento'
+        importo_movimento: 500.50
+        importo_commissione_movimento: 2.50
+        data_movimento: '2022-07-14'
+        invia_ricevuta_movimento:
+          id_ricevuta_accredito: '123546'
+          data_ricevuta: '2022-07-25'
+        movimento_agisce_su:
+          iban: 'IT 99 C 12345 67890 123456789012'
+
+    RicevutaDiMovimento:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/onto/OP21/RicevutaDiMovimento
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/onto/OP21/"
+        id_ricevuta_accredito: identificatoreRicevuta
+        data_ricevuta: dataRicevuta
+      additionalProperties: true
+      description:
+          Attestazione rivolta all'Ente Creditore dell'avvenuto movimento di accredito di una somma di denaro determinata da un Movimento Di Denaro indotto da un Ordine Di Pagamento.
+          Lo schema è associato a https://w3id.org/italia/onto/OP21/RicevutaDiMovimento.
+      required:
+      - id_ricevuta_accredito
+      - data_ricevuta
+      properties:
+        id_ricevuta_accredito:
+          type: string
+          maxLength: 50
+        data_ricevuta:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        id_ricevuta_accredito: '123546'
+        data_ricevuta: '2022-07-25'
+
+    ContoCorrente:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/onto/OP21/ContoCorrente
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/onto/OP21/"
+        iban: IBAN
+      additionalProperties: true
+      description:
+          Conto finanziario gestito da una banca o altro istituto finanziario in cui sono registrate le transazioni finanziarie tra la banca e un cliente, il titolare del conto.
+          Lo schema è associato a https://w3id.org/italia/onto/OP21/ContoCorrente.
+      required:
+      - iban
+      properties:
+        iban:
+          type: string
+          maxLength: 50
+      example:
+        iban: 'IT 99 C 12345 67890 123456789012'
+

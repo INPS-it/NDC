@@ -1,0 +1,51 @@
+publiccodeYmlVersion: "0.2"
+
+name: NDC
+url: "https://github.com/INPS-it/NDC"
+softwareVersion: "1.0"
+releaseDate: "2023-04-27"
+platforms:
+  - web
+
+categories:
+  - data-analytics
+
+developmentStatus: stable
+
+softwareType: "configurationFiles"
+
+description:
+  it:
+    localisedName: ndc
+    genericName: Repository INPS per NDC
+    shortDescription: >
+          Repository INPS per l'alimentazione
+          del National Data Catalog
+
+    longDescription: >
+          Repository INPS per l'alimentazione
+          del National Data Catalog contenente ontologie,
+          vocabolari controllati e schemi.
+
+    features:
+       - Interoperabilità semantica
+       - Interoperabilità tecnica
+       - API semantiche
+       - Modellazione dati
+       - Tassonomie
+
+legal:
+  license: CC BY 4.0
+maintenance:
+  type: internal
+  contacts:
+    email: andrea.cigliano@inps.it
+    name: Andrea Cigliano
+it:
+  riuso:
+    codiceIPA: inps #80078750587
+
+localisation:
+  localisationReady: yes
+  availableLanguages:
+    - it

@@ -1,0 +1,216 @@
+openapi: 3.0.3
+info:
+  title: Schema della Pratica di Ricongiunzione
+  version: 202301.10.00
+  x-summary: Schema della Pratica di Ricongiunzione compatibile con l'Ontologia INPS relativa a Riscatti, Ricongiunzioni, Rendite e Lavoratore Domestico.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+   La pratica di ricongiunzione consente, a chi ha posizioni assicurative in gestioni previdenziali diverse, di riunire, mediante trasferimento, tutti i periodi contributivi presso un’unica gestione, allo scopo di ottenere una sola pensione.
+   Tale ricongiunzione avviene a domanda dell’assicurato o dei suoi superstiti e deve riguardare tutti i periodi di contribuzione che il lavoratore ha maturato in almeno due diverse forme previdenziali fino al momento della richiesta e che non siano già stati utilizzati per liquidare una pensione.
+   A fronte della presentazione della domanda, l'INPS istruisce la relativa Pratica di Ricongiunzione per la valutazione dell'accoglimento della richiesta e la determinazione di eventuali oneri a carico del Richiedente.
+   La metadatazione semantica degli schemi si basa sul documento
+   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
+   che introduce le keyword x-jsonld-type e x-jsonld-context.
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdPraticaRicongiunzione:
+      type: string
+      description:
+        Campo tecnico finalizzato all'individuazione univoca di ogni record della Pratica di Ricongiunzione.
+        Associato a https://w3id.org/italia/onto/OP21/numeroPratica.
+      example: '5498552'
+      maxLength: 50
+      minLength: 1
+
+    PraticaRicongiunzione:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/onto/OP21/PraticaDiRicongiunzione
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/onto/OP21/"
+        id_pratica_ricongiunzione: numeroPratica
+        descrizione_pratica_ricongiunzione: descrizionePratica
+        ricongiunzione_ha_atto_adeguamento_contributivo:
+          "@id": haAttoAdeguamentoContributivo
+        ricongiunzione_ha_domanda_adeguamento_contributivo:
+          "@id": haDomandaAdeguamentoContributivo
+        ricongiunzione_ha_pagatore_onere:
+          "@id": haPagatoreOnere
+        ricongiunzione_ha_titolare_pratica:
+          "@id": haTitolarePratica
+      additionalProperties: true
+      description:
+         Questo schema rappresenta una pratica di ricongiunzione ed è associato ad https://w3id.org/italia/onto/OP21/PraticaDiRicongiunzione.
+      required:
+      - id_pratica_ricongiunzione
+      - descrizione_pratica_ricongiunzione
+      properties:
+        id_pratica_ricongiunzione:
+          $ref: "#/components/schemas/IdPraticaRicongiunzione"
+        descrizione_pratica_ricongiunzione:
+          type: string
+          maxLength: 255
+        ricongiunzione_ha_domanda_adeguamento_contributivo:
+          type: object
+          items:
+            $ref: "#/components/schemas/DomandaAdeguamentoContributivo"
+        ricongiunzione_ha_atto_adeguamento_contributivo:
+          type: object
+          items:
+            $ref: "#/components/schemas/AttoAdeguamentoContributivo"
+        ricongiunzione_ha_pagatore_onere:
+          type: object
+          items:
+            $ref: "#/components/schemas/Superstite"
+        ricongiunzione_ha_titolare_pratica:
+          type: object
+          items:
+            $ref: "#/components/schemas/TitolarePratica"
+      example:
+        id_pratica_ricongiunzione: '5498552'
+        descrizione_pratica_ricongiunzione: 'Ricongiunzione'
+        ricongiunzione_ha_domanda_adeguamento_contributivo:
+          numero_domanda: '3154988'
+          data_domanda: '2022-06-25'
+        ricongiunzione_ha_atto_adeguamento_contributivo:
+          numero_atto: '2316547'
+          data_atto: '2022-07-25'
+        ricongiunzione_ha_pagatore_onere:
+          cf_superstite: 'RSSFRC64G58k152L'
+          nome_superstite: 'Franco'
+          cognome_superstite: 'Rossi'
+        ricongiunzione_ha_titolare_pratica:
+          cf_titolare: 'RSSMRC58G58k152P'
+          nome_titolare: 'Marco'
+          cognome_titolare: 'Rossi'
+
+    DomandaAdeguamentoContributivo:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/onto/OP21/DomandaAdeguamentoContributivo
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/onto/OP21/"
+        numero_domanda: numeroDomanda
+        data_domanda: dataDomanda
+      additionalProperties: true
+      description:
+          Questo schema rappresenta la domanda apposita per l’esercizio della facoltà di riscatto, ricongiunzione, rendita da parte dell’interessato Richiedente secondo le modalità specifiche previste da ciascuna facoltà che possono differire sia in termini delle informazioni e documentazioni richieste sia in termini di destinatari della domanda.
+          La presentazione della domanda avviene telematicamente usufruendo del servizio predisposto da INPS eventualmente per il tramite di un intermediario.
+          Lo schema è associato a https://w3id.org/italia/onto/OP21/DomandaAdeguamentoContributivo.
+      required:
+      - numero_domanda
+      - data_domanda
+      properties:
+        numero_domanda:
+          type: string
+          maxLength: 50
+        data_domanda:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        numero_domanda: '3154988'
+        data_domanda: '2022-06-25'
+
+    AttoAdeguamentoContributivo:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/onto/OP21/AttoAdeguamentoContributivo
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/onto/OP21/"
+        numero_atto: numeroAtto
+        data_atto: dataAtto
+      additionalProperties: true
+      description:
+          Questo schema rappresenta la manifestazione esplicita da parte dell'INPS della decisione assunta in merito ad una Domanda (di) Adeguamento Contributivo.
+          Tale decisione, se positiva, stabilisce l'importo dell'Onere Contributivo da versare e i termini del versamento.
+          L'emissione dell'atto è a cura della Sede INPS competente per il Richiedente che ha presentato la domanda.
+          Lo schema è associato a https://w3id.org/italia/onto/OP21/AttoAdeguamentoContributivo.
+      required:
+      - numero_atto
+      - data_atto
+      properties:
+        numero_atto:
+          type: string
+          maxLength: 50
+        data_atto:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        numero_atto: '2316547'
+        data_atto: '2022-07-25'
+
+    TitolarePratica:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/onto/OP21/TitolarePratica
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/onto/CPV/"
+        cf_titolare: taxCode
+        nome_titolare: givenName
+        cognome_titolare: familyName
+      additionalProperties: true
+      description:
+          Questo schema rappresenta la persona a cui, facendo seguito alla presentazione di idonea domanda, sono riconosciuti i requisiti per accedere alla facoltà di riscatto, ricongiunzione o rendita.
+          Tali requisiti possono essere riconosciuti al Titolare anche se non più in vita. Nel caso in cui sia in vita, corrisponde al Richiedente.
+          Lo schema è associato a https://w3id.org/italia/onto/OP21/TitolarePratica.
+      required:
+      - cf_titolare
+      - nome_titolare
+      - cognome_titolare
+      properties:
+        cf_titolare:
+          type: string
+          maxLength: 20
+        nome_titolare:
+          type: string
+          maxLength: 50
+        cognome_titolare:
+          type: string
+          maxLength: 50
+      example:
+        cf_titolare: 'RSSMRC58G58k152P'
+        nome_titolare: 'Marco'
+        cognome_titolare: 'Rossi'
+
+    Superstite:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/onto/OP21/Superstite
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/onto/CPV/"
+        cf_superstite: taxCode
+        nome_superstite: givenName
+        cognome_superstite: familyName
+      additionalProperties: true
+      description:
+          Questo schema rappresenta il superstite, ovvero colui che, avendo un legame parentale con un Titolare Pratica deceduto, ha presentato domanda di riscatto, ricongiunzione o rendita per conto e in vece di detto Titolare; quindi, in questo caso, corrisponde al Richiedente.
+          Perciò, tale superstite si fa carico del pagamento degli eventuali oneri derivanti dall'accoglimento della domanda e risulta legato alla Pratica derivante dalla domanda stessa in qualità di pagatore, ruolo quest'ultimo che è assorbito da quello di Titolare qual ora quest'ultimo sia in vita.
+          Lo schema è associato a https://w3id.org/italia/onto/OP21/Superstite.
+      required:
+      - cf_superstite
+      - nome_superstite
+      - cognome_superstite
+      properties:
+        cf_superstite:
+          type: string
+          maxLength: 20
+        nome_superstite:
+          type: string
+          maxLength: 50
+        cognome_superstite:
+          type: string
+          maxLength: 50
+      example:
+        cf_superstite: 'RSSFRC64G58k152L'
+        nome_superstite: 'Franco'
+        cognome_superstite: 'Rossi'
