@@ -9,6 +9,7 @@
 @prefix L0: <https://w3id.org/italia/onto/l0/> .
 @prefix op21: <https://w3id.org/italia/onto/OP21/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix RO: <https://w3id.org/italia/onto/RO/> .
@@ -17,34 +18,39 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 op21: a owl:Ontology ;
-    owl:versionIRI op21:1.0 ;
+    owl:versionIRI op21:1.1 ;
     owl:imports CLV:,
         COV:,
         CPV:,
         L0:,
         RO:,
         TI: ;
-    rdfs:label "INPS Ontology about Redemption, Aggregation and Life Annuities."@en,
-        "Ontologia INPS relativa a Riscatti, Ricongiunzioni e Rendite."@it ;
-    rdfs:comment "Ontologia INPS relativa alle pratiche di Riscatto, Ricongiunzione e Rendita."@it,
-        "This is the ontology of the INPS Organization about Redemption, Aggregation and Life Annuity Application."@en ;
-    owl:versionInfo "Version 1.0 - Modified on 30 December 2022"@en,
-        "Versione 1.0 - Modificata il 30 Dicembre 2022"@it ;
+    rdfs:label "INPS Ontology about Redemption, Aggregation, Life Annuities and Domestic Worker"@en,
+        "Ontologia INPS relativa a Riscatti, Ricongiunzioni, Rendite e Lavoratore Domestico"@it ;
+    rdfs:comment "Ontologia INPS relativa alle pratiche di Riscatto, Ricongiunzione e Rendita, e al Lavoratore Domestico."@it,
+        "This is the ontology of the INPS Organization about Redemption, Aggregation and Life Annuity Application, and Domestic Worker."@en ;
+    owl:versionInfo "Version 1.1 - Modified on 30 March 2023"@en,
+        "Versione 1.1 - Modificata il 30 Marzo 2023"@it ;
     rdfs:isDefinedBy <https://w3id.org/italia/onto/OP21> ;
+    prov:wasDerivedFrom op21:1.0 ;
     adms:acronym "inps" ;
     adms:hasContributor <https://w3id.org/italia/data/OP21/organization/td> ;
     adms:hasFormalityLevel adms:Formal ;
-    adms:hasKeyClass op21:PraticaDiRendita,
+    adms:hasKeyClass op21:LavoratoreDomestico,
+        op21:PraticaDiRendita,
         op21:PraticaDiRicongiunzione,
         op21:PraticaDiRiscatto ;
     adms:hasOntologyLanguage adms:OWL ;
-    adms:hasSemanticAssetDistribution <https://w3id.org/italia/data/OP21/distribution/P21-RDF-TURTLE> ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/data/OP21/distribution/OP21-N-TRIPLES>,
+        <https://w3id.org/italia/data/OP21/distribution/OP21-RDF-TURTLE>,
+        <https://w3id.org/italia/data/OP21/distribution/OP21-RDF-XML> ;
     adms:hasTask adms:AnnotationTask,
         adms:QueryFormulationTask,
         adms:SearchTask ;
-    adms:last op21:1.0 ;
+    adms:last op21:1.1 ;
     adms:officialURI "https://w3id.org/italia/onto/OP21/"^^xsd:anyURI ;
-    adms:prefix "inps" ;
+    adms:prefix "inpsproc21" ;
+    adms:prev op21:1.0 ;
     adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
     adms:status "catalogued",
         "published" ;
@@ -54,6 +60,8 @@ op21: a owl:Ontology ;
     adms:type adms:ServiceOntology ;
     dcat:contactPoint <https://w3id.org/italia/data/OP21/organization/DirezioneCentraleTII> ;
     dcat:keyword "Aggregation Application"@en,
+        "Domestic Worker"@en,
+        "Lavoratore Domestico"@it,
         "Life Annuities Application"@en,
         "Redemption Application"@en,
         "Rendita"@it,
@@ -62,17 +70,17 @@ op21: a owl:Ontology ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
     dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
     dct:creator <https://w3id.org/italia/data/OP21/organization/inps> ;
-    dct:description "Ontologia INPS relativa alle pratiche di Riscatto, Ricongiunzione e Rendita."@it,
-        "This is the ontology of the INPS Organization about Redemption, Aggregation and Life Annuity Application."@en ;
+    dct:description "Ontologia INPS relativa alle pratiche di Riscatto, Ricongiunzione e Rendita, e al Lavoratore Domestico."@it,
+        "This is the ontology of the INPS Organization about Redemption, Aggregation and Life Annuity Application, and Domestic Worker."@en ;
     dct:identifier "https://w3id.org/italia/onto/OP21/" ;
-    dct:issued "2022-12-01T00:00:00+00:00"^^xsd:dateTime ;
+    dct:issued "2023-01-03T00:00:00+00:00"^^xsd:dateTime ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
-    dct:modified "2022-12-30T00:00:00+00:00"^^xsd:dateTime ;
+    dct:modified "2023-03-30T00:00:00+00:00"^^xsd:dateTime ;
     dct:publisher <https://w3id.org/italia/data/OP21/organization/inps> ;
     dct:rightsHolder <https://w3id.org/italia/data/OP21/organization/inps> ;
-    dct:title "INPS Ontology about Redemption, Aggregation and Life Annuities"@en,
-        "Ontologia INPS relativa a Riscatti, Ricongiunzioni e Rendite"@it .
+    dct:title "INPS Ontology about Redemption, Aggregation, Life Annuities and Domestic Worker"@en,
+        "Ontologia INPS relativa a Riscatti, Ricongiunzioni, Rendite e Lavoratore Domestico"@it .
 
 ### Object Properties
 
@@ -134,6 +142,24 @@ op21:avvisoHaEnteCreditore a owl:FunctionalProperty,
     rdfs:range op21:EnteCreditore ;
     rdfs:comment "Functional link between the Payment Notice and the Creditor Institution demanding the payment."@en,
         "Legame funzionale tra l'Avviso Di Pagamento e l'Ente Creditore che esige il pagamento."@it .
+
+op21:depositoAvvioRapporto a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "deposito avvio rapporto"@it,
+        "work relationship activation deposit"@en ;
+    rdfs:domain op21:RapportoDiLavoroDomesticoAttivo ;
+    rdfs:range COV:PublicOrganization ;
+    rdfs:comment "Relationship linking an Active Domestic Work Relationship to a Public Organization. Each Active Domestic Work Relationship is linked to a single Public Organization."@en,
+        "Relazione che collega un Rapporto di Lavoro Domestico Attivo ad un'Organizzazione Pubblica. Ciascun Rapporto di Lavoro Domestico Attivo è collegato ad un'unica Organizzazione Pubblica."@it .
+
+op21:depositoCessazioneRapporto a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "deposito cessazione rapporto"@it,
+        "work relationship termination deposit"@en ;
+    rdfs:domain op21:RapportoDiLavoroDomesticoCessato ;
+    rdfs:range COV:PublicOrganization ;
+    rdfs:comment "Relationship linking a Terminated  Domestic Work Relationship to a Public Organization. Each Terminated Relationship is linked to a single Public Organization."@en,
+        "Relazione che collega un Rapporto di Lavoro Domestico Cessato ad un'Organizzazione Pubblica. Ciascun Rapporto di Lavoro Domestico Cessato è collegato ad un'unica Organizzazione Pubblica."@it .
 
 op21:emetteAtto a owl:InverseFunctionalProperty,
         owl:ObjectProperty ;
@@ -202,6 +228,24 @@ op21:haContoCorrente a owl:FunctionalProperty,
     rdfs:comment "Relationship linking a Bank Account Holder to a Bank Account. Each Bank Account belongs to a single Bank Account Holder."@en,
         "Relazione che collega un Correntista ad un Conto Corrente. Ciascun Conto Corrente appartiene ad un unico Correntista."@it .
 
+op21:haContributoTrimestraleFinale a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha contributo trimestrale finale"@it,
+        "has final quarterly contribution"@en ;
+    rdfs:domain op21:RapportoDiLavoroDomesticoCessato ;
+    rdfs:range op21:ContributoTrimestraleFinale ;
+    rdfs:comment "Relazione che collega un Rapporto di Lavoro Domestico Cessato ad un Contributo Trimestrale Finale. Ciascun Contributo Trimestrale Finale è collegato ad un unico Rapporto di Lavoro."@it,
+        "Report linking a Ceased Domestic Work Relationship to a Final Quarterly Contribution. Each Final Quarterly Contribution is linked to a single Work Relationship."@en .
+
+op21:haContributoTrimestraleOrdinario a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha contributo trimestrale ordinario"@it,
+        "has an ordinary quarterly contribution"@en ;
+    rdfs:domain op21:RapportoDiLavoroDomesticoAttivo ;
+    rdfs:range op21:ContributoTrimestraleOrdinario ;
+    rdfs:comment "Relationship linking an Active Domestic Work Relationship to an Ordinary Quarterly Contribution. Each Ordinary Quarterly Contribution is linked to a single Work Relationship."@en,
+        "Relazione che collega un Rapporto di Lavoro Domestico Attivo ad un Contributo Trimestrale Ordinario. Ciascun Contributo Trimestrale Ordinario è collegato ad un unico Rapporto di Lavoro."@it .
+
 op21:haCreditoreMandato a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "ha creditore mandato"@it,
@@ -210,6 +254,15 @@ op21:haCreditoreMandato a owl:FunctionalProperty,
     rdfs:range op21:CreditoreMandato ;
     rdfs:comment "Relationship linking an SDD Mandate to the Mandate Creditor."@en,
         "Relazione che collega un Mandato SDD al Creditore del Mandato."@it .
+
+op21:haDatoreDiLavoro a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha datore di lavoro"@it,
+        "has employer"@en ;
+    rdfs:domain op21:RapportoDiLavoroDomestico ;
+    rdfs:range op21:DatoreDiLavoroDomestico ;
+    rdfs:comment "Relationship linking a Domestic Work Relationship to a Domestic Work Employer. Each Employment Relationship has a single Employer."@en,
+        "Relazione che collega un Rapporto di Lavoro Domestico ad un Datore di Lavoro Domestico. Ciascun Rapporto di Lavoro ha un unico Datore di Lavoro."@it .
 
 op21:haDebitoreMandato a owl:FunctionalProperty,
         owl:ObjectProperty ;
@@ -265,6 +318,15 @@ op21:haIstitutoDiCredito a owl:FunctionalProperty,
     rdfs:comment "Relationship linking a Bank Account to a Credit Institution. Each Bank Account belongs to a single Credit Institution."@en,
         "Relazione che collega un Conto Corrente ad un Istituto di Credito. Ciascun Conto Corrente appartiene ad un unico Istituto di Credito."@it .
 
+op21:haLavoratoreDomestico a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha lavoratore domestico"@it,
+        "has domestic worker"@en ;
+    rdfs:domain op21:RapportoDiLavoroDomestico ;
+    rdfs:range op21:LavoratoreDomestico ;
+    rdfs:comment "Relationship linking a Domestic Work Relationship to a Domestic Worker. Each Domestic Work Relationship involves a single Domestic Worker."@en,
+        "Relazione che collega un Rapporto di Lavoro Domestico a un Lavoratore Domestico. Ciascun Rapporto di Lavoro Domestico coinvolge un unico Lavoratore Domestico."@it .
+
 op21:haModalitàDiPagamento a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "ha modalità di pagamento"@it,
@@ -307,6 +369,14 @@ op21:haOnereContributivo a owl:FunctionalProperty,
     rdfs:range op21:OnereContributivo ;
     rdfs:comment "Relationship linking an Application State of Notified Amount to a Contribution Charge."@en,
         "Relazione che collega uno Stato di Notificato Importo di Pratica ad un Onere Contributivo."@it .
+
+op21:haOrganizzazioneDiAssistenza a owl:ObjectProperty ;
+    rdfs:label "ha organizzazione di assistenza"@it,
+        "has support organization"@en ;
+    rdfs:domain op21:ContrattoDiLavoro ;
+    rdfs:range op21:OrganizzazioneDiAssistenza ;
+    rdfs:comment "Relationship linking an Employment Agreement to a Support Organisation."@en,
+        "Relazione che collega un Contratto di Lavoro ad un'Organizzazione di Assistenza."@it .
 
 op21:haPagamento a owl:InverseFunctionalProperty,
         owl:ObjectProperty ;
@@ -420,6 +490,15 @@ op21:haTrimestreDiAnno a owl:FunctionalProperty,
     rdfs:range op21:TrimestreDiAnno ;
     rdfs:comment "Relationship that connects an Ordinary Quarterly Contribution with the Quarter in which it takes place. Each Contribution can take place in only one quarter (1st, 2nd, 3rd, or 4th)."@en,
         "Relazione che collega un Contributo Trimestrale Ordinario con Trimestre dell'anno in cui avviene. Ciascun Contributo può avvenire in un solo trimestre (I, II, III, o IV)."@it .
+
+op21:haVersamentoOrganizzazione a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha versamento organizzazione"@it,
+        "has payment organization"@en ;
+    rdfs:domain op21:ContributoTrimestraleModificato ;
+    rdfs:range op21:OrganizzazioneDiAssistenza ;
+    rdfs:comment "Relationship linking an Amended Quarterly Contribution to a Support Organization. Each Contribution can be paid by a single Organization."@en,
+        "Relazione che collega un Contributo Trimestrale Modificato ad un'Organizzazione di Assistenza. Ciascun Contibuto può essere versato da un'unica Organizzazione."@it .
 
 op21:inviaFlussoDiRendicontazione a owl:InverseFunctionalProperty,
         owl:ObjectProperty ;
@@ -546,6 +625,16 @@ op21:èMeseDelTrimestre a owl:FunctionalProperty,
     rdfs:range op21:TrimestreDiAnno ;
     rdfs:comment "Relationship linking a Month of a Quarter to the Quarter of a Year to which it belongs. Each Month belongs to a single Quarter."@en,
         "Relazione che collega un Mese di Trimestre al Trimestre di Anno a cui appartiene. Ciascun Mese appartiene ad un unico Trimestre."@it .
+
+op21:èOriginatoDa a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "is derived by"@en,
+        "è originato da"@it ;
+    rdfs:domain op21:RapportoDiLavoroDomestico ;
+    rdfs:range op21:ContrattoDiLavoro ;
+    rdfs:comment "Relationship linking a Domestic Work Relationship to the Employment Contract from which it is derived."@en,
+        "Relazione che collega un Rapporto di Lavoro Domestico al Contratto di Lavoro da cui è generato."@it .
 
 op21:èSettimanaDelMese a owl:FunctionalProperty,
         owl:ObjectProperty ;
@@ -682,6 +771,16 @@ op21:codiceCBILL a owl:DatatypeProperty,
     rdfs:comment "Codice identificativo di Enti e Aziende che aderiscono al circuito CBILL/pagoPA"@it,
         "Identification code of Organizations and Companies that adhere to the CBILL/pagoPA circuit."@en .
 
+op21:codiceContrattoDiLavoro a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice contratto di lavoro"@it,
+        "employment contract code"@en ;
+    rdfs:domain op21:ContrattoDiLavoro ;
+    rdfs:range xsd:string ;
+    rdfs:comment "It is the Domestic Work Contract code equivalent to the Domestic Work Relationship code it originated."@en,
+        "È il codice del Contratto Di Lavoro Domestico equivalente al codice del Rapporto Di Lavoro Domestico a cui ha dato origine."@it ;
+    owl:equivalentProperty op21:codiceRapportoDiLavoro .
+
 op21:codiceINPS a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "codice INPS"@it,
@@ -711,6 +810,24 @@ op21:codiceMAV a owl:DatatypeProperty,
     rdfs:range xsd:string ;
     rdfs:comment "Codice identificativo di un bollettino MAV."@it,
         "Identification code of a MAV slip."@en .
+
+op21:codiceOrganizzazione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice organizzazione"@it,
+        "organization code"@en ;
+    rdfs:domain op21:OrganizzazioneDiAssistenza ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Identification code of the Support Organization."@en,
+        "È il codice relativo all'Organizzazione Di Assistenza."@it .
+
+op21:codiceRapportoDiLavoro a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice rapporto di lavoro"@it,
+        "employment relationship code"@en ;
+    rdfs:domain op21:RapportoDiLavoroDomestico ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The Domestic Work Relationship code assigned by INPS when registering the relevant contract."@en,
+        "È il codice relativo al  Rapporto Di Lavoro Domestico assegnato da INPS al momento della registrazione del relativo contratto."@it .
 
 op21:codiceRID a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -766,6 +883,15 @@ op21:dataAtto a owl:DatatypeProperty,
     rdfs:comment "It is the date of the Tax Contribution Adjustment Deed."@en,
         "È la data dell'Atto Adeguamento Contributivo."@it .
 
+op21:dataDepositoContratto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "contract filing date"@en,
+        "data deposito contratto"@it ;
+    rdfs:domain op21:RapportoDiLavoroDomestico ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "It is the filing date of the Employment Contract"@en,
+        "È la data di deposito del Contratto Di Lavoro"@it .
+
 op21:dataDiPrenotazione a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "booking date"@en,
@@ -783,6 +909,24 @@ op21:dataDomanda a owl:DatatypeProperty,
     rdfs:range xsd:dateTime ;
     rdfs:comment "This is the date of the Tax Adjustment Application."@en,
         "È la data relativa alla Domanda Adeguamento Contributivo."@it .
+
+op21:dataFineRapporto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data fine rapporto"@it,
+        "relationship end date"@en ;
+    rdfs:domain op21:RapportoDiLavoroDomesticoCessato ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "It is the date of termination of a Domestic Work Relationship."@en,
+        "È la data di cessazione di un Rapporto Di Lavoro Domestico."@it .
+
+op21:dataInizioRapporto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data inizio rapporto"@it,
+        "relationship start date"@en ;
+    rdfs:domain op21:RapportoDiLavoroDomesticoAttivo ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "It is the start date of a Domestic Work Relationship"@en,
+        "È la data di inizio di un Rapporto Di Lavoro Domestico"@it .
 
 op21:dataMovimento a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -826,8 +970,8 @@ op21:dataScadenzaContributoTrimestrale a owl:DatatypeProperty,
         "quarterly contribution due date"@en ;
     rdfs:domain op21:ContributoTrimestraleOrdinario ;
     rdfs:range xsd:dateTime ;
-    rdfs:comment "It is the due date for the payment of quarterly contributions by a worker."@en,
-        "È la data di scadenza per il versamento dei contributi trimestrali di un lavoratore."@it .
+    rdfs:comment "It is the due date for the payment of quarterly contributions by a domestic worker."@en,
+        "È la data di scadenza per il versamento dei contributi trimestrali di un lavoratore domestico."@it .
 
 op21:dataScadenzaOnereContributivo a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -901,6 +1045,16 @@ op21:identificatoreCorrentista a owl:DatatypeProperty,
     rdfs:comment "Identifica il Correntista."@it,
         "Identifies the Account Holder"@en .
 
+op21:identificatoreDatoreDiLavoroDomestico a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "domestic employer identifier"@en,
+        "identificatore datore di lavoro domestico"@it ;
+    rdfs:subPropertyOf L0:identifier ;
+    rdfs:domain op21:DatoreDiLavoroDomestico ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Identifica il Datore Di Lavoro Domestico."@it,
+        "Identifies the Domestic Employer"@en .
+
 op21:identificatoreEsitoPagamento a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "identificatore esito pagamento"@it,
@@ -910,6 +1064,16 @@ op21:identificatoreEsitoPagamento a owl:DatatypeProperty,
     rdfs:range xsd:string ;
     rdfs:comment "Identification code of the Payment Outcome."@en,
         "È l'identificativo di un Esito Pagamento."@it .
+
+op21:identificatoreLavoratoreDomestico a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "domestic worker identifier"@en,
+        "identificatore lavoratore domestico"@it ;
+    rdfs:subPropertyOf L0:identifier ;
+    rdfs:domain op21:LavoratoreDomestico ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Identifica il Lavoratore Domestico."@it,
+        "Identifies the Domestic Worker"@en .
 
 op21:identificatoreMovimento a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -1139,6 +1303,15 @@ op21:numeroOreRetribuiteInserito a owl:DatatypeProperty,
     rdfs:comment "It is the number of hours entered relating to the Modified Quarterly Contribution."@en,
         "È il numero delle ore inserito relative al Contributo Trimestrale Modificato."@it .
 
+op21:numeroOreSettimanali a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "number of weekly hours"@en,
+        "numero ore settimanali"@it ;
+    rdfs:domain op21:ContrattoDiLavoro ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the number of weekly hours indicated in the Employment Contract."@en,
+        "È il numero delle ore settimanali indicate nel Contratto Di Lavoro."@it .
+
 op21:numeroPratica a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "application identification code number"@en,
@@ -1165,6 +1338,33 @@ op21:numeroRate a owl:DatatypeProperty,
     rdfs:range xsd:integer ;
     rdfs:comment "It is the number of installments envisaged in the Amortization Plan."@en,
         "È il numero di rate previsto nel Piano Di Ammortamento."@it .
+
+op21:numeroSettimaneMancatoPreavviso a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "number of weeks for lack of notice"@en,
+        "numero settimane mancato preavviso"@it ;
+    rdfs:domain op21:ContributoTrimestraleFinale ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the number of weeks of no notice or untaken holidays with which the Domestic Work Employer has terminated the Domestic Work Relationship. They are paid in the Final Quarterly Contribution."@en,
+        "È il numero di settimane di mancato preavviso o ferie non godute con cui il Datore Di Lavoro Domestico ha cessato il Rapporto Di Lavoro Domestico. Sono corrisposte nel Contributo Trimestrale Finale."@it .
+
+op21:numeroSettimanePreavviso a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "number of weeks notice"@en,
+        "numero settimane preavviso"@it ;
+    rdfs:domain op21:ContrattoDiLavoro ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the number of weeks notice with which the Domestic Work Employer can terminate the Domestic Work Relationship."@en,
+        "È il numero di settimane di preavviso con il quale il Datore Di Lavoro Domestico può cessare il Rapporto Di Lavoro Domestico."@it .
+
+op21:retribuzioneOrariaEffettiva a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "actual hourly wage"@en,
+        "retribuzione oraria effettiva"@it ;
+    rdfs:domain op21:ContrattoDiLavoro ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "It is the hourly wage stipulated in the Employment Contract. The minimum hourly wage allowed must not be lower than that established by the regulations of the current year."@en,
+        "È la retribuzione oraria stipulata nel Contratto Di Lavoro. La retribuzione oraria minima consentita non deve essere inferiore a quanto stabilito dalla normativa dell’anno in corso."@it .
 
 op21:retribuzioneOrariaEffettivaInserita a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -1392,6 +1592,34 @@ op21:ContoCorrente a owl:Class ;
     rdfs:comment "A Bank Account is a financial account maintained by a bank or other financial institution in which the financial transactions between the bank and a customer, the Account Holder, are recorded. Each financial institution sets the terms and conditions for each type of account it offers, which are classified in commonly understood types, such as deposit accounts, credit card accounts, current accounts, loan accounts or many other types of account. An Account Holder may have more than one account. Once an account is opened, funds entrusted by the Account Holder to the financial institution on deposit are recorded in the account designated by the customer. Funds can be withdrawn from loan loaders."@en,
         "Un conto corrente è un conto finanziario gestito da una banca o altro istituto finanziario in cui sono registrate le transazioni finanziarie tra la banca e un cliente, il titolare del conto. Ogni istituto finanziario stabilisce i termini e le condizioni per ogni tipo di conto che offre, che sono classificati in tipologie comunemente intese, come conti di deposito, conti di carte di credito, conti correnti, conti di prestito o altri tipi di conto. Un titolare di conto può avere più di un conto. Una volta aperto un conto, i fondi affidati in deposito dal titolare del conto all'istituto finanziario vengono registrati sul conto designato dal cliente."@it .
 
+op21:ContrattoDiLavoro a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty op21:codiceContrattoDiLavoro ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty op21:numeroOreSettimanali ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty op21:retribuzioneOrariaEffettiva ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf op21:èOriginatoDa ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contratto Di Lavoro"@it,
+        "Work Contract"@en ;
+    rdfs:comment "An employment contract is an agreement that covers the working relationship between a company and an employee. It allows both parties to clearly understand their obligations and the terms of employment. More specifically, an employment contract can include salary or wages, schedule, duration of employment, general responsibilities, confidentiality, communications, benefits, and future competition."@en,
+        "Un contratto di lavoro, o lettera di assunzione, è un accordo che da origine ad un rapporto di lavoro tra un datore di lavoro e un lavoratore. Consente a entrambe le parti di comprendere chiaramente i propri obblighi e le condizioni di lavoro. Nel contesto del dominio, definisce i termini del rapporto stesso indicando: la quantità e distribuzione delle ore settimanali lavorate, la loro retribuzione effettiva, le ferie, il TFR, i termini di preavviso e quanto altro risulta necessario per la definizione del rapporto stesso e nel rispetto del Contratto Collettivo, se esistente, del settore di riferimento."@it .
+
+op21:ContributoTrimestraleFinale a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf op21:haContributoTrimestraleFinale ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contributo Trimestrale Finale"@it,
+        "Final Quarterly Contribution"@en ;
+    rdfs:subClassOf op21:ContributoTrimestraleOrdinario ;
+    rdfs:comment "Sottoclasse di Contributo Trimestrale Ordinario legato ad un Rapporto Di Lavoro Domestico Cessato che indica la competenza per l'ultimo trimestre di lavoro. In questo caso i contributi devono riguardare anche le eventuali ore relative alle settimane di mancato preavviso o ferie non godute che verranno attribuite a settimane successive alla data di cessazione con possibile esubero nel trimestre successivo. A tal fine è indicato il numero di settimane di preavviso."@it,
+        "Sub-class of Ordinary Quarterly Contribution linked to a Ceased Domestic Work Report indicating the competence for the last quarter of work. In this case the contributions must also relate to any hours relating to weeks of missed notice or untaken holidays which will be attributed to weeks following the date of termination with possible redundancy in the following quarter. For this purpose, the number of weeks notice is indicated."@en .
+
 op21:ContributoTrimestraleModificato a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:onProperty op21:haSettimanaDelTrimestre ;
@@ -1424,7 +1652,10 @@ op21:ContributoTrimestraleOrdinario a owl:Class ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
             owl:onProperty op21:importoContributoTrimestrale ;
-            owl:someValuesFrom rdfs:Literal ] ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf op21:haContributoTrimestraleOrdinario ] ;
+            owl:someValuesFrom owl:Thing ] ;
     rdfs:label "Contributo Trimestrale Ordinario"@it,
         "Regular Quarterly Contribution"@en ;
     rdfs:comment "Classifica le competenze trimestrali dei contributi che il datore di lavoro deve versare in base alle ore lavorate nel trimestre e della retribuzione oraria effettiva. È caratterizzato dall'anno e dal trimestre a cui la competenza si riferisce, dall'importo e dalla data di scadenza del versamento."@it,
@@ -1448,7 +1679,7 @@ op21:Correntista a owl:Class ;
             owl:someValuesFrom rdfs:Literal ] ;
     rdfs:label "Account Holder"@en,
         "Correntista"@it ;
-    rdfs:subClassOf op21:RuoloDiAgente ;
+    owl:disjointWith op21:DatoreDiLavoroDomestico ;
     rdfs:comment "An Account Holder is the person listed or identified as the holder of a Bank Account. A person, other than a Financial Institution, holding a Bank Account for the benefit of another person as an agent, a custodian, a nominee, a signatory, an investment advisor, an intermediary, or as a legal guardian, is not treated as the Account Holder. In these circumstances that other person is the Account Holder. For example in the case of a parent/child relationship where the parent is acting as a legal guardian, the child is regarded as the Account Holder. With respect to a jointly held account, each joint holder is treated as an Account Holder."@en,
         "Sottoclasse di Ruolo di Agente che classifica i titolari di un conto bancario. Una persona, diversa da un istituto finanziario, titolare di un conto bancario a beneficio di un'altra persona in qualità di agente, custode, intestatario, firmatario, consulente per gli investimenti, intermediario o tutore legale, non è trattata come titolare del conto. In queste circostanze, l'altra persona è titolare del conto. Ad esempio, nel caso di un rapporto genitore/figlio in cui il genitore agisce in qualità di tutore legale, il figlio è considerato il titolare del conto. Per quanto riguarda un conto cointestato, ogni cointestatario è trattato come un titolare del conto, rappresentando ciascuno una istanza della classe. Ciascuna istanza possiede un identificatore."@it .
 
@@ -1457,6 +1688,19 @@ op21:CreditoreMandato a owl:Class ;
         "Mandate Creditor"@en ;
     rdfs:comment "Sottoclasse di Correntista associata a Mandato SDD con il ruolo di creditore."@it,
         "Sub-class of bank account holder associated with SDD Mandate with the role of creditor."@en .
+
+op21:DatoreDiLavoroDomestico a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty op21:identificatoreDatoreDiLavoroDomestico ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf op21:haDatoreDiLavoro ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Datore Di Lavoro Domestico"@it,
+        "Domestic Employer"@en ;
+    owl:disjointWith op21:RichiedenteAdeguamentoContributivo ;
+    rdfs:comment "An employer of a domestic worker is a person who employs someone who is considered a domestic worker."@en,
+        "Sottoclasse di Ruolo di Agente che rappresenta il titolare di un rapporto di lavoro con un lavoratore domestico. È solitamente una persona fisica ma, in alcuni particolari casi, può essere una organizzazione qual ora quest'ultima si configuri come una “comunità stabile” o una “convivenze familiarmente strutturata” senza fini di lucro presso cui il lavoratore svolge servizi domestici tipici della vita familiare. Ciascuna istanza possiede un identificatore."@it .
 
 op21:DebitoreMandato a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
@@ -1564,6 +1808,16 @@ op21:IstitutoDiCredito a owl:Class ;
     rdfs:subClassOf op21:PrestatoreDiServiziDiPagamento ;
     rdfs:comment "An undertaking whose business is to receive deposits or other repayable funds from the public and to grant credit for its own account."@en,
         "Un'impresa la cui attività è ricevere depositi o altri fondi rimborsabili dal pubblico e concedere credito per proprio conto."@it .
+
+op21:LavoratoreDomestico a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty op21:identificatoreLavoratoreDomestico ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Domestic Worker"@en,
+        "Lavoratore Domestico"@it ;
+    owl:disjointWith op21:RichiedenteAdeguamentoContributivo ;
+    rdfs:comment "A Domestic Worker is a person who works within the scope of a residence. Domestic workers perform a variety of household services for an individual, from providing cleaning and household maintenance, or cooking, laundry and ironing, or care for children and elderly dependents, and other household errands."@en,
+        "Sottoclasse di Ruolo Di Persona Viva che svolge mansioni e prestazioni di servizi domestici diretti al funzionamento della vita familiare nell'ambito di una residenza. I lavoratori domestici svolgono quindi una varietà di servizi rivolti ad un individuo e/o ad una comunità, dalla pulizia e manutenzione della casa, alla cucina, al bucato e alla stiratura, alla cura dei bambini e degli anziani a carico e ad altre commissioni domestiche. Ciascuna istanza possiede un identificatore."@it .
 
 op21:MandatoSDD a owl:Class ;
     owl:equivalentClass [ a owl:Class ;
@@ -1735,6 +1989,21 @@ op21:OrdineDiPagamento a owl:Class ;
     rdfs:comment "It is the materialization of a Payment made through a Payment Service provided by a PSP. It is characterized by an identifier and a date and is uniquely linked to the money transactions that debit and credit the amount of money transferred via the payment order."@en,
         "È la materializzazione di un Pagamento eseguito tramite un Servizio Di Pagamento erogato da un PSP. È caratterizzato da un identificatore e da una data ed è legato univocamente alle transazioni di denaro che addebitano e accreditano la somma di denaro trasferita tramite l'ordine di pagamento."@it .
 
+op21:OrganizzazioneDiAssistenza a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty op21:codiceOrganizzazione ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf op21:haOrganizzazioneDiAssistenza ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf op21:haVersamentoOrganizzazione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Assistance Organization"@en,
+        "Organizzazione Di Assistenza"@it ;
+    rdfs:comment "Body that has the purpose of providing benefits and services in favor of workers and employers, including health care and insurance treatments, supplementary and additional to public services."@en,
+        "Organismo che ha lo scopo di fornire prestazioni e servizi a favore dei lavoratori e datori di lavoro, comprensivi di trattamenti assistenziali sanitari e assicurativi, integrativi e aggiuntivi delle prestazioni pubbliche."@it .
+
 op21:Pagamento a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:onProperty op21:dataPagamento ;
@@ -1858,9 +2127,58 @@ op21:PrenotazioneDiPagamento a owl:Class ;
 op21:PrestatoreDiServiziDiPagamento a owl:Class ;
     rdfs:label "Payment Service Provider"@en,
         "Prestatore Di Servizi Di Pagamento"@it ;
-    rdfs:subClassOf COV:Organization ;
     rdfs:comment "A Payment Service Provider offer online services to organizations and operators to accept electronic payments through different payment modes, such as credit cart, direct bank or postal account charge, or deferred or real time wire transfer."@en,
         "Un Prestatore di Servizi di Pagamento (PSP) offre servizi di pagamento online ad Enti ed esercenti per accettare pagamenti elettronici con diversi metodi di pagamento, tra cui carta di credito, addebito diretto su conto corrente bancario o postale, trasferimento bancario differito o in tempo reale. L’opportunità di utilizzare un PSP permette di offrire ai propri clienti/utenti diversi canali di pagamento senza l’onere di dover stipulare contratti ad-hoc con i singoli sistemi di pagamento potendo inoltre contare su costi più bassi perché legati a maggiori volumi complessivi. Sono PSP, tra gli altri: banche, Poste Italiane, istituti di moneta elettronica e istituti di pagamento."@it .
+
+op21:RapportoDiLavoroDomestico a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    op21:RapportoDiLavoroDomesticoAttivo
+                    op21:RapportoDiLavoroDomesticoCessato ) ],
+        [ a owl:Restriction ;
+            owl:onProperty op21:codiceRapportoDiLavoro ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty op21:dataDepositoContratto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty op21:haDatoreDiLavoro ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty op21:haLavoratoreDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty op21:èOriginatoDa ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Domestic Employment Relationship"@en,
+        "Rapporto Di Lavoro Domestico"@it ;
+    rdfs:comment "Employment relationship between an employer and a subordinate worker who provides services of a domestic nature aimed at the functioning of family life. The employer is obliged to notify INPS of the establishment of this employment relationship, before the date of employment, as well as any change to the terms of the relationship itself or its termination. By virtue of this communication, the employment relationship is assigned by INPS an identification code useful for any subsequent fulfillment relating to the relationship itself. The contract can change over time, therefore each instance is associated with a validity interval (subclass of TI:TimeIndexedEvent)."@en,
+        "Rapporto di lavoro tra un datore di lavoro e un lavoratore subordinato che presta servizi di carattere domestico diretti al funzionamento della vita familiare. È fatto obbligo al datore di lavoro di comunicare all’INPS l’istaurarsi di tale rapporto di lavoro, prima della data di assunzione, così come qualsiasi modifica dei termini del rapporto stesso ovvero la sua cessazione. In virtù di tale comunicazione, al rapporto di lavoro viene assegnato da INPS un codice identificativo utile per qualsiasi successivo adempimento inerente al rapporto stesso. Il contratto può modificarsi nel tempo quindi a ciascuna istanza è associato un intervallo di validità (sottoclasse di TI:TimeIndexedEvent)."@it .
+
+op21:RapportoDiLavoroDomesticoAttivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty op21:dataInizioRapporto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty op21:depositoAvvioRapporto ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Active Domestic Employment Relationship"@en,
+        "Rapporto Di Lavoro Domestico Attivo"@it ;
+    owl:disjointWith op21:RapportoDiLavoroDomesticoCessato ;
+    rdfs:comment "Sottoclasse di Rapporto di Lavoro Domestico che classifica i rapporti attualmente attivi. È caratterizzato dalla data di inizio del rapporto."@it,
+        "Subclass of Domestic Employment Relationship that classifies currently active relationships. It has a relationship start date."@en .
+
+op21:RapportoDiLavoroDomesticoCessato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty op21:dataFineRapporto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty op21:depositoCessazioneRapporto ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Rapporto Di Lavoro Domestico Cessato"@it,
+        "Terminated Domestic Employment Relationship"@en ;
+    rdfs:comment "Sottoclasse di Rapporto di Lavoro Domestico che classifica i rapporti non più attivi. È caratterizzato dalla data di fine del rapporto."@it,
+        "Subclass of Domestic Employment Relationship that classifies currently inactive relationships. It has a relationship end date."@en .
 
 op21:RataDiOnereContributivo a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
@@ -1907,8 +2225,6 @@ op21:RichiedenteAdeguamentoContributivo a owl:Class ;
             owl:someValuesFrom owl:Thing ] ;
     rdfs:label "Richiedente Adeguamento Contributivo"@it,
         "Tax Adjustment Applicant"@en ;
-    rdfs:subClassOf op21:Pagatore,
-        op21:RuoloDiPersonaViva ;
     rdfs:comment "Sottoclasse di Ruolo Di Persona Viva che classifica le persone in vita che presentano una domanda di adeguamento contributivo (per riscatto, ricongiunzione o rendita) per se stessi o per una persona deceduta essendone un superstite, parente o affine. In questo secondo caso, il Richiedente presenta la domanda per conto e in vece dell'avente diritto, assumendosi il compito di versare gli eventuali oneri derivanti. La platea di persone fisiche che possono ricoprire il ruolo di Richiedente è piuttosto ampia comprendendo i lavoratori, dipendenti e autonomi, così come i lavoratori già pensionati. Ciascuna istanza del ruolo è caratterizzata da un identificativo."@it,
         "Subclass of Role of Living Person which classifies living people who submit an application for tax contribution adjustment (for redemption, reunion or income) for themselves or for a deceased person of which they are a survivor, relative or similar. In this second case, the Applicant submits the application on behalf of and in place of the person, taking responsability for the task of paying any resulting charges. The variety of natural persons who can fill the role of Applicant is quite broad, including workers, employees and self-employed, as well as workers who have already retired. Each instance of such roles is characterized by an identifier."@en .
 
@@ -2153,6 +2469,12 @@ TI:TimeInterval a owl:Class ;
                         op21:TitolarePratica ) ] ) .
 
 [] a owl:Class ;
+    rdfs:subClassOf COV:Organization ;
+    owl:unionOf (
+            op21:OrganizzazioneDiAssistenza
+            op21:PrestatoreDiServiziDiPagamento ) .
+
+[] a owl:Class ;
     rdfs:subClassOf L0:Agent ;
     owl:unionOf (
             COV:Organization
@@ -2179,6 +2501,12 @@ TI:TimeInterval a owl:Class ;
             op21:RataDiOnereContributivo ) .
 
 [] a owl:Class ;
+    rdfs:subClassOf op21:Pagatore ;
+    owl:unionOf (
+            op21:DatoreDiLavoroDomestico
+            op21:RichiedenteAdeguamentoContributivo ) .
+
+[] a owl:Class ;
     rdfs:subClassOf op21:PraticaAdeguamentoContributivo ;
     owl:unionOf (
             op21:PraticaDiRendita
@@ -2195,6 +2523,18 @@ TI:TimeInterval a owl:Class ;
             op21:StatoInizialeDiPratica ) .
 
 [] a owl:Class ;
+    rdfs:subClassOf op21:RuoloDiAgente ;
+    owl:unionOf (
+            op21:Correntista
+            op21:DatoreDiLavoroDomestico ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf op21:RuoloDiPersonaViva ;
+    owl:unionOf (
+            op21:LavoratoreDomestico
+            op21:RichiedenteAdeguamentoContributivo ) .
+
+[] a owl:Class ;
     rdfs:subClassOf TI:TemporalEntity ;
     owl:unionOf (
             op21:MeseDiTrimestre
@@ -2208,6 +2548,7 @@ TI:TimeInterval a owl:Class ;
             op21:MandatoSDD
             op21:MovimentoDiDenaro
             op21:PraticaAdeguamentoContributivo
+            op21:RapportoDiLavoroDomestico
             op21:SessionePagamentoElettronico ) .
 
 [] a owl:Class ;
@@ -2219,6 +2560,52 @@ TI:TimeInterval a owl:Class ;
             op21:RID ) .
 
 ### Individuals
+
+<https://w3id.org/italia/data/OP21/distribution/OP21-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/OP21/v1.1/OP21.n3> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/OP21/v1.1/OP21.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa a Riscatti, Ricongiunzioni, Rendite e Lavoratore Domestico"@it,
+        "This is the distribution in N-TRIPLES of the INPS Ontology about Redemption, Aggregation, Life Annuities and Domestic Worker"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Procedura 21"@it,
+        "N-TRIPLES distribution of the INPS ontology - 21 Procedure"@en .
+
+<https://w3id.org/italia/data/OP21/distribution/OP21-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/OP21/v1.1/OP21.ttl> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/OP21/v1.1/OP21.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa a Riscatti, Ricongiunzioni, Rendite e Lavoratore Domestico"@it,
+        "This is the distribution in RDF/Turtle of the INPS Ontology about Redemption, Aggregation, Life Annuities and Domestic Worker"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Procedura 21"@it,
+        "RDF/Turtle distribution of the INPS ontology - 21 Procedure"@en .
+
+<https://w3id.org/italia/data/OP21/distribution/OP21-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/OP21/v1.1/OP21.owl> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/OP21/v1.1/OP21.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa a Riscatti, Ricongiunzioni, Rendite e Lavoratore Domestico"@it,
+        "This is the distribution in RDF/XML of the INPS Ontology about Redemption, Aggregation, Life Annuities and Domestic Worker"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Procedura 21"@it,
+        "RDF/XML distribution of the INPS ontology - 21 Procedure"@en .
+
+<https://w3id.org/italia/data/OP21/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
 
 <https://w3id.org/italia/data/OP21/organization/inps> a COV:PublicOrganization,
         dcatapit:Agent,
@@ -2233,9 +2620,16 @@ TI:TimeInterval a owl:Class ;
         op21:SistemaDiPagamentoElettronicoAttivo,
         owl:NamedIndividual ;
     rdfs:comment "PagoPA is an electronic payments system created to make any payment to the Public Administration easier, safer and more transparent. The platform enables citizens and businesses to make payments to public bodies in a standardized way, both online and offline, through participating Payment Service Providers (PSPs). PagoPA provides citizens with a reliable, efficient and personalized payment experience by allowing them to choose from multiple payment channels and instruments according to their habits, having complete visibility of the cost of the service in total transparency. In addition, pagoPA automatically updates the amount due and ensures with immediacy that the entity has correctly received the payment. PagoPA enables public administrations to collect money centrally and efficiently, offering automatic reporting and reconciliation systems with significant savings in resources, time and costs and ensuring better service to citizens."@en,
-        "PagoPA è il Sistema Di Pagamento Elettronico italiano per i pagamenti a favore della Pubblica Amministrazione, grazie al quale tutti i pagamenti effettuati da cittadini e imprese verso qualsiasi tipologia di Ente Pubblico avvengono in conformità a standard e regole definiti da AgID, semplificando e aumentando la qualità e la quantità dei servizi di pagamento offerti. Offre una modalità standardizzata di pagamento che si può utilizzare attraverso molti e diversificati strumenti e canali di pagamento, accessibili sia tramite il sito dell’Ente Creditore verso il quale occorre effettuare un pagamento, sia tramite gli sportelli fisici e virtuali messi a disposizione da numerosi PSP sia tramite il sito pagoPA. L’aspetto innovativo di questo approccio è rendere indipendente l’Ente Creditore dal PSP poiché l’intermediazione tra questi due soggetti è svolta da pagoPA senza la necessità di alcuna convenzione tra i primi due. Allo stesso tempo, offrendo pagoPA numerosi modalità e canali di pagamento consente all’utente di optare per quello di maggior convenienza, economica e/o logistica. È infatti l’utente debitore a scegliere il proprio PSP eventualmente corrispondendo a quest’ultimo una commissione per il servizio prestato. In breve, lo schema di pagamento tramite piattaforma pagoPA prevede la partecipazione: - della Pubblica Amministrazione o Gestore di Servizio Pubblico, in qualità di beneficiario del pagamento disposto dal cittadino/impresa; - del PSP del debitore, in qualità di soggetto che esegue l’addebito sul conto di quest’ultimo e che ordina l’accredito sul conto del PSP della Pubblica Amministrazione o del Gestore di Servizio Pubblico, già contrattualizzato con il contratto di tesoreria di quest’ultimo; In tale operatività, non sussistendo alcuna attività di incasso da parte di terzi e riversamento dal terzo al beneficiario, nessun soggetto si configura come agente contabile (fonte: AgID). "@it ;
+        "PagoPA è il Sistema Di Pagamento Elettronico italiano per i pagamenti a favore della Pubblica Amministrazione, grazie al quale tutti i pagamenti effettuati da cittadini e imprese verso qualsiasi tipologia di Ente Pubblico avvengono in conformità a standard e regole definiti da AgID, semplificando e aumentando la qualità e la quantità dei servizi di pagamento offerti. Offre una modalità standardizzata di pagamento che si può utilizzare attraverso molti e diversificati strumenti e canali di pagamento, accessibili sia tramite il sito dell’Ente Creditore verso il quale occorre effettuare un pagamento, sia tramite gli sportelli fisici e virtuali messi a disposizione da numerosi PSP sia tramite il sito pagoPA. L’aspetto innovativo di questo approccio è rendere indipendente l’Ente Creditore dal PSP poiché l’intermediazione tra questi due soggetti è svolta da pagoPA senza la necessità di alcuna convenzione tra i primi due. Allo stesso tempo, offrendo pagoPA numerosi modalità e canali di pagamento consente all’utente di optare per quello di maggior convenienza, economica e/o logistica. È infatti l’utente debitore a scegliere il proprio PSP eventualmente corrispondendo a quest’ultimo una commissione per il servizio prestato. In breve, lo schema di pagamento tramite piattaforma pagoPA prevede la partecipazione: - della Pubblica Amministrazione o Gestore di Servizio Pubblico, in qualità di beneficiario del pagamento disposto dal cittadino/impresa; - del PSP del debitore, in qualità di soggetto che esegue l’addebito sul conto di quest’ultimo e che ordina l’accredito sul conto del PSP della Pubblica Amministrazione o del Gestore di Servizio Pubblico, già contrattualizzato con il contratto di tesoreria di quest’ultimo; In tale operatività, non sussistendo alcuna attività di incasso da parte di terzi e riversamento dal terzo al beneficiario, nessun soggetto si configura come agente contabile (fonte: AgID)."@it ;
     dct:identifier "pagoPA" ;
     foaf:name "pagoPA"@it .
+
+<https://w3id.org/italia/data/OP21/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
 
 ### Axioms
 
@@ -2257,6 +2651,7 @@ TI:TimeInterval a owl:Class ;
             op21:MandatoSDD
             op21:MovimentoDiDenaro
             op21:PraticaAdeguamentoContributivo
+            op21:RapportoDiLavoroDomestico
             op21:SessionePagamentoElettronico ) .
 
 [] a owl:AllDisjointClasses ;
@@ -2312,30 +2707,5 @@ TI:TimeInterval a owl:Class ;
                     owl:someValuesFrom [ a owl:Restriction ;
                             owl:onProperty [ owl:inverseOf op21:haSedeINPS ] ;
                             owl:someValuesFrom owl:Thing ] ] ] .
-
-### Annotations
-
-<https://w3id.org/italia/data/OP21/distribution/P21-RDF-TURTLE> a dcat:Distribution,
-        dcatapit:Distribution ;
-    dcat:accessURL <https://github.com/....> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/....> ;
-    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa a Riscatti, Ricongiunzioni e Rendite."@it,
-        "This is the distribution in RDF/Turtle of the INPS Ontology about Redemption, Aggregation and Life Annuities."@en ;
-    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF> ;
-    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
-    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Procedura 21"@it,
-        "RDF/Turtle distribution of the INPS ontology - 21 Procedure"@en .
-
-<https://w3id.org/italia/data/OP21/organization/DirezioneCentraleTII> a dcatapit:Organization,
-        vcard:Kind,
-        vcard:Organization ;
-    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
-    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
-
-<https://w3id.org/italia/data/OP21/organization/td> a dcatapit:Agent,
-        foaf:Agent ;
-    dct:identifier "TD" ;
-    foaf:name "Digital Transformation Team"@en,
-        "Team per la Trasformazione Digitale"@it .
 
 ### Serialized using the ttlser deterministic serializer v1.2.0
