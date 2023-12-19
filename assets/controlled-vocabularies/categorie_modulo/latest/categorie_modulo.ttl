@@ -1,0 +1,332 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix clvapit: <https://w3id.org/italia/onto/CLV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix inpsvoc: <https://w3id.org/italia/controlled-vocabulary/OP21/> .
+@prefix moduliliv1: <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/livello1/> .
+@prefix moduliliv2: <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/livello2/> .
+@prefix moduliliv3: <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/livello3/> .
+@prefix moduliliv4: <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/livello4/> .
+@prefix ndc: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/OP21/distribution/CATMOD_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/categorie_modulo/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/categorie_modulo/latest/categorie_modulo.csv> ;
+    dct:description "Questa è la distribuzione CSV del vocabolario controllato sulla classificazione delle categorie di modulo adottata dall'INPS"@it,
+        "This is the distribution in CSV of the classification of form categories adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CSV distribution of the classification of form categories adopted by INPS controlled vocabulary"@en,
+        "Distribuzione CSV del vocabolario controllato sulla classificazione delle categorie di modulo adottata dall'INPS"@it .
+
+<https://w3id.org/italia/data/OP21/distribution/CATMOD_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/categorie_modulo/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/categorie_modulo/latest/categorie_modulo.json> ;
+    dct:description "Questa è la distribuzione JSON_LD del vocabolario controllato sulla classificazione delle categorie di modulo adottata dall'INPS"@it,
+        "This is the distribution in JSON_LD of the classification of form categories adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "Distribuzione JSON_LD del vocabolario controllato sulla classificazione delle categorie di modulo adottata dall'INPS"@it,
+        "JSON_LD distribution of the classification of form categories adopted by INPS controlled vocabulary"@en .
+
+<https://w3id.org/italia/data/OP21/distribution/CATMOD_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/categorie_modulo/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/categorie_modulo/latest/categorie_modulo.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sulla classificazione delle categorie di modulo adottata dall'INPS"@it,
+        "This is the distribution in RDF/turtle of the classification of form categories adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "Distribuzione RDF/Turtle del vocabolario controllato sulla classificazione delle categorie di modulo adottata dall'INPS"@it,
+        "RDF/Turtle distribution of the classification of form categories adopted by INPS controlled vocabulary"@en .
+
+<https://w3id.org/italia/data/OP21/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/data/OP21/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+inpsvoc:categorie_modulo a adms:Asset,
+        dcat:Dataset,
+        skos:ConceptScheme ;
+    rdfs:label "This is the controlled vocabulary of the classification of form categories adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sulla classificazione delle categorie di modulo adottata dall'INPS"@it ;
+    skos:prefLabel "Vocabolario Controllato sulla classificazione delle categorie di modulo adottata dall'INPS"@it ;
+    rdfs:comment "Classification of form types adopted by INPS adopted by INPS"@en,
+        "Classificazione delle tipologie di moduli adottata dall'INPS"@it ;
+    owl:versionInfo "0.4" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/data/OP21/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/data/OP21/distribution/CATMOD_CSV>,
+        <https://w3id.org/italia/data/OP21/distribution/CATMOD_JSON_LD>,
+        <https://w3id.org/italia/data/OP21/distribution/CATMOD_RDF_TURTLE> ;
+    dcat:keyword "azienda"@it,
+        "company"@en,
+        "contributo"@it,
+        "form"@en,
+        "INPS"@it,
+        "lavoratore"@it,
+        "modulo"@it,
+        "pensionato"@it,
+        "pensioner"@en,
+        "worker"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/data/OP21/organization/inps> ;
+    dct:description "Classification of form types adopted by INPS"@en,
+        "Classificazione delle tipologie di moduli adottata dall'INPS"@it ;
+    dct:identifier "https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo" ;
+    dct:issued "2022-01-10"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2023-04-27"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/data/OP21/organization/inps> ;
+    dct:relation inpsvoc:temi ;
+    dct:rightsHolder <https://w3id.org/italia/data/OP21/organization/inps> ;
+    dct:subject <http://eurovoc.europa.eu/100212>,
+        <http://eurovoc.europa.eu/100234> ;
+    dct:title "Classification of form categories adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sulle classificazione delle categorie di modulo adottata dall'INPS"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    ndc:keyConcept "cateogire_modulo" ;
+    skos:hasTopConcept <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/AC>,
+        <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/AP>,
+        <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/APIN>,
+        <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/CI>,
+        <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/GFPI>,
+        <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/MV>,
+        <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/PSR>,
+        <https://w3id.org/italia/controlled-vocabulary/OP21/categorie_modulo/UE> ;
+    xkos:numberOfLevels "4" .
+
+moduliliv1:AC a skos:Concept ;
+    rdfs:label "Aziende e contributi"@it ;
+    skos:prefLabel "Aziende e contributi"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "AC" ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "AC" ;
+    xkos:depth 1 .
+
+moduliliv1:AP a skos:Concept ;
+    rdfs:label "Assicurato/Pensionato"@it ;
+    skos:prefLabel "Assicurato/Pensionato"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "AP" ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "AP" ;
+    xkos:depth 1 .
+
+moduliliv1:APIN a skos:Concept ;
+    rdfs:label "Assegnazione e abilitazione PIN"@it ;
+    skos:prefLabel "Assegnazione e abilitazione PIN"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "APIN" ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "APIN" ;
+    xkos:depth 1 .
+
+moduliliv1:CI a skos:Concept ;
+    rdfs:label "Convenzioni Internazionali"@it ;
+    skos:prefLabel "Convenzioni Internazionali"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "CI" ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "CI" ;
+    xkos:depth 1 .
+
+moduliliv1:GFPI a skos:Concept ;
+    rdfs:label "Gestioni Fondi Gruppo Poste Italiane"@it ;
+    skos:prefLabel "Gestioni Fondi Gruppo Poste Italiane"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "GFPI" ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "GFPI" ;
+    xkos:depth 1 .
+
+moduliliv1:MV a skos:Concept ;
+    rdfs:label "Moduli vari"@it ;
+    skos:prefLabel "Moduli vari"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "MV" ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:narrower moduliliv2:GDP,
+        moduliliv2:GLSS ;
+    skos:notation "MV" ;
+    xkos:depth 1 .
+
+moduliliv1:PSR a skos:Concept ;
+    rdfs:label "Prestazioni a sostegno del reddito"@it ;
+    skos:prefLabel "Prestazioni a sostegno del reddito"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "PSR" ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "PSR" ;
+    xkos:depth 1 .
+
+moduliliv1:UE a skos:Concept ;
+    rdfs:label "Unione Europea"@it ;
+    skos:prefLabel "Unione Europea"@it ;
+    clvapit:hasRankOrder "1" ;
+    dct:identifier "UE" ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "UE" ;
+    xkos:depth 1 .
+
+moduliliv2:GDP a skos:Concept ;
+    rdfs:label "Gestione Dipendenti Pubblici"@it ;
+    skos:prefLabel "Gestione Dipendenti Pubblici"@it ;
+    clvapit:hasRankOrder "2" ;
+    dct:identifier "GDP" ;
+    skos:broader moduliliv1:MV ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:narrower moduliliv3:EA,
+        moduliliv3:IP,
+        moduliliv3:PSMSAD ;
+    skos:notation "GDP" ;
+    xkos:depth 2 .
+
+moduliliv2:GLSS a skos:Concept ;
+    rdfs:label "Gestione Lavoratori Spettacolo e Sport"@it ;
+    skos:prefLabel "Gestione Lavoratori Spettacolo e Sport"@it ;
+    clvapit:hasRankOrder "2" ;
+    dct:identifier "GLSS" ;
+    skos:broader moduliliv1:MV ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:narrower moduliliv3:AC_LSS,
+        moduliliv3:AP_LSS,
+        moduliliv3:PP,
+        moduliliv3:PSMSAD_LSS ;
+    skos:notation "GLSS" ;
+    xkos:depth 2 .
+
+moduliliv3:AC_LSS a skos:Concept ;
+    rdfs:label "Aziende e Contributi (Lavoratori Spettacolo e Sport)"@it ;
+    skos:prefLabel "Aziende e Contributi (Lavoratori Spettacolo e Sport)"@it ;
+    clvapit:hasRankOrder "3" ;
+    dct:identifier "ACL_SS" ;
+    skos:broader moduliliv2:GLSS ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "ACL_SS" ;
+    xkos:depth 3 .
+
+moduliliv3:AP_LSS a skos:Concept ;
+    rdfs:label "Assicurato Pensionato (Lavoratori Spettacolo e Sport)"@it ;
+    skos:prefLabel "Assicurato Pensionato (Lavoratori Spettacolo e Sport)"@it ;
+    clvapit:hasRankOrder "3" ;
+    dct:identifier "AP_LSS" ;
+    skos:broader moduliliv2:GLSS ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "AP_LSS" ;
+    xkos:depth 3 .
+
+moduliliv3:EA a skos:Concept ;
+    rdfs:label "Enti e Amministrazioni"@it ;
+    skos:prefLabel "Enti e Amministrazioni"@it ;
+    clvapit:hasRankOrder "3" ;
+    dct:identifier "EA" ;
+    skos:broader moduliliv2:GDP ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "EA" ;
+    xkos:depth 3 .
+
+moduliliv3:IP a skos:Concept ;
+    rdfs:label "Iscritto/Pensionato"@it ;
+    skos:prefLabel "Iscritto/Pensionato"@it ;
+    clvapit:hasRankOrder "2" ;
+    dct:identifier "IP" ;
+    skos:broader moduliliv2:GDP ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:narrower moduliliv3:PA,
+        moduliliv3:PCS,
+        moduliliv3:PP,
+        moduliliv3:TFS_TFR ;
+    skos:notation "IP" ;
+    xkos:depth 2 .
+
+moduliliv3:PSMSAD a skos:Concept ;
+    rdfs:label "Fondo PSMSAD"@it ;
+    skos:prefLabel "Fondo PSMSAD"@it ;
+    clvapit:hasRankOrder "3" ;
+    dct:identifier "PSMSAD" ;
+    skos:broader moduliliv2:GDP ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "PSMSAD" ;
+    xkos:depth 3 .
+
+moduliliv3:PSMSAD_LSS a skos:Concept ;
+    rdfs:label "Fondo PSMSAD (Lavoratori Spettacolo e Sport)"@it ;
+    skos:prefLabel "Fondo PSMSAD (Lavoratori Spettacolo e Sport)"@it ;
+    clvapit:hasRankOrder "3" ;
+    dct:identifier "PSMSAD_LSS" ;
+    skos:broader moduliliv2:GLSS ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "PSMSAD_LSS" ;
+    xkos:depth 3 .
+
+moduliliv4:PA a skos:Concept ;
+    rdfs:label "Posizione assicurativa"@it ;
+    skos:prefLabel "Posizione assicurativa"@it ;
+    clvapit:hasRankOrder "4" ;
+    dct:identifier "PA" ;
+    skos:broader moduliliv3:IP ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "PA" ;
+    xkos:depth 4 .
+
+moduliliv4:PCS a skos:Concept ;
+    rdfs:label "Prestazioni Creditizie e Sociali"@it ;
+    skos:prefLabel "Prestazioni Creditizie e Sociali"@it ;
+    clvapit:hasRankOrder "4" ;
+    dct:identifier "PCS" ;
+    skos:broader moduliliv3:IP ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "PCS" ;
+    xkos:depth 4 .
+
+moduliliv4:PP a skos:Concept ;
+    rdfs:label "Prestazioni Pensionistiche"@it ;
+    skos:prefLabel "Prestazioni Pensionistiche"@it ;
+    clvapit:hasRankOrder "4" ;
+    dct:identifier "PP" ;
+    skos:broader moduliliv3:IP ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "PP" ;
+    xkos:depth 4 .
+
+moduliliv4:TFS_TFR a skos:Concept ;
+    rdfs:label "TFS/TFR e Previdenza complementare"@it ;
+    skos:prefLabel "TFS/TFR e Previdenza complementare"@it ;
+    clvapit:hasRankOrder "4" ;
+    dct:identifier "TFS_TFR" ;
+    skos:broader moduliliv3:IP ;
+    skos:inScheme inpsvoc:categorie_modulo ;
+    skos:notation "TFS_TFR" ;
+    xkos:depth 4 .
+
+### Serialized using the ttlser deterministic serializer v1.2.0
