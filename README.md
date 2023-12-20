@@ -11,32 +11,37 @@ I file presenti in questo repository sono organizzati secondo la seguente albera
 
 ```bash
 ┌─ assets/controlled-vocabularies/
-│  └─ ...
+│  ├─ categorie-disabilita
+│  │   ├─ latest
+│  │   │   ├─ categorie_disabilita.csv
+│  │   │   ├─ categorie_disabilita.json
+│  │   │   └─ categorie_disabilita.ttl
+│  │   ├─ v{version}
+│  │   │   ├─ categorie_disabilita.csv
+│  │   │   ├─ categorie_disabilita.json
+│  │   │   └─ categorie_disabilita.ttl
+│  ├─ ...
+│  ├─ frame-short.yamlld
+│  └─ notes.md
 ├─ assets/ontologies/
-│  ├─ procedura21
-│  └─ procedura21-{data}
-│      └─ procedura21-{data}.ttl
+│  ├─ OP21
+│  │   ├─ latest
+│  │   │   ├─ OP21.n3
+│  │   │   ├─ OP21.owl
+│  │   │   └─ OP21.ttl
+│  │   ├─ v{version}
+│  │   │   ├─ OP21.n3
+│  │   │   ├─ OP21.owl
+│  │   │   └─ OP21.ttl
+│  ├─ ...
+│  └─ notes.md
 ├─ assets/schemas/
 │  ├─ contratto-di-lavoro
-│  │  └─ contratto-di-lavoro.oas3.yaml
-│  ├─ datore-di-lavoro-domestico
-│  │  └─ datore-di-lavoro-domestico.oas3.yaml
-│  ├─ esito-pagamento
-│  │  └─ esito-pagamento.oas3.yaml
-│  ├─ lavoratore-domestico
-│  │  └─ lavoratore-domestico.oas3.yaml
-│  ├─ mandato-sdd
-│  │  └─ mandato-sdd.oas3.yaml
-│  ├─ ordine-pagamento
-│  │  └─ ordine-pagamento.oas3.yaml
-│  ├─ pratica-rendita
-│  │  └─ pratica-rendita.oas3.yaml
-│  ├─ pratica-ricongiunzione
-│  │  └─ pratica-ricongiunzione.oas3.yaml
-│  ├─ pratica-riscatto
-│  │  └─ pratica-riscatto.oas3.yaml
-│  ├─ rapporto-lavoro-domestico
-│  │  └─ rapporto-lavoro-domestico.oas3.yaml
+│  │   ├─ latest
+│  │   │   └─ contratto-di-lavoro.oas3.yaml
+│  │   ├─ v{version}
+│  │   │   └─ contratto-di-lavoro.oas3.yaml
+│  ├─ ...
 │  └─ notes.md
 ├─ README.md
 └─ publiccode.yaml
