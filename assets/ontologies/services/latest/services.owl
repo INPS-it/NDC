@@ -1,0 +1,2578 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/services/"
+     xml:base="https://w3id.org/italia/social-security/onto/services/"
+     xmlns:L0="https://w3id.org/italia/onto/l0/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:CPV="https://w3id.org/italia/onto/CPV/"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	 xmlns:dct="http://purl.org/dc/terms/"
+	 xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
+	 xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	 xmlns:dcat="http://www.w3.org/ns/dcat#"
+	 xmlns:adms="http://www.w3.org/ns/adms#"
+	 xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:COV="https://w3id.org/italia/onto/COV/"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:CPSV="https://w3id.org/italia/onto/CPSV/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:INPSService="https://w3id.org/italia/social-security/onto/services/"
+     xmlns:TI="https://w3id.org/italia/onto/TI/"
+     xmlns:INPSCore="https://w3id.org/italia/social-security/onto/core/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:RO="https://w3id.org/italia/onto/RO/">
+    <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/services/">
+    <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/services/1.0"/>
+    <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/"/>
+    <owl:imports rdf:resource="https://w3id.org/italia/onto/CPSV/"/>
+    <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/"/>
+    <owl:imports rdf:resource="https://w3id.org/italia/onto/RO/"/>
+    <owl:imports rdf:resource="https://w3id.org/italia/onto/TI/"/>
+    <owl:imports rdf:resource="https://w3id.org/italia/social-security/onto/core/"/>
+    <dct:title xml:lang="it">Ontologia INPS relativa ai servizi</dct:title>
+    <dct:title xml:lang="en">INPS services Ontology</dct:title>
+    <adms:last rdf:resource="https://w3id.org/italia/social-security/onto/services/1.0"/>
+    <dcat:keyword xml:lang="it">pagamento</dcat:keyword>
+    <dcat:keyword xml:lang="it">bollettino di pagamento</dcat:keyword>
+    <dcat:keyword xml:lang="it">correntista</dcat:keyword>
+    <dcat:keyword xml:lang="it">conto corrente</dcat:keyword>
+    <dcat:keyword xml:lang="it">mandato SDD</dcat:keyword>
+    <dcat:keyword xml:lang="en">payment</dcat:keyword>
+    <dcat:keyword xml:lang="en">payment slip</dcat:keyword>
+    <dcat:keyword xml:lang="en">account holder</dcat:keyword>
+    <dcat:keyword xml:lang="en">bank account</dcat:keyword>
+    <dcat:keyword xml:lang="en">SDD mandate</dcat:keyword>
+    <rdfs:comment xml:lang="it">Ontologia INPS relativa alle entità e le relazioni che abilitano l'erogazione di servizi che rivestono uno stesso ruolo nell'ambito di diversi processi produttivi. Tra di essi troviamo, ad esempio, il servizio per il pagamento di un bollettino/avviso emesso dall'ente. </rdfs:comment>
+    <rdfs:comment xml:lang="en">This is the ontology of the INPS Organization about entities and relationships that enable the delivery of services that play the same role within different production processes. These include, for example, the service for payment of a bill/notice issued by the entity.</rdfs:comment>
+    <adms:target xml:lang="it">Cittadini</adms:target>
+    <adms:target xml:lang="it">Imprese</adms:target>
+    <adms:target xml:lang="it">Pubbliche Amministrazioni</adms:target>
+    <dcat:contactPoint rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
+    <dct:creator rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-16T00:00:00Z</dct:issued>
+    <adms:type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
+    <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/services/distribution/SERVICE-RDF-TURTLE"/>
+    <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/services/distribution/SERVICE-RDF-XML"/>
+    <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/services/distribution/SERVICE-N-TRIPLES"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/services/"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-01-17T00:00:00Z</dct:modified>
+    <rdfs:label xml:lang="it">Ontologia INPS relativa ai servizi</rdfs:label>
+    <rdfs:label xml:lang="en">INPS services Ontology</rdfs:label>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDD"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagamento"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/services/BollettinoDiPagamento"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/services/ModalitàDiPagamento"/>
+    <adms:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
+    <adms:status>catalogued</adms:status>
+    <adms:status>published</adms:status>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
+    <dct:rightsHolder rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
+    <adms:hasContributor rdf:resource="https://w3id.org/italia/social-security/data/organization/td"/>
+    <owl:versionInfo xml:lang="it">Versione 1.0 - Modificata il 17 Gennaio 2024</owl:versionInfo>
+    <owl:versionInfo xml:lang="en">Version 1.0 - Modified on 17 January 2024</owl:versionInfo>
+    <adms:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
+    <adms:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+    <dct:publisher rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
+    <adms:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/services</adms:officialURI>
+    <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+    <adms:acronym>inps</adms:acronym>
+    <dct:description xml:lang="it">Ontologia INPS relativa alle entità e le relazioni che abilitano l'erogazione di servizi che rivestono uno stesso ruolo nell'ambito di diversi processi produttivi. Tra di essi troviamo, ad esempio, il servizio per il pagamento di un bollettino/avviso emesso dall'ente.</dct:description>
+    <dct:description xml:lang="en">This is the ontology of the INPS Organization about entities and relationships that enable the delivery of services that play the same role within different production processes. These include, for example, the service for payment of a bill/notice issued by the entity.</dct:description>
+    <dct:identifier>https://w3id.org/italia/social-security/onto/services</dct:identifier>
+    <adms:prefix>inpsserv</adms:prefix>
+  </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#boolean -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#dateTime -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#decimal -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/hasInput -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CPSV/hasInput"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/isPartOfEvent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CPSV/isPartOfEvent"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/isStatusForService -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CPSV/isStatusForService"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/producesOutput -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CPSV/producesOutput"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/requiresService -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CPSV/requiresService"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/RO/hasRiT -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/hasRiT"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/RO/holdsRoleInTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/holdsRoleInTime"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/l0/hasFirstMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasFirstMember"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/l0/hasLastMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasLastMember"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/l0/hasMember -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/l0/hasMember"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/accedeServizioDiPagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/accedeServizioDiPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagatore"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/SessionePagamentoElettronico"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Debtor to an Electronic Payment Session. Each Session has a single Debtor who accesses the payment service in the context of session.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Pagatore ad una Sessione di Pagamento Elettronico. Ciascuna Sessione ha un unico Pagatore che accede al servizio di pagamento nell&apos;ambito della sessione.</rdfs:comment>
+        <rdfs:label xml:lang="it">accede servizio di pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">access payment service</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/attivaOrdineDiPagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/attivaOrdineDiPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/Pagamento"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/PrenotazioneDiPagamento"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/OrdineDiPagamento"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Payment or Payment Reservation to a Payment Order.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Pagamento o una Prenotazione di Pagamento a un Ordine di Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="en">activates payment order</rdfs:label>
+        <rdfs:label xml:lang="it">attiva ordine di pagamento</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/autorizzaMandato -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/autorizzaMandato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/AttoDiAttivazioneMandato"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDDAttivo"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Mandate Activation Deed to the Active SDD Mandate it authorizes. Each Activation Deed authorizes a single SDD Mandate.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Atto di Attivazione Mandato al Mandato SDD Attivo che autorizza. Ciascun Atto di Attivazione autorizza un unico Mandato SDD.</rdfs:comment>
+        <rdfs:label xml:lang="en">authorizes mandate</rdfs:label>
+        <rdfs:label xml:lang="it">autorizza mandato</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/avvisoHaEnteCreditore -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/avvisoHaEnteCreditore">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/AvvisoDiPagamento"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/EnteCreditore"/>
+        <rdfs:comment xml:lang="en">Functional link between the Payment Notice and the Creditor Institution demanding the payment.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Legame funzionale tra l&apos;Avviso Di Pagamento e l&apos;Ente Creditore che esige il pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">avviso ha ente creditore</rdfs:label>
+        <rdfs:label xml:lang="en">notice has creditor institution</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/emetteEsitoPagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/emetteEsitoPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/EnteCreditore"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/EsitoPagamento"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Creditor Authority to a Payment Outcome issued by it. Each outcome is issued by a single authority.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Ente Creditore ad un Esito Pagamento emesso da questo. Ciascun Esito è emesso da un unico Ente.</rdfs:comment>
+        <rdfs:label xml:lang="it">emette esito pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">issues payment outcome</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/esegueAccredito -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/esegueAccredito">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/OrdineDiPagamento"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Payment Order to a Money Movement.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Ordine di Pagamento ad un Movimento Di Denaro.</rdfs:comment>
+        <rdfs:label xml:lang="it">esegue accredito</rdfs:label>
+        <rdfs:label xml:lang="en">performs credit</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/esegueAddebito -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/esegueAddebito">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/OrdineDiPagamento"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Payment Order to a Money Movement.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Ordine di Pagamento ad un Movimento Di Denaro.</rdfs:comment>
+        <rdfs:label xml:lang="it">esegue addebito</rdfs:label>
+        <rdfs:label xml:lang="en">performs charge</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/eseguePagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/eseguePagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagatore"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagamento"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Debtor to a Payment. Each Payment is made by a single Debtor.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Debitore ad un Pagamento. Ciascun Pagamento è eseguito da un unico Debitore.</rdfs:comment>
+        <rdfs:label xml:lang="it">esegue pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">performs payment</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/haContoCorrente -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/haContoCorrente">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/Correntista"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/ContoCorrente"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Bank Account Holder to a Bank Account. Each Bank Account belongs to a single Bank Account Holder.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Correntista ad un Conto Corrente. Ciascun Conto Corrente appartiene ad un unico Correntista.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha conto corrente</rdfs:label>
+        <rdfs:label xml:lang="en">has bank account</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/haCreditoreMandato -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/haCreditoreMandato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDD"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/CreditoreMandato"/>
+        <rdfs:comment xml:lang="en">Relationship linking an SDD Mandate to the Mandate Creditor.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Mandato SDD al Creditore del Mandato.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha creditore mandato</rdfs:label>
+        <rdfs:label xml:lang="en">has mandate creditor</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/haDebitoreMandato -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/haDebitoreMandato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDD"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/DebitoreMandato"/>
+        <rdfs:comment xml:lang="en">Relationship linking an SDD Mandate to the Mandate Debtor. Each Mandate has a single Debtor.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Mandato SDD al Debitore del Mandato. Ciascun Mandato ha un unico Debitore.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha debitore mandato</rdfs:label>
+        <rdfs:label xml:lang="en">has mandate debtor</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/haEsitoPagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/haEsitoPagamento">
+        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/riferiscePagamento"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagamento"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/EsitoPagamento"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Payment to a Payment Outcome. Each Payment Outcome relates to a single Payment.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Pagamento a un Esito Pagamento. Ciascun Esito Pagamento è relativo ad un unico Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha esito pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">has payment outcome</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/haIntervalloDiRendicontazione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/haIntervalloDiRendicontazione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/FlussoDiRendicontazione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Reporting Flow to a Time Interval</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Flusso di Rendicontazione a un Intervallo di Tempo.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha intervallo di rendicontazione</rdfs:label>
+        <rdfs:label xml:lang="en">has reporting interval</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/haIstitutoDiCredito -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/haIstitutoDiCredito">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/ContoCorrente"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/IstitutoDiCredito"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Bank Account to a Credit Institution. Each Bank Account belongs to a single Credit Institution.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Conto Corrente ad un Istituto di Credito. Ciascun Conto Corrente appartiene ad un unico Istituto di Credito.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha istituto di credito</rdfs:label>
+        <rdfs:label xml:lang="en">has credit institution</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/haModalitàDiPagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/haModalitàDiPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/BollettinoDiPagamento"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/ModalitàDiPagamento"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Payment Slip to a Payment Method. Each Bulletin has a single Payment Method.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Bollettino di Pagamento ad una Modalità di Pagamento. Ciascun Bollettino ha un&apos;unica Modalità di Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha modalità di pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">has payment mode</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/haNotificaDiPagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/haNotificaDiPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/Pagamento"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/PrenotazioneDiPagamento"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/AvvisoDiPagamento"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/BollettinoMAV"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Relationship linking a Payment or Payment Reservation to a MAV Bulletin or Payment Notice. Each Payment or Payment Reservation is linked to a single MAV Bulletin or Payment Notice.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Pagamento o una Prenotazione di Pagamento a un Bollettino MAV o ad un Avviso di Pagamento. Ciascun Pagamento o Prenotazione di Pagamento è collegato ad un unico Bollettino MAV o Avviso di Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha notifica di pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">has payment notice</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/haOggettoDiPagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/haOggettoDiPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/BollettinoDiPagamento"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/OggettoDiPagamento"/>
+        <rdfs:comment xml:lang="en">Relationship linking each Payment Slip to a Payment Item. Each Slip has a single Payment Item.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega ciascun Bolletino di Pagamento ad un Oggetto Di Pagamento. Ciascun Bollettino ha un&apos;unica Oggetto Di Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha oggetto di pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">has payment item</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/haPagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/haPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/BollettinoDiPagamento"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagamento"/>
+        <rdfs:comment xml:lang="en">Object Property which connects a Payment Slip with the Payment.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Bollettino di pagamento con il Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">has payment</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/haServizioDiPagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/haServizioDiPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/PrestatoreDiServiziDiPagamento"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/ServizioDiPagamento"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Payment Service Provider to a Payment Service. Each Payment Service is provided by a single Provider.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Prestatore di Servizi di Pagamento ad un Servizio di Pagamento. Ciascun Servizio di Pagamento è erogato da un unico Prestatore.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha servizio di pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">has payment service</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/inviaFlussoDiRendicontazione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/inviaFlussoDiRendicontazione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/PrestatoreDiServiziDiPagamento"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/FlussoDiRendicontazione"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Payment Service Provider to a Reporting Flow. Each Reporting Flow is sent by a single Provider.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Prestatore di Servizi di Pagamento a un Flusso di Rendicontazione. Ciascun Flusso di Rendicontazione è inviato da un unico Prestatore.</rdfs:comment>
+        <rdfs:label xml:lang="it">invia flusso di rendicontazione</rdfs:label>
+        <rdfs:label xml:lang="en">send reporting flow</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/inviaRicevutaDiMovimento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/inviaRicevutaDiMovimento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/RicevutaDiMovimento"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Money Movement to a Movement Receipt.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Movimento Di Denaro ad una Ricevuta di Movimento.</rdfs:comment>
+        <rdfs:label xml:lang="it">invia ricevuta di movimento</rdfs:label>
+        <rdfs:label xml:lang="en">sends movement receipt</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/movimentoAgisceSu -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/movimentoAgisceSu">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/ContoCorrente"/>
+        <rdfs:comment xml:lang="en">Functional link between a Money Movement and the Current Account on which this movement takes place.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Legame funzionale tra un Movimento Di Denaro e il Conto Corrente su cui avviene tale movimento.</rdfs:comment>
+        <rdfs:label xml:lang="en">movement acts on</rdfs:label>
+        <rdfs:label xml:lang="it">movimento agisce su</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/prenotaPagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/prenotaPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDAttivo"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/SessionePagamentoElettronico"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/PrenotazioneDiPagamento"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Payment Service Host or an Active SDD Mandate with a Payment Reservation. Each Active SDD Mandate reserves at least one payment.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Gestore di Servizi di Pagamento o un Mandato SDD Attivo con una Prenotazione di Pagamento. Ciascun Mandato SDD Attivo prenota un almeno pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">prenota pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">reserves payment</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/revocaMandato -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/revocaMandato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/AttoDiRevocaMandato"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDDRevocato"/>
+        <rdfs:comment xml:lang="en">Relationship linking each SDD Mandate Withdrawl Deed with the Revoked SDD Mandate. Each Withdrawl Deed revokes a single SDD Mandate.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega ciascun Atto di Revoca Mandato con il Mandato SDD Revocato. Ciascun Atto revoca un unico Mandato SDD.</rdfs:comment>
+        <rdfs:label xml:lang="it">revoca mandato</rdfs:label>
+        <rdfs:label xml:lang="en">revokes mandate</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/riceveFlussoDiRendicontazione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/riceveFlussoDiRendicontazione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/EnteCreditore"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/FlussoDiRendicontazione"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Creditor Institution with one or more Reporting Flows. Each Reporting Flow is received by exactly one Creditor Institution.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Ente Creditore con uno o più Flussi di Rendicontazione. Un Flusso di Rendicontazione è ricevuto da esattamente un Ente Creditore.</rdfs:comment>
+        <rdfs:label xml:lang="en">receives reporting flow</rdfs:label>
+        <rdfs:label xml:lang="it">riceve flusso di rendicontazione</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/riceveRicevutaDiAccredito -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/riceveRicevutaDiAccredito">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/EnteCreditore"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/RicevutaDiMovimento"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Creditor Institution with one or more Credit Receipts. Each Credit Receipt is received by exactly one Creditor Institution.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Ente Creditore con una o più Ricevute di Accredito. Una Ricevuta di Accredito è ricevuta esattamente da un Ente Creditore.</rdfs:comment>
+        <rdfs:label xml:lang="en">receives credit receipt</rdfs:label>
+        <rdfs:label xml:lang="it">riceve ricevuta di accredito</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/riferiscePagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/riferiscePagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">Relationship inverse of has payment outcome, which links a Payment Outcome with a Payment to which it refers. A Payment Outcome refers to one and only one Payment.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione inversa della relazione ha esito pagamento, che lega un Esito Pagamento al Pagamento a cui si riferisce. Un Esito Pagamento si riferisce sempre e solo ad un Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="en">refers payment</rdfs:label>
+        <rdfs:label xml:lang="it">riferisce pagamento</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/stabilisceFlussoDiAddebito -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/services/stabilisceFlussoDiAddebito">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/AttoDiAttivazioneMandato"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/services/ContoCorrente"/>
+        <rdfs:comment xml:lang="en">Relationship linking an SDD Mandate Activation Deed with the two Bank Accounts that are involved in a payment, the Mandate Creditor and the Mandate Debtor.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Atto di Attivazione Mandato con i due Conti Correnti interessati dal pagamento, quello del Creditore Mandato e quello del Debitore Mandato.</rdfs:comment>
+        <rdfs:label xml:lang="en">establishes charge flow</rdfs:label>
+        <rdfs:label xml:lang="it">stabilisce flusso di addebito</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/otherServiceCode -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/CPSV/otherServiceCode"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/l0/description -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/description"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/l0/identifier -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/l0/identifier"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/IBAN -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/IBAN">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/ContoCorrente"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Codice delle coordinate bancarie, conforme allo standard internazionale, che individua in modo univoco un conto bancario</rdfs:comment>
+        <rdfs:comment xml:lang="en">International Bank Account Number</rdfs:comment>
+        <rdfs:label xml:lang="en">IBAN</rdfs:label>
+        <rdfs:label xml:lang="it">IBAN</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/IUV -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/IUV">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/AvvisoDiPagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Identificativo Univoco Versamento</rdfs:comment>
+        <rdfs:comment xml:lang="en">Unique Payment Identification</rdfs:comment>
+        <rdfs:label xml:lang="en">IUV</rdfs:label>
+        <rdfs:label xml:lang="it">IUV</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/addebitoRicorrente -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/addebitoRicorrente">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDD"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment xml:lang="it">Assume il valore &quot;true&quot; se il Mandato SDD ha un addebito ricorrente, altrimenti assume il valore &quot;false&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">It assumes the value &quot;true&quot; if the SDD Mandate has a recurring charge, otherwise it assumes the value &quot;false&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="it">addebito ricorrente</rdfs:label>
+        <rdfs:label xml:lang="en">recurring credit</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/causaleMovimento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/causaleMovimento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Motivation of the movement, necessary to identify the motive of the movement of momey on a bank account.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Motivazione del movimento, serve a identificare il motivo dello movimento di denaro su un conto corrente.</rdfs:comment>
+        <rdfs:label xml:lang="it">causale movimento</rdfs:label>
+        <rdfs:label xml:lang="en">movement motive</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/codiceAvviso -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/codiceAvviso">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/AvvisoDiPagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identification code of the Payment Notice.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È il codice relativo all&apos;Avviso Di Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">codice avviso</rdfs:label>
+        <rdfs:label xml:lang="en">notice code</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/codiceBollettinoINPS -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/codiceBollettinoINPS">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/BollettinoDiPagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">It is the code that INPS assigns to the Payment Slip in cases of single or installment payment. It is made up of the application number and the code of the INPS office.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È il codice che l&apos;INPS assegna al Bollettino Di Pagamento nei casi di pagamento unico o di rata. È composto dal numero pratica e dl codice della sede INPS.</rdfs:comment>
+        <rdfs:label xml:lang="en">INPS slip code</rdfs:label>
+        <rdfs:label xml:lang="it">codice bollettino INPS</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/codiceCBILL -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/codiceCBILL">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/EnteCreditore"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Codice identificativo di Enti e Aziende che aderiscono al circuito CBILL/pagoPA</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identification code of Organizations and Companies that adhere to the CBILL/pagoPA circuit.</rdfs:comment>
+        <rdfs:label xml:lang="en">CBILL code</rdfs:label>
+        <rdfs:label xml:lang="it">codice CBILL</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/codiceMAV -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/codiceMAV">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/BollettinoMAV"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Codice identificativo di un bollettino MAV.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identification code of a MAV slip.</rdfs:comment>
+        <rdfs:label xml:lang="en">MAV code</rdfs:label>
+        <rdfs:label xml:lang="it">codice MAV</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/codiceMandato -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/codiceMandato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDD"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Identification code of the SDD Mandate.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È il codice relativo al Mandato SDD.</rdfs:comment>
+        <rdfs:label xml:lang="it">codice mandato</rdfs:label>
+        <rdfs:label xml:lang="en">mandate code</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/codiceRID -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/codiceRID">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/RID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The RID identification code.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È il codice relativo al RID.</rdfs:comment>
+        <rdfs:label xml:lang="en">RID code</rdfs:label>
+        <rdfs:label xml:lang="it">codice RID</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/codiceRiscossione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/codiceRiscossione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/EsitoPagamentoDefinitivo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Identifica e certifica l&apos;avvenuto incasso di un pagamento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies and certifies that a payment has been collected.</rdfs:comment>
+        <rdfs:label xml:lang="it">codice riscossione</rdfs:label>
+        <rdfs:label xml:lang="en">collection code</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/codiceServizioDiPagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/codiceServizioDiPagamento">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/CPSV/otherServiceCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/ServizioDiPagamento"/>
+        <rdfs:comment xml:lang="en">Identification code of the Payment Service</rdfs:comment>
+        <rdfs:comment xml:lang="it">È il codice relativo al Servizio Di Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">codice servizio di pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">payment service code</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/codiceSistemaDiPagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/codiceSistemaDiPagamento">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/CPSV/otherServiceCode"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronico"/>
+        <rdfs:comment xml:lang="en">Identification code of the Electronic Payment System.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È il codice relativo al Sistema Di Pagamento Elettronico.</rdfs:comment>
+        <rdfs:label xml:lang="it">codice sistema di pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">payment system code</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/dataDiPrenotazione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/dataDiPrenotazione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/PrenotazioneDiPagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">It is the date in which the Payment is reserved.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la data relativa alla Prenotazione Di Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="en">booking date</rdfs:label>
+        <rdfs:label xml:lang="it">data di prenotazione</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/dataMovimento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/dataMovimento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Date of the Money Movement.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la data relativa al Movimento Di Denaro.</rdfs:comment>
+        <rdfs:label xml:lang="it">data movimento</rdfs:label>
+        <rdfs:label xml:lang="en">movement date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/dataOrdinePagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/dataOrdinePagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/OrdineDiPagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">It is the date of the Payment Order.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la data relativa all&apos;Ordine Di Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">data ordine pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">payment order date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/dataPagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/dataPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">It is the date in which the Payment is performed.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la data relativa al Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">data pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">payment date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/dataRicevuta -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/dataRicevuta">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/RicevutaDiMovimento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">It is the date of the Movement Receipt.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la data relativa alla Ricevuta Di Movimento.</rdfs:comment>
+        <rdfs:label xml:lang="it">data ricevuta</rdfs:label>
+        <rdfs:label xml:lang="en">receipt date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/dataScadenzaPagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/dataScadenzaPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/AvvisoDiPagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">It is the expiry date relating to the Payment Notice.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la data di scadenza relativa all&apos;Avviso Di Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">data scadenza pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">payment due date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/descrizioneEsitoPagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/descrizioneEsitoPagamento">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/description"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/EsitoPagamento"/>
+        <rdfs:comment xml:lang="en">A description of the payment outcome. In case the outcome is &quot;deferred&quot;, the outcome of the payment is not yet known.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È una descrizione associata all&apos;Esito Pagamento. Nel caso in cui l&apos;esito risulta &quot;DIFFERITO&quot; non si conosce ancora l’esito del pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">descrizione esito pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">payment outcome description</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/identificatoreCorrentista -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/identificatoreCorrentista">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/Correntista"/>
+        <rdfs:comment xml:lang="it">Identifica il Correntista.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies the Account Holder</rdfs:comment>
+        <rdfs:label xml:lang="en">account holder identifier</rdfs:label>
+        <rdfs:label xml:lang="it">identificatore correntista</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/identificatoreEsitoPagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/identificatoreEsitoPagamento">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/EsitoPagamento"/>
+        <rdfs:comment xml:lang="en">Identification code of the Payment Outcome.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È l&apos;identificativo di un Esito Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">identificatore esito pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">payment outcome identifier</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/identificatoreMovimento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/identificatoreMovimento">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/identificatoreRicevuta"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Identifica un Movimento Di Denaro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies a Money Movement.</rdfs:comment>
+        <rdfs:label xml:lang="it">identificatore movimento</rdfs:label>
+        <rdfs:label xml:lang="en">movement identifier</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/identificatoreOrdinePagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/identificatoreOrdinePagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/OrdineDiPagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Identifica l&apos;Ordine Di Pagamento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies the Payment Order.</rdfs:comment>
+        <rdfs:label xml:lang="it">identificatore ordine pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">payment order identifier</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/identificatorePrenotazionePagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/identificatorePrenotazionePagamento">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/PrenotazioneDiPagamento"/>
+        <rdfs:comment xml:lang="it">Identificatore della prenotazione di pagamento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies the payment reservation.</rdfs:comment>
+        <rdfs:label xml:lang="it">identificatore prenotazione pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">payment reservation identifier</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/identificatoreRicevuta -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/identificatoreRicevuta">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/RicevutaDiMovimento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Identifica una Ricevuta Di Movimento. È equivalente all&apos;identificativo di un Movimento Di Denaro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies a Movement Receipt. It is equivalent to a movement identifier.</rdfs:comment>
+        <rdfs:label xml:lang="it">identificatore ricevuta</rdfs:label>
+        <rdfs:label xml:lang="en">receipt identifier</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/identificatoreSessionePagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/identificatoreSessionePagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/SessionePagamentoElettronico"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Identifica la Sessione Di Pagamento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies the Payment Session.</rdfs:comment>
+        <rdfs:label xml:lang="it">identificatore sessione pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">payment session identifier</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/importoCommissioneMovimento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/importoCommissioneMovimento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">It is the cost of a Money Movement operation, if any.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È il costo di una operazione di Movimento Di Denaro, se presente.</rdfs:comment>
+        <rdfs:label xml:lang="it">importo commissione movimento</rdfs:label>
+        <rdfs:label xml:lang="en">movement commission amount</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/importoMovimento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/importoMovimento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="it">Importo di un movimento di denaro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">It is the money amount of a movement.</rdfs:comment>
+        <rdfs:label xml:lang="it">importo movimento</rdfs:label>
+        <rdfs:label xml:lang="en">movement amount</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/importoPagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/importoPagamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">It is the cash amount related to the Payment.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È l&apos;importo in denaro relativo al Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="en">amount paid</rdfs:label>
+        <rdfs:label xml:lang="it">importo pagamento</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/importoPrenotato -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/importoPrenotato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/PrenotazioneDiPagamento"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">It is the cash amount relating to the Payment Reservation.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È l&apos;importo in denaro relativo alla Prenotazione Di Pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="en">booked amount</rdfs:label>
+        <rdfs:label xml:lang="it">importo prenotato</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/modalitàPOSVirtuale -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/modalitàPOSVirtuale">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/POSVirtuale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Nome assegnato al Sistema di Pagamento Elettronico, in questo caso POS virtuale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">virtual POS mode</rdfs:comment>
+        <rdfs:label xml:lang="it">modalità POS virtuale</rdfs:label>
+        <rdfs:label xml:lang="en">virtual POS mode</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/modalitàRetiAmiche -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/modalitàRetiAmiche">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/RetiAmiche"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Nome assegnato al Sistema di Pagamento Elettronico, in questo caso Reti Amiche.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Reti Amiche mode</rdfs:comment>
+        <rdfs:label xml:lang="en">Reti Amiche mode</rdfs:label>
+        <rdfs:label xml:lang="it">modalità Reti Amiche</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/numeroContoDiAddebito -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/numeroContoDiAddebito">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDDRichiesto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">This is the current account number (IBAN) indicated by the debtor when requesting activation of the SDD mandate in his name and which must be subjected to adequacy and ownership checks.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È il numero di conto corrente (IBAN) indicato dal debitore in fase di richiesta di attivazione del mandato SDD a lui intestato e che deve essere sottoposto alle verifiche di congruità e titolarità.</rdfs:comment>
+        <rdfs:label xml:lang="en">debit account number</rdfs:label>
+        <rdfs:label xml:lang="it">numero conto di addebito</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/tempoRichiestaAttivazione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/tempoRichiestaAttivazione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/AttoDiAttivazioneMandato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Indica quando è stato richiesto l&apos;Atto Di Attivazione Mandato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates when the Mandate Activation Deed was requested.</rdfs:comment>
+        <rdfs:label xml:lang="en">activation request time</rdfs:label>
+        <rdfs:label xml:lang="it">tempo richiesta attivazione</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/tempoRichiestaRevoca -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/services/tempoRichiestaRevoca">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/services/AttoDiRevocaMandato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Indica quando è stato richiesto l&apos;Atto Di Revoca Mandato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates when the Mandate Deactivation Deed was requested.</rdfs:comment>
+        <rdfs:label xml:lang="en">revocation request time</rdfs:label>
+        <rdfs:label xml:lang="it">tempo richiesta revoca</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/onto/COV/Organization -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/Organization"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/COV/PublicOrganization -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/Input -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPSV/Input"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/InterOrganizationService -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPSV/InterOrganizationService"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/Output -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPSV/Output"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/PublicService -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPSV/PublicService"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/Service -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPSV/Service"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/TI/TimeIndexedEvent -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/TI/TimeInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TimeInterval"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/l0/Collection -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Collection"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/l0/Sequence -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/l0/Sequence"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiAgente -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/AttoDiAttivazioneMandato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/AttoDiAttivazioneMandato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/autorizzaMandato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/tempoRichiestaAttivazione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/stabilisceFlussoDiAddebito"/>
+                        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/stabilisceFlussoDiAddebito"/>
+                        <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">It is the formal authorization issued by the Mandate Debtor to the Mandate Creditor so that the latter can request the Bank depositary of the debtor&apos;s account to debit this account with the amount indicated in the deed itself, according to the recurrence also indicated , starting from the month following the time (date and time) in which the deed was issued. The deed is valid until revoked or until the debt is extinguished. The deed is necessarily and obligatorily linked to two current accounts respectively in the name of the Mandate Creditor and the Mandate Debtor.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È l&apos;autorizzazione formale rilasciata dal Debitore Mandato al Creditore Mandato affinchè quest&apos;ultimo possa richiedere all&apos;Istituto di Credito depositario del conto del debitore, di addebitare su tale conto l&apos;importo indicato nell&apos;atto stesso, secondo la ricorrenza anch&apos;essa indicata, a partire dal mese successivo rispetto al tempo (data e ora) in cui l&apos;atto è stato emesso. L&apos;atto è valido fino a revoca ovvero all&apos;estinzione del debito. L&apos;atto è legato necessariamente e obbligatoriamente a due conti correnti intestati rispettivamente al Creditore Mandato e al Debitore Mandato.</rdfs:comment>
+        <rdfs:label xml:lang="it">Atto Di Attivazione Mandato</rdfs:label>
+        <rdfs:label xml:lang="en">SDD Mandate Activation Deed</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/AttoDiRevocaMandato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/AttoDiRevocaMandato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/revocaMandato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/tempoRichiestaRevoca"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">It is the revocation communication of an active SDD mandate. The automatic debit will be suspended starting from the month following the time (date and time) of the presentation of the revocation.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la comunicazione di revoca di un mandato SDD attivo. L’addebito automatico sarà sospeso a partire dal mese successivo al tempo (data e ora) della presentazione della revoca.</rdfs:comment>
+        <rdfs:label xml:lang="it">Atto Di Revoca Mandato</rdfs:label>
+        <rdfs:label xml:lang="en">SDD Mandate Withdrawl Deed</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/AvvisoDiPagamento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/AvvisoDiPagamento">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/avvisoHaEnteCreditore"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/IUV"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/codiceAvviso"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/dataScadenzaPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/services/BollettinoMAV"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/services/SessionePagamentoElettronico"/>
+        <rdfs:comment xml:lang="en">Document that contains the minimum information necessary to make a payment on the pagoPA platform. The payment advice fields are defined by AgID as follows: - Creditor body: contains all the details of the Public Administration to which the payment is intended (Istitution Name, Tax Code, CBILL Code); - Account holder: reports the data of the citizen/company making the payment; - Payment information: contains the notice code made up of the three fields that indicate the beneficiary institution and the IUV (Unique Payment Identification); - The amount; - The deadline (which may not coincide with the due date) ; - Details of amounts: the reason for the payment and the amount; in the particular case of the payment of contributions, the details that generated the amount of the contribution to be paid are reported in two copies; - Service availability and payment methods; where the postal current account number to be used is referred to the address of the payment portal to make the payment online or for payment via Poste using the new white PA slip “TD123”. - Barcode: for data acquisition through optical reading; - QR code: for data acquisition through optical reading. The elements contained in the notice allow payment to be made through the widest network of financial intermediaries and methods.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la notifica che contiene le informazioni minime necessarie ad effettuare un pagamento sulla piattaforma pagoPA. Gli attributi dell’Avviso Di Pagamento sono stabiliti da AgID come segue: - Ente creditore: riporta tutti gli estremi della Pubblica Amministrazione a cui è destinato il pagamento (Ragione Sociale, Codice Fiscale, Codice CBILL); - Intestatario: riporta i dati del cittadino/impresa che effettua il pagamento; - Informazioni di pagamento: contiene il Codice Avviso formato dai tre campi che indicano l’Ente beneficiario e dallo IUV (Identificativo Unico di Pagamento); - Importo; - Scadenza dell’avviso (che può non coincidere con la scadenza del dovuto); - Causale del versamento; nel caso particolare del pagamento di contributi sono riportate, in doppia copia, i dettagli che hanno generato l&apos;importo contributivo da versare; - Disponibilità del servizio e modalità di pagamento; dove si rinvia all’indirizzo del portale dei pagamenti per effettuare il pagamento on line oppure per il pagamento tramite Poste attraverso l’utilizzo del nuovo bollettino PA bianco “TD123” il numero di conto corrente postale da utilizzare. - Codice a barre (per l’acquisizione dei dati attraverso lettura ottica); - Codice QR (per l’acquisizione dei dati attraverso lettura ottica). Gli elementi contenuti nell’avviso consentono di effettuare il pagamento attraverso la più ampia rete di modalità e intermediari finanziari.</rdfs:comment>
+        <rdfs:label xml:lang="it">Avviso Di Pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">Payment Notice</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/BollettinoDiPagamento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/BollettinoDiPagamento">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/haModalitàDiPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/haOggettoDiPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">It is the notification of payment referring to a debt position towards an institution or a company. Depending on the Purpose to which the slip is necessarily associated, the latter indicates the reason for the payment, the amount, the expiry date and the possible payment methods. In recent times, the payment slip is increasingly embodied by the payment notice pagoPA which performs the same function as a postal payment slip or MAV but which makes payment possible using other channels besides the Italian post office.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la notifica di pagamento riferita a una posizione debitoria nei confronti di un Ente o un’Azienda. In funzione della Finalità a cui il bollettino è necessariamente associato quest&apos;ultimo indica la causale del pagamento, l&apos;importo, la data di scadenza e le possibili modalità di pagamento. In tempi recenti il bollettino viene sempre più spesso incarnato dall’Avviso di Pagamento pagoPA che svolge la stessa funzione di un bollettino postale o di un MAV ma che rende possibile il pagamento utilizzando anche altri canali oltre alle Poste Italiane.</rdfs:comment>
+        <rdfs:label xml:lang="it">Bollettino Di Pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">Payment Slip</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/BollettinoMAV -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/BollettinoMAV">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/codiceMAV"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Il bollettino MAV (Pagamento Mediante Avviso) è un bollettino il cui pagamento segue una procedura interbancaria standard e che contiene le informazioni necessarie alla banca del creditore e al creditore stesso per la riconciliazione del pagamento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The MAV slip (Payment by Notice) is a slip whose payment follows a standard interbank procedure and which contains the information necessary for the creditor&apos;s bank and the creditor himself to reconcile the payment.</rdfs:comment>
+        <rdfs:label xml:lang="it">Bollettino MAV</rdfs:label>
+        <rdfs:label xml:lang="en">MAV Payment Slip</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/ContoCorrente -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/ContoCorrente">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/haIstitutoDiCredito"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/haContoCorrente"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/IBAN"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A Bank Account is a financial account maintained by a bank or other financial institution in which the financial transactions between the bank and a customer, the Account Holder, are recorded. Each financial institution sets the terms and conditions for each type of account it offers, which are classified in commonly understood types, such as deposit accounts, credit card accounts, current accounts, loan accounts or many other types of account. An Account Holder may have more than one account. Once an account is opened, funds entrusted by the Account Holder to the financial institution on deposit are recorded in the account designated by the customer. Funds can be withdrawn from loan loaders.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un conto corrente è un conto finanziario gestito da una banca o altro istituto finanziario in cui sono registrate le transazioni finanziarie tra la banca e un cliente, il titolare del conto. Ogni istituto finanziario stabilisce i termini e le condizioni per ogni tipo di conto che offre, che sono classificati in tipologie comunemente intese, come conti di deposito, conti di carte di credito, conti correnti, conti di prestito o altri tipi di conto. Un titolare di conto può avere più di un conto. Una volta aperto un conto, i fondi affidati in deposito dal titolare del conto all&apos;istituto finanziario vengono registrati sul conto designato dal cliente.</rdfs:comment>
+        <rdfs:label xml:lang="en">Bank Account</rdfs:label>
+        <rdfs:label xml:lang="it">Conto Corrente</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/Correntista -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/Correntista">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/haContoCorrente"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/identificatoreCorrentista"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagatore"/>
+        <rdfs:comment xml:lang="en">An Account Holder is the person listed or identified as the holder of a Bank Account. A person, other than a Financial Institution, holding a Bank Account for the benefit of another person as an agent, a custodian, a nominee, a signatory, an investment advisor, an intermediary, or as a legal guardian, is not treated as the Account Holder. In these circumstances that other person is the Account Holder. For example in the case of a parent/child relationship where the parent is acting as a legal guardian, the child is regarded as the Account Holder. With respect to a jointly held account, each joint holder is treated as an Account Holder.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Sottoclasse di Ruolo di Agente che classifica i titolari di un conto bancario. Una persona, diversa da un istituto finanziario, titolare di un conto bancario a beneficio di un&apos;altra persona in qualità di agente, custode, intestatario, firmatario, consulente per gli investimenti, intermediario o tutore legale, non è trattata come titolare del conto. In queste circostanze, l&apos;altra persona è titolare del conto. Ad esempio, nel caso di un rapporto genitore/figlio in cui il genitore agisce in qualità di tutore legale, il figlio è considerato il titolare del conto. Per quanto riguarda un conto cointestato, ogni cointestatario è trattato come un titolare del conto, rappresentando ciascuno una istanza della classe. Ciascuna istanza possiede un identificatore.</rdfs:comment>
+        <rdfs:label xml:lang="en">Account Holder</rdfs:label>
+        <rdfs:label xml:lang="it">Correntista</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/CreditoreMandato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/CreditoreMandato">
+        <rdfs:comment xml:lang="it">Sottoclasse di Correntista associata a Mandato SDD con il ruolo di creditore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Sub-class of bank account holder associated with SDD Mandate with the role of creditor.</rdfs:comment>
+        <rdfs:label xml:lang="it">Creditore Mandato</rdfs:label>
+        <rdfs:label xml:lang="en">Mandate Creditor</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/DebitoreMandato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/DebitoreMandato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/haDebitoreMandato"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Sottoclasse di Correntista associata a Mandato SDD con il ruolo di debitore.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Sub-class of bank account holder associated with SDD Mandate with the role of debtor.</rdfs:comment>
+        <rdfs:label xml:lang="it">Debitore Mandato</rdfs:label>
+        <rdfs:label xml:lang="en">Mandate Debtor</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/EnteCreditore -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/EnteCreditore">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/services/PrestatoreDiServiziDiPagamento"/>
+        <rdfs:comment xml:lang="en">Role of a COV:PublicOrganization authorized to collect the sums due to the entity itself.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Ruolo di COV:PublicOrganization abilitata a riscuotere le somme dovute all&apos;ente stesso.</rdfs:comment>
+        <rdfs:label xml:lang="en">Creditor Institution</rdfs:label>
+        <rdfs:label xml:lang="it">Ente Creditore</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/EsitoPagamento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/EsitoPagamento">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/emetteEsitoPagamento"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/haEsitoPagamento"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/descrizioneEsitoPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/identificatoreEsitoPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPSV/Output"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CPSV/producesOutput"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDD"/>
+        <rdfs:comment xml:lang="it">Esprime l&apos;esito dell&apos;unico pagamento a cui è associato. È caratterizzato da un identificativo e da una o più descrizioni. L&apos;esito di un pagamento può non essere immediatamente noto poichè l&apos;esecuzione del pagamento può coinvolgere diversi intermediari che potrebbero non comunicare in tempo reale l&apos;effettivo buon fine dell&apos;operazione a loro carico. Quindi a meno di un insuccesso immediato l&apos;esito positivo è confermato salvo buon fine ovvero in attesa di conferma da parte dei PSP coinvolti. In questo senso la classe, potendo evolvere nel tempo, riferisce una sequenza di eventi (al più due) ciascuno associato ad un intervallo temporale di validità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Expresses the outcome of the single payment to which it is associated. It is characterized by an identifier and one or more descriptions. The outcome of a payment may not be immediately known as the execution of the payment may involve various intermediaries who may not communicate in real time the effective completion of the operation. Therefore, unless there is an immediate failure, the positive outcome is confirmed subject to successful completion or awaiting confirmation from the PSPs involved. In this sense, the class, being able to evolve over time, is linked to a sequence of events (at most two) each associated with a valid time interval.</rdfs:comment>
+        <rdfs:label xml:lang="it">Esito Pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">Payment Outcome</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/EsitoPagamentoDefinitivo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/EsitoPagamentoDefinitivo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasLastMember"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/EsitoPagamento"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/codiceRiscossione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Esprime il buon esito del pagamento associato disponendo anche del codice riscossione che certifica l&apos;avvenuto incasso della somma pagata. Dei pagamenti associati a esiti di questa classe è possibile ottenere la relativa ricevuta di pagamento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Expresses the successful outcome of the associated payment also having the collection code which certifies that the amount paid has been collected. For payments associated with outcomes of this class, it is possible to obtain the relative payment receipt.</rdfs:comment>
+        <rdfs:label xml:lang="en">Definitive Payment Outcome</rdfs:label>
+        <rdfs:label xml:lang="it">Esito Pagamento Definitivo</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/EsitoPagamentoProvvisorio -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/EsitoPagamentoProvvisorio">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasFirstMember"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/EsitoPagamento"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Aggregates of payment outcomes that have not yet been confirmed.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Aggregazione di esiti di pagamenti non ancora confermati.</rdfs:comment>
+        <rdfs:label xml:lang="it">Esito Pagamento Provvisorio</rdfs:label>
+        <rdfs:label xml:lang="en">Temporary Payment Outcome</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/FlussoDiRendicontazione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/FlussoDiRendicontazione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/haIntervalloDiRendicontazione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/inviaFlussoDiRendicontazione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/riceveFlussoDiRendicontazione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
+        <rdfs:comment xml:lang="it">Sottoclasse di L0:Collection che aggrega le ricevute di movimento emesse da un PSP nei confronti di un Ente, riferite ad un intervallo di tempo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Subclass of L0:Collection that aggregate the movement receipts issued by a PSP to an Organization, referring to a time interval.</rdfs:comment>
+        <rdfs:label xml:lang="it">Flusso Di Rendicontazione</rdfs:label>
+        <rdfs:label xml:lang="en">Reporting Flow</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/IstitutoDiCredito -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/IstitutoDiCredito">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        <rdfs:comment xml:lang="en">An undertaking whose business is to receive deposits or other repayable funds from the public and to grant credit for its own account.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un&apos;impresa la cui attività è ricevere depositi o altri fondi rimborsabili dal pubblico e concedere credito per proprio conto.</rdfs:comment>
+        <rdfs:label xml:lang="en">Credit Institution</rdfs:label>
+        <rdfs:label xml:lang="it">Istituto Di Credito</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/MandatoSDD -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDD">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/haCreditoreMandato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/addebitoRicorrente"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Il Mandato SDD (Sepa Direct Debit) è uno strumento d&apos;incasso preautorizzato utilizzato all&apos;interno di paesi dell&apos;area SEPA con scadenze e importi predeterminati. È caratterizzato da un codice identificativo e dalla possibilità di indicare se trattasi di un pagamento ricorrente o unico. Al mandato sono necessariamente legati il soggetto creditore e il soggetto debitore mediante l&apos;indicazione dei rispettivi IBAN. Le istanze di questa classe possono evolvere nel tempo, assumendo di volta in volta un diverso stato le cui caratteristiche sono legate ad un intervallo temporale di validità. Per questo è sottoclasse della classe L0:Sequence (da OntoPiA - Ontologia Fondazionale). Ciascuno stato è rappresentato da una classe di tipo TI:TimeIndexEvent (da OntoPiA - Ontologia del Tempo) disgiunta da tutte le altre.</rdfs:comment>
+        <rdfs:comment xml:lang="en">SEPA Direct Debit (SDD) is a specific payment scheme within SEPA that is used for regular payments such as for subscriptions and bills. Like all SEPA payments, these transactions must be in euros, and payments are bank to bank. The class is linked to a sequence of temporal events that show the different status of the mandate over time.</rdfs:comment>
+        <rdfs:label xml:lang="it">Mandato SDD</rdfs:label>
+        <rdfs:label xml:lang="en">SDD Mandate</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/MandatoSDDAttivo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDAttivo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/autorizzaMandato"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/services/RID"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/services/SessionePagamentoElettronico"/>
+        <rdfs:comment xml:lang="it">Mandato SDD che aggrega i mandati richiesti che hanno soddisfatto i controlli di congruità e titolarità e che hanno dato quindi luogo ad un Atto di Attivazione Mandato, legato univocamente e obbligatoriamente alla singola istanza di mandato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">SDD Mandate which aggregates the required mandates that have satisfied the adequacy and ownership checks and which have therefore given rise to a Mandate Activation Deed, unequivocally and obligatorily linked to the single mandate instance.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active SDD Mandate</rdfs:label>
+        <rdfs:label xml:lang="it">Mandato SDD Attivo</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/MandatoSDDNonAttivabile -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDNonAttivabile">
+        <rdfs:comment xml:lang="it">Mandato SDD che aggrega i mandati richiesti che non hanno soddisfatto i controlli di congruità e titolarità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">SDD Mandate that aggregates requested mandates that have not satisfied the adequacy and entitlement checks.</rdfs:comment>
+        <rdfs:label xml:lang="it">Mandato SDD Non Attivabile</rdfs:label>
+        <rdfs:label xml:lang="en">SDD Mandate which cannot be activated</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/MandatoSDDRevocato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDRevocato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/revocaMandato"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasLastMember"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Mandato SDD che aggrega i mandati attivi che sono stati revocati con apposito Atto di Revoca Mandato, legato univocamente e obbligatoriamente alla singola istanza di mandato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">SDD Mandate which aggregates the active mandates that have been revoked with a specific Mandate Revocation Deed, univocally and obligatorily linked to the single mandate instance.</rdfs:comment>
+        <rdfs:label xml:lang="it">Mandato SDD Revocato</rdfs:label>
+        <rdfs:label xml:lang="en">Revoked SDD Mandate</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/MandatoSDDRichiedibile -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDRichiedibile">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDD"/>
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/haDebitoreMandato"/>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasFirstMember"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDD"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Mandati SDD precompilati a cura dell&apos;Ente Creditore in cui sono presenti i dati del creditore ma assenti quelli del debitore. Questi mandati precompilati sono disponibili per tutte le pratiche rateizzate e costituiscono lo stato iniziale di un Mandato SDD.</rdfs:comment>
+        <rdfs:comment xml:lang="en">SDD Mandate pre-compiled by the Creditor Institution in which the creditor&apos;s data are present but those of the debtor absent. These pre-compiled mandates are available for all installments and constitute the initial state of an SDD Mandate.</rdfs:comment>
+        <rdfs:label xml:lang="it">Mandato SDD Richiedibile</rdfs:label>
+        <rdfs:label xml:lang="en">Requestable SDD Mandate</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/MandatoSDDRichiesto -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDRichiesto">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/numeroContoDiAddebito"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Mandato SDD per cui è stata richiesta l&apos;attivazione indicando il numero di conto del debitore (IBAN). In questo stato l&apos;Ente Creditore svolge le verifiche del caso sul numero indicato in primo luogo per accertare, anche con il coinvolgimento dell&apos;Istituto di Credito depositario del conto, se l&apos;intestatario del conto corrisponde all&apos;intestatario debitore del mandato ovvero il pagatore della pratica di adeguamento contributivo che può essere il titolare della pratica stessa, se in vita, o, in caso contrario, un suo superstite. Queste verifiche possono essere contestuali alla richiesta ovvero richiedere un tempo di sospensione della richiesta in attesa di verifica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">SDD Mandate for which activation has been requested by indicating the debtor&apos;s bank account number (IBAN). In this status, the Creditor Institution carries out the necessary checks on the number indicated firstly to ascertain, along with the involvement of the Account Depositary Credit Institution, whether the account holder corresponds to the debtor holder of the mandate or the payer of the tax contribution adjustment application, who may be the holder of the file itself, if alive, or, if not, one of his survivors. These checks can be contextual to the request or require a period of suspension of the request pending verification.</rdfs:comment>
+        <rdfs:label xml:lang="it">Mandato SDD Richiesto</rdfs:label>
+        <rdfs:label xml:lang="en">Requested SDD Mandate</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/ModalitàDiPagamento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/ModalitàDiPagamento">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/AvvisoDiPagamento"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/SessionePagamentoElettronico"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/haModalitàDiPagamento"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Esprime la modalità con cui viene pagato un Bollettino Di Pagamento. </rdfs:comment>
+        <rdfs:comment xml:lang="en">Expresses the method by which a payment slip is paid.</rdfs:comment>
+        <rdfs:label xml:lang="it">Modalità Di Pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">Payment Mode</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/inviaRicevutaDiMovimento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/movimentoAgisceSu"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/esegueAccredito"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/esegueAddebito"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/causaleMovimento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/dataMovimento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/identificatoreMovimento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/importoMovimento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Movement of a sum of money induced by a Payment Order on a Current Account. This movement increases (credit) or decreases (debit) the availability of money in the Current Account. A commission may be charged for executing the movement, usually in the debit transaction. It is characterized by an identifier, an amount and a date.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Movimento di una somma di denaro indotto da un Ordine Di Pagamento su un Conto Corrente. Tale movimento aumenta (accredito) o diminuisce (addebito) la disponibilità di denaro del Conto Corrente. Può essere addebita una commissione per l&apos;esecuzione del movimento, solitamente nell&apos;operazione di addebito. È caratterizzata da un identificatore, un importo e una data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Money Movement</rdfs:label>
+        <rdfs:label xml:lang="it">Movimento Di Denaro</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/OggettoDiPagamento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/OggettoDiPagamento">
+        <rdfs:comment xml:lang="it">Esprime la causale del Bollettino Di Pagamento associato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Expresses the reason for the associated Payment Slip.</rdfs:comment>
+        <rdfs:label xml:lang="it">Oggetto Di Pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">Payment Item</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/OrdineDiPagamento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/OrdineDiPagamento">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/esegueAccredito"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/esegueAddebito"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/attivaOrdineDiPagamento"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/dataOrdinePagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/identificatoreOrdinePagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPSV/Input"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CPSV/hasInput"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/ServizioDiPagamento"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CPSV/hasInput"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">It is the materialization of a Payment made through a Payment Service provided by a PSP. It is characterized by an identifier and a date and is uniquely linked to the money transactions that debit and credit the amount of money transferred via the payment order.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la materializzazione di un Pagamento eseguito tramite un Servizio Di Pagamento erogato da un PSP. È caratterizzato da un identificatore e da una data ed è legato univocamente alle transazioni di denaro che addebitano e accreditano la somma di denaro trasferita tramite l&apos;ordine di pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">Ordine Di Pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">Payment Order</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/POSVirtuale -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/POSVirtuale">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/services/RetiAmiche"/>
+        <rdfs:comment xml:lang="en">A Virtual POS (Point of Sale) is typically a web or windows application that can be used by card-accepting merchants to manually authorize card transactions. Most Payment Services Providers offer this type of functionality.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Sistema di pagamento costituito da un software capace di eseguire le transazioni di pagamento direttamente online.</rdfs:comment>
+        <rdfs:label xml:lang="it">POS Virtuale</rdfs:label>
+        <rdfs:label xml:lang="en">Virtual POS</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/Pagamento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/Pagamento">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/haEsitoPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/eseguePagamento"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/dataPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/importoPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/services/PrenotazioneDiPagamento"/>
+        <rdfs:comment xml:lang="en">Transfer of a sum of money as consideration for a service or as a means of extinguishing an obligation. If it takes place through traced methods, therefore not in cash, it materializes in a Payment Order entrusted to a PSP which is responsible for actually carrying out the transfer. It features a date and amount.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Trasferimento di una somma di denaro come corrispettivo di una prestazione o come mezzo di estinzione di un&apos;obbligazione. Nel caso avvenga tramite modalità tracciate, quindi non in contanti, si materializza in un Ordine Di Pagamento affidato ad un PSP che si fa carico di eseguire effettivamente il trasferimento. È caratterizzato da una data e un importo.</rdfs:comment>
+        <rdfs:label xml:lang="it">Pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">Payment</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/PagamentoContributiLavoratoreDomestico -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/PagamentoContributiLavoratoreDomestico">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/services/PagamentoContributiRRR"/>
+        <rdfs:comment xml:lang="en">Categorizing the debt positions relating to mandatory contributions due by employers of domestic workers.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Classifica le posizioni debitorie relative ai contributi obbligatori dovuti dai datori di lavoro di lavoratori domestici.</rdfs:comment>
+        <rdfs:label xml:lang="en">Domestic Worker Contributions Payment</rdfs:label>
+        <rdfs:label xml:lang="it">Pagamento contributi lavoratore domestico</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/PagamentoContributiRRR -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/PagamentoContributiRRR">
+        <rdfs:comment xml:lang="en">Categorizing the debt positions relating to contributory adjustments inherent in requests for aggregation, redemption and life annuities.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Classifica le posizioni debitorie relative ad adeguamenti contributivi inerenti domande di Ricongiunzione, Riscatto e Rendita (abbv.: RRR).</rdfs:comment>
+        <rdfs:label xml:lang="en">Aggregation Redemption And Annuity Contributions Payment</rdfs:label>
+        <rdfs:label xml:lang="it">Pagamento contributi RRR</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/Pagatore -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/Pagatore">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/RO/hasRiT"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Abstract superclass that aggregates agent roles called to make payments, using methods common to all payers, to satisfy obligations contracted by themselves or by another subject formally related to them.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Superclasse astratta che aggrega ruoli di agente chiamati ad eseguire pagamenti, mediante modalità comuni a tutti pagatori, per soddisfare obbligazioni contratte da essi stessi o da altro soggetto ad essi formalmente legato.</rdfs:comment>
+        <rdfs:label xml:lang="it">Pagatore</rdfs:label>
+        <rdfs:label xml:lang="en">Payer</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/PrenotazioneDiPagamento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/PrenotazioneDiPagamento">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/prenotaPagamento"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/dataDiPrenotazione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/identificatorePrenotazionePagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/importoPrenotato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Esprime l&apos;impegno ad eseguire un Ordine Di Pagamento. Tale impegno può essere espresso da un Sistema di Pagamento Elettronico nell&apos;ambito di una Sessione di Pagamento, certificando così l&apos;avvenuta presa in carico del pagamento da parte del PSP scelto dal Pagatore, salvo buon fine, oppure da parte di un Istituto Di Credito che ha ricevuto un Mandato SDD o, nel passato, un RID. È caratterizzato da un identificativo, una data di prenotazione e dall&apos;importo del pagamento prenotato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Expresses the commitment to execute a Payment Order. This commitment can be expressed by an Electronic Payment System within a Payment Session, thus certifying that the payment has been taken over by the PSP chosen by the Payer, subject to collection, or by a Credit Institution who has received an SDD Mandate or, in the past, a RID. It is characterized by an identifier, a reservation date and the reserved payment amount.</rdfs:comment>
+        <rdfs:label xml:lang="en">Payment Reservation</rdfs:label>
+        <rdfs:label xml:lang="it">Prenotazione Di Pagamento</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/PrestatoreDiServiziDiPagamento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/PrestatoreDiServiziDiPagamento">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/RO/holdsRoleInTime"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/IstitutoDiCredito"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Payment Service Provider offer online services to organizations and operators to accept electronic payments through different payment modes, such as credit cart, direct bank or postal account charge, or deferred or real time wire transfer.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un Prestatore di Servizi di Pagamento (PSP) offre servizi di pagamento online ad Enti ed esercenti per accettare pagamenti elettronici con diversi metodi di pagamento, tra cui carta di credito, addebito diretto su conto corrente bancario o postale, trasferimento bancario differito o in tempo reale. L’opportunità di utilizzare un PSP permette di offrire ai propri clienti/utenti diversi canali di pagamento senza l’onere di dover stipulare contratti ad-hoc con i singoli sistemi di pagamento potendo inoltre contare su costi più bassi perché legati a maggiori volumi complessivi. Sono PSP, tra gli altri: banche, Poste Italiane, istituti di moneta elettronica e istituti di pagamento.</rdfs:comment>
+        <rdfs:label xml:lang="en">Payment Service Provider</rdfs:label>
+        <rdfs:label xml:lang="it">Prestatore Di Servizi Di Pagamento</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/RID -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/RID">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/codiceRID"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">An arrangement made with a bank that allows a third party to transfer money from a person&apos;s account on agreed dates, typically in order to pay bills.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Il RID, Rapporto Interbancario Diretto, è un servizio di incasso crediti che prevede che il titolare di un conto corrente conferisca alla propria banca un’autorizzazione continuativa ad accettare gli ordini di addebito provenienti da un determinato creditore. Dal 1 febbraio 2014, per effetto del regolamento UE 260/2012, il RID è stato integralmente sostituito dall’analogo servizio Sepa Direct Debit (SDD).</rdfs:comment>
+        <rdfs:label xml:lang="it">RID</rdfs:label>
+        <rdfs:label xml:lang="en">RID (direct banking)</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/RetiAmiche -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/RetiAmiche">
+        <rdfs:comment xml:lang="it">Il servizio Reti Amiche, istituito nel 2009, permette ai cittadini di ritirare la pensione, prelevare cifre, anche di modesta entità, versare contributi INPS per colf e badanti, o pagare bollette di terzi cui sono affidati incarichi di lavoro, presso tabaccherie italiane. Il sistema di pagamento online tramite la convenzione Reti Amiche è stato disattivato dal 13/02/2021 per Lottomatica, e per Unicredit, Poste Italiane e SisalPAY dal 28/02/2021. Reti Amiche è stato sostituito dal sistema PagoPA.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Reti Amiche service, established in 2009, allows citizens to withdraw their pension, withdraw even modest amounts, pay INPS contributions for domestic workers and carers, or pay bills for third parties entrusted with work assignments, at Italian tobacconists. The online payment system through the Reti Amiche convention was deactivated from 02/13/2021 for Lottomatica, and for Unicredit, Poste Italiane and SisalPAY from 02/28/2021. Reti Amiche has been replaced by the PagoPA system.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reti Amiche</rdfs:label>
+        <rdfs:label xml:lang="it">Reti Amiche</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/RicevutaDiMovimento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/RicevutaDiMovimento">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/inviaRicevutaDiMovimento"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/dataRicevuta"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/identificatoreRicevuta"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPSV/Output"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CPSV/producesOutput"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/ServizioDiPagamento"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Attestation addressed to the Creditor Institution of the crediting of a sum of money determined by a Money Movement induced by a Payment Order. It is characterized by an identifier equivalent to the movement of which it is received and a date.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Attestazione rivolta all&apos;Ente Creditore dell&apos;avvenuto movimento di accredito di una somma di denaro determinata da un Movimento Di Denaro indotto da un Ordine Di Pagamento. È caratterizzata da un identificativo equivalente a quello del movimento di cui è ricevuta e una data.</rdfs:comment>
+        <rdfs:label xml:lang="en">Movement Receipt</rdfs:label>
+        <rdfs:label xml:lang="it">Ricevuta Di Movimento</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/ServizioDiPagamento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/ServizioDiPagamento">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/haServizioDiPagamento"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/codiceServizioDiPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPSV/Service"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CPSV/requiresService"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Payment service offered by a Payment Service Provider. Each service is identified by a code.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Servizio di pagamento offerto da un Prestatore Di Servizi Di Pagamento. Ciascun servizio è identificato da un codice.</rdfs:comment>
+        <rdfs:label xml:lang="en">Payment Service</rdfs:label>
+        <rdfs:label xml:lang="it">Servizio Di Pagamento</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/SessionePagamentoElettronico -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/SessionePagamentoElettronico">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/services/accedeServizioDiPagamento"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/identificatoreSessionePagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Classifica l&apos;intervallo di tempo entro cui sono svolte le attività utili all&apos;esecuzione di un pagamento da parte di un Pagatore nell&apos;ambito di un Sistema Di Pagamento Elettronico, includendo l&apos;attività di autenticazione e connessione al sistema stesso. È sottoclasse di TI:TimeIndexedEvent e ciascuna istanza ha un identificatore. L&apos;accesso al Sistema Di Pagamento Elettronico può essere instradato da un ulteriore ambiente di interazione che propone il suddetto sistema come Modalità Di Pagamento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Classifies the time interval within which the activities useful for the execution of a payment by a Payer within an Electronic Payment System are carried out, including authentication and connection to the system itself. It is subclass of TI:TimeIndexedEvent and each instance has an identifier. Access to the Electronic Payment System can be routed from a further interaction environment that offers the aforementioned system as a Payment Method.</rdfs:comment>
+        <rdfs:label xml:lang="en">Electronic Payment Session</rdfs:label>
+        <rdfs:label xml:lang="it">Sessione Pagamento Elettronico</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronico -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronico">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronicoAttivo"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronicoDisattivo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/codiceSistemaDiPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/onto/CPSV/InterOrganizationService"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/onto/CPSV/PublicService"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CPSV/isPartOfEvent"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/SessionePagamentoElettronico"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An electronic payment system is a collection of specific tools and procedures that allow the virtual transfer of money without the physical passage of cash. The most widely used means of electronic payment is the payment card, which consists of a physical or digital medium, which contains the data of the holder and of the card itself, such as name and surname, the card number, the circuit to which the card adheres , the financial intermediary (bank, financial company or company operating in financial services) that issued it, the expiry date, etc. During the payment procedure, these data are read by the devices supplied by the person receiving the payment or, if the payment is made via the web, communicated by the payer through a specific page of the website dedicated to the payment and, if no anomalies are found, enable the transfer of the money, by the financial intermediary or the issuing company, from the cardholder to the creditor. The system then registers the amount, the date, the card details and the payment recipient. Among the other methods of electronic payment there is the electronic transfer which allows the transfer of money from your current account to that of the creditor through the home banking service. These systems include online payment platforms that act as telematic intermediaries between creditors and debtors, allowing the exchange of money between different Payment Service Providers (PSPs), each belonging to one of the parties to the transaction. Each system is identified by a specific identification code.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un sistema di pagamento elettronico è una collezione di specifici strumenti e procedure che permettono il trasferimento virtuale di denaro senza che vi sia il passaggio fisico di contante. Il mezzo di pagamento elettronico maggiormente utilizzato è la carta di pagamento, che consiste in un supporto fisico o digitale, che riporta i dati del titolare e della carta stessa, quali nome e cognome, il numero della carta, il circuito al quale la carta aderisce, l’intermediario finanziario (banca, società finanziaria o società che opera nei servizi finanziari) che l’ha emessa, la data di scadenza, etc. Durante la procedura di pagamento, tali dati vengono letti dai dispositivi in dotazione presso chi riceve il pagamento o, se il pagamento è effettuato via web, comunicati dal pagatore tramite una specifica pagina del sito dedicato al pagamento e, qualora non si rilevino anomalie, abilitano il trasferimento del denaro, a cura dell’intermediario finanziario o della società emittente, dal titolare della carta al soggetto creditore. Il sistema provvede, poi, a registrare l’importo, la data, i dati della carta e del destinatario del pagamento. Tra le altre modalità di pagamento elettronico vi è Il bonifico elettronico che permette il trasferimento di denaro dal proprio conto corrente a quello del creditore attraverso il servizio di home banking. Rientrano tra questi sistemi le piattaforme di pagamento on-line che fungono da intermediari telematici tra creditori e debitori, permettendo lo scambio di denaro tra diversi Prestatori di Servizi di Pagamento (PSP) ciascuno facente capo ad una delle parti della transazione. Ciascun sistema è identificato da uno specifico codice identificativo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Electronic Payment System</rdfs:label>
+        <rdfs:label xml:lang="it">Sistema Di Pagamento Elettronico</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronicoAttivo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronicoAttivo">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronicoDisattivo"/>
+        <rdfs:comment xml:lang="en">An Active Electronic Payment System is an Electronic Payment System which is currently in use, meaning it can be adopted by citizens or organizations to make electronic payments.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un Sistema di Pagamento Elettronico Attivo è un Sistema di Pagamento Elettronico attualmente in funzione, e quindi usufruibile per effettuare dei pagamenti.</rdfs:comment>
+        <rdfs:label xml:lang="en">Active Electronic Payment System</rdfs:label>
+        <rdfs:label xml:lang="it">Sistema Di Pagamento Elettronico Attivo</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronicoDisattivo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronicoDisattivo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/POSVirtuale"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/RetiAmiche"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A Deactivated Electronic Payment System is an Electronic Payment System whose functionality is discontinued, and is therefore no longer usable by citizens or organizations to make electronic payments. The identity of such a system is maintained after its deactivation to characterize the payments made with this system in the past.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un Sistema Di Pagamento Elettronico Disattivo è un Sistema Di Pagamento Elettronico la cui funzionalità è stata disattivata, ed è quindi non più usufruibile da cittadini o organizzazioni per effettuare pagamenti elettronici. L&apos;identità di un tale sistema viene mantenuta dopo la sua disattivazione per caratterizzare i pagamenti effettuati con tale sistema nel passato.</rdfs:comment>
+        <rdfs:label xml:lang="en">Deactivated Electronic Payment System</rdfs:label>
+        <rdfs:label xml:lang="it">Sistema Di Pagamento Elettronico Disattivo</rdfs:label>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/Active -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/onto/CPSV/Active">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CPSV/isStatusForService"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronicoAttivo"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/NonActive -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/onto/CPSV/NonActive">
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CPSV/isStatusForService"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronicoDisattivo"/>
+            </owl:Restriction>
+        </rdf:type>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/services/PagoPA -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/services/PagoPA">
+      <rdf:type rdf:resource="https://w3id.org/italia/social-security/onto/services/SistemaDiPagamentoElettronicoAttivo"/>
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+      <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+      <dct:identifier>pagoPA</dct:identifier>
+      <rdfs:comment xml:lang="en">PagoPA is an electronic payments system created to make any payment to the Public Administration easier, safer and more transparent. The platform enables citizens and businesses to make payments to public bodies in a standardized way, both online and offline, through participating Payment Service Providers (PSPs). PagoPA provides citizens with a reliable, efficient and personalized payment experience by allowing them to choose from multiple payment channels and instruments according to their habits, having complete visibility of the cost of the service in total transparency. In addition, pagoPA automatically updates the amount due and ensures with immediacy that the entity has correctly received the payment. PagoPA enables public administrations to collect money centrally and efficiently, offering automatic reporting and reconciliation systems with significant savings in resources, time and costs and ensuring better service to citizens.</rdfs:comment>
+      <rdfs:comment xml:lang="it">PagoPA è il Sistema Di Pagamento Elettronico italiano per i pagamenti a favore della Pubblica Amministrazione, grazie al quale tutti i pagamenti effettuati da cittadini e imprese verso qualsiasi tipologia di Ente Pubblico avvengono in conformità a standard e regole definiti da AgID, semplificando e aumentando la qualità e la quantità dei servizi di pagamento offerti. Offre una modalità standardizzata di pagamento che si può utilizzare attraverso molti e diversificati strumenti e canali di pagamento, accessibili sia tramite il sito dell’Ente Creditore verso il quale occorre effettuare un pagamento, sia tramite gli sportelli fisici e virtuali messi a disposizione da numerosi PSP sia tramite il sito pagoPA. L’aspetto innovativo di questo approccio è rendere indipendente l’Ente Creditore dal PSP poiché l’intermediazione tra questi due soggetti è svolta da pagoPA senza la necessità di alcuna convenzione tra i primi due. Allo stesso tempo, offrendo pagoPA numerosi modalità e canali di pagamento consente all’utente di optare per quello di maggior convenienza, economica e/o logistica. È infatti l’utente debitore a scegliere il proprio PSP eventualmente corrispondendo a quest’ultimo una commissione per il servizio prestato. In breve, lo schema di pagamento tramite piattaforma pagoPA prevede la partecipazione: - della Pubblica Amministrazione o Gestore di Servizio Pubblico, in qualità di beneficiario del pagamento disposto dal cittadino/impresa; - del PSP del debitore, in qualità di soggetto che esegue l’addebito sul conto di quest’ultimo e che ordina l’accredito sul conto del PSP della Pubblica Amministrazione o del Gestore di Servizio Pubblico, già contrattualizzato con il contratto di tesoreria di quest’ultimo. In tale operatività, non sussistendo alcuna attività di incasso da parte di terzi e riversamento dal terzo al beneficiario, nessun soggetto si configura come agente contabile (fonte: AgID).</rdfs:comment>
+      <rdfs:label xml:lang="en">PagoPA</rdfs:label>
+      <rdfs:label xml:lang="it">PagoPA</rdfs:label>
+      <foaf:name xml:lang="it">pagoPA</foaf:name>
+    </owl:NamedIndividual>
+
+	<!-- https://w3id.org/italia/social-security/data/services/distribution/SERVICE-N-TRIPLES -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/services/distribution/SERVICE-N-TRIPLES">
+      <rdf:type rdf:resource="http://www.w3.org/ns/adms# SemanticAssetDistribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/services/latest"/>
+      <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/services/latest/services.n3"/>
+      <dct:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e le relazioni che abilitano l'erogazione di servizi che rivestono uno stesso ruolo nell'ambito di diversi processi produttivi. Tra di essi troviamo, ad esempio, il servizio per il pagamento di un bollettino/avviso emesso dall'ente.</dct:description>
+      <dct:description xml:lang="en">This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that enable the delivery of services that play the same role within different production processes. These include, for example, the service for payment of a bill/notice issued by the entity.</dct:description>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
+      <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      <dct:title xml:lang="it">Distribuzione N-TRIPLES dell'ontologia INPS - servizi</dct:title>
+      <dct:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - services</dct:title>
+    </rdf:Description>
+
+	<!-- https://w3id.org/italia/social-security/data/services/distribution/SERVICE-RDF-TURTLE -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/services/distribution/SERVICE-RDF-TURTLE">
+      <rdf:type rdf:resource="http://www.w3.org/ns/adms# SemanticAssetDistribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/services/latest"/>
+      <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/services/latest/services.ttl"/>
+      <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e le relazioni che abilitano l'erogazione di servizi che rivestono uno stesso ruolo nell'ambito di diversi processi produttivi. Tra di essi troviamo, ad esempio, il servizio per il pagamento di un bollettino/avviso emesso dall'ente.</dct:description>
+      <dct:description xml:lang="en">This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that enable the delivery of services that play the same role within different production processes. These include, for example, the service for payment of a bill/notice issued by the entity. </dct:description>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+      <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      <dct:title xml:lang="it">Distribuzione RDF/Turtle dell'ontologia INPS - servizi</dct:title>
+      <dct:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - services</dct:title>
+    </rdf:Description>
+
+	<!-- https://w3id.org/italia/social-security/data/services/distribution/SERVICE-RDF-XML -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/services/distribution/SERVICE-RDF-XML">
+      <rdf:type rdf:resource="http://www.w3.org/ns/adms# SemanticAssetDistribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/services/latest"/>
+      <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/services/latest/services.owl"/>
+      <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e le relazioni che abilitano l'erogazione di servizi che rivestono uno stesso ruolo nell'ambito di diversi processi produttivi. Tra di essi troviamo, ad esempio, il servizio per il pagamento di un bollettino/avviso emesso dall'ente.</dct:description>
+      <dct:description xml:lang="en">This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that enable the delivery of services that play the same role within different production processes. These include, for example, the service for payment of a bill/notice issued by the entity.</dct:description>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      <dct:title xml:lang="it">Distribuzione RDF/XML dell'ontologia INPS - servizi</dct:title>
+      <dct:title xml:lang="en">RDF/XML distribution of the INPS ontology - services</dct:title>
+    </rdf:Description>
+
+	<!-- https://w3id.org/italia/social-security/data/organization/inps -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
+      <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+      <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <dct:identifier>inps</dct:identifier>
+      <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
+      <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
+    </rdf:Description>
+
+	<!-- https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII">
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+      <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+      <vcard:fn>Direzione Centrale Tecnologia, Informatica e Innovazione</vcard:fn>
+      <vcard:hasEmail rdf:resource="mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it"/>
+    </rdf:Description>
+
+	<!-- https://w3id.org/italia/social-security/data/organization/td -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/td">
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+      <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <dct:identifier>TD</dct:identifier>
+      <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
+      <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
+    </rdf:Description>
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/Correntista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/Pagatore"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/CreditoreMandato"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/DebitoreMandato"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/services/Correntista"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/EnteCreditore"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/PrestatoreDiServiziDiPagamento"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/EsitoPagamento"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDD"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Sequence"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/EsitoPagamentoDefinitivo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/EsitoPagamentoProvvisorio"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDAttivo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDNonAttivabile"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDRevocato"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDRichiedibile"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDRichiesto"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/SessionePagamentoElettronico"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDAttivo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDNonAttivabile"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDRichiesto"/>
+        </owl:unionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/MandatoSDD"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDAttivo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/RID"/>
+        </owl:unionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/services/prenotaPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/PagamentoContributiLavoratoreDomestico"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/PagamentoContributiRRR"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/services/OggettoDiPagamento"/>
+    </owl:Class>
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/holdsRoleInTime"/>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/EnteCreditore"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/services/FlussoDiRendicontazione"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/services/RicevutaDiMovimento"/>
+    </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/EsitoPagamentoDefinitivo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/EsitoPagamentoProvvisorio"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDAttivo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDNonAttivabile"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDRevocato"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDRichiedibile"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDRichiesto"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MovimentoDiDenaro"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/SessionePagamentoElettronico"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDAttivo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDNonAttivabile"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDDRichiesto"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.4) https://github.com/owlcs/owlapi -->
+

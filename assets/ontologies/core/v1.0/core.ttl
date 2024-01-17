@@ -1,0 +1,322 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix CLV: <https://w3id.org/italia/onto/CLV/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPV: <https://w3id.org/italia/onto/CPV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
+@prefix L0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+INPSCore: a owl:Ontology ;
+    owl:versionIRI INPSCore:1.0 ;
+    owl:imports CLV:,
+        COV:,
+        CPV:,
+        L0:,
+        RO: ;
+    rdfs:label "Core INPS Ontology"@en,
+        "Ontologia Core di INPS"@it ;
+    rdfs:comment "Ontologia INPS relativa alle componenti del dominio funzionale dell'istituto comuni a procedure e servizi svolti dall'ente stesso. Tra di essi troviamo, ad esempio, le dislocazioni territoriali, come le sedi, e le entità astratte, come i ruoli."@it,
+        "This is the ontology of the INPS Organization about components of the institution's functional domain common to procedures and services performed by the institution itself. These include, for example, territorial dislocations, such as locations, and abstract entities, such as roles."@en ;
+    owl:versionInfo "Version 1.0 - Modified on 17 January 2024"@en,
+        "Versione 1.0 - Modificata il 17 Gennaio 2024"@it ;
+    rdfs:isDefinedBy INPSCore: ;
+    adms:acronym "inps" ;
+    adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+    adms:hasFormalityLevel <https://w3id.org/italia/onto/ADMS/Formal> ;
+    adms:hasKeyClass INPSCore:RuoloDiAgente,
+        INPSCore:RuoloDiOrganizzazione,
+        INPSCore:RuoloDiPersona,
+        INPSCore:SedeINPS ;
+    adms:hasOntologyLanguage <https://w3id.org/italia/onto/ADMS/OWL> ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/core/distribution/CORE-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-XML> ;
+    adms:hasTask <https://w3id.org/italia/onto/ADMS/AnnotationTask>,
+        <https://w3id.org/italia/onto/ADMS/QueryFormulationTask>,
+        <https://w3id.org/italia/onto/ADMS/SearchTask> ;
+    adms:last INPSCore:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/core"^^xsd:anyURI ;
+    adms:prefix "inpsc" ;
+    adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+    adms:status "catalogued",
+        "published" ;
+    adms:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    adms:type <https://w3id.org/italia/onto/ADMS/ServiceOnytology> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:keyword "Agent"@en,
+        "Agente"@it,
+        "INPS Office"@en,
+        "Organization"@en,
+        "Organizzazione"@it,
+        "Person"@en,
+        "Persona"@it,
+        "Sede INPS"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Ontologia INPS relativa alle componenti del dominio funzionale dell'istituto comuni a procedure e servizi svolti dall'ente stesso. Tra di essi troviamo, ad esempio, le dislocazioni territoriali, come le sedi, e le entità astratte, come i ruoli."@it,
+        "This is the ontology of the INPS Organization about components of the institution's functional domain common to procedures and services performed by the institution itself. These include, for example, territorial dislocations, such as locations, and abstract entities, such as roles."@en ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/core" ;
+    dct:issued "2024-01-16T00:00:00+00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-01-17T00:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dct:title "Core INPS Ontology"@en,
+        "Ontologia Core di INPS "@it .
+
+### Object Properties
+
+CLV:hasAddress a owl:FunctionalProperty,
+        owl:ObjectProperty .
+
+CLV:hasAddressComponent a owl:ObjectProperty .
+
+CLV:hasPrimaryAddress a owl:ObjectProperty .
+
+COV:hasOrganizzation a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain INPSCore:SedeINPS ;
+    rdfs:range COV:PublicOrganization .
+
+CPV:hasCurrentResidence a owl:ObjectProperty .
+
+INPSCore:haSedeINPS a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha sede INPS"@it,
+        "has INPS office"@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    COV:Organization
+                    CPV:Alive ) ] ;
+    rdfs:range INPSCore:SedeINPS ;
+    rdfs:comment "Relationship linking a Living Person or an Organization to an INPS Office. Each Living Person or Organization has a single INPS office."@en,
+        "Relazione che collega una Persona in Vita o un'Organizzazione ad una Sede INPS. Ciascuna Persona in Vita o Organizzazione ha un'unica Sede INPS."@it .
+
+RO:holdsRoleInTime a owl:ObjectProperty .
+
+### Datatypes
+
+xsd:string a rdfs:Datatype .
+
+### Data Properties
+
+INPSCore:codiceSedeINPS a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice sede INPS"@it ;
+    rdfs:domain INPSCore:SedeINPS ;
+    rdfs:range xsd:string ;
+    rdfs:comment "INPS office identification code"@en,
+        "This is the identification code of the INPS office."@en,
+        "È il codice relativo alla Sede INPS."@it .
+
+### Classes
+
+COV:HomogeneousOrganizationalArea a owl:Class .
+
+COV:Organization a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSCore:haSedeINPS ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:disjointWith CPV:Person .
+
+COV:PublicOrganization a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf COV:hasOrganizzation ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+CPV:Alive a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSCore:haSedeINPS ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:disjointWith CPV:Dead .
+
+CPV:Dead a owl:Class .
+
+CPV:Person a owl:Class .
+
+INPSCore:RuoloDiAgente a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf (
+                            COV:Organization
+                            CPV:Person ) ] ] ;
+    rdfs:label "Agent Role"@en,
+        "Ruolo Di Agente"@it ;
+    rdfs:comment "Insieme di mansioni, compiti, responsabilità e doveri attribuiti in un intervallo di tempo, anche non ancora terminato, a una persona o a una organizzazione considerando queste ultime specializzazioni di agente. "@it,
+        "Set of tasks, duties and responsabilities attributed in a certain time interval, possible not yet determined, to a person or organization, considering these as specializations of an agent. "@en .
+
+INPSCore:RuoloDiOrganizzazione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+            owl:someValuesFrom COV:Organization ] ;
+    rdfs:label "Organization Role"@en,
+        "Ruolo Di Organizzazione"@it ;
+    owl:disjointWith INPSCore:RuoloDiPersona ;
+    rdfs:comment "Specializzazione della classe Ruolo Di Agente limitata alle sole organizzazioni."@it,
+        "Subclass of the Agent Role class, limited to organization."@en .
+
+INPSCore:RuoloDiPersona a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+            owl:someValuesFrom CPV:Person ] ;
+    rdfs:label "Person Role"@en,
+        "Ruolo Di Persona"@it ;
+    rdfs:comment "Specializzazione della classe Ruolo Di Agente limitata alle sole persone, in vita o decedute."@it,
+        "Subclass of the Agent Role class, limited to people, living or deceased."@en .
+
+INPSCore:RuoloDiPersonaDeceduta a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+            owl:someValuesFrom CPV:Dead ] ;
+    rdfs:label "Dead Person Role"@en,
+        "Ruolo Di Persona Deceduta"@it ;
+    owl:disjointWith INPSCore:RuoloDiPersonaViva ;
+    rdfs:comment "Specializzazione della classe Ruolo Di Persona limitata alle sole persone decedute."@it,
+        "Subclass of the Person Role class, limited to only dead persons."@en .
+
+INPSCore:RuoloDiPersonaViva a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+            owl:someValuesFrom CPV:Alive ] ;
+    rdfs:label "Alive Person Role"@en,
+        "Ruolo Di Persona Viva"@it ;
+    rdfs:comment "Specializzazione della classe Ruolo Di Persona limitata alle sole persone in vita."@it,
+        "Subclass of the Person Role class, limited to only alive persons."@en .
+
+INPSCore:SedeINPS a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty COV:hasOrganizzation ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSCore:codiceSedeINPS ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "INPS Office"@en,
+        "Sede INPS"@it ;
+    rdfs:subClassOf COV:HomogeneousOrganizationalArea ;
+    rdfs:comment "INPS is divided into central, regional and metropolitan structures with guidance, monitoring and coordination tasks, and into territorial offices with operational and user contact functions. In particular, the Institute, throughout the Italian national territory, has set up a \"service network\" organization which, in a \"proximity\" logic, is divided into: metropolitan coordination structures, provincial level structures, regional structures. Each INPS office is similar to a Homogeneous Organizational Area (AOO), each benefiting from a single entry and/or exit document flow (IT Protocol service) for the provision of services and the receipt of requests. In this sense, each INPS office is assigned, in addition to an office code assigned by the Institute, also a unique AOO identification code within the Index of Public Administrations (IPA) which makes it possible to identify the telematic communication channels legally permitted that is, at least one certified mailbox for each AOO. The competent INPS office for a citizen and/or company is established on the basis of the citizen's residence and/or the address of the company headquarters."@en,
+        "L’INPS è articolato in strutture centrali, regionali e metropolitane con compiti di indirizzo, monitoraggio e coordinamento, e in sedi territoriali con funzioni operative e di contatto con l’utenza. In particolare, l’Istituto, su tutto il territorio nazionale italiano, si è dotato di un’organizzazione “a reti di servizio” che, in logica di “prossimità”, si suddivide in: strutture di coordinamento metropolitano, strutture a livello provinciale, strutture a livello regionale. Ogni sede INPS è assimilabile ad un Area Organizzativa Omogenea (AOO) usufruendo ciascuna per l'erogazione di servizi e il ricevimento delle richieste, di un unico flusso documentale di entrata e/o uscita (servizio di Protocollo Informatico). In tal senso ad ogni Sede INPS è assegnato, oltre ad un codice di sede attribuito dall'Istituto, anche un codice identificativo AOO univoco nell'ambito dell'Indice delle Pubbliche Amministrazioni (IPA) che permette di individuare i canali di comunicazione telematica normativamente pervisti e cioè almeno una casella di posta elettronica certificata per ciascun AOO. La sede INPS competente per un cittadino e/o un'impresa è stabilita in base alla residenza del cittadino e/o all'indirizzo della sede dell'impresa."@it .
+
+L0:Agent a owl:Class .
+
+[] a owl:Class ;
+    rdfs:subClassOf CPV:Person ;
+    owl:unionOf (
+            CPV:Alive
+            CPV:Dead ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSCore:RuoloDiAgente ;
+    owl:unionOf (
+            INPSCore:RuoloDiOrganizzazione
+            INPSCore:RuoloDiPersona ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSCore:RuoloDiPersona ;
+    owl:unionOf (
+            INPSCore:RuoloDiPersonaDeceduta
+            INPSCore:RuoloDiPersonaViva ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf L0:Agent ;
+    owl:unionOf (
+            COV:Organization
+            CPV:Person ) .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/core/distribution/CORE-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/core/v1.0> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/core/v1.0/core.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle componenti del dominio funzionale dell'istituto comuni a procedure e servizi svolti dall'ente stesso. Tra di essi troviamo, ad esempio, le dislocazioni territoriali, come le sedi, e le entità astratte, come i ruoli."@it,
+        "This is the distribution in N-TRIPLES of the INPS Ontology about components of the institution's functional domain common to procedures and services performed by the institution itself. These include, for example, territorial dislocations, such as locations, and abstract entities, such as roles."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Core"@it,
+        "N-TRIPLES distribution of the INPS ontology - Core"@en .
+
+<https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/core/v1.0> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/core/v1.0/core.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle componenti del dominio funzionale dell'istituto comuni a procedure e servizi svolti dall'ente stesso. Tra di essi troviamo, ad esempio, le dislocazioni territoriali, come le sedi, e le entità astratte, come i ruoli."@it,
+        "This is the distribution in RDF/Turtle of the INPS Ontology about components of the institution's functional domain common to procedures and services performed by the institution itself. These include, for example, territorial dislocations, such as locations, and abstract entities, such as roles."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Core"@it,
+        "RDF/Turtle distribution of the INPS ontology - Core"@en .
+
+<https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/core/v1.0> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/core/v1.0/core.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle componenti del dominio funzionale dell'istituto comuni a procedure e servizi svolti dall'ente stesso. Tra di essi troviamo, ad esempio, le dislocazioni territoriali, come le sedi, e le entità astratte, come i ruoli."@it,
+        "This is the distribution in RDF/XML of the INPS Ontology about components of the institution's functional domain common to procedures and services performed by the institution itself. These include, for example, territorial dislocations, such as locations, and abstract entities, such as roles."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Core"@it,
+        "RDF/XML distribution of the INPS ontology - Core"@en .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+### Axioms
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf CLV:hasAddressComponent ] ;
+    owl:someValuesFrom [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CLV:hasPrimaryAddress ] ;
+            owl:someValuesFrom COV:Organization ] ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CLV:hasAddressComponent ] ;
+            owl:someValuesFrom [ a owl:Restriction ;
+                    owl:onProperty [ owl:inverseOf CLV:hasAddress ] ;
+                    owl:someValuesFrom [ a owl:Restriction ;
+                            owl:onProperty [ owl:inverseOf INPSCore:haSedeINPS ] ;
+                            owl:someValuesFrom owl:Thing ] ] ] .
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf CLV:hasAddressComponent ] ;
+    owl:someValuesFrom [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CPV:hasCurrentResidence ] ;
+            owl:someValuesFrom CPV:Alive ] ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CLV:hasAddressComponent ] ;
+            owl:someValuesFrom [ a owl:Restriction ;
+                    owl:onProperty [ owl:inverseOf CLV:hasAddress ] ;
+                    owl:someValuesFrom [ a owl:Restriction ;
+                            owl:onProperty [ owl:inverseOf INPSCore:haSedeINPS ] ;
+                            owl:someValuesFrom owl:Thing ] ] ] .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

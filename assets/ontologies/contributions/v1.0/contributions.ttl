@@ -1,0 +1,1256 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPV: <https://w3id.org/italia/onto/CPV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSContributions: <https://w3id.org/italia/social-security/onto/contributions/> .
+@prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
+@prefix INPSService: <https://w3id.org/italia/social-security/onto/services/> .
+@prefix L0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix TI: <https://w3id.org/italia/onto/TI/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+INPSContributions: a owl:Ontology ;
+    owl:versionIRI INPSContributions:1.0 ;
+    owl:imports COV:,
+        CPV:,
+        INPSCore:,
+        INPSService:,
+        L0:,
+        RO:,
+        TI: ;
+    rdfs:label "INPS social contributions Ontology"@en,
+        "Ontologia INPS relativa ai contributi previdenziali"@it ;
+    rdfs:comment "Ontologia INPS relativa al dominio informativo che permette la gestione delle pratiche di istanziazione dei contributi previdenziali, specializzando le entità coinvolte in base alla natura dell'evento che ha generato l'obbligo o la facoltà della contribuzione."@it,
+        "This is the ontology of the INPS organization about the information domain that allows the management of social security contribution instantiation practices, specializing the entities involved according to the nature of the event that generated the obligation or faculty of contribution."@en ;
+    owl:versionInfo "Version 1.0 - Modified on 17 January 2024"@en,
+        "Versione 1.0 - Modificata il 17 Gennaio 2024"@it ;
+    rdfs:isDefinedBy INPSContributions: ;
+    adms:acronym "inps" ;
+    adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+    adms:hasFormalityLevel <https://w3id.org/italia/onto/ADMS/Formal> ;
+    adms:hasKeyClass INPSContributions:LavoratoreDomestico,
+        INPSContributions:PraticaDiRendita,
+        INPSContributions:PraticaDiRicongiunzione,
+        INPSContributions:PraticaDiRiscatto ;
+    adms:hasOntologyLanguage <https://w3id.org/italia/onto/ADMS/OWL> ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-RDF-XML> ;
+    adms:hasTask <https://w3id.org/italia/onto/ADMS/AnnotationTask>,
+        <https://w3id.org/italia/onto/ADMS/QueryFormulationTask>,
+        <https://w3id.org/italia/onto/ADMS/SearchTask> ;
+    adms:last INPSContributions:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/contributions"^^xsd:anyURI ;
+    adms:prefix "inpscon" ;
+    adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+    adms:status "catalogued",
+        "published" ;
+    adms:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    adms:type <https://w3id.org/italia/onto/ADMS/ServiceOnytology> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:keyword "Aggregation Application"@en,
+        "Domestic Worker"@en,
+        "Lavoratore Domestico"@it,
+        "Life Annuities Application"@en,
+        "Redemption Application"@en,
+        "Rendita"@it,
+        "Ricongiunzione"@it,
+        "Riscatto"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Ontologia INPS relativa al dominio informativo che permette la gestione delle pratiche di istanziazione dei contributi previdenziali, specializzando le entità coinvolte in base alla natura dell'evento che ha generato l'obbligo o la facoltà della contribuzione."@it,
+        "This is the ontology of the INPS organization about the information domain that allows the management of social security contribution instantiation practices, specializing the entities involved according to the nature of the event that generated the obligation or faculty of contribution."@en ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/contributions" ;
+    dct:issued "2024-01-16T00:00:00+00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-01-17T00:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dct:title "INPS social contributions Ontology"@en,
+        "Ontologia INPS relativa ai contributi previdenziali"@it .
+
+### Object Properties
+
+INPSContributions:emetteAtto a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "emette atto"@it,
+        "issues deed"@en ;
+    rdfs:domain INPSCore:SedeINPS ;
+    rdfs:range INPSContributions:AttoAdeguamentoContributivo ;
+    rdfs:comment "Relazione che collega una Sede INPS ad un Atto di Adeguamento Contributivo emesso da questa. Ciascun Atto è emesso da un'unica Sede INPS."@it,
+        "Report linking an INPS office to a Contribution Adjustment Deed issued by it. Each deed is issued by a single INPS office."@en .
+
+INPSContributions:haAttoAdeguamentoContributivo a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha atto adeguamento contributivo"@it,
+        "has contribution adjustment deed"@en ;
+    rdfs:domain INPSContributions:PraticaAdeguamentoContributivo ;
+    rdfs:range INPSContributions:AttoAdeguamentoContributivo ;
+    rdfs:comment "Relationship linking a Contribution Adjustment Applcation to a Contribution Adjustment Deed."@en,
+        "Relazione che collega una Pratica di Adeguamento Contributivo ad un Atto di Adeguamento Contributivo."@it .
+
+INPSContributions:haContrattoDiLavoroDomestico a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha contratto di lavoro domestico"@it,
+        "has a domestic job contract"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:range INPSContributions:ContrattoDiLavoroDomestico ;
+    rdfs:comment "Relationship linking a Domestic Work Relationship to the Employment Contract from which it is derived."@en,
+        "Relazione che collega un Rapporto di Lavoro Domestico al Contratto di Lavoro da cui ha origine."@it .
+
+INPSContributions:haContributoTrimestraleFinale a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha contributo trimestrale finale"@it,
+        "has final quarterly contribution"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomesticoCessato ;
+    rdfs:range INPSContributions:ContributoTrimestraleFinale ;
+    rdfs:comment "Relazione che collega un Rapporto di Lavoro Domestico Cessato ad un Contributo Trimestrale Finale. Ciascun Contributo Trimestrale Finale è collegato ad un unico Rapporto di Lavoro."@it,
+        "Report linking a Ceased Domestic Work Relationship to a Final Quarterly Contribution. Each Final Quarterly Contribution is linked to a single Work Relationship."@en .
+
+INPSContributions:haContributoTrimestraleOrdinario a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha contributo trimestrale ordinario"@it,
+        "has an ordinary quarterly contribution"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomesticoAttivo ;
+    rdfs:range INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:comment "Relationship linking an Active Domestic Work Relationship to an Ordinary Quarterly Contribution. Each Ordinary Quarterly Contribution is linked to a single Work Relationship."@en,
+        "Relazione che collega un Rapporto di Lavoro Domestico Attivo ad un Contributo Trimestrale Ordinario. Ciascun Contributo Trimestrale Ordinario è collegato ad un unico Rapporto di Lavoro."@it .
+
+INPSContributions:haDatoreDiLavoroDomestico a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha datore di lavoro domestico"@it,
+        "has domestic employer"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:range INPSContributions:DatoreDiLavoroDomestico ;
+    rdfs:comment "Relationship linking a Domestic Work Relationship to a Domestic Work Employer. Each Employment Relationship has a single Employer."@en,
+        "Relazione che collega un Rapporto di Lavoro Domestico ad un Datore di Lavoro Domestico. Ciascun Rapporto di Lavoro ha un unico Datore di Lavoro."@it .
+
+INPSContributions:haDomandaAdeguamentoContributivo a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha domanda adeguamento contributivo"@it,
+        "has contribution adjustment application"@en ;
+    rdfs:domain INPSContributions:PraticaAdeguamentoContributivo ;
+    rdfs:range INPSContributions:DomandaAdeguamentoContributivo ;
+    rdfs:comment "Relationship linking a Contribution Adjustment Application to a Contribution Adjustment Request. Each Request is linked to a single Application."@en,
+        "Relazione che collega una Pratica di Adeguamento Contributivo ad una Domanda di Adeguamento Contributivo. Ciascuna Domanda è collegata ad un'unica Pratica."@it .
+
+INPSContributions:haLavoratoreDomestico a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha lavoratore domestico"@it,
+        "has domestic worker"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:range INPSContributions:LavoratoreDomestico ;
+    rdfs:comment "Relationship linking a Domestic Work Relationship to a Domestic Worker. Each Domestic Work Relationship involves a single Domestic Worker."@en,
+        "Relazione che collega un Rapporto di Lavoro Domestico a un Lavoratore Domestico. Ciascun Rapporto di Lavoro Domestico coinvolge un unico Lavoratore Domestico."@it .
+
+INPSContributions:haMandatoPerPratica a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha mandato per pratica"@it,
+        "has mandate for application"@en ;
+    rdfs:domain INPSContributions:PraticaDiAdeguamentoRateizzata ;
+    rdfs:range INPSService:MandatoSDD ;
+    rdfs:comment " Report linking a Contribution Adjustment Application by Installments to a SDD Mandate. Each Mandate has a single Application."@en,
+        "Relazione che collega una Pratica di Adeguamento Rateizzata ad un Mandato SDD. Ciascun Mandato ha un'unica Pratica."@it .
+
+INPSContributions:haOnereContributivo a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha onere contributivo"@it,
+        "has a contribution charge"@en ;
+    rdfs:domain INPSContributions:StatoDiNotificatoImportoDiPratica ;
+    rdfs:range INPSContributions:OnereContributivo ;
+    rdfs:comment "Relationship linking an Application State of Notified Amount to a Contribution Charge."@en,
+        "Relazione che collega uno Stato di Notificato Importo di Pratica ad un Onere Contributivo."@it .
+
+INPSContributions:haOrganizzazioneDiAssistenza a owl:ObjectProperty ;
+    rdfs:label "ha organizzazione di assistenza"@it,
+        "has support organization"@en ;
+    rdfs:domain INPSContributions:ContrattoDiLavoroDomestico ;
+    rdfs:range INPSContributions:OrganizzazioneDiAssistenza ;
+    rdfs:comment "Relationship linking an Employment Agreement to a Support Organisation."@en,
+        "Relazione che collega un Contratto di Lavoro ad un'Organizzazione di Assistenza."@it .
+
+INPSContributions:haPagatoreOnere a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha pagatore onere"@it,
+        "has payer"@en ;
+    rdfs:domain INPSContributions:PraticaAdeguamentoContributivo ;
+    rdfs:range INPSContributions:SuperstiteDiTitolarePraticaAdeguamentoContributivo ;
+    rdfs:comment "Relazione che collega una Pratica di Adeguamento Contributivo a un Superstite. Ciascuna Pratica ha un unico pagatore."@it,
+        "Report linking a Contribution Adjustment Applcation to a Survivor. Each Application has a single payer."@en .
+
+INPSContributions:haPianoDiAmmortamento a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha piano di ammortamento"@it,
+        "has amortization plan"@en ;
+    rdfs:domain INPSContributions:StatoDiNotificatoImportoDiPratica ;
+    rdfs:range INPSContributions:PianoDiAmmortamento ;
+    rdfs:comment "Relationship linking an Application Status of Notified Amount to an Amortization Plan."@en,
+        "Relazione che collega uno Stato di Notificato Importo di Pratica ad un Piano di Ammortamento."@it .
+
+INPSContributions:haSettimanaDelTrimestre a owl:ObjectProperty ;
+    rdfs:label "ha settimana del trimestre"@it,
+        "has week of quarter"@en ;
+    rdfs:domain INPSContributions:ContributoTrimestraleModificato ;
+    rdfs:range INPSContributions:SettimanaDelMese ;
+    rdfs:comment "Relationship which connects a Modified Quarterly Contribution with the Week of the quarter in which it takes place."@en,
+        "Relazione che collega un Contributo Trimestrale Modificato alla Settimana del trimestre."@it .
+
+INPSContributions:haTitolarePraticaAdeguamentoContributivo a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha titolare pratica adeguamento contributivo"@it,
+        "has contribution adjustment application holder"@en ;
+    rdfs:domain INPSContributions:PraticaAdeguamentoContributivo ;
+    rdfs:range INPSContributions:TitolarePraticaAdeguamentoContributivo ;
+    rdfs:comment "Relationship linking a Contribution Adjustment Application to an Application Holder. Each Application has a single Holder."@en,
+        "Relazione che collega una Pratica di Adeguamento Contributivo ad un Titolare Pratica. Ciascuna Pratica ha un unico Titolare."@it .
+
+INPSContributions:haTrimestreDiAnno a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha trimestre di anno"@it,
+        "has quarterly"@en ;
+    rdfs:domain INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:range INPSContributions:TrimestreDiAnno ;
+    rdfs:comment "Relationship that connects an Ordinary Quarterly Contribution with the Quarter in which it takes place. Each Contribution can take place in only one quarter (1st, 2nd, 3rd, or 4th)."@en,
+        "Relazione che collega un Contributo Trimestrale Ordinario con Trimestre dell'anno in cui avviene. Ciascun Contributo può avvenire in un solo trimestre (I, II, III, o IV)."@it .
+
+INPSContributions:haVersamentoOrganizzazione a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha versamento organizzazione"@it,
+        "has payment organization"@en ;
+    rdfs:domain INPSContributions:ContributoTrimestraleModificato ;
+    rdfs:range INPSContributions:OrganizzazioneDiAssistenza ;
+    rdfs:comment "Relationship linking an Amended Quarterly Contribution to a Support Organization. Each Contribution can be paid by a single Organization."@en,
+        "Relazione che collega un Contributo Trimestrale Modificato ad un'Organizzazione di Assistenza. Ciascun Contibuto può essere versato da un'unica Organizzazione."@it .
+
+INPSContributions:istruiscePratica a owl:ObjectProperty ;
+    rdfs:label "instructs application"@en,
+        "istruisce pratica"@it ;
+    rdfs:domain INPSCore:SedeINPS ;
+    rdfs:range INPSContributions:PraticaAdeguamentoContributivo ;
+    rdfs:comment "Relationship linking an INPS Office with one or more Contribution Adjustment Applications which the office instructs."@en,
+        "Relazione che collega una Sede INPS con la Pratica di Adeguamento Contributivo istruita dalla sede."@it .
+
+INPSContributions:presentaDomandaAdeguamentoContributivo a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "presenta domanda adeguamento contributivo"@it,
+        "submits contribution adjustment application"@en ;
+    rdfs:domain INPSContributions:RichiedenteAdeguamentoContributivo ;
+    rdfs:range INPSContributions:DomandaAdeguamentoContributivo ;
+    rdfs:comment "Relationship linking each Contribution Adjustment Applicant to the Contribution Adjustment Application he or she has submitted."@en,
+        "Relazione che collega ciascun Richiedente Adeguamento Contributivo con la Domanda di Adeguamento Contributivo presentata."@it .
+
+INPSContributions:riceveDomanda a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "receives request"@en,
+        "riceve domanda"@it ;
+    rdfs:domain INPSCore:SedeINPS ;
+    rdfs:range INPSContributions:DomandaAdeguamentoContributivo ;
+    rdfs:comment "Relationship linking an INPS Office with one or more Contribution Adjustment Applications. Each Contribution Adjustment Application is received by exactly one INPS Office."@en,
+        "Relazione che collega una Sede INPS con una o più Domande di Adeguamento Contributivo. Ciascuna Domanda di Adeguamento Contributivo è ricevuta da esattamente una Sede INPS."@it .
+
+INPSContributions:èMeseDelTrimestre a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "is month of trimester"@en,
+        "è mese del trimestre"@it ;
+    rdfs:domain INPSContributions:MeseDiTrimestre ;
+    rdfs:range INPSContributions:TrimestreDiAnno ;
+    rdfs:comment "Relationship linking a Month of a Quarter to the Quarter of a Year to which it belongs. Each Month belongs to a single Quarter."@en,
+        "Relazione che collega un Mese di Trimestre al Trimestre di Anno a cui appartiene. Ciascun Mese appartiene ad un unico Trimestre."@it .
+
+INPSContributions:èSettimanaDelMese a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "is week of the month"@en,
+        "è settimana del mese"@it ;
+    rdfs:domain INPSContributions:SettimanaDelMese ;
+    rdfs:range INPSContributions:MeseDiTrimestre ;
+    rdfs:comment "Relationship linking a Week of the Month to the Month of Quarter to which it belongs. Each Week belongs to a single Month."@en,
+        "Relazione che collega una Settimana del Mese al Mese di Trimestre a cui appartiene. Ciascuna Settimana appartiene ad un unico Mese."@it .
+
+L0:hasFirstMember a owl:ObjectProperty .
+
+L0:hasLastMember a owl:ObjectProperty .
+
+L0:hasMember a owl:ObjectProperty .
+
+RO:hasParentalRelationshipWith a owl:ObjectProperty .
+
+RO:holdsRoleInTime a owl:ObjectProperty .
+
+### Datatypes
+
+xsd:dateTime a rdfs:Datatype .
+
+xsd:decimal a rdfs:Datatype .
+
+xsd:integer a rdfs:Datatype .
+
+xsd:string a rdfs:Datatype .
+
+### Data Properties
+
+COV:remuneration a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain COV:Employment .
+
+INPSContributions:annoContributoTrimestrale a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "anno contributo trimestrale"@it,
+        "quarterly contribution year"@en ;
+    rdfs:domain INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the year in which the ordinary quarterly contribution is paid."@en,
+        "È l'anno in cui viene versato il contributo trimestrale ordinario."@it .
+
+INPSContributions:codiceContrattoDiLavoro a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice contratto di lavoro"@it,
+        "employment contract code"@en ;
+    rdfs:domain INPSContributions:ContrattoDiLavoroDomestico ;
+    rdfs:range xsd:string ;
+    rdfs:comment "It is the Domestic Work Contract code equivalent to the Domestic Work Relationship code it originated."@en,
+        "È il codice del Contratto Di Lavoro Domestico equivalente al codice del Rapporto Di Lavoro Domestico a cui ha dato origine."@it ;
+    owl:equivalentProperty INPSContributions:codiceRapportoDiLavoro .
+
+INPSContributions:codiceOrganizzazioneAssistenza a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice organizzazione assistenza"@it,
+        "support organization code"@en ;
+    rdfs:domain INPSContributions:OrganizzazioneDiAssistenza ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Identification code of the Support Organization."@en,
+        "È il codice relativo all'Organizzazione Di Assistenza."@it .
+
+INPSContributions:codiceRapportoDiLavoro a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice rapporto di lavoro"@it,
+        "employment relationship code"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:range xsd:string ;
+    rdfs:comment "The Domestic Work Relationship code assigned by INPS when registering the relevant contract."@en,
+        "È il codice relativo al  Rapporto Di Lavoro Domestico assegnato da INPS al momento della registrazione del relativo contratto."@it .
+
+INPSContributions:dataAtto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data atto"@it,
+        "deed date"@en ;
+    rdfs:domain INPSContributions:AttoAdeguamentoContributivo ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "It is the date of the Contribution Contribution Adjustment Deed."@en,
+        "È la data dell'Atto Adeguamento Contributivo."@it .
+
+INPSContributions:dataComunicazioneFineRapporto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data comunicazione fine rapporto"@it,
+        "relationship end date comunication"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomesticoCessato ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "It is the comunication date of the end of a Domestic Work Relationship."@en,
+        "È la data di comuniczione della cessazione di un Rapporto Di Lavoro Domestico."@it .
+
+INPSContributions:dataComunicazioneInizioRapporto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data comunicazione inizio rapporto"@it,
+        "relationship start date comunication"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomesticoAttivo ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "It is the comunication date of the start of a Domestic Work Relationship."@en,
+        "È la data di comunicazione dell'inizio di un Rapporto Di Lavoro Domestico"@it .
+
+INPSContributions:dataDomanda a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data domanda"@it,
+        "request date"@en ;
+    rdfs:domain INPSContributions:DomandaAdeguamentoContributivo ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "This is the date of the Contribution Adjustment Application."@en,
+        "È la data relativa alla Domanda Adeguamento Contributivo."@it .
+
+INPSContributions:dataFirmaContratto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "contract signature date"@en,
+        "data firma contratto"@it ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Signing date of the Employment Contract formalizing the hiring of the domestic worker."@en,
+        "È la data di sottoscrizione del Contratto Di Lavoro che formalizza l'assunzione del lavoratore domestico."@it .
+
+INPSContributions:dataScadenzaContributoTrimestrale a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data scadenza contributo trimestrale"@it,
+        "quarterly contribution due date"@en ;
+    rdfs:domain INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "It is the due date for the payment of quarterly contributions by a domestic worker."@en,
+        "È la data di scadenza per il versamento dei contributi trimestrali di un lavoratore domestico."@it .
+
+INPSContributions:dataScadenzaOnereContributivo a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "contribution due date"@en,
+        "data scadenza onere contributivo"@it ;
+    rdfs:domain INPSContributions:OnereContributivo ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "It is the expiry date relating to the Contribution Fee."@en,
+        "È la data di scadenza relativa all'Onere Contributivo."@it .
+
+INPSContributions:dataScadenzaRata a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data scadenza rata"@it,
+        "installment deadline date"@en ;
+    rdfs:domain INPSContributions:RataDiOnereContributivo ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "It is the expiry date relating to the Contribution Charge Installment."@en,
+        "È la data di scadenza relativa alla Rata Dell'Onere Contributivo."@it .
+
+INPSContributions:descrizionePratica a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "application description"@en,
+        "descrizione pratica"@it ;
+    rdfs:subPropertyOf L0:description ;
+    rdfs:domain INPSContributions:PraticaAdeguamentoContributivo ;
+    rdfs:comment "Description of the Contribution Adjustment Application."@en,
+        "È la descrizione relativa alla Pratica."@it .
+
+INPSContributions:identificatoreDatoreDiLavoroDomestico a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "domestic employer identifier"@en,
+        "identificatore datore di lavoro domestico"@it ;
+    rdfs:subPropertyOf L0:identifier ;
+    rdfs:domain INPSContributions:DatoreDiLavoroDomestico ;
+    rdfs:comment "Identifica il Datore Di Lavoro Domestico."@it,
+        "Identifies the Domestic Employer"@en .
+
+INPSContributions:identificatoreLavoratoreDomestico a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "domestic worker identifier"@en,
+        "identificatore lavoratore domestico"@it ;
+    rdfs:subPropertyOf L0:identifier ;
+    rdfs:domain INPSContributions:LavoratoreDomestico ;
+    rdfs:comment "Identifica il Lavoratore Domestico."@it,
+        "Identifies the Domestic Worker"@en .
+
+INPSContributions:identificatoreRichiedenteAdeguamentoContributivo a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "contribution adjustment applicant identifier"@en,
+        "identificatore richiedente adeguamento contributivo"@it ;
+    rdfs:subPropertyOf L0:identifier ;
+    rdfs:domain INPSContributions:RichiedenteAdeguamentoContributivo ;
+    rdfs:comment "Identifica il Richiedente Adeguamento Contributivo."@it,
+        "Identifies the Contribution Adjustment Applicant."@en .
+
+INPSContributions:importoContributoTrimestrale a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "importo contributo trimestrale"@it,
+        "quarterly contribution amount"@en ;
+    rdfs:domain INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "It is the cash amount relating to the Ordinary Quarterly Contribution."@en,
+        "È l'importo in denaro relativo al Contributo Trimestrale Ordinario."@it .
+
+INPSContributions:importoOnereContributivo a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "contribution charge amount"@en,
+        "importo onere contributivo"@it ;
+    rdfs:domain INPSContributions:OnereContributivo ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "It is the cash amount relating to the Contribution Charge."@en,
+        "È l'importo in denaro relativo all'Onere Contributivo."@it .
+
+INPSContributions:importoRata a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "importo rata"@it,
+        "installment amount"@en ;
+    rdfs:domain INPSContributions:PianoDiAmmortamento ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "It is the cash amount of the installment in the Amortization Plan of an SDD Mandate."@en,
+        "È l'importo in denaro della rata nel Piano Di Ammortamento di un Mandato SDD."@it .
+
+INPSContributions:importoVersamentoOrganizzazione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "importo versamento organizzazione"@it,
+        "organization payment amount"@en ;
+    rdfs:domain INPSContributions:ContributoTrimestraleModificato ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "It is the organization's cash amount in an Amended Quarterly Contribution."@en,
+        "È l'importo in denaro dell'organizzazione in un Contributo Trimestrale Modificato."@it .
+
+INPSContributions:indiceMese a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "indice mese"@it,
+        "monthly index"@en ;
+    rdfs:domain INPSContributions:MeseDiTrimestre ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the Month Of Quarter index (1, 2 or 3)."@en,
+        "È l'indice del Mese Di Trimestre (1, 2 o 3)."@it .
+
+INPSContributions:indiceSettimana a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "indice settimana"@it,
+        "weekly index"@en ;
+    rdfs:domain INPSContributions:SettimanaDelMese ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the Week Of The Month index (1, 2, 3, 4 or 5)."@en,
+        "È l'indice della Settimana Del Mese (1, 2, 3, 4 o 5)."@it .
+
+INPSContributions:indiceTrimestre a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "indice trimestre"@it,
+        "quarterly index"@en ;
+    rdfs:domain INPSContributions:TrimestreDiAnno ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the Quarterly index (1, 2, 3 or 4)."@en,
+        "È l'indice del Trimestre Di Anno (1, 2, 3 o 4)."@it .
+
+INPSContributions:numeroAtto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "deed identification code number"@en,
+        "numero atto"@it ;
+    rdfs:domain INPSContributions:AttoAdeguamentoContributivo ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the identification  code number of to the Contribution Adjustment Act."@en,
+        "È il numero relativo all'Atto Adeguamento Contributivo."@it .
+
+INPSContributions:numeroDomanda a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "application identification code number"@en,
+        "numero domanda"@it ;
+    rdfs:domain INPSContributions:DomandaAdeguamentoContributivo ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "This is the identification code number of the Contribution Adjustment Application."@en,
+        "È il numero relativo alla Domanda Adeguamento Contributivo."@it .
+
+INPSContributions:numeroOreRetribuiteContrattuali a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "number of contractual paid hours"@en,
+        "numero ore retribuite contrattuali"@it ;
+    rdfs:domain INPSContributions:ContributoTrimestralePrecompilato ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the number of paid contractual hours relating to the Pre-compiled Quarterly Contribution."@en,
+        "È il numero delle ore retribuite previste dal Contratto Di Lavoro per il trimestre nel relativo Contributo Trimestrale Precompilato."@it .
+
+INPSContributions:numeroOreRetribuiteInserito a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "number of hours paid inserted"@en,
+        "numero ore retribuite inserito"@it ;
+    rdfs:domain INPSContributions:ContributoTrimestraleModificato ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the number of hours entered relating to the Modified Quarterly Contribution."@en,
+        "È il numero delle ore inserito relative al Contributo Trimestrale Modificato."@it .
+
+INPSContributions:numeroOreSettimanali a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "number of weekly hours"@en,
+        "numero ore settimanali"@it ;
+    rdfs:domain INPSContributions:ContrattoDiLavoroDomestico ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the number of weekly hours indicated in the Employment Contract."@en,
+        "È il numero delle ore settimanali indicate nel Contratto Di Lavoro."@it .
+
+INPSContributions:numeroPratica a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "application identification code number"@en,
+        "numero pratica"@it ;
+    rdfs:domain INPSContributions:PraticaAdeguamentoContributivo ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the identification code number of the Contribution Adjustment Practice."@en,
+        "È il numero della Pratica Adeguamento Contributivo."@it .
+
+INPSContributions:numeroRata a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "installment number"@en,
+        "numero rata"@it ;
+    rdfs:domain INPSContributions:RataDiOnereContributivo ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the progressive number of the Contribution Charge Installment."@en,
+        "È il numero progressivo della Rata Di Onere Contributivo."@it .
+
+INPSContributions:numeroRate a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "number of installments"@en,
+        "numero rate"@it ;
+    rdfs:domain INPSContributions:PianoDiAmmortamento ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the number of installments envisaged in the Amortization Plan."@en,
+        "È il numero di rate previsto nel Piano Di Ammortamento."@it .
+
+INPSContributions:numeroSettimaneMancatoPreavviso a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "number of weeks for lack of notice"@en,
+        "numero settimane mancato preavviso"@it ;
+    rdfs:domain INPSContributions:ContributoTrimestraleFinale ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the number of weeks of no notice or untaken holidays with which the Domestic Work Employer has terminated the Domestic Work Relationship. They are paid in the Final Quarterly Contribution."@en,
+        "È il numero di settimane di mancato preavviso o ferie non godute con cui il Datore Di Lavoro Domestico ha cessato il Rapporto Di Lavoro Domestico. Sono corrisposte nel Contributo Trimestrale Finale."@it .
+
+INPSContributions:numeroSettimanePreavviso a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "number of weeks notice"@en,
+        "numero settimane preavviso"@it ;
+    rdfs:domain INPSContributions:ContrattoDiLavoroDomestico ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "It is the number of weeks notice with which the Domestic Work Employer can terminate the Domestic Work Relationship."@en,
+        "È il numero di settimane di preavviso con il quale il Datore Di Lavoro Domestico può cessare il Rapporto Di Lavoro Domestico."@it .
+
+INPSContributions:retribuzioneOrariaEffettiva a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "actual hourly wage"@en,
+        "retribuzione oraria effettiva"@it ;
+    rdfs:subPropertyOf COV:remuneration ;
+    rdfs:domain INPSContributions:LavoratoreDomestico ;
+    rdfs:comment "It is the hourly wage stipulated in the Employment Contract. The minimum hourly wage allowed must not be lower than that established by the regulations of the current year. It may vary in the field of the employment relationship giving rise to different role -playing requests for the same person."@en,
+        "È la retribuzione oraria prevista dal Contratto Di Lavoro. La retribuzione oraria minima consentita non deve essere inferiore a quanto stabilito dalla normativa dell’anno in corso. Può variare nell'ambito del Rapporto Di Lavoro dando luogo a diverse istanze di ruolo di Lavoratore Domestico per la stessa Persona."@it .
+
+INPSContributions:retribuzioneOrariaEffettivaInserita a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "effective hourly wage entered"@en,
+        "retribuzione oraria effettiva inserita"@it ;
+    rdfs:domain INPSContributions:ContributoTrimestraleModificato ;
+    rdfs:range xsd:decimal ;
+    rdfs:comment "It is the hourly wage paid in the Modified Quarterly Contribution. The minimum hourly wage allowed must not be lower than that established by the regulations of the current year."@en,
+        "È la retribuzione oraria corrispostra nel Contributo Trimestrale Modificato. La retribuzione oraria minima consentita non deve essere inferiore a quanto stabilito dalla normativa dell’anno in corso."@it .
+
+L0:description a owl:DatatypeProperty .
+
+L0:identifier a owl:DatatypeProperty .
+
+### Classes
+
+COV:Employment a owl:Class .
+
+COV:Organization a owl:Class .
+
+CPV:Alive a owl:Class .
+
+CPV:Dead a owl:Class .
+
+INPSContributions:AttoAdeguamentoContributivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:dataAtto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:numeroAtto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:emetteAtto ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haAttoAdeguamentoContributivo ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Atto Adeguamento Contributivo"@it,
+        "Contribution Adjustment Deed"@en ;
+    rdfs:comment "Explicit manifestation by the INPS of the decision taken regarding a Contribution Adjustment Application. This decision, if positive, establishes the amount of the Contribution Charge to be paid and the terms of the payment. The deed is characterized by a number and a date. The deed is issued by the competent INPS office for the Applicant who submitted the application. The deed is linked to one and only one Contribution Adjustment Practice (of) Contribution Adjustment and, in particular, this practice belongs to the class Status of Notified Amount of Practice"@en,
+        "Manifestazione esplicita da parte dell'INPS della decisione assunta in merito ad una Domanda (di) Adeguamento Contributivo. Tale decisione, se positiva, stabilisce l'importo dell'Onere Contributivo da versare e i termini del versamento. L'atto è caratterizzato da un numero e da una data. L'emissione dell'atto è a cura della Sede INPS competente per il Richiedente che ha presentato la domanda. L'atto è legato ad una e una sola Pratica (di) Adeguamento Contributivo e, in particolare, tale pratica appartiene alla classe Stato Di Notificato Importo Di Pratica"@it .
+
+INPSContributions:ContrattoDiLavoroDomestico a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:codiceContrattoDiLavoro ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:numeroOreSettimanali ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haContrattoDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contratto Di Lavoro Domestico"@it,
+        "Domestic Work Contract"@en ;
+    rdfs:comment "An employment contract is an agreement that covers the working relationship between a company and an employee. It allows both parties to clearly understand their obligations and the terms of employment. More specifically, an employment contract can include salary or wages, schedule, duration of employment, general responsibilities, confidentiality, communications, benefits, and future competition."@en,
+        "Un contratto di lavoro, o lettera di assunzione, è un accordo che da origine ad un rapporto di lavoro tra un datore di lavoro e un lavoratore. Consente a entrambe le parti di comprendere chiaramente i propri obblighi e le condizioni di lavoro. Nel contesto del dominio, definisce i termini del rapporto stesso indicando: la quantità e distribuzione delle ore settimanali lavorate, la loro retribuzione effettiva, le ferie, il TFR, i termini di preavviso e quanto altro risulta necessario per la definizione del rapporto stesso e nel rispetto del Contratto Collettivo, se esistente, del settore di riferimento."@it .
+
+INPSContributions:ContributoTrimestraleFinale a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haContributoTrimestraleFinale ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contributo Trimestrale Finale"@it,
+        "Final Quarterly Contribution"@en ;
+    rdfs:subClassOf INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:comment "Sottoclasse di Contributo Trimestrale Ordinario legato ad un Rapporto Di Lavoro Domestico Cessato che indica la competenza per l'ultimo trimestre di lavoro. In questo caso i contributi devono riguardare anche le eventuali ore relative alle settimane di mancato preavviso o ferie non godute che verranno attribuite a settimane successive alla data di cessazione con possibile esubero nel trimestre successivo. A tal fine è indicato il numero di settimane di preavviso."@it,
+        "Sub-class of Ordinary Quarterly Contribution linked to a Ceased Domestic Work Report indicating the competence for the last quarter of work. In this case the contributions must also relate to any hours relating to weeks of missed notice or untaken holidays which will be attributed to weeks following the date of termination with possible redundancy in the following quarter. For this purpose, the number of weeks notice is indicated."@en .
+
+INPSContributions:ContributoTrimestraleModificato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:haSettimanaDelTrimestre ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:numeroOreRetribuiteInserito ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:retribuzioneOrariaEffettivaInserita ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Contributo Trimestrale Modificato"@it,
+        "Modified Quarterly Contribution"@en ;
+    owl:disjointWith INPSContributions:ContributoTrimestralePrecompilato ;
+    rdfs:comment "Sottoclasse di Contributo Trimestrale Ordinario che indica gli elementi utili al calcolo dell'importo dei contributi personalizzati per lo specifico trimestre dell'anno. In particolare, specifica il numero di ore retribuite del trimestre, la retribuzione oraria del trimestre, le settimane di presenza per ciascun mese del trimestre, mediante il legame con la Settimana Del Mese, importo e destinatario del contributo versato ad una Organizzazione Di Assistenza. "@it,
+        "Sub-class of Ordinary Quarterly Contribution which indicates the elements useful for calculating the amount of personalized contributions for the specific quarter of the year. In particular, it specifies the number of hours paid for the quarter, the hourly salary for the quarter, the weeks of presence for each month of the quarter, by linking it with the Week Of The Month, amount and recipient of the contribution paid to a Support Organization."@en .
+
+INPSContributions:ContributoTrimestraleOrdinario a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:ContributoTrimestraleModificato
+                    INPSContributions:ContributoTrimestralePrecompilato ) ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:annoContributoTrimestrale ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:dataScadenzaContributoTrimestrale ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:haTrimestreDiAnno ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:importoContributoTrimestrale ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haContributoTrimestraleOrdinario ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contributo Trimestrale Ordinario"@it,
+        "Regular Quarterly Contribution"@en ;
+    rdfs:subClassOf INPSService:PagamentoContributiLavoratoreDomestico ;
+    rdfs:comment "Classifica le competenze trimestrali dei contributi che il datore di lavoro deve versare in base alle ore lavorate nel trimestre e della retribuzione oraria effettiva. È caratterizzato dall'anno e dal trimestre a cui la competenza si riferisce, dall'importo e dalla data di scadenza del versamento."@it,
+        "Classifies the quarterly fees of the contributions that the employer must pay based on the hours worked in the quarter and the actual hourly wage. It is characterized by the year and quarter to which the accrual refers, by the amount and due date of the payment."@en .
+
+INPSContributions:ContributoTrimestralePrecompilato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:numeroOreRetribuiteContrattuali ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Contributo Trimestrale Precompilato"@it,
+        "Pre-compiled Quarterly Contribution"@en ;
+    rdfs:comment "Sottoclasse di Contributo Trimestrale Ordinario che indica gli elementi utili al calcolo dell'importo dei contributi per uno specifico trimestre dell'anno derivati dal Contratto Di Lavoro depositato. In particolare, specifica il numero di ore retribuite contrattuali effettive di competenza del trimestre che possono variare da trimestre a trimestre."@it,
+        "Sub-class of Ordinary Quarterly Contribution which indicates the elements useful for calculating the amount of contributions for a specific quarter of the year deriving from the Employment Contract filed. In particular, it specifies the number of actual contractual paid hours pertaining to the quarter which may vary from quarter to quarter."@en .
+
+INPSContributions:DatoreDiLavoroDomestico a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:identificatoreDatoreDiLavoroDomestico ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haDatoreDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Datore Di Lavoro Domestico"@it,
+        "Domestic Employer"@en ;
+    rdfs:subClassOf INPSCore:RuoloDiAgente ;
+    owl:disjointWith INPSContributions:RichiedenteAdeguamentoContributivo ;
+    rdfs:comment "An employer of a domestic worker is a person who employs someone who is considered a domestic worker."@en,
+        "Sottoclasse di Ruolo di Agente che rappresenta il titolare di un rapporto di lavoro con un lavoratore domestico. È solitamente una persona fisica ma, in alcuni particolari casi, può essere una organizzazione qual ora quest'ultima si configuri come una “comunità stabile” o una “convivenze familiarmente strutturata” senza fini di lucro presso cui il lavoratore svolge servizi domestici tipici della vita familiare. Ciascuna istanza possiede un identificatore."@it .
+
+INPSContributions:DomandaAdeguamentoContributivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:dataDomanda ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:numeroDomanda ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:presentaDomandaAdeguamentoContributivo ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:riceveDomanda ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contribution Adjustment Claim"@en,
+        "Domanda Adeguamento Contributivo"@it ;
+    rdfs:comment "L’esercizio della facoltà di riscatto, ricongiunzione, rendita presuppone la presentazione di apposita domanda da parte dell’interessato Richiedente secondo le modalità specifiche previste da ciascuna facoltà che possono differire sia in termini delle informazioni e documentazioni richieste sia in termini di destinatari della domanda (INPS più eventuali altri Fondi interessati). La presentazione della domanda avviene telematicamente usufruendo del servizio predisposto da INPS eventualmente per l tramite di un intermediario (Patronato, CAF, etc.). La domanda è caratterizzata da una data e un numero assegnato alla stessa dalla Sede INPS competente territorialmente all'atto della presentazione. Quest'ultima istruirà la relativa pratica per gestire la domanda ricevuta."@it,
+        "The exercise of the right of redemption, reunion, annuity presupposes the presentation of a specific request by the interested Applicant according to the specific methods provided for by each faculty which may differ both in terms of the information and documentation requested and in terms of recipients of the request (INPS plus any other Funds involved). The application is submitted electronically using the service provided by INPS, possibly through an intermediary (Patronage, CAF, etc.). The application is characterized by a date and a number assigned to it by the territorially competent INPS office at the time of presentation. The latter will instruct the relative practice to manage the received request."@en .
+
+INPSContributions:LavoratoreDomestico a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:identificatoreLavoratoreDomestico ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:retribuzioneOrariaEffettiva ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Domestic Worker"@en,
+        "Lavoratore Domestico"@it ;
+    rdfs:subClassOf COV:Employment ;
+    owl:disjointWith INPSContributions:SuperstiteDiTitolarePraticaAdeguamentoContributivo ;
+    rdfs:comment "A Domestic Worker is a person who works within the scope of a residence. Domestic workers perform a variety of household services for an individual, from providing cleaning and household maintenance, or cooking, laundry and ironing, or care for children and elderly dependents, and other household errands."@en,
+        "Sottoclasse di Ruolo Di Persona Viva che svolge mansioni e prestazioni di servizi domestici diretti al funzionamento della vita familiare nell'ambito di una residenza. I lavoratori domestici svolgono quindi una varietà di servizi rivolti ad un individuo e/o ad una comunità, dalla pulizia e manutenzione della casa, alla cucina, al bucato e alla stiratura, alla cura dei bambini e degli anziani a carico e ad altre commissioni domestiche. Ciascuna istanza possiede un identificatore."@it .
+
+INPSContributions:MeseDiTrimestre a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:indiceMese ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:èMeseDelTrimestre ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:èSettimanaDelMese ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Mese Di Trimestre"@it,
+        "Month of Trimester"@en ;
+    rdfs:comment "Index of the months present in a calendar quarter. Basically first, second and third (subclass of TI:TemporalEntity)."@en,
+        "Indice dei mesi presenti in un trimestre solare. In pratica primo, secondo e terzo (sottoclasse di TI:TemporalEntity)."@it .
+
+INPSContributions:OnereContributivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:dataScadenzaOnereContributivo ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:importoOnereContributivo ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haOnereContributivo ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contributory Charge"@en,
+        "Onere Contributivo"@it ;
+    owl:disjointWith INPSContributions:RataDiOnereContributivo ;
+    rdfs:comment "Amount of money that the Holder of n Application, or one of his survivors, are requested to pay in order to satisfy the acceptance of the presented application. The amount of this sum is established by INPS with a specific document and communicated to the Applicant together with the date by which said sum must be paid, under penalty of forfeiture of the application. Each instance of the class is necessarily linked to one and only one case in Notified Amount status. It is a subclass of Purpose, thus resulting linked to the Payment Slip class to which it provides the data for its compilation."@en,
+        "Somma di denaro che il Titolare di una Pratica, o un suo Superstite, sono chiamati a versare per soddisfare l'accettazione della domanda presentata. L'importo di detta somma è stabilito dall'INPS con apposito Atto e comunicato al Richiedente unitamente alla data entro cui detta somma deve essere versata pena la decadenza della domanda. Ogni istanza della classe è necessariamente legata ad una ed una sola pratica in stato di Notificato Importo. È sottoclasse di Finalità risultando in tal modo legata alla classe Bollettino Di Pagamento a cui fornisce i dati per la compilazione dello stesso."@it .
+
+INPSContributions:OrganizzazioneDiAssistenza a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:codiceOrganizzazioneAssistenza ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haOrganizzazioneDiAssistenza ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haVersamentoOrganizzazione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Assistance Organization"@en,
+        "Organizzazione Di Assistenza"@it ;
+    rdfs:subClassOf COV:Organization ;
+    rdfs:comment "Body that has the purpose of providing benefits and services in favor of workers and employers, including health care and insurance treatments, supplementary and additional to public services."@en,
+        "Organismo che ha lo scopo di fornire prestazioni e servizi a favore dei lavoratori e datori di lavoro, comprensivi di trattamenti assistenziali sanitari e assicurativi, integrativi e aggiuntivi delle prestazioni pubbliche."@it .
+
+INPSContributions:PianoDiAmmortamento a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:importoRata ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:numeroRate ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haPianoDiAmmortamento ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Amortization Schedule"@en,
+        "Piano Di Ammortamento"@it ;
+    rdfs:comment "Il piano di ammortamento è il programma di restituzione rateale di un debito, che solitamente scompone le rate in quote capitale e quote interessi, e specifica il capitale residuo dovuto dopo ciascun pagamento. È caratterizzato da un numero di rate e dall'importo di ciascuna rata, solitamente costante. Nel contesto di questo dominio rappresenta la rateizzazione dell'Onere Contributivo e viene proposto al Richiedente come modalità alternativa rispetto al versamento unico. Il Richiedente può aderire a tale piano o chiedere una sua modifica, ad esempio per ridurre il numero di rate proposte. Ogni istanza della classe è necessariamente legata ad una ed una sola pratica in stato di Notificato Importo. La classe si comporta come una Sequenze per cui ad ogni istanza della classe sono legate le istanze della classe Rata Di Onere Contributivo corrispondenti ciascuna ad una rata del piano."@it,
+        "The amortization schedule is the schedule for repaying a debt by installments, which usually breaks down the installments into principal and interest portions, and specifies the residual principal due after each payment."@en .
+
+INPSContributions:PraticaAdeguamentoContributivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:descrizionePratica ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:haDomandaAdeguamentoContributivo ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:haTitolarePraticaAdeguamentoContributivo ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:numeroPratica ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:istruiscePratica ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contribution Adjustment Application"@en,
+        "Pratica Adeguamento Contributivo"@it ;
+    rdfs:comment "Abstract class that aggregates the different types of practices initiated by the INPS, in particular the practices of redemption and/or reunification of contributions, including annuities. Each file has a unique identifier and a description and is obligatorily linked to one and only one Application (for) Contribution Adjustment, against which the file itself was instructed by the INPS office competent for the Applicant who presented the application. Once the file has been assessed by INPS, it is linked to one and only one Contribution Adjustment Act (of) Contribution Adjustment with which the aforementioned INPS office informs the Applicant of the outcome of the application. Instances of this class can evolve over time, each time assuming a different state whose characteristics are linked to a time interval of validity. This is why the class is a sequence linked to some TI:TimeIndexedEvent class (from OntoPiA - Time Ontology) that model the status of the application in the time. The possible states of instances are classified by its disjoint subclasses denoted by names with the prefix Status."@en,
+        "Classe astratta che aggrega le diverse tipologie di pratiche istruite dall'INPS, in particolare le pratiche di riscatto e/o ricongiunzione di contributi, ivi comprese le rendite. Ciascuna pratica ha un identificativo e una descrizione ed è legata obbligatoriamente ad una e una sola Domanda (di) Adeguamento Contributivo, a fronte della quale la pratica stessa è stata istruita a cura della Sede INPS competente per il Richiedente che ha presentato la domanda. Una volta che la pratica è stata valutata dall'INPS, viene legata ad uno ed un solo Atto (di) Adeguamento Contributivo con cui la suddetta Sede INPS comunica al Richiedente l'esito della domanda. Le istanze di questa classe possono evolvere nel tempo, assumendo di volta in volta un diverso stato le cui caratteristiche sono legate ad un intervallo temporale di validità. Per questo la classe è di tipo L0:Sequence  (da OntoPiA - Ontologia Fondazionale) i cui membri sono eventi di tipo TI:TimeIndexedEvent (da OntoPiA - Ontologia del Tempo) che rappresentano I possibili stati assunti dalla pratica nel tempo. Ad una Pratica è legato obbligatoriamente uno ed un solo titolare della Pratica che corrisponde alla persona che possiede i requisiti per attivare la facoltà e, solo se il titolare è deceduto, uno ed un solo superstite pagatore."@it .
+
+INPSContributions:PraticaDiAdeguamentoRateizzata a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:haPianoDiAmmortamento ;
+            owl:someValuesFrom INPSContributions:PianoDiAmmortamento ] ;
+    rdfs:label "Contribution Adjustment Application by Installments"@en,
+        "Pratica Di Adeguamento Rateizzata"@it ;
+    rdfs:comment "Classifica le pratiche di adeguamento contributivo in stato di Notificato Importo che sono legate ad un piano di ammortamento e come tali prevedono la possibilità di attivare un mandato SDD per il pagamento delle rate."@it,
+        "Classifies the contribution adjustment applications in Notified Amount status which are linked to an amortization plan and as such provide for the possibility of activating an SDD mandate for the payment of installments."@en .
+
+INPSContributions:PraticaDiRendita a owl:Class ;
+    rdfs:label "Life Annuities Application"@en,
+        "Pratica Di Rendita"@it ;
+    rdfs:comment "Particolare forma di riscatto che consente, previa esibizione di prove rigorose, di versare un onere a copertura dei periodi di lavoro la cui contribuzione sia stata omessa e che non sia più recuperabile. Presuppone quindi l’inadempimento dell’obbligo assicurativo per l’IVS che non deve essere più suscettibile di recupero da parte dell’INPS per maturata prescrizione. In tale contesto, l’INPS riconosce la rendita vitalizia solo nei casi di esistenza certa del rapporto di lavoro e di sussistenza dei requisiti prescritti dalla legge inerenti all’obbligo di versamento dei contributi nei periodi oggetto di riscatto. La domanda può in questo caso essere presentata: dal datore di lavoro che ha omesso il versamento dei contributi o dal lavoratore stesso, anche se già pensionato, o dai suoi superstiti. A fronte della presentazione della domanda, l'INPS istruisce la relativa Pratica di Rendita per la valutazione dell'accoglimento della richiesta e la determinazione degli oneri a carico del Richiedente."@it,
+        "The constitution of life annuities serves to rectify missing contributions for invalidity, old-age and survivors' insurance that are time-barred and is therefore on the premise that the entity required to pay the contributions has failed to comply with a contribution obligation. The constitution of annuities or redeeming periods through buyback contributions may be claimed: by an employer that has failed to pay the contributions and in this way intends to pay said contributions by rectifying the damage caused to the employee; by the employee themselves, in lieu of the employer, either if they still working or if they have already been granted the pension; by survivors of the worker. On approval of the claim, the decision is sent to claimants by registered post and also specifies the payment methods and terms."@en .
+
+INPSContributions:PraticaDiRicongiunzione a owl:Class ;
+    rdfs:label "Aggregation Application"@en,
+        "Pratica Di Ricongiunzione"@it ;
+    rdfs:comment "Istituto che consente, a chi ha posizioni assicurative in gestioni previdenziali diverse, di riunire, mediante trasferimento, tutti i periodi contributivi presso un’unica gestione, allo scopo di ottenere una sola pensione. Tale ricongiunzione avviene a domanda dell’assicurato o dei suoi superstiti e deve riguardare tutti i periodi di contribuzione che il lavoratore ha maturato in almeno due diverse forme previdenziali fino al momento della richiesta e che non siano già stati utilizzati per liquidare una pensione. I periodi così ricongiunti sono utilizzabili come se fossero stati versati nel fondo di destinazione e danno diritto ad un trattamento pensionistico basato sui requisiti di quest’ultimo fondo. A fronte della presentazione della domanda, l'INPS istruisce la relativa Pratica di Ricongiunzione per la valutazione dell'accoglimento della richiesta e la determinazione di eventuali oneri a carico del Richiedente."@it,
+        "The aggregation of insurance periods allows the transfer of existing contributions from at multiple institutes to a single institute in order to obtain a unified pension. The aggregation of insurance periods can be carried out free of charge or for payment."@en .
+
+INPSContributions:PraticaDiRiscatto a owl:Class ;
+    rdfs:label "Pratica Di Riscatto"@it,
+        "Redemption Application"@en ;
+    rdfs:comment "Istituto che consente al lavoratore, anche già pensionato, di conseguire, a proprie spese, il riconoscimento contributivo per specifici periodi altrimenti privi di contribuzione. Trattasi tipicamente di periodi in cui o non era previsto l’obbligo contributivo (ad esempio, gli anni di studio per il conseguimento della laurea o titolo di studio equiparato) o l’attività lavorativa si è svolta all’estero o vi è stata omissione rispetto all’obbligo di pagamento dei contributi spettanti. Il riscatto resta una facoltà a discrezione del lavoratore/pensionato (o dei superstiti in caso di decesso), che deve quindi farne espressa domanda all’INPS. Temporalmente, i contributi riscattati si collocheranno nello stesso periodo nel quale avrebbero dovuto essere versati. A fronte della presentazione della domanda, l'INPS istruisce la relativa Pratica di Riscatto per la valutazione dell'accoglimento della richiesta e la determinazione degli oneri a carico del Richiedente."@it,
+        "Redemption applications for pension purposes can be carried out in order to consider for pension purposes periods such as graduation years, years of employment abroad, periods non covered by contributions, periods of missing and time-barred contributions, and some periods expressly envisaged by the law and not covered by contribution "@en .
+
+INPSContributions:RapportoDiLavoroDomestico a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:dataFirmaContratto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:haContrattoDiLavoroDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:haDatoreDiLavoroDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:haLavoratoreDomestico ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Domestic Employment Relationship"@en,
+        "Rapporto Di Lavoro Domestico"@it ;
+    rdfs:comment "Employment relationship between an employer and a subordinate worker who provides services of a domestic nature aimed at the functioning of family life. The employer is obliged to notify INPS of the establishment of this employment relationship, before the date of employment, as well as any change to the terms of the relationship itself or its termination. By virtue of this communication, the employment relationship is assigned by INPS an identification code useful for any subsequent fulfillment relating to the relationship itself. The contract can change over time, therefore each instance is associated with a validity interval (subclass of TI:TimeIndexedEvent)."@en,
+        "Rapporto di lavoro tra un datore di lavoro e un lavoratore subordinato che presta servizi di carattere domestico diretti al funzionamento della vita familiare. È fatto obbligo al datore di lavoro di comunicare all’INPS l’istaurarsi di tale rapporto di lavoro, prima della data di assunzione, così come qualsiasi modifica dei termini del rapporto stesso ovvero la sua cessazione. In virtù di tale comunicazione, al rapporto di lavoro viene assegnato da INPS un codice identificativo utile per qualsiasi successivo adempimento inerente al rapporto stesso. Il contratto può modificarsi nel tempo quindi a ciascuna istanza è associato un intervallo di validità (sottoclasse di TI:TimeIndexedEvent)."@it .
+
+INPSContributions:RapportoDiLavoroDomesticoAttivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:dataComunicazioneInizioRapporto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf L0:hasFirstMember ] ;
+            owl:someValuesFrom INPSContributions:RapportoDiLavoroDomestico ] ;
+    rdfs:label "Active Domestic Employment Relationship"@en,
+        "Rapporto Di Lavoro Domestico Attivo"@it ;
+    rdfs:comment "Stato di Rapporto di Lavoro Domestico che classifica i rapporti attualmente attivi. È caratterizzato dalla data di inizio del rapporto che corrisponde alla data iniziale dell'intervallo di tempo associato all'evento."@it,
+        "Subclass of Domestic Employment Relationship that classifies currently active relationships. It has a relationship start date which corresponds to the initial date of the time interval associated with the event."@en .
+
+INPSContributions:RapportoDiLavoroDomesticoCessato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:dataComunicazioneFineRapporto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf L0:hasLastMember ] ;
+            owl:someValuesFrom INPSContributions:RapportoDiLavoroDomestico ] ;
+    rdfs:label "Rapporto Di Lavoro Domestico Cessato"@it,
+        "Terminated Domestic Employment Relationship"@en ;
+    rdfs:comment "Domestic Employment Relationship Status that classifies currently inactive relationships. It has a relationship end date which corresponds to the initial date of the time interval associated with the event."@en,
+        "Stato di Rapporto di Lavoro Domestico che classifica i rapporti non più attivi. È caratterizzato dalla data di fine del rapporto che corrisponde alla data iniziale dell'intervallo di tempo associato all'evento."@it .
+
+INPSContributions:RataDiOnereContributivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:dataScadenzaRata ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:numeroRata ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf L0:hasMember ] ;
+            owl:someValuesFrom INPSContributions:PianoDiAmmortamento ] ;
+    rdfs:label "Contributory Charge Installment"@en,
+        "Rata Di Onere Contributivo"@it ;
+    rdfs:subClassOf L0:Object ;
+    rdfs:comment "Classifica le rate di un piano di ammortamento, ciascuna legata al rispettivo piano e alla rata successiva dello stesso piano. Ciascuna istanza è caratterizzata dall'indice della rata, relativamente al piano di cui fa parte, e dalla sua data di scadenza. È sottoclasse di Finalità risultando in tal modo legata alla classe Bollettino Di Pagamento a cui fornisce i dati per la compilazione dello stesso."@it,
+        "Classifies the installments of an amortization plan, each linked to the respective plan and to the next installment of the same plan. Each application is characterized by the index of the installment, relative to the plan to which it belongs, and by its expiry date. It is a subclass of Purpose, thus resulting linked to the Payment Slip class to which it provides the data for its compilation."@en .
+
+INPSContributions:RichiedenteAdeguamentoContributivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:identificatoreRichiedenteAdeguamentoContributivo ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:presentaDomandaAdeguamentoContributivo ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contribution Adjustment Applicant"@en,
+        "Richiedente Adeguamento Contributivo"@it ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:SuperstiteDiTitolarePraticaAdeguamentoContributivo
+                    [ a owl:Class ;
+                        owl:intersectionOf (
+                                INPSContributions:TitolarePraticaAdeguamentoContributivo
+                                INPSCore:RuoloDiPersonaViva ) ] ) ] ;
+    rdfs:comment "Sottoclasse di Ruolo Di Persona Viva che classifica le persone in vita che presentano una domanda di adeguamento contributivo (per riscatto, ricongiunzione o rendita) per se stessi o per una persona deceduta essendone un superstite, parente o affine. In questo secondo caso, il Richiedente presenta la domanda per conto e in vece dell'avente diritto, assumendosi il compito di versare gli eventuali oneri derivanti. La platea di persone fisiche che possono ricoprire il ruolo di Richiedente è piuttosto ampia comprendendo i lavoratori, dipendenti e autonomi, così come i lavoratori già pensionati. Ciascuna istanza del ruolo è caratterizzata da un identificativo."@it,
+        "Subclass of Role of Living Person which classifies living people who submit an application for contribution adjustment (for redemption, reunion or annuity) for themselves or for a deceased person of which they are a survivor, relative or similar. In this second case, the Applicant submits the application on behalf of and in place of the person, taking responsability for the task of paying any resulting charges. The variety of natural persons who can fill the role of Applicant is quite broad, including workers, employees and self-employed, as well as workers who have already retired. Each instance of such roles is characterized by an identifier."@en .
+
+INPSContributions:SettimanaDelMese a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:indiceSettimana ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:èSettimanaDelMese ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Settimana Del Mese"@it,
+        "Week Of The Month"@en ;
+    rdfs:comment "Index of the week in a calendar month. Practically, it assumes instances 1 to 5 (subclass of TI:TemporalEntity)."@en,
+        "Indice della settimana in un mese solare. In pratica assume istanze da 1 a 5 (sottoclasse di TI:TemporalEntity)."@it .
+
+INPSContributions:StatoDiAccreditoParzialeDiPratica a owl:Class ;
+    rdfs:label "Partial Credit of the Application Status"@en,
+        "Stato Di Accredito Parziale Di Pratica"@it ;
+    rdfs:comment "Contribution Adjustment Application Status which classifies the applications whose costs necessary for their economic closure have been paid in part."@en,
+        "Stato di Pratica Adeguamento Contributivo che classifica le pratiche i cui oneri necessari per il loro perfezionamento economico sono stati versati in modo parziale."@it .
+
+INPSContributions:StatoDiNotificatoImportoDiPratica a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:haAttoAdeguamentoContributivo ;
+            owl:someValuesFrom INPSContributions:AttoAdeguamentoContributivo ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:haOnereContributivo ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Notified Amount of the Application Status"@en,
+        "Stato Di Notificato Importo Di Pratica"@it ;
+    rdfs:comment "Contribution Adjustment Application Status which aggregates the applications for which the Contribution Adjustment Deed was issued. The amount of the contribution fee that the Applicant will have to pay to the Institute was then communicated, as well as the methods and times for this payment. The applications belonging to this class are payable, i.e. they can be subject to payment by the Debtor. The execution of at least one payment implies acceptance by the Applicant of the terms indicated in the deed."@en,
+        "Stato di Pratica Adeguamento Contributivo che aggrega le pratiche per cui è stata emesso l'Atto (di) Adeguamento Contributivo. È stato quindi comunicato l'importo dell'onere contributivo che il Richiedente dovrà versare all'Istituto nonchè le modalità, ad esempio proponendo un piano di ammortamento, e i tempi di tale versamento. Le pratiche appartenenti a questa classe sono esigibili cioè possono essere soggette a pagamento da parte del Debitore. L'esecuzione di almeno un pagamento implica l'accettazione da parte del Richiedente dei termini indicati nell'atto."@it .
+
+INPSContributions:StatoDiPagamentoRatealeInCorso a owl:Class ;
+    rdfs:label "Ongoing Installment Payment Status"@en,
+        "Stato Di Pagamento Rateale In Corso"@it ;
+    rdfs:comment "Contribution Adjustment Application Status which classifies the applications for which an amortization plan has been agreed upon and whose installments are regularly paid."@en,
+        "Stato di Pratica Adeguamento Contributivo che classifica le pratiche per cui è stato concordato un piano di ammortamento e i cui pagamenti sono regolari."@it .
+
+INPSContributions:StatoDiPraticaDefinita a owl:Class ;
+    rdfs:label "Defined Application Status"@en,
+        "Stato Di Pratica Definita"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf L0:hasLastMember ] ;
+            owl:someValuesFrom INPSContributions:PraticaAdeguamentoContributivo ] ;
+    rdfs:comment "Contribution Adjustment Application Status which classifies the applications whose costs have been paid in full. It is the final state of an application."@en,
+        "Stato di Pratica Adeguamento Contributivo che classifica le pratiche di cui è stato saldato l'onere dovuto. Rappresenta lo stato finale di una pratica."@it .
+
+INPSContributions:StatoInizialeDiPratica a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf L0:hasFirstMember ] ;
+            owl:someValuesFrom INPSContributions:PraticaAdeguamentoContributivo ] ;
+    rdfs:label "Initial Application Status"@en,
+        "Stato Iniziale Di Pratica"@it ;
+    rdfs:comment "Contribution Adjustment Application Status which classifies the applications for which a Contribution Adjustment Application has been received but not yet handled by INPS office. It is the initial state of an application."@en,
+        "Stato di Pratica Adeguamento Contributivo che classifica le pratiche istruite a fronte del ricevimento di una Domanda (di) Adeguamento Contributivo ma non ancora elaborate da parte delle Sede INPS. Rappresenta lo stato iniziale di una pratica."@it .
+
+INPSContributions:SuperstiteDiTitolarePraticaAdeguamentoContributivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haPagatoreOnere ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Adjustment Contribution Application Holder Survivor"@en,
+        "Superstite Di Titolare Pratica Adeguamento Contributivo"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:intersectionOf (
+                            CPV:Alive
+                            [ a owl:Restriction ;
+                                owl:onProperty RO:hasParentalRelationshipWith ;
+                                owl:someValuesFrom [ a owl:Class ;
+                                        owl:intersectionOf (
+                                                CPV:Dead
+                                                [ a owl:Restriction ;
+                                                    owl:onProperty RO:holdsRoleInTime ;
+                                                    owl:someValuesFrom INPSContributions:TitolarePraticaAdeguamentoContributivo ] ) ] ] ) ] ] ;
+    owl:disjointWith [ a owl:Class ;
+            owl:intersectionOf (
+                    INPSContributions:TitolarePraticaAdeguamentoContributivo
+                    INPSCore:RuoloDiPersonaViva ) ] ;
+    rdfs:comment "Sottoclasse di Persona in Vita che, avendo un legame parentale con un Titolare Pratica Adeguamento Contributivo deceduto, ha presentato domanda di riscatto, ricongiunzione o rendita per conto e in vece di detto Titolare; quindi, in questo caso, corrisponde al Richiedente. Per ciò, tale superstite si fa carico del pagamento degli eventuali oneri derivanti dall'accoglimento della domanda e risulta legato alla Pratica derivante dalla domanda stessa in qualità di pagatore, ruolo quest'ultimo che è assorbito da quello di Titolare qual ora quest'ultimo sia in vita."@it,
+        "Subclass of Living Person who, having a parental relationship with a deceased Application Holder, has presented a redemption, reunion or annuity request on behalf of and in place of said Holder; therefore, in this case, it corresponds to the Applicant. For this reason, this survivor takes care of the payment of any charges deriving from the acceptance of the request and is linked to the Application deriving from the request itself as payer, the latter role being absorbed by that of Holder in case he is alive."@en .
+
+INPSContributions:TitolarePraticaAdeguamentoContributivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haTitolarePraticaAdeguamentoContributivo ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contribution Adjustment Application Holder"@en,
+        "Titolare Pratica Adeguamento Contributivo"@it ;
+    rdfs:subClassOf INPSCore:RuoloDiPersona ;
+    rdfs:comment "Role in person who characterizes whom, following the presentation of a suitable application, the requisites for accessing the option of redemption, reunion or annuity of social security contributions are recognized. These requirements can be recognized to the Holder even if no longer alive. The Holder is compulsorily linked to at least one Application. If the Holder is alive, it corresponds to the Applicant."@en,
+        "Sottoclasse di Ruolo di Persona che specializza il ruolo di persone a cui, facendo seguito alla presentazione di idonea domanda, sono riconosciuti i requisiti per accedere alla facoltà di riscatto, ricongiunzione o rendita di contributi previdenziali. Tali requisiti possono essere riconosciuti al Titolare anche se non più in vita. Il Titolare è obbligatoriamente legato ad almeno una Pratica. Nel caso il Titolare sia in vita, corrisponde al Richiedente."@it .
+
+INPSContributions:TrimestreDiAnno a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributions:indiceTrimestre ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:èMeseDelTrimestre ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Quarter"@en,
+        "Trimestre Di Anno"@it ;
+    rdfs:comment "A quarter refers to one-fourth of a year (three months) and is typically expressed as Q1 for the first quarter, Q2 for the second quarter, and so forth (subclass of TI:TemporalEntity)"@en,
+        "Periodo di tre mesi in cui è suddiviso un anno solare, tipicamente indicati con primo trimestre, secondo trimestre, e così via (sottoclasse di TI:TemporalEntity)"@it .
+
+INPSCore:RuoloDiAgente a owl:Class .
+
+INPSCore:RuoloDiPersona a owl:Class .
+
+INPSCore:RuoloDiPersonaViva a owl:Class ;
+    rdfs:subClassOf INPSCore:RuoloDiPersona .
+
+INPSCore:SedeINPS a owl:Class .
+
+INPSService:MandatoSDD a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haMandatoPerPratica ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSService:PagamentoContributiLavoratoreDomestico a owl:Class .
+
+INPSService:PagamentoContributiRRR a owl:Class .
+
+INPSService:Pagatore a owl:Class .
+
+L0:Object a owl:Class .
+
+L0:Sequence a owl:Class .
+
+TI:TemporalEntity a owl:Class .
+
+TI:TimeIndexedEvent a owl:Class .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSContributions:PraticaAdeguamentoContributivo ;
+    owl:unionOf (
+            INPSContributions:PraticaDiRendita
+            INPSContributions:PraticaDiRicongiunzione
+            INPSContributions:PraticaDiRiscatto ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSCore:RuoloDiPersonaViva ;
+    owl:unionOf (
+            INPSContributions:LavoratoreDomestico
+            INPSContributions:SuperstiteDiTitolarePraticaAdeguamentoContributivo ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSService:PagamentoContributiRRR ;
+    owl:unionOf (
+            INPSContributions:OnereContributivo
+            INPSContributions:RataDiOnereContributivo ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSService:Pagatore ;
+    owl:unionOf (
+            INPSContributions:DatoreDiLavoroDomestico
+            INPSContributions:RichiedenteAdeguamentoContributivo ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf L0:Sequence ;
+    owl:unionOf (
+            INPSContributions:PianoDiAmmortamento
+            INPSContributions:PraticaAdeguamentoContributivo
+            INPSContributions:RapportoDiLavoroDomestico ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf TI:TemporalEntity ;
+    owl:unionOf (
+            INPSContributions:MeseDiTrimestre
+            INPSContributions:SettimanaDelMese
+            INPSContributions:TrimestreDiAnno ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf TI:TimeIndexedEvent ;
+    owl:unionOf (
+            INPSContributions:RapportoDiLavoroDomesticoAttivo
+            INPSContributions:RapportoDiLavoroDomesticoCessato
+            INPSContributions:StatoDiAccreditoParzialeDiPratica
+            INPSContributions:StatoDiNotificatoImportoDiPratica
+            INPSContributions:StatoDiPagamentoRatealeInCorso
+            INPSContributions:StatoDiPraticaDefinita
+            INPSContributions:StatoInizialeDiPratica ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf L0:hasMember ] ;
+            owl:someValuesFrom INPSContributions:PraticaAdeguamentoContributivo ] ;
+    owl:unionOf (
+            INPSContributions:StatoDiAccreditoParzialeDiPratica
+            INPSContributions:StatoDiNotificatoImportoDiPratica
+            INPSContributions:StatoDiPagamentoRatealeInCorso ) .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/contributions/v1.0> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/contributions/v1.0/contributions.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa al dominio informativo che permette la gestione delle pratiche di istanziazione dei contributi previdenziali, specializzando le entità coinvolte in base alla natura dell'evento che ha generato l'obbligo o la facoltà della contribuzione. "@it,
+        "This is the distribution in N-TRIPLES of the INPS Ontology about the information domain that allows the management of social security contribution instantiation practices, specializing the entities involved according to the nature of the event that generated the obligation or faculty of contribution."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - contributi previdenziali"@it,
+        "N-TRIPLES distribution of the INPS ontology - social contributions"@en .
+
+<https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/contributions/v1.0> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/contributions/v1.0/contributions.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa al dominio informativo che permette la gestione delle pratiche di istanziazione dei contributi previdenziali, specializzando le entità coinvolte in base alla natura dell'evento che ha generato l'obbligo o la facoltà della contribuzione."@it,
+        "This is the distribution in RDF/Turtle of the INPS Ontology about the information domain that allows the management of social security contribution instantiation practices, specializing the entities involved according to the nature of the event that generated the obligation or faculty of contribution."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - contributi previdenziali"@it,
+        "RDF/Turtle distribution of the INPS ontology - social contributions"@en .
+
+<https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/contributions/v1.0> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/contributions/v1.0/contributions.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa al dominio informativo che permette la gestione delle pratiche di istanziazione dei contributi previdenziali, specializzando le entità coinvolte in base alla natura dell'evento che ha generato l'obbligo o la facoltà della contribuzione."@it,
+        "This is the distribution in RDF/XML of the INPS Ontology about the information domain that allows the management of social security contribution instantiation practices, specializing the entities involved according to the nature of the event that generated the obligation or faculty of contribution."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - contributi previdenziali"@it,
+        "RDF/XML distribution of the INPS ontology - social contributions"@en .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+### Axioms
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSContributions:MeseDiTrimestre
+            INPSContributions:SettimanaDelMese
+            INPSContributions:TrimestreDiAnno ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSContributions:PianoDiAmmortamento
+            INPSContributions:PraticaAdeguamentoContributivo
+            INPSContributions:RapportoDiLavoroDomestico ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSContributions:PraticaDiRendita
+            INPSContributions:PraticaDiRicongiunzione
+            INPSContributions:PraticaDiRiscatto ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSContributions:RapportoDiLavoroDomesticoAttivo
+            INPSContributions:RapportoDiLavoroDomesticoCessato
+            INPSContributions:StatoDiAccreditoParzialeDiPratica
+            INPSContributions:StatoDiNotificatoImportoDiPratica
+            INPSContributions:StatoDiPagamentoRatealeInCorso
+            INPSContributions:StatoDiPraticaDefinita
+            INPSContributions:StatoInizialeDiPratica ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSContributions:StatoDiAccreditoParzialeDiPratica
+            INPSContributions:StatoDiNotificatoImportoDiPratica
+            INPSContributions:StatoDiPagamentoRatealeInCorso ) .
+
+### Serialized using the ttlser deterministic serializer v1.2.0
