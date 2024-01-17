@@ -11,28 +11,28 @@ I file presenti in questo repository sono organizzati secondo la seguente albera
 
 ```bash
 ┌─ assets/controlled-vocabularies/
-│  ├─ categorie-disabilita
+│  ├─ tipo_gestione_ricongiunzione
 │  │   ├─ latest
-│  │   │   ├─ categorie_disabilita.csv
-│  │   │   ├─ categorie_disabilita.json
-│  │   │   └─ categorie_disabilita.ttl
+│  │   │   ├─ tipo_gestione_ricongiunzione.csv
+│  │   │   ├─ tipo_gestione_ricongiunzione.json
+│  │   │   └─ tipo_gestione_ricongiunzione.ttl
 │  │   ├─ v{version}
-│  │   │   ├─ categorie_disabilita.csv
-│  │   │   ├─ categorie_disabilita.json
-│  │   │   └─ categorie_disabilita.ttl
+│  │   │   ├─ tipo_gestione_ricongiunzione.csv
+│  │   │   ├─ tipo_gestione_ricongiunzione.json
+│  │   │   └─ tipo_gestione_ricongiunzione.ttl
 │  ├─ ...
 │  ├─ frame-short.yamlld
 │  └─ notes.md
 ├─ assets/ontologies/
-│  ├─ OP21
+│  ├─ contributions
 │  │   ├─ latest
-│  │   │   ├─ OP21.n3
-│  │   │   ├─ OP21.owl
-│  │   │   └─ OP21.ttl
+│  │   │   ├─ contributions.n3
+│  │   │   ├─ contributions.owl
+│  │   │   └─ contributions.ttl
 │  │   ├─ v{version}
-│  │   │   ├─ OP21.n3
-│  │   │   ├─ OP21.owl
-│  │   │   └─ OP21.ttl
+│  │   │   ├─ contributions.n3
+│  │   │   ├─ contributions.owl
+│  │   │   └─ contributions.ttl
 │  ├─ ...
 │  └─ notes.md
 ├─ assets/schemas/
