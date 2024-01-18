@@ -1,0 +1,95 @@
+openapi: 3.0.3
+info:
+  title: Schema del Contratto di Lavoro Domestico
+  version: 202401.18.00
+  x-summary: Schema del Contratto di Lavoro Domestico compatibile con l'Ontologia INPS relativa ai contributi previdenziali.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+   Un contratto di lavoro, o lettera di assunzione, è un accordo che da origine ad un rapporto di lavoro tra un datore di lavoro e un lavoratore. Consente a entrambe le parti di comprendere chiaramente i propri obblighi e le condizioni di lavoro. Nel contesto del dominio, definisce i termini del rapporto stesso indicando: la quantità e distribuzione delle ore settimanali lavorate, la loro retribuzione effettiva, le ferie, il TFR, i termini di preavviso e quanto altro risulta necessario per la definizione del rapporto stesso e nel rispetto del Contratto Collettivo, se esistente, del settore di riferimento.
+   La metadatazione semantica degli schemi si basa sul documento
+   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
+   che introduce le keyword x-jsonld-type e x-jsonld-context.
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdContrattoLavoro:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/contributions/codiceContrattoDiLavoro
+      description:
+        Codice relativo al Contratto Di Lavoro Domestico, è finalizzato all'individuazione univoca di ogni record dell'entità. Associato a https://w3id.org/italia/social-security/onto/contributions/codiceContrattoDiLavoro.
+      example: 'TECU0123/45'
+      maxLength: 50
+      minLength: 1
+
+    ContrattoLavoroDomestico:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/ContrattoDiLavoroDomestico
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/contributions/"
+        numero_ore_settimanali: numeroOreSettimanali
+        numero_settimane_preavviso: numeroSettimanePreavviso
+        ha_organizzazione_assistenza:
+          "@id": haOrganizzazioneDiAssistenza
+      additionalProperties: true
+      description:
+         Questo schema rappresenta un contratto di lavoro, o lettera di assunzione. È un accordo che da origine ad un rapporto di lavoro tra un datore di lavoro e un lavoratore.
+         Associato ad https://w3id.org/italia/social-security/onto/contributions/ContrattoDiLavoroDomestico.
+      required:
+      - codice_contratto_lavoro
+      - numero_ore_settimanali
+      - numero_settimane_preavviso
+      properties:
+        codice_contratto_lavoro:
+          $ref: "#/components/schemas/IdContrattoLavoro"
+        numero_ore_settimanali:
+          type: integer
+          format: int64
+          minimum: 0
+          maximum: 100
+        numero_settimane_preavviso:
+          type: integer
+          format: int64
+          minimum: 0
+          maximum: 100
+        ha_organizzazione_assistenza:
+          type: object
+          items:
+            $ref: "#/components/schemas/OrganizzazioneAssistenza"
+      example:
+        codice_contratto_lavoro:
+          $ref: "#/components/schemas/IdContrattoLavoro/example"
+        numero_ore_settimanali: 40
+        numero_settimane_preavviso: 4
+        ha_organizzazione_assistenza:
+          $ref: "#/components/schemas/OrganizzazioneAssistenza/example"
+
+    OrganizzazioneAssistenza:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/OrganizzazioneDiAssistenza
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/contributions/"
+        codice_organizzazione_assistenza: codiceOrganizzazioneAssistenza
+      additionalProperties: true
+      description:
+          Questo schema rappresenta l'organismo che ha lo scopo di fornire prestazioni e servizi a favore dei lavoratori e datori di lavoro, comprensivi di trattamenti assistenziali sanitari e assicurativi, integrativi e aggiuntivi delle prestazioni pubbliche.
+          Lo schema è associato a https://w3id.org/italia/social-security/onto/contributions/OrganizzazioneDiAssistenza.
+      required:
+      - codice_organizzazione_assistenza
+      properties:
+        codice_organizzazione_assistenza:
+          type: string
+          maxLength: 50
+      example:
+        codice_organizzazione_assistenza: '1234654'
