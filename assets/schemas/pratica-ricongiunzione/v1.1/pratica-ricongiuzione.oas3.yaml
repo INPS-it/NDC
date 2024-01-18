@@ -1,8 +1,8 @@
 openapi: 3.0.3
 info:
-  title: Schema della Pratica di Riscatto
+  title: Schema della Pratica di Ricongiunzione
   version: 202401.18.00
-  x-summary: Schema della Pratica di Riscatto compatibile con l'Ontologia INPS relativa ai contributi previdenziali.
+  x-summary: Schema della Pratica di Ricongiunzione compatibile con l'Ontologia INPS relativa ai contributi previdenziali.
   license:
     name: CC BY 4.0
     url: https://creativecommons.org/licenses/by/4.0/
@@ -11,7 +11,7 @@ info:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
   description: |-
-   Istituto che consente al lavoratore, anche già pensionato, di conseguire, a proprie spese, il riconoscimento contributivo per specifici periodi altrimenti privi di contribuzione. Trattasi tipicamente di periodi in cui o non era previsto l'obbligo contributivo (ad esempio, gli anni di studio per il conseguimento della laurea o titolo di studio equiparato) o l'attività lavorativa si è svolta all'estero o vi è stata omissione rispetto all'obbligo di pagamento dei contributi spettanti. Il riscatto resta una facoltà a discrezione del lavoratore/pensionato (o dei superstiti in caso di decesso), che deve quindi farne espressa domanda all'INPS. Temporalmente, i contributi riscattati si collocheranno nello stesso periodo nel quale avrebbero dovuto essere versati. A fronte della presentazione della domanda, l'INPS istruisce la relativa Pratica di Riscatto per la valutazione dell'accoglimento della richiesta e la determinazione degli oneri a carico del Richiedente.
+   Istituto che consente, a chi ha posizioni assicurative in gestioni previdenziali diverse, di riunire, mediante trasferimento, tutti i periodi contributivi presso u'unica gestione, allo scopo di ottenere una sola pensione. Tale ricongiunzione avviene a domanda dell'assicurato o dei suoi superstiti e deve riguardare tutti i periodi di contribuzione che il lavoratore ha maturato in almeno due diverse forme previdenziali fino al momento della richiesta e che non siano già stati utilizzati per liquidare una pensione. I periodi così ricongiunti sono utilizzabili come se fossero stati versati nel fondo di destinazione e danno diritto ad un trattamento pensionistico basato sui requisiti di quest'ultimo fondo. A fronte della presentazione della domanda, l'INPS istruisce la relativa Pratica di Ricongiunzione per la valutazione dell'accoglimento della richiesta e la determinazione di eventuali oneri a carico del Richiedente.
    La metadatazione semantica degli schemi si basa sul documento
    [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
    che introduce le keyword x-jsonld-type e x-jsonld-context.
@@ -21,72 +21,72 @@ tags: []
 components:
   schemas:
 
-    IdPraticaRiscatto:
+    IdPraticaRicongiunzione:
       type: string
       x-refersTo: https://w3id.org/italia/social-security/onto/contributions/numeroPratica
       description:
-        Campo tecnico finalizzato all'individuazione univoca di ogni record della Pratica di Riscatto.
+        Campo tecnico finalizzato all'individuazione univoca di ogni record della Pratica di Ricongiunzione.
         Associato a https://w3id.org/italia/social-security/onto/contributions/numeroPratica.
-      example: '5498553'
+      example: '5498552'
       maxLength: 50
       minLength: 1
 
-    PraticaRiscatto:
+    PraticaRicongiunzione:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/PraticaDiRiscatto
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/PraticaDiRicongiunzione
       # This custom property defines the associated json-ld
       #   context that can be used to semantically describe
       #   the instances.
       x-jsonld-context:
         "@vocab": "https://w3id.org/italia/social-security/onto/contributions/"
-        descrizione_pratica_riscatto: descrizionePratica
-        riscatto_ha_atto_adeguamento_contributivo:
+        descrizione_pratica_ricongiunzione: descrizionePratica
+        ricongiunzione_ha_atto_adeguamento_contributivo:
           "@id": haAttoAdeguamentoContributivo
-        riscatto_ha_domanda_adeguamento_contributivo:
+        ricongiunzione_ha_domanda_adeguamento_contributivo:
           "@id": haDomandaAdeguamentoContributivo
-        riscatto_ha_pagatore_onere:
+        ricongiunzione_ha_pagatore_onere:
           "@id": haPagatoreOnere
-        riscatto_ha_titolare_pratica:
+        ricongiunzione_ha_titolare_pratica:
           "@id": haTitolarePraticaAdeguamentoContributivo
       additionalProperties: true
       description:
-         Questo schema rappresenta una pratica di riscatto ed è associata ad https://w3id.org/italia/social-security/onto/contributions/PraticaDiRiscatto.
+         Questo schema rappresenta una pratica di ricongiunzione ed è associato ad https://w3id.org/italia/social-security/onto/contributions/PraticaDiRicongiunzione.
       required:
-      - id_pratica_riscatto
-      - descrizione_pratica_riscatto
+      - id_pratica_ricongiunzione
+      - descrizione_pratica_ricongiunzione
       properties:
-        id_pratica_riscatto:
-          $ref: "#/components/schemas/IdPraticaRiscatto"
-        descrizione_pratica_riscatto:
+        id_pratica_ricongiunzione:
+          $ref: "#/components/schemas/IdPraticaRicongiunzione"
+        descrizione_pratica_ricongiunzione:
           type: string
           maxLength: 255
-        riscatto_ha_domanda_adeguamento_contributivo:
+        ricongiunzione_ha_domanda_adeguamento_contributivo:
           type: object
           items:
             $ref: "#/components/schemas/DomandaAdeguamentoContributivo"
-        riscatto_ha_atto_adeguamento_contributivo:
+        ricongiunzione_ha_atto_adeguamento_contributivo:
           type: object
           items:
             $ref: "#/components/schemas/AttoAdeguamentoContributivo"
-        riscatto_ha_pagatore_onere:
+        ricongiunzione_ha_pagatore_onere:
           type: object
           items:
             $ref: "#/components/schemas/Superstite"
-        riscatto_ha_titolare_pratica:
+        ricongiunzione_ha_titolare_pratica:
           type: object
           items:
             $ref: "#/components/schemas/TitolarePratica"
       example:
-        id_pratica_riscatto:
-          $ref: "#/components/schemas/IdPraticaRiscatto/example"
-        descrizione_pratica_riscatto: 'Riscatto'
-        riscatto_ha_domanda_adeguamento_contributivo:
+        id_pratica_ricongiunzione:
+          $ref: "#/components/schemas/IdPraticaRicongiunzione/example"
+        descrizione_pratica_ricongiunzione: 'Ricongiunzione'
+        ricongiunzione_ha_domanda_adeguamento_contributivo:
           $ref: "#/components/schemas/DomandaAdeguamentoContributivo/example"
-        riscatto_ha_atto_adeguamento_contributivo:
+        ricongiunzione_ha_atto_adeguamento_contributivo:
           $ref: "#/components/schemas/AttoAdeguamentoContributivo/example"
-        riscatto_ha_pagatore_onere:
+        ricongiunzione_ha_pagatore_onere:
           $ref: "#/components/schemas/Superstite/example"
-        riscatto_ha_titolare_pratica:
+        ricongiunzione_ha_titolare_pratica:
           $ref: "#/components/schemas/TitolarePratica/example"
 
     DomandaAdeguamentoContributivo:
