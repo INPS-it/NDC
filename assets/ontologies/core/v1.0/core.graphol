@@ -1,0 +1,1048 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphol version="3">
+  <project name="ontologiaINPSCore" version="1.0">
+    <ontology iri="https://w3id.org/italia/social-security/onto/core/" addLabelFromSimpleName="0" prefix="INPSCore" lang="en" addLabelFromUserInput="0">
+      <imports/>
+      <prefixes>
+        <prefix>
+          <value>CLV</value>
+          <namespace>https://w3id.org/italia/onto/CLV/</namespace>
+        </prefix>
+        <prefix>
+          <value>COV</value>
+          <namespace>https://w3id.org/italia/onto/COV/</namespace>
+        </prefix>
+        <prefix>
+          <value>CPV</value>
+          <namespace>https://w3id.org/italia/onto/CPV/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSCore</value>
+          <namespace>https://w3id.org/italia/social-security/onto/core/</namespace>
+        </prefix>
+        <prefix>
+          <value>L0</value>
+          <namespace>https://w3id.org/italia/onto/l0/</namespace>
+        </prefix>
+        <prefix>
+          <value>RO</value>
+          <namespace>https://w3id.org/italia/onto/RO/</namespace>
+        </prefix>
+        <prefix>
+          <value>TI</value>
+          <namespace>https://w3id.org/italia/onto/TI/</namespace>
+        </prefix>
+        <prefix>
+          <value>owl</value>
+          <namespace>http://www.w3.org/2002/07/owl#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdf</value>
+          <namespace>http://www.w3.org/1999/02/22-rdf-syntax-ns#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdfs</value>
+          <namespace>http://www.w3.org/2000/01/rdf-schema#</namespace>
+        </prefix>
+        <prefix>
+          <value>skos</value>
+          <namespace>http://www.w3.org/2004/02/skos/core#</namespace>
+        </prefix>
+        <prefix>
+          <value>swrl</value>
+          <namespace>http://www.w3.org/2003/11/swrl#</namespace>
+        </prefix>
+        <prefix>
+          <value>swrlb</value>
+          <namespace>http://www.w3.org/2003/11/swrlb#</namespace>
+        </prefix>
+        <prefix>
+          <value>time</value>
+          <namespace>http://www.w3.org/2006/time#</namespace>
+        </prefix>
+        <prefix>
+          <value>xml</value>
+          <namespace>http://www.w3.org/XML/1998/namespace</namespace>
+        </prefix>
+        <prefix>
+          <value>xsd</value>
+          <namespace>http://www.w3.org/2001/XMLSchema#</namespace>
+        </prefix>
+      </prefixes>
+      <datatypes>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral</datatype>
+        <datatype>http://www.w3.org/2000/01/rdf-schema#Literal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NCName</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NMTOKEN</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#Name</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#base64Binary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#boolean</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#byte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTimeStamp</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#decimal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#double</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#float</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#hexBinary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#int</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#integer</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#language</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#long</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#negativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonNegativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonPositiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#normalizedString</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#positiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#short</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#token</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedByte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedInt</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedLong</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedShort</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#rational</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#real</datatype>
+      </datatypes>
+      <languages>
+        <language>de</language>
+        <language>en</language>
+        <language>es</language>
+        <language>fr</language>
+        <language>it</language>
+      </languages>
+      <facets>
+        <facet>http://www.w3.org/2001/XMLSchema#langRange</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#length</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#pattern</facet>
+      </facets>
+      <annotationProperties>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#comment</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#isDefinedBy</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#label</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#deprecated</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#incompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#priorVersion</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#versionInfo</annotationProperty>
+      </annotationProperties>
+      <iris>
+        <iri>
+          <value>https://w3id.org/italia/onto/CLV/hasAddress</value>
+          <functional/>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/CLV/hasAddressComponent</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/CLV/hasPrimaryAddress</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/COV/HomogeneousOrganizationalArea</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/COV/Organization</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/COV/PublicOrganization</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/COV/hasOrganizzation</value>
+          <functional/>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/CPV/Alive</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/CPV/Dead</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/CPV/Person</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/CPV/hasCurrentResidence</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/RO/holdsRoleInTime</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/l0/Agent</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/INPS</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/INPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/INPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'Istituto Nazionale della Previdenza Sociale è l'Ente Pubblico che gestisce la liquidazione e il pagamento delle pensioni e delle indennità di natura previdenziale e assistenziale. Le pensioni sono prestazioni previdenziali, determinate sulla base di rapporti assicurativi e finanziate con i contributi di lavoratori e aziende pubbliche e private. Invece, le prestazioni assistenziali o “a sostegno del reddito” tutelano i lavoratori che si trovano in particolari momenti di difficoltà della loro vita lavorativa e provvedono al pagamento di somme destinate a coloro che hanno redditi modesti e famiglie numerose. Per alcune di queste prestazioni l’INPS è coinvolto solo nella fase di erogazione, mentre per altre svolge tutto il procedimento di assegnazione.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/INPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/INPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The National Institute for Social Security is the Italian Public Organization that supplies pensions and other services of social security to who has the right. It also does contributory activity collecting the contributions. The services are based on a mandatory insurance relationship and are funded with the contributions of employed workers, elaborated as a percentage of the wage. It also manages welfare services or "income support" services that protect workers who find themselves in particular difficult moments in their working life and provide for the payment of sums intended for those with modest incomes and large families.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/RuoloDiAgente</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiAgente</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Ruolo Di Agente</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiAgente</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Insieme di mansioni, compiti, responsabilità e doveri attribuiti in un intervallo di tempo, anche non ancora terminato, a una persona o a una organizzazione considerando queste ultime specializzazioni di agente. </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiAgente</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Agent Role</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiAgente</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Set of tasks, duties and responsabilities attributed in a certain time interval, possible not yet determined, to a person or organization, considering these as specializations of an agent. </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Ruolo Di Organizzazione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Specializzazione della classe Ruolo Di Agente limitata alle sole organizzazioni.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Organization Role</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Subclass of the Agent Role class, limited to organization.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/RuoloDiPersona</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersona</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Ruolo Di Persona</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersona</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Specializzazione della classe Ruolo Di Agente limitata alle sole persone, in vita o decedute.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersona</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Person Role</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersona</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Subclass of the Agent Role class, limited to people, living or deceased.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaDeceduta</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaDeceduta</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Ruolo Di Persona Deceduta</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaDeceduta</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Specializzazione della classe Ruolo Di Persona limitata alle sole persone decedute.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaDeceduta</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Dead Person Role</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaDeceduta</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Subclass of the Person Role class, limited to only dead persons.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Ruolo Di Persona Viva</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Specializzazione della classe Ruolo Di Persona limitata alle sole persone in vita.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Alive Person Role</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Subclass of the Person Role class, limited to only alive persons.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/SedeINPS</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/SedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Sede INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/SedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L’INPS è articolato in strutture centrali, regionali e metropolitane con compiti di indirizzo, monitoraggio e coordinamento, e in sedi territoriali con funzioni operative e di contatto con l’utenza. In particolare, l’Istituto, su tutto il territorio nazionale italiano, si è dotato di un’organizzazione “a reti di servizio” che, in logica di “prossimità”, si suddivide in: strutture di coordinamento metropolitano, strutture a livello provinciale, strutture a livello regionale. Ogni sede INPS è assimilabile ad un Area Organizzativa Omogenea (AOO) usufruendo ciascuna per l'erogazione di servizi e il ricevimento delle richieste, di un unico flusso documentale di entrata e/o uscita (servizio di Protocollo Informatico). In tal senso ad ogni Sede INPS è assegnato, oltre ad un codice di sede attribuito dall'Istituto, anche un codice identificativo AOO univoco nell'ambito dell'Indice delle Pubbliche Amministrazioni (IPA) che permette di individuare i canali di comunicazione telematica normativamente pervisti e cioè almeno una casella di posta elettronica certificata per ciascun AOO. La sede INPS competente per un cittadino e/o un'impresa è stabilita in base alla residenza del cittadino e/o all'indirizzo della sede dell'impresa.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/SedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>INPS Office</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/SedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>INPS is divided into central, regional and metropolitan structures with guidance, monitoring and coordination tasks, and into territorial offices with operational and user contact functions. In particular, the Institute, throughout the Italian national territory, has set up a "service network" organization which, in a "proximity" logic, is divided into: metropolitan coordination structures, provincial level structures, regional structures. Each INPS office is similar to a Homogeneous Organizational Area (AOO), each benefiting from a single entry and/or exit document flow (IT Protocol service) for the provision of services and the receipt of requests. In this sense, each INPS office is assigned, in addition to an office code assigned by the Institute, also a unique AOO identification code within the Index of Public Administrations (IPA) which makes it possible to identify the telematic communication channels legally permitted that is, at least one certified mailbox for each AOO. The competent INPS office for a citizen and/or company is established on the basis of the citizen's residence and/or the address of the company headquarters.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/codiceSedeINPS</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/codiceSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>codice sede INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/codiceSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>È il codice relativo alla Sede INPS.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/codiceSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>INPS office identification code</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/codiceSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>This is the identification code of the INPS office.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/haSedeINPS</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/haSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>ha sede INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/haSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Relazione che collega una Persona in Vita o un'Organizzazione ad una Sede INPS. Ciascuna Persona in Vita o Organizzazione ha un'unica Sede INPS.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/haSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has INPS office</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/core/haSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Relationship linking a Living Person or an Organization to an INPS Office. Each Living Person or Organization has a single INPS office.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+      </iris>
+    </ontology>
+    <diagrams>
+      <diagram height="5000" width="5000" name="Interfaccia">
+        <node id="n147" type="disjoint-union" color="#000000">
+          <geometry height="30" width="50" y="-90" x="20"/>
+        </node>
+        <node id="n148" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="-88" x="295"/>
+          <iri>https://w3id.org/italia/onto/CPV/Dead</iri>
+          <label height="23" width="110" y="-88" x="295" size="12" customSize="0"/>
+        </node>
+        <node id="n150" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="-90" x="430"/>
+          <label height="23" width="39" y="-70" x="430" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n151" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="-600" x="700"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione</iri>
+          <label height="38" width="110" y="-600" x="700" size="12" customSize="0"/>
+        </node>
+        <node id="n152" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="-600" x="430"/>
+          <label height="23" width="39" y="-620" x="425" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n153" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="-90" x="700"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaDeceduta</iri>
+          <label height="38" width="110" y="-90" x="700" size="12" customSize="0"/>
+        </node>
+        <node id="n154" type="disjoint-union" color="#000000">
+          <geometry height="30" width="50" y="-20" x="700"/>
+        </node>
+        <node id="n155" type="disjoint-union" color="#000000">
+          <geometry height="30" width="50" y="-490" x="700"/>
+        </node>
+        <node id="n156" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="730" x="-640"/>
+          <label height="23" width="39" y="750" x="-640" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n157" type="value-domain" color="#fcfcfc">
+          <geometry height="40" width="90" y="730" x="-740"/>
+          <iri>http://www.w3.org/2001/XMLSchema#string</iri>
+          <label height="23" width="90" y="730" x="-740" size="12" customSize="0"/>
+        </node>
+        <node id="n26" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="-710" x="430"/>
+          <label height="23" width="39" y="-730" x="430" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n27" type="role" color="#fcfcfc">
+          <geometry height="50" width="70" y="-390" x="480"/>
+          <iri>https://w3id.org/italia/onto/RO/holdsRoleInTime</iri>
+          <label height="23" width="116" y="-420" x="420" size="12" customSize="0"/>
+        </node>
+        <node id="n29" type="attribute" color="#fcfcfc">
+          <geometry height="20" width="20" y="730" x="-550"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/codiceSedeINPS</iri>
+          <label height="23" width="101" y="710" x="-555" size="12" customSize="0"/>
+        </node>
+        <node id="n31" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="-190" x="700"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiPersona</iri>
+          <label height="23" width="110" y="-190" x="700" size="12" customSize="0"/>
+        </node>
+        <node id="n32" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="520" x="-360"/>
+          <label height="23" width="39" y="535" x="-325" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n33" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="730" x="-360"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/SedeINPS</iri>
+          <label height="23" width="110" y="730" x="-360" size="12" customSize="0"/>
+        </node>
+        <node id="n34" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="840" x="-360"/>
+          <iri>https://w3id.org/italia/onto/COV/HomogeneousOrganizationalArea</iri>
+          <label height="53" width="110" y="840" x="-360" size="12" customSize="0"/>
+        </node>
+        <node id="n35" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="-190" x="430"/>
+          <label height="23" width="39" y="-170" x="430" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n36" type="domain-restriction" color="#fcfcfc">
+          <geometry height="20" width="20" y="350" x="-360"/>
+          <label height="23" width="39" y="330" x="-340" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n37" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="-190" x="20"/>
+          <iri>https://w3id.org/italia/onto/CPV/Person</iri>
+          <label height="23" width="110" y="-190" x="20" size="12" customSize="0"/>
+        </node>
+        <node id="n40" type="role" color="#fcfcfc">
+          <geometry height="50" width="70" y="440" x="-360"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/haSedeINPS</iri>
+          <label height="23" width="79" y="440" x="-435" size="12" customSize="0"/>
+        </node>
+        <node id="n41" type="domain-restriction" color="#fcfcfc">
+          <geometry height="20" width="20" y="730" x="-470"/>
+          <label height="23" width="39" y="708" x="-470" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n45" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="-830" x="20"/>
+          <iri>https://w3id.org/italia/onto/l0/Agent</iri>
+          <label height="23" width="110" y="-830" x="20" size="12" customSize="0"/>
+        </node>
+        <node id="n55" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="190" x="20"/>
+          <iri>https://w3id.org/italia/onto/CPV/Alive</iri>
+          <label height="23" width="110" y="190" x="20" size="12" customSize="0"/>
+        </node>
+        <node id="n56" type="role" color="#fcfcfc">
+          <geometry height="50" width="70" y="190" x="290"/>
+          <iri>https://w3id.org/italia/onto/CPV/hasCurrentResidence</iri>
+          <label height="23" width="147" y="190" x="405" size="12" customSize="0"/>
+        </node>
+        <node id="n57" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="190" x="140"/>
+          <label height="23" width="39" y="170" x="140" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n58" type="role" color="#fcfcfc">
+          <geometry height="50" width="70" y="520" x="290"/>
+          <iri>https://w3id.org/italia/onto/CLV/hasAddress</iri>
+          <label height="23" width="95" y="520" x="380" size="12" customSize="0"/>
+        </node>
+        <node id="n59" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="520" x="140"/>
+          <label height="23" width="39" y="540" x="135" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n60" type="role" color="#fcfcfc">
+          <geometry height="50" width="70" y="350" x="290"/>
+          <iri>https://w3id.org/italia/onto/CLV/hasAddressComponent</iri>
+          <label height="23" width="157" y="350" x="410" size="12" customSize="0"/>
+        </node>
+        <node id="n61" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="290" x="140"/>
+          <label height="23" width="39" y="290" x="110" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n62" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="420" x="140"/>
+          <label height="23" width="39" y="415" x="105" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n63" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="50" x="430"/>
+          <label height="23" width="39" y="70" x="430" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n64" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="50" x="700"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</iri>
+          <label height="38" width="110" y="50" x="700" size="12" customSize="0"/>
+        </node>
+        <node id="n65" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="-710" x="700"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiAgente</iri>
+          <label height="23" width="110" y="-710" x="700" size="12" customSize="0"/>
+        </node>
+        <node id="n66" type="disjoint-union" color="#000000">
+          <geometry height="30" width="50" y="-710" x="20"/>
+        </node>
+        <node id="n67" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="-710" x="-360"/>
+          <iri>https://w3id.org/italia/onto/COV/Organization</iri>
+          <label height="23" width="110" y="-710" x="-360" size="12" customSize="0"/>
+        </node>
+        <node id="n68" type="role" color="#fcfcfc">
+          <geometry height="50" width="70" y="-720" x="-760"/>
+          <iri>https://w3id.org/italia/onto/CLV/hasPrimaryAddress</iri>
+          <label height="23" width="136" y="-720" x="-870" size="12" customSize="0"/>
+        </node>
+        <node id="n69" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="-720" x="-640"/>
+          <label height="23" width="39" y="-742" x="-640" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n70" type="union" color="#fcfcfc">
+          <geometry height="30" width="50" y="190" x="-360"/>
+          <label height="23" width="18" y="190" x="-360" size="12" customSize="0"/>
+        </node>
+        <node id="n71" type="role" color="#fcfcfc">
+          <geometry height="50" width="70" y="-70" x="-750"/>
+          <iri>https://w3id.org/italia/onto/CLV/hasAddressComponent</iri>
+          <label height="23" width="157" y="-70" x="-870" size="12" customSize="0"/>
+        </node>
+        <node id="n72" type="role" color="#fcfcfc">
+          <geometry height="50" width="70" y="520" x="-750"/>
+          <iri>https://w3id.org/italia/onto/CLV/hasAddress</iri>
+          <label height="23" width="95" y="520" x="-835" size="12" customSize="0"/>
+        </node>
+        <node id="n73" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="520" x="-640"/>
+          <label height="23" width="39" y="540" x="-640" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n74" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="-170" x="-640"/>
+          <label height="23" width="39" y="-170" x="-605" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n75" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="40" x="-640"/>
+          <label height="23" width="39" y="40" x="-605" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n80" type="role" color="#fcfcfc">
+          <geometry height="50" width="70" y="730" x="-110"/>
+          <iri>https://w3id.org/italia/onto/COV/hasOrganizzation</iri>
+          <label height="23" width="127" y="695" x="-110" size="12" customSize="0"/>
+        </node>
+        <node id="n81" type="domain-restriction" color="#fcfcfc">
+          <geometry height="20" width="20" y="730" x="-210"/>
+          <label height="23" width="39" y="708" x="-210" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n82" type="range-restriction" color="#000000">
+          <geometry height="20" width="20" y="730" x="-10"/>
+          <label height="23" width="39" y="708" x="-10" size="12" customSize="0">exists</label>
+        </node>
+        <node id="n83" type="concept" color="#fcfcfc">
+          <geometry height="50" width="110" y="730" x="150"/>
+          <iri>https://w3id.org/italia/onto/COV/PublicOrganization</iri>
+          <label height="38" width="110" y="730" x="150" size="12" customSize="0"/>
+        </node>
+        <node id="n88" type="individual" color="#fcfcfc">
+          <geometry height="60" width="60" y="730" x="320"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/INPS</iri>
+          <label height="23" width="60" y="730" x="320" size="12" customSize="0"/>
+        </node>
+        <edge id="e103" type="input" source="n80" target="n81">
+          <point y="730" x="-110"/>
+          <point y="730" x="-210"/>
+        </edge>
+        <edge id="e104" type="input" source="n80" target="n82">
+          <point y="730" x="-110"/>
+          <point y="730" x="-10"/>
+        </edge>
+        <edge id="e105" type="equivalence" source="n33" target="n81">
+          <point y="730" x="-360"/>
+          <point y="730" x="-210"/>
+        </edge>
+        <edge id="e107" type="equivalence" source="n82" target="n83">
+          <point y="730" x="-10"/>
+          <point y="730" x="150"/>
+        </edge>
+        <edge id="e117" type="membership" source="n88" target="n83">
+          <point y="730" x="320"/>
+          <point y="730" x="150"/>
+        </edge>
+        <edge id="e173" type="inclusion" source="n147" target="n37">
+          <point y="-90" x="20"/>
+          <point y="-190" x="20"/>
+        </edge>
+        <edge id="e175" type="input" source="n55" target="n147">
+          <point y="190" x="20"/>
+          <point y="-90" x="20"/>
+        </edge>
+        <edge id="e176" type="input" source="n148" target="n147">
+          <point y="-88" x="295"/>
+          <point y="-90" x="20"/>
+        </edge>
+        <edge id="e177" type="input" source="n27" target="n150">
+          <point y="-390" x="480"/>
+          <point y="-130" x="480"/>
+          <point y="-90" x="430"/>
+        </edge>
+        <edge id="e178" type="input" source="n148" target="n150">
+          <point y="-88" x="295"/>
+          <point y="-90" x="430"/>
+        </edge>
+        <edge id="e179" type="input" source="n27" target="n152">
+          <point y="-390" x="480"/>
+          <point y="-560" x="480"/>
+          <point y="-600" x="430"/>
+        </edge>
+        <edge id="e180" type="input" source="n67" target="n152">
+          <point y="-710" x="-360"/>
+          <point y="-600" x="-360"/>
+          <point y="-600" x="430"/>
+        </edge>
+        <edge id="e181" type="equivalence" source="n151" target="n152">
+          <point y="-600" x="700"/>
+          <point y="-600" x="430"/>
+        </edge>
+        <edge id="e185" type="input" source="n153" target="n154">
+          <point y="-90" x="700"/>
+          <point y="-20" x="700"/>
+        </edge>
+        <edge id="e186" type="input" source="n64" target="n154">
+          <point y="50" x="700"/>
+          <point y="-20" x="700"/>
+        </edge>
+        <edge id="e187" type="inclusion" source="n154" target="n31">
+          <point y="-20" x="700"/>
+          <point y="-20" x="800"/>
+          <point y="-190" x="800"/>
+          <point y="-190" x="700"/>
+        </edge>
+        <edge id="e188" type="equivalence" source="n150" target="n153">
+          <point y="-90" x="430"/>
+          <point y="-90" x="700"/>
+        </edge>
+        <edge id="e189" type="input" source="n31" target="n155">
+          <point y="-190" x="700"/>
+          <point y="-490" x="700"/>
+        </edge>
+        <edge id="e191" type="input" source="n151" target="n155">
+          <point y="-600" x="700"/>
+          <point y="-490" x="700"/>
+        </edge>
+        <edge id="e192" type="inclusion" source="n155" target="n65">
+          <point y="-490" x="700"/>
+          <point y="-490" x="800"/>
+          <point y="-710" x="800"/>
+          <point y="-710" x="700"/>
+        </edge>
+        <edge id="e193" type="input" source="n29" target="n156">
+          <point y="730" x="-550"/>
+          <point y="730" x="-640"/>
+        </edge>
+        <edge id="e194" type="inclusion" source="n156" target="n157">
+          <point y="730" x="-640"/>
+          <point y="730" x="-740"/>
+        </edge>
+        <edge id="e28" type="input" source="n27" target="n26">
+          <point y="-390" x="480"/>
+          <point y="-497" x="480"/>
+          <point y="-660" x="480"/>
+          <point y="-710" x="430"/>
+        </edge>
+        <edge id="e29" type="input" source="n27" target="n35">
+          <point y="-390" x="480"/>
+          <point y="-230" x="480"/>
+          <point y="-190" x="430"/>
+        </edge>
+        <edge id="e31" type="input" source="n29" target="n41">
+          <point y="730" x="-550"/>
+          <point y="730" x="-470"/>
+        </edge>
+        <edge id="e33" type="equivalence" source="n35" target="n31">
+          <point y="-190" x="430"/>
+          <point y="-190" x="700"/>
+        </edge>
+        <edge id="e34" type="inclusion" source="n32" target="n33">
+          <point y="520" x="-360"/>
+          <point y="730" x="-360"/>
+        </edge>
+        <edge id="e35" type="input" source="n40" target="n32">
+          <point y="440" x="-360"/>
+          <point y="520" x="-360"/>
+        </edge>
+        <edge id="e36" type="inclusion" source="n33" target="n34">
+          <point y="730" x="-360"/>
+          <point y="840" x="-360"/>
+        </edge>
+        <edge id="e37" type="equivalence" source="n41" target="n33">
+          <point y="730" x="-470"/>
+          <point y="730" x="-360"/>
+        </edge>
+        <edge id="e39" type="input" source="n37" target="n35">
+          <point y="-190" x="20"/>
+          <point y="-190" x="430"/>
+        </edge>
+        <edge id="e40" type="input" source="n40" target="n36">
+          <point y="440" x="-360"/>
+          <point y="350" x="-360"/>
+        </edge>
+        <edge id="e58" type="input" source="n56" target="n57">
+          <point y="190" x="290"/>
+          <point y="190" x="140"/>
+        </edge>
+        <edge id="e59" type="input" source="n55" target="n57">
+          <point y="190" x="20"/>
+          <point y="190" x="140"/>
+        </edge>
+        <edge id="e60" type="input" source="n58" target="n59">
+          <point y="520" x="290"/>
+          <point y="520" x="140"/>
+        </edge>
+        <edge id="e63" type="input" source="n60" target="n61">
+          <point y="350" x="290"/>
+          <point y="290" x="290"/>
+          <point y="290" x="140"/>
+        </edge>
+        <edge id="e64" type="input" source="n57" target="n61">
+          <point y="190" x="140"/>
+          <point y="290" x="140"/>
+        </edge>
+        <edge id="e67" type="input" source="n32" target="n59">
+          <point y="520" x="-360"/>
+          <point y="520" x="140"/>
+        </edge>
+        <edge id="e68" type="input" source="n60" target="n62">
+          <point y="350" x="290"/>
+          <point y="420" x="290"/>
+          <point y="420" x="140"/>
+        </edge>
+        <edge id="e69" type="input" source="n59" target="n62">
+          <point y="520" x="140"/>
+          <point y="420" x="140"/>
+        </edge>
+        <edge id="e70" type="inclusion" source="n61" target="n62">
+          <point y="290" x="140"/>
+          <point y="420" x="140"/>
+        </edge>
+        <edge id="e71" type="input" source="n27" target="n63">
+          <point y="-390" x="480"/>
+          <point y="0" x="480"/>
+          <point y="50" x="430"/>
+        </edge>
+        <edge id="e72" type="input" source="n55" target="n63">
+          <point y="165" x="50"/>
+          <point y="50" x="50"/>
+          <point y="50" x="430"/>
+        </edge>
+        <edge id="e74" type="equivalence" source="n63" target="n64">
+          <point y="50" x="430"/>
+          <point y="50" x="700"/>
+        </edge>
+        <edge id="e76" type="equivalence" source="n26" target="n65">
+          <point y="-710" x="430"/>
+          <point y="-710" x="700"/>
+        </edge>
+        <edge id="e78" type="input" source="n66" target="n26">
+          <point y="-710" x="20"/>
+          <point y="-710" x="430"/>
+        </edge>
+        <edge id="e79" type="inclusion" source="n66" target="n45">
+          <point y="-710" x="20"/>
+          <point y="-830" x="20"/>
+        </edge>
+        <edge id="e80" type="input" source="n67" target="n66">
+          <point y="-710" x="-360"/>
+          <point y="-710" x="20"/>
+        </edge>
+        <edge id="e81" type="input" source="n37" target="n66">
+          <point y="-190" x="20"/>
+          <point y="-710" x="20"/>
+        </edge>
+        <edge id="e82" type="input" source="n68" target="n69">
+          <point y="-720" x="-760"/>
+          <point y="-720" x="-640"/>
+        </edge>
+        <edge id="e83" type="input" source="n67" target="n69">
+          <point y="-719" x="-415"/>
+          <point y="-720" x="-640"/>
+        </edge>
+        <edge id="e85" type="input" source="n55" target="n70">
+          <point y="190" x="20"/>
+          <point y="190" x="-360"/>
+        </edge>
+        <edge id="e86" type="input" source="n67" target="n70">
+          <point y="-710" x="-360"/>
+          <point y="190" x="-360"/>
+        </edge>
+        <edge id="e88" type="inclusion" source="n36" target="n70">
+          <point y="350" x="-360"/>
+          <point y="190" x="-360"/>
+        </edge>
+        <edge id="e89" type="inclusion" source="n55" target="n36">
+          <point y="190" x="20"/>
+          <point y="350" x="20"/>
+          <point y="350" x="-360"/>
+        </edge>
+        <edge id="e91" type="inclusion" source="n67" target="n36">
+          <point y="-700" x="-415"/>
+          <point y="-700" x="-440"/>
+          <point y="350" x="-440"/>
+          <point y="350" x="-360"/>
+        </edge>
+        <edge id="e92" type="input" source="n72" target="n73">
+          <point y="520" x="-750"/>
+          <point y="520" x="-640"/>
+        </edge>
+        <edge id="e93" type="input" source="n32" target="n73">
+          <point y="520" x="-360"/>
+          <point y="520" x="-640"/>
+        </edge>
+        <edge id="e94" type="input" source="n71" target="n74">
+          <point y="-70" x="-750"/>
+          <point y="-170" x="-750"/>
+          <point y="-170" x="-640"/>
+        </edge>
+        <edge id="e95" type="input" source="n71" target="n75">
+          <point y="-70" x="-750"/>
+          <point y="40" x="-750"/>
+          <point y="40" x="-640"/>
+        </edge>
+        <edge id="e96" type="input" source="n69" target="n74">
+          <point y="-720" x="-640"/>
+          <point y="-170" x="-640"/>
+        </edge>
+        <edge id="e97" type="input" source="n73" target="n75">
+          <point y="520" x="-640"/>
+          <point y="40" x="-640"/>
+        </edge>
+        <edge id="e98" type="inclusion" source="n74" target="n75">
+          <point y="-170" x="-640"/>
+          <point y="40" x="-640"/>
+        </edge>
+      </diagram>
+    </diagrams>
+  </project>
+</graphol>
