@@ -1,4 +1,4 @@
-@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
 @prefix COV: <https://w3id.org/italia/onto/COV/> .
 @prefix CPSV: <https://w3id.org/italia/onto/CPSV/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -1322,6 +1322,8 @@ CPSV:NonActive a owl:NamedIndividual,
         owl:NamedIndividual,
         vcard:Kind,
         vcard:Organization ;
+        foaf:name "Direzione Centrale Tecnologia, Informatica e Innovazione"@it,
+    "Central Management of Information Technology and Innovations"@en;
     vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
     vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
 

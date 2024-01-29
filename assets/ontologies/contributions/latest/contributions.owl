@@ -12,7 +12,7 @@
 	 xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
 	 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	 xmlns:dcat="http://www.w3.org/ns/dcat#"
-	 xmlns:adms="http://www.w3.org/ns/adms#"
+	 xmlns:adms="https://w3id.org/italia/onto/ADMS/"
 	 xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:COV="https://w3id.org/italia/onto/COV/"
@@ -2037,7 +2037,7 @@
     <!-- https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-N-TRIPLES -->
 
     <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-N-TRIPLES">
-        <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAssetDistribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -2054,7 +2054,7 @@
 	  <!-- https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-RDF-TURTLE -->
 
       <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-RDF-TURTLE">
-        <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAssetDistribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -2071,7 +2071,7 @@
 	  <!-- https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-RDF-XML -->
 
       <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-RDF-XML">
-        <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAssetDistribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -2092,6 +2092,8 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
         <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+        <foaf:name xml:lang="en">Central Management of Information Technology and Innovations</foaf:name>
+        <foaf:name xml:lang="it">Direzione Centrale Tecnologia, Informatica e Innovazione</foaf:name>
         <vcard:fn>Direzione Centrale Tecnologia, Informatica e Innovazione</vcard:fn>
         <vcard:hasEmail rdf:resource="mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it"/>
       </rdf:Description>

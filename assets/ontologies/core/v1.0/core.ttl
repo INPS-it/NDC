@@ -1,4 +1,4 @@
-@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
 @prefix CLV: <https://w3id.org/italia/onto/CLV/> .
 @prefix COV: <https://w3id.org/italia/onto/COV/> .
 @prefix CPV: <https://w3id.org/italia/onto/CPV/> .
@@ -281,8 +281,18 @@ L0:Agent a owl:Class .
         owl:NamedIndividual,
         vcard:Kind,
         vcard:Organization ;
+        foaf:name "Direzione Centrale Tecnologia, Informatica e Innovazione"@it,
+    "Central Management of Information Technology and Innovations"@en;
     vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
     vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+ <https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .   
 
 <https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
         foaf:Agent,
