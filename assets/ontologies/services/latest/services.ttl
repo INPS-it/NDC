@@ -33,18 +33,18 @@ INPSService: a owl:Ontology ;
     rdfs:isDefinedBy INPSService: ;
     adms:acronym "inps" ;
     adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
-    adms:hasFormalityLevel <https://w3id.org/italia/onto/ADMS/Formal> ;
+    adms:hasFormalityLevel adms:Formal ;
     adms:hasKeyClass INPSService:BollettinoDiPagamento,
         INPSService:MandatoSDD,
         INPSService:ModalitàDiPagamento,
         INPSService:Pagamento ;
-    adms:hasOntologyLanguage <https://w3id.org/italia/onto/ADMS/OWL> ;
+    adms:hasOntologyLanguage adms:OWL ;
     adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/services/distribution/SERVICE-N-TRIPLES>,
         <https://w3id.org/italia/social-security/data/services/distribution/SERVICE-RDF-TURTLE>,
         <https://w3id.org/italia/social-security/data/services/distribution/SERVICE-RDF-XML> ;
-    adms:hasTask <https://w3id.org/italia/onto/ADMS/AnnotationTask>,
-        <https://w3id.org/italia/onto/ADMS/QueryFormulationTask>,
-        <https://w3id.org/italia/onto/ADMS/SearchTask> ;
+    adms:hasTask adms:AnnotationTask,
+        adms:QueryFormulationTask,
+        adms:SearchTask ;
     adms:last INPSService:1.0 ;
     adms:officialURI "https://w3id.org/italia/social-security/onto/services"^^xsd:anyURI ;
     adms:prefix "inpsserv" ;
@@ -54,7 +54,7 @@ INPSService: a owl:Ontology ;
     adms:target "Cittadini"@it,
         "Imprese"@it,
         "Pubbliche Amministrazioni"@it ;
-    adms:type <https://w3id.org/italia/onto/ADMS/ServiceOnytology> ;
+    adms:type adms:ServiceOnytology ;
     dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     dcat:keyword "account holder"@en,
         "bank account"@en,
