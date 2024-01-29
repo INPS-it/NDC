@@ -1,4 +1,4 @@
-@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
 @prefix COV: <https://w3id.org/italia/onto/COV/> .
 @prefix CPV: <https://w3id.org/italia/onto/CPV/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
@@ -35,18 +35,18 @@ INPSContributions: a owl:Ontology ;
     rdfs:isDefinedBy INPSContributions: ;
     adms:acronym "inps" ;
     adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
-    adms:hasFormalityLevel <https://w3id.org/italia/onto/ADMS/Formal> ;
+    adms:hasFormalityLevel adms:Formal ;
     adms:hasKeyClass INPSContributions:LavoratoreDomestico,
         INPSContributions:PraticaDiRendita,
         INPSContributions:PraticaDiRicongiunzione,
         INPSContributions:PraticaDiRiscatto ;
-    adms:hasOntologyLanguage <https://w3id.org/italia/onto/ADMS/OWL> ;
+    adms:hasOntologyLanguage adms:OWL ;
     adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-N-TRIPLES>,
         <https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-RDF-TURTLE>,
         <https://w3id.org/italia/social-security/data/contributions/distribution/CONTRIBUTIONS-RDF-XML> ;
-    adms:hasTask <https://w3id.org/italia/onto/ADMS/AnnotationTask>,
-        <https://w3id.org/italia/onto/ADMS/QueryFormulationTask>,
-        <https://w3id.org/italia/onto/ADMS/SearchTask> ;
+    adms:hasTask adms:AnnotationTask,
+        adms:QueryFormulationTask,
+        adms:SearchTask ;
     adms:last INPSContributions:1.0 ;
     adms:officialURI "https://w3id.org/italia/social-security/onto/contributions"^^xsd:anyURI ;
     adms:prefix "inpscon" ;
@@ -56,7 +56,7 @@ INPSContributions: a owl:Ontology ;
     adms:target "Cittadini"@it,
         "Imprese"@it,
         "Pubbliche Amministrazioni"@it ;
-    adms:type <https://w3id.org/italia/onto/ADMS/ServiceOnytology> ;
+    adms:type adms:ServiceOnytology ;
     dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     dcat:keyword "Aggregation Application"@en,
         "Domestic Worker"@en,

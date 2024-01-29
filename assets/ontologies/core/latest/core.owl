@@ -16,7 +16,7 @@
 	 xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
 	 xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	 xmlns:dcat="http://www.w3.org/ns/dcat#"
-	 xmlns:adms="http://www.w3.org/ns/adms#"
+	 xmlns:adms="https://w3id.org/italia/onto/ADMS/"
 	 xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
      xmlns:TI="https://w3id.org/italia/onto/TI/"
      xmlns:INPSCore="https://w3id.org/italia/social-security/onto/core/"
@@ -433,7 +433,7 @@
     <!-- https://w3id.org/italia/social-security/data/core/distribution/CORE-N-TRIPLES -->
 
     <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/core/distribution/CORE-N-TRIPLES">
-      <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAssetDistribution"/>
+      <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
       <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
       <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -450,7 +450,7 @@
     <!-- https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-TURTLE -->
 
     <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-TURTLE">
-      <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAssetDistribution"/>
+      <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
       <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
       <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -467,7 +467,7 @@
     <!-- https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-XML -->
 
     <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-XML">
-      <rdf:type rdf:resource="http://www.w3.org/ns/adms#SemanticAssetDistribution"/>
+      <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
       <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
       <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
       <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
