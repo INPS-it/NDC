@@ -25,6 +25,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:RO="https://w3id.org/italia/onto/RO/">
+
+
     <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/contributions/">
     <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/contributions/1.0"/>
     <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/"/>
@@ -92,7 +94,6 @@
 
 
 
-
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -139,9 +140,9 @@
 
 
 
-    <!-- https://w3id.org/italia/onto/RO/hasParentalRelationshipWith -->
+    <!-- https://w3id.org/italia/onto/CPV/hasParentalRelationshipWith -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/RO/hasParentalRelationshipWith"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CPV/hasParentalRelationshipWith"/>
 
 
 
@@ -188,10 +189,10 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributions/haAttoAdeguamentoContributivo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoContributivo"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AttoAdeguamentoContributivo"/>
-        <rdfs:comment xml:lang="en">Relationship linking a Contribution Adjustment Applcation to a Contribution Adjustment Deed.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Relazione che collega una Pratica di Adeguamento Contributivo ad un Atto di Adeguamento Contributivo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship linking a Contribution Adjustment to its Contribution Adjustment Deed.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Adeguamento Contributivo ad relativo Atto di Adeguamento Contributivo.</rdfs:comment>
         <rdfs:label xml:lang="it">ha atto adeguamento contributivo</rdfs:label>
         <rdfs:label xml:lang="en">has contribution adjustment deed</rdfs:label>
     </owl:ObjectProperty>
@@ -259,10 +260,10 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributions/haDomandaAdeguamentoContributivo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoContributivo"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributions/DomandaAdeguamentoContributivo"/>
-        <rdfs:comment xml:lang="en">Relationship linking a Contribution Adjustment Application to a Contribution Adjustment Request. Each Request is linked to a single Application.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Relazione che collega una Pratica di Adeguamento Contributivo ad una Domanda di Adeguamento Contributivo. Ciascuna Domanda è collegata ad un&apos;unica Pratica.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship linking a Contribution Adjustment to its Contribution Adjustment Request. Each Request is linked to a single adjustment.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Adeguamento Contributivo alla relativa Domanda di Adeguamento Contributivo. Ciascuna Domanda è collegata ad un&apos;unico adeguamento.</rdfs:comment>
         <rdfs:label xml:lang="it">ha domanda adeguamento contributivo</rdfs:label>
         <rdfs:label xml:lang="en">has contribution adjustment application</rdfs:label>
     </owl:ObjectProperty>
@@ -325,20 +326,6 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/contributions/haPagatoreOnere -->
-
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributions/haPagatoreOnere">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolarePraticaAdeguamentoContributivo"/>
-        <rdfs:comment xml:lang="it">Relazione che collega una Pratica di Adeguamento Contributivo a un Superstite. Ciascuna Pratica ha un unico pagatore.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Report linking a Contribution Adjustment Applcation to a Survivor. Each Application has a single payer.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha pagatore onere</rdfs:label>
-        <rdfs:label xml:lang="en">has payer</rdfs:label>
-    </owl:ObjectProperty>
-
-
-
     <!-- https://w3id.org/italia/social-security/onto/contributions/haPianoDiAmmortamento -->
 
     <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributions/haPianoDiAmmortamento">
@@ -350,6 +337,21 @@
         <rdfs:comment xml:lang="it">Relazione che collega uno Stato di Notificato Importo di Pratica ad un Piano di Ammortamento.</rdfs:comment>
         <rdfs:label xml:lang="it">ha piano di ammortamento</rdfs:label>
         <rdfs:label xml:lang="en">has amortization plan</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/contributions/haPraticaAdeguamentoContributivo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributions/haPraticaAdeguamentoContributivo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoContributivo"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Contribution Adjustment to the relevant Practice prepared by the relevant INPS office. A requested adjustment corresponds to at most one and only one practice.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che lega un Adeguamento Contributivo alla relativa Pratica istruita dalla Sede INPS di competenza. Ad un adeguamento  richiesto corrisponde al più una e una sola pratica.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha pratica adeguamento contributivo</rdfs:label>
+        <rdfs:label xml:lang="en">has contribution adjustment application</rdfs:label>
     </owl:ObjectProperty>
 
 
@@ -367,16 +369,30 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/contributions/haTitolarePraticaAdeguamentoContributivo -->
+    <!-- https://w3id.org/italia/social-security/onto/contributions/haSuperstitePagatore -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributions/haTitolarePraticaAdeguamentoContributivo">
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributions/haSuperstitePagatore">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributions/TitolarePraticaAdeguamentoContributivo"/>
-        <rdfs:comment xml:lang="en">Relationship linking a Contribution Adjustment Application to an Application Holder. Each Application has a single Holder.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Relazione che collega una Pratica di Adeguamento Contributivo ad un Titolare Pratica. Ciascuna Pratica ha un unico Titolare.</rdfs:comment>
-        <rdfs:label xml:lang="it">ha titolare pratica adeguamento contributivo</rdfs:label>
-        <rdfs:label xml:lang="en">has contribution adjustment application holder</rdfs:label>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoContributivo"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolareAdeguamentoContributivo"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Contribution Adjustment to a Survivor of the Owner of the requested adjustment. This Survivor will pay the cost of compliance.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Adeguamento Contributivo a un Superstite del Titolare dell&apos;adeguamento richiesto. Sarà tale Superstite a pagare l&apos;onere dell&apos;adeguamento.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha superstite pagatore</rdfs:label>
+        <rdfs:label xml:lang="en">has survivor payer</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/contributions/haTitolareAdeguamentoContributivo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributions/haTitolareAdeguamentoContributivo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoContributivo"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributions/TitolareAdeguamentoContributivo"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Contribution Adjustment to its Holder. Each Application has a single Holder.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che collega un Adeguamento Contributivo al suo Titolare. Ciascuna Pratica ha un unico Titolare.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha titolare adeguamento contributivo</rdfs:label>
+        <rdfs:label xml:lang="en">has contribution adjustment holder</rdfs:label>
     </owl:ObjectProperty>
 
 
@@ -527,7 +543,7 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/codiceContrattoDiLavoro -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/contributions/codiceContrattoDiLavoro">
-        <owl:equivalentProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro"/>
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/ContrattoDiLavoroDomestico"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -556,6 +572,7 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro -->
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/codiceContrattoDiLavoro"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -689,6 +706,20 @@
         <rdfs:comment xml:lang="it">È la descrizione relativa alla Pratica.</rdfs:comment>
         <rdfs:label xml:lang="en">application description</rdfs:label>
         <rdfs:label xml:lang="it">descrizione pratica</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/contributions/identificatoreAdeguamentoContributivo -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/contributions/identificatoreAdeguamentoContributivo">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/l0/identifier"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoContributivo"/>
+        <rdfs:comment xml:lang="it">Identifica un Adeguemento Contributivo richiesto. Può corrispondere all&apos;identificativo della relativa domanda, una volta che quest&apos;ultima è stata protocollata, o all&apos;identificativo della relativa pratica, una volta che quest&apos;ultima è stata istruita.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identifies a required Contribution Adjustment. It can correspond to the identifier of the relevant claim, once the latter has been registered, or to the identifier of the relevant application, once the latter has been processed.</rdfs:comment>
+        <rdfs:label xml:lang="en">contribution adjustment identifier</rdfs:label>
+        <rdfs:label xml:lang="it">identificatore adeguamento contributivo</rdfs:label>
     </owl:DatatypeProperty>
 
 
@@ -1060,10 +1091,75 @@
 
 
 
+    <!-- https://w3id.org/italia/social-security/onto/contributions/AdeguamentoContributivo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoContributivo">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haDomandaAdeguamentoContributivo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haTitolareAdeguamentoContributivo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/identificatoreAdeguamentoContributivo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Abstract class that aggregates the different types of contribution adjustments allowed by INPS, in particular the redemptions and reunifications of contributions, including annuities. A contribution adjustment exists when it is requested through an Application Contribution Claim forwarded by the Owner or one of his agents, following which the relevant Contribution Adjustment Application is prepared by the INPS office responsible for the Applicant who submitted the application. request. Once the application has been assessed, the INPS office itself issues a Contribution Adjustment Act with which it communicates the outcome of the application to the Applicant.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Classe astratta che aggrega le diverse tipologie di adeguamenti contributivi ammessi dall&apos;INPS, in particolare i riscatti e le ricongiunzioni di contributi, ivi comprese le rendite. Un adeguamento contributo esiste nel momento in cui viene richiesto mediante una Domanda (di) Adeguamento Contributivo inoltrata dal Titolare o da un suo facente funzione, a fronte della quale viene istruita la relativa Pratica (di) Adeguamento Contributivo a cura della Sede INPS competente per il Richiedente che ha presentato la domanda. Una volta che la domanda è stata valutata, la stessa Sede INPS emette un Atto (di) Adeguamento Contributivo con cui comunica al Richiedente l&apos;esito della domanda.</rdfs:comment>
+        <rdfs:label xml:lang="it">Adeguamento Contributivo</rdfs:label>
+        <rdfs:label xml:lang="en">Contribution Adjustment</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/contributions/AdeguamentoPerRendita -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoPerRendita">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoContributivo"/>
+        <rdfs:comment xml:lang="it">Particolare forma di riscatto che consente, previa esibizione di prove rigorose, di versare un onere a copertura dei periodi di lavoro la cui contribuzione sia stata omessa e che non sia più recuperabile. Presuppone quindi l’inadempimento dell’obbligo assicurativo per l’IVS che non deve essere più suscettibile di recupero da parte dell’INPS per maturata prescrizione. In tale contesto, l’INPS riconosce la rendita vitalizia solo nei casi di esistenza certa del rapporto di lavoro e di sussistenza dei requisiti prescritti dalla legge inerenti all’obbligo di versamento dei contributi nei periodi oggetto di riscatto. La domanda può in questo caso essere presentata: dal datore di lavoro che ha omesso il versamento dei contributi o dal lavoratore stesso, anche se già pensionato, o dai suoi superstiti. A fronte della presentazione della domanda, l&apos;INPS istruisce la relativa Pratica di Rendita per la valutazione dell&apos;accoglimento della richiesta e la determinazione degli oneri a carico del Richiedente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The constitution of life annuities serves to rectify missing contributions for invalidity, old-age and survivors&apos; insurance that are time-barred and is therefore on the premise that the entity required to pay the contributions has failed to comply with a contribution obligation. The constitution of annuities or redeeming periods through buyback contributions may be claimed: by an employer that has failed to pay the contributions and in this way intends to pay said contributions by rectifying the damage caused to the employee; by the employee themselves, in lieu of the employer, either if they still working or if they have already been granted the pension; by survivors of the worker. On approval of the claim, the decision is sent to claimants by registered post and also specifies the payment methods and terms.</rdfs:comment>
+        <rdfs:label xml:lang="it">Adeguamento Per Rendita</rdfs:label>
+        <rdfs:label xml:lang="en">Life Annuities Adjustment</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/contributions/AdeguamentoPerRicongiunzione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoPerRicongiunzione">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoContributivo"/>
+        <rdfs:comment xml:lang="it">Istituto che consente, a chi ha posizioni assicurative in gestioni previdenziali diverse, di riunire, mediante trasferimento, tutti i periodi contributivi presso un’unica gestione, allo scopo di ottenere una sola pensione. Tale ricongiunzione avviene a domanda dell’assicurato o dei suoi superstiti e deve riguardare tutti i periodi di contribuzione che il lavoratore ha maturato in almeno due diverse forme previdenziali fino al momento della richiesta e che non siano già stati utilizzati per liquidare una pensione. I periodi così ricongiunti sono utilizzabili come se fossero stati versati nel fondo di destinazione e danno diritto ad un trattamento pensionistico basato sui requisiti di quest’ultimo fondo. A fronte della presentazione della domanda, l&apos;INPS istruisce la relativa pratica per la valutazione dell&apos;accoglimento della richiesta e la determinazione di eventuali oneri a carico del Richiedente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The aggregation of insurance periods allows the transfer of existing contributions from at multiple institutes to a single institute in order to obtain a unified pension. The aggregation of insurance periods can be carried out free of charge or for payment.</rdfs:comment>
+        <rdfs:label xml:lang="it">Adeguamento Per Ricongiunzione</rdfs:label>
+        <rdfs:label xml:lang="en">Aggregation Adjustment</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/contributions/AdeguamentoPerRiscatto -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoPerRiscatto">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoContributivo"/>
+        <rdfs:comment xml:lang="it">Istituto che consente al lavoratore, anche già pensionato, di conseguire, a proprie spese, il riconoscimento contributivo per specifici periodi altrimenti privi di contribuzione. Trattasi tipicamente di periodi in cui o non era previsto l’obbligo contributivo (ad esempio, gli anni di studio per il conseguimento della laurea o titolo di studio equiparato) o l’attività lavorativa si è svolta all’estero o vi è stata omissione rispetto all’obbligo di pagamento dei contributi spettanti. Il riscatto resta una facoltà a discrezione del lavoratore/pensionato (o dei superstiti in caso di decesso), che deve quindi farne espressa domanda all’INPS. Temporalmente, i contributi riscattati si collocheranno nello stesso periodo nel quale avrebbero dovuto essere versati. A fronte della presentazione della domanda, l&apos;INPS istruisce la relativa pratica per la valutazione dell&apos;accoglimento della richiesta e la determinazione degli oneri a carico del Richiedente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Redemption applications for pension purposes can be carried out in order to consider for pension purposes periods such as graduation years, years of employment abroad, periods non covered by contributions, periods of missing and time-barred contributions, and some periods expressly envisaged by the law and not covered by contribution.</rdfs:comment>
+        <rdfs:label xml:lang="it">Adeguamento Per Riscatto</rdfs:label>
+        <rdfs:label xml:lang="en">Redemption Adjstment</rdfs:label>
+    </owl:Class>
+
+
+
     <!-- https://w3id.org/italia/social-security/onto/contributions/AttoAdeguamentoContributivo -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/AttoAdeguamentoContributivo">
-        <owl:equivalentClass>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1072,8 +1168,8 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1082,19 +1178,19 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/dataAtto"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/numeroAtto"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Explicit manifestation by the INPS of the decision taken regarding a Contribution Adjustment Application. This decision, if positive, establishes the amount of the Contribution Charge to be paid and the terms of the payment. The deed is characterized by a number and a date. The deed is issued by the competent INPS office for the Applicant who submitted the application. The deed is linked to one and only one Contribution Adjustment Practice (of) Contribution Adjustment and, in particular, this practice belongs to the class Status of Notified Amount of Practice</rdfs:comment>
         <rdfs:comment xml:lang="it">Manifestazione esplicita da parte dell&apos;INPS della decisione assunta in merito ad una Domanda (di) Adeguamento Contributivo. Tale decisione, se positiva, stabilisce l&apos;importo dell&apos;Onere Contributivo da versare e i termini del versamento. L&apos;atto è caratterizzato da un numero e da una data. L&apos;emissione dell&apos;atto è a cura della Sede INPS competente per il Richiedente che ha presentato la domanda. L&apos;atto è legato ad una e una sola Pratica (di) Adeguamento Contributivo e, in particolare, tale pratica appartiene alla classe Stato Di Notificato Importo Di Pratica</rdfs:comment>
         <rdfs:label xml:lang="it">Atto Adeguamento Contributivo</rdfs:label>
@@ -1106,7 +1202,7 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/ContrattoDiLavoroDomestico -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/ContrattoDiLavoroDomestico">
-        <owl:equivalentClass>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1115,19 +1211,19 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/codiceContrattoDiLavoro"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/numeroOreSettimanali"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">An employment contract is an agreement that covers the working relationship between a company and an employee. It allows both parties to clearly understand their obligations and the terms of employment. More specifically, an employment contract can include salary or wages, schedule, duration of employment, general responsibilities, confidentiality, communications, benefits, and future competition.</rdfs:comment>
         <rdfs:comment xml:lang="it">Un contratto di lavoro, o lettera di assunzione, è un accordo che da origine ad un rapporto di lavoro tra un datore di lavoro e un lavoratore. Consente a entrambe le parti di comprendere chiaramente i propri obblighi e le condizioni di lavoro. Nel contesto del dominio, definisce i termini del rapporto stesso indicando: la quantità e distribuzione delle ore settimanali lavorate, la loro retribuzione effettiva, le ferie, il TFR, i termini di preavviso e quanto altro risulta necessario per la definizione del rapporto stesso e nel rispetto del Contratto Collettivo, se esistente, del settore di riferimento.</rdfs:comment>
         <rdfs:label xml:lang="it">Contratto Di Lavoro Domestico</rdfs:label>
@@ -1139,7 +1235,8 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleFinale -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleFinale">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1148,8 +1245,7 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario"/>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Sottoclasse di Contributo Trimestrale Ordinario legato ad un Rapporto Di Lavoro Domestico Cessato che indica la competenza per l&apos;ultimo trimestre di lavoro. In questo caso i contributi devono riguardare anche le eventuali ore relative alle settimane di mancato preavviso o ferie non godute che verranno attribuite a settimane successive alla data di cessazione con possibile esubero nel trimestre successivo. A tal fine è indicato il numero di settimane di preavviso.</rdfs:comment>
         <rdfs:comment xml:lang="en">Sub-class of Ordinary Quarterly Contribution linked to a Ceased Domestic Work Report indicating the competence for the last quarter of work. In this case the contributions must also relate to any hours relating to weeks of missed notice or untaken holidays which will be attributed to weeks following the date of termination with possible redundancy in the following quarter. For this purpose, the number of weeks notice is indicated.</rdfs:comment>
         <rdfs:label xml:lang="it">Contributo Trimestrale Finale</rdfs:label>
@@ -1161,24 +1257,25 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleModificato -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleModificato">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haSettimanaDelTrimestre"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/numeroOreRetribuiteInserito"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/retribuzioneOrariaEffettivaInserita"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestralePrecompilato"/>
         <rdfs:comment xml:lang="it">Sottoclasse di Contributo Trimestrale Ordinario che indica gli elementi utili al calcolo dell&apos;importo dei contributi personalizzati per lo specifico trimestre dell&apos;anno. In particolare, specifica il numero di ore retribuite del trimestre, la retribuzione oraria del trimestre, le settimane di presenza per ciascun mese del trimestre, mediante il legame con la Settimana Del Mese, importo e destinatario del contributo versato ad una Organizzazione Di Assistenza. </rdfs:comment>
         <rdfs:comment xml:lang="en">Sub-class of Ordinary Quarterly Contribution which indicates the elements useful for calculating the amount of personalized contributions for the specific quarter of the year. In particular, it specifies the number of hours paid for the quarter, the hourly salary for the quarter, the weeks of presence for each month of the quarter, by linking it with the Week Of The Month, amount and recipient of the contribution paid to a Support Organization.</rdfs:comment>
@@ -1191,21 +1288,22 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/services/PagamentoContributiLavoratoreDomestico"/>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleModificato"/>
                     <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestralePrecompilato"/>
                 </owl:unionOf>
             </owl:Class>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haTrimestreDiAnno"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1214,26 +1312,25 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/annoContributoTrimestrale"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/dataScadenzaContributoTrimestrale"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/importoContributoTrimestrale"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/services/PagamentoContributiLavoratoreDomestico"/>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Classifica le competenze trimestrali dei contributi che il datore di lavoro deve versare in base alle ore lavorate nel trimestre e della retribuzione oraria effettiva. È caratterizzato dall&apos;anno e dal trimestre a cui la competenza si riferisce, dall&apos;importo e dalla data di scadenza del versamento.</rdfs:comment>
         <rdfs:comment xml:lang="en">Classifies the quarterly fees of the contributions that the employer must pay based on the hours worked in the quarter and the actual hourly wage. It is characterized by the year and quarter to which the accrual refers, by the amount and due date of the payment.</rdfs:comment>
         <rdfs:label xml:lang="it">Contributo Trimestrale Ordinario</rdfs:label>
@@ -1245,12 +1342,13 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestralePrecompilato -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestralePrecompilato">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/numeroOreRetribuiteContrattuali"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Sottoclasse di Contributo Trimestrale Ordinario che indica gli elementi utili al calcolo dell&apos;importo dei contributi per uno specifico trimestre dell&apos;anno derivati dal Contratto Di Lavoro depositato. In particolare, specifica il numero di ore retribuite contrattuali effettive di competenza del trimestre che possono variare da trimestre a trimestre.</rdfs:comment>
         <rdfs:comment xml:lang="en">Sub-class of Ordinary Quarterly Contribution which indicates the elements useful for calculating the amount of contributions for a specific quarter of the year deriving from the Employment Contract filed. In particular, it specifies the number of actual contractual paid hours pertaining to the quarter which may vary from quarter to quarter.</rdfs:comment>
         <rdfs:label xml:lang="it">Contributo Trimestrale Precompilato</rdfs:label>
@@ -1262,7 +1360,9 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagatore"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1271,14 +1371,13 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/identificatoreDatoreDiLavoroDomestico"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente"/>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/contributions/RichiedenteAdeguamentoContributivo"/>
         <rdfs:comment xml:lang="en">An employer of a domestic worker is a person who employs someone who is considered a domestic worker.</rdfs:comment>
         <rdfs:comment xml:lang="it">Sottoclasse di Ruolo di Agente che rappresenta il titolare di un rapporto di lavoro con un lavoratore domestico. È solitamente una persona fisica ma, in alcuni particolari casi, può essere una organizzazione qual ora quest&apos;ultima si configuri come una “comunità stabile” o una “convivenze familiarmente strutturata” senza fini di lucro presso cui il lavoratore svolge servizi domestici tipici della vita familiare. Ciascuna istanza possiede un identificatore.</rdfs:comment>
@@ -1291,7 +1390,7 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/DomandaAdeguamentoContributivo -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/DomandaAdeguamentoContributivo">
-        <owl:equivalentClass>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1300,8 +1399,8 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1310,19 +1409,19 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/dataDomanda"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/numeroDomanda"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">L’esercizio della facoltà di riscatto, ricongiunzione, rendita presuppone la presentazione di apposita domanda da parte dell’interessato Richiedente secondo le modalità specifiche previste da ciascuna facoltà che possono differire sia in termini delle informazioni e documentazioni richieste sia in termini di destinatari della domanda (INPS più eventuali altri Fondi interessati). La presentazione della domanda avviene telematicamente usufruendo del servizio predisposto da INPS eventualmente per l tramite di un intermediario (Patronato, CAF, etc.). La domanda è caratterizzata da una data e un numero assegnato alla stessa dalla Sede INPS competente territorialmente all&apos;atto della presentazione. Quest&apos;ultima istruirà la relativa pratica per gestire la domanda ricevuta.</rdfs:comment>
         <rdfs:comment xml:lang="en">The exercise of the right of redemption, reunion, annuity presupposes the presentation of a specific request by the interested Applicant according to the specific methods provided for by each faculty which may differ both in terms of the information and documentation requested and in terms of recipients of the request (INPS plus any other Funds involved). The application is submitted electronically using the service provided by INPS, possibly through an intermediary (Patronage, CAF, etc.). The application is characterized by a date and a number assigned to it by the territorially competent INPS office at the time of presentation. The latter will instruct the relative practice to manage the received request.</rdfs:comment>
         <rdfs:label xml:lang="en">Contribution Adjustment Claim</rdfs:label>
@@ -1334,20 +1433,21 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/Employment"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/identificatoreLavoratoreDomestico"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/retribuzioneOrariaEffettiva"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/Employment"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolarePraticaAdeguamentoContributivo"/>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolareAdeguamentoContributivo"/>
         <rdfs:comment xml:lang="en">A Domestic Worker is a person who works within the scope of a residence. Domestic workers perform a variety of household services for an individual, from providing cleaning and household maintenance, or cooking, laundry and ironing, or care for children and elderly dependents, and other household errands.</rdfs:comment>
         <rdfs:comment xml:lang="it">Sottoclasse di Ruolo Di Persona Viva che svolge mansioni e prestazioni di servizi domestici diretti al funzionamento della vita familiare nell&apos;ambito di una residenza. I lavoratori domestici svolgono quindi una varietà di servizi rivolti ad un individuo e/o ad una comunità, dalla pulizia e manutenzione della casa, alla cucina, al bucato e alla stiratura, alla cura dei bambini e degli anziani a carico e ad altre commissioni domestiche. Ciascuna istanza possiede un identificatore.</rdfs:comment>
         <rdfs:label xml:lang="en">Domestic Worker</rdfs:label>
@@ -1359,13 +1459,14 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/MeseDiTrimestre -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/MeseDiTrimestre">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TemporalEntity"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/èMeseDelTrimestre"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1374,13 +1475,13 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/indiceMese"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Index of the months present in a calendar quarter. Basically first, second and third (subclass of TI:TemporalEntity).</rdfs:comment>
         <rdfs:comment xml:lang="it">Indice dei mesi presenti in un trimestre solare. In pratica primo, secondo e terzo (sottoclasse di TI:TemporalEntity).</rdfs:comment>
         <rdfs:label xml:lang="it">Mese Di Trimestre</rdfs:label>
@@ -1392,7 +1493,8 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/OnereContributivo -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/OnereContributivo">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/services/PagamentoContributiRRR"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1401,19 +1503,19 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/dataScadenzaOnereContributivo"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/importoOnereContributivo"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/contributions/RataDiOnereContributivo"/>
         <rdfs:comment xml:lang="en">Amount of money that the Holder of n Application, or one of his survivors, are requested to pay in order to satisfy the acceptance of the presented application. The amount of this sum is established by INPS with a specific document and communicated to the Applicant together with the date by which said sum must be paid, under penalty of forfeiture of the application. Each instance of the class is necessarily linked to one and only one case in Notified Amount status. It is a subclass of Purpose, thus resulting linked to the Payment Slip class to which it provides the data for its compilation.</rdfs:comment>
         <rdfs:comment xml:lang="it">Somma di denaro che il Titolare di una Pratica, o un suo Superstite, sono chiamati a versare per soddisfare l&apos;accettazione della domanda presentata. L&apos;importo di detta somma è stabilito dall&apos;INPS con apposito Atto e comunicato al Richiedente unitamente alla data entro cui detta somma deve essere versata pena la decadenza della domanda. Ogni istanza della classe è necessariamente legata ad una ed una sola pratica in stato di Notificato Importo. È sottoclasse di Finalità risultando in tal modo legata alla classe Bollettino Di Pagamento a cui fornisce i dati per la compilazione dello stesso.</rdfs:comment>
@@ -1426,7 +1528,8 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/OrganizzazioneDiAssistenza -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/OrganizzazioneDiAssistenza">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1435,8 +1538,8 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1445,14 +1548,13 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/codiceOrganizzazioneAssistenza"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Body that has the purpose of providing benefits and services in favor of workers and employers, including health care and insurance treatments, supplementary and additional to public services.</rdfs:comment>
         <rdfs:comment xml:lang="it">Organismo che ha lo scopo di fornire prestazioni e servizi a favore dei lavoratori e datori di lavoro, comprensivi di trattamenti assistenziali sanitari e assicurativi, integrativi e aggiuntivi delle prestazioni pubbliche.</rdfs:comment>
         <rdfs:label xml:lang="en">Assistance Organization</rdfs:label>
@@ -1464,7 +1566,8 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/PianoDiAmmortamento -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/PianoDiAmmortamento">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Sequence"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1473,19 +1576,19 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/importoRata"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/numeroRate"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Il piano di ammortamento è il programma di restituzione rateale di un debito, che solitamente scompone le rate in quote capitale e quote interessi, e specifica il capitale residuo dovuto dopo ciascun pagamento. È caratterizzato da un numero di rate e dall&apos;importo di ciascuna rata, solitamente costante. Nel contesto di questo dominio rappresenta la rateizzazione dell&apos;Onere Contributivo e viene proposto al Richiedente come modalità alternativa rispetto al versamento unico. Il Richiedente può aderire a tale piano o chiedere una sua modifica, ad esempio per ridurre il numero di rate proposte. Ogni istanza della classe è necessariamente legata ad una ed una sola pratica in stato di Notificato Importo. La classe si comporta come una Sequenze per cui ad ogni istanza della classe sono legate le istanze della classe Rata Di Onere Contributivo corrispondenti ciascuna ad una rata del piano.</rdfs:comment>
         <rdfs:comment xml:lang="en">The amortization schedule is the schedule for repaying a debt by installments, which usually breaks down the installments into principal and interest portions, and specifies the residual principal due after each payment.</rdfs:comment>
         <rdfs:label xml:lang="en">Amortization Schedule</rdfs:label>
@@ -1497,19 +1600,18 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Sequence"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haDomandaAdeguamentoContributivo"/>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haPraticaAdeguamentoContributivo"/>
+                    </rdf:Description>
+                </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haTitolarePraticaAdeguamentoContributivo"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1518,19 +1620,19 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/descrizionePratica"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/numeroPratica"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Abstract class that aggregates the different types of practices initiated by the INPS, in particular the practices of redemption and/or reunification of contributions, including annuities. Each file has a unique identifier and a description and is obligatorily linked to one and only one Application (for) Contribution Adjustment, against which the file itself was instructed by the INPS office competent for the Applicant who presented the application. Once the file has been assessed by INPS, it is linked to one and only one Contribution Adjustment Act (of) Contribution Adjustment with which the aforementioned INPS office informs the Applicant of the outcome of the application. Instances of this class can evolve over time, each time assuming a different state whose characteristics are linked to a time interval of validity. This is why the class is a sequence linked to some TI:TimeIndexedEvent class (from OntoPiA - Time Ontology) that model the status of the application in the time. The possible states of instances are classified by its disjoint subclasses denoted by names with the prefix Status.</rdfs:comment>
         <rdfs:comment xml:lang="it">Classe astratta che aggrega le diverse tipologie di pratiche istruite dall&apos;INPS, in particolare le pratiche di riscatto e/o ricongiunzione di contributi, ivi comprese le rendite. Ciascuna pratica ha un identificativo e una descrizione ed è legata obbligatoriamente ad una e una sola Domanda (di) Adeguamento Contributivo, a fronte della quale la pratica stessa è stata istruita a cura della Sede INPS competente per il Richiedente che ha presentato la domanda. Una volta che la pratica è stata valutata dall&apos;INPS, viene legata ad uno ed un solo Atto (di) Adeguamento Contributivo con cui la suddetta Sede INPS comunica al Richiedente l&apos;esito della domanda. Le istanze di questa classe possono evolvere nel tempo, assumendo di volta in volta un diverso stato le cui caratteristiche sono legate ad un intervallo temporale di validità. Per questo la classe è di tipo L0:Sequence  (da OntoPiA - Ontologia Fondazionale) i cui membri sono eventi di tipo TI:TimeIndexedEvent (da OntoPiA - Ontologia del Tempo) che rappresentano I possibili stati assunti dalla pratica nel tempo. Ad una Pratica è legato obbligatoriamente uno ed un solo titolare della Pratica che corrisponde alla persona che possiede i requisiti per attivare la facoltà e, solo se il titolare è deceduto, uno ed un solo superstite pagatore.</rdfs:comment>
         <rdfs:label xml:lang="en">Contribution Adjustment Application</rdfs:label>
@@ -1542,12 +1644,12 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/PraticaDiAdeguamentoRateizzata -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaDiAdeguamentoRateizzata">
-        <owl:equivalentClass>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haPianoDiAmmortamento"/>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PianoDiAmmortamento"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Classifica le pratiche di adeguamento contributivo in stato di Notificato Importo che sono legate ad un piano di ammortamento e come tali prevedono la possibilità di attivare un mandato SDD per il pagamento delle rate.</rdfs:comment>
         <rdfs:comment xml:lang="en">Classifies the contribution adjustment applications in Notified Amount status which are linked to an amortization plan and as such provide for the possibility of activating an SDD mandate for the payment of installments.</rdfs:comment>
         <rdfs:label xml:lang="en">Contribution Adjustment Application by Installments</rdfs:label>
@@ -1556,66 +1658,34 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/contributions/PraticaDiRendita -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaDiRendita">
-        <rdfs:comment xml:lang="it">Particolare forma di riscatto che consente, previa esibizione di prove rigorose, di versare un onere a copertura dei periodi di lavoro la cui contribuzione sia stata omessa e che non sia più recuperabile. Presuppone quindi l’inadempimento dell’obbligo assicurativo per l’IVS che non deve essere più suscettibile di recupero da parte dell’INPS per maturata prescrizione. In tale contesto, l’INPS riconosce la rendita vitalizia solo nei casi di esistenza certa del rapporto di lavoro e di sussistenza dei requisiti prescritti dalla legge inerenti all’obbligo di versamento dei contributi nei periodi oggetto di riscatto. La domanda può in questo caso essere presentata: dal datore di lavoro che ha omesso il versamento dei contributi o dal lavoratore stesso, anche se già pensionato, o dai suoi superstiti. A fronte della presentazione della domanda, l&apos;INPS istruisce la relativa Pratica di Rendita per la valutazione dell&apos;accoglimento della richiesta e la determinazione degli oneri a carico del Richiedente.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The constitution of life annuities serves to rectify missing contributions for invalidity, old-age and survivors&apos; insurance that are time-barred and is therefore on the premise that the entity required to pay the contributions has failed to comply with a contribution obligation. The constitution of annuities or redeeming periods through buyback contributions may be claimed: by an employer that has failed to pay the contributions and in this way intends to pay said contributions by rectifying the damage caused to the employee; by the employee themselves, in lieu of the employer, either if they still working or if they have already been granted the pension; by survivors of the worker. On approval of the claim, the decision is sent to claimants by registered post and also specifies the payment methods and terms.</rdfs:comment>
-        <rdfs:label xml:lang="en">Life Annuities Application</rdfs:label>
-        <rdfs:label xml:lang="it">Pratica Di Rendita</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/italia/social-security/onto/contributions/PraticaDiRicongiunzione -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaDiRicongiunzione">
-        <rdfs:comment xml:lang="it">Istituto che consente, a chi ha posizioni assicurative in gestioni previdenziali diverse, di riunire, mediante trasferimento, tutti i periodi contributivi presso un’unica gestione, allo scopo di ottenere una sola pensione. Tale ricongiunzione avviene a domanda dell’assicurato o dei suoi superstiti e deve riguardare tutti i periodi di contribuzione che il lavoratore ha maturato in almeno due diverse forme previdenziali fino al momento della richiesta e che non siano già stati utilizzati per liquidare una pensione. I periodi così ricongiunti sono utilizzabili come se fossero stati versati nel fondo di destinazione e danno diritto ad un trattamento pensionistico basato sui requisiti di quest’ultimo fondo. A fronte della presentazione della domanda, l&apos;INPS istruisce la relativa Pratica di Ricongiunzione per la valutazione dell&apos;accoglimento della richiesta e la determinazione di eventuali oneri a carico del Richiedente.</rdfs:comment>
-        <rdfs:comment xml:lang="en">The aggregation of insurance periods allows the transfer of existing contributions from at multiple institutes to a single institute in order to obtain a unified pension. The aggregation of insurance periods can be carried out free of charge or for payment.</rdfs:comment>
-        <rdfs:label xml:lang="en">Aggregation Application</rdfs:label>
-        <rdfs:label xml:lang="it">Pratica Di Ricongiunzione</rdfs:label>
-    </owl:Class>
-
-
-
-    <!-- https://w3id.org/italia/social-security/onto/contributions/PraticaDiRiscatto -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaDiRiscatto">
-        <rdfs:comment xml:lang="it">Istituto che consente al lavoratore, anche già pensionato, di conseguire, a proprie spese, il riconoscimento contributivo per specifici periodi altrimenti privi di contribuzione. Trattasi tipicamente di periodi in cui o non era previsto l’obbligo contributivo (ad esempio, gli anni di studio per il conseguimento della laurea o titolo di studio equiparato) o l’attività lavorativa si è svolta all’estero o vi è stata omissione rispetto all’obbligo di pagamento dei contributi spettanti. Il riscatto resta una facoltà a discrezione del lavoratore/pensionato (o dei superstiti in caso di decesso), che deve quindi farne espressa domanda all’INPS. Temporalmente, i contributi riscattati si collocheranno nello stesso periodo nel quale avrebbero dovuto essere versati. A fronte della presentazione della domanda, l&apos;INPS istruisce la relativa Pratica di Riscatto per la valutazione dell&apos;accoglimento della richiesta e la determinazione degli oneri a carico del Richiedente.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Redemption applications for pension purposes can be carried out in order to consider for pension purposes periods such as graduation years, years of employment abroad, periods non covered by contributions, periods of missing and time-barred contributions, and some periods expressly envisaged by the law and not covered by contribution </rdfs:comment>
-        <rdfs:label xml:lang="it">Pratica Di Riscatto</rdfs:label>
-        <rdfs:label xml:lang="en">Redemption Application</rdfs:label>
-    </owl:Class>
-
-
-
     <!-- https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Sequence"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haContrattoDiLavoroDomestico"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haDatoreDiLavoroDomestico"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haLavoratoreDomestico"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/dataFirmaContratto"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Employment relationship between an employer and a subordinate worker who provides services of a domestic nature aimed at the functioning of family life. The employer is obliged to notify INPS of the establishment of this employment relationship, before the date of employment, as well as any change to the terms of the relationship itself or its termination. By virtue of this communication, the employment relationship is assigned by INPS an identification code useful for any subsequent fulfillment relating to the relationship itself. The contract can change over time, therefore each instance is associated with a validity interval (subclass of TI:TimeIndexedEvent).</rdfs:comment>
         <rdfs:comment xml:lang="it">Rapporto di lavoro tra un datore di lavoro e un lavoratore subordinato che presta servizi di carattere domestico diretti al funzionamento della vita familiare. È fatto obbligo al datore di lavoro di comunicare all’INPS l’istaurarsi di tale rapporto di lavoro, prima della data di assunzione, così come qualsiasi modifica dei termini del rapporto stesso ovvero la sua cessazione. In virtù di tale comunicazione, al rapporto di lavoro viene assegnato da INPS un codice identificativo utile per qualsiasi successivo adempimento inerente al rapporto stesso. Il contratto può modificarsi nel tempo quindi a ciascuna istanza è associato un intervallo di validità (sottoclasse di TI:TimeIndexedEvent).</rdfs:comment>
         <rdfs:label xml:lang="en">Domestic Employment Relationship</rdfs:label>
@@ -1627,7 +1697,8 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoAttivo -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoAttivo">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1636,13 +1707,13 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/dataComunicazioneInizioRapporto"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Stato di Rapporto di Lavoro Domestico che classifica i rapporti attualmente attivi. È caratterizzato dalla data di inizio del rapporto che corrisponde alla data iniziale dell&apos;intervallo di tempo associato all&apos;evento.</rdfs:comment>
         <rdfs:comment xml:lang="en">Subclass of Domestic Employment Relationship that classifies currently active relationships. It has a relationship start date which corresponds to the initial date of the time interval associated with the event.</rdfs:comment>
         <rdfs:label xml:lang="en">Active Domestic Employment Relationship</rdfs:label>
@@ -1654,7 +1725,8 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1663,13 +1735,13 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/dataComunicazioneFineRapporto"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Domestic Employment Relationship Status that classifies currently inactive relationships. It has a relationship end date which corresponds to the initial date of the time interval associated with the event.</rdfs:comment>
         <rdfs:comment xml:lang="it">Stato di Rapporto di Lavoro Domestico che classifica i rapporti non più attivi. È caratterizzato dalla data di fine del rapporto che corrisponde alla data iniziale dell&apos;intervallo di tempo associato all&apos;evento.</rdfs:comment>
         <rdfs:label xml:lang="it">Rapporto Di Lavoro Domestico Cessato</rdfs:label>
@@ -1681,7 +1753,9 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/RataDiOnereContributivo -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/RataDiOnereContributivo">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/services/PagamentoContributiRRR"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1690,20 +1764,19 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PianoDiAmmortamento"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/dataScadenzaRata"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/numeroRata"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Object"/>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Classifica le rate di un piano di ammortamento, ciascuna legata al rispettivo piano e alla rata successiva dello stesso piano. Ciascuna istanza è caratterizzata dall&apos;indice della rata, relativamente al piano di cui fa parte, e dalla sua data di scadenza. È sottoclasse di Finalità risultando in tal modo legata alla classe Bollettino Di Pagamento a cui fornisce i dati per la compilazione dello stesso.</rdfs:comment>
         <rdfs:comment xml:lang="en">Classifies the installments of an amortization plan, each linked to the respective plan and to the next installment of the same plan. Each application is characterized by the index of the installment, relative to the plan to which it belongs, and by its expiry date. It is a subclass of Purpose, thus resulting linked to the Payment Slip class to which it provides the data for its compilation.</rdfs:comment>
         <rdfs:label xml:lang="en">Contributory Charge Installment</rdfs:label>
@@ -1715,30 +1788,31 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/RichiedenteAdeguamentoContributivo -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/RichiedenteAdeguamentoContributivo">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/presentaDomandaAdeguamentoContributivo"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/identificatoreRichiedenteAdeguamentoContributivo"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagatore"/>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolarePraticaAdeguamentoContributivo"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolareAdeguamentoContributivo"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/TitolarePraticaAdeguamentoContributivo"/>
+                            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/TitolareAdeguamentoContributivo"/>
                             <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:unionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/presentaDomandaAdeguamentoContributivo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/identificatoreRichiedenteAdeguamentoContributivo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Sottoclasse di Ruolo Di Persona Viva che classifica le persone in vita che presentano una domanda di adeguamento contributivo (per riscatto, ricongiunzione o rendita) per se stessi o per una persona deceduta essendone un superstite, parente o affine. In questo secondo caso, il Richiedente presenta la domanda per conto e in vece dell&apos;avente diritto, assumendosi il compito di versare gli eventuali oneri derivanti. La platea di persone fisiche che possono ricoprire il ruolo di Richiedente è piuttosto ampia comprendendo i lavoratori, dipendenti e autonomi, così come i lavoratori già pensionati. Ciascuna istanza del ruolo è caratterizzata da un identificativo.</rdfs:comment>
         <rdfs:comment xml:lang="en">Subclass of Role of Living Person which classifies living people who submit an application for contribution adjustment (for redemption, reunion or annuity) for themselves or for a deceased person of which they are a survivor, relative or similar. In this second case, the Applicant submits the application on behalf of and in place of the person, taking responsability for the task of paying any resulting charges. The variety of natural persons who can fill the role of Applicant is quite broad, including workers, employees and self-employed, as well as workers who have already retired. Each instance of such roles is characterized by an identifier.</rdfs:comment>
@@ -1751,18 +1825,19 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/SettimanaDelMese -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/SettimanaDelMese">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TemporalEntity"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/èSettimanaDelMese"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/indiceSettimana"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Index of the week in a calendar month. Practically, it assumes instances 1 to 5 (subclass of TI:TemporalEntity).</rdfs:comment>
         <rdfs:comment xml:lang="it">Indice della settimana in un mese solare. In pratica assume istanze da 1 a 5 (sottoclasse di TI:TemporalEntity).</rdfs:comment>
         <rdfs:label xml:lang="it">Settimana Del Mese</rdfs:label>
@@ -1774,6 +1849,17 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/StatoDiAccreditoParzialeDiPratica -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiAccreditoParzialeDiPratica">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Contribution Adjustment Application Status which classifies the applications whose costs necessary for their economic closure have been paid in part.</rdfs:comment>
         <rdfs:comment xml:lang="it">Stato di Pratica Adeguamento Contributivo che classifica le pratiche i cui oneri necessari per il loro perfezionamento economico sono stati versati in modo parziale.</rdfs:comment>
         <rdfs:label xml:lang="en">Partial Credit of the Application Status</rdfs:label>
@@ -1785,18 +1871,38 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/StatoDiNotificatoImportoDiPratica -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiNotificatoImportoDiPratica">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haAttoAdeguamentoContributivo"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AttoAdeguamentoContributivo"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haOnereContributivo"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haPraticaAdeguamentoContributivo"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haAttoAdeguamentoContributivo"/>
+                        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AttoAdeguamentoContributivo"/>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Contribution Adjustment Application Status which aggregates the applications for which the Contribution Adjustment Deed was issued. The amount of the contribution fee that the Applicant will have to pay to the Institute was then communicated, as well as the methods and times for this payment. The applications belonging to this class are payable, i.e. they can be subject to payment by the Debtor. The execution of at least one payment implies acceptance by the Applicant of the terms indicated in the deed.</rdfs:comment>
         <rdfs:comment xml:lang="it">Stato di Pratica Adeguamento Contributivo che aggrega le pratiche per cui è stata emesso l&apos;Atto (di) Adeguamento Contributivo. È stato quindi comunicato l&apos;importo dell&apos;onere contributivo che il Richiedente dovrà versare all&apos;Istituto nonchè le modalità, ad esempio proponendo un piano di ammortamento, e i tempi di tale versamento. Le pratiche appartenenti a questa classe sono esigibili cioè possono essere soggette a pagamento da parte del Debitore. L&apos;esecuzione di almeno un pagamento implica l&apos;accettazione da parte del Richiedente dei termini indicati nell&apos;atto.</rdfs:comment>
         <rdfs:label xml:lang="en">Notified Amount of the Application Status</rdfs:label>
@@ -1808,6 +1914,17 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/StatoDiPagamentoRatealeInCorso -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiPagamentoRatealeInCorso">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Contribution Adjustment Application Status which classifies the applications for which an amortization plan has been agreed upon and whose installments are regularly paid.</rdfs:comment>
         <rdfs:comment xml:lang="it">Stato di Pratica Adeguamento Contributivo che classifica le pratiche per cui è stato concordato un piano di ammortamento e i cui pagamenti sono regolari.</rdfs:comment>
         <rdfs:label xml:lang="en">Ongoing Installment Payment Status</rdfs:label>
@@ -1819,6 +1936,7 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/StatoDiPraticaDefinita -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiPraticaDefinita">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -1840,7 +1958,8 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/StatoInizialeDiPratica -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoInizialeDiPratica">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1849,7 +1968,7 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Contribution Adjustment Application Status which classifies the applications for which a Contribution Adjustment Application has been received but not yet handled by INPS office. It is the initial state of an application.</rdfs:comment>
         <rdfs:comment xml:lang="it">Stato di Pratica Adeguamento Contributivo che classifica le pratiche istruite a fronte del ricevimento di una Domanda (di) Adeguamento Contributivo ma non ancora elaborate da parte delle Sede INPS. Rappresenta lo stato iniziale di una pratica.</rdfs:comment>
         <rdfs:label xml:lang="en">Initial Application Status</rdfs:label>
@@ -1858,19 +1977,10 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolarePraticaAdeguamentoContributivo -->
+    <!-- https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolareAdeguamentoContributivo -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolarePraticaAdeguamentoContributivo">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haPagatoreOnere"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolareAdeguamentoContributivo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
@@ -1883,14 +1993,14 @@
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="https://w3id.org/italia/onto/CPV/Alive"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/hasParentalRelationshipWith"/>
+                                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CPV/hasParentalRelationshipWith"/>
                                 <owl:someValuesFrom>
                                     <owl:Class>
                                         <owl:intersectionOf rdf:parseType="Collection">
                                             <rdf:Description rdf:about="https://w3id.org/italia/onto/CPV/Dead"/>
                                             <owl:Restriction>
                                                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/RO/holdsRoleInTime"/>
-                                                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/TitolarePraticaAdeguamentoContributivo"/>
+                                                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/TitolareAdeguamentoContributivo"/>
                                             </owl:Restriction>
                                         </owl:intersectionOf>
                                     </owl:Class>
@@ -1901,40 +2011,50 @@
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haSuperstitePagatore"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <owl:disjointWith>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/TitolarePraticaAdeguamentoContributivo"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/TitolareAdeguamentoContributivo"/>
                     <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:disjointWith>
         <rdfs:comment xml:lang="it">Sottoclasse di Persona in Vita che, avendo un legame parentale con un Titolare Pratica Adeguamento Contributivo deceduto, ha presentato domanda di riscatto, ricongiunzione o rendita per conto e in vece di detto Titolare; quindi, in questo caso, corrisponde al Richiedente. Per ciò, tale superstite si fa carico del pagamento degli eventuali oneri derivanti dall&apos;accoglimento della domanda e risulta legato alla Pratica derivante dalla domanda stessa in qualità di pagatore, ruolo quest&apos;ultimo che è assorbito da quello di Titolare qual ora quest&apos;ultimo sia in vita.</rdfs:comment>
         <rdfs:comment xml:lang="en">Subclass of Living Person who, having a parental relationship with a deceased Application Holder, has presented a redemption, reunion or annuity request on behalf of and in place of said Holder; therefore, in this case, it corresponds to the Applicant. For this reason, this survivor takes care of the payment of any charges deriving from the acceptance of the request and is linked to the Application deriving from the request itself as payer, the latter role being absorbed by that of Holder in case he is alive.</rdfs:comment>
-        <rdfs:label xml:lang="en">Adjustment Contribution Application Holder Survivor</rdfs:label>
-        <rdfs:label xml:lang="it">Superstite Di Titolare Pratica Adeguamento Contributivo</rdfs:label>
+        <rdfs:label xml:lang="en">Adjustment Contribution Holder Survivor</rdfs:label>
+        <rdfs:label xml:lang="it">Superstite Di Titolare Adeguamento Contributivo</rdfs:label>
     </owl:Class>
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/contributions/TitolarePraticaAdeguamentoContributivo -->
+    <!-- https://w3id.org/italia/social-security/onto/contributions/TitolareAdeguamentoContributivo -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/TitolarePraticaAdeguamentoContributivo">
-        <owl:equivalentClass>
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/TitolareAdeguamentoContributivo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haTitolarePraticaAdeguamentoContributivo"/>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haTitolareAdeguamentoContributivo"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Role in person who characterizes whom, following the presentation of a suitable application, the requisites for accessing the option of redemption, reunion or annuity of social security contributions are recognized. These requirements can be recognized to the Holder even if no longer alive. The Holder is compulsorily linked to at least one Application. If the Holder is alive, it corresponds to the Applicant.</rdfs:comment>
         <rdfs:comment xml:lang="it">Sottoclasse di Ruolo di Persona che specializza il ruolo di persone a cui, facendo seguito alla presentazione di idonea domanda, sono riconosciuti i requisiti per accedere alla facoltà di riscatto, ricongiunzione o rendita di contributi previdenziali. Tali requisiti possono essere riconosciuti al Titolare anche se non più in vita. Il Titolare è obbligatoriamente legato ad almeno una Pratica. Nel caso il Titolare sia in vita, corrisponde al Richiedente.</rdfs:comment>
-        <rdfs:label xml:lang="en">Contribution Adjustment Application Holder</rdfs:label>
-        <rdfs:label xml:lang="it">Titolare Pratica Adeguamento Contributivo</rdfs:label>
+        <rdfs:label xml:lang="en">Contribution Adjustment Holder</rdfs:label>
+        <rdfs:label xml:lang="it">Titolare Adeguamento Contributivo</rdfs:label>
     </owl:Class>
 
 
@@ -1942,7 +2062,8 @@
     <!-- https://w3id.org/italia/social-security/onto/contributions/TrimestreDiAnno -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/TrimestreDiAnno">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TemporalEntity"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -1951,24 +2072,18 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/indiceTrimestre"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A quarter refers to one-fourth of a year (three months) and is typically expressed as Q1 for the first quarter, Q2 for the second quarter, and so forth (subclass of TI:TemporalEntity)</rdfs:comment>
         <rdfs:comment xml:lang="it">Periodo di tre mesi in cui è suddiviso un anno solare, tipicamente indicati con primo trimestre, secondo trimestre, e così via (sottoclasse di TI:TemporalEntity)</rdfs:comment>
         <rdfs:label xml:lang="en">Quarter</rdfs:label>
         <rdfs:label xml:lang="it">Trimestre Di Anno</rdfs:label>
     </owl:Class>
-
-
-
-    <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiPersona -->
-
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
 
 
 
@@ -1978,11 +2093,15 @@
 
 
 
+    <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiPersona -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
+
+
+
     <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva">
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
 
 
 
@@ -1995,7 +2114,7 @@
     <!-- https://w3id.org/italia/social-security/onto/services/MandatoSDD -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/MandatoSDD">
-        <owl:equivalentClass>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -2004,7 +2123,7 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
     </owl:Class>
 
 
@@ -2026,7 +2145,116 @@
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/services/Pagatore"/>
 
 
-	<!--
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haPianoDiAmmortamento"/>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PianoDiAmmortamento"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaDiAdeguamentoRateizzata"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasFirstMember"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/StatoInizialeDiPratica"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasFirstMember"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoAttivo"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasLastMember"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PianoDiAmmortamento"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/RataDiOnereContributivo"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haPraticaAdeguamentoContributivo"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributions/haAttoAdeguamentoContributivo"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/AttoAdeguamentoContributivo"/>
+            </owl:Restriction>
+        </owl:someValuesFrom>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/StatoDiNotificatoImportoDiPratica"/>
+    </owl:Restriction>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoPerRendita"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoPerRicongiunzione"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/AdeguamentoPerRiscatto"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/MeseDiTrimestre"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/SettimanaDelMese"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/TrimestreDiAnno"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PianoDiAmmortamento"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoAttivo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiAccreditoParzialeDiPratica"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiNotificatoImportoDiPratica"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiPagamentoRatealeInCorso"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiPraticaDefinita"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoInizialeDiPratica"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiAccreditoParzialeDiPratica"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiNotificatoImportoDiPratica"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiPagamentoRatealeInCorso"/>
+        </owl:members>
+    </rdf:Description>
+
+<!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -2121,135 +2349,8 @@
         <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
       </rdf:Description>
 
-
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/RichiedenteAdeguamentoContributivo"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/services/Pagatore"/>
-    </owl:Class>
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolarePraticaAdeguamentoContributivo"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
-    </owl:Class>
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/MeseDiTrimestre"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/SettimanaDelMese"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/TrimestreDiAnno"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TemporalEntity"/>
-    </owl:Class>
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/OnereContributivo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/RataDiOnereContributivo"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/services/PagamentoContributiRRR"/>
-    </owl:Class>
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PianoDiAmmortamento"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Sequence"/>
-    </owl:Class>
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaDiRendita"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaDiRicongiunzione"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaDiRiscatto"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
-    </owl:Class>
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoAttivo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiAccreditoParzialeDiPratica"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiNotificatoImportoDiPratica"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiPagamentoRatealeInCorso"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiPraticaDefinita"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoInizialeDiPratica"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
-    </owl:Class>
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiAccreditoParzialeDiPratica"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiNotificatoImportoDiPratica"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiPagamentoRatealeInCorso"/>
-        </owl:unionOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/l0/hasMember"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/MeseDiTrimestre"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/SettimanaDelMese"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/TrimestreDiAnno"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PianoDiAmmortamento"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaDiRendita"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaDiRicongiunzione"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/PraticaDiRiscatto"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoAttivo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiAccreditoParzialeDiPratica"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiNotificatoImportoDiPratica"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiPagamentoRatealeInCorso"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiPraticaDefinita"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoInizialeDiPratica"/>
-        </owl:members>
-    </rdf:Description>
-    <rdf:Description>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
-        <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiAccreditoParzialeDiPratica"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiNotificatoImportoDiPratica"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/contributions/StatoDiPagamentoRatealeInCorso"/>
-        </owl:members>
-    </rdf:Description>
 </rdf:RDF>
+
 
 
 

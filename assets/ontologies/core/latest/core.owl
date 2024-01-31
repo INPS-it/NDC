@@ -23,6 +23,8 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:RO="https://w3id.org/italia/onto/RO/">
+
+
     <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/core/">
     <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/core/1.0"/>
     <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/"/>
@@ -136,12 +138,10 @@
 
 
 
-    <!-- https://w3id.org/italia/onto/COV/hasOrganizzation -->
+    <!-- https://w3id.org/italia/onto/COV/hasPublicOrganization -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/COV/hasOrganizzation">
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/COV/hasPublicOrganization">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
     </owl:ObjectProperty>
 
 
@@ -224,12 +224,7 @@
     <!-- https://w3id.org/italia/onto/COV/Organization -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/COV/Organization">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/core/haSedeINPS"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
         <owl:disjointWith rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
     </owl:Class>
 
@@ -237,30 +232,14 @@
 
     <!-- https://w3id.org/italia/onto/COV/PublicOrganization -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/PublicOrganization">
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/COV/hasOrganizzation"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-    </owl:Class>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/PublicOrganization"/>
 
 
 
     <!-- https://w3id.org/italia/onto/CPV/Alive -->
 
     <owl:Class rdf:about="https://w3id.org/italia/onto/CPV/Alive">
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/core/haSedeINPS"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
         <owl:disjointWith rdf:resource="https://w3id.org/italia/onto/CPV/Dead"/>
     </owl:Class>
 
@@ -268,13 +247,17 @@
 
     <!-- https://w3id.org/italia/onto/CPV/Dead -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/CPV/Dead"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPV/Dead">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+    </owl:Class>
 
 
 
     <!-- https://w3id.org/italia/onto/CPV/Person -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/onto/CPV/Person"/>
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPV/Person">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
+    </owl:Class>
 
 
 
@@ -287,7 +270,7 @@
     <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiAgente -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente">
-        <owl:equivalentClass>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -303,7 +286,7 @@
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Insieme di mansioni, compiti, responsabilità e doveri attribuiti in un intervallo di tempo, anche non ancora terminato, a una persona o a una organizzazione considerando queste ultime specializzazioni di agente. </rdfs:comment>
         <rdfs:comment xml:lang="en">Set of tasks, duties and responsabilities attributed in a certain time interval, possible not yet determined, to a person or organization, considering these as specializations of an agent. </rdfs:comment>
         <rdfs:label xml:lang="en">Agent Role</rdfs:label>
@@ -315,7 +298,8 @@
     <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -324,7 +308,7 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
         <rdfs:comment xml:lang="it">Specializzazione della classe Ruolo Di Agente limitata alle sole organizzazioni.</rdfs:comment>
         <rdfs:comment xml:lang="en">Subclass of the Agent Role class, limited to organization.</rdfs:comment>
@@ -337,7 +321,8 @@
     <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiPersona -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -346,7 +331,7 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Specializzazione della classe Ruolo Di Agente limitata alle sole persone, in vita o decedute.</rdfs:comment>
         <rdfs:comment xml:lang="en">Subclass of the Agent Role class, limited to people, living or deceased.</rdfs:comment>
         <rdfs:label xml:lang="en">Person Role</rdfs:label>
@@ -358,7 +343,8 @@
     <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaDeceduta -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaDeceduta">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -367,7 +353,7 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Dead"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
         <rdfs:comment xml:lang="it">Specializzazione della classe Ruolo Di Persona limitata alle sole persone decedute.</rdfs:comment>
         <rdfs:comment xml:lang="en">Subclass of the Person Role class, limited to only dead persons.</rdfs:comment>
@@ -380,7 +366,8 @@
     <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
@@ -389,7 +376,7 @@
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Alive"/>
             </owl:Restriction>
-        </owl:equivalentClass>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="it">Specializzazione della classe Ruolo Di Persona limitata alle sole persone in vita.</rdfs:comment>
         <rdfs:comment xml:lang="en">Subclass of the Person Role class, limited to only alive persons.</rdfs:comment>
         <rdfs:label xml:lang="en">Alive Person Role</rdfs:label>
@@ -401,19 +388,25 @@
     <!-- https://w3id.org/italia/social-security/onto/core/SedeINPS -->
 
     <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/SedeINPS">
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/HomogeneousOrganizationalArea"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/COV/hasOrganizzation"/>
-                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/COV/hasPublicOrganization"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:oneOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/core/INPS"/>
+                        </owl:oneOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <owl:equivalentClass>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/core/codiceSedeINPS"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/HomogeneousOrganizationalArea"/>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">INPS is divided into central, regional and metropolitan structures with guidance, monitoring and coordination tasks, and into territorial offices with operational and user contact functions. In particular, the Institute, throughout the Italian national territory, has set up a &quot;service network&quot; organization which, in a &quot;proximity&quot; logic, is divided into: metropolitan coordination structures, provincial level structures, regional structures. Each INPS office is similar to a Homogeneous Organizational Area (AOO), each benefiting from a single entry and/or exit document flow (IT Protocol service) for the provision of services and the receipt of requests. In this sense, each INPS office is assigned, in addition to an office code assigned by the Institute, also a unique AOO identification code within the Index of Public Administrations (IPA) which makes it possible to identify the telematic communication channels legally permitted that is, at least one certified mailbox for each AOO. The competent INPS office for a citizen and/or company is established on the basis of the citizen&apos;s residence and/or the address of the company headquarters.</rdfs:comment>
         <rdfs:comment xml:lang="it">L’INPS è articolato in strutture centrali, regionali e metropolitane con compiti di indirizzo, monitoraggio e coordinamento, e in sedi territoriali con funzioni operative e di contatto con l’utenza. In particolare, l’Istituto, su tutto il territorio nazionale italiano, si è dotato di un’organizzazione “a reti di servizio” che, in logica di “prossimità”, si suddivide in: strutture di coordinamento metropolitano, strutture a livello provinciale, strutture a livello regionale. Ogni sede INPS è assimilabile ad un Area Organizzativa Omogenea (AOO) usufruendo ciascuna per l&apos;erogazione di servizi e il ricevimento delle richieste, di un unico flusso documentale di entrata e/o uscita (servizio di Protocollo Informatico). In tal senso ad ogni Sede INPS è assegnato, oltre ad un codice di sede attribuito dall&apos;Istituto, anche un codice identificativo AOO univoco nell&apos;ambito dell&apos;Indice delle Pubbliche Amministrazioni (IPA) che permette di individuare i canali di comunicazione telematica normativamente pervisti e cioè almeno una casella di posta elettronica certificata per ciascun AOO. La sede INPS competente per un cittadino e/o un&apos;impresa è stabilita in base alla residenza del cittadino e/o all&apos;indirizzo della sede dell&apos;impresa.</rdfs:comment>
         <rdfs:label xml:lang="en">INPS Office</rdfs:label>
@@ -423,6 +416,184 @@
 
 
     <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/core/INPS -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/core/INPS">
+        <rdfs:comment xml:lang="it">L&apos;Istituto Nazionale della Previdenza Sociale è l&apos;Ente Pubblico che gestisce la liquidazione e il pagamento delle pensioni e delle indennità di natura previdenziale e assistenziale. Le pensioni sono prestazioni previdenziali, determinate sulla base di rapporti assicurativi e finanziate con i contributi di lavoratori e aziende pubbliche e private. Invece, le prestazioni assistenziali o “a sostegno del reddito” tutelano i lavoratori che si trovano in particolari momenti di difficoltà della loro vita lavorativa e provvedono al pagamento di somme destinate a coloro che hanno redditi modesti e famiglie numerose. Per alcune di queste prestazioni l’INPS è coinvolto solo nella fase di erogazione, mentre per altre svolge tutto il procedimento di assegnazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The National Institute for Social Security is the Italian Public Organization that supplies pensions and other services of social security to who has the right. It also does contributory activity collecting the contributions. The services are based on a mandatory insurance relationship and are funded with the contributions of employed workers, elaborated as a percentage of the wage. It also manages welfare services or &quot;income support&quot; services that protect workers who find themselves in particular difficult moments in their working life and provide for the payment of sums intended for those with modest incomes and large families.</rdfs:comment>
+        <rdfs:label xml:lang="en">INPS</rdfs:label>
+        <rdfs:label xml:lang="it">INPS</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:oneOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/core/INPS"/>
+        </owl:oneOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+    </owl:Class>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasPrimaryAddress"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+            </owl:Restriction>
+        </owl:someValuesFrom>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddress"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/core/haSedeINPS"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CPV/hasCurrentResidence"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Alive"/>
+            </owl:Restriction>
+        </owl:someValuesFrom>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom>
+                    <owl:Restriction>
+                        <owl:onProperty>
+                            <rdf:Description>
+                                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddress"/>
+                            </rdf:Description>
+                        </owl:onProperty>
+                        <owl:someValuesFrom>
+                            <owl:Restriction>
+                                <owl:onProperty>
+                                    <rdf:Description>
+                                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/core/haSedeINPS"/>
+                                    </rdf:Description>
+                                </owl:onProperty>
+                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+                            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/RO/holdsRoleInTime"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/RO/holdsRoleInTime"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Alive"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/RO/holdsRoleInTime"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Dead"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaDeceduta"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/RO/holdsRoleInTime"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
+    </owl:Restriction>
+    <owl:Restriction>
+        <owl:onProperty>
+            <rdf:Description>
+                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/RO/holdsRoleInTime"/>
+            </rdf:Description>
+        </owl:onProperty>
+        <owl:someValuesFrom>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/onto/COV/Organization"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/onto/CPV/Person"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:someValuesFrom>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente"/>
+    </owl:Restriction>
+	<!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -527,134 +698,6 @@
         <rdfs:label xml:lang="it">INPS</rdfs:label>
     </owl:NamedIndividual>
 
-
-
-    <!--
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // General axioms
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/onto/COV/Organization"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/onto/CPV/Person"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Agent"/>
-    </owl:Class>
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/onto/CPV/Alive"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/onto/CPV/Dead"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
-    </owl:Class>
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente"/>
-    </owl:Class>
-    <owl:Class>
-        <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaDeceduta"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
-        </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
-    </owl:Class>
-    <owl:Restriction>
-        <owl:onProperty>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
-            </rdf:Description>
-        </owl:onProperty>
-        <owl:someValuesFrom>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasPrimaryAddress"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
-            </owl:Restriction>
-        </owl:someValuesFrom>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty>
-                            <rdf:Description>
-                                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddress"/>
-                            </rdf:Description>
-                        </owl:onProperty>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty>
-                                    <rdf:Description>
-                                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/core/haSedeINPS"/>
-                                    </rdf:Description>
-                                </owl:onProperty>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Restriction>
-    <owl:Restriction>
-        <owl:onProperty>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
-            </rdf:Description>
-        </owl:onProperty>
-        <owl:someValuesFrom>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CPV/hasCurrentResidence"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/onto/CPV/Alive"/>
-            </owl:Restriction>
-        </owl:someValuesFrom>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty>
-                    <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddressComponent"/>
-                    </rdf:Description>
-                </owl:onProperty>
-                <owl:someValuesFrom>
-                    <owl:Restriction>
-                        <owl:onProperty>
-                            <rdf:Description>
-                                <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/CLV/hasAddress"/>
-                            </rdf:Description>
-                        </owl:onProperty>
-                        <owl:someValuesFrom>
-                            <owl:Restriction>
-                                <owl:onProperty>
-                                    <rdf:Description>
-                                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/core/haSedeINPS"/>
-                                    </rdf:Description>
-                                </owl:onProperty>
-                                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-                            </owl:Restriction>
-                        </owl:someValuesFrom>
-                    </owl:Restriction>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Restriction>
 </rdf:RDF>
 
 

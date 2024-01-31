@@ -25,7 +25,7 @@ INPSService: a owl:Ontology ;
         RO:,
         TI: ;
     rdfs:label "INPS services Ontology"@en,
-        "Ontologia INPS relativa ai servizi"@it ;
+        "Ontologia INPS relativa ai servizi previdenziali"@it ;
     rdfs:comment "Ontologia INPS relativa alle entità e le relazioni che abilitano l'erogazione di servizi che rivestono uno stesso ruolo nell'ambito di diversi processi produttivi. Tra di essi troviamo, ad esempio, il servizio per il pagamento di un bollettino/avviso emesso dall'ente."@it,
         "This is the ontology of the INPS Organization about entities and relationships that enable the delivery of services that play the same role within different production processes. These include, for example, the service for payment of a bill/notice issued by the entity."@en ;
     owl:versionInfo "Version 1.0 - Modified on 17 January 2024"@en,
@@ -79,11 +79,13 @@ INPSService: a owl:Ontology ;
     dct:publisher <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     dct:title "INPS services Ontology"@en,
-        "Ontologia INPS relativa ai servizi"@it .
+        "Ontologia INPS relativa ai servizi previdenziali"@it .
 
 ### Object Properties
 
 CPSV:hasInput a owl:ObjectProperty .
+
+CPSV:hasServiceStatus a owl:ObjectProperty .
 
 CPSV:isPartOfEvent a owl:ObjectProperty .
 
@@ -575,11 +577,11 @@ INPSService:identificatoreMovimento a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "identificatore movimento"@it,
         "movement identifier"@en ;
+    rdfs:subPropertyOf INPSService:identificatoreRicevuta ;
     rdfs:domain INPSService:MovimentoDiDenaro ;
     rdfs:range xsd:string ;
     rdfs:comment "Identifica un Movimento Di Denaro."@it,
-        "Identifies a Money Movement."@en ;
-    owl:equivalentProperty INPSService:identificatoreRicevuta .
+        "Identifies a Money Movement."@en .
 
 INPSService:identificatoreOrdinePagamento a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -603,6 +605,7 @@ INPSService:identificatoreRicevuta a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "identificatore ricevuta"@it,
         "receipt identifier"@en ;
+    rdfs:subPropertyOf INPSService:identificatoreMovimento ;
     rdfs:domain INPSService:RicevutaDiMovimento ;
     rdfs:range xsd:string ;
     rdfs:comment "Identifica una Ricevuta Di Movimento. È equivalente all'identificativo di un Movimento Di Denaro."@it,
@@ -732,12 +735,6 @@ INPSCore:RuoloDiAgente a owl:Class .
 INPSCore:RuoloDiOrganizzazione a owl:Class .
 
 INPSService:AttoDiAttivazioneMandato a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty INPSService:autorizzaMandato ;
-            owl:someValuesFrom owl:Thing ],
-        [ a owl:Restriction ;
-            owl:onProperty INPSService:tempoRichiestaAttivazione ;
-            owl:someValuesFrom rdfs:Literal ] ;
     rdfs:label "Atto Di Attivazione Mandato"@it,
         "SDD Mandate Activation Deed"@en ;
     rdfs:subClassOf [ a owl:Class ;
@@ -747,24 +744,33 @@ INPSService:AttoDiAttivazioneMandato a owl:Class ;
                         owl:maxCardinality "2"^^xsd:nonNegativeInteger ]
                     [ a owl:Restriction ;
                         owl:onProperty INPSService:stabilisceFlussoDiAddebito ;
-                        owl:minCardinality "2"^^xsd:nonNegativeInteger ] ) ] ;
+                        owl:minCardinality "2"^^xsd:nonNegativeInteger ] ) ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSService:autorizzaMandato ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSService:tempoRichiestaAttivazione ;
+            owl:someValuesFrom rdfs:Literal ] ;
     rdfs:comment "It is the formal authorization issued by the Mandate Debtor to the Mandate Creditor so that the latter can request the Bank depositary of the debtor's account to debit this account with the amount indicated in the deed itself, according to the recurrence also indicated , starting from the month following the time (date and time) in which the deed was issued. The deed is valid until revoked or until the debt is extinguished. The deed is necessarily and obligatorily linked to two current accounts respectively in the name of the Mandate Creditor and the Mandate Debtor."@en,
         "È l'autorizzazione formale rilasciata dal Debitore Mandato al Creditore Mandato affinchè quest'ultimo possa richiedere all'Istituto di Credito depositario del conto del debitore, di addebitare su tale conto l'importo indicato nell'atto stesso, secondo la ricorrenza anch'essa indicata, a partire dal mese successivo rispetto al tempo (data e ora) in cui l'atto è stato emesso. L'atto è valido fino a revoca ovvero all'estinzione del debito. L'atto è legato necessariamente e obbligatoriamente a due conti correnti intestati rispettivamente al Creditore Mandato e al Debitore Mandato."@it .
 
 INPSService:AttoDiRevocaMandato a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Atto Di Revoca Mandato"@it,
+        "SDD Mandate Withdrawl Deed"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty INPSService:revocaMandato ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
             owl:onProperty INPSService:tempoRichiestaRevoca ;
             owl:someValuesFrom rdfs:Literal ] ;
-    rdfs:label "Atto Di Revoca Mandato"@it,
-        "SDD Mandate Withdrawl Deed"@en ;
     rdfs:comment "It is the revocation communication of an active SDD mandate. The automatic debit will be suspended starting from the month following the time (date and time) of the presentation of the revocation."@en,
         "È la comunicazione di revoca di un mandato SDD attivo. L’addebito automatico sarà sospeso a partire dal mese successivo al tempo (data e ora) della presentazione della revoca."@it .
 
 INPSService:AvvisoDiPagamento a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Avviso Di Pagamento"@it,
+        "Payment Notice"@en ;
+    rdfs:subClassOf INPSService:ModalitàDiPagamento,
+        [ a owl:Restriction ;
             owl:onProperty INPSService:avvisoHaEnteCreditore ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
@@ -776,36 +782,36 @@ INPSService:AvvisoDiPagamento a owl:Class ;
         [ a owl:Restriction ;
             owl:onProperty INPSService:IUV ;
             owl:someValuesFrom rdfs:Literal ] ;
-    rdfs:label "Avviso Di Pagamento"@it,
-        "Payment Notice"@en ;
     owl:disjointWith INPSService:BollettinoMAV,
         INPSService:SessionePagamentoElettronico ;
     rdfs:comment "Document that contains the minimum information necessary to make a payment on the pagoPA platform. The payment advice fields are defined by AgID as follows: - Creditor body: contains all the details of the Public Administration to which the payment is intended (Istitution Name, Tax Code, CBILL Code); - Account holder: reports the data of the citizen/company making the payment; - Payment information: contains the notice code made up of the three fields that indicate the beneficiary institution and the IUV (Unique Payment Identification); - The amount; - The deadline (which may not coincide with the due date) ; - Details of amounts: the reason for the payment and the amount; in the particular case of the payment of contributions, the details that generated the amount of the contribution to be paid are reported in two copies; - Service availability and payment methods; where the postal current account number to be used is referred to the address of the payment portal to make the payment online or for payment via Poste using the new white PA slip “TD123”. - Barcode: for data acquisition through optical reading; - QR code: for data acquisition through optical reading. The elements contained in the notice allow payment to be made through the widest network of financial intermediaries and methods."@en,
         "È la notifica che contiene le informazioni minime necessarie ad effettuare un pagamento sulla piattaforma pagoPA. Gli attributi dell’Avviso Di Pagamento sono stabiliti da AgID come segue: - Ente creditore: riporta tutti gli estremi della Pubblica Amministrazione a cui è destinato il pagamento (Ragione Sociale, Codice Fiscale, Codice CBILL); - Intestatario: riporta i dati del cittadino/impresa che effettua il pagamento; - Informazioni di pagamento: contiene il Codice Avviso formato dai tre campi che indicano l’Ente beneficiario e dallo IUV (Identificativo Unico di Pagamento); - Importo; - Scadenza dell’avviso (che può non coincidere con la scadenza del dovuto); - Causale del versamento; nel caso particolare del pagamento di contributi sono riportate, in doppia copia, i dettagli che hanno generato l'importo contributivo da versare; - Disponibilità del servizio e modalità di pagamento; dove si rinvia all’indirizzo del portale dei pagamenti per effettuare il pagamento on line oppure per il pagamento tramite Poste attraverso l’utilizzo del nuovo bollettino PA bianco “TD123” il numero di conto corrente postale da utilizzare. - Codice a barre (per l’acquisizione dei dati attraverso lettura ottica); - Codice QR (per l’acquisizione dei dati attraverso lettura ottica). Gli elementi contenuti nell’avviso consentono di effettuare il pagamento attraverso la più ampia rete di modalità e intermediari finanziari."@it .
 
 INPSService:BollettinoDiPagamento a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Bollettino Di Pagamento"@it,
+        "Payment Slip"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty INPSService:haModalitàDiPagamento ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
             owl:onProperty INPSService:haOggettoDiPagamento ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Bollettino Di Pagamento"@it,
-        "Payment Slip"@en ;
     rdfs:comment "It is the notification of payment referring to a debt position towards an institution or a company. Depending on the Purpose to which the slip is necessarily associated, the latter indicates the reason for the payment, the amount, the expiry date and the possible payment methods. In recent times, the payment slip is increasingly embodied by the payment notice pagoPA which performs the same function as a postal payment slip or MAV but which makes payment possible using other channels besides the Italian post office."@en,
         "È la notifica di pagamento riferita a una posizione debitoria nei confronti di un Ente o un’Azienda. In funzione della Finalità a cui il bollettino è necessariamente associato quest'ultimo indica la causale del pagamento, l'importo, la data di scadenza e le possibili modalità di pagamento. In tempi recenti il bollettino viene sempre più spesso incarnato dall’Avviso di Pagamento pagoPA che svolge la stessa funzione di un bollettino postale o di un MAV ma che rende possibile il pagamento utilizzando anche altri canali oltre alle Poste Italiane."@it .
 
 INPSService:BollettinoMAV a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty INPSService:codiceMAV ;
-            owl:someValuesFrom rdfs:Literal ] ;
     rdfs:label "Bollettino MAV"@it,
         "MAV Payment Slip"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSService:codiceMAV ;
+            owl:someValuesFrom rdfs:Literal ] ;
     rdfs:comment "Il bollettino MAV (Pagamento Mediante Avviso) è un bollettino il cui pagamento segue una procedura interbancaria standard e che contiene le informazioni necessarie alla banca del creditore e al creditore stesso per la riconciliazione del pagamento."@it,
         "The MAV slip (Payment by Notice) is a slip whose payment follows a standard interbank procedure and which contains the information necessary for the creditor's bank and the creditor himself to reconcile the payment."@en .
 
 INPSService:ContoCorrente a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Bank Account"@en,
+        "Conto Corrente"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty INPSService:haIstitutoDiCredito ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
@@ -814,20 +820,19 @@ INPSService:ContoCorrente a owl:Class ;
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSService:haContoCorrente ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Bank Account"@en,
-        "Conto Corrente"@it ;
     rdfs:comment "A Bank Account is a financial account maintained by a bank or other financial institution in which the financial transactions between the bank and a customer, the Account Holder, are recorded. Each financial institution sets the terms and conditions for each type of account it offers, which are classified in commonly understood types, such as deposit accounts, credit card accounts, current accounts, loan accounts or many other types of account. An Account Holder may have more than one account. Once an account is opened, funds entrusted by the Account Holder to the financial institution on deposit are recorded in the account designated by the customer. Funds can be withdrawn from loan loaders."@en,
         "Un conto corrente è un conto finanziario gestito da una banca o altro istituto finanziario in cui sono registrate le transazioni finanziarie tra la banca e un cliente, il titolare del conto. Ogni istituto finanziario stabilisce i termini e le condizioni per ogni tipo di conto che offre, che sono classificati in tipologie comunemente intese, come conti di deposito, conti di carte di credito, conti correnti, conti di prestito o altri tipi di conto. Un titolare di conto può avere più di un conto. Una volta aperto un conto, i fondi affidati in deposito dal titolare del conto all'istituto finanziario vengono registrati sul conto designato dal cliente."@it .
 
 INPSService:Correntista a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Account Holder"@en,
+        "Correntista"@it ;
+    rdfs:subClassOf INPSCore:RuoloDiAgente,
+        [ a owl:Restriction ;
             owl:onProperty INPSService:haContoCorrente ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
             owl:onProperty INPSService:identificatoreCorrentista ;
             owl:someValuesFrom rdfs:Literal ] ;
-    rdfs:label "Account Holder"@en,
-        "Correntista"@it ;
     owl:disjointWith INPSService:Pagatore ;
     rdfs:comment "An Account Holder is the person listed or identified as the holder of a Bank Account. A person, other than a Financial Institution, holding a Bank Account for the benefit of another person as an agent, a custodian, a nominee, a signatory, an investment advisor, an intermediary, or as a legal guardian, is not treated as the Account Holder. In these circumstances that other person is the Account Holder. For example in the case of a parent/child relationship where the parent is acting as a legal guardian, the child is regarded as the Account Holder. With respect to a jointly held account, each joint holder is treated as an Account Holder."@en,
         "Sottoclasse di Ruolo di Agente che classifica i titolari di un conto bancario. Una persona, diversa da un istituto finanziario, titolare di un conto bancario a beneficio di un'altra persona in qualità di agente, custode, intestatario, firmatario, consulente per gli investimenti, intermediario o tutore legale, non è trattata come titolare del conto. In queste circostanze, l'altra persona è titolare del conto. Ad esempio, nel caso di un rapporto genitore/figlio in cui il genitore agisce in qualità di tutore legale, il figlio è considerato il titolare del conto. Per quanto riguarda un conto cointestato, ogni cointestatario è trattato come un titolare del conto, rappresentando ciascuno una istanza della classe. Ciascuna istanza possiede un identificatore."@it .
@@ -835,71 +840,80 @@ INPSService:Correntista a owl:Class ;
 INPSService:CreditoreMandato a owl:Class ;
     rdfs:label "Creditore Mandato"@it,
         "Mandate Creditor"@en ;
+    rdfs:subClassOf INPSService:Correntista ;
     rdfs:comment "Sottoclasse di Correntista associata a Mandato SDD con il ruolo di creditore."@it,
         "Sub-class of bank account holder associated with SDD Mandate with the role of creditor."@en .
 
 INPSService:DebitoreMandato a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf INPSService:haDebitoreMandato ] ;
-            owl:someValuesFrom owl:Thing ] ;
     rdfs:label "Debitore Mandato"@it,
         "Mandate Debtor"@en ;
+    rdfs:subClassOf INPSService:Correntista,
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSService:haDebitoreMandato ] ;
+            owl:someValuesFrom owl:Thing ] ;
     rdfs:comment "Sottoclasse di Correntista associata a Mandato SDD con il ruolo di debitore."@it,
         "Sub-class of bank account holder associated with SDD Mandate with the role of debtor."@en .
 
 INPSService:EnteCreditore a owl:Class ;
     rdfs:label "Creditor Institution"@en,
         "Ente Creditore"@it ;
+    rdfs:subClassOf INPSCore:RuoloDiOrganizzazione ;
     owl:disjointWith INPSService:PrestatoreDiServiziDiPagamento ;
     rdfs:comment "Role of a COV:PublicOrganization authorized to collect the sums due to the entity itself."@en,
         "Ruolo di COV:PublicOrganization abilitata a riscuotere le somme dovute all'ente stesso."@it .
 
 INPSService:EsitoPagamento a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Esito Pagamento"@it,
+        "Payment Outcome"@en ;
+    rdfs:subClassOf CPSV:Output,
+        L0:Sequence,
+        [ a owl:Restriction ;
             owl:onProperty INPSService:descrizioneEsitoPagamento ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
             owl:onProperty INPSService:identificatoreEsitoPagamento ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CPSV:producesOutput ] ;
+            owl:someValuesFrom INPSService:SistemaDiPagamentoElettronico ],
+        [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSService:emetteEsitoPagamento ] ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSService:haEsitoPagamento ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Esito Pagamento"@it,
-        "Payment Outcome"@en ;
-    rdfs:subClassOf CPSV:Output,
-        [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf CPSV:producesOutput ] ;
-            owl:someValuesFrom INPSService:SistemaDiPagamentoElettronico ] ;
     owl:disjointWith INPSService:MandatoSDD ;
     rdfs:comment "Esprime l'esito dell'unico pagamento a cui è associato. È caratterizzato da un identificativo e da una o più descrizioni. L'esito di un pagamento può non essere immediatamente noto poichè l'esecuzione del pagamento può coinvolgere diversi intermediari che potrebbero non comunicare in tempo reale l'effettivo buon fine dell'operazione a loro carico. Quindi a meno di un insuccesso immediato l'esito positivo è confermato salvo buon fine ovvero in attesa di conferma da parte dei PSP coinvolti. In questo senso la classe, potendo evolvere nel tempo, riferisce una sequenza di eventi (al più due) ciascuno associato ad un intervallo temporale di validità."@it,
         "Expresses the outcome of the single payment to which it is associated. It is characterized by an identifier and one or more descriptions. The outcome of a payment may not be immediately known as the execution of the payment may involve various intermediaries who may not communicate in real time the effective completion of the operation. Therefore, unless there is an immediate failure, the positive outcome is confirmed subject to successful completion or awaiting confirmation from the PSPs involved. In this sense, the class, being able to evolve over time, is linked to a sequence of events (at most two) each associated with a valid time interval."@en .
 
 INPSService:EsitoPagamentoDefinitivo a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Definitive Payment Outcome"@en,
+        "Esito Pagamento Definitivo"@it ;
+    rdfs:subClassOf TI:TimeIndexedEvent,
+        [ a owl:Restriction ;
             owl:onProperty INPSService:codiceRiscossione ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf L0:hasLastMember ] ;
             owl:someValuesFrom INPSService:EsitoPagamento ] ;
-    rdfs:label "Definitive Payment Outcome"@en,
-        "Esito Pagamento Definitivo"@it ;
     rdfs:comment "Esprime il buon esito del pagamento associato disponendo anche del codice riscossione che certifica l'avvenuto incasso della somma pagata. Dei pagamenti associati a esiti di questa classe è possibile ottenere la relativa ricevuta di pagamento."@it,
         "Expresses the successful outcome of the associated payment also having the collection code which certifies that the amount paid has been collected. For payments associated with outcomes of this class, it is possible to obtain the relative payment receipt."@en .
 
 INPSService:EsitoPagamentoProvvisorio a owl:Class ;
     rdfs:label "Esito Pagamento Provvisorio"@it,
         "Temporary Payment Outcome"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
+    rdfs:subClassOf TI:TimeIndexedEvent,
+        [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf L0:hasFirstMember ] ;
             owl:someValuesFrom INPSService:EsitoPagamento ] ;
     rdfs:comment "Aggregates of payment outcomes that have not yet been confirmed."@en,
         "Aggregazione di esiti di pagamenti non ancora confermati."@it .
 
 INPSService:FlussoDiRendicontazione a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Flusso Di Rendicontazione"@it,
+        "Reporting Flow"@en ;
+    rdfs:subClassOf L0:Collection,
+        [ a owl:Restriction ;
             owl:onProperty INPSService:haIntervalloDiRendicontazione ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
@@ -908,9 +922,6 @@ INPSService:FlussoDiRendicontazione a owl:Class ;
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSService:riceveFlussoDiRendicontazione ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Flusso Di Rendicontazione"@it,
-        "Reporting Flow"@en ;
-    rdfs:subClassOf L0:Collection ;
     rdfs:comment "Sottoclasse di L0:Collection che aggrega le ricevute di movimento emesse da un PSP nei confronti di un Ente, riferite ad un intervallo di tempo."@it,
         "Subclass of L0:Collection that aggregate the movement receipts issued by a PSP to an Organization, referring to a time interval."@en .
 
@@ -922,23 +933,31 @@ INPSService:IstitutoDiCredito a owl:Class ;
         "Un'impresa la cui attività è ricevere depositi o altri fondi rimborsabili dal pubblico e concedere credito per proprio conto."@it .
 
 INPSService:MandatoSDD a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Mandato SDD"@it,
+        "SDD Mandate"@en ;
+    rdfs:subClassOf L0:Sequence,
+        [ a owl:Restriction ;
             owl:onProperty INPSService:addebitoRicorrente ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
             owl:onProperty INPSService:haCreditoreMandato ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Mandato SDD"@it,
-        "SDD Mandate"@en ;
     rdfs:comment "Il Mandato SDD (Sepa Direct Debit) è uno strumento d'incasso preautorizzato utilizzato all'interno di paesi dell'area SEPA con scadenze e importi predeterminati. È caratterizzato da un codice identificativo e dalla possibilità di indicare se trattasi di un pagamento ricorrente o unico. Al mandato sono necessariamente legati il soggetto creditore e il soggetto debitore mediante l'indicazione dei rispettivi IBAN. Le istanze di questa classe possono evolvere nel tempo, assumendo di volta in volta un diverso stato le cui caratteristiche sono legate ad un intervallo temporale di validità. Per questo è sottoclasse della classe L0:Sequence (da OntoPiA - Ontologia Fondazionale). Ciascuno stato è rappresentato da una classe di tipo TI:TimeIndexEvent (da OntoPiA - Ontologia del Tempo) disgiunta da tutte le altre."@it,
         "SEPA Direct Debit (SDD) is a specific payment scheme within SEPA that is used for regular payments such as for subscriptions and bills. Like all SEPA payments, these transactions must be in euros, and payments are bank to bank. The class is linked to a sequence of temporal events that show the different status of the mandate over time."@en .
 
 INPSService:MandatoSDDAttivo a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf INPSService:autorizzaMandato ] ;
-            owl:someValuesFrom owl:Thing ] ;
     rdfs:label "Active SDD Mandate"@en,
         "Mandato SDD Attivo"@it ;
+    rdfs:subClassOf TI:TimeIndexedEvent,
+        [ a owl:Restriction ;
+            owl:onProperty INPSService:prenotaPagamento ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf L0:hasMember ] ;
+            owl:someValuesFrom INPSService:MandatoSDD ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSService:autorizzaMandato ] ;
+            owl:someValuesFrom owl:Thing ] ;
     owl:disjointWith INPSService:RID,
         INPSService:SessionePagamentoElettronico ;
     rdfs:comment "Mandato SDD che aggrega i mandati richiesti che hanno soddisfatto i controlli di congruità e titolarità e che hanno dato quindi luogo ad un Atto di Attivazione Mandato, legato univocamente e obbligatoriamente alla singola istanza di mandato."@it,
@@ -947,23 +966,31 @@ INPSService:MandatoSDDAttivo a owl:Class ;
 INPSService:MandatoSDDNonAttivabile a owl:Class ;
     rdfs:label "Mandato SDD Non Attivabile"@it,
         "SDD Mandate which cannot be activated"@en ;
+    rdfs:subClassOf TI:TimeIndexedEvent,
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf L0:hasMember ] ;
+            owl:someValuesFrom INPSService:MandatoSDD ] ;
     rdfs:comment "Mandato SDD che aggrega i mandati richiesti che non hanno soddisfatto i controlli di congruità e titolarità."@it,
         "SDD Mandate that aggregates requested mandates that have not satisfied the adequacy and entitlement checks."@en .
 
 INPSService:MandatoSDDRevocato a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf INPSService:revocaMandato ] ;
-            owl:someValuesFrom owl:Thing ] ;
     rdfs:label "Mandato SDD Revocato"@it,
         "Revoked SDD Mandate"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
+    rdfs:subClassOf TI:TimeIndexedEvent,
+        [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf L0:hasLastMember ] ;
-            owl:someValuesFrom INPSService:MandatoSDD ] ;
+            owl:someValuesFrom INPSService:MandatoSDD ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSService:revocaMandato ] ;
+            owl:someValuesFrom owl:Thing ] ;
     rdfs:comment "Mandato SDD che aggrega i mandati attivi che sono stati revocati con apposito Atto di Revoca Mandato, legato univocamente e obbligatoriamente alla singola istanza di mandato."@it,
         "SDD Mandate which aggregates the active mandates that have been revoked with a specific Mandate Revocation Deed, univocally and obligatorily linked to the single mandate instance."@en .
 
 INPSService:MandatoSDDRichiedibile a owl:Class ;
-    owl:equivalentClass [ a owl:Class ;
+    rdfs:label "Mandato SDD Richiedibile"@it,
+        "Requestable SDD Mandate"@en ;
+    rdfs:subClassOf TI:TimeIndexedEvent,
+        [ a owl:Class ;
             owl:intersectionOf (
                     INPSService:MandatoSDD
                     [ a owl:Class ;
@@ -973,35 +1000,40 @@ INPSService:MandatoSDDRichiedibile a owl:Class ;
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf L0:hasFirstMember ] ;
             owl:someValuesFrom INPSService:MandatoSDD ] ;
-    rdfs:label "Mandato SDD Richiedibile"@it,
-        "Requestable SDD Mandate"@en ;
     rdfs:comment "Mandati SDD precompilati a cura dell'Ente Creditore in cui sono presenti i dati del creditore ma assenti quelli del debitore. Questi mandati precompilati sono disponibili per tutte le pratiche rateizzate e costituiscono lo stato iniziale di un Mandato SDD."@it,
         "SDD Mandate pre-compiled by the Creditor Institution in which the creditor's data are present but those of the debtor absent. These pre-compiled mandates are available for all installments and constitute the initial state of an SDD Mandate."@en .
 
 INPSService:MandatoSDDRichiesto a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty INPSService:numeroContoDiAddebito ;
-            owl:someValuesFrom rdfs:Literal ] ;
     rdfs:label "Mandato SDD Richiesto"@it,
         "Requested SDD Mandate"@en ;
+    rdfs:subClassOf TI:TimeIndexedEvent,
+        [ a owl:Restriction ;
+            owl:onProperty INPSService:numeroContoDiAddebito ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf L0:hasMember ] ;
+            owl:someValuesFrom INPSService:MandatoSDD ] ;
     rdfs:comment "Mandato SDD per cui è stata richiesta l'attivazione indicando il numero di conto del debitore (IBAN). In questo stato l'Ente Creditore svolge le verifiche del caso sul numero indicato in primo luogo per accertare, anche con il coinvolgimento dell'Istituto di Credito depositario del conto, se l'intestatario del conto corrisponde all'intestatario debitore del mandato ovvero il pagatore della pratica di adeguamento contributivo che può essere il titolare della pratica stessa, se in vita, o, in caso contrario, un suo superstite. Queste verifiche possono essere contestuali alla richiesta ovvero richiedere un tempo di sospensione della richiesta in attesa di verifica."@it,
         "SDD Mandate for which activation has been requested by indicating the debtor's bank account number (IBAN). In this status, the Creditor Institution carries out the necessary checks on the number indicated firstly to ascertain, along with the involvement of the Account Depositary Credit Institution, whether the account holder corresponds to the debtor holder of the mandate or the payer of the tax contribution adjustment application, who may be the holder of the file itself, if alive, or, if not, one of his survivors. These checks can be contextual to the request or require a period of suspension of the request pending verification."@en .
 
 INPSService:ModalitàDiPagamento a owl:Class ;
-    owl:equivalentClass [ a owl:Class ;
+    rdfs:label "Modalità Di Pagamento"@it,
+        "Payment Mode"@en ;
+    rdfs:subClassOf [ a owl:Class ;
             owl:unionOf (
                     INPSService:AvvisoDiPagamento
                     INPSService:SessionePagamentoElettronico ) ],
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSService:haModalitàDiPagamento ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Modalità Di Pagamento"@it,
-        "Payment Mode"@en ;
     rdfs:comment "Esprime la modalità con cui viene pagato un Bollettino Di Pagamento. "@it,
         "Expresses the method by which a payment slip is paid."@en .
 
 INPSService:MovimentoDiDenaro a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Money Movement"@en,
+        "Movimento Di Denaro"@it ;
+    rdfs:subClassOf TI:TimeIndexedEvent,
+        [ a owl:Restriction ;
             owl:onProperty INPSService:causaleMovimento ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
@@ -1025,8 +1057,6 @@ INPSService:MovimentoDiDenaro a owl:Class ;
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSService:esegueAddebito ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Money Movement"@en,
-        "Movimento Di Denaro"@it ;
     rdfs:comment "Movement of a sum of money induced by a Payment Order on a Current Account. This movement increases (credit) or decreases (debit) the availability of money in the Current Account. A commission may be charged for executing the movement, usually in the debit transaction. It is characterized by an identifier, an amount and a date."@en,
         "Movimento di una somma di denaro indotto da un Ordine Di Pagamento su un Conto Corrente. Tale movimento aumenta (accredito) o diminuisce (addebito) la disponibilità di denaro del Conto Corrente. Può essere addebita una commissione per l'esecuzione del movimento, solitamente nell'operazione di addebito. È caratterizzata da un identificatore, un importo e una data."@it .
 
@@ -1037,7 +1067,10 @@ INPSService:OggettoDiPagamento a owl:Class ;
         "Expresses the reason for the associated Payment Slip."@en .
 
 INPSService:OrdineDiPagamento a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Ordine Di Pagamento"@it,
+        "Payment Order"@en ;
+    rdfs:subClassOf CPSV:Input,
+        [ a owl:Restriction ;
             owl:onProperty INPSService:dataOrdinePagamento ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
@@ -1050,22 +1083,21 @@ INPSService:OrdineDiPagamento a owl:Class ;
             owl:onProperty INPSService:identificatoreOrdinePagamento ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf INPSService:attivaOrdineDiPagamento ] ;
-            owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Ordine Di Pagamento"@it,
-        "Payment Order"@en ;
-    rdfs:subClassOf CPSV:Input,
-        [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf CPSV:hasInput ] ;
             owl:someValuesFrom INPSService:ServizioDiPagamento ],
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf CPSV:hasInput ] ;
-            owl:someValuesFrom INPSService:SistemaDiPagamentoElettronico ] ;
+            owl:someValuesFrom INPSService:SistemaDiPagamentoElettronico ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSService:attivaOrdineDiPagamento ] ;
+            owl:someValuesFrom owl:Thing ] ;
     rdfs:comment "It is the materialization of a Payment made through a Payment Service provided by a PSP. It is characterized by an identifier and a date and is uniquely linked to the money transactions that debit and credit the amount of money transferred via the payment order."@en,
         "È la materializzazione di un Pagamento eseguito tramite un Servizio Di Pagamento erogato da un PSP. È caratterizzato da un identificatore e da una data ed è legato univocamente alle transazioni di denaro che addebitano e accreditano la somma di denaro trasferita tramite l'ordine di pagamento."@it .
 
 INPSService:Pagamento a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Pagamento"@it,
+        "Payment"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty INPSService:dataPagamento ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
@@ -1077,8 +1109,6 @@ INPSService:Pagamento a owl:Class ;
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSService:eseguePagamento ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Pagamento"@it,
-        "Payment"@en ;
     owl:disjointWith INPSService:PrenotazioneDiPagamento ;
     rdfs:comment "Transfer of a sum of money as consideration for a service or as a means of extinguishing an obligation. If it takes place through traced methods, therefore not in cash, it materializes in a Payment Order entrusted to a PSP which is responsible for actually carrying out the transfer. It features a date and amount."@en,
         "Trasferimento di una somma di denaro come corrispettivo di una prestazione o come mezzo di estinzione di un'obbligazione. Nel caso avvenga tramite modalità tracciate, quindi non in contanti, si materializza in un Ordine Di Pagamento affidato ad un PSP che si fa carico di eseguire effettivamente il trasferimento. È caratterizzato da una data e un importo."@it .
@@ -1086,6 +1116,7 @@ INPSService:Pagamento a owl:Class ;
 INPSService:PagamentoContributiLavoratoreDomestico a owl:Class ;
     rdfs:label "Domestic Worker Contributions Payment"@en,
         "Pagamento contributi lavoratore domestico"@it ;
+    rdfs:subClassOf INPSService:OggettoDiPagamento ;
     owl:disjointWith INPSService:PagamentoContributiRRR ;
     rdfs:comment "Categorizing the debt positions relating to mandatory contributions due by employers of domestic workers."@en,
         "Classifica le posizioni debitorie relative ai contributi obbligatori dovuti dai datori di lavoro di lavoratori domestici."@it .
@@ -1093,13 +1124,15 @@ INPSService:PagamentoContributiLavoratoreDomestico a owl:Class ;
 INPSService:PagamentoContributiRRR a owl:Class ;
     rdfs:label "Aggregation Redemption And Annuity Contributions Payment"@en,
         "Pagamento contributi RRR"@it ;
+    rdfs:subClassOf INPSService:OggettoDiPagamento ;
     rdfs:comment "Categorizing the debt positions relating to contributory adjustments inherent in requests for aggregation, redemption and life annuities."@en,
         "Classifica le posizioni debitorie relative ad adeguamenti contributivi inerenti domande di Ricongiunzione, Riscatto e Rendita (abbv.: RRR)."@it .
 
 INPSService:Pagatore a owl:Class ;
     rdfs:label "Pagatore"@it,
         "Payer"@en ;
-    rdfs:subClassOf [ a owl:Restriction ;
+    rdfs:subClassOf INPSCore:RuoloDiAgente,
+        [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf RO:hasRiT ] ;
             owl:someValuesFrom INPSService:SistemaDiPagamentoElettronico ] ;
     rdfs:comment "Abstract superclass that aggregates agent roles called to make payments, using methods common to all payers, to satisfy obligations contracted by themselves or by another subject formally related to them."@en,
@@ -1108,12 +1141,15 @@ INPSService:Pagatore a owl:Class ;
 INPSService:POSVirtuale a owl:Class ;
     rdfs:label "POS Virtuale"@it,
         "Virtual POS"@en ;
+    rdfs:subClassOf INPSService:SistemaDiPagamentoElettronicoDisattivo ;
     owl:disjointWith INPSService:RetiAmiche ;
     rdfs:comment "A Virtual POS (Point of Sale) is typically a web or windows application that can be used by card-accepting merchants to manually authorize card transactions. Most Payment Services Providers offer this type of functionality."@en,
         "Sistema di pagamento costituito da un software capace di eseguire le transazioni di pagamento direttamente online."@it .
 
 INPSService:PrenotazioneDiPagamento a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Payment Reservation"@en,
+        "Prenotazione Di Pagamento"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty INPSService:dataDiPrenotazione ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
@@ -1125,15 +1161,14 @@ INPSService:PrenotazioneDiPagamento a owl:Class ;
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSService:prenotaPagamento ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Payment Reservation"@en,
-        "Prenotazione Di Pagamento"@it ;
     rdfs:comment "Esprime l'impegno ad eseguire un Ordine Di Pagamento. Tale impegno può essere espresso da un Sistema di Pagamento Elettronico nell'ambito di una Sessione di Pagamento, certificando così l'avvenuta presa in carico del pagamento da parte del PSP scelto dal Pagatore, salvo buon fine, oppure da parte di un Istituto Di Credito che ha ricevuto un Mandato SDD o, nel passato, un RID. È caratterizzato da un identificativo, una data di prenotazione e dall'importo del pagamento prenotato."@it,
         "Expresses the commitment to execute a Payment Order. This commitment can be expressed by an Electronic Payment System within a Payment Session, thus certifying that the payment has been taken over by the PSP chosen by the Payer, subject to collection, or by a Credit Institution who has received an SDD Mandate or, in the past, a RID. It is characterized by an identifier, a reservation date and the reserved payment amount."@en .
 
 INPSService:PrestatoreDiServiziDiPagamento a owl:Class ;
     rdfs:label "Payment Service Provider"@en,
         "Prestatore Di Servizi Di Pagamento"@it ;
-    rdfs:subClassOf [ a owl:Restriction ;
+    rdfs:subClassOf INPSCore:RuoloDiOrganizzazione,
+        [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
             owl:someValuesFrom INPSService:IstitutoDiCredito ] ;
     rdfs:comment "A Payment Service Provider offer online services to organizations and operators to accept electronic payments through different payment modes, such as credit cart, direct bank or postal account charge, or deferred or real time wire transfer."@en,
@@ -1142,99 +1177,118 @@ INPSService:PrestatoreDiServiziDiPagamento a owl:Class ;
 INPSService:RetiAmiche a owl:Class ;
     rdfs:label "Reti Amiche"@en,
         "Reti Amiche"@it ;
+    rdfs:subClassOf INPSService:SistemaDiPagamentoElettronicoDisattivo ;
     rdfs:comment "Il servizio Reti Amiche, istituito nel 2009, permette ai cittadini di ritirare la pensione, prelevare cifre, anche di modesta entità, versare contributi INPS per colf e badanti, o pagare bollette di terzi cui sono affidati incarichi di lavoro, presso tabaccherie italiane. Il sistema di pagamento online tramite la convenzione Reti Amiche è stato disattivato dal 13/02/2021 per Lottomatica, e per Unicredit, Poste Italiane e SisalPAY dal 28/02/2021. Reti Amiche è stato sostituito dal sistema PagoPA."@it,
         "The Reti Amiche service, established in 2009, allows citizens to withdraw their pension, withdraw even modest amounts, pay INPS contributions for domestic workers and carers, or pay bills for third parties entrusted with work assignments, at Italian tobacconists. The online payment system through the Reti Amiche convention was deactivated from 02/13/2021 for Lottomatica, and for Unicredit, Poste Italiane and SisalPAY from 02/28/2021. Reti Amiche has been replaced by the PagoPA system."@en .
 
 INPSService:RicevutaDiMovimento a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Movement Receipt"@en,
+        "Ricevuta Di Movimento"@it ;
+    rdfs:subClassOf CPSV:Output,
+        [ a owl:Restriction ;
             owl:onProperty INPSService:dataRicevuta ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
             owl:onProperty INPSService:identificatoreRicevuta ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CPSV:producesOutput ] ;
+            owl:someValuesFrom INPSService:ServizioDiPagamento ],
+        [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSService:inviaRicevutaDiMovimento ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Movement Receipt"@en,
-        "Ricevuta Di Movimento"@it ;
-    rdfs:subClassOf CPSV:Output,
-        [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf CPSV:producesOutput ] ;
-            owl:someValuesFrom INPSService:ServizioDiPagamento ] ;
     rdfs:comment "Attestation addressed to the Creditor Institution of the crediting of a sum of money determined by a Money Movement induced by a Payment Order. It is characterized by an identifier equivalent to the movement of which it is received and a date."@en,
         "Attestazione rivolta all'Ente Creditore dell'avvenuto movimento di accredito di una somma di denaro determinata da un Movimento Di Denaro indotto da un Ordine Di Pagamento. È caratterizzata da un identificativo equivalente a quello del movimento di cui è ricevuta e una data."@it .
 
 INPSService:RID a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty INPSService:codiceRID ;
-            owl:someValuesFrom rdfs:Literal ] ;
     rdfs:label "RID"@it,
         "RID (direct banking)"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSService:codiceRID ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSService:prenotaPagamento ;
+            owl:someValuesFrom owl:Thing ] ;
     rdfs:comment "An arrangement made with a bank that allows a third party to transfer money from a person's account on agreed dates, typically in order to pay bills."@en,
         "Il RID, Rapporto Interbancario Diretto, è un servizio di incasso crediti che prevede che il titolare di un conto corrente conferisca alla propria banca un’autorizzazione continuativa ad accettare gli ordini di addebito provenienti da un determinato creditore. Dal 1 febbraio 2014, per effetto del regolamento UE 260/2012, il RID è stato integralmente sostituito dall’analogo servizio Sepa Direct Debit (SDD)."@it .
 
 INPSService:ServizioDiPagamento a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty INPSService:codiceServizioDiPagamento ;
-            owl:someValuesFrom rdfs:Literal ],
-        [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf INPSService:haServizioDiPagamento ] ;
-            owl:someValuesFrom owl:Thing ] ;
     rdfs:label "Payment Service"@en,
         "Servizio Di Pagamento"@it ;
     rdfs:subClassOf CPSV:Service,
         [ a owl:Restriction ;
+            owl:onProperty INPSService:codiceServizioDiPagamento ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf CPSV:requiresService ] ;
-            owl:someValuesFrom INPSService:SistemaDiPagamentoElettronico ] ;
+            owl:someValuesFrom INPSService:SistemaDiPagamentoElettronico ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSService:haServizioDiPagamento ] ;
+            owl:someValuesFrom owl:Thing ] ;
     rdfs:comment "Payment service offered by a Payment Service Provider. Each service is identified by a code."@en,
         "Servizio di pagamento offerto da un Prestatore Di Servizi Di Pagamento. Ciascun servizio è identificato da un codice."@it .
 
 INPSService:SessionePagamentoElettronico a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Electronic Payment Session"@en,
+        "Sessione Pagamento Elettronico"@it ;
+    rdfs:subClassOf INPSService:ModalitàDiPagamento,
+        TI:TimeIndexedEvent,
+        [ a owl:Restriction ;
             owl:onProperty INPSService:identificatoreSessionePagamento ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSService:accedeServizioDiPagamento ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Electronic Payment Session"@en,
-        "Sessione Pagamento Elettronico"@it ;
     rdfs:comment "Classifica l'intervallo di tempo entro cui sono svolte le attività utili all'esecuzione di un pagamento da parte di un Pagatore nell'ambito di un Sistema Di Pagamento Elettronico, includendo l'attività di autenticazione e connessione al sistema stesso. È sottoclasse di TI:TimeIndexedEvent e ciascuna istanza ha un identificatore. L'accesso al Sistema Di Pagamento Elettronico può essere instradato da un ulteriore ambiente di interazione che propone il suddetto sistema come Modalità Di Pagamento."@it,
         "Classifies the time interval within which the activities useful for the execution of a payment by a Payer within an Electronic Payment System are carried out, including authentication and connection to the system itself. It is subclass of TI:TimeIndexedEvent and each instance has an identifier. Access to the Electronic Payment System can be routed from a further interaction environment that offers the aforementioned system as a Payment Method."@en .
 
 INPSService:SistemaDiPagamentoElettronico a owl:Class ;
-    owl:equivalentClass [ a owl:Class ;
+    rdfs:label "Electronic Payment System"@en,
+        "Sistema Di Pagamento Elettronico"@it ;
+    rdfs:subClassOf CPSV:InterOrganizationService,
+        CPSV:PublicService,
+        [ a owl:Class ;
             owl:unionOf (
                     INPSService:SistemaDiPagamentoElettronicoAttivo
                     INPSService:SistemaDiPagamentoElettronicoDisattivo ) ],
         [ a owl:Restriction ;
+            owl:onProperty CPSV:isPartOfEvent ;
+            owl:someValuesFrom INPSService:SessionePagamentoElettronico ],
+        [ a owl:Restriction ;
             owl:onProperty INPSService:codiceSistemaDiPagamento ;
             owl:someValuesFrom rdfs:Literal ] ;
-    rdfs:label "Electronic Payment System"@en,
-        "Sistema Di Pagamento Elettronico"@it ;
-    rdfs:subClassOf [ a owl:Class ;
-            owl:intersectionOf (
-                    CPSV:InterOrganizationService
-                    CPSV:PublicService ) ],
-        [ a owl:Restriction ;
-            owl:onProperty CPSV:isPartOfEvent ;
-            owl:someValuesFrom INPSService:SessionePagamentoElettronico ] ;
     rdfs:comment "An electronic payment system is a collection of specific tools and procedures that allow the virtual transfer of money without the physical passage of cash. The most widely used means of electronic payment is the payment card, which consists of a physical or digital medium, which contains the data of the holder and of the card itself, such as name and surname, the card number, the circuit to which the card adheres , the financial intermediary (bank, financial company or company operating in financial services) that issued it, the expiry date, etc. During the payment procedure, these data are read by the devices supplied by the person receiving the payment or, if the payment is made via the web, communicated by the payer through a specific page of the website dedicated to the payment and, if no anomalies are found, enable the transfer of the money, by the financial intermediary or the issuing company, from the cardholder to the creditor. The system then registers the amount, the date, the card details and the payment recipient. Among the other methods of electronic payment there is the electronic transfer which allows the transfer of money from your current account to that of the creditor through the home banking service. These systems include online payment platforms that act as telematic intermediaries between creditors and debtors, allowing the exchange of money between different Payment Service Providers (PSPs), each belonging to one of the parties to the transaction. Each system is identified by a specific identification code."@en,
         "Un sistema di pagamento elettronico è una collezione di specifici strumenti e procedure che permettono il trasferimento virtuale di denaro senza che vi sia il passaggio fisico di contante. Il mezzo di pagamento elettronico maggiormente utilizzato è la carta di pagamento, che consiste in un supporto fisico o digitale, che riporta i dati del titolare e della carta stessa, quali nome e cognome, il numero della carta, il circuito al quale la carta aderisce, l’intermediario finanziario (banca, società finanziaria o società che opera nei servizi finanziari) che l’ha emessa, la data di scadenza, etc. Durante la procedura di pagamento, tali dati vengono letti dai dispositivi in dotazione presso chi riceve il pagamento o, se il pagamento è effettuato via web, comunicati dal pagatore tramite una specifica pagina del sito dedicato al pagamento e, qualora non si rilevino anomalie, abilitano il trasferimento del denaro, a cura dell’intermediario finanziario o della società emittente, dal titolare della carta al soggetto creditore. Il sistema provvede, poi, a registrare l’importo, la data, i dati della carta e del destinatario del pagamento. Tra le altre modalità di pagamento elettronico vi è Il bonifico elettronico che permette il trasferimento di denaro dal proprio conto corrente a quello del creditore attraverso il servizio di home banking. Rientrano tra questi sistemi le piattaforme di pagamento on-line che fungono da intermediari telematici tra creditori e debitori, permettendo lo scambio di denaro tra diversi Prestatori di Servizi di Pagamento (PSP) ciascuno facente capo ad una delle parti della transazione. Ciascun sistema è identificato da uno specifico codice identificativo."@it .
 
 INPSService:SistemaDiPagamentoElettronicoAttivo a owl:Class ;
     rdfs:label "Active Electronic Payment System"@en,
         "Sistema Di Pagamento Elettronico Attivo"@it ;
+    rdfs:subClassOf INPSService:SistemaDiPagamentoElettronico,
+        [ a owl:Class ;
+            owl:oneOf (
+                    INPSService:PagoPA ) ],
+        [ a owl:Restriction ;
+            owl:onProperty CPSV:hasServiceStatus ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:oneOf (
+                            CPSV:Active ) ] ] ;
     owl:disjointWith INPSService:SistemaDiPagamentoElettronicoDisattivo ;
     rdfs:comment "An Active Electronic Payment System is an Electronic Payment System which is currently in use, meaning it can be adopted by citizens or organizations to make electronic payments."@en,
         "Un Sistema di Pagamento Elettronico Attivo è un Sistema di Pagamento Elettronico attualmente in funzione, e quindi usufruibile per effettuare dei pagamenti."@it .
 
 INPSService:SistemaDiPagamentoElettronicoDisattivo a owl:Class ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:unionOf (
-                    INPSService:POSVirtuale
-                    INPSService:RetiAmiche ) ] ;
     rdfs:label "Deactivated Electronic Payment System"@en,
         "Sistema Di Pagamento Elettronico Disattivo"@it ;
+    rdfs:subClassOf INPSService:SistemaDiPagamentoElettronico,
+        [ a owl:Class ;
+            owl:unionOf (
+                    INPSService:POSVirtuale
+                    INPSService:RetiAmiche ) ],
+        [ a owl:Restriction ;
+            owl:onProperty CPSV:hasServiceStatus ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:oneOf (
+                            CPSV:NonActive ) ] ] ;
     rdfs:comment "A Deactivated Electronic Payment System is an Electronic Payment System whose functionality is discontinued, and is therefore no longer usable by citizens or organizations to make electronic payments. The identity of such a system is maintained after its deactivation to characterize the payments made with this system in the past."@en,
         "Un Sistema Di Pagamento Elettronico Disattivo è un Sistema Di Pagamento Elettronico la cui funzionalità è stata disattivata, ed è quindi non più usufruibile da cittadini o organizzazioni per effettuare pagamenti elettronici. L'identità di un tale sistema viene mantenuta dopo la sua disattivazione per caratterizzare i pagamenti effettuati con tale sistema nel passato."@it .
 
@@ -1247,64 +1301,18 @@ TI:TimeIndexedEvent a owl:Class .
 TI:TimeInterval a owl:Class .
 
 [] a owl:Class ;
-    rdfs:subClassOf INPSCore:RuoloDiAgente ;
-    owl:unionOf (
-            INPSService:Correntista
-            INPSService:Pagatore ) .
+    rdfs:subClassOf INPSService:MandatoSDDRichiedibile ;
+    owl:intersectionOf (
+            INPSService:MandatoSDD
+            [ a owl:Class ;
+                owl:complementOf [ a owl:Restriction ;
+                        owl:onProperty INPSService:haDebitoreMandato ;
+                        owl:someValuesFrom owl:Thing ] ] ) .
 
 [] a owl:Class ;
-    rdfs:subClassOf INPSCore:RuoloDiOrganizzazione ;
-    owl:unionOf (
-            INPSService:EnteCreditore
-            INPSService:PrestatoreDiServiziDiPagamento ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf INPSService:Correntista ;
-    owl:unionOf (
-            INPSService:CreditoreMandato
-            INPSService:DebitoreMandato ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf INPSService:OggettoDiPagamento ;
-    owl:unionOf (
-            INPSService:PagamentoContributiLavoratoreDomestico
-            INPSService:PagamentoContributiRRR ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf L0:Sequence ;
-    owl:unionOf (
-            INPSService:EsitoPagamento
-            INPSService:MandatoSDD ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf TI:TimeIndexedEvent ;
-    owl:unionOf (
-            INPSService:EsitoPagamentoDefinitivo
-            INPSService:EsitoPagamentoProvvisorio
-            INPSService:MandatoSDDAttivo
-            INPSService:MandatoSDDNonAttivabile
-            INPSService:MandatoSDDRevocato
-            INPSService:MandatoSDDRichiedibile
-            INPSService:MandatoSDDRichiesto
-            INPSService:MovimentoDiDenaro
-            INPSService:SessionePagamentoElettronico ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty INPSService:prenotaPagamento ;
-            owl:someValuesFrom owl:Thing ] ;
-    owl:unionOf (
-            INPSService:MandatoSDDAttivo
-            INPSService:RID ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf L0:hasMember ] ;
-            owl:someValuesFrom INPSService:MandatoSDD ] ;
-    owl:unionOf (
-            INPSService:MandatoSDDAttivo
-            INPSService:MandatoSDDNonAttivabile
-            INPSService:MandatoSDDRichiesto ) .
+    rdfs:subClassOf INPSService:SistemaDiPagamentoElettronicoAttivo ;
+    owl:oneOf (
+            INPSService:PagoPA ) .
 
 ### Individuals
 
@@ -1418,8 +1426,18 @@ INPSService:PagoPA a dcatapit:Agent,
     rdfs:subClassOf COV:PublicOrganization .
 
 [] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf L0:hasLastMember ] ;
+    owl:someValuesFrom INPSService:EsitoPagamento ;
+    rdfs:subClassOf INPSService:EsitoPagamentoDefinitivo .
+
+[] a owl:Restriction ;
     owl:onProperty [ owl:inverseOf L0:hasMember ] ;
     owl:someValuesFrom INPSService:FlussoDiRendicontazione ;
     rdfs:subClassOf INPSService:RicevutaDiMovimento .
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf L0:hasFirstMember ] ;
+    owl:someValuesFrom INPSService:MandatoSDD ;
+    rdfs:subClassOf INPSService:MandatoSDDRichiedibile .
 
 ### Serialized using the ttlser deterministic serializer v1.2.0

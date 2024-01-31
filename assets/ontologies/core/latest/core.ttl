@@ -86,10 +86,8 @@ CLV:hasAddressComponent a owl:ObjectProperty .
 
 CLV:hasPrimaryAddress a owl:ObjectProperty .
 
-COV:hasOrganizzation a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:domain INPSCore:SedeINPS ;
-    rdfs:range COV:PublicOrganization .
+COV:hasPublicOrganization a owl:FunctionalProperty,
+        owl:ObjectProperty .
 
 CPV:hasCurrentResidence a owl:ObjectProperty .
 
@@ -127,114 +125,96 @@ INPSCore:codiceSedeINPS a owl:DatatypeProperty,
 COV:HomogeneousOrganizationalArea a owl:Class .
 
 COV:Organization a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty INPSCore:haSedeINPS ;
-            owl:someValuesFrom owl:Thing ] ;
+    rdfs:subClassOf L0:Agent ;
     owl:disjointWith CPV:Person .
 
-COV:PublicOrganization a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf COV:hasOrganizzation ] ;
-            owl:someValuesFrom owl:Thing ] .
+COV:PublicOrganization a owl:Class .
 
 CPV:Alive a owl:Class ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty INPSCore:haSedeINPS ;
-            owl:someValuesFrom owl:Thing ] ;
+    rdfs:subClassOf CPV:Person ;
     owl:disjointWith CPV:Dead .
 
-CPV:Dead a owl:Class .
+CPV:Dead a owl:Class ;
+    rdfs:subClassOf CPV:Person .
 
-CPV:Person a owl:Class .
+CPV:Person a owl:Class ;
+    rdfs:subClassOf L0:Agent .
 
 INPSCore:RuoloDiAgente a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
+    rdfs:label "Agent Role"@en,
+        "Ruolo Di Agente"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
             owl:someValuesFrom [ a owl:Class ;
                     owl:unionOf (
                             COV:Organization
                             CPV:Person ) ] ] ;
-    rdfs:label "Agent Role"@en,
-        "Ruolo Di Agente"@it ;
     rdfs:comment "Insieme di mansioni, compiti, responsabilità e doveri attribuiti in un intervallo di tempo, anche non ancora terminato, a una persona o a una organizzazione considerando queste ultime specializzazioni di agente. "@it,
         "Set of tasks, duties and responsabilities attributed in a certain time interval, possible not yet determined, to a person or organization, considering these as specializations of an agent. "@en .
 
 INPSCore:RuoloDiOrganizzazione a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
-            owl:someValuesFrom COV:Organization ] ;
     rdfs:label "Organization Role"@en,
         "Ruolo Di Organizzazione"@it ;
+    rdfs:subClassOf INPSCore:RuoloDiAgente,
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+            owl:someValuesFrom COV:Organization ] ;
     owl:disjointWith INPSCore:RuoloDiPersona ;
     rdfs:comment "Specializzazione della classe Ruolo Di Agente limitata alle sole organizzazioni."@it,
         "Subclass of the Agent Role class, limited to organization."@en .
 
 INPSCore:RuoloDiPersona a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
-            owl:someValuesFrom CPV:Person ] ;
     rdfs:label "Person Role"@en,
         "Ruolo Di Persona"@it ;
+    rdfs:subClassOf INPSCore:RuoloDiAgente,
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+            owl:someValuesFrom CPV:Person ] ;
     rdfs:comment "Specializzazione della classe Ruolo Di Agente limitata alle sole persone, in vita o decedute."@it,
         "Subclass of the Agent Role class, limited to people, living or deceased."@en .
 
 INPSCore:RuoloDiPersonaDeceduta a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
-            owl:someValuesFrom CPV:Dead ] ;
     rdfs:label "Dead Person Role"@en,
         "Ruolo Di Persona Deceduta"@it ;
+    rdfs:subClassOf INPSCore:RuoloDiPersona,
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+            owl:someValuesFrom CPV:Dead ] ;
     owl:disjointWith INPSCore:RuoloDiPersonaViva ;
     rdfs:comment "Specializzazione della classe Ruolo Di Persona limitata alle sole persone decedute."@it,
         "Subclass of the Person Role class, limited to only dead persons."@en .
 
 INPSCore:RuoloDiPersonaViva a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
-            owl:someValuesFrom CPV:Alive ] ;
     rdfs:label "Alive Person Role"@en,
         "Ruolo Di Persona Viva"@it ;
+    rdfs:subClassOf INPSCore:RuoloDiPersona,
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+            owl:someValuesFrom CPV:Alive ] ;
     rdfs:comment "Specializzazione della classe Ruolo Di Persona limitata alle sole persone in vita."@it,
         "Subclass of the Person Role class, limited to only alive persons."@en .
 
 INPSCore:SedeINPS a owl:Class ;
-    owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty COV:hasOrganizzation ;
-            owl:someValuesFrom owl:Thing ],
+    rdfs:label "INPS Office"@en,
+        "Sede INPS"@it ;
+    rdfs:subClassOf COV:HomogeneousOrganizationalArea,
+        [ a owl:Restriction ;
+            owl:onProperty COV:hasPublicOrganization ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:oneOf (
+                            INPSCore:INPS ) ] ],
         [ a owl:Restriction ;
             owl:onProperty INPSCore:codiceSedeINPS ;
             owl:someValuesFrom rdfs:Literal ] ;
-    rdfs:label "INPS Office"@en,
-        "Sede INPS"@it ;
-    rdfs:subClassOf COV:HomogeneousOrganizationalArea ;
     rdfs:comment "INPS is divided into central, regional and metropolitan structures with guidance, monitoring and coordination tasks, and into territorial offices with operational and user contact functions. In particular, the Institute, throughout the Italian national territory, has set up a \"service network\" organization which, in a \"proximity\" logic, is divided into: metropolitan coordination structures, provincial level structures, regional structures. Each INPS office is similar to a Homogeneous Organizational Area (AOO), each benefiting from a single entry and/or exit document flow (IT Protocol service) for the provision of services and the receipt of requests. In this sense, each INPS office is assigned, in addition to an office code assigned by the Institute, also a unique AOO identification code within the Index of Public Administrations (IPA) which makes it possible to identify the telematic communication channels legally permitted that is, at least one certified mailbox for each AOO. The competent INPS office for a citizen and/or company is established on the basis of the citizen's residence and/or the address of the company headquarters."@en,
         "L’INPS è articolato in strutture centrali, regionali e metropolitane con compiti di indirizzo, monitoraggio e coordinamento, e in sedi territoriali con funzioni operative e di contatto con l’utenza. In particolare, l’Istituto, su tutto il territorio nazionale italiano, si è dotato di un’organizzazione “a reti di servizio” che, in logica di “prossimità”, si suddivide in: strutture di coordinamento metropolitano, strutture a livello provinciale, strutture a livello regionale. Ogni sede INPS è assimilabile ad un Area Organizzativa Omogenea (AOO) usufruendo ciascuna per l'erogazione di servizi e il ricevimento delle richieste, di un unico flusso documentale di entrata e/o uscita (servizio di Protocollo Informatico). In tal senso ad ogni Sede INPS è assegnato, oltre ad un codice di sede attribuito dall'Istituto, anche un codice identificativo AOO univoco nell'ambito dell'Indice delle Pubbliche Amministrazioni (IPA) che permette di individuare i canali di comunicazione telematica normativamente pervisti e cioè almeno una casella di posta elettronica certificata per ciascun AOO. La sede INPS competente per un cittadino e/o un'impresa è stabilita in base alla residenza del cittadino e/o all'indirizzo della sede dell'impresa."@it .
 
 L0:Agent a owl:Class .
 
 [] a owl:Class ;
-    rdfs:subClassOf CPV:Person ;
-    owl:unionOf (
-            CPV:Alive
-            CPV:Dead ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf INPSCore:RuoloDiAgente ;
-    owl:unionOf (
-            INPSCore:RuoloDiOrganizzazione
-            INPSCore:RuoloDiPersona ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf INPSCore:RuoloDiPersona ;
-    owl:unionOf (
-            INPSCore:RuoloDiPersonaDeceduta
-            INPSCore:RuoloDiPersonaViva ) .
-
-[] a owl:Class ;
-    rdfs:subClassOf L0:Agent ;
-    owl:unionOf (
-            COV:Organization
-            CPV:Person ) .
+    rdfs:subClassOf COV:PublicOrganization ;
+    owl:oneOf (
+            INPSCore:INPS ) .
 
 ### Individuals
 
@@ -301,7 +281,41 @@ L0:Agent a owl:Class .
     foaf:name "Digital Transformation Team"@en,
         "Team per la Trasformazione Digitale"@it .
 
+INPSCore:INPS a owl:NamedIndividual ;
+    rdfs:label "INPS"@en,
+        "INPS"@it ;
+    rdfs:comment "L'Istituto Nazionale della Previdenza Sociale è l'Ente Pubblico che gestisce la liquidazione e il pagamento delle pensioni e delle indennità di natura previdenziale e assistenziale. Le pensioni sono prestazioni previdenziali, determinate sulla base di rapporti assicurativi e finanziate con i contributi di lavoratori e aziende pubbliche e private. Invece, le prestazioni assistenziali o “a sostegno del reddito” tutelano i lavoratori che si trovano in particolari momenti di difficoltà della loro vita lavorativa e provvedono al pagamento di somme destinate a coloro che hanno redditi modesti e famiglie numerose. Per alcune di queste prestazioni l’INPS è coinvolto solo nella fase di erogazione, mentre per altre svolge tutto il procedimento di assegnazione."@it,
+        "The National Institute for Social Security is the Italian Public Organization that supplies pensions and other services of social security to who has the right. It also does contributory activity collecting the contributions. The services are based on a mandatory insurance relationship and are funded with the contributions of employed workers, elaborated as a percentage of the wage. It also manages welfare services or \"income support\" services that protect workers who find themselves in particular difficult moments in their working life and provide for the payment of sums intended for those with modest incomes and large families."@en .
+
 ### Axioms
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+    owl:someValuesFrom COV:Organization ;
+    rdfs:subClassOf INPSCore:RuoloDiOrganizzazione .
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+    owl:someValuesFrom CPV:Alive ;
+    rdfs:subClassOf INPSCore:RuoloDiPersonaViva .
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+    owl:someValuesFrom CPV:Dead ;
+    rdfs:subClassOf INPSCore:RuoloDiPersonaDeceduta .
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+    owl:someValuesFrom CPV:Person ;
+    rdfs:subClassOf INPSCore:RuoloDiPersona .
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf RO:holdsRoleInTime ] ;
+    owl:someValuesFrom [ a owl:Class ;
+            owl:unionOf (
+                    COV:Organization
+                    CPV:Person ) ] ;
+    rdfs:subClassOf INPSCore:RuoloDiAgente .
 
 [] a owl:Restriction ;
     owl:onProperty [ owl:inverseOf CLV:hasAddressComponent ] ;

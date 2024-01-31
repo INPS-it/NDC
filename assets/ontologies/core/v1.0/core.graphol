@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <graphol version="3">
   <project name="ontologiaINPSCore" version="1.0">
-    <ontology iri="https://w3id.org/italia/social-security/onto/core/" addLabelFromSimpleName="0" prefix="INPSCore" lang="en" addLabelFromUserInput="0">
+    <ontology iri="https://w3id.org/italia/social-security/onto/core/" addLabelFromUserInput="0" addLabelFromSimpleName="0" prefix="INPSCore" lang="en">
       <imports/>
       <prefixes>
         <prefix>
@@ -155,7 +155,7 @@
           <value>https://w3id.org/italia/onto/COV/PublicOrganization</value>
         </iri>
         <iri>
-          <value>https://w3id.org/italia/onto/COV/hasOrganizzation</value>
+          <value>https://w3id.org/italia/onto/COV/hasPublicOrganization</value>
           <functional/>
         </iri>
         <iri>
@@ -553,492 +553,481 @@
       </iris>
     </ontology>
     <diagrams>
-      <diagram height="5000" width="5000" name="Interfaccia">
-        <node id="n147" type="disjoint-union" color="#000000">
-          <geometry height="30" width="50" y="-90" x="20"/>
+      <diagram width="5000" name="Interfaccia" height="5000">
+        <node color="#000000" type="disjoint-union" id="n147">
+          <geometry width="50" height="30" y="-90" x="20"/>
         </node>
-        <node id="n148" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="-88" x="295"/>
+        <node color="#fcfcfc" type="concept" id="n148">
+          <geometry width="110" height="50" y="-88" x="295"/>
           <iri>https://w3id.org/italia/onto/CPV/Dead</iri>
-          <label height="23" width="110" y="-88" x="295" size="12" customSize="0"/>
+          <label width="110" height="23" customSize="0" size="12" y="-88" x="295"/>
         </node>
-        <node id="n150" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="-90" x="430"/>
-          <label height="23" width="39" y="-70" x="430" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n150">
+          <geometry width="20" height="20" y="-90" x="430"/>
+          <label width="39" height="23" customSize="0" size="12" y="-70" x="430">exists</label>
         </node>
-        <node id="n151" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="-600" x="700"/>
+        <node color="#fcfcfc" type="concept" id="n151">
+          <geometry width="110" height="50" y="-600" x="700"/>
           <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiOrganizzazione</iri>
-          <label height="38" width="110" y="-600" x="700" size="12" customSize="0"/>
+          <label width="110" height="38" customSize="0" size="12" y="-600" x="700"/>
         </node>
-        <node id="n152" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="-600" x="430"/>
-          <label height="23" width="39" y="-620" x="425" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n152">
+          <geometry width="20" height="20" y="-600" x="430"/>
+          <label width="39" height="23" customSize="0" size="12" y="-620" x="425">exists</label>
         </node>
-        <node id="n153" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="-90" x="700"/>
+        <node color="#fcfcfc" type="concept" id="n153">
+          <geometry width="110" height="50" y="-90" x="700"/>
           <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaDeceduta</iri>
-          <label height="38" width="110" y="-90" x="700" size="12" customSize="0"/>
+          <label width="110" height="38" customSize="0" size="12" y="-90" x="700"/>
         </node>
-        <node id="n154" type="disjoint-union" color="#000000">
-          <geometry height="30" width="50" y="-20" x="700"/>
+        <node color="#000000" type="disjoint-union" id="n154">
+          <geometry width="50" height="30" y="-20" x="700"/>
         </node>
-        <node id="n155" type="disjoint-union" color="#000000">
-          <geometry height="30" width="50" y="-490" x="700"/>
+        <node color="#000000" type="disjoint-union" id="n155">
+          <geometry width="50" height="30" y="-490" x="700"/>
         </node>
-        <node id="n156" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="730" x="-640"/>
-          <label height="23" width="39" y="750" x="-640" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n156">
+          <geometry width="20" height="20" y="730" x="-640"/>
+          <label width="39" height="23" customSize="0" size="12" y="750" x="-640">exists</label>
         </node>
-        <node id="n157" type="value-domain" color="#fcfcfc">
-          <geometry height="40" width="90" y="730" x="-740"/>
+        <node color="#fcfcfc" type="value-domain" id="n157">
+          <geometry width="90" height="40" y="730" x="-740"/>
           <iri>http://www.w3.org/2001/XMLSchema#string</iri>
-          <label height="23" width="90" y="730" x="-740" size="12" customSize="0"/>
+          <label width="90" height="23" customSize="0" size="12" y="730" x="-740"/>
         </node>
-        <node id="n26" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="-710" x="430"/>
-          <label height="23" width="39" y="-730" x="430" size="12" customSize="0">exists</label>
+        <node color="#fcfcfc" type="enumeration" id="n160">
+          <geometry width="50" height="30" y="800" x="-210"/>
+          <label width="40" height="23" customSize="0" size="12" y="800" x="-210"/>
         </node>
-        <node id="n27" type="role" color="#fcfcfc">
-          <geometry height="50" width="70" y="-390" x="480"/>
+        <node color="#000000" type="range-restriction" id="n26">
+          <geometry width="20" height="20" y="-710" x="430"/>
+          <label width="39" height="23" customSize="0" size="12" y="-730" x="430">exists</label>
+        </node>
+        <node color="#fcfcfc" type="role" id="n27">
+          <geometry width="70" height="50" y="-390" x="480"/>
           <iri>https://w3id.org/italia/onto/RO/holdsRoleInTime</iri>
-          <label height="23" width="116" y="-420" x="420" size="12" customSize="0"/>
+          <label width="116" height="23" customSize="0" size="12" y="-420" x="420"/>
         </node>
-        <node id="n29" type="attribute" color="#fcfcfc">
-          <geometry height="20" width="20" y="730" x="-550"/>
+        <node color="#fcfcfc" type="attribute" id="n29">
+          <geometry width="20" height="20" y="730" x="-550"/>
           <iri>https://w3id.org/italia/social-security/onto/core/codiceSedeINPS</iri>
-          <label height="23" width="101" y="710" x="-555" size="12" customSize="0"/>
+          <label width="101" height="23" customSize="0" size="12" y="710" x="-555"/>
         </node>
-        <node id="n31" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="-190" x="700"/>
+        <node color="#fcfcfc" type="concept" id="n31">
+          <geometry width="110" height="50" y="-190" x="700"/>
           <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiPersona</iri>
-          <label height="23" width="110" y="-190" x="700" size="12" customSize="0"/>
+          <label width="110" height="23" customSize="0" size="12" y="-190" x="700"/>
         </node>
-        <node id="n32" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="520" x="-360"/>
-          <label height="23" width="39" y="535" x="-325" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n32">
+          <geometry width="20" height="20" y="520" x="-360"/>
+          <label width="39" height="23" customSize="0" size="12" y="535" x="-325">exists</label>
         </node>
-        <node id="n33" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="730" x="-360"/>
+        <node color="#fcfcfc" type="concept" id="n33">
+          <geometry width="110" height="50" y="730" x="-360"/>
           <iri>https://w3id.org/italia/social-security/onto/core/SedeINPS</iri>
-          <label height="23" width="110" y="730" x="-360" size="12" customSize="0"/>
+          <label width="110" height="23" customSize="0" size="12" y="730" x="-360"/>
         </node>
-        <node id="n34" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="840" x="-360"/>
+        <node color="#fcfcfc" type="concept" id="n34">
+          <geometry width="110" height="50" y="840" x="-360"/>
           <iri>https://w3id.org/italia/onto/COV/HomogeneousOrganizationalArea</iri>
-          <label height="53" width="110" y="840" x="-360" size="12" customSize="0"/>
+          <label width="110" height="53" customSize="0" size="12" y="840" x="-360"/>
         </node>
-        <node id="n35" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="-190" x="430"/>
-          <label height="23" width="39" y="-170" x="430" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n35">
+          <geometry width="20" height="20" y="-190" x="430"/>
+          <label width="39" height="23" customSize="0" size="12" y="-170" x="430">exists</label>
         </node>
-        <node id="n36" type="domain-restriction" color="#fcfcfc">
-          <geometry height="20" width="20" y="350" x="-360"/>
-          <label height="23" width="39" y="330" x="-340" size="12" customSize="0">exists</label>
+        <node color="#fcfcfc" type="domain-restriction" id="n36">
+          <geometry width="20" height="20" y="350" x="-360"/>
+          <label width="39" height="23" customSize="0" size="12" y="330" x="-340">exists</label>
         </node>
-        <node id="n37" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="-190" x="20"/>
+        <node color="#fcfcfc" type="concept" id="n37">
+          <geometry width="110" height="50" y="-190" x="20"/>
           <iri>https://w3id.org/italia/onto/CPV/Person</iri>
-          <label height="23" width="110" y="-190" x="20" size="12" customSize="0"/>
+          <label width="110" height="23" customSize="0" size="12" y="-190" x="20"/>
         </node>
-        <node id="n40" type="role" color="#fcfcfc">
-          <geometry height="50" width="70" y="440" x="-360"/>
+        <node color="#fcfcfc" type="role" id="n40">
+          <geometry width="70" height="50" y="440" x="-360"/>
           <iri>https://w3id.org/italia/social-security/onto/core/haSedeINPS</iri>
-          <label height="23" width="79" y="440" x="-435" size="12" customSize="0"/>
+          <label width="79" height="23" customSize="0" size="12" y="440" x="-435"/>
         </node>
-        <node id="n41" type="domain-restriction" color="#fcfcfc">
-          <geometry height="20" width="20" y="730" x="-470"/>
-          <label height="23" width="39" y="708" x="-470" size="12" customSize="0">exists</label>
+        <node color="#fcfcfc" type="domain-restriction" id="n41">
+          <geometry width="20" height="20" y="730" x="-470"/>
+          <label width="39" height="23" customSize="0" size="12" y="708" x="-470">exists</label>
         </node>
-        <node id="n45" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="-830" x="20"/>
+        <node color="#fcfcfc" type="concept" id="n45">
+          <geometry width="110" height="50" y="-830" x="20"/>
           <iri>https://w3id.org/italia/onto/l0/Agent</iri>
-          <label height="23" width="110" y="-830" x="20" size="12" customSize="0"/>
+          <label width="110" height="23" customSize="0" size="12" y="-830" x="20"/>
         </node>
-        <node id="n55" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="190" x="20"/>
+        <node color="#fcfcfc" type="concept" id="n55">
+          <geometry width="110" height="50" y="190" x="20"/>
           <iri>https://w3id.org/italia/onto/CPV/Alive</iri>
-          <label height="23" width="110" y="190" x="20" size="12" customSize="0"/>
+          <label width="110" height="23" customSize="0" size="12" y="190" x="20"/>
         </node>
-        <node id="n56" type="role" color="#fcfcfc">
-          <geometry height="50" width="70" y="190" x="290"/>
+        <node color="#fcfcfc" type="role" id="n56">
+          <geometry width="70" height="50" y="190" x="290"/>
           <iri>https://w3id.org/italia/onto/CPV/hasCurrentResidence</iri>
-          <label height="23" width="147" y="190" x="405" size="12" customSize="0"/>
+          <label width="147" height="23" customSize="0" size="12" y="190" x="405"/>
         </node>
-        <node id="n57" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="190" x="140"/>
-          <label height="23" width="39" y="170" x="140" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n57">
+          <geometry width="20" height="20" y="190" x="140"/>
+          <label width="39" height="23" customSize="0" size="12" y="170" x="140">exists</label>
         </node>
-        <node id="n58" type="role" color="#fcfcfc">
-          <geometry height="50" width="70" y="520" x="290"/>
+        <node color="#fcfcfc" type="role" id="n58">
+          <geometry width="70" height="50" y="520" x="290"/>
           <iri>https://w3id.org/italia/onto/CLV/hasAddress</iri>
-          <label height="23" width="95" y="520" x="380" size="12" customSize="0"/>
+          <label width="95" height="23" customSize="0" size="12" y="520" x="380"/>
         </node>
-        <node id="n59" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="520" x="140"/>
-          <label height="23" width="39" y="540" x="135" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n59">
+          <geometry width="20" height="20" y="520" x="140"/>
+          <label width="39" height="23" customSize="0" size="12" y="540" x="135">exists</label>
         </node>
-        <node id="n60" type="role" color="#fcfcfc">
-          <geometry height="50" width="70" y="350" x="290"/>
+        <node color="#fcfcfc" type="role" id="n60">
+          <geometry width="70" height="50" y="350" x="290"/>
           <iri>https://w3id.org/italia/onto/CLV/hasAddressComponent</iri>
-          <label height="23" width="157" y="350" x="410" size="12" customSize="0"/>
+          <label width="157" height="23" customSize="0" size="12" y="350" x="410"/>
         </node>
-        <node id="n61" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="290" x="140"/>
-          <label height="23" width="39" y="290" x="110" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n61">
+          <geometry width="20" height="20" y="290" x="140"/>
+          <label width="39" height="23" customSize="0" size="12" y="290" x="110">exists</label>
         </node>
-        <node id="n62" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="420" x="140"/>
-          <label height="23" width="39" y="415" x="105" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n62">
+          <geometry width="20" height="20" y="420" x="140"/>
+          <label width="39" height="23" customSize="0" size="12" y="415" x="105">exists</label>
         </node>
-        <node id="n63" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="50" x="430"/>
-          <label height="23" width="39" y="70" x="430" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n63">
+          <geometry width="20" height="20" y="50" x="430"/>
+          <label width="39" height="23" customSize="0" size="12" y="70" x="430">exists</label>
         </node>
-        <node id="n64" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="50" x="700"/>
+        <node color="#fcfcfc" type="concept" id="n64">
+          <geometry width="110" height="50" y="50" x="700"/>
           <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</iri>
-          <label height="38" width="110" y="50" x="700" size="12" customSize="0"/>
+          <label width="110" height="38" customSize="0" size="12" y="50" x="700"/>
         </node>
-        <node id="n65" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="-710" x="700"/>
+        <node color="#fcfcfc" type="concept" id="n65">
+          <geometry width="110" height="50" y="-710" x="700"/>
           <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiAgente</iri>
-          <label height="23" width="110" y="-710" x="700" size="12" customSize="0"/>
+          <label width="110" height="23" customSize="0" size="12" y="-710" x="700"/>
         </node>
-        <node id="n66" type="disjoint-union" color="#000000">
-          <geometry height="30" width="50" y="-710" x="20"/>
+        <node color="#000000" type="disjoint-union" id="n66">
+          <geometry width="50" height="30" y="-710" x="20"/>
         </node>
-        <node id="n67" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="-710" x="-360"/>
+        <node color="#fcfcfc" type="concept" id="n67">
+          <geometry width="110" height="50" y="-710" x="-360"/>
           <iri>https://w3id.org/italia/onto/COV/Organization</iri>
-          <label height="23" width="110" y="-710" x="-360" size="12" customSize="0"/>
+          <label width="110" height="23" customSize="0" size="12" y="-710" x="-360"/>
         </node>
-        <node id="n68" type="role" color="#fcfcfc">
-          <geometry height="50" width="70" y="-720" x="-760"/>
+        <node color="#fcfcfc" type="role" id="n68">
+          <geometry width="70" height="50" y="-720" x="-760"/>
           <iri>https://w3id.org/italia/onto/CLV/hasPrimaryAddress</iri>
-          <label height="23" width="136" y="-720" x="-870" size="12" customSize="0"/>
+          <label width="136" height="23" customSize="0" size="12" y="-720" x="-870"/>
         </node>
-        <node id="n69" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="-720" x="-640"/>
-          <label height="23" width="39" y="-742" x="-640" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n69">
+          <geometry width="20" height="20" y="-720" x="-640"/>
+          <label width="39" height="23" customSize="0" size="12" y="-742" x="-640">exists</label>
         </node>
-        <node id="n70" type="union" color="#fcfcfc">
-          <geometry height="30" width="50" y="190" x="-360"/>
-          <label height="23" width="18" y="190" x="-360" size="12" customSize="0"/>
+        <node color="#fcfcfc" type="union" id="n70">
+          <geometry width="50" height="30" y="190" x="-360"/>
+          <label width="18" height="23" customSize="0" size="12" y="190" x="-360"/>
         </node>
-        <node id="n71" type="role" color="#fcfcfc">
-          <geometry height="50" width="70" y="-70" x="-750"/>
+        <node color="#fcfcfc" type="role" id="n71">
+          <geometry width="70" height="50" y="-70" x="-750"/>
           <iri>https://w3id.org/italia/onto/CLV/hasAddressComponent</iri>
-          <label height="23" width="157" y="-70" x="-870" size="12" customSize="0"/>
+          <label width="157" height="23" customSize="0" size="12" y="-70" x="-870"/>
         </node>
-        <node id="n72" type="role" color="#fcfcfc">
-          <geometry height="50" width="70" y="520" x="-750"/>
+        <node color="#fcfcfc" type="role" id="n72">
+          <geometry width="70" height="50" y="520" x="-750"/>
           <iri>https://w3id.org/italia/onto/CLV/hasAddress</iri>
-          <label height="23" width="95" y="520" x="-835" size="12" customSize="0"/>
+          <label width="95" height="23" customSize="0" size="12" y="520" x="-835"/>
         </node>
-        <node id="n73" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="520" x="-640"/>
-          <label height="23" width="39" y="540" x="-640" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n73">
+          <geometry width="20" height="20" y="520" x="-640"/>
+          <label width="39" height="23" customSize="0" size="12" y="540" x="-640">exists</label>
         </node>
-        <node id="n74" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="-170" x="-640"/>
-          <label height="23" width="39" y="-170" x="-605" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n74">
+          <geometry width="20" height="20" y="-170" x="-640"/>
+          <label width="39" height="23" customSize="0" size="12" y="-170" x="-605">exists</label>
         </node>
-        <node id="n75" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="40" x="-640"/>
-          <label height="23" width="39" y="40" x="-605" size="12" customSize="0">exists</label>
+        <node color="#000000" type="range-restriction" id="n75">
+          <geometry width="20" height="20" y="40" x="-640"/>
+          <label width="39" height="23" customSize="0" size="12" y="40" x="-605">exists</label>
         </node>
-        <node id="n80" type="role" color="#fcfcfc">
-          <geometry height="50" width="70" y="730" x="-110"/>
-          <iri>https://w3id.org/italia/onto/COV/hasOrganizzation</iri>
-          <label height="23" width="127" y="695" x="-110" size="12" customSize="0"/>
+        <node color="#fcfcfc" type="role" id="n80">
+          <geometry width="70" height="50" y="730" x="-90"/>
+          <iri>https://w3id.org/italia/onto/COV/hasPublicOrganization</iri>
+          <label width="154" height="23" customSize="0" size="12" y="695" x="-90"/>
         </node>
-        <node id="n81" type="domain-restriction" color="#fcfcfc">
-          <geometry height="20" width="20" y="730" x="-210"/>
-          <label height="23" width="39" y="708" x="-210" size="12" customSize="0">exists</label>
+        <node color="#fcfcfc" type="domain-restriction" id="n81">
+          <geometry width="20" height="20" y="730" x="-210"/>
+          <label width="39" height="23" customSize="0" size="12" y="708" x="-210">exists</label>
         </node>
-        <node id="n82" type="range-restriction" color="#000000">
-          <geometry height="20" width="20" y="730" x="-10"/>
-          <label height="23" width="39" y="708" x="-10" size="12" customSize="0">exists</label>
-        </node>
-        <node id="n83" type="concept" color="#fcfcfc">
-          <geometry height="50" width="110" y="730" x="150"/>
+        <node color="#fcfcfc" type="concept" id="n83">
+          <geometry width="110" height="50" y="800" x="-80"/>
           <iri>https://w3id.org/italia/onto/COV/PublicOrganization</iri>
-          <label height="38" width="110" y="730" x="150" size="12" customSize="0"/>
+          <label width="110" height="38" customSize="0" size="12" y="800" x="-80"/>
         </node>
-        <node id="n88" type="individual" color="#fcfcfc">
-          <geometry height="60" width="60" y="730" x="320"/>
+        <node color="#fcfcfc" type="individual" id="n88">
+          <geometry width="60" height="60" y="890" x="-210"/>
           <iri>https://w3id.org/italia/social-security/onto/core/INPS</iri>
-          <label height="23" width="60" y="730" x="320" size="12" customSize="0"/>
+          <label width="60" height="23" customSize="0" size="12" y="890" x="-210"/>
         </node>
-        <edge id="e103" type="input" source="n80" target="n81">
-          <point y="730" x="-110"/>
+        <edge type="input" source="n80" target="n81" id="e103">
+          <point y="730" x="-90"/>
           <point y="730" x="-210"/>
         </edge>
-        <edge id="e104" type="input" source="n80" target="n82">
-          <point y="730" x="-110"/>
-          <point y="730" x="-10"/>
-        </edge>
-        <edge id="e105" type="equivalence" source="n33" target="n81">
-          <point y="730" x="-360"/>
-          <point y="730" x="-210"/>
-        </edge>
-        <edge id="e107" type="equivalence" source="n82" target="n83">
-          <point y="730" x="-10"/>
-          <point y="730" x="150"/>
-        </edge>
-        <edge id="e117" type="membership" source="n88" target="n83">
-          <point y="730" x="320"/>
-          <point y="730" x="150"/>
-        </edge>
-        <edge id="e173" type="inclusion" source="n147" target="n37">
+        <edge type="inclusion" source="n147" target="n37" id="e173">
           <point y="-90" x="20"/>
           <point y="-190" x="20"/>
         </edge>
-        <edge id="e175" type="input" source="n55" target="n147">
+        <edge type="input" source="n55" target="n147" id="e175">
           <point y="190" x="20"/>
           <point y="-90" x="20"/>
         </edge>
-        <edge id="e176" type="input" source="n148" target="n147">
+        <edge type="input" source="n148" target="n147" id="e176">
           <point y="-88" x="295"/>
           <point y="-90" x="20"/>
         </edge>
-        <edge id="e177" type="input" source="n27" target="n150">
+        <edge type="input" source="n27" target="n150" id="e177">
           <point y="-390" x="480"/>
           <point y="-130" x="480"/>
           <point y="-90" x="430"/>
         </edge>
-        <edge id="e178" type="input" source="n148" target="n150">
+        <edge type="input" source="n148" target="n150" id="e178">
           <point y="-88" x="295"/>
           <point y="-90" x="430"/>
         </edge>
-        <edge id="e179" type="input" source="n27" target="n152">
+        <edge type="input" source="n27" target="n152" id="e179">
           <point y="-390" x="480"/>
           <point y="-560" x="480"/>
           <point y="-600" x="430"/>
         </edge>
-        <edge id="e180" type="input" source="n67" target="n152">
+        <edge type="input" source="n67" target="n152" id="e180">
           <point y="-710" x="-360"/>
           <point y="-600" x="-360"/>
           <point y="-600" x="430"/>
         </edge>
-        <edge id="e181" type="equivalence" source="n151" target="n152">
+        <edge type="equivalence" source="n151" target="n152" id="e181">
           <point y="-600" x="700"/>
           <point y="-600" x="430"/>
         </edge>
-        <edge id="e185" type="input" source="n153" target="n154">
+        <edge type="input" source="n153" target="n154" id="e185">
           <point y="-90" x="700"/>
           <point y="-20" x="700"/>
         </edge>
-        <edge id="e186" type="input" source="n64" target="n154">
+        <edge type="input" source="n64" target="n154" id="e186">
           <point y="50" x="700"/>
           <point y="-20" x="700"/>
         </edge>
-        <edge id="e187" type="inclusion" source="n154" target="n31">
+        <edge type="inclusion" source="n154" target="n31" id="e187">
           <point y="-20" x="700"/>
           <point y="-20" x="800"/>
           <point y="-190" x="800"/>
           <point y="-190" x="700"/>
         </edge>
-        <edge id="e188" type="equivalence" source="n150" target="n153">
+        <edge type="equivalence" source="n150" target="n153" id="e188">
           <point y="-90" x="430"/>
           <point y="-90" x="700"/>
         </edge>
-        <edge id="e189" type="input" source="n31" target="n155">
+        <edge type="input" source="n31" target="n155" id="e189">
           <point y="-190" x="700"/>
           <point y="-490" x="700"/>
         </edge>
-        <edge id="e191" type="input" source="n151" target="n155">
+        <edge type="input" source="n151" target="n155" id="e191">
           <point y="-600" x="700"/>
           <point y="-490" x="700"/>
         </edge>
-        <edge id="e192" type="inclusion" source="n155" target="n65">
+        <edge type="inclusion" source="n155" target="n65" id="e192">
           <point y="-490" x="700"/>
           <point y="-490" x="800"/>
           <point y="-710" x="800"/>
           <point y="-710" x="700"/>
         </edge>
-        <edge id="e193" type="input" source="n29" target="n156">
+        <edge type="input" source="n29" target="n156" id="e193">
           <point y="730" x="-550"/>
           <point y="730" x="-640"/>
         </edge>
-        <edge id="e194" type="inclusion" source="n156" target="n157">
+        <edge type="inclusion" source="n156" target="n157" id="e194">
           <point y="730" x="-640"/>
           <point y="730" x="-740"/>
         </edge>
-        <edge id="e28" type="input" source="n27" target="n26">
+        <edge type="input" source="n88" target="n160" id="e202">
+          <point y="890" x="-210"/>
+          <point y="800" x="-210"/>
+        </edge>
+        <edge type="input" source="n160" target="n81" id="e204">
+          <point y="800" x="-210"/>
+          <point y="730" x="-210"/>
+        </edge>
+        <edge type="inclusion" source="n160" target="n83" id="e205">
+          <point y="800" x="-210"/>
+          <point y="800" x="-80"/>
+        </edge>
+        <edge type="inclusion" source="n33" target="n81" id="e206">
+          <point y="730" x="-360"/>
+          <point y="730" x="-210"/>
+        </edge>
+        <edge type="input" source="n27" target="n26" id="e28">
           <point y="-390" x="480"/>
           <point y="-497" x="480"/>
           <point y="-660" x="480"/>
           <point y="-710" x="430"/>
         </edge>
-        <edge id="e29" type="input" source="n27" target="n35">
+        <edge type="input" source="n27" target="n35" id="e29">
           <point y="-390" x="480"/>
           <point y="-230" x="480"/>
           <point y="-190" x="430"/>
         </edge>
-        <edge id="e31" type="input" source="n29" target="n41">
+        <edge type="input" source="n29" target="n41" id="e31">
           <point y="730" x="-550"/>
           <point y="730" x="-470"/>
         </edge>
-        <edge id="e33" type="equivalence" source="n35" target="n31">
+        <edge type="equivalence" source="n35" target="n31" id="e33">
           <point y="-190" x="430"/>
           <point y="-190" x="700"/>
         </edge>
-        <edge id="e34" type="inclusion" source="n32" target="n33">
+        <edge type="inclusion" source="n32" target="n33" id="e34">
           <point y="520" x="-360"/>
           <point y="730" x="-360"/>
         </edge>
-        <edge id="e35" type="input" source="n40" target="n32">
+        <edge type="input" source="n40" target="n32" id="e35">
           <point y="440" x="-360"/>
           <point y="520" x="-360"/>
         </edge>
-        <edge id="e36" type="inclusion" source="n33" target="n34">
+        <edge type="inclusion" source="n33" target="n34" id="e36">
           <point y="730" x="-360"/>
           <point y="840" x="-360"/>
         </edge>
-        <edge id="e37" type="equivalence" source="n41" target="n33">
+        <edge type="equivalence" source="n41" target="n33" id="e37">
           <point y="730" x="-470"/>
           <point y="730" x="-360"/>
         </edge>
-        <edge id="e39" type="input" source="n37" target="n35">
+        <edge type="input" source="n37" target="n35" id="e39">
           <point y="-190" x="20"/>
           <point y="-190" x="430"/>
         </edge>
-        <edge id="e40" type="input" source="n40" target="n36">
+        <edge type="input" source="n40" target="n36" id="e40">
           <point y="440" x="-360"/>
           <point y="350" x="-360"/>
         </edge>
-        <edge id="e58" type="input" source="n56" target="n57">
+        <edge type="input" source="n56" target="n57" id="e58">
           <point y="190" x="290"/>
           <point y="190" x="140"/>
         </edge>
-        <edge id="e59" type="input" source="n55" target="n57">
+        <edge type="input" source="n55" target="n57" id="e59">
           <point y="190" x="20"/>
           <point y="190" x="140"/>
         </edge>
-        <edge id="e60" type="input" source="n58" target="n59">
+        <edge type="input" source="n58" target="n59" id="e60">
           <point y="520" x="290"/>
           <point y="520" x="140"/>
         </edge>
-        <edge id="e63" type="input" source="n60" target="n61">
+        <edge type="input" source="n60" target="n61" id="e63">
           <point y="350" x="290"/>
           <point y="290" x="290"/>
           <point y="290" x="140"/>
         </edge>
-        <edge id="e64" type="input" source="n57" target="n61">
+        <edge type="input" source="n57" target="n61" id="e64">
           <point y="190" x="140"/>
           <point y="290" x="140"/>
         </edge>
-        <edge id="e67" type="input" source="n32" target="n59">
+        <edge type="input" source="n32" target="n59" id="e67">
           <point y="520" x="-360"/>
           <point y="520" x="140"/>
         </edge>
-        <edge id="e68" type="input" source="n60" target="n62">
+        <edge type="input" source="n60" target="n62" id="e68">
           <point y="350" x="290"/>
           <point y="420" x="290"/>
           <point y="420" x="140"/>
         </edge>
-        <edge id="e69" type="input" source="n59" target="n62">
+        <edge type="input" source="n59" target="n62" id="e69">
           <point y="520" x="140"/>
           <point y="420" x="140"/>
         </edge>
-        <edge id="e70" type="inclusion" source="n61" target="n62">
+        <edge type="inclusion" source="n61" target="n62" id="e70">
           <point y="290" x="140"/>
           <point y="420" x="140"/>
         </edge>
-        <edge id="e71" type="input" source="n27" target="n63">
+        <edge type="input" source="n27" target="n63" id="e71">
           <point y="-390" x="480"/>
           <point y="0" x="480"/>
           <point y="50" x="430"/>
         </edge>
-        <edge id="e72" type="input" source="n55" target="n63">
+        <edge type="input" source="n55" target="n63" id="e72">
           <point y="165" x="50"/>
           <point y="50" x="50"/>
           <point y="50" x="430"/>
         </edge>
-        <edge id="e74" type="equivalence" source="n63" target="n64">
+        <edge type="equivalence" source="n63" target="n64" id="e74">
           <point y="50" x="430"/>
           <point y="50" x="700"/>
         </edge>
-        <edge id="e76" type="equivalence" source="n26" target="n65">
+        <edge type="equivalence" source="n26" target="n65" id="e76">
           <point y="-710" x="430"/>
           <point y="-710" x="700"/>
         </edge>
-        <edge id="e78" type="input" source="n66" target="n26">
+        <edge type="input" source="n66" target="n26" id="e78">
           <point y="-710" x="20"/>
           <point y="-710" x="430"/>
         </edge>
-        <edge id="e79" type="inclusion" source="n66" target="n45">
+        <edge type="inclusion" source="n66" target="n45" id="e79">
           <point y="-710" x="20"/>
           <point y="-830" x="20"/>
         </edge>
-        <edge id="e80" type="input" source="n67" target="n66">
+        <edge type="input" source="n67" target="n66" id="e80">
           <point y="-710" x="-360"/>
           <point y="-710" x="20"/>
         </edge>
-        <edge id="e81" type="input" source="n37" target="n66">
+        <edge type="input" source="n37" target="n66" id="e81">
           <point y="-190" x="20"/>
           <point y="-710" x="20"/>
         </edge>
-        <edge id="e82" type="input" source="n68" target="n69">
+        <edge type="input" source="n68" target="n69" id="e82">
           <point y="-720" x="-760"/>
           <point y="-720" x="-640"/>
         </edge>
-        <edge id="e83" type="input" source="n67" target="n69">
+        <edge type="input" source="n67" target="n69" id="e83">
           <point y="-719" x="-415"/>
           <point y="-720" x="-640"/>
         </edge>
-        <edge id="e85" type="input" source="n55" target="n70">
+        <edge type="input" source="n55" target="n70" id="e85">
           <point y="190" x="20"/>
           <point y="190" x="-360"/>
         </edge>
-        <edge id="e86" type="input" source="n67" target="n70">
+        <edge type="input" source="n67" target="n70" id="e86">
           <point y="-710" x="-360"/>
           <point y="190" x="-360"/>
         </edge>
-        <edge id="e88" type="inclusion" source="n36" target="n70">
+        <edge type="inclusion" source="n36" target="n70" id="e88">
           <point y="350" x="-360"/>
           <point y="190" x="-360"/>
         </edge>
-        <edge id="e89" type="inclusion" source="n55" target="n36">
-          <point y="190" x="20"/>
-          <point y="350" x="20"/>
-          <point y="350" x="-360"/>
-        </edge>
-        <edge id="e91" type="inclusion" source="n67" target="n36">
-          <point y="-700" x="-415"/>
-          <point y="-700" x="-440"/>
-          <point y="350" x="-440"/>
-          <point y="350" x="-360"/>
-        </edge>
-        <edge id="e92" type="input" source="n72" target="n73">
+        <edge type="input" source="n72" target="n73" id="e92">
           <point y="520" x="-750"/>
           <point y="520" x="-640"/>
         </edge>
-        <edge id="e93" type="input" source="n32" target="n73">
+        <edge type="input" source="n32" target="n73" id="e93">
           <point y="520" x="-360"/>
           <point y="520" x="-640"/>
         </edge>
-        <edge id="e94" type="input" source="n71" target="n74">
+        <edge type="input" source="n71" target="n74" id="e94">
           <point y="-70" x="-750"/>
           <point y="-170" x="-750"/>
           <point y="-170" x="-640"/>
         </edge>
-        <edge id="e95" type="input" source="n71" target="n75">
+        <edge type="input" source="n71" target="n75" id="e95">
           <point y="-70" x="-750"/>
           <point y="40" x="-750"/>
           <point y="40" x="-640"/>
         </edge>
-        <edge id="e96" type="input" source="n69" target="n74">
+        <edge type="input" source="n69" target="n74" id="e96">
           <point y="-720" x="-640"/>
           <point y="-170" x="-640"/>
         </edge>
-        <edge id="e97" type="input" source="n73" target="n75">
+        <edge type="input" source="n73" target="n75" id="e97">
           <point y="520" x="-640"/>
           <point y="40" x="-640"/>
         </edge>
-        <edge id="e98" type="inclusion" source="n74" target="n75">
+        <edge type="inclusion" source="n74" target="n75" id="e98">
           <point y="-170" x="-640"/>
           <point y="40" x="-640"/>
         </edge>
