@@ -1,0 +1,106 @@
+@prefix cpv: <https://w3id.org/italia/onto/CPV/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix aco: <https://w3id.org/italia/onto/ACO/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix licences: <https://w3id.org/italia/controlled-vocabulary/licences/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix admsapit: <https://w3id.org/italia/onto/ADMS/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
+@prefix INPSContributions: <https://w3id.org/italia/social-security/onto/contributions/> .
+
+##### VERIFICARE URI #####
+<https://w3id.org/italia/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml> a dcatapit:Dataset ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ; 
+	dct:identifier <https://w3id.org/italia/schemas/contratto-di-lavoro-domestico>;
+    dct:conformsTo <https://w3id.org/italia/social-security/onto/contributions>;
+	dct:issued "2024-02-13"^^xsd:date ;
+    dct:description "Il servizio viene invocato per ottenere le informazioni sul contratto di lavoro, o lettera di assunzione, cioè un accordo che da origine ad un rapporto di lavoro tra un datore di lavoro e un lavoratore. Consente a entrambe le parti di comprendere chiaramente i propri obblighi e le condizioni di lavoro." ;
+	dct:language <http://publications.europa.eu/resource/authority/language/ITA> ; 
+	
+	rdfs:comment "Servizio di notifica"@it ; 
+	rdfs:label "Consultazione Contratto Di Lavoro Domestico API"@it ; 
+    
+    dct:modified "2024-02-20"^^xsd:date ;
+	dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ; 
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII>  ; 
+	dct:publisher <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ; 
+    dct:title "Consultazione Contratto Di Lavoro Domestico API"@it ; 
+    owl:versionInfo "Versione 1.1"@it ; 
+    ### VERIFICARE DISTRIBUTION https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml
+    dcat:distribution <https://w3id.org/italia/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml> ; 
+    
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ; 
+	dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ; 
+	dcat:keyword "Aggregation Application"@en,
+        "Domestic Worker"@en,
+        "Lavoratore Domestico"@it,
+        "Life Annuities Application"@en,
+        "Redemption Application"@en,
+        "Rendita"@it,
+        "Ricongiunzione"@it,
+        "Riscatto"@it ;
+	
+	admsapit:acronym "inps" ;
+    admsapit:hasKeyClass <https://w3id.org/italia/social-security/onto/contributions/ContrattoDiLavoroDomestico>;
+	
+	admsapit:prefix "INPSContributions"^^xsd:string ;
+    admsapit:status "catalogued", "published" ;
+    admsapit:target "Cittadini"@it, "Imprese"@it, "Pubbliche Amministrazioni"@it ; .
+
+<https://w3id.org/italia/social-security/onto/contributions> rdf:type owl:Ontology ;
+        foaf:name "Ontologia INPS relativa ai contributi previdenziali".
+
+
+##### CHIEDERE SE METTERE LA CLASSE ####
+INPSContributions:ContrattoDiLavoroDomestico a owl:Class ;
+    rdfs:label "Contratto Di Lavoro Domestico"@it,
+        "Domestic Work Contract"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSContributions:codiceContrattoDiLavoro ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:numeroOreSettimanali ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haContrattoDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "An employment contract is an agreement that covers the working relationship between a company and an employee. It allows both parties to clearly understand their obligations and the terms of employment. More specifically, an employment contract can include salary or wages, schedule, duration of employment, general responsibilities, confidentiality, communications, benefits, and future competition."@en,
+        "Un contratto di lavoro, o lettera di assunzione, è un accordo che da origine ad un rapporto di lavoro tra un datore di lavoro e un lavoratore. Consente a entrambe le parti di comprendere chiaramente i propri obblighi e le condizioni di lavoro. Nel contesto del dominio, definisce i termini del rapporto stesso indicando: la quantità e distribuzione delle ore settimanali lavorate, la loro retribuzione effettiva, le ferie, il TFR, i termini di preavviso e quanto altro risulta necessario per la definizione del rapporto stesso e nel rispetto del Contratto Collettivo, se esistente, del settore di riferimento."@it .
+
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    foaf:name "Central Management of Information Technology and Innovations"@en,
+        "Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+<https://w3id.org/italia/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml> a dcatapit:Distribution ; 
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/contratto-di-lavoro-domestico/latest> ; 
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml> . 
+  	 
