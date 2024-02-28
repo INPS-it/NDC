@@ -4,14 +4,14 @@
 @prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix INPSContributions: <https://w3id.org/italia/social-security/onto/contributions/> .
+@prefix INPSService: <https://w3id.org/italia/social-security/onto/services/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/italia/social-security/onto/contributions> a owl:Ontology ;
-    foaf:name "Ontologia INPS relativa ai contributi previdenziali" .
+<https://w3id.org/italia/social-security/onto/services> a owl:Ontology ;
+    foaf:name "Ontologia INPS relativa ai servizi previdenziali" .
 
 ### Individuals
 
@@ -41,41 +41,43 @@
 
 ### Annotations
 
-<https://w3id.org/italia/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml> a dcatapit:Dataset,
+<https://w3id.org/italia/schemas/esito-pagamento/latest/esito-pagamento.oas3.yaml> a dcatapit:Dataset,
         dcatapit:Distribution ;
-    rdfs:label "Consultazione Contratto Di Lavoro Domestico API"@it ;
+    rdfs:label "Consultazione Esito Pagamento API"@it ;
     rdfs:comment "Servizio di notifica"@it ;
     owl:versionInfo "Versione 1.2"@it ;
     admsapit:acronym "inps" ;
-    admsapit:hasKeyClass INPSContributions:ContrattoDiLavoroDomestico ;
-    admsapit:prefix "INPSContributions"^^xsd:string ;
+    admsapit:hasKeyClass INPSService:EsitoPagamento ;
+    admsapit:prefix "INPSService"^^xsd:string ;
     admsapit:target "Cittadini"@it,
         "Imprese"@it,
         "Pubbliche Amministrazioni"@it ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/contratto-di-lavoro-domestico/latest> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/esito-pagamento/latest> ;
     dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
-    dcat:distribution <https://w3id.org/italia/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml> ;
-    dcat:keyword "Aggregation Application"@en,
-        "Domestic Worker"@en,
-        "Lavoratore Domestico"@it,
-        "Life Annuities Application"@en,
-        "Redemption Application"@en,
-        "Rendita"@it,
-        "Ricongiunzione"@it,
-        "Riscatto"@it ;
+    dcat:distribution <https://w3id.org/italia/schemas/esito-pagamento/latest/esito-pagamento.oas3.yaml> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/esito-pagamento/latest/esito-pagamento.oas3.yaml> ;
+    dcat:keyword "account holder"@en,
+        "bank account"@en,
+        "bollettino di pagamento"@it,
+        "conto corrente"@it,
+        "correntista"@it,
+        "mandato SDD"@it,
+        "pagamento"@it,
+        "payment"@en,
+        "payment slip"@en,
+        "SDD mandate"@en ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
     dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    dct:conformsTo <https://w3id.org/italia/social-security/onto/contributions> ;
+    dct:conformsTo <https://w3id.org/italia/social-security/onto/services> ;
     dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    dct:description "Lo schema dati del servizio che viene invocato per ottenere le informazioni sul contratto di lavoro, o lettera di assunzione, cioè un accordo che da origine ad un rapporto di lavoro tra un datore di lavoro e un lavoratore. Consente a entrambe le parti di comprendere chiaramente i propri obblighi e le condizioni di lavoro." ;
+    dct:description "Lo schema dati del servizio che viene invocato per ottenere le informazioni sull'esito pagamento che esprime l'esito dell'unico pagamento a cui è associato. È caratterizzato da un identificativo e da una o più descrizioni. L'esito di un pagamento può non essere immediatamente noto poichè l'esecuzione del pagamento può coinvolgere diversi intermediari che potrebbero non comunicare in tempo reale l'effettivo buon fine dell'operazione a loro carico." ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
-    dct:identifier <https://w3id.org/italia/schemas/contratto-di-lavoro-domestico> ;
+    dct:identifier <https://w3id.org/italia/schemas/esito-pagamento> ;
     dct:issued "2024-02-13"^^xsd:date ;
     dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
     dct:modified "2024-02-20"^^xsd:date ;
     dct:publisher <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
-    dct:title "Consultazione Contratto Di Lavoro Domestico API"@it .
+    dct:title "Consultazione Esito Pagamento API"@it .
 
 ### Serialized using the ttlser deterministic serializer v1.2.0

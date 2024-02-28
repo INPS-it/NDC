@@ -41,21 +41,21 @@
 
 ### Annotations
 
-<https://w3id.org/italia/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml> a dcatapit:Dataset,
+<https://w3id.org/italia/schemas/pratica-ricongiuzione/latest/pratica-ricongiuzione.oas3.yaml> a dcatapit:Dataset,
         dcatapit:Distribution ;
-    rdfs:label "Consultazione Contratto Di Lavoro Domestico API"@it ;
+    rdfs:label "Consultazione Adeguamento Per Ricongiunzione API"@it ;
     rdfs:comment "Servizio di notifica"@it ;
     owl:versionInfo "Versione 1.2"@it ;
     admsapit:acronym "inps" ;
-    admsapit:hasKeyClass INPSContributions:ContrattoDiLavoroDomestico ;
+    admsapit:hasKeyClass INPSContributions:AdeguamentoPerRicongiunzione ;
     admsapit:prefix "INPSContributions"^^xsd:string ;
     admsapit:target "Cittadini"@it,
         "Imprese"@it,
         "Pubbliche Amministrazioni"@it ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/contratto-di-lavoro-domestico/latest> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/pratica-ricongiuzione/latest> ;
     dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
-    dcat:distribution <https://w3id.org/italia/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml> ;
+    dcat:distribution <https://w3id.org/italia/schemas/pratica-ricongiuzione/latest/pratica-ricongiuzione.oas3.yaml> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/pratica-ricongiuzione/latest/pratica-ricongiuzione.oas3.yaml> ;
     dcat:keyword "Aggregation Application"@en,
         "Domestic Worker"@en,
         "Lavoratore Domestico"@it,
@@ -68,14 +68,14 @@
     dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
     dct:conformsTo <https://w3id.org/italia/social-security/onto/contributions> ;
     dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    dct:description "Lo schema dati del servizio che viene invocato per ottenere le informazioni sul contratto di lavoro, o lettera di assunzione, cioè un accordo che da origine ad un rapporto di lavoro tra un datore di lavoro e un lavoratore. Consente a entrambe le parti di comprendere chiaramente i propri obblighi e le condizioni di lavoro." ;
+    dct:description "Lo schema dati del servizio che viene invocato per ottenere le informazioni sulla pratica di ricongiunzione, che consente, a chi ha posizioni assicurative in gestioni previdenziali diverse, di riunire, mediante trasferimento, tutti i periodi contributivi presso un’unica gestione, allo scopo di ottenere una sola pensione." ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
-    dct:identifier <https://w3id.org/italia/schemas/contratto-di-lavoro-domestico> ;
+    dct:identifier <https://w3id.org/italia/schemas/pratica-ricongiuzione> ;
     dct:issued "2024-02-13"^^xsd:date ;
     dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
     dct:modified "2024-02-20"^^xsd:date ;
     dct:publisher <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
-    dct:title "Consultazione Contratto Di Lavoro Domestico API"@it .
+    dct:title "Consultazione Adeguamento Per Ricongiunzione API"@it .
 
 ### Serialized using the ttlser deterministic serializer v1.2.0
