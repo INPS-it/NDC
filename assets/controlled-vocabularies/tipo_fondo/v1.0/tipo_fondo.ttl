@@ -19,9 +19,9 @@
     ns2:title "Simple Knowledge Organization System - SKOS" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> a <http://dati.gov.it/onto/dcatapit#Dataset>,
+        <https://w3id.org/italia/social-security/onto/pensions/FondoPensionistico>,
         ns1:ConceptScheme,
-        ns6:Asset,
-        <https://w3id.org/italia/social-security/onto/pensions/FondoPensionistico> ;
+        ns6:Asset ;
     rdfs:label "This is the controlled vocabulary of the fund type adopted by INPS classification"@en,
         "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
     ns1:prefLabel "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
@@ -29,23 +29,6 @@
         "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
     owl:versionInfo "0.1" ;
     rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
-    ns2:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    ns2:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
-    ns2:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:description "Classification of the fund type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
-    ns2:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo" ;
-    ns2:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-    ns2:modified "2024-02-01"^^xsd:date ;
-    ns2:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:relation <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
-    ns2:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:title "Classification of the fund type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
-    ns2:type <http://purl.org/adms/assettype/CodeList> ;
-    ns5:numberOfLevels "1" ;
     ns1:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-001>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-002>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-003>,
@@ -225,7 +208,22 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-045>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-144>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-145> ;
-    ns6:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    ns2:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    ns2:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    ns2:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:description "Classification of the fund type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
+    ns2:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo" ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns2:modified "2024-02-01"^^xsd:date ;
+    ns2:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:relation <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
+    ns2:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:title "Classification of the fund type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
+    ns2:type <http://purl.org/adms/assettype/CodeList> ;
     ns3:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     ns3:distribution <https://w3id.org/italia/social-security/data/pensions/distribution/TF_CSV>,
         <https://w3id.org/italia/social-security/data/pensions/distribution/TF_JSON_LD>,
@@ -235,7 +233,9 @@
         "pension",
         "pensioni"@it ;
     ns3:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
-    ns4:keyConcept "tipo_fondo" .
+    ns4:keyConcept "tipo_fondo" ;
+    ns5:numberOfLevels "1" ;
+    ns6:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-001> a ns1:Concept ;
     rdfs:label "FPLD"@it ;

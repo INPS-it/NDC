@@ -19,9 +19,9 @@
     ns2:title "Simple Knowledge Organization System - SKOS" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> a <http://dati.gov.it/onto/dcatapit#Dataset>,
+        <https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione>,
         ns1:ConceptScheme,
-        ns3:Asset,
-        <https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione> ;
+        ns3:Asset ;
     rdfs:label "This is the controlled vocabulary of the istance type adopted by INPS classification"@en,
         "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
     ns1:prefLabel "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
@@ -29,20 +29,6 @@
         "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
     owl:versionInfo "0.1" ;
     rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
-    ns2:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    ns2:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
-    ns2:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:description "Classification of the istance type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
-    ns2:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza" ;
-    ns2:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-    ns2:modified "2024-02-01"^^xsd:date ;
-    ns2:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:title "Classification of the istance type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
-    ns2:type <http://purl.org/adms/assettype/CodeList> ;
-    ns7:numberOfLevels "1" ;
     ns1:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0001-0001-0001>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0001-0001-0002>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0001-0001-0003>,
@@ -489,6 +475,19 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0071-0350-0001>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0071-0450-0001>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0081-0500-0200> ;
+    ns2:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    ns2:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    ns2:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:description "Classification of the istance type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
+    ns2:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza" ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns2:modified "2024-02-01"^^xsd:date ;
+    ns2:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:title "Classification of the istance type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
+    ns2:type <http://purl.org/adms/assettype/CodeList> ;
     ns3:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
     ns4:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     ns4:distribution <https://w3id.org/italia/social-security/data/pensions/distribution/TI_CSV>,
@@ -499,6 +498,7 @@
         "pension",
         "pensioni"@it ;
     ns4:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    ns7:numberOfLevels "1" ;
     ns8:keyConcept "tipo_istanza" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0001-0001-0001> a ns1:Concept ;

@@ -19,9 +19,9 @@
     ns1:title "Simple Knowledge Organization System - SKOS" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> a <http://dati.gov.it/onto/dcatapit#Dataset>,
+        <https://w3id.org/italia/social-security/onto/pensions/EnteIstruttore>,
         ns3:ConceptScheme,
-        ns4:Asset,
-        <https://w3id.org/italia/social-security/onto/pensions/EnteIstruttore> ;
+        ns4:Asset ;
     rdfs:label "This is the controlled vocabulary of the authority type adopted by INPS classification"@en,
         "Vocabolario Controllato sul tipo di ente adottato dall'INPS"@it ;
     ns3:prefLabel "Vocabolario Controllato sul tipo di ente adottato dall'INPS"@it ;
@@ -45,7 +45,6 @@
     ns1:title "Classification of the authority type adopted by INPS controlled vocabulary"@en,
         "Vocabolario Controllato sul tipo di ente adottato dall'INPS"@it ;
     ns1:type <http://purl.org/adms/assettype/CodeList> ;
-    ns6:numberOfLevels "1" ;
     ns3:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/00>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/01>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/02>,
@@ -99,6 +98,7 @@
         "pension",
         "pensioni"@it ;
     ns5:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    ns6:numberOfLevels "1" ;
     ns8:keyConcept "tipo_ente" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/00> a ns3:Concept ;

@@ -19,9 +19,9 @@
     ns3:title "Simple Knowledge Organization System - SKOS" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> a <http://dati.gov.it/onto/dcatapit#Dataset>,
+        <https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione>,
         ns1:ConceptScheme,
-        ns6:Asset,
-        <https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione> ;
+        ns6:Asset ;
     rdfs:label "This is the controlled vocabulary of the istance type adopted by INPS classification"@en,
         "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
     ns1:prefLabel "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
@@ -29,20 +29,6 @@
         "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
     owl:versionInfo "0.1" ;
     rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
-    ns3:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    ns3:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
-    ns3:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:description "Classification of the istance type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
-    ns3:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza" ;
-    ns3:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-    ns3:modified "2024-02-01"^^xsd:date ;
-    ns3:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:title "Classification of the istance type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
-    ns3:type <http://purl.org/adms/assettype/CodeList> ;
-    ns7:numberOfLevels "1" ;
     ns1:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0001-0001-0001>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0001-0001-0002>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0001-0001-0003>,
@@ -489,7 +475,6 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0071-0350-0001>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0071-0450-0001>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0081-0500-0200> ;
-    ns6:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
     ns2:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     ns2:distribution <https://w3id.org/italia/social-security/data/pensions/distribution/TI_CSV>,
         <https://w3id.org/italia/social-security/data/pensions/distribution/TI_JSON_LD>,
@@ -499,6 +484,21 @@
         "pension",
         "pensioni"@it ;
     ns2:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    ns3:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    ns3:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    ns3:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns3:description "Classification of the istance type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
+    ns3:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza" ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns3:modified "2024-02-01"^^xsd:date ;
+    ns3:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns3:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns3:title "Classification of the istance type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di istanza adottato dall'INPS"@it ;
+    ns3:type <http://purl.org/adms/assettype/CodeList> ;
+    ns6:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    ns7:numberOfLevels "1" ;
     ns8:keyConcept "tipo_istanza" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza/0001-0001-0001> a ns1:Concept ;
@@ -2299,35 +2299,35 @@
 
 <https://w3id.org/italia/social-security/data/pensions/distribution/TI_CSV> a <http://dati.gov.it/onto/dcatapit#Distribution>,
         ns2:Distribution ;
+    ns2:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_istanza/latest> ;
+    ns2:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_istanza/latest/tipo_istanza.csv> ;
     ns3:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di istanza adottato dall'INPS"@it,
         "This is the distribution in CSV of the istance type adopted by INPS controlled vocabulary"@en ;
     ns3:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
     ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
     ns3:title "CSV distribution of the istance type adopted by INPS controlled vocabulary"@en,
-        "Distribuzione CSV del vocabolario controllato sul tipo di istanza adottato dall'INPS"@it ;
-    ns2:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_istanza/latest> ;
-    ns2:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_istanza/latest/tipo_istanza.csv> .
+        "Distribuzione CSV del vocabolario controllato sul tipo di istanza adottato dall'INPS"@it .
 
 <https://w3id.org/italia/social-security/data/pensions/distribution/TI_JSON_LD> a <http://dati.gov.it/onto/dcatapit#Distribution>,
         ns2:Distribution ;
+    ns2:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_istanza/latest> ;
+    ns2:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_istanza/latest/tipo_istanza.json> ;
     ns3:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di istanza adottato dall'INPS"@it,
         "This is the distribution in JSON_LD of the istance type adopted by INPS controlled vocabulary"@en ;
     ns3:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
     ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
     ns3:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di istanza adottato dall'INPS"@it,
-        "JSON_LD distribution of the istance type adopted by INPS controlled vocabulary"@en ;
-    ns2:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_istanza/latest> ;
-    ns2:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_istanza/latest/tipo_istanza.json> .
+        "JSON_LD distribution of the istance type adopted by INPS controlled vocabulary"@en .
 
 <https://w3id.org/italia/social-security/data/pensions/distribution/TI_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
         ns2:Distribution ;
+    ns2:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_istanza/latest> ;
+    ns2:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_istanza/latest/tipo_istanza.ttl> ;
     ns3:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di istanza adottato dall'INPS"@it,
         "This is the distribution in RDF/turtle of the istance type adopted by INPS controlled vocabulary"@en ;
     ns3:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
     ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
     ns3:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di istanza adottato dall'INPS"@it,
-        "RDF/Turtle distribution of the istance type adopted by INPS controlled vocabulary"@en ;
-    ns2:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_istanza/latest> ;
-    ns2:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_istanza/latest/tipo_istanza.ttl> .
+        "RDF/Turtle distribution of the istance type adopted by INPS controlled vocabulary"@en .
 
 ### Serialized using the ttlser deterministic serializer v1.2.0

@@ -19,9 +19,9 @@
     ns3:title "Simple Knowledge Organization System - SKOS" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> a <http://dati.gov.it/onto/dcatapit#Dataset>,
+        <https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica>,
         ns1:ConceptScheme,
-        ns7:Asset,
-        <https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica> ;
+        ns7:Asset ;
     rdfs:label "This is the controlled vocabulary of the management type adopted by INPS classification"@en,
         "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
     ns1:prefLabel "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
@@ -29,23 +29,6 @@
         "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
     owl:versionInfo "0.1" ;
     rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> ;
-    ns3:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    ns3:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
-    ns3:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:description "Classification of the management type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
-    ns3:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione" ;
-    ns3:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-    ns3:modified "2024-02-01"^^xsd:date ;
-    ns3:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:relation <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
-    ns3:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:title "Classification of the management type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
-    ns3:type <http://purl.org/adms/assettype/CodeList> ;
-    ns8:numberOfLevels "1" ;
     ns1:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/002>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/003>,
@@ -72,7 +55,23 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns7:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    ns2:keyConcept "tipo_gestione" ;
+    ns3:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    ns3:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    ns3:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns3:description "Classification of the management type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
+    ns3:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione" ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns3:modified "2024-02-01"^^xsd:date ;
+    ns3:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns3:relation <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
+    ns3:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns3:title "Classification of the management type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
+    ns3:type <http://purl.org/adms/assettype/CodeList> ;
     ns4:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     ns4:distribution <https://w3id.org/italia/social-security/data/pensions/distribution/TG_CSV>,
         <https://w3id.org/italia/social-security/data/pensions/distribution/TG_JSON_LD>,
@@ -82,7 +81,8 @@
         "pension",
         "pensioni"@it ;
     ns4:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
-    ns2:keyConcept "tipo_gestione" .
+    ns7:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    ns8:numberOfLevels "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> a ns1:Concept ;
     rdfs:label "Lavoratori Dipendenti"@it ;
