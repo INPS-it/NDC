@@ -1,0 +1,236 @@
+@prefix ns1: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns2: <https://w3id.org/italia/onto/NDC/> .
+@prefix ns3: <http://purl.org/dc/terms/> .
+@prefix ns4: <http://www.w3.org/ns/dcat#> .
+@prefix ns5: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns6: <http://xmlns.com/foaf/0.1/> .
+@prefix ns7: <http://www.w3.org/ns/adms#> .
+@prefix ns8: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a <http://dati.gov.it/onto/dcatapit#Standard>,
+        ns3:Standard ;
+    ns3:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    ns3:identifier "SKOS" ;
+    ns3:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> a <http://dati.gov.it/onto/dcatapit#Dataset>,
+        ns1:ConceptScheme,
+        ns7:Asset,
+        <https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica> ;
+    rdfs:label "This is the controlled vocabulary of the management type adopted by INPS classification"@en,
+        "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
+    ns1:prefLabel "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
+    rdfs:comment "Classification of the management type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> ;
+    ns3:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    ns3:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    ns3:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns3:description "Classification of the management type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
+    ns3:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione" ;
+    ns3:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns3:modified "2024-02-01"^^xsd:date ;
+    ns3:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns3:relation <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
+    ns3:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns3:title "Classification of the management type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di gestione adottato dall'INPS"@it ;
+    ns3:type <http://purl.org/adms/assettype/CodeList> ;
+    ns8:numberOfLevels "1" ;
+    ns1:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/002>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/003>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/004>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/005>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/006>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/009>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/010>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/011>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/012>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/013>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/014>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/015>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/016>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/017>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/018>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/020>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/021>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/099>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns7:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    ns4:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    ns4:distribution <https://w3id.org/italia/social-security/data/pensions/distribution/TG_CSV>,
+        <https://w3id.org/italia/social-security/data/pensions/distribution/TG_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/pensions/distribution/TG_RDF_TURTLE> ;
+    ns4:keyword "inps"@en,
+        "inps"@it,
+        "pension",
+        "pensioni"@it ;
+    ns4:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    ns2:keyConcept "tipo_gestione" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> a ns1:Concept ;
+    rdfs:label "Lavoratori Dipendenti"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/002> a ns1:Concept ;
+    rdfs:label "CD/CM"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/003> a ns1:Concept ;
+    rdfs:label "Artigiani"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/004> a ns1:Concept ;
+    rdfs:label "Commercianti"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/005> a ns1:Concept ;
+    rdfs:label "Lavoratori Parasubordinati"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/006> a ns1:Concept ;
+    rdfs:label "Prestazioni assistenziali"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> a ns1:Concept ;
+    rdfs:label "Fondi speciali"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> a ns1:Concept ;
+    rdfs:label "Esodati"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/009> a ns1:Concept ;
+    rdfs:label "EX-ENPAO"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/010> a ns1:Concept ;
+    rdfs:label "Facoltative"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/011> a ns1:Concept ;
+    rdfs:label "Vitalizie"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/012> a ns1:Concept ;
+    rdfs:label "Certificazione"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/013> a ns1:Concept ;
+    rdfs:label "Certificazione contributiva"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/014> a ns1:Concept ;
+    rdfs:label "ECOCERT"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/015> a ns1:Concept ;
+    rdfs:label "Rateo"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/016> a ns1:Concept ;
+    rdfs:label "Certificazione"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/017> a ns1:Concept ;
+    rdfs:label "Prolungamento Esodo"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/018> a ns1:Concept ;
+    rdfs:label "Ex ENPALS"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> a ns1:Concept ;
+    rdfs:label "Gestione ex INPDAP"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/020> a ns1:Concept ;
+    rdfs:label "APE"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/021> a ns1:Concept ;
+    rdfs:label "Richiesta EESSI"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/099> a ns1:Concept ;
+    rdfs:label "Da determinare"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> a ns1:Concept ;
+    rdfs:label "Categorie non meccanizzate"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> a ns1:Concept ;
+    rdfs:label "Totalizzazione"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> a ns1:Concept ;
+    rdfs:label "Cumulo"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> a ns1:Concept ;
+    rdfs:label "Cumulo D.lgs. 184/1997"@it ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione> .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a <http://dati.gov.it/onto/dcatapit#Organization>,
+        ns5:Kind,
+        ns5:Organization ;
+    ns5:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns5:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a <http://dati.gov.it/onto/dcatapit#Agent>,
+        ns6:Agent ;
+    ns3:identifier "inps" ;
+    ns6:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/pensions/distribution/TG_CSV> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns4:Distribution ;
+    ns3:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di gestione adottato dall'INPS"@it,
+        "This is the distribution in CSV of the management type adopted by INPS controlled vocabulary"@en ;
+    ns3:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns3:title "CSV distribution of the management type adopted by INPS controlled vocabulary"@en,
+        "Distribuzione CSV del vocabolario controllato sul tipo di gestione adottato dall'INPS"@it ;
+    ns4:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_gestione/latest> ;
+    ns4:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_gestione/latest/tipo_gestione.csv> .
+
+<https://w3id.org/italia/social-security/data/pensions/distribution/TG_JSON_LD> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns4:Distribution ;
+    ns3:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di gestione adottato dall'INPS"@it,
+        "This is the distribution in JSON_LD of the management type adopted by INPS controlled vocabulary"@en ;
+    ns3:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns3:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di gestione adottato dall'INPS"@it,
+        "JSON_LD distribution of the management type adopted by INPS controlled vocabulary"@en ;
+    ns4:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_gestione/latest> ;
+    ns4:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_gestione/latest/tipo_gestione.json> .
+
+<https://w3id.org/italia/social-security/data/pensions/distribution/TG_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns4:Distribution ;
+    ns3:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di gestione adottato dall'INPS"@it,
+        "This is the distribution in RDF/turtle of the gestione type adopted by INPS controlled vocabulary"@en ;
+    ns3:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns3:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di gestione adottato dall'INPS"@it,
+        "RDF/Turtle distribution of the gestione type adopted by INPS controlled vocabulary"@en ;
+    ns4:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_gestione/latest> ;
+    ns4:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_gestione/latest/tipo_gestione.ttl> .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

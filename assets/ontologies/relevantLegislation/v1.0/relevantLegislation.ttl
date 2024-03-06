@@ -1,0 +1,801 @@
+@prefix aco: <https://w3id.org/italia/onto/ACO/> .
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
+@prefix CLV: <https://w3id.org/italia/onto/CLV/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPV: <https://w3id.org/italia/onto/CPV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSContributions: <https://w3id.org/italia/social-security/onto/contributions/> .
+@prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
+@prefix INPSRL: <https://w3id.org/italia/social-security/onto/relevant-legislation/> .
+@prefix L0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix SM: <https://w3id.org/italia/onto/SM/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+INPSRL: a owl:Ontology ;
+    owl:versionIRI INPSRL:1.0 ;
+    owl:imports CLV:,
+        COV:,
+        CPV:,
+        L0:,
+        RO: ;
+    rdfs:label "Ontologia Legislazione Pertinente di INPS"@it,
+        "Relevant Legislation INPS Ontology"@en ;
+    rdfs:comment "Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
+        "This is the ontology of the INPS Organization about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
+    owl:versionInfo "1.0 - Modificata il 06 Marzo 2024"@it,
+        "1.0 - Modified on 06 Marzo 2024"@en ;
+    rdfs:isDefinedBy INPSRL: ;
+    adms:acronym "inps" ;
+    adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+    adms:hasFormalityLevel adms:Formal ;
+    adms:hasKeyClass INPSRL:Distacco,
+        INPSRL:Lavoratore,
+        INPSRL:ModelloA1 ;
+    adms:hasOntologyLanguage adms:OWL ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-XML> ;
+    adms:hasTask adms:AnnotationTask,
+        adms:QueryFormulationTask,
+        adms:SearchTask ;
+    adms:last INPSRL:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/relevant-legislation"^^xsd:anyURI ;
+    adms:prefix "INPSRel-leg" ;
+    adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+    adms:status "catalogued",
+        "published" ;
+    adms:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    adms:type adms:ServiceOnytology ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:keyword "A1 Form"@en,
+        "Distacco"@it,
+        "Lavoratore"@it,
+        "Modello A1"@it,
+        "Secondment"@en,
+        "Worker"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
+        "This is the ontology of the INPS Organization about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/relevant-legislation" ;
+    dct:issued "2024-03-06T00:00:00+00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-03-06T00:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dct:title "Ontologia Legislazione Pertinente di INPS "@it,
+        "Relevant Legislation INPS Ontology"@en .
+
+### Object Properties
+
+aco:certifies a owl:ObjectProperty .
+
+CLV:hasCurrentAddress a owl:ObjectProperty .
+
+INPSRL:certificaDistacco a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "certifica distacco"@it,
+        "certifies secondment"@en ;
+    rdfs:subPropertyOf aco:certifies ;
+    rdfs:domain INPSRL:ModelloA1 ;
+    rdfs:range INPSRL:Distacco ;
+    rdfs:comment "Relationship between A1 Form and the secondment that it certifies."@en,
+        "Relazione tra il modello A1 e il distacco che esso certifica."@it .
+
+INPSRL:contattiRelativiADistacco a owl:ObjectProperty ;
+    rdfs:label "contatti relativi a distacco"@it,
+        "secondment contact point"@en ;
+    rdfs:subPropertyOf SM:hasOnlineContactPoint ;
+    rdfs:domain INPSRL:Distacco ;
+    rdfs:comment "I contatti (telefono, email) del Titolare al momento del distacco."@it,
+        "Relationship to retrieve the Holder's contact point (telephone email) when issuing the Claim."@en .
+
+INPSRL:delegatoHaTipologia a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "delegate has type"@en,
+        "delegato ha tipologia"@it ;
+    rdfs:domain INPSRL:Delegato ;
+    rdfs:comment "Relationship between the delegate and his type."@en ;
+    rdfs:backwardCompatibleWith "Relazione tra un delegato e il suo tipo"@it .
+
+INPSRL:distaccoPressoDomicilioEstero a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "abroad domicile secondment"@en,
+        "distacco in domicilio estero"@it ;
+    rdfs:domain INPSRL:Distacco ;
+    rdfs:range CLV:Address ;
+    rdfs:comment "Relationship between the secondment and the abroad address in which it takes place."@en,
+        "Relazione tra lo specifico distacco e l'indirizzo estero in cui ha luogo."@it .
+
+INPSRL:distaccoRelativoALavoratore a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "distacco relativo a lavoratore"@it,
+        "secondment of worker"@en ;
+    rdfs:domain INPSRL:Distacco ;
+    rdfs:range INPSRL:Lavoratore ;
+    rdfs:comment "Relationship between the secondment and the worker involved."@en,
+        "Relazione tra il distacco e il lavoratore coinvolto."@it .
+
+INPSRL:domandaHaAllegato a owl:ObjectProperty ;
+    rdfs:label "claim has attachment"@en,
+        "domanda ha allegato"@it ;
+    rdfs:domain INPSRL:DomandaRilascioModelloA1 ;
+    rdfs:range INPSRL:Allegato ;
+    rdfs:comment "Relations among the Claim and its attachments."@en,
+        "Relazione tra la domanda e i suoi allegati."@it .
+
+INPSRL:domandaHaDichiarazione a owl:ObjectProperty ;
+    rdfs:label "claim has declaration"@en,
+        "domanda ha dichiarazione"@it ;
+    rdfs:domain INPSRL:DomandaRilascioModelloA1 ;
+    rdfs:range INPSRL:Dichiarazione ;
+    rdfs:comment "Relationship among the Claim and the declarations stated in it."@en,
+        "Relazione tra la domanda e le dichiarazioni presente in essa."@it .
+
+INPSRL:haAeroportoComeBaseDiServizio a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha aeroporto come base di servizio"@it,
+        "has headquarter airport"@en ;
+    rdfs:subPropertyOf INPSRL:lavoraPressoAeroporto ;
+    rdfs:comment "Relationship between the flight crew and his headquarter airport."@en,
+        "Relazione tra il personale di volo e cabina e l'aeroporto in cui fa base."@it .
+
+INPSRL:haDomandaRilascioModelloA1 a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha domanda rilascio modello A1"@it,
+        "has A1 form claim"@en ;
+    rdfs:domain INPSRL:PraticaRilascioModelloA1 ;
+    rdfs:range INPSRL:DomandaRilascioModelloA1 ;
+    rdfs:comment "Relationship between the Claim and the Application of the A1 form."@en,
+        "Relazione tra la domanda e la pratica per il rilascio del modello A1"@it .
+
+INPSRL:haDomicilioEstero a owl:ObjectProperty ;
+    rdfs:label "ha domicilio estero"@it,
+        "has abroad domicile"@en ;
+    rdfs:domain CPV:Person ;
+    rdfs:range CLV:Address ;
+    rdfs:comment "Relationship among a person and his abroad domiciles."@en,
+        "Relazione tra una persona e i suoi domicili esteri."@it .
+
+INPSRL:haPianoDiLavoroEstero a owl:ObjectProperty ;
+    rdfs:label "ha piano di lavoro estero"@it,
+        "has abroad work plan"@en ;
+    rdfs:domain INPSRL:Distacco ;
+    rdfs:range INPSRL:PianoLavoroPrevistoEstero ;
+    rdfs:comment "Relationship among the secondment and the abroad work plans in case of work in several countries."@en,
+        "Relazione tra il distacco e i piani di lavoro esteri nel caso in cui sia coinvolto più di un paese."@it .
+
+INPSRL:haRapportoDiLavoroConOrganizzazione a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha rapporto di lavoro con organizzazione"@it,
+        "has employment with organization"@en ;
+    rdfs:domain INPSRL:RapportoDiLavoro ;
+    rdfs:range COV:Organization ;
+    rdfs:comment "Relationship between an employment and the involved organization."@en,
+        "Relazione tra un rapporto di lavoro e l'organizzazione coinvolta."@it .
+
+INPSRL:haSettoreAttività a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "ha settore attività"@it,
+        "has business area"@en ;
+    rdfs:domain COV:Organization ;
+    rdfs:range INPSRL:SettoreAttivita ;
+    rdfs:comment "Relationship linking an Organization to its Business Area."@en,
+        "Relazione tra l'azienda e il suo settore attività"@it .
+
+INPSRL:lavoraPressoAeroporto a owl:ObjectProperty ;
+    rdfs:label "lavora presso aeroporto"@it,
+        "works in airport"@en ;
+    rdfs:domain INPSRL:PersonaleDiVoloECabina ;
+    rdfs:range INPSRL:Aeroporto ;
+    rdfs:comment "Relationship linking the Flight and Cabin Crew to an Airport they work in."@en,
+        "Relazione che lega il Personale di Volo e Cabina ad un Aeroporto in cui lavora."@it .
+
+INPSRL:lavoratoreAutonomoHaTiplogia a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "independent worker has category"@en,
+        "lavoratore autonomo ha tiplogia"@it ;
+    rdfs:domain INPSRL:LavoratoreAutonomo ;
+    rdfs:range INPSRL:tipologiaLavoratoreAutonomo ;
+    rdfs:comment "Relationship between the independent worker and his category."@en,
+        "Relazione tra il lavoratore autonomo e la sua tipologia."@it .
+
+INPSRL:lavoratoreDelegaDelegato a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "lavoratore delega delegato"@it,
+        "worker assigns delegate"@en ;
+    rdfs:domain INPSRL:Lavoratore ;
+    rdfs:range INPSRL:Delegato ;
+    rdfs:comment "Relationship linking a Worker to the delegated Person or Organization."@en,
+        "Relazione che lega un Lavoratore alla Persona o all'Ente delegato."@it .
+
+INPSRL:lavoratoreHaRapportoDiLavoro a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "lavoratore ha rapporto di lavoro"@it,
+        "worker has employment relationship"@en ;
+    rdfs:domain INPSRL:Lavoratore ;
+    rdfs:range INPSRL:RapportoDiLavoro ;
+    rdfs:comment "Relationship linking a Worker to the Employment Relationship that involves him."@en,
+        "Relazione che lega un Lavoratore al Rapporto di Lavoro che lo riguarda."@it .
+
+INPSRL:modelloA1HaTipologiaAccordo a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "a1 form has agreement type"@en,
+        "modello A1 ha tipologia accordo"@it ;
+    rdfs:domain INPSRL:Distacco ;
+    rdfs:range INPSRL:TipologiaAccordoModelloA1 ;
+    rdfs:comment "Relationship between the secondment and the agreement type"@en,
+        "Relazione tra il distacco e la tipologia di accordo"@it .
+
+INPSRL:pianoLavoroPerStato a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "piano lavoro per stato"@it,
+        "work plan for country"@en ;
+    rdfs:domain INPSRL:PianoLavoroPrevistoEstero ;
+    rdfs:range CLV:Country ;
+    rdfs:comment "Relationship linking an Expected Abroad Work Plan to the Country the work plan relates to."@en,
+        "Relazione che lega un Piano Lavoro Previsto Estero allo Stato al quale è riferito."@it .
+
+INPSRL:praticaGestitaDaSedeINPS a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "application instructed by INPS office"@en,
+        "pratica gestita da sede INPS"@it ;
+    rdfs:domain INPSRL:Pratica ;
+    rdfs:range INPSCore:SedeINPS ;
+    rdfs:comment "Relationship linking each Application to the INPS Office by which it is instructed."@en,
+        "Relazione che lega ciascuna Pratica alla Sede INPS da cui è gestita."@it .
+
+INPSRL:praticaRilasciaModelloA1 a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "application issues A1 form"@en,
+        "pratica rilascia modello A1"@it ;
+    rdfs:domain INPSRL:PraticaRilascioModelloA1 ;
+    rdfs:range INPSRL:ModelloA1 ;
+    rdfs:comment "Relationship linking each Application to the A1 Form it issues."@en,
+        "Relazione che lega ciascuna Pratica al Modello A1 che rilascia."@it .
+
+INPSRL:presentaDomandaRilascioModelloA1 a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "presenta domanda rilascio modello A1"@it,
+        "submits A1 form application"@en ;
+    rdfs:domain INPSRL:RichiedenteModelloA1 ;
+    rdfs:range INPSRL:DomandaRilascioModelloA1 ;
+    rdfs:comment "Relationship linking each A1 Form Applicant to the A1 Form Claim he or she submits."@en,
+        "Relazione che lega ciascun Richiedente Modello A1 alla Domanda che presenta."@it .
+
+INPSRL:rapportoDiLavoroEsteroHaTipologia a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "abroad employment relationship has type"@en,
+        "rapporto di lavoro estero ha tipologia"@it ;
+    rdfs:domain INPSRL:RapportoDiLavoroAllEstero ;
+    rdfs:comment "Relationship between an abroad employment and his type"@en,
+        "Relazione tra un contratto di lavoro estero e la sua tipologia."@it .
+
+INPSRL:rapportoDiLavoroEsteroHaTipoOrario a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "abroad employment relationship has work schedule type"@en,
+        "rapporto di lavoro estero ha tipo orario"@it ;
+    rdfs:domain INPSRL:RapportoDiLavoroAllEstero ;
+    rdfs:comment "Relationship between the abroad employment and the working schedule agreed."@en,
+        "Relazione tra un rapporto di lavoro estero e il tipo di orario stabilito nel contratto."@it .
+
+SM:hasOnlineContactPoint a owl:ObjectProperty .
+
+### Datatypes
+
+xsd:dateTime a rdfs:Datatype .
+
+xsd:double a rdfs:Datatype .
+
+xsd:integer a rdfs:Datatype .
+
+### Annotation Properties
+
+rdfs:backwardCompatibleWith a owl:AnnotationProperty .
+
+### Data Properties
+
+INPSRL:dataAssunzione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data assunzione"@it,
+        "hiring date"@en ;
+    rdfs:domain INPSRL:RapportoDiLavoroAllEstero ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "La data in cui il lavoratore ha iniziato un rapporto di lavoro."@it,
+        "The date of beginning of an Employment Relationship."@en .
+
+INPSRL:dataInizioAttività a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data inizio attività"@it,
+        "start date of activity"@en ;
+    rdfs:domain INPSRL:LavoratoreAutonomo ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "La data in cui il lavoratore autonomo inizia la sua attività lavorativa."@it,
+        "The date on which the be-self worker started his activity."@en .
+
+INPSRL:descrizioneDichiarazione a owl:DatatypeProperty ;
+    rdfs:label "declaration description"@en,
+        "descrizione dichiarazione"@it ;
+    rdfs:domain INPSRL:Dichiarazione ;
+    rdfs:comment "La descrizione che riguarda una dichiarazione."@it,
+        "The description of a declaration."@en .
+
+INPSRL:fineValidità a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "expiring date"@en,
+        "fine validità"@it ;
+    rdfs:domain INPSRL:ModelloA1 ;
+    rdfs:comment "Data di fine della validità del Modello A1"@it,
+        "When the A1 Form is expired."@en .
+
+INPSRL:giorniPerMesePianoLavoroPrevistoEstero a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "giorni per mese piano lavoro previsto estero"@it,
+        "planned monthly days in abroad work plan"@en ;
+    rdfs:domain INPSRL:PianoLavoroPrevistoEstero ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Number of days in a month the worker plans to work abroad in a specific abroad work plan."@en,
+        "Numero di giorni di lavoro previsti per mese in un piano di lavoro estero."@it .
+
+INPSRL:giorniPerSettimanaPianoLavoroPrevistoEstero a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "giorni per settimana piano lavoro previsto estero"@it,
+        "planned weekly days in abroad work plan"@en ;
+    rdfs:domain INPSRL:PianoLavoroPrevistoEstero ;
+    rdfs:range xsd:integer ;
+    rdfs:comment "Number of days in a week the worker plans to work abroad in a specific abroad work plan."@en,
+        "Numero di giorni di lavoro previsti per settimana in un piano di lavoro estero."@it .
+
+INPSRL:inizioValidità a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "inizio validità"@it,
+        "validity start date"@en ;
+    rdfs:domain INPSRL:ModelloA1 ;
+    rdfs:comment "Indica la data di inizio validità di un Modello A1"@it,
+        "It specifies the start date of validity for an A1 Form."@en .
+
+INPSRL:nomeAeroporto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "airport name"@en,
+        "nome aeroporto"@it ;
+    rdfs:domain INPSRL:Aeroporto ;
+    rdfs:comment "It is the name of an Airport."@en,
+        "È il nome di un Aeroporto."@it .
+
+INPSRL:redditoPianoLavoroPrevistoEstero a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "income in expected abroad work plan"@en,
+        "reddito piano lavoro previsto estero"@it ;
+    rdfs:domain INPSRL:PianoLavoroPrevistoEstero ;
+    rdfs:range xsd:double ;
+    rdfs:comment "It is the income that is expected to derive from work executed in a specific foreign country. It is specified in an Abroad Work Plan."@en,
+        "È il reddito che si prospetta deriverà dal lavoro svolto in un Paese estero. Viene specificata nel contesto di un Piano di Lavoro Estero."@it .
+
+INPSRL:stimaPercentualeAnnualePianoLavoroPrevistoEstero a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "annual percentage in expected abroad work plan"@en,
+        "stima percentuale annuale piano lavoro previsto estero"@it ;
+    rdfs:domain INPSRL:PianoLavoroPrevistoEstero ;
+    rdfs:range xsd:double ;
+    rdfs:comment "It is the percentage of annual work that is expected to be executed in a specific foreign country. It is specified in an Abroad Work Plan."@en,
+        "È la percenatuale di lavoro annuale che si prospetta verrà svolta in un Paese estero. Viene specificata nel contesto di un Piano di Lavoro Estero."@it .
+
+INPSRL:valoreDichiarazione a owl:DatatypeProperty ;
+    rdfs:label "declaration value"@en,
+        "valore dichiarazione"@it ;
+    rdfs:domain INPSRL:Dichiarazione ;
+    rdfs:comment "It is the value of a declaration in the Claim."@en,
+        "È il contenuto di una dichiarazione presente nella Domanda."@it .
+
+### Classes
+
+aco:Certificate a owl:Class .
+
+CLV:Address a owl:Class .
+
+CLV:Country a owl:Class .
+
+COV:Organization a owl:Class .
+
+CPV:Person a owl:Class .
+
+INPSContributions:LavoratoreDomestico a owl:Class ;
+    rdfs:subClassOf INPSRL:Lavoratore .
+
+INPSContributions:RapportoDiLavoroDomestico a owl:Class ;
+    rdfs:subClassOf INPSRL:RapportoDiLavoro .
+
+INPSCore:RuoloDiAgente a owl:Class .
+
+INPSCore:RuoloDiPersonaViva a owl:Class .
+
+INPSCore:SedeINPS a owl:Class .
+
+INPSRL:Aeroporto a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:nomeAeroporto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:lavoraPressoAeroporto ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Aeroporto"@it,
+        "Airport"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty CLV:hasCurrentAddress ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "An airport is an aerodrome with extended facilities, mostly for commercial air transport."@en,
+        "Un aeroporto è un'infrastruttura attrezzata per il decollo e l'atterraggio di aeromobili, per il transito dei relativi passeggeri e del loro bagaglio, per il ricovero e il rifornimento dei velivoli."@it .
+
+INPSRL:Allegato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:domandaHaAllegato ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Allegato"@it,
+        "Attachment"@en ;
+    rdfs:comment "A file (text or image) uploaded into the system. For example, a copy of an ID document."@en,
+        "Un file (testuale o immagine) che viene caricato sul sistema insieme a una domanda. Potrebbe per esempio essere la fotocopia di una carta d'identità."@it .
+
+INPSRL:Delegato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:delegatoHaTipologia ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:lavoratoreDelegaDelegato ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Delegate"@en,
+        "Delegato"@it ;
+    rdfs:subClassOf INPSCore:RuoloDiAgente ;
+    rdfs:comment "A person sent or authorized to represent others."@en,
+        "Persona cui sono stati conferiti un incarico specifico di rappresentanza oppure l'esercizio di poteri o funzioni spettanti ad altra persona o organo."@it .
+
+INPSRL:Dichiarazione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:descrizioneDichiarazione ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:domandaHaDichiarazione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Declaration"@en,
+        "Dichiarazione"@it ;
+    rdfs:comment "A formal or explicit statement or announcement."@en,
+        "Comunicazione ufficiale di fatti o notizie di una certa importanza."@it .
+
+INPSRL:Distacco a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:contattiRelativiADistacco ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSRL:distaccoPressoDomicilioEstero ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSRL:modelloA1HaTipologiaAccordo ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:certificaDistacco ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Distacco"@it,
+        "Secondment"@en ;
+    rdfs:comment "Il distacco è lo strumento, previsto dalla normativa comunitaria, di promozione e aiuto alla libera circolazione dei lavoratori. Evita anche che la mobilità possa pregiudicare i lavoratori stessi."@it,
+        "The secondment is the tool, provided for in EU law, to promote and aid the free movement of workers. It also prevents mobility from being detrimental to the workers themselves."@en .
+
+INPSRL:DomandaRilascioModelloA1 a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:domandaHaDichiarazione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:haDomandaRilascioModelloA1 ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:presentaDomandaRilascioModelloA1 ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "A1 Form Claim"@en,
+        "Domanda rilascio modello A1"@it ;
+    rdfs:comment "Claim for the release of an A1 Form."@en,
+        "Richiesta di rilascio del certificato \"Modello A1\"."@it .
+
+INPSRL:Lavoratore a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSRL:LavoratoreAutonomo
+                    INPSRL:LavoratoreParasubordinato
+                    INPSRL:LavoratoreSubordinato ) ],
+        [ a owl:Class ;
+            owl:unionOf (
+                    INPSRL:LavoratorePrivato
+                    INPSRL:LavoratorePubblico ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:distaccoRelativoALavoratore ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Lavoratore"@it,
+        "Worker"@en ;
+    rdfs:subClassOf INPSCore:RuoloDiPersonaViva ;
+    rdfs:comment "A Person who performs a manual or intellectual activity in a context of producing goods or providing services, carrying out his or her work for remuneration."@en,
+        "Persona che svolge un'attività manuale o intellettuale in un contesto di produzione di beni o erogazione di servizi, svolgendo la sua attività lavorativa a titolo oneroso."@it .
+
+INPSRL:LavoratoreAutonomo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:dataInizioAttività ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSRL:lavoratoreAutonomoHaTiplogia ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Independent Worker"@en,
+        "Lavoratore autonomo"@it ;
+    owl:disjointWith INPSRL:LavoratorePubblico ;
+    rdfs:comment "An independent worker is one who is self-employed, meaning that he or she is not subordinate to anyone, and therefore free from any employer."@en,
+        "Il lavoratore autonomo è un lavoratore indipendente, ovvero che esercita la sua attività lavorativa in proprio, non subordinato ad alcuno, svincolato quindi da un datore di lavoro."@it .
+
+INPSRL:LavoratoreParasubordinato a owl:Class ;
+    rdfs:label "Lavoratore parasubordinato"@it,
+        "Parasubordinated Worker"@en ;
+    rdfs:comment "Lavotore coinvolto in  rapporti di collaborazione svolti in modo continuativo nel tempo, coordinati con la struttura organizzativa del datore di lavoro committente, in modo prevalentemente personale e senza vincolo di subordinazione."@it,
+        "Worker involved in collaborative relationships carried out continuously over time, coordinated with the organizational structure of the principal employer, in a predominantly personal way and without subordination."@en .
+
+INPSRL:LavoratorePrivato a owl:Class ;
+    rdfs:label "Lavoratore privato"@it,
+        "Private Sector Worker"@en ;
+    owl:disjointWith INPSRL:LavoratorePubblico ;
+    rdfs:comment "Lavoratore che opera nell'ambito di un'Azienda Privata."@it,
+        "Worker that operates in a Private Organization."@en .
+
+INPSRL:LavoratorePubblico a owl:Class ;
+    rdfs:label "Lavoratore pubblico"@it,
+        "Public Sector Worker"@en ;
+    rdfs:comment "Lavoratore che opera nell'ambito di un'Azienda Pubblico."@it,
+        "Worker that operates in a Public Organization."@en .
+
+INPSRL:LavoratoreSubordinato a owl:Class ;
+    rdfs:label "Employee"@en,
+        "Lavoratore subordinato"@it ;
+    rdfs:comment "An Employee is a Person who is paid to work for an Organization or for an Employer."@en,
+        "Un Lavoratore Subordinato è una persona pagata per lavorare per un'Azienda o per un Datore di Lavore."@it .
+
+INPSRL:ModelloA1 a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:certificaDistacco ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSRL:fineValidità ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSRL:inizioValidità ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:praticaRilasciaModelloA1 ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "A1 Form"@en,
+        "Modello A1"@it ;
+    rdfs:subClassOf aco:Certificate ;
+    rdfs:comment "A1 Form certifies which social security legislation applies to the person holding the model. It is usually necessary to apply for it in case the concerned person, due to the exercise of work activity has connections with more than one EU Country. According to EU regulations (EC Reg. No. 883/2010 and EC Reg. No. 987/2009), a person is subject to the social security legislation of a single State even if the work activity is carried out on the territory of more than one State. Therefore, the issuance of Form A1 means that the person, the holder of the form, is not subject to the legislation of any of the other Countries with which links are in place - in other words, that this person is not obliged to pay social security contributions (including health insurance) to the other countries. The A1 Form remains valid until the expiration date indicated in it or until it is withdrawn by the issuing institution."@en,
+        "Il modello A1 certifica quale legislazione in materia di sicurezza sociale si applica al soggetto titolare del modello. Solitamente è necessario richiederlo nei casi in cui la persona interessata, in ragione dell’esercizio dell’attività lavorativa si trovi ad avere dei collegamenti con più di un paese dell’UE. In base ai regolamenti comunitari (Reg. CE n. 883/2010 e Reg. CE n. 987/2009), una persona è soggetta alla legislazione di sicurezza sociale di un unico Stato anche se l’attività lavorativa viene svolta sul territorio di più Stati membri. Pertanto il rilascio del modello A1 fa sì che la persona, titolare del formulario, non sia soggetta alla legislazione di nessuno degli altri paesi con cui sono in atto dei collegamenti - in altre parole, che questa persona non è obbligata a versare contributi di sicurezza sociale (compresa l’assicurazione sanitaria) agli altri paesi. Il modello A1 rimane valido fino alla data di scadenza in esso indicata o fino al ritiro del modello da parte dell’istituzione che l’ha rilasciato."@it .
+
+INPSRL:PersonaleDiVoloECabina a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:lavoraPressoAeroporto ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Flight and Cabin Crew"@en,
+        "Personale di volo e cabina"@it ;
+    rdfs:subClassOf INPSRL:Lavoratore ;
+    rdfs:comment "Sottoclasse di Lavoratore che classifica il Personale di Volo e Cabina. Ciascuno di questi lavora presso almeno un Aeroporto e ha un Aeroporto come base di servizio."@it,
+        "Sub-class of Worker that classifies Flight and Cabin Crew. Each of them works in at least one Airport and has an Airport as home base."@en .
+
+INPSRL:PianoLavoroPrevistoEstero a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:pianoLavoroPerStato ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSRL:redditoPianoLavoroPrevistoEstero ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSRL:stimaPercentualeAnnualePianoLavoroPrevistoEstero ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:haPianoDiLavoroEstero ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Expected Abroad Work Plan"@en,
+        "Piano lavoro previsto estero"@it ;
+    rdfs:comment "Piano che descrive l'attività lavorativa che ci si aspetta di svolgere in un Paese estero. Questo include una stima in termini di tempo e reddito di suddetta attività lavorativa."@it,
+        "Plan that describes the working activity expected to be carried out in a foreign Country. This plan include a time and income estimate of the working activity. "@en .
+
+INPSRL:Pratica a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:praticaGestitaDaSedeINPS ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Application"@en,
+        "Pratica"@it ;
+    rdfs:comment "Abstract class that aggregates the different types of practices initiated by the INPS."@en,
+        "Classe astratta che raggruppa i diversi tipi di pratica possibili presso l'INPS."@it .
+
+INPSRL:PraticaRilascioModelloA1 a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:haDomandaRilascioModelloA1 ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Application A1 Form"@en,
+        "Pratica rilascio modello A1"@it ;
+    rdfs:subClassOf INPSRL:Pratica ;
+    rdfs:comment "Application activated in case of posted workers or abroad employment relationships that fall under the Relevant Legislation. In case it has a positive outcome, it issues an A1 Form."@en,
+        "Pratica avviata in caso di distacco di un lavoratore o di lavoro all'estero che rientra nei termini della Legislazione Applicabile. In caso di esito positivo la pratica porta al rilascio del Modello A1."@it .
+
+INPSRL:RapportoDiLavoro a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:lavoratoreHaRapportoDiLavoro ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Employment Relationship"@en,
+        "Rapporto di lavoro"@it ;
+    rdfs:comment "Employment relationship between a Worker and an Organization or an employer."@en,
+        "Rapporo di lavoro tra un lavoratore e un'Azienza o un datore di lavoro."@it .
+
+INPSRL:RapportoDiLavoroAllEstero a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:dataAssunzione ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSRL:rapportoDiLavoroEsteroHaTipologia ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSRL:rapportoDiLavoroEsteroHaTipoOrario ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Abroad Employment Relationship"@en,
+        "Rapporto di lavoro all'estero"@it ;
+    rdfs:subClassOf INPSRL:RapportoDiLavoro ;
+    rdfs:comment "Sottoclasse di Rapporto di Lavoro che classifica i rapporti di lavoro stipulati con un'Azienza estera."@it,
+        "Sub-class of Employment Relationship which classifies those employment relationships formed with foreign Organizations."@en .
+
+INPSRL:RichiedenteModelloA1 a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSRL:presentaDomandaRilascioModelloA1 ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "A1 Form Applicant"@en,
+        "Richiedente modello A1"@it ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf (
+                    INPSRL:Delegato
+                    INPSRL:TitolarePratica ) ] ;
+    rdfs:comment "Lavoratore, o ente da lui delegato, che richiede il rilascio del Modello A1."@it,
+        "Worker, or delegate entity, that issues a Form A1 Claim."@en .
+
+INPSRL:SettoreAttivita a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:haSettoreAttività ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Business Area"@en,
+        "Settore attività"@it ;
+    rdfs:comment "A Business Area indicates the business sector in which an Organization operates."@en,
+        "Il Settore Attività indica il campo di atticità di cui si occupa un'Azienda."@it .
+
+INPSRL:TipologiaAccordoModelloA1 a owl:Class ;
+    rdfs:label "Agreement type for A1 form"@en,
+        "Tipologia accordo modello A1"@it ;
+    rdfs:comment "Specifica la tipologia di accordo per il rilascio del Modello A1."@it,
+        "Specifies the type of agreement for the A1 Form."@en .
+
+INPSRL:TipologiaDelegato a owl:Class ;
+    rdfs:label "Delegate type"@en,
+        "Tipologia delegato"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:delegatoHaTipologia ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Specifica la tipologia di Delegato."@it,
+        "Specifies the type of a Delegate."@en .
+
+INPSRL:tipologiaLavoratoreAutonomo a owl:Class ;
+    rdfs:label "Independent worker category"@en,
+        "Tipologia lavoratore autonomo"@it ;
+    rdfs:comment "It is the category of Independent Worker."@en,
+        "È la tipologia di Lavoratore Autonomo."@it .
+
+INPSRL:TipologiaRapportoDiLavoro a owl:Class ;
+    rdfs:label "Employment relationship type"@en,
+        "Tipologia rapporto di lavoro"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:rapportoDiLavoroEsteroHaTipologia ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Indica il tipo di Rapporto di Lavoro all'estero."@it,
+        "Indicates the kind of Abroad Employment Relationship."@en .
+
+INPSRL:TipoOrarioDiLavoro a owl:Class ;
+    rdfs:label "Tipo orario di lavoro"@it,
+        "Work schedule type"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSRL:rapportoDiLavoroEsteroHaTipoOrario ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Indica il tipo di orario di lavoro per un Rapporto di Lavoro all'estero."@it,
+        "Indicates the kind of work schedule for an Abroad Employment Relationship."@en .
+
+INPSRL:TitolarePratica a owl:Class ;
+    rdfs:label "Application Holder"@en,
+        "Titolare pratica"@it ;
+    rdfs:subClassOf INPSRL:Lavoratore ;
+    rdfs:comment "Sottoclasse di Persona (Fisica) che classifica le persone a cui, facendo seguito alla presentazione di idonea domanda, sono riconosciuti i requisiti per accedere al Modello A1. Nel caso il Titolare sia colui che presenta la domanda, corrisponde al Richiedente."@it,
+        "Sub-class of Person (Physical) which classifies the people who, following the presentation of a suitable application, are recognized as having the requisites for accessing the A1 Form. If the Holder issues the Claim, it corresponds to the Applicant."@en .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    foaf:name "Central Management of Information Technology and Innovations"@en,
+        "Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
+        "This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - legislazione pertinente"@it,
+        "N-TRIPLES distribution of the INPS ontology - relevant legislation"@en .
+
+<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
+        "This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - legislazione pertinente"@it,
+        "RDF/Turtle distribution of the INPS ontology - relevant legislation"@en .
+
+<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
+        "This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - legislazione pertinente"@it,
+        "RDF/XML distribution of the INPS ontology - relevant legislation"@en .
+
+### Axioms
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSRL:LavoratoreAutonomo
+            INPSRL:LavoratoreParasubordinato
+            INPSRL:LavoratoreSubordinato ) .
+
+### Serialized using the ttlser deterministic serializer v1.2.0
