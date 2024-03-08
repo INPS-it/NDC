@@ -10,10 +10,7 @@ info:
   contact:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
-  description: |-
-   Costituisce l'oggetto della domanda di pensione ovvero la ragione per cui si ha diritto alla prestazione pensionistica. Lo specifico prodotto viene individuato mediante la combinazione di un insieme di caratteristiche ciascuna delle quali coglie uno specifico aspetto o della sitazione attuale del richiedente o della sua vita, lavorativa e personale, pregressa
-   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
-   che introduce le keyword x-jsonld-type e x-jsonld-context.
+  description: https://w3id.org/italia/social-security/onto/pensions/codiceProdottoPensionistico
 paths: {}
 servers: []
 tags: []
@@ -30,8 +27,7 @@ components:
 
     IdProdottoPensionistico:
       type: string
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/codiceProdottoPensionistico
+      description: https://w3id.org/italia/social-security/onto/pensions/codiceProdottoPensionistico
       example: '0039'
       maxLength: 50
       minLength: 1
@@ -54,8 +50,7 @@ components:
         ha_tipo_di_pensione:
           "@id": haTipoDiPensione
       additionalProperties: true
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico
+      description: https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico
       required:
       - codice_prodotto_pensionistico
       properties:

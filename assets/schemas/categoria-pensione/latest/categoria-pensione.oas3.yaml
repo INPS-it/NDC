@@ -10,10 +10,7 @@ info:
   contact:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
-  description: |-
-   Classifica la prestazione pensionistica erogata dall'INPS. Permette di risalire al tipo di trattamento che viene erogato. Ciascun trattamento è, infatti, individuato tramite un apposito acronimo che esprime il fondo erogante e/o la tipologia di trattamento
-   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
-   che introduce le keyword x-jsonld-type e x-jsonld-context.
+  description: https://w3id.org/italia/social-security/onto/pensions/CategoriaPP
 paths: {}
 servers: []
 tags: []
@@ -22,8 +19,7 @@ components:
 
     IdCategoriaPensione:
       type: string
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/codiceCategoriaPensione
+      description: https://w3id.org/italia/social-security/onto/pensions/codiceCategoriaPensione
       example: '013-VOMIN'
       maxLength: 50
       minLength: 1
@@ -39,8 +35,7 @@ components:
         codice_categoria_pensione: codiceCategoriaPensione
         descrizione_categoria_pensione: descrizioneCategoriaPensione
       additionalProperties: true
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/CategoriaPP
+      description: https://w3id.org/italia/social-security/onto/pensions/CategoriaPP
       required:
       - codice_categoria_pensione
       - descrizione_categoria_pensione

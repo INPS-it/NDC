@@ -10,10 +10,7 @@ info:
   contact:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
-  description: |-
-   Classifica i sistemi di assicurazione previdenziale previsti dalla norma. Ciascuna gestione adotta un diverso sistema di contribuzione da applicare ai lavoratori ad essa iscritti, definendo, ad esempio, la base imponibile, la misura e le modalità di versamento dei contributi. La competenza della gestione è definita dal tipo di lavoro svolto e dal rapporto di lavoro instaurato
-   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
-   che introduce le keyword x-jsonld-type e x-jsonld-context.
+  description: https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica
 paths: {}
 servers: []
 tags: []
@@ -24,8 +21,7 @@ components:
 
     IdGestionePensionistica:
       type: string
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/codiceGestionePensionistica
+      description: https://w3id.org/italia/social-security/onto/pensions/codiceGestionePensionistica
       example: '005'
       maxLength: 50
       minLength: 1
@@ -43,8 +39,7 @@ components:
         raggruppa_fondo:
           "@id": raggruppaFondo
       additionalProperties: true
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica
+      description: https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica
       required:
       - codice_gestione_pensionistica
       - descrizione_gestione_pensionistica

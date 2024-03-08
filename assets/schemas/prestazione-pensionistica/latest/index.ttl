@@ -1,0 +1,79 @@
+@prefix admsapit: <https://w3id.org/italia/onto/ADMS/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSPensions: <https://w3id.org/italia/social-security/onto/pensions/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/italia/social-security/onto/pensions> a owl:Ontology ;
+    foaf:name "Ontologia INPS relativa alle entità e alle relazioni che descrivono la prestazione pensionistica erogata dall'istituto. Tra di esse troviamo, ad esempio, i vari stati in cui si puo trovare la domanda o le diverse modalità di pagamento con cui INPS eroga la prestazione al cittadino" .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+### Annotations
+
+<https://w3id.org/italia/schemas/prestazione-pensionistica/latest/prestazione-pensionistica.oas3.yaml> a dcatapit:Dataset,
+        dcatapit:Distribution ;
+    rdfs:label "Consultazione Prestazione Pensionistica API"@it ;
+    rdfs:comment "Servizio di notifica"@it ;
+    owl:versionInfo "1.0"@it ;
+    admsapit:acronym "inps" ;
+    admsapit:hasKeyClass INPSPensions:PrestazionePensionistica ;
+    admsapit:prefix "INPSPensions"^^xsd:string ;
+    admsapit:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/prestazione-pensionistica/latest> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/schemas/prestazione-pensionistica/latest/prestazione-pensionistica.oas3.yaml> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/prestazione-pensionistica/latest/prestazione-pensionistica.oas3.yaml> ;
+    dcat:keyword "Paying Office"@en,
+        "Pension Benefit"@en,
+        "Pension Product"@en,
+        "Prestazione Pensionistica"@it,
+        "Prodotto Pensionistico"@it,
+        "Ufficio Pagatore"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/social-security/onto/pensions> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Il servizio viene invocato per ottenere le informazioni sulla prestazione pensionistica che rientra tra le diverse forme di tutela ed assistenza dei lavoratori che si traducono nell’erogazione di prestazioni di somme di denaro o altre utilità, e predisposte in relazione a situazioni di bisogno in cui i lavoratori stessi o i loro famigliari possono venire a trovarsi in seguito al verificarsi di determinati eventi riconducibili o meno allo svolgimento dell’attività lavorativa e finalizzate sostanzialmente a garantire la continuità del reddito. Nel caso della pensione viene tutelata l'impossibilità del percipiente di assicurare un reddito per se e per i famigliari a proprio carico per sopraggiunti motivi ostativi, in particolare per il superamento di una certa età o anzianita di servizio o per malattia o per decesso. Per sostenere finanziariamente tali tutele è prevista una imposizione contributiva obbligatoria, ossia il pagamento di specifici oneri (contributi), sulla retribuzione corrisposta a ciascun lavoratore. Le prestazioni pensionistiche non vengono erogate “d’ufficio” dall’Ente, ma soltanto se l’interessato/assicurato ha presentato un’apposita domanda. In generale una prestazione pensionistica può abbracciare più domande presentate da uno stesso richiedente e identifica il rapporto previdenziale in essere tra detto richiedente e l'ente INPS, a partire dall'invio della prima domanda di pensione fino alla terminazione per decesso del titolare della prestazione (gli eventuali superstiti daranno luogo a una nuova prestazione pensionistica)" ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+    dct:identifier <https://w3id.org/italia/schemas/prestazione-pensionistica> ;
+    dct:issued "2024-03-08"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-03-08"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dct:title "Consultazione Prestazione Pensionistica API"@it .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

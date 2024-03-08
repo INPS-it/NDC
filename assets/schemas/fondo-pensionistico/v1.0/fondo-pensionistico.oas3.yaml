@@ -10,10 +10,7 @@ info:
   contact:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
-  description: |-
-   Classifica i collettori finanziari nei quali sono accumulati i contributi raccolti presso gli iscritti a una gestione previdenziale. Ciascun fondo fa parte di una gestione con cui condivide le modalità di contribuzione. A seconda del tipo di attività svolta dal lavoratore contribuente o dal suo datore di lavoro, i contributi versati confluiscono in uno specifico fondo che li amministra in autonomia
-   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
-   che introduce le keyword x-jsonld-type e x-jsonld-context.
+  description: https://w3id.org/italia/social-security/onto/pensions/FondoPensionistico
 paths: {}
 servers: []
 tags: []
@@ -39,8 +36,7 @@ components:
         codice_fondo_pensionistico: codiceFondoPensionistico
         descrizione_fondo_pensionistico: descrizioneFondoPensionistico
       additionalProperties: true
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/FondoPensionistico
+      description: https://w3id.org/italia/social-security/onto/pensions/FondoPensionistico
       required:
       - codice_fondo_pensionistico
       - descrizione_fondo_pensionistico

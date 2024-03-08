@@ -10,10 +10,7 @@ info:
   contact:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
-  description: |-
-   Classificazione della forma pensionistica sulla base della normativa applicabile
-   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
-   che introduce le keyword x-jsonld-type e x-jsonld-context.
+  description: https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione
 paths: {}
 servers: []
 tags: []
@@ -22,8 +19,7 @@ components:
 
     IdTipoDiPensione:
       type: string
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/codiceTipoPensione
+      description: https://w3id.org/italia/social-security/onto/pensions/codiceTipoPensione
       example: '0001-0001-0017'
       maxLength: 50
       minLength: 1
@@ -39,8 +35,7 @@ components:
         codice_tipo_pensione: codiceTipoPensione
         descrizione_tipo_pensione: descrizioneTipoPensione
       additionalProperties: true
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione
+      description: https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione
       required:
       - codice_tipo_pensione
       - descrizione_tipo_pensione

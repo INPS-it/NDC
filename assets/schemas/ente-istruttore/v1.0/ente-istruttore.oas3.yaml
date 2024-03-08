@@ -10,10 +10,7 @@ info:
   contact:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
-  description: |-
-   Classifica i possibili enti che possono istruire una richiesta di pensione in regime di totalizzazione o di cumulo. Nel contesto delle domande di pensione rivolte a INPS, quest'ultimo è l'unico ente istruttore possibile e la classe accoglie le istanze INPS - Gestione Privata e INPS - Gestione Pubblica, che rappresentano le diverse modalità di istruttoria previste dall'ente
-   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
-   che introduce le keyword x-jsonld-type e x-jsonld-context.
+  description: https://w3id.org/italia/social-security/onto/pensions/EnteIstruttore
 paths: {}
 servers: []
 tags: []
@@ -22,8 +19,7 @@ components:
 
     IdEnteIstruttore:
       type: string
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/codiceEnteIstruttore
+      description: https://w3id.org/italia/social-security/onto/pensions/codiceEnteIstruttore
       example: '03'
       maxLength: 50
       minLength: 1
@@ -39,8 +35,7 @@ components:
         codice_ente_istruttore: codiceEnteIstruttore
         descrizione_ente_istruttore: descrizioneEnteIstruttore
       additionalProperties: true
-      description:
-         https://w3id.org/italia/social-security/onto/pensions/EnteIstruttore
+      description: https://w3id.org/italia/social-security/onto/pensions/EnteIstruttore
       required:
       - codice_ente_istruttore
       - descrizione_ente_istruttore

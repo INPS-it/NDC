@@ -1,0 +1,120 @@
+openapi: 3.0.3
+info:
+  title: Schema della Pratica Rilascio Modello A1
+  version: 202403.07.00
+  x-summary: Schema della Pratica Rilascio Modello A1 compatibile con l'Ontologia INPS relativa alla Legislazione Pertinente
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: https://w3id.org/italia/social-security/onto/relevant-legislation/PraticaRilascioModelloA1
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    DomandaRilascioModelloA1:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/domanda-rilascio-modello-a1/latest/domanda-rilascio-modello-a1.oas3.yaml#/components/schemas/DomandaRilascioModelloA1"
+
+    IdPraticaRilascioModelloA1:
+      type: string
+      description: https://w3id.org/italia/social-security/onto/relevant-legislation/codicePraticaRilascioModelloA1
+      example: '0489'
+      maxLength: 50
+      minLength: 1
+
+    PraticaRilascioModelloA1:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/relevant-legislation/PraticaRilascioModelloA1
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/relevant-legislation/"
+        codice_pratica_rilascio_modello_a1: codicePraticaRilascioModelloA1
+        ha_domanda_rilascio_modello_a1:
+          "@id": haDomandaRilascioModelloA1
+        pratica_rilascia_modello_a1:
+          "@id": praticaRilasciaModelloA1
+        pratica_gestita_da_sede_inps:
+          "@id": praticaGestitaDaSedeINPS
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/relevant-legislation/PraticaRilascioModelloA1
+      required:
+      - codice_pratica_rilascio_modello_a1
+      properties:
+        codice_pratica_rilascio_modello_a1:
+          $ref: "#/components/schemas/IdPraticaRilascioModelloA1"
+        ha_domanda_rilascio_modello_a1:
+          type: object
+          items:
+            $ref: "#/components/schemas/DomandaRilascioModelloA1"
+        pratica_rilascia_modello_a1:
+          type: object
+          items:
+            $ref: "#/components/schemas/ModelloA1"
+        pratica_gestita_da_sede_inps:
+          type: object
+          items:
+            $ref: "#/components/schemas/SedeInps"
+      example:
+        codice_pratica_rilascio_modello_a1: '0489'
+        ha_domanda_rilascio_modello_a1:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/domanda-rilascio-modello-a1/latest/domanda-rilascio-modello-a1.oas3.yaml#/components/schemas/DomandaRilascioModelloA1/example"
+        pratica_rilascia_modello_a1:
+          $ref: "#/components/schemas/ModelloA1/example"
+        pratica_gestita_da_sede_inps:
+          $ref: "#/components/schemas/SedeInps/example"
+
+    ModelloA1:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/relevant-legislation/ModelloA1
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/relevant-legislation/"
+        inizio_validità: inizioValidità
+        fine_validità: fineValidità
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/relevant-legislation/ModelloA1
+      required:
+      - inizio_validità
+      - fine_validità
+      properties:
+        inizio_validità:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        fine_validità:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        inizio_validità: '2022-05-12'
+        fine_validità: '2022-08-12'
+
+    SedeInps:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/core/"
+        codice_sede_inps: codiceSedeINPS
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      required:
+      - codice_sede_inps
+      properties:
+        codice_sede_inps:
+          $ref: "#/components/schemas/IdSedeInps"
+      example:
+        codice_sede_inps: '12903'
+
+    IdSedeInps:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      description: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      example: '12903'
+      maxLength: 50
+      minLength: 1

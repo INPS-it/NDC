@@ -10,10 +10,7 @@ info:
   contact:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
-  description: |-
-   La prestazione pensionistica rientra tra le diverse forme di tutela ed assistenza dei lavoratori che si traducono nell’erogazione di prestazioni di somme di denaro o altre utilità, e predisposte in relazione a situazioni di bisogno in cui i lavoratori stessi o i loro famigliari possono venire a trovarsi in seguito al verificarsi di determinati eventi riconducibili o meno allo svolgimento dell’attività lavorativa e finalizzate sostanzialmente a garantire la continuità del reddito
-   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
-   che introduce le keyword x-jsonld-type e x-jsonld-context.
+  description: https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica
 paths: {}
 servers: []
 tags: []
@@ -24,8 +21,7 @@ components:
 
     IdPrestazionePensionistica:
       type: string
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/numeroCertificatoPP
+      description: https://w3id.org/italia/social-security/onto/pensions/numeroCertificatoPP
       example: '0128'
       maxLength: 50
       minLength: 1
@@ -47,8 +43,7 @@ components:
         ha_coniuge_di_titolare_pp:
           "@id": haConiugeDiTitolarePP
       additionalProperties: true
-      description:
-        https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica
+      description: https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica
       required:
       - numero_certificato_pp
       - data_decorrenza_pagamento_pp
@@ -88,8 +83,7 @@ components:
       x-jsonld-context:
         "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
       additionalProperties: true
-      description:
-          https://w3id.org/italia/social-security/onto/pensions/TitolarePP
+      description: https://w3id.org/italia/social-security/onto/pensions/TitolarePP
       required:
       - cf_titolare_pp
       - nome_titolare_pp
@@ -115,8 +109,7 @@ components:
       x-jsonld-context:
         "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
       additionalProperties: true
-      description:
-          https://w3id.org/italia/social-security/onto/pensions/ConiugeDiTitolarePP
+      description: https://w3id.org/italia/social-security/onto/pensions/ConiugeDiTitolarePP
       required:
       - cf_coniuge_titolare_pp
       - nome_coniuge_titolare_pp
