@@ -311,6 +311,22 @@ rdfs:backwardCompatibleWith a owl:AnnotationProperty .
 
 ### Data Properties
 
+INPSRL:codiceDomandaRilascioModelloA1 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "a1 form claim code"@en,
+        "codice domanda rilascio modello a1"@it ;
+    rdfs:domain INPSRL:DomandaRilascioModelloA1 ;
+    rdfs:comment "Codice identificativo della domanda di rilascio del modello A1."@it,
+        "Identification code of the A1 form claim."@en .
+
+INPSRL:codicePraticaRilascioModelloA1 a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "application a1 form code"@en,
+        "codice pratica rilascio modello a1"@it ;
+    rdfs:domain INPSRL:PraticaRilascioModelloA1 ;
+    rdfs:comment "Codice identificativo della pratica di rilascio del modello A1."@it,
+        "Identification code of the application A1 form."@en .
+
 INPSRL:dataAssunzione a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "data assunzione"@it,

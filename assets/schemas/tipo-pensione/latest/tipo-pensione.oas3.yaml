@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: Schema del Tipo di Pensione
+  version: 202403.07.00
+  x-summary: Schema del Tipo di Pensione compatibile con l'Ontologia INPS relativa alle Pensioni
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+   Classificazione della forma pensionistica sulla base della normativa applicabile
+   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
+   che introduce le keyword x-jsonld-type e x-jsonld-context.
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdTipoDiPensione:
+      type: string
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/codiceTipoPensione
+      example: '0001-0001-0017'
+      maxLength: 50
+      minLength: 1
+
+    TipoDiPensione:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+        codice_tipo_pensione: codiceTipoPensione
+        descrizione_tipo_pensione: descrizioneTipoPensione
+      additionalProperties: true
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione
+      required:
+      - codice_tipo_pensione
+      - descrizione_tipo_pensione
+      properties:
+        codice_tipo_pensione:
+          $ref: "#/components/schemas/IdTipoDiPensione"
+        descrizione_tipo_pensione:
+          type: string
+          maxLength: 255
+      example:
+        codice_tipo_pensione: '0001-0001-0017'
+        descrizione_tipo_pensione: 'Pensione di anzianità con sistema calcolo contributivo'

@@ -1,0 +1,155 @@
+openapi: 3.0.3
+info:
+  title: Schema della Prestazione Pensionistica
+  version: 202403.07.00
+  x-summary: Schema della Prestazione Pensionistica compatibile con l'Ontologia INPS relativa alle Pensioni
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+   La prestazione pensionistica rientra tra le diverse forme di tutela ed assistenza dei lavoratori che si traducono nell’erogazione di prestazioni di somme di denaro o altre utilità, e predisposte in relazione a situazioni di bisogno in cui i lavoratori stessi o i loro famigliari possono venire a trovarsi in seguito al verificarsi di determinati eventi riconducibili o meno allo svolgimento dell’attività lavorativa e finalizzate sostanzialmente a garantire la continuità del reddito
+   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
+   che introduce le keyword x-jsonld-type e x-jsonld-context.
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+    CategoriaPensione:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/categoria-pensione/latest/categoria-pensione.oas3.yaml#/components/schemas/CategoriaPensione"
+
+    IdPrestazionePensionistica:
+      type: string
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/numeroCertificatoPP
+      example: '0128'
+      maxLength: 50
+      minLength: 1
+
+    PrestazionePensionistica:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+        numero_certificato_pp: numeroCertificatoPP
+        data_decorrenza_pagamento_pp: dataDecorrenzaPagamentoPP
+        ha_categoria_pp:
+          "@id": haCategoriaPP
+        ha_titolare_pp:
+          "@id": haTitolarePP
+        ha_coniuge_di_titolare_pp:
+          "@id": haConiugeDiTitolarePP
+      additionalProperties: true
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica
+      required:
+      - numero_certificato_pp
+      - data_decorrenza_pagamento_pp
+      properties:
+        numero_certificato_pp:
+          $ref: "#/components/schemas/IdPrestazionePensionistica"
+        data_decorrenza_pagamento_pp:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        ha_categoria_pp:
+          type: object
+          items:
+            $ref: "#/components/schemas/CategoriaPensione"
+        ha_titolare_pp:
+          type: object
+          items:
+            $ref: "#/components/schemas/TitolarePrestazionePensionistica"
+        ha_coniuge_di_titolare_pp:
+          type: object
+          items:
+            $ref: "#/components/schemas/ConiugeDiTitolarePrestazionePensionistica"
+      example:
+        codice_prodotto_pensionistico: '0128'
+        data_decorrenza_pagamento_pp: '2023-07-15'
+        ha_categoria_pp:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/categoria-pensione/latest/categoria-pensione.oas3.yaml#/components/schemas/CategoriaPensione/example"
+        ha_titolare_pp:
+          $ref: "#/components/schemas/TitolarePrestazionePensionistica/example"
+        ha_coniuge_di_titolare_pp:
+          $ref: "#/components/schemas/ConiugeDiTitolarePrestazionePensionistica/example"
+
+
+    TitolarePrestazionePensionistica:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/TitolarePP
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+      additionalProperties: true
+      description:
+          https://w3id.org/italia/social-security/onto/pensions/TitolarePP
+      required:
+      - cf_titolare_pp
+      - nome_titolare_pp
+      - cognome_titolare_pp
+      properties:
+        cf_titolare_pp:
+          $ref: "#/components/schemas/Cf"
+        nome_titolare_pp:
+          $ref: "#/components/schemas/Nome"
+        cognome_superstite:
+          $ref: "#/components/schemas/Cognome"
+      example:
+        cf_titolare_pp:
+          $ref: "#/components/schemas/Cf/example"
+        nome_titolare_pp:
+          $ref: "#/components/schemas/Nome/example"
+        cognome_titolare_pp:
+          $ref: "#/components/schemas/Cognome/example"
+
+    ConiugeDiTitolarePrestazionePensionistica:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/ConiugeDiTitolarePP
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+      additionalProperties: true
+      description:
+          https://w3id.org/italia/social-security/onto/pensions/ConiugeDiTitolarePP
+      required:
+      - cf_coniuge_titolare_pp
+      - nome_coniuge_titolare_pp
+      - cognome_coniuge_titolare_pp
+      properties:
+        cf_coniuge_titolare_pp:
+          $ref: "#/components/schemas/Cf"
+        nome_coniuge_titolare_pp:
+          $ref: "#/components/schemas/Nome"
+        cognome_coniuge_titolare_pp:
+          $ref: "#/components/schemas/Cognome"
+      example:
+        cf_coniuge_titolare_pp:
+          $ref: "#/components/schemas/Cf/example"
+        nome_coniuge_titolare_pp:
+          $ref: "#/components/schemas/Nome/example"
+        cognome_coniuge_titolare_pp:
+          $ref: "#/components/schemas/Cognome/example"
+
+    Cf:
+      type: string
+      maxLength: 20
+      x-refersTo: https://w3id.org/italia/onto/CPV/taxCode
+      example: 'VRDCLD65F63H501Y'
+
+    Nome:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/CPV/givenName
+      example: 'Claudio'
+
+    Cognome:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/CPV/familyName
+      example: 'Verdi'

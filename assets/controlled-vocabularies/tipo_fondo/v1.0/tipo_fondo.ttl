@@ -1,11 +1,11 @@
-@prefix ns1: <http://www.w3.org/2004/02/skos/core#> .
-@prefix ns2: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix ns2: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ns3: <http://www.w3.org/ns/dcat#> .
-@prefix ns4: <https://w3id.org/italia/onto/NDC/> .
+@prefix ns4: <http://www.w3.org/2006/vcard/ns#> .
 @prefix ns5: <http://rdf-vocabulary.ddialliance.org/xkos#> .
-@prefix ns6: <http://www.w3.org/ns/adms#> .
-@prefix ns7: <http://www.w3.org/2006/vcard/ns#> .
-@prefix ns8: <http://xmlns.com/foaf/0.1/> .
+@prefix ns6: <https://w3id.org/italia/onto/NDC/> .
+@prefix ns7: <http://xmlns.com/foaf/0.1/> .
+@prefix ns8: <http://www.w3.org/ns/adms#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -13,23 +13,40 @@
 ### Annotations
 
 <https://w3id.org/italia/data/standard/SKOS> a <http://dati.gov.it/onto/dcatapit#Standard>,
-        ns2:Standard ;
-    ns2:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
-    ns2:identifier "SKOS" ;
-    ns2:title "Simple Knowledge Organization System - SKOS" .
+        ns1:Standard ;
+    ns1:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    ns1:identifier "SKOS" ;
+    ns1:title "Simple Knowledge Organization System - SKOS" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> a <http://dati.gov.it/onto/dcatapit#Dataset>,
         <https://w3id.org/italia/social-security/onto/pensions/FondoPensionistico>,
-        ns1:ConceptScheme,
-        ns6:Asset ;
+        ns2:ConceptScheme,
+        ns8:Asset ;
     rdfs:label "This is the controlled vocabulary of the fund type adopted by INPS classification"@en,
         "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
-    ns1:prefLabel "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
+    ns2:prefLabel "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
     rdfs:comment "Classification of the fund type adopted by INPS controlled vocabulary"@en,
         "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
     owl:versionInfo "0.1" ;
     rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
-    ns1:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-001>,
+    ns1:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    ns1:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    ns1:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns1:description "Classification of the fund type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
+    ns1:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo" ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns1:modified "2024-02-01"^^xsd:date ;
+    ns1:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns1:relation <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_pensione>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
+    ns1:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns1:title "Classification of the fund type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
+    ns1:type <http://purl.org/adms/assettype/CodeList> ;
+    ns2:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-001>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-002>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-003>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-004>,
@@ -208,22 +225,6 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-045>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-144>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-145> ;
-    ns2:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    ns2:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
-    ns2:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:description "Classification of the fund type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
-    ns2:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo" ;
-    ns2:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-    ns2:modified "2024-02-01"^^xsd:date ;
-    ns2:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:relation <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
-    ns2:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:title "Classification of the fund type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di fondo adottato dall'INPS"@it ;
-    ns2:type <http://purl.org/adms/assettype/CodeList> ;
     ns3:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     ns3:distribution <https://w3id.org/italia/social-security/data/pensions/distribution/TF_CSV>,
         <https://w3id.org/italia/social-security/data/pensions/distribution/TF_JSON_LD>,
@@ -233,946 +234,1483 @@
         "pension",
         "pensioni"@it ;
     ns3:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
-    ns4:keyConcept "tipo_fondo" ;
     ns5:numberOfLevels "1" ;
-    ns6:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> .
+    ns6:keyConcept "tipo_fondo" ;
+    ns8:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-001> a ns2:Concept ;
     rdfs:label "FPLD"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "FPLD"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
+    ns1:identifier "001-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "001-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-002> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-002> a ns2:Concept ;
     rdfs:label "Minatori"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Minatori"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
+    ns1:identifier "001-002"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "001-002"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-003> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-003> a ns2:Concept ;
     rdfs:label "Piccola pesca"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Piccola pesca"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
+    ns1:identifier "001-003"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "001-003"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-004> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-004> a ns2:Concept ;
     rdfs:label "Bancari"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Bancari"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
+    ns1:identifier "001-004"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "001-004"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-005> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-005> a ns2:Concept ;
     rdfs:label "Spedizionieri"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Spedizionieri"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
+    ns1:identifier "001-005"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "001-005"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-006> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-006> a ns2:Concept ;
     rdfs:label "INPDAI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPDAI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
+    ns1:identifier "001-006"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "001-006"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-007> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-007> a ns2:Concept ;
     rdfs:label "Marittimi ante 1965"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Marittimi ante 1965"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
+    ns1:identifier "001-007"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "001-007"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-008> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/001-008> a ns2:Concept ;
     rdfs:label "INPGI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPGI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/001> ;
+    ns1:identifier "001-008"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "001-008"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/002-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/002-001> a ns2:Concept ;
     rdfs:label "CD/CM"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/002> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CD/CM"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/002> ;
+    ns1:identifier "002-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "002-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/003-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/003-001> a ns2:Concept ;
     rdfs:label "Artigiani"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/003> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Artigiani"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/003> ;
+    ns1:identifier "003-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "003-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/004-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/004-001> a ns2:Concept ;
     rdfs:label "Commercianti"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/004> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Commercianti"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/004> ;
+    ns1:identifier "004-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "004-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/004-002> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/004-002> a ns2:Concept ;
     rdfs:label "Indennizzo"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/004> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Indennizzo"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/004> ;
+    ns1:identifier "004-002"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "004-002"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/005-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/005-001> a ns2:Concept ;
     rdfs:label "Lavoratori Parasubordinati"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/005> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Lavoratori Parasubordinati"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/005> ;
+    ns1:identifier "005-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "005-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/006-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/006-001> a ns2:Concept ;
     rdfs:label "Assegno Sociale"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/006> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Assegno Sociale"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/006> ;
+    ns1:identifier "006-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "006-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/006-002> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/006-002> a ns2:Concept ;
     rdfs:label "Invalidit� Civile"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/006> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Invalidit� Civile"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/006> ;
+    ns1:identifier "006-002"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "006-002"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/006-003> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/006-003> a ns2:Concept ;
     rdfs:label "Pensione Sociale"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/006> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Pensione Sociale"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/006> ;
+    ns1:identifier "006-003"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "006-003"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-001> a ns2:Concept ;
     rdfs:label "Clero"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Clero"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-002> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-002> a ns2:Concept ;
     rdfs:label "Dazieri"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Dazieri"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-002"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-002"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-003> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-003> a ns2:Concept ;
     rdfs:label "Elettrici"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Elettrici"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-003"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-003"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-004> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-004> a ns2:Concept ;
     rdfs:label "Esattoriali"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Esattoriali"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-004"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-004"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-005> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-005> a ns2:Concept ;
     rdfs:label "Trasporti"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Trasporti"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-005"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-005"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-006> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-006> a ns2:Concept ;
     rdfs:label "Ferrovie"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Ferrovie"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-006"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-006"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-007> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-007> a ns2:Concept ;
     rdfs:label "Gas"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Gas"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-007"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-007"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-008> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-008> a ns2:Concept ;
     rdfs:label "Ex-dipendenti"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Ex-dipendenti"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-008"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-008"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-009> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-009> a ns2:Concept ;
     rdfs:label "Ex-salariati"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Ex-salariati"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-009"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-009"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-010> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-010> a ns2:Concept ;
     rdfs:label "Prev. marinara"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Prev. marinara"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-010"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-010"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-011> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-011> a ns2:Concept ;
     rdfs:label "Prev.Mar.Speciale"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Prev.Mar.Speciale"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-011"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-011"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-012> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-012> a ns2:Concept ;
     rdfs:label "Telefonici"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Telefonici"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-012"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-012"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-013> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-013> a ns2:Concept ;
     rdfs:label "Volo"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Volo"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-013"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-013"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-014> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/007-014> a ns2:Concept ;
     rdfs:label "IPOST"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "IPOST"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/007> ;
+    ns1:identifier "007-014"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "007-014"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-001> a ns2:Concept ;
     rdfs:label "Credito cooperativo"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Credito cooperativo"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-002> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-002> a ns2:Concept ;
     rdfs:label "Credito"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Credito"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-002"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-002"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-003> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-003> a ns2:Concept ;
     rdfs:label "Altri enti esodanti"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Altri enti esodanti"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-003"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-003"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-004> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-004> a ns2:Concept ;
     rdfs:label "Ferrovie dello Stato"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Ferrovie dello Stato"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-004"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-004"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-005> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-005> a ns2:Concept ;
     rdfs:label "Azienda con art. 4, legge 92/2012"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Azienda con art. 4, legge 92/2012"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-005"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-005"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-006> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-006> a ns2:Concept ;
     rdfs:label "Assicurativi"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Assicurativi"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-006"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-006"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-007> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-007> a ns2:Concept ;
     rdfs:label "Credito"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Credito"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-007"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-007"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-008> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-008> a ns2:Concept ;
     rdfs:label "Credito cooperativo"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Credito cooperativo"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-008"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-008"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-009> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-009> a ns2:Concept ;
     rdfs:label "Altri enti esodanti"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Altri enti esodanti"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-009"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-009"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-010> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-010> a ns2:Concept ;
     rdfs:label "Azienda pubblica L 26/2019"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Azienda pubblica L 26/2019"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-010"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-010"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-011> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-011> a ns2:Concept ;
     rdfs:label "Azienda settore servizi ambientali"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Azienda settore servizi ambientali"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-011"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-011"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-012> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/008-012> a ns2:Concept ;
     rdfs:label "Azienda con art. 41,dlgs 148/2015"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Azienda con art. 41,dlgs 148/2015"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/008> ;
+    ns1:identifier "008-012"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "008-012"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/009-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/009-001> a ns2:Concept ;
     rdfs:label "Ex-ENPAO"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/009> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Ex-ENPAO"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/009> ;
+    ns1:identifier "009-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "009-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/010-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/010-001> a ns2:Concept ;
     rdfs:label "Casalinghe"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/010> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Casalinghe"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/010> ;
+    ns1:identifier "010-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "010-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/010-002> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/010-002> a ns2:Concept ;
     rdfs:label "BIS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/010> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "BIS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/010> ;
+    ns1:identifier "010-002"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "010-002"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/011-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/011-001> a ns2:Concept ;
     rdfs:label "Vitalizie"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/011> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Vitalizie"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/011> ;
+    ns1:identifier "011-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "011-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/012-014> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/012-014> a ns2:Concept ;
     rdfs:label "Da determinare"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/012> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Da determinare"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/012> ;
+    ns1:identifier "012-014"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "012-014"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/013-015> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/013-015> a ns2:Concept ;
     rdfs:label "Non determinato"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/013> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Non determinato"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/013> ;
+    ns1:identifier "013-015"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "013-015"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/014-015> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/014-015> a ns2:Concept ;
     rdfs:label "Non determinato"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/014> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Non determinato"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/014> ;
+    ns1:identifier "014-015"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "014-015"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/015-016> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/015-016> a ns2:Concept ;
     rdfs:label "Eredi"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/015> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Eredi"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/015> ;
+    ns1:identifier "015-016"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "015-016"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/015-017> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/015-017> a ns2:Concept ;
     rdfs:label "Pensionato"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/015> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Pensionato"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/015> ;
+    ns1:identifier "015-017"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "015-017"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/015-018> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/015-018> a ns2:Concept ;
     rdfs:label "D'ufficio"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/015> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "D'ufficio"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/015> ;
+    ns1:identifier "015-018"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "015-018"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/016-019> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/016-019> a ns2:Concept ;
     rdfs:label "Lavori faticosi e pesanti"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/016> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Lavori faticosi e pesanti"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/016> ;
+    ns1:identifier "016-019"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "016-019"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/017-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/017-001> a ns2:Concept ;
     rdfs:label "Fondo Sociale Occupazione"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/017> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Fondo Sociale Occupazione"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/017> ;
+    ns1:identifier "017-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "017-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/018-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/018-001> a ns2:Concept ;
     rdfs:label "Ordinario"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/018> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Ordinario"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/018> ;
+    ns1:identifier "018-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "018-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/018-002> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/018-002> a ns2:Concept ;
     rdfs:label "Sportivi"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/018> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Sportivi"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/018> ;
+    ns1:identifier "018-002"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "018-002"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-001> a ns2:Concept ;
     rdfs:label "CTPS CIVILI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CTPS CIVILI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
+    ns1:identifier "019-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "019-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-002> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-002> a ns2:Concept ;
     rdfs:label "CTPS DOCENTI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CTPS DOCENTI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
+    ns1:identifier "019-002"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "019-002"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-003> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-003> a ns2:Concept ;
     rdfs:label "CTPS MILITARI E POLIZIA DI STATO"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CTPS MILITARI E POLIZIA DI STATO"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
+    ns1:identifier "019-003"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "019-003"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-004> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-004> a ns2:Concept ;
     rdfs:label "CPDEL"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CPDEL"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
+    ns1:identifier "019-004"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "019-004"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-005> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-005> a ns2:Concept ;
     rdfs:label "CPUG"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CPUG"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
+    ns1:identifier "019-005"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "019-005"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-006> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-006> a ns2:Concept ;
     rdfs:label "CPI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CPI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
+    ns1:identifier "019-006"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "019-006"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-007> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-007> a ns2:Concept ;
     rdfs:label "CPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
+    ns1:identifier "019-007"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "019-007"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-008> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-008> a ns2:Concept ;
     rdfs:label "GENERICO"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "GENERICO"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
+    ns1:identifier "019-008"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "019-008"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-009> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/019-009> a ns2:Concept ;
     rdfs:label "ENTI DI PREVIDENZA"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENTI DI PREVIDENZA"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/019> ;
+    ns1:identifier "019-009"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "019-009"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/020-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/020-001> a ns2:Concept ;
     rdfs:label "APE"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/020> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "APE"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/020> ;
+    ns1:identifier "020-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "020-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/021-015> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/021-015> a ns2:Concept ;
     rdfs:label "Non determinato"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/021> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Non determinato"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/021> ;
+    ns1:identifier "021-015"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "021-015"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/099-099> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/099-099> a ns2:Concept ;
     rdfs:label "Da determinare"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/099> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Da determinare"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/099> ;
+    ns1:identifier "099-099"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "099-099"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-001> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-001> a ns2:Concept ;
     rdfs:label "Ex dipendenti Lloyd Triestini"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Ex dipendenti Lloyd Triestini"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
+    ns1:identifier "101-001"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "101-001"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-002> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-002> a ns2:Concept ;
     rdfs:label "Giocatori di calcio"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Giocatori di calcio"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
+    ns1:identifier "101-002"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "101-002"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-003> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-003> a ns2:Concept ;
     rdfs:label "Procacciatori postali"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Procacciatori postali"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
+    ns1:identifier "101-003"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "101-003"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-004> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-004> a ns2:Concept ;
     rdfs:label "Giornalai e venditori ambulanti"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Giornalai e venditori ambulanti"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
+    ns1:identifier "101-004"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "101-004"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-005> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-005> a ns2:Concept ;
     rdfs:label "Artigiani"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Artigiani"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
+    ns1:identifier "101-005"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "101-005"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-006> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-006> a ns2:Concept ;
     rdfs:label "Minatori in convenzione"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Minatori in convenzione"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
+    ns1:identifier "101-006"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "101-006"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-007> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-007> a ns2:Concept ;
     rdfs:label "Profughi dalla Libia"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Profughi dalla Libia"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
+    ns1:identifier "101-007"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "101-007"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-008> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-008> a ns2:Concept ;
     rdfs:label "Iscrizioni collettive"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Iscrizioni collettive"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
+    ns1:identifier "101-008"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "101-008"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-009> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/101-009> a ns2:Concept ;
     rdfs:label "Facchini e ausiliari del traffico"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Facchini e ausiliari del traffico"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/101> ;
+    ns1:identifier "101-009"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "101-009"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-021> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-021> a ns2:Concept ;
     rdfs:label "INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-021"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-021"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-022> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-022> a ns2:Concept ;
     rdfs:label "EX INPDAP"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EX INPDAP"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-022"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-022"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-023> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-023> a ns2:Concept ;
     rdfs:label "EX IPOST"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EX IPOST"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-023"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-023"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-024> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-024> a ns2:Concept ;
     rdfs:label "EX ENPALS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EX ENPALS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-024"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-024"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-025> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-025> a ns2:Concept ;
     rdfs:label "INPGI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPGI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-025"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-025"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-026> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-026> a ns2:Concept ;
     rdfs:label "INPGI (gestione separata)"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPGI (gestione separata)"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-026"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-026"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-027> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-027> a ns2:Concept ;
     rdfs:label "CF"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CF"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-027"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-027"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-028> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-028> a ns2:Concept ;
     rdfs:label "CNPADC"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CNPADC"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-028"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-028"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-029> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-029> a ns2:Concept ;
     rdfs:label "CPG"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CPG"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-029"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-029"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-030> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-030> a ns2:Concept ;
     rdfs:label "INARCASSA"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INARCASSA"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-030"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-030"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-031> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-031> a ns2:Concept ;
     rdfs:label "Cassa nazionale del notariato"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Cassa nazionale del notariato"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-031"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-031"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-032> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-032> a ns2:Concept ;
     rdfs:label "CNPR"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CNPR"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-032"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-032"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-033> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-033> a ns2:Concept ;
     rdfs:label "ENASARCO"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENASARCO"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-033"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-033"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-034> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-034> a ns2:Concept ;
     rdfs:label "ENPACL"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPACL"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-034"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-034"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-035> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-035> a ns2:Concept ;
     rdfs:label "ENPAM"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAM"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-035"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-035"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-036> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-036> a ns2:Concept ;
     rdfs:label "ENPAF"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAF"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-036"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-036"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-037> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-037> a ns2:Concept ;
     rdfs:label "ENPAV"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAV"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-037"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-037"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-038> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-038> a ns2:Concept ;
     rdfs:label "ENPAP"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAP"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-038"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-038"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-039> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-039> a ns2:Concept ;
     rdfs:label "EPAP"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EPAP"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-039"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-039"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-040> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-040> a ns2:Concept ;
     rdfs:label "ENPAPI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAPI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-040"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-040"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-041> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-041> a ns2:Concept ;
     rdfs:label "ENPAB"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAB"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-041"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-041"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-042> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-042> a ns2:Concept ;
     rdfs:label "EPPI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EPPI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-042"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-042"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-043> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-043> a ns2:Concept ;
     rdfs:label "ENPAIA"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAIA"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-043"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-043"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-045> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-045> a ns2:Concept ;
     rdfs:label "Fondo Pensioni Sicilia"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Fondo Pensioni Sicilia"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-045"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-045"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-122> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-122> a ns2:Concept ;
     rdfs:label "EX INPDAP + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EX INPDAP + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-122"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-122"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-123> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-123> a ns2:Concept ;
     rdfs:label "IPOST + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "IPOST + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-123"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-123"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-124> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-124> a ns2:Concept ;
     rdfs:label "ENPALS + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPALS + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-124"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-124"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-125> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-125> a ns2:Concept ;
     rdfs:label "INPGI + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPGI + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-125"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-125"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-126> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-126> a ns2:Concept ;
     rdfs:label "INPGI (gestione separata) + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPGI (gestione separata) + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-126"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-126"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-127> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-127> a ns2:Concept ;
     rdfs:label "CF + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CF + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-127"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-127"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-128> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-128> a ns2:Concept ;
     rdfs:label "CNPADC + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CNPADC + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-128"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-128"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-129> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-129> a ns2:Concept ;
     rdfs:label "CPG + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CPG + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-129"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-129"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-130> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-130> a ns2:Concept ;
     rdfs:label "INARCASSA + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INARCASSA + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-130"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-130"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-131> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-131> a ns2:Concept ;
     rdfs:label "Cassa nazionale del notariato + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Cassa nazionale del notariato + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-131"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-131"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-132> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-132> a ns2:Concept ;
     rdfs:label "CNPR + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CNPR + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-132"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-132"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-133> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-133> a ns2:Concept ;
     rdfs:label "ENASARCO + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENASARCO + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-133"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-133"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-134> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-134> a ns2:Concept ;
     rdfs:label "ENPACL + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPACL + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-134"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-134"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-135> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-135> a ns2:Concept ;
     rdfs:label "ENPAM + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAM + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-135"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-135"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-136> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-136> a ns2:Concept ;
     rdfs:label "ENPAF + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAF + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-136"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-136"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-137> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-137> a ns2:Concept ;
     rdfs:label "ENPAV + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAV + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-137"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-137"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-138> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-138> a ns2:Concept ;
     rdfs:label "ENPAP + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAP + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-138"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-138"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-139> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-139> a ns2:Concept ;
     rdfs:label "EPAP + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EPAP + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-139"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-139"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-140> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-140> a ns2:Concept ;
     rdfs:label "ENPAPI + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAPI + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-140"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-140"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-141> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-141> a ns2:Concept ;
     rdfs:label "ENPAB + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAB + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-141"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-141"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-142> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-142> a ns2:Concept ;
     rdfs:label "EPPI + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EPPI + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-142"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-142"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-143> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-143> a ns2:Concept ;
     rdfs:label "ENPAIA + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAIA + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-143"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-143"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-144> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-144> a ns2:Concept ;
     rdfs:label "INPS Gestione Privata"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPS Gestione Privata"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-144"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-144"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-145> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/201-145> a ns2:Concept ;
     rdfs:label "INPS Gestione Pubblica"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPS Gestione Pubblica"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/201> ;
+    ns1:identifier "201-145"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "201-145"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-021> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-021> a ns2:Concept ;
     rdfs:label "INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-021"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-021"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-022> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-022> a ns2:Concept ;
     rdfs:label "EX INPDAP"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EX INPDAP"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-022"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-022"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-023> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-023> a ns2:Concept ;
     rdfs:label "EX IPOST"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EX IPOST"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-023"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-023"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-024> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-024> a ns2:Concept ;
     rdfs:label "EX ENPALS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EX ENPALS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-024"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-024"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-025> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-025> a ns2:Concept ;
     rdfs:label "INPGI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPGI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-025"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-025"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-026> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-026> a ns2:Concept ;
     rdfs:label "INPGI (gestione separata)"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPGI (gestione separata)"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-026"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-026"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-027> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-027> a ns2:Concept ;
     rdfs:label "CF"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CF"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-027"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-027"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-028> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-028> a ns2:Concept ;
     rdfs:label "CNPADC"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CNPADC"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-028"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-028"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-029> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-029> a ns2:Concept ;
     rdfs:label "CPG"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CPG"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-029"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-029"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-030> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-030> a ns2:Concept ;
     rdfs:label "INARCASSA"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INARCASSA"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-030"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-030"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-031> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-031> a ns2:Concept ;
     rdfs:label "Cassa nazionale del notariato"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Cassa nazionale del notariato"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-031"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-031"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-032> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-032> a ns2:Concept ;
     rdfs:label "CNPR"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CNPR"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-032"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-032"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-033> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-033> a ns2:Concept ;
     rdfs:label "ENASARCO"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENASARCO"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-033"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-033"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-034> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-034> a ns2:Concept ;
     rdfs:label "ENPACL"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPACL"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-034"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-034"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-035> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-035> a ns2:Concept ;
     rdfs:label "ENPAM"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAM"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-035"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-035"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-036> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-036> a ns2:Concept ;
     rdfs:label "ENPAF"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAF"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-036"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-036"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-037> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-037> a ns2:Concept ;
     rdfs:label "ENPAV"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAV"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-037"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-037"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-038> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-038> a ns2:Concept ;
     rdfs:label "ENPAP"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAP"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-038"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-038"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-039> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-039> a ns2:Concept ;
     rdfs:label "EPAP"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EPAP"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-039"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-039"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-040> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-040> a ns2:Concept ;
     rdfs:label "ENPAPI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAPI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-040"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-040"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-041> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-041> a ns2:Concept ;
     rdfs:label "ENPAB"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAB"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-041"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-041"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-042> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-042> a ns2:Concept ;
     rdfs:label "EPPI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EPPI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-042"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-042"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-043> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-043> a ns2:Concept ;
     rdfs:label "ENPAIA"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAIA"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-043"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-043"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-044> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-044> a ns2:Concept ;
     rdfs:label "Segr. Generale della Presidenza della Repubblica"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Segr. Generale della Presidenza della Repubblica"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-044"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-044"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-045> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-045> a ns2:Concept ;
     rdfs:label "Fondo Pensioni Sicilia"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Fondo Pensioni Sicilia"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-045"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-045"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-122> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-122> a ns2:Concept ;
     rdfs:label "EX INPDAP    + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EX INPDAP    + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-122"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-122"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-123> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-123> a ns2:Concept ;
     rdfs:label "EX IPOST + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EX IPOST + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-123"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-123"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-124> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-124> a ns2:Concept ;
     rdfs:label "EX ENPALS  + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EX ENPALS  + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-124"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-124"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-125> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-125> a ns2:Concept ;
     rdfs:label "INPGI + INPS"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPGI + INPS"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-125"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-125"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-144> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-144> a ns2:Concept ;
     rdfs:label "INPS Gestione Privata"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPS Gestione Privata"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-144"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-144"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-145> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/202-145> a ns2:Concept ;
     rdfs:label "INPS Gestione Pubblica"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPS Gestione Pubblica"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/202> ;
+    ns1:identifier "202-145"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "202-145"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-025> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-025> a ns2:Concept ;
     rdfs:label "INPGI � Giornalisti Dipendenti"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPGI � Giornalisti Dipendenti"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-025"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-025"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-026> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-026> a ns2:Concept ;
     rdfs:label "INPGI (gestione separata)"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPGI (gestione separata)"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-026"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-026"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-027> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-027> a ns2:Concept ;
     rdfs:label "CF"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CF"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-027"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-027"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-028> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-028> a ns2:Concept ;
     rdfs:label "CNPADC"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CNPADC"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-028"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-028"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-029> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-029> a ns2:Concept ;
     rdfs:label "CPG"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CPG"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-029"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-029"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-030> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-030> a ns2:Concept ;
     rdfs:label "INARCASSA"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INARCASSA"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-030"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-030"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-031> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-031> a ns2:Concept ;
     rdfs:label "Cassa nazionale del notariato"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Cassa nazionale del notariato"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-031"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-031"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-032> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-032> a ns2:Concept ;
     rdfs:label "CNPR"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "CNPR"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-032"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-032"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-033> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-033> a ns2:Concept ;
     rdfs:label "ENASARCO"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENASARCO"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-033"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-033"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-034> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-034> a ns2:Concept ;
     rdfs:label "ENPACL"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPACL"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-034"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-034"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-035> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-035> a ns2:Concept ;
     rdfs:label "ENPAM"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAM"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-035"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-035"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-036> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-036> a ns2:Concept ;
     rdfs:label "ENPAF"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAF"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-036"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-036"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-037> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-037> a ns2:Concept ;
     rdfs:label "ENPAV"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAV"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-037"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-037"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-038> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-038> a ns2:Concept ;
     rdfs:label "ENPAP"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAP"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-038"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-038"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-039> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-039> a ns2:Concept ;
     rdfs:label "EPAP"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EPAP"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-039"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-039"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-040> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-040> a ns2:Concept ;
     rdfs:label "ENPAPI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAPI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-040"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-040"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-041> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-041> a ns2:Concept ;
     rdfs:label "ENPAB"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAB"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-041"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-041"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-042> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-042> a ns2:Concept ;
     rdfs:label "EPPI"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "EPPI"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-042"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-042"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-043> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-043> a ns2:Concept ;
     rdfs:label "ENPAIA"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "ENPAIA"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-043"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-043"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-044> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-044> a ns2:Concept ;
     rdfs:label "Segr. Generale della Presidenza della Repubblica"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Segr. Generale della Presidenza della Repubblica"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-044"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-044"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-045> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-045> a ns2:Concept ;
     rdfs:label "Fondo Pensioni Sicilia"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "Fondo Pensioni Sicilia"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-045"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-045"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-144> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-144> a ns2:Concept ;
     rdfs:label "INPS Gestione Privata"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPS Gestione Privata"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-144"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-144"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-145> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo/203-145> a ns2:Concept ;
     rdfs:label "INPS Gestione Pubblica"@it ;
-    ns1:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> .
+    ns2:prefLabel "INPS Gestione Pubblica"@it ;
+    ns2:related <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione/203> ;
+    ns1:identifier "203-145"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo> ;
+    ns2:notation "203-145"@it .
 
 <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a <http://dati.gov.it/onto/dcatapit#Organization>,
-        ns7:Kind,
-        ns7:Organization ;
-    ns7:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
-    ns7:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+        ns4:Kind,
+        ns4:Organization ;
+    ns4:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns4:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
 
 <https://w3id.org/italia/social-security/data/organization/inps> a <http://dati.gov.it/onto/dcatapit#Agent>,
-        ns8:Agent ;
-    ns2:identifier "inps" ;
-    ns8:name "Istituto Nazionale della Previdenza Sociale"@it,
+        ns7:Agent ;
+    ns1:identifier "inps" ;
+    ns7:name "Istituto Nazionale della Previdenza Sociale"@it,
         "National Institute for Social Security"@en .
 
 <https://w3id.org/italia/social-security/data/pensions/distribution/TF_CSV> a <http://dati.gov.it/onto/dcatapit#Distribution>,
         ns3:Distribution ;
-    ns2:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di fondo adottato dall'INPS"@it,
+    ns1:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di fondo adottato dall'INPS"@it,
         "This is the distribution in CSV of the fund type adopted by INPS controlled vocabulary"@en ;
-    ns2:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-    ns2:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns2:title "CSV distribution of the fund type adopted by INPS controlled vocabulary"@en,
+    ns1:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns1:title "CSV distribution of the fund type adopted by INPS controlled vocabulary"@en,
         "Distribuzione CSV del vocabolario controllato sul tipo di fondo adottato dall'INPS"@it ;
     ns3:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_fondo/latest> ;
     ns3:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_fondo/latest/tipo_fondo.csv> .
 
 <https://w3id.org/italia/social-security/data/pensions/distribution/TF_JSON_LD> a <http://dati.gov.it/onto/dcatapit#Distribution>,
         ns3:Distribution ;
-    ns2:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di fondo adottato dall'INPS"@it,
+    ns1:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di fondo adottato dall'INPS"@it,
         "This is the distribution in JSON_LD of the fund type adopted by INPS controlled vocabulary"@en ;
-    ns2:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
-    ns2:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns2:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di fondo adottato dall'INPS"@it,
+    ns1:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns1:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di fondo adottato dall'INPS"@it,
         "JSON_LD distribution of the fund type adopted by INPS controlled vocabulary"@en ;
     ns3:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_fondo/latest> ;
     ns3:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_fondo/latest/tipo_fondo.json> .
 
 <https://w3id.org/italia/social-security/data/pensions/distribution/TF_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
         ns3:Distribution ;
-    ns2:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di fondo adottato dall'INPS"@it,
+    ns1:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di fondo adottato dall'INPS"@it,
         "This is the distribution in RDF/turtle of the fondo type adopted by INPS controlled vocabulary"@en ;
-    ns2:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
-    ns2:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns2:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di fondo adottato dall'INPS"@it,
+    ns1:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns1:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di fondo adottato dall'INPS"@it,
         "RDF/Turtle distribution of the fondo type adopted by INPS controlled vocabulary"@en ;
     ns3:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_fondo/latest> ;
     ns3:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_fondo/latest/tipo_fondo.ttl> .

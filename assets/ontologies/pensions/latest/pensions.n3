@@ -640,6 +640,27 @@ _:genid23 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/ont
 _:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/onto/COV/hasSupportUnit> .
 _:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/italia/social-security/onto/pensions/UfficioPagatore> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceCategoriaPensione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceCategoriaPensione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceCategoriaPensione> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/CategoriaPP> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceCategoriaPensione> <http://www.w3.org/2000/01/rdf-schema#comment> "Codice identificativo del fondo pensionistico."@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceCategoriaPensione> <http://www.w3.org/2000/01/rdf-schema#comment> "Identification code of the pension category."@en .
+<https://w3id.org/italia/social-security/onto/pensions/codiceCategoriaPensione> <http://www.w3.org/2000/01/rdf-schema#label> "codice categoria pensione"@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceCategoriaPensione> <http://www.w3.org/2000/01/rdf-schema#label> "pension category code"@en .
+<https://w3id.org/italia/social-security/onto/pensions/codiceEnteIstruttore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceEnteIstruttore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceEnteIstruttore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/EnteIstruttore> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceEnteIstruttore> <http://www.w3.org/2000/01/rdf-schema#comment> "Codice identificativo dell'ente istruttore."@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceEnteIstruttore> <http://www.w3.org/2000/01/rdf-schema#comment> "Identification code of the competent body"@en .
+<https://w3id.org/italia/social-security/onto/pensions/codiceEnteIstruttore> <http://www.w3.org/2000/01/rdf-schema#label> "codice ente istruttore"@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceEnteIstruttore> <http://www.w3.org/2000/01/rdf-schema#label> "competent body code"@en .
+<https://w3id.org/italia/social-security/onto/pensions/codiceFondoPensionistico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceFondoPensionistico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceFondoPensionistico> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/FondoPensionistico> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceFondoPensionistico> <http://www.w3.org/2000/01/rdf-schema#comment> "Codice identificativo del fondo pensionistico."@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceFondoPensionistico> <http://www.w3.org/2000/01/rdf-schema#comment> "Identification code of the pension fund."@en .
+<https://w3id.org/italia/social-security/onto/pensions/codiceFondoPensionistico> <http://www.w3.org/2000/01/rdf-schema#label> "codice fondo pensionistico"@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceFondoPensionistico> <http://www.w3.org/2000/01/rdf-schema#label> "pension fund code"@en .
 <https://w3id.org/italia/social-security/onto/pensions/codiceFrazionario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/italia/social-security/onto/pensions/codiceFrazionario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/italia/social-security/onto/pensions/codiceFrazionario> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/UfficioPostale> .
@@ -648,6 +669,20 @@ _:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/itali
 <https://w3id.org/italia/social-security/onto/pensions/codiceFrazionario> <http://www.w3.org/2000/01/rdf-schema#comment> "Post office identifier."@en .
 <https://w3id.org/italia/social-security/onto/pensions/codiceFrazionario> <http://www.w3.org/2000/01/rdf-schema#label> "codice frazionario"@it .
 <https://w3id.org/italia/social-security/onto/pensions/codiceFrazionario> <http://www.w3.org/2000/01/rdf-schema#label> "post office code"@en .
+<https://w3id.org/italia/social-security/onto/pensions/codiceGestionePensionistica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceGestionePensionistica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceGestionePensionistica> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceGestionePensionistica> <http://www.w3.org/2000/01/rdf-schema#comment> "Codice identificativo della gestione pensionistica."@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceGestionePensionistica> <http://www.w3.org/2000/01/rdf-schema#comment> "Identification code of the scheme pension."@en .
+<https://w3id.org/italia/social-security/onto/pensions/codiceGestionePensionistica> <http://www.w3.org/2000/01/rdf-schema#label> "codice gestione pensionistica"@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceGestionePensionistica> <http://www.w3.org/2000/01/rdf-schema#label> "pension scheme code"@en .
+<https://w3id.org/italia/social-security/onto/pensions/codiceProdottoPensionistico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceProdottoPensionistico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceProdottoPensionistico> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceProdottoPensionistico> <http://www.w3.org/2000/01/rdf-schema#comment> "Codice identificativo del prodotto pensionistico."@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceProdottoPensionistico> <http://www.w3.org/2000/01/rdf-schema#comment> "Identification code of the pension product"@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceProdottoPensionistico> <http://www.w3.org/2000/01/rdf-schema#label> "codice prodotto pensionistico"@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceProdottoPensionistico> <http://www.w3.org/2000/01/rdf-schema#label> "pension product code"@en .
 <https://w3id.org/italia/social-security/onto/pensions/codiceTipoDiReddito> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/italia/social-security/onto/pensions/codiceTipoDiReddito> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/italia/social-security/onto/pensions/codiceTipoDiReddito> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/TipoDiReddito> .
@@ -656,6 +691,13 @@ _:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/itali
 <https://w3id.org/italia/social-security/onto/pensions/codiceTipoDiReddito> <http://www.w3.org/2000/01/rdf-schema#comment> "Identification code of the type of income."@en .
 <https://w3id.org/italia/social-security/onto/pensions/codiceTipoDiReddito> <http://www.w3.org/2000/01/rdf-schema#label> "codice tipo di reddito"@it .
 <https://w3id.org/italia/social-security/onto/pensions/codiceTipoDiReddito> <http://www.w3.org/2000/01/rdf-schema#label> "income type code"@en .
+<https://w3id.org/italia/social-security/onto/pensions/codiceTipoPensione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceTipoPensione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceTipoPensione> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione> .
+<https://w3id.org/italia/social-security/onto/pensions/codiceTipoPensione> <http://www.w3.org/2000/01/rdf-schema#comment> "Codice identificativo del tipo di pensione."@it .
+<https://w3id.org/italia/social-security/onto/pensions/codiceTipoPensione> <http://www.w3.org/2000/01/rdf-schema#comment> "Identification code of the pension type."@en .
+<https://w3id.org/italia/social-security/onto/pensions/codiceTipoPensione> <http://www.w3.org/2000/01/rdf-schema#comment> "pension type code"@en .
+<https://w3id.org/italia/social-security/onto/pensions/codiceTipoPensione> <http://www.w3.org/2000/01/rdf-schema#label> "codice tipo pensione"@it .
 <https://w3id.org/italia/social-security/onto/pensions/contoCointestato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/italia/social-security/onto/pensions/contoCointestato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/italia/social-security/onto/pensions/contoCointestato> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid25 .
@@ -729,6 +771,13 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneAttivit\u00E0Estera> <http://www.w3.org/2000/01/rdf-schema#comment> "Annotazione aggiuntiva riguardante un periodo di lavoro svolto all'estero."@it .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneAttivit\u00E0Estera> <http://www.w3.org/2000/01/rdf-schema#label> "descrizione attivit\u00E0 estera"@it .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneAttivit\u00E0Estera> <http://www.w3.org/2000/01/rdf-schema#label> "work abroad description"@en .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneCategoriaPensione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneCategoriaPensione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneCategoriaPensione> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/CategoriaPP> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneCategoriaPensione> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of pension category type."@en .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneCategoriaPensione> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrizione della tipologia di categoria pensione."@it .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneCategoriaPensione> <http://www.w3.org/2000/01/rdf-schema#label> "descrizione categoria pensione"@it .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneCategoriaPensione> <http://www.w3.org/2000/01/rdf-schema#label> "pension category description"@en .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneDatoreDiLavoro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneDatoreDiLavoro> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/DatoreDiLavoro> .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneDatoreDiLavoro> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
@@ -760,6 +809,27 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneDichiarazione> <http://www.w3.org/2000/01/rdf-schema#comment> "\u00C8 il testo che esprime la dichiarazione."@it .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneDichiarazione> <http://www.w3.org/2000/01/rdf-schema#label> "declaration description"@en .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneDichiarazione> <http://www.w3.org/2000/01/rdf-schema#label> "descrizione dichiarazione"@it .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneEnteIstruttore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneEnteIstruttore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneEnteIstruttore> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/EnteIstruttore> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneEnteIstruttore> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of competent body type."@en .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneEnteIstruttore> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrizione della tipologia di ente istruttore."@it .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneEnteIstruttore> <http://www.w3.org/2000/01/rdf-schema#label> "competent body description"@en .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneEnteIstruttore> <http://www.w3.org/2000/01/rdf-schema#label> "descrizione ente istruttore"@it .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneFondoPensionistico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneFondoPensionistico> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneFondoPensionistico> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/FondoPensionistico> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneFondoPensionistico> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of pension fund type."@en .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneFondoPensionistico> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrizione della tipologia di fondo pensionisitco."@it .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneFondoPensionistico> <http://www.w3.org/2000/01/rdf-schema#label> "descrizione fondo pensionistico"@it .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneFondoPensionistico> <http://www.w3.org/2000/01/rdf-schema#label> "pension fund description"@en .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneGestionePensionistica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneGestionePensionistica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneGestionePensionistica> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneGestionePensionistica> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of pension scheme type."@en .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneGestionePensionistica> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrizione della tipologia di gestione pensionistica."@it .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneGestionePensionistica> <http://www.w3.org/2000/01/rdf-schema#label> "descrizione gestione pensionistica"@it .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneGestionePensionistica> <http://www.w3.org/2000/01/rdf-schema#label> "pension scheme description"@en .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoDiReddito> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoDiReddito> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoDiReddito> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/TipoDiReddito> .
@@ -768,6 +838,13 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoDiReddito> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrizione della tipologia di reddito."@it .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoDiReddito> <http://www.w3.org/2000/01/rdf-schema#label> "descrizione tipo di reddito"@it .
 <https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoDiReddito> <http://www.w3.org/2000/01/rdf-schema#label> "income type description"@en .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoPensione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoPensione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoPensione> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione> .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoPensione> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of pension type."@en .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoPensione> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrizione del tipo di pensione."@it .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoPensione> <http://www.w3.org/2000/01/rdf-schema#label> "descrizione tipo pensione"@it .
+<https://w3id.org/italia/social-security/onto/pensions/descrizioneTipoPensione> <http://www.w3.org/2000/01/rdf-schema#label> "pension type description"@en .
 <https://w3id.org/italia/social-security/onto/pensions/fonteDiProvenienza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/italia/social-security/onto/pensions/fonteDiProvenienza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/italia/social-security/onto/pensions/fonteDiProvenienza> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/pensions/StatoDiDomandaPP> .

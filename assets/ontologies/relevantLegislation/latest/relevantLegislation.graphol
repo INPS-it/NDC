@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <graphol version="3">
-  <project name="OntologiaProcedura6" version="https://w3id.org/italia/social-security/onto/relevant-legislation/1.0">
-    <ontology lang="it" addLabelFromSimpleName="0" addLabelFromUserInput="1" iri="https://w3id.org/italia/social-security/onto/relevant-legislation/" prefix="INPSRL">
+  <project version="https://w3id.org/italia/social-security/onto/relevant-legislation/1.0" name="OntologiaProcedura6">
+    <ontology prefix="INPSRL" iri="https://w3id.org/italia/social-security/onto/relevant-legislation/" lang="it" addLabelFromSimpleName="0" addLabelFromUserInput="1">
       <imports/>
       <prefixes>
         <prefix>
@@ -1300,6 +1300,90 @@
               <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
               <object>
                 <lexicalForm>Relationship between A1 Form and the secondment that it certifies.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/relevant-legislation/codiceDomandaRilascioModelloA1</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevant-legislation/codiceDomandaRilascioModelloA1</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>codice domanda rilascio modello a1</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevant-legislation/codiceDomandaRilascioModelloA1</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Codice identificativo della domanda di rilascio del modello A1.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevant-legislation/codiceDomandaRilascioModelloA1</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>a1 form claim code</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevant-legislation/codiceDomandaRilascioModelloA1</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Identification code of the A1 form claim.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/relevant-legislation/codicePraticaRilascioModelloA1</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevant-legislation/codicePraticaRilascioModelloA1</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>codice pratica rilascio modello a1</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevant-legislation/codicePraticaRilascioModelloA1</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Codice identificativo della pratica di rilascio del modello A1.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevant-legislation/codicePraticaRilascioModelloA1</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>application a1 form code</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevant-legislation/codicePraticaRilascioModelloA1</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Identification code of the application A1 form.</lexicalForm>
                 <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
                 <language>en</language>
               </object>
@@ -2774,1283 +2858,1318 @@
       </iris>
     </ontology>
     <diagrams>
-      <diagram height="5000" name="Domanda" width="5000">
-        <node color="#fcfcfc" type="concept" id="n0">
-          <geometry y="260" height="50" x="560" width="110"/>
+      <diagram width="5000" name="Domanda" height="5000">
+        <node color="#fcfcfc" id="n0" type="concept">
+          <geometry width="110" x="560" height="50" y="260"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/DomandaRilascioModelloA1</iri>
-          <label y="260" height="36" size="12" customSize="0" x="560" width="110"/>
+          <label width="110" x="560" height="36" y="260" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n1">
-          <geometry y="260" height="50" x="-20" width="110"/>
+        <node color="#fcfcfc" id="n1" type="concept">
+          <geometry width="110" x="-20" height="50" y="260"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/PraticaRilascioModelloA1</iri>
-          <label y="260" height="36" size="12" customSize="0" x="-20" width="110"/>
+          <label width="110" x="-20" height="36" y="260" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n10">
-          <geometry y="260" height="20" x="1050" width="20"/>
-          <label y="238" height="22" size="12" customSize="0" x="1050" width="39">exists</label>
+        <node color="#fcfcfc" id="n10" type="domain-restriction">
+          <geometry width="20" x="1050" height="20" y="260"/>
+          <label width="39" x="1050" height="22" y="238" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n100">
-          <geometry y="230" height="20" x="-400" width="20"/>
-          <label y="208" height="22" size="12" customSize="0" x="-400" width="39">exists</label>
+        <node color="#fcfcfc" id="n100" type="domain-restriction">
+          <geometry width="20" x="-400" height="20" y="230"/>
+          <label width="39" x="-400" height="22" y="208" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n101">
-          <geometry y="20" height="20" x="-400" width="20"/>
-          <label y="20" height="22" size="12" customSize="0" x="-370" width="39">exists</label>
+        <node color="#000000" id="n101" type="range-restriction">
+          <geometry width="20" x="-400" height="20" y="20"/>
+          <label width="39" x="-370" height="22" y="20" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="role" id="n102">
-          <geometry y="-250" height="50" x="-400" width="70"/>
+        <node color="#fcfcfc" id="n102" type="role">
+          <geometry width="70" x="-400" height="50" y="-250"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/pianoLavoroPerStato</iri>
-          <label y="-250" height="22" size="12" customSize="0" x="-290" width="127"/>
+          <label width="127" x="-290" height="22" y="-250" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n103">
-          <geometry y="-160" height="20" x="-400" width="20"/>
-          <label y="-160" height="22" size="12" customSize="0" x="-370" width="39">exists</label>
+        <node color="#fcfcfc" id="n103" type="domain-restriction">
+          <geometry width="20" x="-400" height="20" y="-160"/>
+          <label width="39" x="-370" height="22" y="-160" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n104">
-          <geometry y="-330" height="20" x="-400" width="20"/>
-          <label y="-352" height="22" size="12" customSize="0" x="-400" width="39">exists</label>
+        <node color="#000000" id="n104" type="range-restriction">
+          <geometry width="20" x="-400" height="20" y="-330"/>
+          <label width="39" x="-400" height="22" y="-352" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="attribute" id="n105">
-          <geometry y="-160" height="20" x="-120" width="20"/>
+        <node color="#fcfcfc" id="n105" type="attribute">
+          <geometry width="20" x="-120" height="20" y="-160"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/giorniPerSettimanaPianoLavoroPrevistoEstero</iri>
-          <label y="-180" height="22" size="12" customSize="0" x="-105" width="270"/>
+          <label width="270" x="-105" height="22" y="-180" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="attribute" id="n106">
-          <geometry y="-110" height="20" x="-120" width="20"/>
+        <node color="#fcfcfc" id="n106" type="attribute">
+          <geometry width="20" x="-120" height="20" y="-110"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/giorniPerMesePianoLavoroPrevistoEstero</iri>
-          <label y="-135" height="22" size="12" customSize="0" x="-95" width="244"/>
+          <label width="244" x="-95" height="22" y="-135" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="attribute" id="n107">
-          <geometry y="-60" height="20" x="-120" width="20"/>
+        <node color="#fcfcfc" id="n107" type="attribute">
+          <geometry width="20" x="-120" height="20" y="-60"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/stimaPercentualeAnnualePianoLavoroPrevistoEstero</iri>
-          <label y="-85" height="22" size="12" customSize="0" x="-100" width="305"/>
+          <label width="305" x="-100" height="22" y="-85" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="attribute" id="n108">
-          <geometry y="-10" height="20" x="-120" width="20"/>
+        <node color="#fcfcfc" id="n108" type="attribute">
+          <geometry width="20" x="-120" height="20" y="-10"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/redditoPianoLavoroPrevistoEstero</iri>
-          <label y="-35" height="22" size="12" customSize="0" x="-110" width="199"/>
+          <label width="199" x="-110" height="22" y="-35" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n109">
-          <geometry y="-60" height="20" x="-300" width="20"/>
-          <label y="-82" height="22" size="12" customSize="0" x="-300" width="39">exists</label>
+        <node color="#fcfcfc" id="n109" type="domain-restriction">
+          <geometry width="20" x="-300" height="20" y="-60"/>
+          <label width="39" x="-300" height="22" y="-82" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n110">
-          <geometry y="-160" height="20" x="-300" width="20"/>
-          <label y="-182" height="22" size="12" customSize="0" x="-300" width="39">exists</label>
+        <node color="#fcfcfc" id="n110" type="domain-restriction">
+          <geometry width="20" x="-300" height="20" y="-160"/>
+          <label width="39" x="-300" height="22" y="-182" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n111">
-          <geometry y="-10" height="20" x="-300" width="20"/>
-          <label y="-32" height="22" size="12" customSize="0" x="-300" width="39">exists</label>
+        <node color="#fcfcfc" id="n111" type="domain-restriction">
+          <geometry width="20" x="-300" height="20" y="-10"/>
+          <label width="39" x="-300" height="22" y="-32" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n112">
-          <geometry y="-110" height="20" x="-300" width="20"/>
-          <label y="-132" height="22" size="12" customSize="0" x="-300" width="39">exists</label>
+        <node color="#fcfcfc" id="n112" type="domain-restriction">
+          <geometry width="20" x="-300" height="20" y="-110"/>
+          <label width="39" x="-300" height="22" y="-132" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="value-domain" id="n113">
-          <geometry y="-160" height="40" x="200" width="90"/>
+        <node color="#fcfcfc" id="n113" type="value-domain">
+          <geometry width="90" x="200" height="40" y="-160"/>
           <iri>http://www.w3.org/2001/XMLSchema#integer</iri>
-          <label y="-160" height="22" size="12" customSize="0" x="200" width="90"/>
+          <label width="90" x="200" height="22" y="-160" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n118">
-          <geometry y="-60" height="20" x="110" width="20"/>
-          <label y="-82" height="22" size="12" customSize="0" x="110" width="39">exists</label>
+        <node color="#000000" id="n118" type="range-restriction">
+          <geometry width="20" x="110" height="20" y="-60"/>
+          <label width="39" x="110" height="22" y="-82" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n119">
-          <geometry y="-160" height="20" x="110" width="20"/>
-          <label y="-182" height="22" size="12" customSize="0" x="110" width="39">exists</label>
+        <node color="#000000" id="n119" type="range-restriction">
+          <geometry width="20" x="110" height="20" y="-160"/>
+          <label width="39" x="110" height="22" y="-182" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n120">
-          <geometry y="-10" height="20" x="110" width="20"/>
-          <label y="-32" height="22" size="12" customSize="0" x="110" width="39">exists</label>
+        <node color="#000000" id="n120" type="range-restriction">
+          <geometry width="20" x="110" height="20" y="-10"/>
+          <label width="39" x="110" height="22" y="-32" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n121">
-          <geometry y="-110" height="20" x="110" width="20"/>
-          <label y="-132" height="22" size="12" customSize="0" x="110" width="39">exists</label>
+        <node color="#000000" id="n121" type="range-restriction">
+          <geometry width="20" x="110" height="20" y="-110"/>
+          <label width="39" x="110" height="22" y="-132" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="value-domain" id="n122">
-          <geometry y="-60" height="40" x="200" width="90"/>
+        <node color="#fcfcfc" id="n122" type="value-domain">
+          <geometry width="90" x="200" height="40" y="-60"/>
           <iri>http://www.w3.org/2001/XMLSchema#double</iri>
-          <label y="-60" height="22" size="12" customSize="0" x="200" width="90"/>
+          <label width="90" x="200" height="22" y="-60" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="attribute" id="n124">
-          <geometry y="680" height="20" x="340" width="20"/>
+        <node color="#fcfcfc" id="n124" type="attribute">
+          <geometry width="20" x="340" height="20" y="680"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/dataAssunzione</iri>
-          <label y="658" height="22" size="12" customSize="0" x="340" width="98"/>
+          <label width="98" x="340" height="22" y="658" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n127">
-          <geometry y="680" height="20" x="270" width="20"/>
-          <label y="658" height="22" size="12" customSize="0" x="270" width="39">exists</label>
+        <node color="#fcfcfc" id="n127" type="domain-restriction">
+          <geometry width="20" x="270" height="20" y="680"/>
+          <label width="39" x="270" height="22" y="658" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n128">
-          <geometry y="750" height="20" x="370" width="20"/>
-          <label y="728" height="22" size="12" customSize="0" x="370" width="39">exists</label>
+        <node color="#fcfcfc" id="n128" type="domain-restriction">
+          <geometry width="20" x="370" height="20" y="750"/>
+          <label width="39" x="370" height="22" y="728" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n129">
-          <geometry y="820" height="20" x="370" width="20"/>
-          <label y="798" height="22" size="12" customSize="0" x="370" width="39">exists</label>
+        <node color="#fcfcfc" id="n129" type="domain-restriction">
+          <geometry width="20" x="370" height="20" y="820"/>
+          <label width="39" x="370" height="22" y="798" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n13">
-          <geometry y="920" height="50" x="960" width="110"/>
+        <node color="#fcfcfc" id="n13" type="concept">
+          <geometry width="110" x="960" height="50" y="920"/>
           <iri>https://w3id.org/italia/onto/COV/Organization</iri>
-          <label y="920" height="22" size="12" customSize="0" x="960" width="110"/>
+          <label width="110" x="960" height="22" y="920" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="value-domain" id="n130">
-          <geometry y="680" height="40" x="540" width="90"/>
+        <node color="#fcfcfc" id="n130" type="value-domain">
+          <geometry width="90" x="540" height="40" y="680"/>
           <iri>http://www.w3.org/2001/XMLSchema#dateTime</iri>
-          <label y="680" height="22" size="12" customSize="0" x="540" width="90"/>
+          <label width="90" x="540" height="22" y="680" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n133">
-          <geometry y="680" height="20" x="430" width="20"/>
-          <label y="658" height="22" size="12" customSize="0" x="430" width="39">exists</label>
+        <node color="#000000" id="n133" type="range-restriction">
+          <geometry width="20" x="430" height="20" y="680"/>
+          <label width="39" x="430" height="22" y="658" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n136">
-          <geometry y="1050" height="50" x="-410" width="110"/>
+        <node color="#fcfcfc" id="n136" type="concept">
+          <geometry width="110" x="-410" height="50" y="1050"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/PersonaleDiVoloECabina</iri>
-          <label y="1050" height="36" size="12" customSize="0" x="-410" width="110"/>
+          <label width="110" x="-410" height="36" y="1050" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n137">
-          <geometry y="1050" height="50" x="-700" width="70"/>
+        <node color="#fcfcfc" id="n137" type="role">
+          <geometry width="70" x="-700" height="50" y="1050"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/lavoraPressoAeroporto</iri>
-          <label y="1020" height="22" size="12" customSize="0" x="-700" width="137"/>
+          <label width="137" x="-700" height="22" y="1020" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n138">
-          <geometry y="1050" height="20" x="-800" width="20"/>
-          <label y="1028" height="22" size="12" customSize="0" x="-800" width="39">exists</label>
+        <node color="#000000" id="n138" type="range-restriction">
+          <geometry width="20" x="-800" height="20" y="1050"/>
+          <label width="39" x="-800" height="22" y="1028" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n139">
-          <geometry y="1050" height="20" x="-600" width="20"/>
-          <label y="1028" height="22" size="12" customSize="0" x="-600" width="39">exists</label>
+        <node color="#fcfcfc" id="n139" type="domain-restriction">
+          <geometry width="20" x="-600" height="20" y="1050"/>
+          <label width="39" x="-600" height="22" y="1028" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n140">
-          <geometry y="1050" height="50" x="-1210" width="110"/>
+        <node color="#fcfcfc" id="n140" type="concept">
+          <geometry width="110" x="-1210" height="50" y="1050"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/Aeroporto</iri>
-          <label y="1050" height="22" size="12" customSize="0" x="-1210" width="110"/>
+          <label width="110" x="-1210" height="22" y="1050" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n141">
-          <geometry y="850" height="50" x="-1210" width="70"/>
+        <node color="#fcfcfc" id="n141" type="role">
+          <geometry width="70" x="-1210" height="50" y="850"/>
           <iri>https://w3id.org/italia/onto/CLV/hasCurrentAddress</iri>
-          <label y="850" height="22" size="12" customSize="0" x="-1105" width="136"/>
+          <label width="136" x="-1105" height="22" y="850" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n145">
-          <geometry y="950" height="20" x="-1210" width="20"/>
-          <label y="950" height="22" size="12" customSize="0" x="-1180" width="39">exists</label>
+        <node color="#fcfcfc" id="n145" type="domain-restriction">
+          <geometry width="20" x="-1210" height="20" y="950"/>
+          <label width="39" x="-1180" height="22" y="950" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="role" id="n147">
-          <geometry y="1140" height="50" x="-700" width="70"/>
+        <node color="#fcfcfc" id="n147" type="role">
+          <geometry width="70" x="-700" height="50" y="1140"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/haAeroportoComeBaseDiServizio</iri>
-          <label y="1110" height="22" size="12" customSize="0" x="-700" width="197"/>
+          <label width="197" x="-700" height="22" y="1110" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n165">
-          <geometry y="1110" height="50" x="100" width="110"/>
+        <node color="#fcfcfc" id="n165" type="concept">
+          <geometry width="110" x="100" height="50" y="1110"/>
           <iri>https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico</iri>
-          <label y="1110" height="50" size="12" customSize="0" x="100" width="110"/>
+          <label width="110" x="100" height="50" y="1110" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n168">
-          <geometry y="1090" height="50" x="270" width="110"/>
+        <node color="#fcfcfc" id="n168" type="concept">
+          <geometry width="110" x="270" height="50" y="1090"/>
           <iri>https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico</iri>
-          <label y="1090" height="50" size="12" customSize="0" x="270" width="110"/>
+          <label width="110" x="270" height="50" y="1090" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n170">
-          <geometry y="780" height="50" x="270" width="110"/>
+        <node color="#fcfcfc" id="n170" type="concept">
+          <geometry width="110" x="270" height="50" y="780"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/RapportoDiLavoroAllEstero</iri>
-          <label y="780" height="36" size="12" customSize="0" x="270" width="110"/>
+          <label width="110" x="270" height="36" y="780" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n172">
-          <geometry y="1370" height="20" x="-610" width="20"/>
-          <label y="1348" height="22" size="12" customSize="0" x="-610" width="39">exists</label>
+        <node color="#fcfcfc" id="n172" type="domain-restriction">
+          <geometry width="20" x="-610" height="20" y="1370"/>
+          <label width="39" x="-610" height="22" y="1348" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n173">
-          <geometry y="1320" height="50" x="-230" width="110"/>
+        <node color="#fcfcfc" id="n173" type="concept">
+          <geometry width="110" x="-230" height="50" y="1320"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/LavoratoreParasubordinato</iri>
-          <label y="1320" height="36" size="12" customSize="0" x="-230" width="110"/>
+          <label width="110" x="-230" height="36" y="1320" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="disjoint-union" id="n174">
-          <geometry y="1230" height="30" x="-360" width="50"/>
+        <node color="#000000" id="n174" type="disjoint-union">
+          <geometry width="50" x="-360" height="30" y="1230"/>
         </node>
-        <node color="#fcfcfc" type="attribute" id="n175">
-          <geometry y="1050" height="20" x="-1410" width="20"/>
+        <node color="#fcfcfc" id="n175" type="attribute">
+          <geometry width="20" x="-1410" height="20" y="1050"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/nomeAeroporto</iri>
-          <label y="1028" height="22" size="12" customSize="0" x="-1410" width="95"/>
+          <label width="95" x="-1410" height="22" y="1028" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n176">
-          <geometry y="1050" height="20" x="-1330" width="20"/>
-          <label y="1028" height="22" size="12" customSize="0" x="-1330" width="39">exists</label>
+        <node color="#fcfcfc" id="n176" type="domain-restriction">
+          <geometry width="20" x="-1330" height="20" y="1050"/>
+          <label width="39" x="-1330" height="22" y="1028" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n177">
-          <geometry y="160" height="50" x="1160" width="110"/>
+        <node color="#fcfcfc" id="n177" type="concept">
+          <geometry width="110" x="1160" height="50" y="160"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/Dichiarazione</iri>
-          <label y="160" height="22" size="12" customSize="0" x="1160" width="110"/>
+          <label width="110" x="1160" height="22" y="160" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n178">
-          <geometry y="160" height="50" x="900" width="70"/>
+        <node color="#fcfcfc" id="n178" type="role">
+          <geometry width="70" x="900" height="50" y="160"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/domandaHaDichiarazione</iri>
-          <label y="130" height="22" size="12" customSize="0" x="900" width="154"/>
+          <label width="154" x="900" height="22" y="130" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n179">
-          <geometry y="160" height="20" x="750" width="20"/>
-          <label y="138" height="22" size="12" customSize="0" x="750" width="39">exists</label>
+        <node color="#fcfcfc" id="n179" type="domain-restriction">
+          <geometry width="20" x="750" height="20" y="160"/>
+          <label width="39" x="750" height="22" y="138" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n180">
-          <geometry y="160" height="20" x="1050" width="20"/>
-          <label y="138" height="22" size="12" customSize="0" x="1050" width="39">exists</label>
+        <node color="#000000" id="n180" type="range-restriction">
+          <geometry width="20" x="1050" height="20" y="160"/>
+          <label width="39" x="1050" height="22" y="138" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="attribute" id="n181">
-          <geometry y="160" height="20" x="1410" width="20"/>
+        <node color="#fcfcfc" id="n181" type="attribute">
+          <geometry width="20" x="1410" height="20" y="160"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/descrizioneDichiarazione</iri>
-          <label y="138" height="22" size="12" customSize="0" x="1410" width="145"/>
+          <label width="145" x="1410" height="22" y="138" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n182">
-          <geometry y="160" height="20" x="1300" width="20"/>
-          <label y="138" height="22" size="12" customSize="0" x="1300" width="39">exists</label>
+        <node color="#fcfcfc" id="n182" type="domain-restriction">
+          <geometry width="20" x="1300" height="20" y="160"/>
+          <label width="39" x="1300" height="22" y="138" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="attribute" id="n183">
-          <geometry y="100" height="20" x="1410" width="20"/>
+        <node color="#fcfcfc" id="n183" type="attribute">
+          <geometry width="20" x="1410" height="20" y="100"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/valoreDichiarazione</iri>
-          <label y="78" height="22" size="12" customSize="0" x="1410" width="117"/>
+          <label width="117" x="1410" height="22" y="78" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n184">
-          <geometry y="100" height="20" x="1300" width="20"/>
-          <label y="78" height="22" size="12" customSize="0" x="1300" width="39">exists</label>
+        <node color="#fcfcfc" id="n184" type="domain-restriction">
+          <geometry width="20" x="1300" height="20" y="100"/>
+          <label width="39" x="1300" height="22" y="78" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="union" id="n198">
-          <geometry y="640" height="30" x="1100" width="50"/>
-          <label y="640" height="22" size="12" customSize="0" x="1100" width="19"/>
+        <node color="#fcfcfc" id="n198" type="union">
+          <geometry width="50" x="1100" height="30" y="640"/>
+          <label width="19" x="1100" height="22" y="640" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n2">
-          <geometry y="260" height="50" x="250" width="70"/>
+        <node color="#fcfcfc" id="n2" type="role">
+          <geometry width="70" x="250" height="50" y="260"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/haDomandaRilascioModelloA1</iri>
-          <label y="220" height="22" size="12" customSize="0" x="250" width="185"/>
+          <label width="185" x="250" height="22" y="220" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n200">
-          <geometry y="100" height="50" x="-20" width="110"/>
+        <node color="#fcfcfc" id="n200" type="concept">
+          <geometry width="110" x="-20" height="50" y="100"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/Pratica</iri>
-          <label y="100" height="22" size="12" customSize="0" x="-20" width="110"/>
+          <label width="110" x="-20" height="22" y="100" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n201">
-          <geometry y="640" height="50" x="1320" width="110"/>
+        <node color="#fcfcfc" id="n201" type="concept">
+          <geometry width="110" x="1320" height="50" y="640"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/Delegato</iri>
-          <label y="640" height="22" size="12" customSize="0" x="1320" width="110"/>
+          <label width="110" x="1320" height="22" y="640" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n205">
-          <geometry y="260" height="50" x="-890" width="70"/>
+        <node color="#fcfcfc" id="n205" type="role">
+          <geometry width="70" x="-890" height="50" y="260"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/distaccoPressoDomicilioEstero</iri>
-          <label y="230" height="22" size="12" customSize="0" x="-890" width="156"/>
+          <label width="156" x="-890" height="22" y="230" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n206">
-          <geometry y="260" height="20" x="-700" width="20"/>
-          <label y="238" height="22" size="12" customSize="0" x="-700" width="39">exists</label>
+        <node color="#fcfcfc" id="n206" type="domain-restriction">
+          <geometry width="20" x="-700" height="20" y="260"/>
+          <label width="39" x="-700" height="22" y="238" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n207">
-          <geometry y="260" height="20" x="-1040" width="20"/>
-          <label y="238" height="22" size="12" customSize="0" x="-1040" width="39">exists</label>
+        <node color="#000000" id="n207" type="range-restriction">
+          <geometry width="20" x="-1040" height="20" y="260"/>
+          <label width="39" x="-1040" height="22" y="238" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n209">
-          <geometry y="230" height="20" x="-550" width="20"/>
-          <label y="208" height="22" size="12" customSize="0" x="-550" width="39">exists</label>
+        <node color="#fcfcfc" id="n209" type="domain-restriction">
+          <geometry width="20" x="-550" height="20" y="230"/>
+          <label width="39" x="-550" height="22" y="208" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n213">
-          <geometry y="500" height="20" x="1320" width="20"/>
-          <label y="480" height="22" size="12" customSize="0" x="1325" width="39">exists</label>
+        <node color="#fcfcfc" id="n213" type="domain-restriction">
+          <geometry width="20" x="1320" height="20" y="500"/>
+          <label width="39" x="1325" height="22" y="480" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n214">
-          <geometry y="440" height="50" x="-550" width="110"/>
+        <node color="#fcfcfc" id="n214" type="concept">
+          <geometry width="110" x="-550" height="50" y="440"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/Distacco</iri>
-          <label y="440" height="22" size="12" customSize="0" x="-550" width="110"/>
+          <label width="110" x="-550" height="22" y="440" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n219">
-          <geometry y="500" height="20" x="-650" width="20"/>
-          <label y="520" height="22" size="12" customSize="0" x="-650" width="39">exists</label>
+        <node color="#fcfcfc" id="n219" type="domain-restriction">
+          <geometry width="20" x="-650" height="20" y="500"/>
+          <label width="39" x="-650" height="22" y="520" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n220">
-          <geometry y="480" height="50" x="10" width="110"/>
+        <node color="#fcfcfc" id="n220" type="concept">
+          <geometry width="110" x="10" height="50" y="480"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/ModelloA1</iri>
-          <label y="480" height="22" size="12" customSize="0" x="10" width="110"/>
+          <label width="110" x="10" height="22" y="480" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n221">
-          <geometry y="480" height="50" x="-300" width="70"/>
+        <node color="#fcfcfc" id="n221" type="role">
+          <geometry width="70" x="-300" height="50" y="480"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/certificaDistacco</iri>
-          <label y="515" height="22" size="12" customSize="0" x="-285" width="100"/>
+          <label width="100" x="-285" height="22" y="515" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n222">
-          <geometry y="480" height="20" x="-160" width="20"/>
-          <label y="458" height="22" size="12" customSize="0" x="-160" width="39">exists</label>
+        <node color="#fcfcfc" id="n222" type="domain-restriction">
+          <geometry width="20" x="-160" height="20" y="480"/>
+          <label width="39" x="-160" height="22" y="458" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n223">
-          <geometry y="480" height="20" x="-400" width="20"/>
-          <label y="458" height="22" size="12" customSize="0" x="-400" width="39">exists</label>
+        <node color="#000000" id="n223" type="range-restriction">
+          <geometry width="20" x="-400" height="20" y="480"/>
+          <label width="39" x="-400" height="22" y="458" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="role" id="n225">
-          <geometry y="390" height="50" x="-300" width="70"/>
+        <node color="#fcfcfc" id="n225" type="role">
+          <geometry width="70" x="-300" height="50" y="390"/>
           <iri>https://w3id.org/italia/onto/ACO/certifies</iri>
-          <label y="360" height="22" size="12" customSize="0" x="-300" width="73"/>
+          <label width="73" x="-300" height="22" y="360" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n226">
-          <geometry y="480" height="50" x="200" width="110"/>
+        <node color="#fcfcfc" id="n226" type="concept">
+          <geometry width="110" x="200" height="50" y="480"/>
           <iri>https://w3id.org/italia/onto/ACO/Certificate</iri>
-          <label y="480" height="22" size="12" customSize="0" x="200" width="110"/>
+          <label width="110" x="200" height="22" y="480" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n227">
-          <geometry y="360" height="50" x="-180" width="70"/>
+        <node color="#fcfcfc" id="n227" type="role">
+          <geometry width="70" x="-180" height="50" y="360"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/praticaRilasciaModelloA1</iri>
-          <label y="330" height="22" size="12" customSize="0" x="-180" width="153"/>
+          <label width="153" x="-180" height="22" y="330" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n228">
-          <geometry y="260" height="20" x="-180" width="20"/>
-          <label y="238" height="22" size="12" customSize="0" x="-180" width="39">exists</label>
+        <node color="#fcfcfc" id="n228" type="domain-restriction">
+          <geometry width="20" x="-180" height="20" y="260"/>
+          <label width="39" x="-180" height="22" y="238" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n229">
-          <geometry y="360" height="20" x="10" width="20"/>
-          <label y="340" height="22" size="12" customSize="0" x="15" width="39">exists</label>
+        <node color="#000000" id="n229" type="range-restriction">
+          <geometry width="20" x="10" height="20" y="360"/>
+          <label width="39" x="15" height="22" y="340" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="attribute" id="n230">
-          <geometry y="570" height="20" x="-80" width="20"/>
+        <node color="#fcfcfc" id="n230" type="attribute">
+          <geometry width="20" x="-80" height="20" y="570"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/inizioValidità</iri>
-          <label y="548" height="22" size="12" customSize="0" x="-80" width="80"/>
+          <label width="80" x="-80" height="22" y="548" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="attribute" id="n231">
-          <geometry y="570" height="20" x="100" width="20"/>
+        <node color="#fcfcfc" id="n231" type="attribute">
+          <geometry width="20" x="100" height="20" y="570"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/fineValidità</iri>
-          <label y="548" height="22" size="12" customSize="0" x="100" width="71"/>
+          <label width="71" x="100" height="22" y="548" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n232">
-          <geometry y="570" height="20" x="30" width="20"/>
-          <label y="548" height="22" size="12" customSize="0" x="30" width="39">exists</label>
+        <node color="#fcfcfc" id="n232" type="domain-restriction">
+          <geometry width="20" x="30" height="20" y="570"/>
+          <label width="39" x="30" height="22" y="548" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n233">
-          <geometry y="570" height="20" x="-10" width="20"/>
-          <label y="548" height="22" size="12" customSize="0" x="-10" width="39">exists</label>
+        <node color="#fcfcfc" id="n233" type="domain-restriction">
+          <geometry width="20" x="-10" height="20" y="570"/>
+          <label width="39" x="-10" height="22" y="548" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="role" id="n234">
-          <geometry y="-130" height="50" x="-550" width="70"/>
+        <node color="#fcfcfc" id="n234" type="role">
+          <geometry width="70" x="-550" height="50" y="-130"/>
           <iri>https://w3id.org/italia/onto/SM/hasOnlineContactPoint</iri>
-          <label y="-160" height="22" size="12" customSize="0" x="-550" width="154"/>
+          <label width="154" x="-550" height="22" y="-160" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n235">
-          <geometry y="80" height="50" x="-550" width="70"/>
+        <node color="#fcfcfc" id="n235" type="role">
+          <geometry width="70" x="-550" height="50" y="80"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/contattiRelativiADistacco</iri>
-          <label y="50" height="22" size="12" customSize="0" x="-550" width="148"/>
+          <label width="148" x="-550" height="22" y="50" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n238">
-          <geometry y="1370" height="50" x="-720" width="70"/>
+        <node color="#fcfcfc" id="n238" type="role">
+          <geometry width="70" x="-720" height="50" y="1370"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/lavoratoreAutonomoHaTiplogia</iri>
-          <label y="1330" height="22" size="12" customSize="0" x="-720" width="184"/>
+          <label width="184" x="-720" height="22" y="1330" size="12" customSize="0"/>
         </node>
-        <node color="#ff0090" type="concept" id="n239">
-          <geometry y="1370" height="50" x="-960" width="110"/>
+        <node color="#ff0090" id="n239" type="concept">
+          <geometry width="110" x="-960" height="50" y="1370"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/tipologiaLavoratoreAutonomo</iri>
-          <label y="1370" height="50" size="12" customSize="0" x="-960" width="110"/>
+          <label width="110" x="-960" height="50" y="1370" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n240">
-          <geometry y="1370" height="20" x="-830" width="20"/>
-          <label y="1348" height="22" size="12" customSize="0" x="-830" width="39">exists</label>
+        <node color="#000000" id="n240" type="range-restriction">
+          <geometry width="20" x="-830" height="20" y="1370"/>
+          <label width="39" x="-830" height="22" y="1348" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="role" id="n243">
-          <geometry y="500" height="50" x="-800" width="70"/>
+        <node color="#fcfcfc" id="n243" type="role">
+          <geometry width="70" x="-800" height="50" y="500"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/modelloA1HaTipologiaAccordo</iri>
-          <label y="470" height="22" size="12" customSize="0" x="-800" width="185"/>
+          <label width="185" x="-800" height="22" y="470" size="12" customSize="0"/>
         </node>
-        <node color="#ff0090" type="concept" id="n244">
-          <geometry y="500" height="50" x="-1080" width="110"/>
+        <node color="#ff0090" id="n244" type="concept">
+          <geometry width="110" x="-1080" height="50" y="500"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/TipologiaAccordoModelloA1</iri>
-          <label y="500" height="36" size="12" customSize="0" x="-1080" width="110"/>
+          <label width="110" x="-1080" height="36" y="500" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n246">
-          <geometry y="500" height="20" x="-930" width="20"/>
-          <label y="478" height="22" size="12" customSize="0" x="-930" width="39">exists</label>
+        <node color="#000000" id="n246" type="range-restriction">
+          <geometry width="20" x="-930" height="20" y="500"/>
+          <label width="39" x="-930" height="22" y="478" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="role" id="n247">
-          <geometry y="750" height="50" x="510" width="70"/>
+        <node color="#fcfcfc" id="n247" type="role">
+          <geometry width="70" x="510" height="50" y="750"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/rapportoDiLavoroEsteroHaTipoOrario</iri>
-          <label y="720" height="22" size="12" customSize="0" x="510" width="217"/>
+          <label width="217" x="510" height="22" y="720" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n248">
-          <geometry y="750" height="20" x="670" width="20"/>
-          <label y="728" height="22" size="12" customSize="0" x="670" width="39">exists</label>
+        <node color="#000000" id="n248" type="range-restriction">
+          <geometry width="20" x="670" height="20" y="750"/>
+          <label width="39" x="670" height="22" y="728" size="12" customSize="0">exists</label>
         </node>
-        <node color="#ff0090" type="concept" id="n249">
-          <geometry y="750" height="50" x="860" width="110"/>
+        <node color="#ff0090" id="n249" type="concept">
+          <geometry width="110" x="860" height="50" y="750"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/TipoOrarioDiLavoro</iri>
-          <label y="750" height="36" size="12" customSize="0" x="860" width="110"/>
+          <label width="110" x="860" height="36" y="750" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n250">
-          <geometry y="820" height="50" x="510" width="70"/>
+        <node color="#fcfcfc" id="n250" type="role">
+          <geometry width="70" x="510" height="50" y="820"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/rapportoDiLavoroEsteroHaTipologia</iri>
-          <label y="790" height="22" size="12" customSize="0" x="510" width="209"/>
+          <label width="209" x="510" height="22" y="790" size="12" customSize="0"/>
         </node>
-        <node color="#ff0090" type="concept" id="n251">
-          <geometry y="820" height="50" x="860" width="110"/>
+        <node color="#ff0090" id="n251" type="concept">
+          <geometry width="110" x="860" height="50" y="820"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/TipologiaRapportoDiLavoro</iri>
-          <label y="820" height="36" size="12" customSize="0" x="860" width="110"/>
+          <label width="110" x="860" height="36" y="820" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n253">
-          <geometry y="820" height="20" x="670" width="20"/>
-          <label y="798" height="22" size="12" customSize="0" x="670" width="39">exists</label>
+        <node color="#000000" id="n253" type="range-restriction">
+          <geometry width="20" x="670" height="20" y="820"/>
+          <label width="39" x="670" height="22" y="798" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="role" id="n254">
-          <geometry y="500" height="50" x="1450" width="70"/>
+        <node color="#fcfcfc" id="n254" type="role">
+          <geometry width="70" x="1450" height="50" y="500"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/delegatoHaTipologia</iri>
-          <label y="470" height="22" size="12" customSize="0" x="1450" width="123"/>
+          <label width="123" x="1450" height="22" y="470" size="12" customSize="0"/>
         </node>
-        <node color="#ff0090" type="concept" id="n256">
-          <geometry y="500" height="50" x="1720" width="110"/>
+        <node color="#ff0090" id="n256" type="concept">
+          <geometry width="110" x="1720" height="50" y="500"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/TipologiaDelegato</iri>
-          <label y="500" height="22" size="12" customSize="0" x="1720" width="110"/>
+          <label width="110" x="1720" height="22" y="500" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n257">
-          <geometry y="500" height="20" x="1570" width="20"/>
-          <label y="478" height="22" size="12" customSize="0" x="1570" width="39">exists</label>
+        <node color="#000000" id="n257" type="range-restriction">
+          <geometry width="20" x="1570" height="20" y="500"/>
+          <label width="39" x="1570" height="22" y="478" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n3">
-          <geometry y="260" height="20" x="130" width="20"/>
-          <label y="238" height="22" size="12" customSize="0" x="130" width="39">exists</label>
+        <node color="#fcfcfc" id="n258" type="attribute">
+          <geometry width="20" x="170" height="20" y="320"/>
+          <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/codicePraticaRilascioModelloA1</iri>
+          <label width="190" x="170" height="22" y="298" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n30">
-          <geometry y="640" height="50" x="0" width="110"/>
+        <node color="#fcfcfc" id="n259" type="attribute">
+          <geometry width="20" x="670" height="20" y="340"/>
+          <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/codiceDomandaRilascioModelloA1</iri>
+          <label width="205" x="670" height="22" y="318" size="12" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n260" type="domain-restriction">
+          <geometry width="20" x="50" height="20" y="320"/>
+          <label width="39" x="50" height="22" y="298" size="12" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n261" type="domain-restriction">
+          <geometry width="20" x="560" height="20" y="340"/>
+          <label width="39" x="560" height="22" y="360" size="12" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n3" type="domain-restriction">
+          <geometry width="20" x="130" height="20" y="260"/>
+          <label width="39" x="130" height="22" y="238" size="12" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n30" type="concept">
+          <geometry width="110" x="0" height="50" y="640"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/TitolarePratica</iri>
-          <label y="640" height="22" size="12" customSize="0" x="0" width="110"/>
+          <label width="110" x="0" height="22" y="640" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n31">
-          <geometry y="0" height="50" x="-700" width="110"/>
+        <node color="#fcfcfc" id="n31" type="concept">
+          <geometry width="110" x="-700" height="50" y="0"/>
           <iri>https://w3id.org/italia/onto/CPV/Person</iri>
-          <label y="0" height="22" size="12" customSize="0" x="-700" width="110"/>
+          <label width="110" x="-700" height="22" y="0" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n32">
-          <geometry y="0" height="50" x="-960" width="70"/>
+        <node color="#fcfcfc" id="n32" type="role">
+          <geometry width="70" x="-960" height="50" y="0"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/haDomicilioEstero</iri>
-          <label y="-30" height="22" size="12" customSize="0" x="-960" width="111"/>
+          <label width="111" x="-960" height="22" y="-30" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n33">
-          <geometry y="0" height="20" x="-1060" width="20"/>
-          <label y="-22" height="22" size="12" customSize="0" x="-1060" width="39">exists</label>
+        <node color="#000000" id="n33" type="range-restriction">
+          <geometry width="20" x="-1060" height="20" y="0"/>
+          <label width="39" x="-1060" height="22" y="-22" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n34">
-          <geometry y="0" height="20" x="-840" width="20"/>
-          <label y="-22" height="22" size="12" customSize="0" x="-840" width="39">exists</label>
+        <node color="#fcfcfc" id="n34" type="domain-restriction">
+          <geometry width="20" x="-840" height="20" y="0"/>
+          <label width="39" x="-840" height="22" y="-22" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n35">
-          <geometry y="0" height="50" x="-1210" width="110"/>
+        <node color="#fcfcfc" id="n35" type="concept">
+          <geometry width="110" x="-1210" height="50" y="0"/>
           <iri>https://w3id.org/italia/onto/CLV/Address</iri>
-          <label y="0" height="22" size="12" customSize="0" x="-1210" width="110"/>
+          <label width="110" x="-1210" height="22" y="0" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n4">
-          <geometry y="260" height="20" x="360" width="20"/>
-          <label y="238" height="22" size="12" customSize="0" x="360" width="39">exists</label>
+        <node color="#000000" id="n4" type="range-restriction">
+          <geometry width="20" x="360" height="20" y="260"/>
+          <label width="39" x="360" height="22" y="238" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n43">
-          <geometry y="-410" height="50" x="-400" width="110"/>
+        <node color="#fcfcfc" id="n43" type="concept">
+          <geometry width="110" x="-400" height="50" y="-410"/>
           <iri>https://w3id.org/italia/onto/CLV/Country</iri>
-          <label y="-410" height="22" size="12" customSize="0" x="-400" width="110"/>
+          <label width="110" x="-400" height="22" y="-410" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n49">
-          <geometry y="1320" height="50" x="-510" width="110"/>
+        <node color="#fcfcfc" id="n49" type="concept">
+          <geometry width="110" x="-510" height="50" y="1320"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/LavoratoreAutonomo</iri>
-          <label y="1320" height="36" size="12" customSize="0" x="-510" width="110"/>
+          <label width="110" x="-510" height="36" y="1320" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n5">
-          <geometry y="260" height="50" x="900" width="70"/>
+        <node color="#fcfcfc" id="n5" type="role">
+          <geometry width="70" x="900" height="50" y="260"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/presentaDomandaRilascioModelloA1</iri>
-          <label y="230" height="22" size="12" customSize="0" x="900" width="218"/>
+          <label width="218" x="900" height="22" y="230" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n50">
-          <geometry y="1320" height="50" x="-360" width="110"/>
+        <node color="#fcfcfc" id="n50" type="concept">
+          <geometry width="110" x="-360" height="50" y="1320"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/LavoratoreSubordinato</iri>
-          <label y="1320" height="36" size="12" customSize="0" x="-360" width="110"/>
+          <label width="110" x="-360" height="36" y="1320" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n51">
-          <geometry y="920" height="50" x="-190" width="110"/>
+        <node color="#fcfcfc" id="n51" type="concept">
+          <geometry width="110" x="-190" height="50" y="920"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/Lavoratore</iri>
-          <label y="920" height="22" size="12" customSize="0" x="-190" width="110"/>
+          <label width="110" x="-190" height="22" y="920" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n53">
-          <geometry y="1320" height="50" x="-100" width="110"/>
+        <node color="#fcfcfc" id="n53" type="concept">
+          <geometry width="110" x="-100" height="50" y="1320"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/LavoratorePubblico</iri>
-          <label y="1320" height="36" size="12" customSize="0" x="-100" width="110"/>
+          <label width="110" x="-100" height="36" y="1320" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n54">
-          <geometry y="1320" height="50" x="30" width="110"/>
+        <node color="#fcfcfc" id="n54" type="concept">
+          <geometry width="110" x="30" height="50" y="1320"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/LavoratorePrivato</iri>
-          <label y="1320" height="22" size="12" customSize="0" x="30" width="110"/>
+          <label width="110" x="30" height="22" y="1320" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="disjoint-union" id="n55">
-          <geometry y="1240" height="30" x="-30" width="50"/>
+        <node color="#000000" id="n55" type="disjoint-union">
+          <geometry width="50" x="-30" height="30" y="1240"/>
         </node>
-        <node color="#fcfcfc" type="complement" id="n56">
-          <geometry y="1410" height="30" x="-100" width="50"/>
-          <label y="1410" height="22" size="12" customSize="0" x="-100" width="26"/>
+        <node color="#fcfcfc" id="n56" type="complement">
+          <geometry width="50" x="-100" height="30" y="1410"/>
+          <label width="26" x="-100" height="22" y="1410" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n57">
-          <geometry y="720" height="50" x="-550" width="70"/>
+        <node color="#fcfcfc" id="n57" type="role">
+          <geometry width="70" x="-550" height="50" y="720"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/distaccoRelativoALavoratore</iri>
-          <label y="765" height="22" size="12" customSize="0" x="-520" width="165"/>
+          <label width="165" x="-520" height="22" y="765" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n58">
-          <geometry y="600" height="20" x="-550" width="20"/>
-          <label y="578" height="22" size="12" customSize="0" x="-550" width="39">exists</label>
+        <node color="#fcfcfc" id="n58" type="domain-restriction">
+          <geometry width="20" x="-550" height="20" y="600"/>
+          <label width="39" x="-550" height="22" y="578" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n59">
-          <geometry y="720" height="20" x="-190" width="20"/>
-          <label y="698" height="22" size="12" customSize="0" x="-190" width="39">exists</label>
+        <node color="#000000" id="n59" type="range-restriction">
+          <geometry width="20" x="-190" height="20" y="720"/>
+          <label width="39" x="-190" height="22" y="698" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n6">
-          <geometry y="470" height="50" x="1100" width="110"/>
+        <node color="#fcfcfc" id="n6" type="concept">
+          <geometry width="110" x="1100" height="50" y="470"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/RichiedenteModelloA1</iri>
-          <label y="470" height="36" size="12" customSize="0" x="1100" width="110"/>
+          <label width="110" x="1100" height="36" y="470" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n65">
-          <geometry y="920" height="50" x="40" width="70"/>
+        <node color="#fcfcfc" id="n65" type="role">
+          <geometry width="70" x="40" height="50" y="920"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/lavoratoreHaRapportoDiLavoro</iri>
-          <label y="880" height="22" size="12" customSize="0" x="40" width="180"/>
+          <label width="180" x="40" height="22" y="880" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n66">
-          <geometry y="920" height="50" x="270" width="110"/>
+        <node color="#fcfcfc" id="n66" type="concept">
+          <geometry width="110" x="270" height="50" y="920"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/RapportoDiLavoro</iri>
-          <label y="920" height="22" size="12" customSize="0" x="270" width="110"/>
+          <label width="110" x="270" height="22" y="920" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n67">
-          <geometry y="920" height="50" x="730" width="70"/>
+        <node color="#fcfcfc" id="n67" type="role">
+          <geometry width="70" x="730" height="50" y="920"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/haRapportoDiLavoroConOrganizzazione</iri>
-          <label y="880" height="22" size="12" customSize="0" x="730" width="231"/>
+          <label width="231" x="730" height="22" y="880" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n68">
-          <geometry y="920" height="20" x="-60" width="20"/>
-          <label y="898" height="22" size="12" customSize="0" x="-60" width="39">exists</label>
+        <node color="#fcfcfc" id="n68" type="domain-restriction">
+          <geometry width="20" x="-60" height="20" y="920"/>
+          <label width="39" x="-60" height="22" y="898" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n69">
-          <geometry y="920" height="20" x="140" width="20"/>
-          <label y="898" height="22" size="12" customSize="0" x="140" width="39">exists</label>
+        <node color="#000000" id="n69" type="range-restriction">
+          <geometry width="20" x="140" height="20" y="920"/>
+          <label width="39" x="140" height="22" y="898" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n70">
-          <geometry y="920" height="20" x="630" width="20"/>
-          <label y="898" height="22" size="12" customSize="0" x="630" width="39">exists</label>
+        <node color="#fcfcfc" id="n70" type="domain-restriction">
+          <geometry width="20" x="630" height="20" y="920"/>
+          <label width="39" x="630" height="22" y="898" size="12" customSize="0">exists</label>
         </node>
-        <node color="#000000" type="range-restriction" id="n71">
-          <geometry y="920" height="20" x="830" width="20"/>
-          <label y="898" height="22" size="12" customSize="0" x="830" width="39">exists</label>
+        <node color="#000000" id="n71" type="range-restriction">
+          <geometry width="20" x="830" height="20" y="920"/>
+          <label width="39" x="830" height="22" y="898" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="attribute" id="n72">
-          <geometry y="1260" height="20" x="-730" width="20"/>
+        <node color="#fcfcfc" id="n72" type="attribute">
+          <geometry width="20" x="-730" height="20" y="1260"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/dataInizioAttività</iri>
-          <label y="1238" height="22" size="12" customSize="0" x="-730" width="106"/>
+          <label width="106" x="-730" height="22" y="1238" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n73">
-          <geometry y="1260" height="20" x="-630" width="20"/>
-          <label y="1238" height="22" size="12" customSize="0" x="-630" width="39">exists</label>
+        <node color="#fcfcfc" id="n73" type="domain-restriction">
+          <geometry width="20" x="-630" height="20" y="1260"/>
+          <label width="39" x="-630" height="22" y="1238" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="value-domain" id="n74">
-          <geometry y="1260" height="40" x="-940" width="90"/>
+        <node color="#fcfcfc" id="n74" type="value-domain">
+          <geometry width="90" x="-940" height="40" y="1260"/>
           <iri>http://www.w3.org/2001/XMLSchema#dateTime</iri>
-          <label y="1260" height="22" size="12" customSize="0" x="-940" width="90"/>
+          <label width="90" x="-940" height="22" y="1260" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n75">
-          <geometry y="1260" height="20" x="-830" width="20"/>
-          <label y="1238" height="22" size="12" customSize="0" x="-830" width="39">exists</label>
+        <node color="#000000" id="n75" type="range-restriction">
+          <geometry width="20" x="-830" height="20" y="1260"/>
+          <label width="39" x="-830" height="22" y="1238" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="role" id="n83">
-          <geometry y="1030" height="50" x="730" width="70"/>
+        <node color="#fcfcfc" id="n83" type="role">
+          <geometry width="70" x="730" height="50" y="1030"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/haSettoreAttività</iri>
-          <label y="1000" height="22" size="12" customSize="0" x="730" width="103"/>
+          <label width="103" x="730" height="22" y="1000" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n84">
-          <geometry y="1030" height="20" x="630" width="20"/>
-          <label y="1008" height="22" size="12" customSize="0" x="630" width="39">exists</label>
+        <node color="#000000" id="n84" type="range-restriction">
+          <geometry width="20" x="630" height="20" y="1030"/>
+          <label width="39" x="630" height="22" y="1008" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n85">
-          <geometry y="1030" height="20" x="830" width="20"/>
-          <label y="1008" height="22" size="12" customSize="0" x="830" width="39">exists</label>
+        <node color="#fcfcfc" id="n85" type="domain-restriction">
+          <geometry width="20" x="830" height="20" y="1030"/>
+          <label width="39" x="830" height="22" y="1008" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n86">
-          <geometry y="1030" height="50" x="480" width="110"/>
+        <node color="#fcfcfc" id="n86" type="concept">
+          <geometry width="110" x="480" height="50" y="1030"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/SettoreAttivita</iri>
-          <label y="1030" height="22" size="12" customSize="0" x="480" width="110"/>
+          <label width="110" x="480" height="22" y="1030" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n88">
-          <geometry y="100" height="50" x="410" width="110"/>
+        <node color="#fcfcfc" id="n88" type="concept">
+          <geometry width="110" x="410" height="50" y="100"/>
           <iri>https://w3id.org/italia/social-security/onto/core/SedeINPS</iri>
-          <label y="100" height="36" size="12" customSize="0" x="410" width="110"/>
+          <label width="110" x="410" height="36" y="100" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n89">
-          <geometry y="90" height="50" x="560" width="70"/>
+        <node color="#fcfcfc" id="n89" type="role">
+          <geometry width="70" x="560" height="50" y="90"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/domandaHaAllegato</iri>
-          <label y="90" height="22" size="12" customSize="0" x="660" width="125"/>
+          <label width="125" x="660" height="22" y="90" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n9">
-          <geometry y="260" height="20" x="750" width="20"/>
-          <label y="238" height="22" size="12" customSize="0" x="750" width="39">exists</label>
+        <node color="#000000" id="n9" type="range-restriction">
+          <geometry width="20" x="750" height="20" y="260"/>
+          <label width="39" x="750" height="22" y="238" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n91">
-          <geometry y="-90" height="50" x="560" width="110"/>
+        <node color="#fcfcfc" id="n91" type="concept">
+          <geometry width="110" x="560" height="50" y="-90"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/Allegato</iri>
-          <label y="-90" height="22" size="12" customSize="0" x="560" width="110"/>
+          <label width="110" x="560" height="22" y="-90" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n92">
-          <geometry y="0" height="20" x="560" width="20"/>
-          <label y="0" height="22" size="12" customSize="0" x="530" width="39">exists</label>
+        <node color="#000000" id="n92" type="range-restriction">
+          <geometry width="20" x="560" height="20" y="0"/>
+          <label width="39" x="530" height="22" y="0" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n93">
-          <geometry y="170" height="20" x="560" width="20"/>
-          <label y="170" height="22" size="12" customSize="0" x="530" width="39">exists</label>
+        <node color="#fcfcfc" id="n93" type="domain-restriction">
+          <geometry width="20" x="560" height="20" y="170"/>
+          <label width="39" x="530" height="22" y="170" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="role" id="n94">
-          <geometry y="100" height="50" x="200" width="70"/>
+        <node color="#fcfcfc" id="n94" type="role">
+          <geometry width="70" x="200" height="50" y="100"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/praticaGestitaDaSedeINPS</iri>
-          <label y="140" height="22" size="12" customSize="0" x="205" width="161"/>
+          <label width="161" x="205" height="22" y="140" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n95">
-          <geometry y="100" height="20" x="290" width="20"/>
-          <label y="80" height="22" size="12" customSize="0" x="290" width="39">exists</label>
+        <node color="#000000" id="n95" type="range-restriction">
+          <geometry width="20" x="290" height="20" y="100"/>
+          <label width="39" x="290" height="22" y="80" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n96">
-          <geometry y="100" height="20" x="110" width="20"/>
-          <label y="80" height="22" size="12" customSize="0" x="115" width="39">exists</label>
+        <node color="#fcfcfc" id="n96" type="domain-restriction">
+          <geometry width="20" x="110" height="20" y="100"/>
+          <label width="39" x="115" height="22" y="80" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n98">
-          <geometry y="-80" height="50" x="-400" width="110"/>
+        <node color="#fcfcfc" id="n98" type="concept">
+          <geometry width="110" x="-400" height="50" y="-80"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/PianoLavoroPrevistoEstero</iri>
-          <label y="-80" height="36" size="12" customSize="0" x="-400" width="110"/>
+          <label width="110" x="-400" height="36" y="-80" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n99">
-          <geometry y="110" height="50" x="-400" width="70"/>
+        <node color="#fcfcfc" id="n99" type="role">
+          <geometry width="70" x="-400" height="50" y="110"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/haPianoDiLavoroEstero</iri>
-          <label y="110" height="22" size="12" customSize="0" x="-295" width="142"/>
+          <label width="142" x="-295" height="22" y="110" size="12" customSize="0"/>
         </node>
-        <edge source="n2" target="n3" type="input" id="e0">
-          <point y="260" x="250"/>
-          <point y="260" x="130"/>
-        </edge>
-        <edge source="n2" target="n4" type="input" id="e1">
-          <point y="260" x="250"/>
-          <point y="260" x="360"/>
-        </edge>
-        <edge source="n98" target="n103" type="equivalence" id="e100">
-          <point y="-80" x="-400"/>
-          <point y="-160" x="-400"/>
-        </edge>
-        <edge source="n104" target="n43" type="inclusion" id="e101">
-          <point y="-330" x="-400"/>
-          <point y="-410" x="-400"/>
-        </edge>
-        <edge source="n107" target="n109" type="input" id="e102">
-          <point y="-60" x="-120"/>
-          <point y="-60" x="-300"/>
-        </edge>
-        <edge source="n105" target="n110" type="input" id="e103">
-          <point y="-160" x="-120"/>
-          <point y="-160" x="-300"/>
-        </edge>
-        <edge source="n108" target="n111" type="input" id="e104">
-          <point y="-10" x="-120"/>
-          <point y="-10" x="-300"/>
-        </edge>
-        <edge source="n106" target="n112" type="input" id="e105">
-          <point y="-110" x="-120"/>
-          <point y="-110" x="-300"/>
-        </edge>
-        <edge source="n98" target="n109" type="equivalence" id="e108">
-          <point y="-80" x="-400"/>
-          <point y="-60" x="-300"/>
-        </edge>
-        <edge source="n111" target="n98" type="equivalence" id="e109">
-          <point y="-10" x="-300"/>
-          <point y="-80" x="-400"/>
-        </edge>
-        <edge source="n107" target="n118" type="input" id="e114">
-          <point y="-60" x="-120"/>
-          <point y="-60" x="110"/>
-        </edge>
-        <edge source="n105" target="n119" type="input" id="e115">
-          <point y="-160" x="-120"/>
-          <point y="-160" x="110"/>
-        </edge>
-        <edge source="n108" target="n120" type="input" id="e116">
-          <point y="-10" x="-120"/>
-          <point y="-10" x="110"/>
-        </edge>
-        <edge source="n106" target="n121" type="input" id="e117">
-          <point y="-110" x="-120"/>
-          <point y="-110" x="110"/>
-        </edge>
-        <edge source="n119" target="n113" type="inclusion" id="e118">
-          <point y="-160" x="110"/>
-          <point y="-160" x="200"/>
-        </edge>
-        <edge source="n121" target="n113" type="inclusion" id="e119">
-          <point y="-110" x="110"/>
-          <point y="-160" x="200"/>
-        </edge>
-        <edge source="n118" target="n122" type="inclusion" id="e120">
-          <point y="-60" x="110"/>
-          <point y="-60" x="200"/>
-        </edge>
-        <edge source="n120" target="n122" type="inclusion" id="e121">
-          <point y="-10" x="110"/>
-          <point y="-60" x="200"/>
-        </edge>
-        <edge source="n124" target="n127" type="input" id="e122">
-          <point y="680" x="340"/>
-          <point y="680" x="270"/>
-        </edge>
-        <edge source="n124" target="n133" type="input" id="e130">
-          <point y="680" x="340"/>
-          <point y="680" x="430"/>
-        </edge>
-        <edge source="n133" target="n130" type="inclusion" id="e131">
-          <point y="680" x="430"/>
-          <point y="680" x="540"/>
-        </edge>
-        <edge source="n136" target="n51" type="inclusion" id="e134">
-          <point y="1050" x="-410"/>
-          <point y="920" x="-190"/>
-        </edge>
-        <edge source="n137" target="n138" type="input" id="e135">
-          <point y="1050" x="-700"/>
-          <point y="1050" x="-800"/>
-        </edge>
-        <edge source="n137" target="n139" type="input" id="e136">
-          <point y="1050" x="-700"/>
-          <point y="1050" x="-600"/>
-        </edge>
-        <edge source="n139" target="n136" type="equivalence" id="e137">
-          <point y="1050" x="-600"/>
-          <point y="1050" x="-410"/>
-        </edge>
-        <edge source="n141" target="n145" type="input" id="e141">
-          <point y="850" x="-1210"/>
-          <point y="950" x="-1210"/>
-        </edge>
-        <edge source="n138" target="n140" type="equivalence" id="e143">
-          <point y="1050" x="-800"/>
-          <point y="1050" x="-1210"/>
-        </edge>
-        <edge source="n147" target="n137" type="inclusion" id="e147">
-          <point y="1140" x="-700"/>
-          <point y="1050" x="-700"/>
-        </edge>
-        <edge source="n168" target="n66" type="inclusion" id="e169">
-          <point y="1090" x="270"/>
-          <point y="920" x="270"/>
-        </edge>
-        <edge source="n165" target="n51" type="inclusion" id="e172">
-          <point y="1110" x="100"/>
-          <point y="920" x="-190"/>
-        </edge>
-        <edge source="n170" target="n66" type="inclusion" id="e173">
-          <point y="780" x="270"/>
-          <point y="920" x="270"/>
-        </edge>
-        <edge source="n170" target="n127" type="equivalence" id="e174">
-          <point y="780" x="270"/>
-          <point y="680" x="270"/>
-        </edge>
-        <edge source="n128" target="n170" type="equivalence" id="e175">
-          <point y="750" x="370"/>
-          <point y="780" x="270"/>
-        </edge>
-        <edge source="n170" target="n129" type="equivalence" id="e176">
-          <point y="780" x="270"/>
-          <point y="820" x="370"/>
-        </edge>
-        <edge source="n172" target="n49" type="equivalence" id="e179">
-          <point y="1370" x="-610"/>
-          <point y="1320" x="-510"/>
-        </edge>
-        <edge source="n173" target="n174" type="input" id="e180">
-          <point y="1320" x="-230"/>
-          <point y="1230" x="-360"/>
-        </edge>
-        <edge source="n175" target="n176" type="input" id="e181">
-          <point y="1050" x="-1410"/>
-          <point y="1050" x="-1330"/>
-        </edge>
-        <edge source="n176" target="n140" type="equivalence" id="e182">
-          <point y="1050" x="-1330"/>
-          <point y="1050" x="-1210"/>
-        </edge>
-        <edge source="n178" target="n179" type="input" id="e183">
-          <point y="160" x="900"/>
-          <point y="160" x="750"/>
-        </edge>
-        <edge source="n178" target="n180" type="input" id="e184">
-          <point y="160" x="900"/>
-          <point y="160" x="1050"/>
-        </edge>
-        <edge source="n180" target="n177" type="equivalence" id="e185">
-          <point y="160" x="1050"/>
-          <point y="160" x="1160"/>
-        </edge>
-        <edge source="n0" target="n179" type="equivalence" id="e186">
-          <point y="260" x="560"/>
-          <point y="160" x="750"/>
-        </edge>
-        <edge source="n181" target="n182" type="input" id="e187">
-          <point y="160" x="1410"/>
-          <point y="160" x="1300"/>
-        </edge>
-        <edge source="n177" target="n182" type="equivalence" id="e188">
-          <point y="160" x="1160"/>
-          <point y="160" x="1300"/>
-        </edge>
-        <edge source="n183" target="n184" type="input" id="e189">
-          <point y="100" x="1410"/>
-          <point y="100" x="1300"/>
-        </edge>
-        <edge source="n184" target="n177" type="inclusion" id="e190">
-          <point y="100" x="1300"/>
-          <point y="160" x="1160"/>
-        </edge>
-        <edge source="n1" target="n3" type="equivalence" id="e2">
-          <point y="260" x="-20"/>
-          <point y="260" x="130"/>
-        </edge>
-        <edge source="n6" target="n198" type="inclusion" id="e209">
-          <point y="470" x="1100"/>
-          <point y="640" x="1100"/>
-        </edge>
-        <edge source="n140" target="n145" type="inclusion" id="e214">
-          <point y="1050" x="-1210"/>
-          <point y="950" x="-1210"/>
-        </edge>
-        <edge source="n1" target="n200" type="inclusion" id="e215">
-          <point y="260" x="-20"/>
-          <point y="100" x="-20"/>
-        </edge>
-        <edge source="n200" target="n96" type="equivalence" id="e216">
-          <point y="100" x="-20"/>
-          <point y="100" x="110"/>
-        </edge>
-        <edge source="n30" target="n51" type="inclusion" id="e218">
-          <point y="640" x="0"/>
-          <point y="920" x="-190"/>
-        </edge>
-        <edge source="n30" target="n198" type="input" id="e219">
-          <point y="640" x="0"/>
-          <point y="640" x="1100"/>
-        </edge>
-        <edge source="n201" target="n198" type="input" id="e221">
-          <point y="640" x="1320"/>
-          <point y="640" x="1100"/>
-        </edge>
-        <edge source="n110" target="n98" type="inclusion" id="e225">
-          <point y="-160" x="-300"/>
-          <point y="-80" x="-400"/>
-        </edge>
-        <edge source="n112" target="n98" type="inclusion" id="e226">
-          <point y="-110" x="-300"/>
-          <point y="-80" x="-400"/>
-        </edge>
-        <edge source="n205" target="n206" type="input" id="e227">
-          <point y="260" x="-890"/>
-          <point y="260" x="-700"/>
-        </edge>
-        <edge source="n205" target="n207" type="input" id="e228">
-          <point y="260" x="-890"/>
-          <point y="260" x="-1040"/>
-        </edge>
-        <edge source="n207" target="n35" type="inclusion" id="e230">
-          <point y="260" x="-1040"/>
-          <point y="260" x="-1210"/>
-          <point y="0" x="-1210"/>
-        </edge>
-        <edge source="n66" target="n69" type="equivalence" id="e238">
-          <point y="920" x="270"/>
-          <point y="920" x="140"/>
-        </edge>
-        <edge source="n68" target="n51" type="inclusion" id="e241">
-          <point y="920" x="-60"/>
-          <point y="920" x="-190"/>
-        </edge>
-        <edge source="n201" target="n213" type="equivalence" id="e244">
-          <point y="640" x="1320"/>
-          <point y="500" x="1320"/>
-        </edge>
-        <edge source="n58" target="n214" type="inclusion" id="e246">
-          <point y="600" x="-550"/>
-          <point y="440" x="-550"/>
-        </edge>
-        <edge source="n100" target="n214" type="inclusion" id="e248">
-          <point y="230" x="-400"/>
-          <point y="440" x="-550"/>
-        </edge>
-        <edge source="n206" target="n214" type="equivalence" id="e249">
-          <point y="260" x="-700"/>
-          <point y="440" x="-700"/>
-          <point y="440" x="-550"/>
-        </edge>
-        <edge source="n209" target="n214" type="equivalence" id="e250">
-          <point y="230" x="-550"/>
-          <point y="440" x="-550"/>
-        </edge>
-        <edge source="n219" target="n214" type="equivalence" id="e256">
-          <point y="500" x="-650"/>
-          <point y="440" x="-550"/>
-        </edge>
-        <edge source="n221" target="n222" type="input" id="e259">
-          <point y="480" x="-300"/>
-          <point y="480" x="-160"/>
-        </edge>
-        <edge source="n221" target="n223" type="input" id="e260">
-          <point y="480" x="-300"/>
-          <point y="480" x="-400"/>
-        </edge>
-        <edge source="n220" target="n222" type="equivalence" id="e261">
-          <point y="480" x="10"/>
-          <point y="480" x="-160"/>
-        </edge>
-        <edge source="n214" target="n223" type="equivalence" id="e262">
-          <point y="440" x="-550"/>
-          <point y="480" x="-400"/>
-        </edge>
-        <edge source="n221" target="n225" type="inclusion" id="e263">
-          <point y="480" x="-300"/>
-          <point y="390" x="-300"/>
-        </edge>
-        <edge source="n220" target="n226" type="inclusion" id="e264">
-          <point y="480" x="10"/>
-          <point y="480" x="200"/>
-        </edge>
-        <edge source="n227" target="n228" type="input" id="e265">
-          <point y="360" x="-180"/>
-          <point y="260" x="-180"/>
-        </edge>
-        <edge source="n227" target="n229" type="input" id="e266">
-          <point y="360" x="-180"/>
-          <point y="360" x="10"/>
-        </edge>
-        <edge source="n228" target="n1" type="inclusion" id="e268">
-          <point y="260" x="-180"/>
-          <point y="260" x="-20"/>
-        </edge>
-        <edge source="n220" target="n229" type="equivalence" id="e269">
-          <point y="480" x="10"/>
-          <point y="360" x="10"/>
-        </edge>
-        <edge source="n231" target="n232" type="input" id="e270">
-          <point y="570" x="100"/>
-          <point y="570" x="30"/>
-        </edge>
-        <edge source="n230" target="n233" type="input" id="e271">
-          <point y="570" x="-80"/>
-          <point y="570" x="-10"/>
-        </edge>
-        <edge source="n220" target="n233" type="equivalence" id="e272">
-          <point y="504" x="-10"/>
-          <point y="570" x="-10"/>
-        </edge>
-        <edge source="n220" target="n232" type="equivalence" id="e273">
-          <point y="504" x="26"/>
-          <point y="570" x="30"/>
-        </edge>
-        <edge source="n70" target="n66" type="inclusion" id="e274">
-          <point y="920" x="630"/>
-          <point y="920" x="270"/>
-        </edge>
-        <edge source="n235" target="n209" type="input" id="e276">
-          <point y="80" x="-550"/>
-          <point y="230" x="-550"/>
-        </edge>
-        <edge source="n235" target="n234" type="inclusion" id="e277">
-          <point y="80" x="-550"/>
-          <point y="-130" x="-550"/>
-        </edge>
-        <edge source="n71" target="n13" type="inclusion" id="e280">
-          <point y="920" x="830"/>
-          <point y="920" x="960"/>
-        </edge>
-        <edge source="n238" target="n240" type="input" id="e281">
-          <point y="1370" x="-720"/>
-          <point y="1370" x="-830"/>
-        </edge>
-        <edge source="n238" target="n172" type="input" id="e285">
-          <point y="1370" x="-720"/>
-          <point y="1370" x="-610"/>
-        </edge>
-        <edge source="n243" target="n246" type="input" id="e287">
-          <point y="500" x="-800"/>
-          <point y="500" x="-930"/>
-        </edge>
-        <edge source="n32" target="n33" type="input" id="e29">
-          <point y="0" x="-960"/>
-          <point y="0" x="-1060"/>
-        </edge>
-        <edge source="n243" target="n219" type="input" id="e290">
-          <point y="500" x="-800"/>
-          <point y="500" x="-650"/>
-        </edge>
-        <edge source="n246" target="n244" type="inclusion" id="e291">
-          <point y="500" x="-930"/>
-          <point y="500" x="-1080"/>
-        </edge>
-        <edge source="n240" target="n239" type="inclusion" id="e292">
-          <point y="1370" x="-830"/>
-          <point y="1370" x="-960"/>
-        </edge>
-        <edge source="n247" target="n248" type="input" id="e293">
-          <point y="750" x="510"/>
-          <point y="750" x="670"/>
-        </edge>
-        <edge source="n249" target="n248" type="inclusion" id="e294">
-          <point y="750" x="860"/>
-          <point y="750" x="670"/>
-        </edge>
-        <edge source="n247" target="n128" type="input" id="e295">
-          <point y="750" x="510"/>
-          <point y="750" x="370"/>
-        </edge>
-        <edge source="n250" target="n253" type="input" id="e297">
-          <point y="820" x="510"/>
-          <point y="820" x="670"/>
-        </edge>
-        <edge source="n251" target="n253" type="inclusion" id="e298">
-          <point y="820" x="860"/>
-          <point y="820" x="670"/>
-        </edge>
-        <edge source="n250" target="n129" type="input" id="e299">
-          <point y="820" x="510"/>
-          <point y="820" x="370"/>
-        </edge>
-        <edge source="n4" target="n0" type="equivalence" id="e3">
-          <point y="260" x="360"/>
-          <point y="260" x="560"/>
-        </edge>
-        <edge source="n32" target="n34" type="input" id="e30">
-          <point y="0" x="-960"/>
-          <point y="0" x="-840"/>
-        </edge>
-        <edge source="n254" target="n257" type="input" id="e300">
-          <point y="500" x="1450"/>
-          <point y="500" x="1570"/>
-        </edge>
-        <edge source="n256" target="n257" type="inclusion" id="e301">
-          <point y="500" x="1720"/>
-          <point y="500" x="1570"/>
-        </edge>
-        <edge source="n254" target="n213" type="input" id="e303">
-          <point y="500" x="1450"/>
-          <point y="500" x="1320"/>
-        </edge>
-        <edge source="n34" target="n31" type="inclusion" id="e31">
-          <point y="0" x="-840"/>
-          <point y="0" x="-700"/>
-        </edge>
-        <edge source="n33" target="n35" type="inclusion" id="e32">
-          <point y="0" x="-1060"/>
-          <point y="0" x="-1210"/>
-        </edge>
-        <edge source="n5" target="n9" type="input" id="e4">
-          <point y="260" x="900"/>
-          <point y="260" x="750"/>
-        </edge>
-        <edge source="n51" target="n174" type="equivalence" id="e43">
-          <point y="920" x="-190"/>
-          <point y="1230" x="-360"/>
-        </edge>
-        <edge source="n49" target="n174" type="input" id="e44">
-          <point y="1320" x="-510"/>
-          <point y="1230" x="-360"/>
-        </edge>
-        <edge source="n50" target="n174" type="input" id="e45">
-          <point y="1320" x="-360"/>
-          <point y="1230" x="-360"/>
-        </edge>
-        <edge source="n53" target="n55" type="input" id="e46">
-          <point y="1320" x="-100"/>
-          <point y="1240" x="-30"/>
-        </edge>
-        <edge source="n54" target="n55" type="input" id="e47">
-          <point y="1320" x="30"/>
-          <point y="1240" x="-30"/>
-        </edge>
-        <edge source="n55" target="n51" type="equivalence" id="e48">
-          <point y="1240" x="-30"/>
-          <point y="920" x="-190"/>
-        </edge>
-        <edge source="n5" target="n10" type="input" id="e5">
-          <point y="260" x="900"/>
-          <point y="260" x="1050"/>
-        </edge>
-        <edge source="n49" target="n56" type="input" id="e50">
-          <point y="1320" x="-510"/>
-          <point y="1410" x="-510"/>
-          <point y="1410" x="-100"/>
-        </edge>
-        <edge source="n56" target="n53" type="inclusion" id="e51">
-          <point y="1410" x="-100"/>
-          <point y="1320" x="-100"/>
-        </edge>
-        <edge source="n57" target="n58" type="input" id="e52">
-          <point y="720" x="-550"/>
-          <point y="600" x="-550"/>
-        </edge>
-        <edge source="n57" target="n59" type="input" id="e53">
-          <point y="720" x="-550"/>
-          <point y="720" x="-190"/>
-        </edge>
-        <edge source="n51" target="n59" type="equivalence" id="e55">
-          <point y="920" x="-190"/>
-          <point y="720" x="-190"/>
-        </edge>
-        <edge source="n6" target="n10" type="equivalence" id="e6">
-          <point y="470" x="1100"/>
-          <point y="260" x="1100"/>
-          <point y="260" x="1050"/>
-        </edge>
-        <edge source="n65" target="n68" type="input" id="e60">
-          <point y="920" x="40"/>
-          <point y="920" x="-60"/>
-        </edge>
-        <edge source="n65" target="n69" type="input" id="e61">
-          <point y="920" x="40"/>
-          <point y="920" x="140"/>
-        </edge>
-        <edge source="n67" target="n70" type="input" id="e62">
-          <point y="920" x="730"/>
-          <point y="920" x="630"/>
-        </edge>
-        <edge source="n67" target="n71" type="input" id="e63">
-          <point y="920" x="730"/>
-          <point y="920" x="830"/>
-        </edge>
-        <edge source="n72" target="n73" type="input" id="e68">
-          <point y="1260" x="-730"/>
-          <point y="1260" x="-630"/>
-        </edge>
-        <edge source="n73" target="n49" type="equivalence" id="e69">
-          <point y="1260" x="-630"/>
-          <point y="1320" x="-510"/>
-        </edge>
-        <edge source="n9" target="n0" type="equivalence" id="e7">
-          <point y="260" x="750"/>
-          <point y="260" x="560"/>
-        </edge>
-        <edge source="n72" target="n75" type="input" id="e71">
-          <point y="1260" x="-730"/>
-          <point y="1260" x="-830"/>
-        </edge>
-        <edge source="n75" target="n74" type="inclusion" id="e72">
-          <point y="1260" x="-830"/>
-          <point y="1260" x="-940"/>
-        </edge>
-        <edge source="n83" target="n84" type="input" id="e81">
-          <point y="1030" x="730"/>
-          <point y="1030" x="630"/>
-        </edge>
-        <edge source="n83" target="n85" type="input" id="e82">
-          <point y="1030" x="730"/>
-          <point y="1030" x="830"/>
-        </edge>
-        <edge source="n85" target="n13" type="inclusion" id="e83">
-          <point y="1030" x="830"/>
-          <point y="920" x="960"/>
-        </edge>
-        <edge source="n86" target="n84" type="equivalence" id="e84">
-          <point y="1030" x="480"/>
-          <point y="1030" x="630"/>
-        </edge>
-        <edge source="n89" target="n92" type="input" id="e85">
-          <point y="90" x="560"/>
-          <point y="0" x="560"/>
-        </edge>
-        <edge source="n89" target="n93" type="input" id="e86">
-          <point y="90" x="560"/>
-          <point y="170" x="560"/>
-        </edge>
-        <edge source="n92" target="n91" type="equivalence" id="e87">
-          <point y="0" x="560"/>
-          <point y="-90" x="560"/>
-        </edge>
-        <edge source="n93" target="n0" type="inclusion" id="e88">
-          <point y="170" x="560"/>
-          <point y="260" x="560"/>
-        </edge>
-        <edge source="n94" target="n95" type="input" id="e89">
-          <point y="100" x="200"/>
-          <point y="100" x="290"/>
-        </edge>
-        <edge source="n94" target="n96" type="input" id="e90">
-          <point y="100" x="200"/>
-          <point y="100" x="110"/>
-        </edge>
-        <edge source="n95" target="n88" type="inclusion" id="e93">
-          <point y="100" x="290"/>
-          <point y="100" x="410"/>
-        </edge>
-        <edge source="n99" target="n100" type="input" id="e94">
-          <point y="110" x="-400"/>
-          <point y="230" x="-400"/>
-        </edge>
-        <edge source="n99" target="n101" type="input" id="e95">
-          <point y="110" x="-400"/>
-          <point y="20" x="-400"/>
-        </edge>
-        <edge source="n101" target="n98" type="equivalence" id="e97">
-          <point y="20" x="-400"/>
-          <point y="-80" x="-400"/>
-        </edge>
-        <edge source="n102" target="n103" type="input" id="e98">
-          <point y="-250" x="-400"/>
-          <point y="-160" x="-400"/>
-        </edge>
-        <edge source="n102" target="n104" type="input" id="e99">
-          <point y="-250" x="-400"/>
-          <point y="-330" x="-400"/>
+        <edge source="n2" target="n3" id="e0" type="input">
+          <point x="250" y="260"/>
+          <point x="130" y="260"/>
+        </edge>
+        <edge source="n2" target="n4" id="e1" type="input">
+          <point x="250" y="260"/>
+          <point x="360" y="260"/>
+        </edge>
+        <edge source="n98" target="n103" id="e100" type="equivalence">
+          <point x="-400" y="-80"/>
+          <point x="-400" y="-160"/>
+        </edge>
+        <edge source="n104" target="n43" id="e101" type="inclusion">
+          <point x="-400" y="-330"/>
+          <point x="-400" y="-410"/>
+        </edge>
+        <edge source="n107" target="n109" id="e102" type="input">
+          <point x="-120" y="-60"/>
+          <point x="-300" y="-60"/>
+        </edge>
+        <edge source="n105" target="n110" id="e103" type="input">
+          <point x="-120" y="-160"/>
+          <point x="-300" y="-160"/>
+        </edge>
+        <edge source="n108" target="n111" id="e104" type="input">
+          <point x="-120" y="-10"/>
+          <point x="-300" y="-10"/>
+        </edge>
+        <edge source="n106" target="n112" id="e105" type="input">
+          <point x="-120" y="-110"/>
+          <point x="-300" y="-110"/>
+        </edge>
+        <edge source="n98" target="n109" id="e108" type="equivalence">
+          <point x="-400" y="-80"/>
+          <point x="-300" y="-60"/>
+        </edge>
+        <edge source="n111" target="n98" id="e109" type="equivalence">
+          <point x="-300" y="-10"/>
+          <point x="-400" y="-80"/>
+        </edge>
+        <edge source="n107" target="n118" id="e114" type="input">
+          <point x="-120" y="-60"/>
+          <point x="110" y="-60"/>
+        </edge>
+        <edge source="n105" target="n119" id="e115" type="input">
+          <point x="-120" y="-160"/>
+          <point x="110" y="-160"/>
+        </edge>
+        <edge source="n108" target="n120" id="e116" type="input">
+          <point x="-120" y="-10"/>
+          <point x="110" y="-10"/>
+        </edge>
+        <edge source="n106" target="n121" id="e117" type="input">
+          <point x="-120" y="-110"/>
+          <point x="110" y="-110"/>
+        </edge>
+        <edge source="n119" target="n113" id="e118" type="inclusion">
+          <point x="110" y="-160"/>
+          <point x="200" y="-160"/>
+        </edge>
+        <edge source="n121" target="n113" id="e119" type="inclusion">
+          <point x="110" y="-110"/>
+          <point x="200" y="-160"/>
+        </edge>
+        <edge source="n118" target="n122" id="e120" type="inclusion">
+          <point x="110" y="-60"/>
+          <point x="200" y="-60"/>
+        </edge>
+        <edge source="n120" target="n122" id="e121" type="inclusion">
+          <point x="110" y="-10"/>
+          <point x="200" y="-60"/>
+        </edge>
+        <edge source="n124" target="n127" id="e122" type="input">
+          <point x="340" y="680"/>
+          <point x="270" y="680"/>
+        </edge>
+        <edge source="n124" target="n133" id="e130" type="input">
+          <point x="340" y="680"/>
+          <point x="430" y="680"/>
+        </edge>
+        <edge source="n133" target="n130" id="e131" type="inclusion">
+          <point x="430" y="680"/>
+          <point x="540" y="680"/>
+        </edge>
+        <edge source="n136" target="n51" id="e134" type="inclusion">
+          <point x="-410" y="1050"/>
+          <point x="-190" y="920"/>
+        </edge>
+        <edge source="n137" target="n138" id="e135" type="input">
+          <point x="-700" y="1050"/>
+          <point x="-800" y="1050"/>
+        </edge>
+        <edge source="n137" target="n139" id="e136" type="input">
+          <point x="-700" y="1050"/>
+          <point x="-600" y="1050"/>
+        </edge>
+        <edge source="n139" target="n136" id="e137" type="equivalence">
+          <point x="-600" y="1050"/>
+          <point x="-410" y="1050"/>
+        </edge>
+        <edge source="n141" target="n145" id="e141" type="input">
+          <point x="-1210" y="850"/>
+          <point x="-1210" y="950"/>
+        </edge>
+        <edge source="n138" target="n140" id="e143" type="equivalence">
+          <point x="-800" y="1050"/>
+          <point x="-1210" y="1050"/>
+        </edge>
+        <edge source="n147" target="n137" id="e147" type="inclusion">
+          <point x="-700" y="1140"/>
+          <point x="-700" y="1050"/>
+        </edge>
+        <edge source="n168" target="n66" id="e169" type="inclusion">
+          <point x="270" y="1090"/>
+          <point x="270" y="920"/>
+        </edge>
+        <edge source="n165" target="n51" id="e172" type="inclusion">
+          <point x="100" y="1110"/>
+          <point x="-190" y="920"/>
+        </edge>
+        <edge source="n170" target="n66" id="e173" type="inclusion">
+          <point x="270" y="780"/>
+          <point x="270" y="920"/>
+        </edge>
+        <edge source="n170" target="n127" id="e174" type="equivalence">
+          <point x="270" y="780"/>
+          <point x="270" y="680"/>
+        </edge>
+        <edge source="n128" target="n170" id="e175" type="equivalence">
+          <point x="370" y="750"/>
+          <point x="270" y="780"/>
+        </edge>
+        <edge source="n170" target="n129" id="e176" type="equivalence">
+          <point x="270" y="780"/>
+          <point x="370" y="820"/>
+        </edge>
+        <edge source="n172" target="n49" id="e179" type="equivalence">
+          <point x="-610" y="1370"/>
+          <point x="-510" y="1320"/>
+        </edge>
+        <edge source="n173" target="n174" id="e180" type="input">
+          <point x="-230" y="1320"/>
+          <point x="-360" y="1230"/>
+        </edge>
+        <edge source="n175" target="n176" id="e181" type="input">
+          <point x="-1410" y="1050"/>
+          <point x="-1330" y="1050"/>
+        </edge>
+        <edge source="n176" target="n140" id="e182" type="equivalence">
+          <point x="-1330" y="1050"/>
+          <point x="-1210" y="1050"/>
+        </edge>
+        <edge source="n178" target="n179" id="e183" type="input">
+          <point x="900" y="160"/>
+          <point x="750" y="160"/>
+        </edge>
+        <edge source="n178" target="n180" id="e184" type="input">
+          <point x="900" y="160"/>
+          <point x="1050" y="160"/>
+        </edge>
+        <edge source="n180" target="n177" id="e185" type="equivalence">
+          <point x="1050" y="160"/>
+          <point x="1160" y="160"/>
+        </edge>
+        <edge source="n0" target="n179" id="e186" type="equivalence">
+          <point x="560" y="260"/>
+          <point x="750" y="160"/>
+        </edge>
+        <edge source="n181" target="n182" id="e187" type="input">
+          <point x="1410" y="160"/>
+          <point x="1300" y="160"/>
+        </edge>
+        <edge source="n177" target="n182" id="e188" type="equivalence">
+          <point x="1160" y="160"/>
+          <point x="1300" y="160"/>
+        </edge>
+        <edge source="n183" target="n184" id="e189" type="input">
+          <point x="1410" y="100"/>
+          <point x="1300" y="100"/>
+        </edge>
+        <edge source="n184" target="n177" id="e190" type="inclusion">
+          <point x="1300" y="100"/>
+          <point x="1160" y="160"/>
+        </edge>
+        <edge source="n1" target="n3" id="e2" type="equivalence">
+          <point x="-20" y="260"/>
+          <point x="130" y="260"/>
+        </edge>
+        <edge source="n6" target="n198" id="e209" type="inclusion">
+          <point x="1100" y="470"/>
+          <point x="1100" y="640"/>
+        </edge>
+        <edge source="n140" target="n145" id="e214" type="inclusion">
+          <point x="-1210" y="1050"/>
+          <point x="-1210" y="950"/>
+        </edge>
+        <edge source="n1" target="n200" id="e215" type="inclusion">
+          <point x="-20" y="260"/>
+          <point x="-20" y="100"/>
+        </edge>
+        <edge source="n200" target="n96" id="e216" type="equivalence">
+          <point x="-20" y="100"/>
+          <point x="110" y="100"/>
+        </edge>
+        <edge source="n30" target="n51" id="e218" type="inclusion">
+          <point x="0" y="640"/>
+          <point x="-190" y="920"/>
+        </edge>
+        <edge source="n30" target="n198" id="e219" type="input">
+          <point x="0" y="640"/>
+          <point x="1100" y="640"/>
+        </edge>
+        <edge source="n201" target="n198" id="e221" type="input">
+          <point x="1320" y="640"/>
+          <point x="1100" y="640"/>
+        </edge>
+        <edge source="n110" target="n98" id="e225" type="inclusion">
+          <point x="-300" y="-160"/>
+          <point x="-400" y="-80"/>
+        </edge>
+        <edge source="n112" target="n98" id="e226" type="inclusion">
+          <point x="-300" y="-110"/>
+          <point x="-400" y="-80"/>
+        </edge>
+        <edge source="n205" target="n206" id="e227" type="input">
+          <point x="-890" y="260"/>
+          <point x="-700" y="260"/>
+        </edge>
+        <edge source="n205" target="n207" id="e228" type="input">
+          <point x="-890" y="260"/>
+          <point x="-1040" y="260"/>
+        </edge>
+        <edge source="n207" target="n35" id="e230" type="inclusion">
+          <point x="-1040" y="260"/>
+          <point x="-1210" y="260"/>
+          <point x="-1210" y="0"/>
+        </edge>
+        <edge source="n66" target="n69" id="e238" type="equivalence">
+          <point x="270" y="920"/>
+          <point x="140" y="920"/>
+        </edge>
+        <edge source="n68" target="n51" id="e241" type="inclusion">
+          <point x="-60" y="920"/>
+          <point x="-190" y="920"/>
+        </edge>
+        <edge source="n201" target="n213" id="e244" type="equivalence">
+          <point x="1320" y="640"/>
+          <point x="1320" y="500"/>
+        </edge>
+        <edge source="n58" target="n214" id="e246" type="inclusion">
+          <point x="-550" y="600"/>
+          <point x="-550" y="440"/>
+        </edge>
+        <edge source="n100" target="n214" id="e248" type="inclusion">
+          <point x="-400" y="230"/>
+          <point x="-550" y="440"/>
+        </edge>
+        <edge source="n206" target="n214" id="e249" type="equivalence">
+          <point x="-700" y="260"/>
+          <point x="-700" y="440"/>
+          <point x="-550" y="440"/>
+        </edge>
+        <edge source="n209" target="n214" id="e250" type="equivalence">
+          <point x="-550" y="230"/>
+          <point x="-550" y="440"/>
+        </edge>
+        <edge source="n219" target="n214" id="e256" type="equivalence">
+          <point x="-650" y="500"/>
+          <point x="-550" y="440"/>
+        </edge>
+        <edge source="n221" target="n222" id="e259" type="input">
+          <point x="-300" y="480"/>
+          <point x="-160" y="480"/>
+        </edge>
+        <edge source="n221" target="n223" id="e260" type="input">
+          <point x="-300" y="480"/>
+          <point x="-400" y="480"/>
+        </edge>
+        <edge source="n220" target="n222" id="e261" type="equivalence">
+          <point x="10" y="480"/>
+          <point x="-160" y="480"/>
+        </edge>
+        <edge source="n214" target="n223" id="e262" type="equivalence">
+          <point x="-550" y="440"/>
+          <point x="-400" y="480"/>
+        </edge>
+        <edge source="n221" target="n225" id="e263" type="inclusion">
+          <point x="-300" y="480"/>
+          <point x="-300" y="390"/>
+        </edge>
+        <edge source="n220" target="n226" id="e264" type="inclusion">
+          <point x="10" y="480"/>
+          <point x="200" y="480"/>
+        </edge>
+        <edge source="n227" target="n228" id="e265" type="input">
+          <point x="-180" y="360"/>
+          <point x="-180" y="260"/>
+        </edge>
+        <edge source="n227" target="n229" id="e266" type="input">
+          <point x="-180" y="360"/>
+          <point x="10" y="360"/>
+        </edge>
+        <edge source="n228" target="n1" id="e268" type="inclusion">
+          <point x="-180" y="260"/>
+          <point x="-20" y="260"/>
+        </edge>
+        <edge source="n220" target="n229" id="e269" type="equivalence">
+          <point x="10" y="480"/>
+          <point x="10" y="360"/>
+        </edge>
+        <edge source="n231" target="n232" id="e270" type="input">
+          <point x="100" y="570"/>
+          <point x="30" y="570"/>
+        </edge>
+        <edge source="n230" target="n233" id="e271" type="input">
+          <point x="-80" y="570"/>
+          <point x="-10" y="570"/>
+        </edge>
+        <edge source="n220" target="n233" id="e272" type="equivalence">
+          <point x="-10" y="504"/>
+          <point x="-10" y="570"/>
+        </edge>
+        <edge source="n220" target="n232" id="e273" type="equivalence">
+          <point x="26" y="504"/>
+          <point x="30" y="570"/>
+        </edge>
+        <edge source="n70" target="n66" id="e274" type="inclusion">
+          <point x="630" y="920"/>
+          <point x="270" y="920"/>
+        </edge>
+        <edge source="n235" target="n209" id="e276" type="input">
+          <point x="-550" y="80"/>
+          <point x="-550" y="230"/>
+        </edge>
+        <edge source="n235" target="n234" id="e277" type="inclusion">
+          <point x="-550" y="80"/>
+          <point x="-550" y="-130"/>
+        </edge>
+        <edge source="n71" target="n13" id="e280" type="inclusion">
+          <point x="830" y="920"/>
+          <point x="960" y="920"/>
+        </edge>
+        <edge source="n238" target="n240" id="e281" type="input">
+          <point x="-720" y="1370"/>
+          <point x="-830" y="1370"/>
+        </edge>
+        <edge source="n238" target="n172" id="e285" type="input">
+          <point x="-720" y="1370"/>
+          <point x="-610" y="1370"/>
+        </edge>
+        <edge source="n243" target="n246" id="e287" type="input">
+          <point x="-800" y="500"/>
+          <point x="-930" y="500"/>
+        </edge>
+        <edge source="n32" target="n33" id="e29" type="input">
+          <point x="-960" y="0"/>
+          <point x="-1060" y="0"/>
+        </edge>
+        <edge source="n243" target="n219" id="e290" type="input">
+          <point x="-800" y="500"/>
+          <point x="-650" y="500"/>
+        </edge>
+        <edge source="n246" target="n244" id="e291" type="inclusion">
+          <point x="-930" y="500"/>
+          <point x="-1080" y="500"/>
+        </edge>
+        <edge source="n240" target="n239" id="e292" type="inclusion">
+          <point x="-830" y="1370"/>
+          <point x="-960" y="1370"/>
+        </edge>
+        <edge source="n247" target="n248" id="e293" type="input">
+          <point x="510" y="750"/>
+          <point x="670" y="750"/>
+        </edge>
+        <edge source="n249" target="n248" id="e294" type="inclusion">
+          <point x="860" y="750"/>
+          <point x="670" y="750"/>
+        </edge>
+        <edge source="n247" target="n128" id="e295" type="input">
+          <point x="510" y="750"/>
+          <point x="370" y="750"/>
+        </edge>
+        <edge source="n250" target="n253" id="e297" type="input">
+          <point x="510" y="820"/>
+          <point x="670" y="820"/>
+        </edge>
+        <edge source="n251" target="n253" id="e298" type="inclusion">
+          <point x="860" y="820"/>
+          <point x="670" y="820"/>
+        </edge>
+        <edge source="n250" target="n129" id="e299" type="input">
+          <point x="510" y="820"/>
+          <point x="370" y="820"/>
+        </edge>
+        <edge source="n4" target="n0" id="e3" type="equivalence">
+          <point x="360" y="260"/>
+          <point x="560" y="260"/>
+        </edge>
+        <edge source="n32" target="n34" id="e30" type="input">
+          <point x="-960" y="0"/>
+          <point x="-840" y="0"/>
+        </edge>
+        <edge source="n254" target="n257" id="e300" type="input">
+          <point x="1450" y="500"/>
+          <point x="1570" y="500"/>
+        </edge>
+        <edge source="n256" target="n257" id="e301" type="inclusion">
+          <point x="1720" y="500"/>
+          <point x="1570" y="500"/>
+        </edge>
+        <edge source="n254" target="n213" id="e303" type="input">
+          <point x="1450" y="500"/>
+          <point x="1320" y="500"/>
+        </edge>
+        <edge source="n258" target="n260" id="e304" type="input">
+          <point x="170" y="320"/>
+          <point x="50" y="320"/>
+        </edge>
+        <edge source="n259" target="n261" id="e305" type="input">
+          <point x="670" y="340"/>
+          <point x="560" y="340"/>
+        </edge>
+        <edge source="n260" target="n1" id="e306" type="inclusion">
+          <point x="50" y="320"/>
+          <point x="-20" y="320"/>
+          <point x="-20" y="260"/>
+        </edge>
+        <edge source="n261" target="n0" id="e307" type="inclusion">
+          <point x="560" y="340"/>
+          <point x="560" y="260"/>
+        </edge>
+        <edge source="n34" target="n31" id="e31" type="inclusion">
+          <point x="-840" y="0"/>
+          <point x="-700" y="0"/>
+        </edge>
+        <edge source="n33" target="n35" id="e32" type="inclusion">
+          <point x="-1060" y="0"/>
+          <point x="-1210" y="0"/>
+        </edge>
+        <edge source="n5" target="n9" id="e4" type="input">
+          <point x="900" y="260"/>
+          <point x="750" y="260"/>
+        </edge>
+        <edge source="n51" target="n174" id="e43" type="equivalence">
+          <point x="-190" y="920"/>
+          <point x="-360" y="1230"/>
+        </edge>
+        <edge source="n49" target="n174" id="e44" type="input">
+          <point x="-510" y="1320"/>
+          <point x="-360" y="1230"/>
+        </edge>
+        <edge source="n50" target="n174" id="e45" type="input">
+          <point x="-360" y="1320"/>
+          <point x="-360" y="1230"/>
+        </edge>
+        <edge source="n53" target="n55" id="e46" type="input">
+          <point x="-100" y="1320"/>
+          <point x="-30" y="1240"/>
+        </edge>
+        <edge source="n54" target="n55" id="e47" type="input">
+          <point x="30" y="1320"/>
+          <point x="-30" y="1240"/>
+        </edge>
+        <edge source="n55" target="n51" id="e48" type="equivalence">
+          <point x="-30" y="1240"/>
+          <point x="-190" y="920"/>
+        </edge>
+        <edge source="n5" target="n10" id="e5" type="input">
+          <point x="900" y="260"/>
+          <point x="1050" y="260"/>
+        </edge>
+        <edge source="n49" target="n56" id="e50" type="input">
+          <point x="-510" y="1320"/>
+          <point x="-510" y="1410"/>
+          <point x="-100" y="1410"/>
+        </edge>
+        <edge source="n56" target="n53" id="e51" type="inclusion">
+          <point x="-100" y="1410"/>
+          <point x="-100" y="1320"/>
+        </edge>
+        <edge source="n57" target="n58" id="e52" type="input">
+          <point x="-550" y="720"/>
+          <point x="-550" y="600"/>
+        </edge>
+        <edge source="n57" target="n59" id="e53" type="input">
+          <point x="-550" y="720"/>
+          <point x="-190" y="720"/>
+        </edge>
+        <edge source="n51" target="n59" id="e55" type="equivalence">
+          <point x="-190" y="920"/>
+          <point x="-190" y="720"/>
+        </edge>
+        <edge source="n6" target="n10" id="e6" type="equivalence">
+          <point x="1100" y="470"/>
+          <point x="1100" y="260"/>
+          <point x="1050" y="260"/>
+        </edge>
+        <edge source="n65" target="n68" id="e60" type="input">
+          <point x="40" y="920"/>
+          <point x="-60" y="920"/>
+        </edge>
+        <edge source="n65" target="n69" id="e61" type="input">
+          <point x="40" y="920"/>
+          <point x="140" y="920"/>
+        </edge>
+        <edge source="n67" target="n70" id="e62" type="input">
+          <point x="730" y="920"/>
+          <point x="630" y="920"/>
+        </edge>
+        <edge source="n67" target="n71" id="e63" type="input">
+          <point x="730" y="920"/>
+          <point x="830" y="920"/>
+        </edge>
+        <edge source="n72" target="n73" id="e68" type="input">
+          <point x="-730" y="1260"/>
+          <point x="-630" y="1260"/>
+        </edge>
+        <edge source="n73" target="n49" id="e69" type="equivalence">
+          <point x="-630" y="1260"/>
+          <point x="-510" y="1320"/>
+        </edge>
+        <edge source="n9" target="n0" id="e7" type="equivalence">
+          <point x="750" y="260"/>
+          <point x="560" y="260"/>
+        </edge>
+        <edge source="n72" target="n75" id="e71" type="input">
+          <point x="-730" y="1260"/>
+          <point x="-830" y="1260"/>
+        </edge>
+        <edge source="n75" target="n74" id="e72" type="inclusion">
+          <point x="-830" y="1260"/>
+          <point x="-940" y="1260"/>
+        </edge>
+        <edge source="n83" target="n84" id="e81" type="input">
+          <point x="730" y="1030"/>
+          <point x="630" y="1030"/>
+        </edge>
+        <edge source="n83" target="n85" id="e82" type="input">
+          <point x="730" y="1030"/>
+          <point x="830" y="1030"/>
+        </edge>
+        <edge source="n85" target="n13" id="e83" type="inclusion">
+          <point x="830" y="1030"/>
+          <point x="960" y="920"/>
+        </edge>
+        <edge source="n86" target="n84" id="e84" type="equivalence">
+          <point x="480" y="1030"/>
+          <point x="630" y="1030"/>
+        </edge>
+        <edge source="n89" target="n92" id="e85" type="input">
+          <point x="560" y="90"/>
+          <point x="560" y="0"/>
+        </edge>
+        <edge source="n89" target="n93" id="e86" type="input">
+          <point x="560" y="90"/>
+          <point x="560" y="170"/>
+        </edge>
+        <edge source="n92" target="n91" id="e87" type="equivalence">
+          <point x="560" y="0"/>
+          <point x="560" y="-90"/>
+        </edge>
+        <edge source="n93" target="n0" id="e88" type="inclusion">
+          <point x="560" y="170"/>
+          <point x="560" y="260"/>
+        </edge>
+        <edge source="n94" target="n95" id="e89" type="input">
+          <point x="200" y="100"/>
+          <point x="290" y="100"/>
+        </edge>
+        <edge source="n94" target="n96" id="e90" type="input">
+          <point x="200" y="100"/>
+          <point x="110" y="100"/>
+        </edge>
+        <edge source="n95" target="n88" id="e93" type="inclusion">
+          <point x="290" y="100"/>
+          <point x="410" y="100"/>
+        </edge>
+        <edge source="n99" target="n100" id="e94" type="input">
+          <point x="-400" y="110"/>
+          <point x="-400" y="230"/>
+        </edge>
+        <edge source="n99" target="n101" id="e95" type="input">
+          <point x="-400" y="110"/>
+          <point x="-400" y="20"/>
+        </edge>
+        <edge source="n101" target="n98" id="e97" type="equivalence">
+          <point x="-400" y="20"/>
+          <point x="-400" y="-80"/>
+        </edge>
+        <edge source="n102" target="n103" id="e98" type="input">
+          <point x="-400" y="-250"/>
+          <point x="-400" y="-160"/>
+        </edge>
+        <edge source="n102" target="n104" id="e99" type="input">
+          <point x="-400" y="-250"/>
+          <point x="-400" y="-330"/>
         </edge>
       </diagram>
-      <diagram height="5000" name="Interfaccia" width="5000">
-        <node color="#fcfcfc" type="concept" id="n0">
-          <geometry y="30" height="50" x="470" width="110"/>
+      <diagram width="5000" name="Interfaccia" height="5000">
+        <node color="#fcfcfc" id="n0" type="concept">
+          <geometry width="110" x="470" height="50" y="30"/>
           <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiAgente</iri>
-          <label y="30" height="36" size="12" customSize="0" x="470" width="110"/>
+          <label width="110" x="470" height="36" y="30" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="role" id="n1">
-          <geometry y="140" height="50" x="690" width="70"/>
+        <node color="#fcfcfc" id="n1" type="role">
+          <geometry width="70" x="690" height="50" y="140"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/lavoratoreDelegaDelegato</iri>
-          <label y="110" height="22" size="12" customSize="0" x="690" width="152"/>
+          <label width="152" x="690" height="22" y="110" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n2">
-          <geometry y="140" height="50" x="890" width="110"/>
+        <node color="#fcfcfc" id="n2" type="concept">
+          <geometry width="110" x="890" height="50" y="140"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/Lavoratore</iri>
-          <label y="140" height="22" size="12" customSize="0" x="890" width="110"/>
+          <label width="110" x="890" height="22" y="140" size="12" customSize="0"/>
         </node>
-        <node color="#fcfcfc" type="concept" id="n3">
-          <geometry y="30" height="50" x="890" width="110"/>
+        <node color="#fcfcfc" id="n3" type="concept">
+          <geometry width="110" x="890" height="50" y="30"/>
           <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</iri>
-          <label y="30" height="36" size="12" customSize="0" x="890" width="110"/>
+          <label width="110" x="890" height="36" y="30" size="12" customSize="0"/>
         </node>
-        <node color="#000000" type="range-restriction" id="n4">
-          <geometry y="140" height="20" x="600" width="20"/>
-          <label y="118" height="22" size="12" customSize="0" x="600" width="39">exists</label>
+        <node color="#000000" id="n4" type="range-restriction">
+          <geometry width="20" x="600" height="20" y="140"/>
+          <label width="39" x="600" height="22" y="118" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="domain-restriction" id="n5">
-          <geometry y="140" height="20" x="780" width="20"/>
-          <label y="118" height="22" size="12" customSize="0" x="780" width="39">exists</label>
+        <node color="#fcfcfc" id="n5" type="domain-restriction">
+          <geometry width="20" x="780" height="20" y="140"/>
+          <label width="39" x="780" height="22" y="118" size="12" customSize="0">exists</label>
         </node>
-        <node color="#fcfcfc" type="concept" id="n6">
-          <geometry y="140" height="50" x="470" width="110"/>
+        <node color="#fcfcfc" id="n6" type="concept">
+          <geometry width="110" x="470" height="50" y="140"/>
           <iri>https://w3id.org/italia/social-security/onto/relevant-legislation/Delegato</iri>
-          <label y="140" height="22" size="12" customSize="0" x="470" width="110"/>
+          <label width="110" x="470" height="22" y="140" size="12" customSize="0"/>
         </node>
-        <edge source="n6" target="n0" type="inclusion" id="e0">
-          <point y="140" x="470"/>
-          <point y="30" x="470"/>
+        <edge source="n6" target="n0" id="e0" type="inclusion">
+          <point x="470" y="140"/>
+          <point x="470" y="30"/>
         </edge>
-        <edge source="n1" target="n5" type="input" id="e1">
-          <point y="140" x="690"/>
-          <point y="140" x="780"/>
+        <edge source="n1" target="n5" id="e1" type="input">
+          <point x="690" y="140"/>
+          <point x="780" y="140"/>
         </edge>
-        <edge source="n1" target="n4" type="input" id="e2">
-          <point y="140" x="690"/>
-          <point y="140" x="600"/>
+        <edge source="n1" target="n4" id="e2" type="input">
+          <point x="690" y="140"/>
+          <point x="600" y="140"/>
         </edge>
-        <edge source="n2" target="n3" type="inclusion" id="e3">
-          <point y="140" x="890"/>
-          <point y="30" x="890"/>
+        <edge source="n2" target="n3" id="e3" type="inclusion">
+          <point x="890" y="140"/>
+          <point x="890" y="30"/>
         </edge>
-        <edge source="n5" target="n2" type="inclusion" id="e4">
-          <point y="140" x="780"/>
-          <point y="140" x="890"/>
+        <edge source="n5" target="n2" id="e4" type="inclusion">
+          <point x="780" y="140"/>
+          <point x="890" y="140"/>
         </edge>
-        <edge source="n6" target="n4" type="equivalence" id="e5">
-          <point y="140" x="470"/>
-          <point y="140" x="600"/>
+        <edge source="n6" target="n4" id="e5" type="equivalence">
+          <point x="470" y="140"/>
+          <point x="600" y="140"/>
         </edge>
       </diagram>
     </diagrams>

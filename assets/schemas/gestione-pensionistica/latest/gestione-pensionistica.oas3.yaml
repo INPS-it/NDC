@@ -1,0 +1,65 @@
+openapi: 3.0.3
+info:
+  title: Schema della Gestione Pensionistica
+  version: 202403.07.00
+  x-summary: Schema della Gestione Pensionistica compatibile con l'Ontologia INPS relativa alle Pensioni
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+   Classifica i sistemi di assicurazione previdenziale previsti dalla norma. Ciascuna gestione adotta un diverso sistema di contribuzione da applicare ai lavoratori ad essa iscritti, definendo, ad esempio, la base imponibile, la misura e le modalità di versamento dei contributi. La competenza della gestione è definita dal tipo di lavoro svolto e dal rapporto di lavoro instaurato
+   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
+   che introduce le keyword x-jsonld-type e x-jsonld-context.
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+    FondoPensionistico:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/fondo-pensionistico/latest/fondo-pensionistico.oas3.yaml#/components/schemas/FondoPensionistico"
+
+    IdGestionePensionistica:
+      type: string
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/codiceGestionePensionistica
+      example: '005'
+      maxLength: 50
+      minLength: 1
+
+    GestionePensionistica:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+        codice_gestione_pensionistica: codiceGestionePensionistica
+        descrizione_gestione_pensionistica: descrizioneGestionePensionistica
+        raggruppa_fondo:
+          "@id": raggruppaFondo
+      additionalProperties: true
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica
+      required:
+      - codice_gestione_pensionistica
+      - descrizione_gestione_pensionistica
+      properties:
+        codice_gestione_pensionistica:
+          $ref: "#/components/schemas/IdGestionePensionistica"
+        descrizione_gestione_pensionistica:
+          type: string
+          maxLength: 255
+        raggruppa_fondo:
+          type: object
+          items:
+            $ref: "#/components/schemas/FondoPensionistico"
+      example:
+        codice_gestione_pensionistica: '005'
+        descrizione_gestione_pensionistica: 'Lavoratori Parasubordinati'
+        raggruppa_fondo:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/fondo-pensionistico/latest/fondo-pensionistico.oas3.yaml#/components/schemas/FondoPensionistico/example"

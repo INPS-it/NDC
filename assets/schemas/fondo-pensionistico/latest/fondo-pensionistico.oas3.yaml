@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: Schema del Fondo Pensionistico
+  version: 202403.07.00
+  x-summary: Schema del Fondo Pensionistico compatibile con l'Ontologia INPS relativa alle Pensioni
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+   Classifica i collettori finanziari nei quali sono accumulati i contributi raccolti presso gli iscritti a una gestione previdenziale. Ciascun fondo fa parte di una gestione con cui condivide le modalità di contribuzione. A seconda del tipo di attività svolta dal lavoratore contribuente o dal suo datore di lavoro, i contributi versati confluiscono in uno specifico fondo che li amministra in autonomia
+   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
+   che introduce le keyword x-jsonld-type e x-jsonld-context.
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdFondoPensionistico:
+      type: string
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/codiceFondoPensionistico
+      example: '005-001'
+      maxLength: 50
+      minLength: 1
+
+    FondoPensionistico:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/FondoPensionistico
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+        codice_fondo_pensionistico: codiceFondoPensionistico
+        descrizione_fondo_pensionistico: descrizioneFondoPensionistico
+      additionalProperties: true
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/FondoPensionistico
+      required:
+      - codice_fondo_pensionistico
+      - descrizione_fondo_pensionistico
+      properties:
+        codice_fondo_pensionistico:
+          $ref: "#/components/schemas/IdFondoPensionistico"
+        descrizione_fondo_pensionistico:
+          type: string
+          maxLength: 255
+      example:
+        codice_fondo_pensionistico: '005-001'
+        descrizione_fondo_pensionistico: 'Lavoratori Parasubordinati'

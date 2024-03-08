@@ -1,11 +1,11 @@
-@prefix ns1: <http://www.w3.org/2004/02/skos/core#> .
-@prefix ns2: <http://www.w3.org/ns/dcat#> .
-@prefix ns3: <http://purl.org/dc/terms/> .
-@prefix ns4: <http://rdf-vocabulary.ddialliance.org/xkos#> .
-@prefix ns5: <http://xmlns.com/foaf/0.1/> .
-@prefix ns6: <https://w3id.org/italia/onto/NDC/> .
-@prefix ns7: <http://www.w3.org/2006/vcard/ns#> .
-@prefix ns8: <http://www.w3.org/ns/adms#> .
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix ns2: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns3: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix ns4: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns5: <http://www.w3.org/ns/dcat#> .
+@prefix ns6: <http://www.w3.org/ns/adms#> .
+@prefix ns7: <https://w3id.org/italia/onto/NDC/> .
+@prefix ns8: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -13,23 +13,40 @@
 ### Annotations
 
 <https://w3id.org/italia/data/standard/SKOS> a <http://dati.gov.it/onto/dcatapit#Standard>,
-        ns3:Standard ;
-    ns3:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
-    ns3:identifier "SKOS" ;
-    ns3:title "Simple Knowledge Organization System - SKOS" .
+        ns1:Standard ;
+    ns1:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    ns1:identifier "SKOS" ;
+    ns1:title "Simple Knowledge Organization System - SKOS" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> a <http://dati.gov.it/onto/dcatapit#Dataset>,
         <https://w3id.org/italia/social-security/onto/pensions/EnteIstruttore>,
-        ns1:ConceptScheme,
-        ns8:Asset ;
+        ns2:ConceptScheme,
+        ns6:Asset ;
     rdfs:label "This is the controlled vocabulary of the authority type adopted by INPS classification"@en,
         "Vocabolario Controllato sul tipo di ente adottato dall'INPS"@it ;
-    ns1:prefLabel "Vocabolario Controllato sul tipo di ente adottato dall'INPS"@it ;
+    ns2:prefLabel "Vocabolario Controllato sul tipo di ente adottato dall'INPS"@it ;
     rdfs:comment "Classification of the authority type adopted by INPS controlled vocabulary"@en,
         "Vocabolario Controllato sul tipo di ente adottato dall'INPS"@it ;
     owl:versionInfo "0.1" ;
     rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
-    ns1:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/00>,
+    ns1:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    ns1:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    ns1:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns1:description "Classification of the authority type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di ente adottato dall'INPS"@it ;
+    ns1:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente" ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns1:modified "2024-02-01"^^xsd:date ;
+    ns1:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns1:relation <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_pensione>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
+    ns1:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns1:title "Classification of the authority type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di ente adottato dall'INPS"@it ;
+    ns1:type <http://purl.org/adms/assettype/CodeList> ;
+    ns2:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/00>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/01>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/02>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/03>,
@@ -72,250 +89,363 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/46>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/47>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/48> ;
-    ns2:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
-    ns2:distribution <https://w3id.org/italia/social-security/data/pensions/distribution/TE_CSV>,
+    ns3:numberOfLevels "1" ;
+    ns5:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    ns5:distribution <https://w3id.org/italia/social-security/data/pensions/distribution/TE_CSV>,
         <https://w3id.org/italia/social-security/data/pensions/distribution/TE_JSON_LD>,
         <https://w3id.org/italia/social-security/data/pensions/distribution/TE_RDF_TURTLE> ;
-    ns2:keyword "inps"@en,
+    ns5:keyword "inps"@en,
         "inps"@it,
         "pension",
         "pensioni"@it ;
-    ns2:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
-    ns3:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    ns3:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
-    ns3:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:description "Classification of the authority type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di ente adottato dall'INPS"@it ;
-    ns3:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente" ;
-    ns3:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-    ns3:modified "2024-02-01"^^xsd:date ;
-    ns3:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:relation <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_fondo>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_gestione>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
-    ns3:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:title "Classification of the authority type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di ente adottato dall'INPS"@it ;
-    ns3:type <http://purl.org/adms/assettype/CodeList> ;
-    ns4:numberOfLevels "1" ;
-    ns6:keyConcept "tipo_ente" ;
-    ns8:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> .
+    ns5:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    ns6:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    ns7:keyConcept "tipo_ente" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/00> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/00> a ns2:Concept ;
     rdfs:label "Nessun Ente"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Nessun Ente"@it ;
+    ns1:identifier "00"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "00"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/01> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/01> a ns2:Concept ;
     rdfs:label "INPS"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "INPS"@it ;
+    ns1:identifier "01"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "01"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/02> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/02> a ns2:Concept ;
     rdfs:label "INAM"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "INAM"@it ;
+    ns1:identifier "02"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "02"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/03> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/03> a ns2:Concept ;
     rdfs:label "Cassa Mutua Commercianti"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Cassa Mutua Commercianti"@it ;
+    ns1:identifier "03"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "03"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/04> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/04> a ns2:Concept ;
     rdfs:label "Cassa Mutua Artigiani"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Cassa Mutua Artigiani"@it ;
+    ns1:identifier "04"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "04"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/05> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/05> a ns2:Concept ;
     rdfs:label "Cassa Mutua CDCM"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Cassa Mutua CDCM"@it ;
+    ns1:identifier "05"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "05"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/06> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/06> a ns2:Concept ;
     rdfs:label "ONPI"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "ONPI"@it ;
+    ns1:identifier "06"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "06"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/07> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/07> a ns2:Concept ;
     rdfs:label "ENAOLI"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "ENAOLI"@it ;
+    ns1:identifier "07"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "07"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/08> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/08> a ns2:Concept ;
     rdfs:label "ENPAM"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "ENPAM"@it ;
+    ns1:identifier "08"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "08"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/09> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/09> a ns2:Concept ;
     rdfs:label "ENPAIA"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "ENPAIA"@it ;
+    ns1:identifier "09"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "09"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/10> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/10> a ns2:Concept ;
     rdfs:label "INAIL"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "INAIL"@it ;
+    ns1:identifier "10"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "10"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/11> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/11> a ns2:Concept ;
     rdfs:label "ENPAS"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "ENPAS"@it ;
+    ns1:identifier "11"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "11"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/12> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/12> a ns2:Concept ;
     rdfs:label "ENPDEP"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "ENPDEP"@it ;
+    ns1:identifier "12"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "12"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/13> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/13> a ns2:Concept ;
     rdfs:label "ANCC"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "ANCC"@it ;
+    ns1:identifier "13"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "13"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/14> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/14> a ns2:Concept ;
     rdfs:label "ENPALS"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "ENPALS"@it ;
+    ns1:identifier "14"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "14"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/15> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/15> a ns2:Concept ;
     rdfs:label "ENPI"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "ENPI"@it ;
+    ns1:identifier "15"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "15"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/16> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/16> a ns2:Concept ;
     rdfs:label "INPDAI"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "INPDAI"@it ;
+    ns1:identifier "16"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "16"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/17> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/17> a ns2:Concept ;
     rdfs:label "Cassa Ingegneri e Architetti"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Cassa Ingegneri e Architetti"@it ;
+    ns1:identifier "17"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "17"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/18> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/18> a ns2:Concept ;
     rdfs:label "SCAU"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "SCAU"@it ;
+    ns1:identifier "18"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "18"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/19> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/19> a ns2:Concept ;
     rdfs:label "Porto di Genova"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Porto di Genova"@it ;
+    ns1:identifier "19"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "19"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/20> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/20> a ns2:Concept ;
     rdfs:label "Porto di Trieste"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Porto di Trieste"@it ;
+    ns1:identifier "20"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "20"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/21> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/21> a ns2:Concept ;
     rdfs:label "SPORTASS"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "SPORTASS"@it ;
+    ns1:identifier "21"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "21"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/22> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/22> a ns2:Concept ;
     rdfs:label "Ex INPDAP ENPAS"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Ex INPDAP ENPAS"@it ;
+    ns1:identifier "22"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "22"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/23> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/23> a ns2:Concept ;
     rdfs:label "Ex INPDAP ENPDEP"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Ex INPDAP ENPDEP"@it ;
+    ns1:identifier "23"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "23"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/24> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/24> a ns2:Concept ;
     rdfs:label "Ex ENPALS"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Ex ENPALS"@it ;
+    ns1:identifier "24"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "24"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/31> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/31> a ns2:Concept ;
     rdfs:label "Difesa e Sicurezza (EI,MM,AM,CC,GDF,PDS,PolPen,CFS,VVF) - ex INPDAP"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Difesa e Sicurezza (EI,MM,AM,CC,GDF,PDS,PolPen,CFS,VVF) - ex INPDAP"@it ;
+    ns1:identifier "31"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "31"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/32> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/32> a ns2:Concept ;
     rdfs:label "Scuola (Dirigenti,Docenti e Personale Ata) - ex INPDAP"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Scuola (Dirigenti,Docenti e Personale Ata) - ex INPDAP"@it ;
+    ns1:identifier "32"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "32"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/33> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/33> a ns2:Concept ;
     rdfs:label "Universita' Alta Formazione e Spec.ne Artistica e Musicale (AFAM) - ex INPDAP"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Universita' Alta Formazione e Spec.ne Artistica e Musicale (AFAM) - ex INPDAP"@it ;
+    ns1:identifier "33"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "33"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/34> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/34> a ns2:Concept ;
     rdfs:label "Sanita': Medici e Veterinari - ex INPDAP"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Sanita': Medici e Veterinari - ex INPDAP"@it ;
+    ns1:identifier "34"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "34"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/35> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/35> a ns2:Concept ;
     rdfs:label "Sanita': Paramedici, Amministrativi e Tecnici - ex INPDAP"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Sanita': Paramedici, Amministrativi e Tecnici - ex INPDAP"@it ;
+    ns1:identifier "35"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "35"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/36> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/36> a ns2:Concept ;
     rdfs:label "Ministeri personale civile e Agenzie fiscali - ex INPDAP"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Ministeri personale civile e Agenzie fiscali - ex INPDAP"@it ;
+    ns1:identifier "36"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "36"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/37> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/37> a ns2:Concept ;
     rdfs:label "Autorita' indipendenti - ex INPDAP"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Autorita' indipendenti - ex INPDAP"@it ;
+    ns1:identifier "37"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "37"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/38> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/38> a ns2:Concept ;
     rdfs:label "Enti Locali (Comuni,Regioni,Provincie,Ex municip.te) - ex INPDAP"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Enti Locali (Comuni,Regioni,Provincie,Ex municip.te) - ex INPDAP"@it ;
+    ns1:identifier "38"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "38"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/39> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/39> a ns2:Concept ;
     rdfs:label "Ufficiali Giudiziari"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Ufficiali Giudiziari"@it ;
+    ns1:identifier "39"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "39"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/40> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/40> a ns2:Concept ;
     rdfs:label "Magistrati e Avvocati"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Magistrati e Avvocati"@it ;
+    ns1:identifier "40"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "40"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/41> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/41> a ns2:Concept ;
     rdfs:label "Enti e Istituzioni di ricerca (Istat, CNR, ecc.)"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Enti e Istituzioni di ricerca (Istat, CNR, ecc.)"@it ;
+    ns1:identifier "41"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "41"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/42> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/42> a ns2:Concept ;
     rdfs:label "Enti di previdenza"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Enti di previdenza"@it ;
+    ns1:identifier "42"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "42"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/43> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/43> a ns2:Concept ;
     rdfs:label "Altro"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Altro"@it ;
+    ns1:identifier "43"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "43"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/44> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/44> a ns2:Concept ;
     rdfs:label "Insegnanti scuole parificate, pubbliche materne ed elementari non statali"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Insegnanti scuole parificate, pubbliche materne ed elementari non statali"@it ;
+    ns1:identifier "44"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "44"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/45> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/45> a ns2:Concept ;
     rdfs:label "Difesa (Esercito, Marina, Aeronautica)"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Difesa (Esercito, Marina, Aeronautica)"@it ;
+    ns1:identifier "45"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "45"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/46> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/46> a ns2:Concept ;
     rdfs:label "Sicurezza (Carabinieri)"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Sicurezza (Carabinieri)"@it ;
+    ns1:identifier "46"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "46"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/47> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/47> a ns2:Concept ;
     rdfs:label "Sicurezza (Guardia di Finanza, Polizia Penitenziaria, Polizia di Stato)"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Sicurezza (Guardia di Finanza, Polizia Penitenziaria, Polizia di Stato)"@it ;
+    ns1:identifier "47"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "47"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/48> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente/48> a ns2:Concept ;
     rdfs:label "Soccorso Pubblico (Vigili del Fuoco)"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> .
+    ns2:prefLabel "Soccorso Pubblico (Vigili del Fuoco)"@it ;
+    ns1:identifier "48"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_ente> ;
+    ns2:notation "48"@it .
 
 <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a <http://dati.gov.it/onto/dcatapit#Organization>,
-        ns7:Kind,
-        ns7:Organization ;
-    ns7:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
-    ns7:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+        ns4:Kind,
+        ns4:Organization ;
+    ns4:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns4:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
 
 <https://w3id.org/italia/social-security/data/organization/inps> a <http://dati.gov.it/onto/dcatapit#Agent>,
-        ns5:Agent ;
-    ns3:identifier "inps" ;
-    ns5:name "Istituto Nazionale della Previdenza Sociale"@it,
+        ns8:Agent ;
+    ns1:identifier "inps" ;
+    ns8:name "Istituto Nazionale della Previdenza Sociale"@it,
         "National Institute for Social Security"@en .
 
 <https://w3id.org/italia/social-security/data/pensions/distribution/TE_CSV> a <http://dati.gov.it/onto/dcatapit#Distribution>,
-        ns2:Distribution ;
-    ns2:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_ente/latest> ;
-    ns2:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_ente/latest/tipo_ente.csv> ;
-    ns3:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di ente adottato dall'INPS"@it,
+        ns5:Distribution ;
+    ns1:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di ente adottato dall'INPS"@it,
         "This is the distribution in CSV of the authority type adopted by INPS controlled vocabulary"@en ;
-    ns3:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-    ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns3:title "CSV distribution of the authority type adopted by INPS controlled vocabulary"@en,
-        "Distribuzione CSV del vocabolario controllato sul tipo di ente adottato dall'INPS"@it .
+    ns1:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns1:title "CSV distribution of the authority type adopted by INPS controlled vocabulary"@en,
+        "Distribuzione CSV del vocabolario controllato sul tipo di ente adottato dall'INPS"@it ;
+    ns5:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_ente/latest> ;
+    ns5:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_ente/latest/tipo_ente.csv> .
 
 <https://w3id.org/italia/social-security/data/pensions/distribution/TE_JSON_LD> a <http://dati.gov.it/onto/dcatapit#Distribution>,
-        ns2:Distribution ;
-    ns2:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_ente/latest> ;
-    ns2:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_ente/latest/tipo_ente.json> ;
-    ns3:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di ente adottato dall'INPS"@it,
+        ns5:Distribution ;
+    ns1:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di ente adottato dall'INPS"@it,
         "This is the distribution in JSON_LD of the authority type adopted by INPS controlled vocabulary"@en ;
-    ns3:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
-    ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns3:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di ente adottato dall'INPS"@it,
-        "JSON_LD distribution of the authority type adopted by INPS controlled vocabulary"@en .
+    ns1:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns1:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di ente adottato dall'INPS"@it,
+        "JSON_LD distribution of the authority type adopted by INPS controlled vocabulary"@en ;
+    ns5:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_ente/latest> ;
+    ns5:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_ente/latest/tipo_ente.json> .
 
 <https://w3id.org/italia/social-security/data/pensions/distribution/TE_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
-        ns2:Distribution ;
-    ns2:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_ente/latest> ;
-    ns2:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_ente/latest/tipo_ente.ttl> ;
-    ns3:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di ente adottato dall'INPS"@it,
+        ns5:Distribution ;
+    ns1:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di ente adottato dall'INPS"@it,
         "This is the distribution in RDF/turtle of the authority type adopted by INPS controlled vocabulary"@en ;
-    ns3:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
-    ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns3:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di ente adottato dall'INPS"@it,
-        "RDF/Turtle distribution of the authority type adopted by INPS controlled vocabulary"@en .
+    ns1:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns1:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di ente adottato dall'INPS"@it,
+        "RDF/Turtle distribution of the authority type adopted by INPS controlled vocabulary"@en ;
+    ns5:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_ente/latest> ;
+    ns5:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_ente/latest/tipo_ente.ttl> .
 
 ### Serialized using the ttlser deterministic serializer v1.2.0

@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: Schema dell'Ente Istruttore
+  version: 202403.07.00
+  x-summary: Schema dell'Ente Istruttore compatibile con l'Ontologia INPS relativa alle Pensioni
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+   Classifica i possibili enti che possono istruire una richiesta di pensione in regime di totalizzazione o di cumulo. Nel contesto delle domande di pensione rivolte a INPS, quest'ultimo è l'unico ente istruttore possibile e la classe accoglie le istanze INPS - Gestione Privata e INPS - Gestione Pubblica, che rappresentano le diverse modalità di istruttoria previste dall'ente
+   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
+   che introduce le keyword x-jsonld-type e x-jsonld-context.
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdEnteIstruttore:
+      type: string
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/codiceEnteIstruttore
+      example: '03'
+      maxLength: 50
+      minLength: 1
+
+    EnteIstruttore:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/EnteIstruttore
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+        codice_ente_istruttore: codiceEnteIstruttore
+        descrizione_ente_istruttore: descrizioneEnteIstruttore
+      additionalProperties: true
+      description:
+         https://w3id.org/italia/social-security/onto/pensions/EnteIstruttore
+      required:
+      - codice_ente_istruttore
+      - descrizione_ente_istruttore
+      properties:
+        codice_ente_istruttore:
+          $ref: "#/components/schemas/IdEnteIstruttore"
+        descrizione_ente_istruttore:
+          type: string
+          maxLength: 255
+      example:
+        codice_ente_istruttore: '03'
+        descrizione_ente_istruttore: 'Cassa Mutua Commercianti'

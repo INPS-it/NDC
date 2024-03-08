@@ -711,6 +711,30 @@ INPSPensions:codiceABI a owl:DatatypeProperty,
     rdfs:comment "Codice identificativo di un soggetto finanziario nell'ambito della classificazione stabilita dall'ABI (Associazione Bancaria Italiana). Può essere un identificativo alternativo di una organizzazione."@it,
         "Identification code of a financial entity within the classification established by the ABI (Italian Banking Association). It can be an alternative identification of an organization."@en .
 
+INPSPensions:codiceCategoriaPensione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice categoria pensione"@it,
+        "pension category code"@en ;
+    rdfs:domain INPSPensions:CategoriaPP ;
+    rdfs:comment "Codice identificativo del fondo pensionistico."@it,
+        "Identification code of the pension category."@en .
+
+INPSPensions:codiceEnteIstruttore a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice ente istruttore"@it,
+        "competent body code"@en ;
+    rdfs:domain INPSPensions:EnteIstruttore ;
+    rdfs:comment "Codice identificativo dell'ente istruttore."@it,
+        "Identification code of the competent body"@en .
+
+INPSPensions:codiceFondoPensionistico a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice fondo pensionistico"@it,
+        "pension fund code"@en ;
+    rdfs:domain INPSPensions:FondoPensionistico ;
+    rdfs:comment "Codice identificativo del fondo pensionistico."@it,
+        "Identification code of the pension fund."@en .
+
 INPSPensions:codiceFrazionario a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "codice frazionario"@it,
@@ -720,6 +744,22 @@ INPSPensions:codiceFrazionario a owl:DatatypeProperty,
     rdfs:comment "Identificativo di un ufficio postale."@it,
         "Post office identifier."@en .
 
+INPSPensions:codiceGestionePensionistica a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice gestione pensionistica"@it,
+        "pension scheme code"@en ;
+    rdfs:domain INPSPensions:GestionePensionistica ;
+    rdfs:comment "Codice identificativo della gestione pensionistica."@it,
+        "Identification code of the scheme pension."@en .
+
+INPSPensions:codiceProdottoPensionistico a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice prodotto pensionistico"@it,
+        "pension product code"@en ;
+    rdfs:domain INPSPensions:ProdottoPensionistico ;
+    rdfs:comment "Codice identificativo del prodotto pensionistico."@it,
+        "Identification code of the pension product"@it .
+
 INPSPensions:codiceTipoDiReddito a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "codice tipo di reddito"@it,
@@ -728,6 +768,14 @@ INPSPensions:codiceTipoDiReddito a owl:DatatypeProperty,
     rdfs:range xsd:string ;
     rdfs:comment "Codice identificativo della tipologia di reddito."@it,
         "Identification code of the type of income."@en .
+
+INPSPensions:codiceTipoPensione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice tipo pensione"@it ;
+    rdfs:domain INPSPensions:TipoDiPensione ;
+    rdfs:comment "Codice identificativo del tipo di pensione."@it,
+        "Identification code of the pension type."@en,
+        "pension type code"@en .
 
 INPSPensions:contoCointestato a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -805,6 +853,14 @@ INPSPensions:descrizioneAttivitàEstera a owl:DatatypeProperty ;
     rdfs:comment "Additional note regarding a period of work performed abroad."@en,
         "Annotazione aggiuntiva riguardante un periodo di lavoro svolto all'estero."@it .
 
+INPSPensions:descrizioneCategoriaPensione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "descrizione categoria pensione"@it,
+        "pension category description"@en ;
+    rdfs:domain INPSPensions:CategoriaPP ;
+    rdfs:comment "Description of pension category type."@en,
+        "Descrizione della tipologia di categoria pensione."@it .
+
 INPSPensions:descrizioneDatoreDiLavoro a owl:DatatypeProperty ;
     rdfs:label "descrizione datore di lavoro"@it,
         "employer description"@en ;
@@ -840,6 +896,30 @@ INPSPensions:descrizioneDichiarazione a owl:DatatypeProperty,
     rdfs:comment "It is the text that expresses the declaration."@en,
         "È il testo che esprime la dichiarazione."@it .
 
+INPSPensions:descrizioneEnteIstruttore a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "competent body description"@en,
+        "descrizione ente istruttore"@it ;
+    rdfs:domain INPSPensions:EnteIstruttore ;
+    rdfs:comment "Description of competent body type."@en,
+        "Descrizione della tipologia di ente istruttore."@it .
+
+INPSPensions:descrizioneFondoPensionistico a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "descrizione fondo pensionistico"@it,
+        "pension fund description"@en ;
+    rdfs:domain INPSPensions:FondoPensionistico ;
+    rdfs:comment "Description of pension fund type."@en,
+        "Descrizione della tipologia di fondo pensionisitco."@it .
+
+INPSPensions:descrizioneGestionePensionistica a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "descrizione gestione pensionistica"@it,
+        "pension scheme description"@en ;
+    rdfs:domain INPSPensions:GestionePensionistica ;
+    rdfs:comment "Description of pension scheme type."@en,
+        "Descrizione della tipologia di gestione pensionistica."@it .
+
 INPSPensions:descrizioneTipoDiReddito a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "descrizione tipo di reddito"@it,
@@ -848,6 +928,14 @@ INPSPensions:descrizioneTipoDiReddito a owl:DatatypeProperty,
     rdfs:range xsd:string ;
     rdfs:comment "Description of income type."@en,
         "Descrizione della tipologia di reddito."@it .
+
+INPSPensions:descrizioneTipoPensione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "descrizione tipo pensione"@it,
+        "pension type description"@en ;
+    rdfs:domain INPSPensions:TipoDiPensione ;
+    rdfs:comment "Description of pension type."@en,
+        "Descrizione del tipo di pensione."@it .
 
 INPSPensions:fonteDiProvenienza a owl:DatatypeProperty,
         owl:FunctionalProperty ;

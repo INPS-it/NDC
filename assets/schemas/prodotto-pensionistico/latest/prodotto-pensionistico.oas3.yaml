@@ -1,0 +1,89 @@
+openapi: 3.0.3
+info:
+  title: Schema del Prodotto Pensionistico
+  version: 202403.07.00
+  x-summary: Schema del Prodotto Pensionistico compatibile con l'Ontologia INPS relativa alle Pensioni
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+   Costituisce l'oggetto della domanda di pensione ovvero la ragione per cui si ha diritto alla prestazione pensionistica. Lo specifico prodotto viene individuato mediante la combinazione di un insieme di caratteristiche ciascuna delle quali coglie uno specifico aspetto o della sitazione attuale del richiedente o della sua vita, lavorativa e personale, pregressa
+   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
+   che introduce le keyword x-jsonld-type e x-jsonld-context.
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+    EnteIstruttore:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/ente-istruttore/latest/ente-istruttore.oas3.yaml#/components/schemas/EnteIstruttore"
+    GestionePensionistica:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/gestione-pensionistica/latest/gestione-pensionistica.oas3.yaml#/components/schemas/GestionePensionistica"
+    FondoPensionistico:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/fondo-pensionistico/latest/fondo-pensionistico.oas3.yaml#/components/schemas/FondoPensionistico"
+    TipoDiPensione:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/tipo-pensione/latest/tipo-pensione.oas3.yaml#/components/schemas/TipoDiPensione"
+
+    IdProdottoPensionistico:
+      type: string
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/codiceProdottoPensionistico
+      example: '0039'
+      maxLength: 50
+      minLength: 1
+
+    ProdottoPensionistico:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+        codice_prodotto_pensionistico: codiceProdottoPensionistico
+        ha_ente_istruttore:
+          "@id": haEnteIstruttore
+        ha_gestione_pensionistica:
+          "@id": haGestionePensionistica
+        ha_fondo_pensionistico:
+          "@id": haFondoPensionistico
+        ha_tipo_di_pensione:
+          "@id": haTipoDiPensione
+      additionalProperties: true
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico
+      required:
+      - codice_prodotto_pensionistico
+      properties:
+        codice_prodotto_pensionistico:
+          $ref: "#/components/schemas/IdProdottoPensionistico"
+        ha_ente_istruttore:
+          type: object
+          items:
+            $ref: "#/components/schemas/EnteIstruttore"
+        ha_gestione_pensionistica:
+          type: object
+          items:
+            $ref: "#/components/schemas/GestionePensionistica"
+        ha_fondo_pensionistico:
+          type: object
+          items:
+            $ref: "#/components/schemas/FondoPensionistico"
+        ha_tipo_di_pensione:
+          type: object
+          items:
+            $ref: "#/components/schemas/TipoDiPensione"
+      example:
+        codice_prodotto_pensionistico: '0039'
+        ha_ente_istruttore:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/ente-istruttore/latest/ente-istruttore.oas3.yaml#/components/schemas/EnteIstruttore/example"
+        ha_gestione_pensionistica:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/gestione-pensionistica/latest/gestione-pensionistica.oas3.yaml#/components/schemas/GestionePensionistica/example"
+        ha_fondo_pensionistico:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/fondo-pensionistico/latest/fondo-pensionistico.oas3.yaml#/components/schemas/FondoPensionistico/example"
+        ha_tipo_di_pensione:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/tipo-pensione/latest/tipo-pensione.oas3.yaml#/components/schemas/TipoDiPensione/example"

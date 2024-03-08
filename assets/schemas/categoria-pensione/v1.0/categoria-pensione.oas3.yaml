@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: Schema della Categoria Pensione
+  version: 202403.07.00
+  x-summary: Schema della Categoria Pensione compatibile con l'Ontologia INPS relativa alle Pensioni
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+   Classifica la prestazione pensionistica erogata dall'INPS. Permette di risalire al tipo di trattamento che viene erogato. Ciascun trattamento è, infatti, individuato tramite un apposito acronimo che esprime il fondo erogante e/o la tipologia di trattamento
+   [REST API Linked Data keywords](https://www.ietf.org/archive/id/draft-polli-restapi-ld-keywords-00.html)
+   che introduce le keyword x-jsonld-type e x-jsonld-context.
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdCategoriaPensione:
+      type: string
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/codiceCategoriaPensione
+      example: '013-VOMIN'
+      maxLength: 50
+      minLength: 1
+
+    CategoriaPensione:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/CategoriaPP
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+        codice_categoria_pensione: codiceCategoriaPensione
+        descrizione_categoria_pensione: descrizioneCategoriaPensione
+      additionalProperties: true
+      description:
+        https://w3id.org/italia/social-security/onto/pensions/CategoriaPP
+      required:
+      - codice_categoria_pensione
+      - descrizione_categoria_pensione
+      properties:
+        codice_categoria_pensione:
+          $ref: "#/components/schemas/IdCategoriaPensione"
+        descrizione_categoria_pensione:
+          type: string
+          maxLength: 255
+      example:
+        codice_categoria_pensione: '013-VOMIN'
+        descrizione_categoria_pensione: 'Pensioni di vecchiaia, di anzianità e pensionamenti, anticipati liquidati a carico del fondo pensioni lavoratori dipendenti, ai lavoratori delle miniere, cave e torbiere'
