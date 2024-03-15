@@ -208,6 +208,26 @@
     <rdfs:label xml:lang="it">aggiunge dettaglio di dichiarazione</rdfs:label>
   </owl:ObjectProperty>
 
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/eDichiarazioneDi">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/Dichiarazione"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
+    <rdfs:comment xml:lang="it">Associa la dichiarazione con il ruolo di persona che l'ha dichiarata.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Match the declaration with the role of the person who stated it.</rdfs:comment>
+    <rdfs:label xml:lang="en">is declaration of</rdfs:label>
+    <rdfs:label xml:lang="it">è dichiarazione di</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/eDocumentoDi">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/DocumentoAllegato"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
+    <rdfs:comment xml:lang="it">Associa il documento allegato all'unico ruolo di persona a cui si riferisce.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Associates the attached document with the only role of person to whom it refers.</rdfs:comment>
+    <rdfs:label xml:lang="en">is document of</rdfs:label>
+    <rdfs:label xml:lang="it">è documento di</rdfs:label>
+  </owl:ObjectProperty>
+
   <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haAllegatoPerPP">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
     <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/StatoDiDomandaPP"/>
@@ -382,7 +402,7 @@
 
   <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haDatoreDiLavoro">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitàEstera"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitaEstera"/>
     <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/DatoreDiLavoro"/>
     <rdfs:comment xml:lang="en">Relationship between a foreign activity and the related and only employer.</rdfs:comment>
     <rdfs:comment xml:lang="it">Relzione tra una attività estera e il relativo e unico datore di lavoro.</rdfs:comment>
@@ -583,7 +603,7 @@
 
   <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haNazioneEstera">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitàEstera"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitaEstera"/>
     <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/NazioneEstera"/>
     <rdfs:comment xml:lang="en">Binds a work abroad with the foreign nation in which it took place.</rdfs:comment>
     <rdfs:comment xml:lang="it">Lega una attività svolta all'estero con la nazione estera in cui si è svolta.</rdfs:comment>
@@ -616,9 +636,9 @@
     <rdfs:label xml:lang="en">has tax dependent period</rdfs:label>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haPeriodoAttivitàEstera">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitàEstera"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/PeriodoAttivitàEstera"/>
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haPeriodoAttivitaEstera">
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitaEstera"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/PeriodoAttivitaEstera"/>
     <rdfs:comment xml:lang="en">Binds a work abroad to its period of carrying out, that is, to the time interval in which it took place. It is an alternative to the use of the property CL:hasAdressInTime if it is not necessary to indicate the location of residence at the foreign state.</rdfs:comment>
     <rdfs:comment xml:lang="it">Lega una attività svolta all'estero al suo periodo di svolgimento cioè all'intervallo di tempo in cui è avvenuta. È alternativo all'uso della proprietà CLV:hasAdressinTime nel caso in cui non sia necessario indicare la località di residenza presso lo stato estero.</rdfs:comment>
     <rdfs:label xml:lang="it">ha periodo attività estera</rdfs:label>
@@ -637,7 +657,7 @@
 
   <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haProdottoPensionisticoEstero">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitàEstera"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitaEstera"/>
     <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionisticoEstero"/>
     <rdfs:comment xml:lang="en">Relationship between a work abroad and the related foreign pension product. Only the activities carried out at nations in agreement with Italy (EU or bilateral) participate in this relationship.</rdfs:comment>
     <rdfs:comment xml:lang="it">Relazione tra una attività estera e il relativo prodotto pensionistico estero. Solo le attività svolte presso nazioni in convenzione con l'Italia (UE o bilaterale) partecipano a questa relazione.</rdfs:comment>
@@ -725,7 +745,7 @@
     <rdfs:label xml:lang="en">has pension service</rdfs:label>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haSvoltoAttivitàEstera">
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haSvoltoAttivitaEstera">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
     <rdfs:domain>
       <owl:Restriction>
@@ -734,7 +754,7 @@
       </owl:Restriction>
     </rdfs:domain>
 
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitàEstera"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitaEstera"/>
     <rdfs:comment xml:lang="en">Relationship between the PB holder and its activity carried out abroad in a certain period.</rdfs:comment>
     <rdfs:comment xml:lang="it">Relazione tra il titolare PP e una sua attività svolta all'estero in un determinato periodo.</rdfs:comment>
     <rdfs:label xml:lang="it">ha svolto attività estera</rdfs:label>
@@ -991,26 +1011,6 @@
     <rdfs:label xml:lang="it">raggruppa tipologia</rdfs:label>
   </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/èDichiarazioneDi">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/Dichiarazione"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
-    <rdfs:comment xml:lang="it">Associa la dichiarazione con il ruolo di persona che l'ha dichiarata.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Match the declaration with the role of the person who stated it.</rdfs:comment>
-    <rdfs:label xml:lang="en">is declaration of</rdfs:label>
-    <rdfs:label xml:lang="it">è dichiarazione di</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/èDocumentoDi">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/DocumentoAllegato"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersona"/>
-    <rdfs:comment xml:lang="it">Associa il documento allegato all'unico ruolo di persona a cui si riferisce.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Associates the attached document with the only role of person to whom it refers.</rdfs:comment>
-    <rdfs:label xml:lang="en">is document of</rdfs:label>
-    <rdfs:label xml:lang="it">è documento di</rdfs:label>
-  </owl:ObjectProperty>
-
   <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/BIC">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ContoCorrenteBancario"/>
@@ -1076,7 +1076,7 @@
 
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:comment xml:lang="en">Identification Bank Account Number: code that uniquely identifies, internationally, the bank or postal account of a customer at a financial intermediary. The IBAN code are made up of 27 characters and consist of: two characters of the national theme (&quot;IT&quot; for those referring to Italy), two control numbers, calculated on the basis of the other characters of the IBAN, CIN code (Control Internal Number), a character that serves to verify the correct transcription of the next 22 characters, ABI code (five characters assigned by the Italian banking association to identify the bank), CAB code (bank code), made up of five characters to identify the dependency of the credit institution identified by the ABI code, 12 characters for the account number (preceded by the zero in the event that the account number was less than 12 characters).</rdfs:comment>
-    <rdfs:comment xml:lang="it">Identification Bank Account Number: codice che identifica in maniera univoca, a livello internazionale, il conto, corrente o postale, di un cliente presso un intermediario finanziario. I codici IBAN sono formati da 27 caratteri e sono composti da: due caratteri della sigla nazionale (“IT” per quelli riferiti all'Italia), due numeri di controllo, calcolati sulla base degli altri caratteri dell’IBAN, codice CIN (Control Internal Number), un carattere che serve a verificare la corretta trascrizione dei successivi 22 caratteri, codice ABI (cinque caratteri assegnati dall’Associazione Bancaria Italiana per identificare la banca), codice CAB (Codice di avviamento bancario),formato da cinque caratteri per individuare la dipendenza dell’istituto di credito identificato dal codice ABI, 12 caratteri per il numero di conto corrente (preceduto dagli zero nel caso in cui il numero del conto fosse inferiore ai 12 caratteri).</rdfs:comment>
+    <rdfs:comment xml:lang="it">Identification Bank Account Number: codice che identifica in maniera univoca, a livello internazionale, il conto, corrente o postale, di un cliente presso un intermediario finanziario. I codici IBAN sono formati da 27 caratteri e sono composti da: due caratteri della sigla nazionale (&quot;IT&quot; per quelli riferiti all'Italia), due numeri di controllo, calcolati sulla base degli altri caratteri dell'IBAN, codice CIN (Control Internal Number), un carattere che serve a verificare la corretta trascrizione dei successivi 22 caratteri, codice ABI (cinque caratteri assegnati dall'Associazione Bancaria Italiana per identificare la banca), codice CAB (Codice di avviamento bancario),formato da cinque caratteri per individuare la dipendenza dell'istituto di credito identificato dal codice ABI, 12 caratteri per il numero di conto corrente (preceduto dagli zero nel caso in cui il numero del conto fosse inferiore ai 12 caratteri).</rdfs:comment>
     <rdfs:label xml:lang="en">IBAN</rdfs:label>
     <rdfs:label xml:lang="it">IBAN</rdfs:label>
   </owl:DatatypeProperty>
@@ -1281,7 +1281,7 @@
     <rdfs:label xml:lang="en">naturalization date</rdfs:label>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/dataValitàFormulario">
+  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/dataValitaFormulario">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/Formulario"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -1291,8 +1291,8 @@
     <rdfs:label xml:lang="en">form validity date</rdfs:label>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/descrizioneAttivitàEstera">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitàEstera"/>
+  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/descrizioneAttivitaEstera">
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AttivitaEstera"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:comment xml:lang="en">Additional note regarding a period of work performed abroad.</rdfs:comment>
     <rdfs:comment xml:lang="it">Annotazione aggiuntiva riguardante un periodo di lavoro svolto all'estero.</rdfs:comment>
@@ -1561,7 +1561,7 @@
     <rdfs:label xml:lang="it">numero pratica PP</rdfs:label>
   </owl:DatatypeProperty>
 
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/obbligatorietàTipoDocumento">
+  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/obbligatorietaTipoDocumento">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/TipoDocumentoAllegato"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
@@ -1622,7 +1622,7 @@
 
   <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/tipoPeriodoEstero">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/PeriodoAttivitàEstera"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/PeriodoAttivitaEstera"/>
     <rdfs:comment xml:lang="it">Tipologia di attività svolta nel periodo di permenenza all'estero.</rdfs:comment>
     <rdfs:comment xml:lang="en">Type of activity carried out during the period of permanence abroad.</rdfs:comment>
     <rdfs:label xml:lang="it">tipo periodo estero</rdfs:label>
@@ -1653,7 +1653,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/StatoDiDomandaPP"/>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment xml:lang="it">La proprietà indica la modalità con cui si vogliono utilizzare i periodi contributivi versati in una nazione estera convenzionata. I possibili valori sono: - &quot;Pensione italiana ed estera&quot;: si attiva un collegamento con l’estero per chiedere anche la pensione estera, i contributi versati all’estero saranno utili per il diritto a pensione in Italia ma non utili per per la misura; - &quot;Pensione italiana&quot;: non si attiva il collegamento con l’estero ma ci si limita a chiedere la contribuzione estera utile al perfezionamento del diritto contributivo per la pensione in Italia; - &quot;Pensione estera&quot;: caso in cui il richiedente è già titolare di pensione italiana e, all’età pensionabile estera, chiede la pensione estera, in questa opzione l’INPS si limita a effettuare il collegamento con l’estero e a notificare la ‘decisione’ estera al richiedente quando arriva.</rdfs:comment>
+    <rdfs:comment xml:lang="it">La proprietà indica la modalità con cui si vogliono utilizzare i periodi contributivi versati in una nazione estera convenzionata. I possibili valori sono: - &quot;Pensione italiana ed estera&quot;: si attiva un collegamento con l'estero per chiedere anche la pensione estera, i contributi versati all'estero saranno utili per il diritto a pensione in Italia ma non utili per per la misura; - &quot;Pensione italiana&quot;: non si attiva il collegamento con l'estero ma ci si limita a chiedere la contribuzione estera utile al perfezionamento del diritto contributivo per la pensione in Italia; - &quot;Pensione estera&quot;: caso in cui il richiedente è già titolare di pensione italiana e, all'età pensionabile estera, chiede la pensione estera, in questa opzione l'INPS si limita a effettuare il collegamento con l'estero e a notificare la ‘decisione' estera al richiedente quando arriva.</rdfs:comment>
     <rdfs:comment xml:lang="en">The property indicates how to use the contributory periods paid in a conventioned foreign nation. The possible values are: - &quot;Italian and foreign pension&quot;: a connection with the foreign institution is activated to also request the foreign pension, the contributions paid abroad will be useful for the right to pension in Italy but not useful for the measure; - &quot;Italian pension&quot;: the connection with abroad is not activated but the foreign contribution is used to establish the right to pension in Italy; - &quot;foreign pension&quot;: the applicant is already the holder of Italian pension and asks for the foreign pension, in this option INPS makes the connection with the foreign institution and notifies the foreign 'decision' to the applicant when he arrives.</rdfs:comment>
     <rdfs:label xml:lang="en">foreign pension request type</rdfs:label>
     <rdfs:label xml:lang="it">tipo richiesta pensione estera</rdfs:label>
@@ -1725,7 +1725,7 @@
       <owl:Restriction>
         <owl:onProperty>
           <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensions/èDocumentoDi"/>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensions/eDocumentoDi"/>
           </rdf:Description>
         </owl:onProperty>
 
@@ -1746,12 +1746,12 @@
 
   <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/AmministratoreDiSostegno">
     <rdfs:comment xml:lang="en">Specialization of a Tutorial role that admits the subjects responsible for the protection, with the lower possible limitation of the ability to act, of people without or in part of autonomy in carrying out the functions of daily life, through temporary or permanent support interventions. (L. 6/2004)</rdfs:comment>
-    <rdfs:comment xml:lang="it">Specializzazione di Figura tutoriale che accoglie i soggetti preposti alla tutela, con la minore limitazione possibile della capacità di agire, di persone prive in tutto o in parte di autonomia nell’espletamento delle funzioni di vita quotidiana, mediante interventi di sostegno temporaneo o permanente. (L. 6/2004)</rdfs:comment>
+    <rdfs:comment xml:lang="it">Specializzazione di Figura tutoriale che accoglie i soggetti preposti alla tutela, con la minore limitazione possibile della capacità di agire, di persone prive in tutto o in parte di autonomia nell'espletamento delle funzioni di vita quotidiana, mediante interventi di sostegno temporaneo o permanente. (L. 6/2004)</rdfs:comment>
     <rdfs:label xml:lang="it">Amministratore di sostegno</rdfs:label>
     <rdfs:label xml:lang="en">Support administrator</rdfs:label>
   </owl:Class>
 
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/AttivitàEstera">
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/AttivitaEstera">
     <owl:equivalentClass>
       <owl:Restriction>
         <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haNazioneEstera"/>
@@ -1763,7 +1763,7 @@
       <owl:Restriction>
         <owl:onProperty>
           <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haSvoltoAttivitàEstera"/>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haSvoltoAttivitaEstera"/>
           </rdf:Description>
         </owl:onProperty>
 
@@ -2128,7 +2128,7 @@
   </owl:Class>
 
   <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/DetrazioneDiImposta">
-    <rdfs:comment xml:lang="it">Le detrazioni d’imposta costituiscono un beneficio fiscale e sono importi che, sottratti dall’imposta lorda, calcolata per scaglioni di reddito, determinano una minore imposta a carico dei contribuenti. L'ente INPS ammette tali detrazioni sulle prestazioni pensionistiche previa opportuna richiesta da presentare annualmente o al momento in cui maturano, o si perdono, i requisti per ottenerla. Ne consegue che ciascuna istanza della classe è riferita ad un periodo di validità, perciò la classe è definita sottoclasse di TI:TimeIndexedEvent.</rdfs:comment>
+    <rdfs:comment xml:lang="it">Le detrazioni d'imposta costituiscono un beneficio fiscale e sono importi che, sottratti dall'imposta lorda, calcolata per scaglioni di reddito, determinano una minore imposta a carico dei contribuenti. L'ente INPS ammette tali detrazioni sulle prestazioni pensionistiche previa opportuna richiesta da presentare annualmente o al momento in cui maturano, o si perdono, i requisti per ottenerla. Ne consegue che ciascuna istanza della classe è riferita ad un periodo di validità, perciò la classe è definita sottoclasse di TI:TimeIndexedEvent.</rdfs:comment>
     <rdfs:comment xml:lang="en">Tax deductions establish a tax benefit and are amounts which, subtracted from the gross tax, calculated by income brackets, determine a lower tax burden on taxpayers. The INPS allows such deductions on pension benefits following a request to be presented annually or at the moment in which the requirements to obtain it accrue or are lost. So each instance of the class refers to a validity period, therefore the class is defined as a subclass of TI:TimeIndexedEvent.</rdfs:comment>
     <rdfs:label xml:lang="it">Detrazione di imposta</rdfs:label>
     <rdfs:label xml:lang="en">Tax deduction</rdfs:label>
@@ -2221,7 +2221,7 @@
   </owl:Class>
 
   <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/DipendenzaItalianaDiBanca">
-    <rdfs:comment xml:lang="it">Sottoclasse di Ufficio pagatore che raggruppa le localizzazioni operative di una banca collocate in Italia che erogano il servizio di pagamento di pensione ad un qualche Titolare PP. L’espressione generica di dipedenza riassume i diversi termini (agenzia, filiale, succursale, sede, rappresentanza, sportello) variamente graduati, nella particolare organizzazione di ciascuna banca, che può attribuire denominazione, ordinamento, importanza e funzioni diverse alle proprie dipendenze. È superclasse di Sportello di pagamento, essendo abilitata anche questa forma di pagamento.</rdfs:comment>
+    <rdfs:comment xml:lang="it">Sottoclasse di Ufficio pagatore che raggruppa le localizzazioni operative di una banca collocate in Italia che erogano il servizio di pagamento di pensione ad un qualche Titolare PP. L'espressione generica di dipedenza riassume i diversi termini (agenzia, filiale, succursale, sede, rappresentanza, sportello) variamente graduati, nella particolare organizzazione di ciascuna banca, che può attribuire denominazione, ordinamento, importanza e funzioni diverse alle proprie dipendenze. È superclasse di Sportello di pagamento, essendo abilitata anche questa forma di pagamento.</rdfs:comment>
     <rdfs:comment xml:lang="en">Subclass of Payer office that groups the operational locations of a bank placed in Italy that provide the pension payment service to some PP holder. The generic expression of dependency summarizes the different terms (agency, branch, head office, representation, counter) variously graduated, in the particular organization of each bank, which can attribute denomination, system, importance and different functions to its dependencies. It is superclass of Payment desk, since this form of payment is also enabled.</rdfs:comment>
     <rdfs:label xml:lang="it">Dipendenza italiana di banca</rdfs:label>
     <rdfs:label xml:lang="en">Italian bank dependency</rdfs:label>
@@ -2230,14 +2230,14 @@
   <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/DocumentoAllegato">
     <owl:equivalentClass>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haTipoDocumentoAllegato"/>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/eDocumentoDi"/>
         <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
       </owl:Restriction>
     </owl:equivalentClass>
 
     <owl:equivalentClass>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/èDocumentoDi"/>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haTipoDocumentoAllegato"/>
         <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
       </owl:Restriction>
     </owl:equivalentClass>
@@ -2373,7 +2373,7 @@
   <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/Formulario">
     <owl:equivalentClass>
       <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/dataValitàFormulario"/>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/dataValitaFormulario"/>
         <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
       </owl:Restriction>
     </owl:equivalentClass>
@@ -2449,7 +2449,7 @@
 
   <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/NazioneEsteraConvenzioneBilaterale">
     <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/pensions/NazioneEsteraConvenzioneUE"/>
-    <rdfs:comment xml:lang="it">Sottoclasse di Nazione estera che classifica gli stati extracomunitari con i quali l’Italia ha stipulato una Convenzione Bilaterale in materia di sicurezza sociale.</rdfs:comment>
+    <rdfs:comment xml:lang="it">Sottoclasse di Nazione estera che classifica gli stati extracomunitari con i quali l'Italia ha stipulato una Convenzione Bilaterale in materia di sicurezza sociale.</rdfs:comment>
     <rdfs:comment xml:lang="en">Subclass of Foreign nation that classifies the non-EU States with which Italy has entered into a bilateral convention on social security.</rdfs:comment>
     <rdfs:label xml:lang="en">Foreign nation bilateral convention</rdfs:label>
     <rdfs:label xml:lang="it">Nazione estera convenzione bilaterale</rdfs:label>
@@ -2518,7 +2518,7 @@
     <rdfs:label xml:lang="en">Tax dependent period</rdfs:label>
   </owl:Class>
 
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/PeriodoAttivitàEstera">
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/PeriodoAttivitaEstera">
     <owl:equivalentClass>
       <owl:Restriction>
         <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/tipoPeriodoEstero"/>
@@ -2536,7 +2536,7 @@
   <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica">
     <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/l0/Collection"/>
     <rdfs:comment xml:lang="en">Instantiation of pension benefits provided by the INPS. The pension performance is one of the different forms of protection and assistance of workers who materialize in the provision of sums of money or other utilities, and prepared to cover situations of need in which workers or their family can come to find themselves following certain events attributable or not to carry out the work and aimed at guaranteeing the continuity of income. In the case of the pension, is protected the impossibility of the percipient to ensure an income for itself and its family for some reasons, in particular for the overcoming of a certain age or seniority of service or for illness or for death. To financially support these protections, a mandatory contribution taxation is envisaged, i.e. the payment of specific charges (contributions), on the remuneration paid to each worker. Pension benefits are paid only if the interested party has submitted a specific application. In general, a pension benefit can embrace more applications submitted by the same applicant and identifies the social security relationship between an applicant and INPS, starting from the sending of the first pension application up to the termination by the death of the benefit holder (the survivors will give rise to a new pension performance). In this sense, the class is subclass of L0: Collection allowing to collect, with the property Lo:hasMember, the set of events (subclasses of TI:TimeIndexedEvent) inherent to the benefit that followed over time. In this ontology the subjects, events and, in general, the elements defined in relation to the Pension Benefit show, for brevity, the acronym PB.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Istanziazione delle prestazioni pensionistiche erogate dall'ente INPS. La prestazione pensionistica rientra tra le diverse forme di tutela ed assistenza dei lavoratori che si traducono nell’erogazione di prestazioni di somme di denaro o altre utilità, e predisposte in relazione a situazioni di bisogno in cui i lavoratori stessi o i loro famigliari possono venire a trovarsi in seguito al verificarsi di determinati eventi riconducibili o meno allo svolgimento dell’attività lavorativa e finalizzate sostanzialmente a garantire la continuità del reddito. Nel caso della pensione viene tutelata l'impossibilità del percipiente di assicurare un reddito per se e per i famigliari a proprio carico per sopraggiunti motivi ostativi, in particolare per il superamento di una certa età o anzianita di servizio o per malattia o per decesso. Per sostenere finanziariamente tali tutele è prevista una imposizione contributiva obbligatoria, ossia il pagamento di specifici oneri (contributi), sulla retribuzione corrisposta a ciascun lavoratore. Le prestazioni pensionistiche non vengono erogate “d’ufficio” dall’Ente, ma soltanto se l’interessato/assicurato ha presentato un’apposita domanda. In generale una prestazione pensionistica può abbracciare più domande presentate da uno stesso richiedente e identifica il rapporto previdenziale in essere tra detto richiedente e l'ente INPS, a partire dall'invio della prima domanda di pensione fino alla terminazione per decesso del titolare della prestazione (gli eventuali superstiti daranno luogo a una nuova prestazione pensionistica). In tal senso la classe è sottoclasse di L0:Collection consentendo di raccogliere tramite la proprietà L0:hasMember l'insieme degli eventi (definiti tramite la classe TI:TimeIndexedEvent) inerenti la prestazione succedutesi nel tempo. In questa ontologia i soggetti, gli eventi e, in generale, gli elementi definti in relazione alla Prestazione Pensionistica presentano, per brevità, l'acronimo PP.</rdfs:comment>
+    <rdfs:comment xml:lang="it">Istanziazione delle prestazioni pensionistiche erogate dall'ente INPS. La prestazione pensionistica rientra tra le diverse forme di tutela ed assistenza dei lavoratori che si traducono nell'erogazione di prestazioni di somme di denaro o altre utilità, e predisposte in relazione a situazioni di bisogno in cui i lavoratori stessi o i loro famigliari possono venire a trovarsi in seguito al verificarsi di determinati eventi riconducibili o meno allo svolgimento dell'attività lavorativa e finalizzate sostanzialmente a garantire la continuità del reddito. Nel caso della pensione viene tutelata l'impossibilità del percipiente di assicurare un reddito per se e per i famigliari a proprio carico per sopraggiunti motivi ostativi, in particolare per il superamento di una certa età o anzianita di servizio o per malattia o per decesso. Per sostenere finanziariamente tali tutele è prevista una imposizione contributiva obbligatoria, ossia il pagamento di specifici oneri (contributi), sulla retribuzione corrisposta a ciascun lavoratore. Le prestazioni pensionistiche non vengono erogate &quot;d'ufficio&quot; dall'Ente, ma soltanto se l'interessato/assicurato ha presentato un'apposita domanda. In generale una prestazione pensionistica può abbracciare più domande presentate da uno stesso richiedente e identifica il rapporto previdenziale in essere tra detto richiedente e l'ente INPS, a partire dall'invio della prima domanda di pensione fino alla terminazione per decesso del titolare della prestazione (gli eventuali superstiti daranno luogo a una nuova prestazione pensionistica). In tal senso la classe è sottoclasse di L0:Collection consentendo di raccogliere tramite la proprietà L0:hasMember l'insieme degli eventi (definiti tramite la classe TI:TimeIndexedEvent) inerenti la prestazione succedutesi nel tempo. In questa ontologia i soggetti, gli eventi e, in generale, gli elementi definti in relazione alla Prestazione Pensionistica presentano, per brevità, l'acronimo PP.</rdfs:comment>
     <rdfs:label xml:lang="en">Pension benefit</rdfs:label>
     <rdfs:label xml:lang="it">Prestazione pensionistica</rdfs:label>
   </owl:Class>
@@ -3121,7 +3121,7 @@
     <rdfs:label xml:lang="it">Ufficio postale</rdfs:label>
   </owl:Class>
 
-  <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/pensions/AnzianitàAnticipataVecchiaia">
+  <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/pensions/AnzianitaAnticipataVecchiaia">
     <rdf:type rdf:resource="https://w3id.org/italia/social-security/onto/pensions/GruppoServizioPensionistico"/>
     <rdfs:comment xml:lang="en">An instance of the Pension service group class that aggregates the services concerning the three pension forms mentioned.</rdfs:comment>
     <rdfs:comment xml:lang="it">Istanza della classe Gruppo servizio pensionistico che aggrega i servizi inerenti le tre forme pensionistiche citate.</rdfs:comment>
@@ -3131,7 +3131,7 @@
 
   <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/pensions/Cumulo">
     <rdfs:comment xml:lang="en">An instance of Pension scheme that identifies the possibility of accessing the pension benefit by adding the periods of enrollment to different schemes for free to have a single pension, even in cases where the contribution requirements required for the individual scheme have not actually been accrued. The specificity of the calculation of the pension through cumulation contribution consists in the fact that the amount is calculated taking into consideration the rules provided for by each fund. The pension allowance, in other words, is calculated pro-rata considering the different systems of each scheme. The cumulus can be used both to achieve the regular old -age pension and to arrive at early retirement.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Istanza di Gestione pensionistica che identifica la possibilità di accedere alla prestanzione pensionistica sommando gratuitamente i periodi di iscrizione a enti diversi per avere un'unica pensione, anche nei casi in cui non siano stati effettivamente maturati i requisiti contributivi richiesti per le singole gestioni. La specificità del calcolo della pensione tramite cumulo contributivo consiste nel fatto che l’importo si calcola tenendo in considerazione le regole previste da ciascun fondo. L’assegno pensionistico, in altre parole, è calcolato pro-rata tenendo conto dei diversi ordinamenti di ogni gestione. Il cumulo gratuito può essere utilizzato sia per il raggiungimento della regolare pensione di vecchiaia, sia per arrivare alla pensione anticipata.</rdfs:comment>
+    <rdfs:comment xml:lang="it">Istanza di Gestione pensionistica che identifica la possibilità di accedere alla prestanzione pensionistica sommando gratuitamente i periodi di iscrizione a enti diversi per avere un'unica pensione, anche nei casi in cui non siano stati effettivamente maturati i requisiti contributivi richiesti per le singole gestioni. La specificità del calcolo della pensione tramite cumulo contributivo consiste nel fatto che l'importo si calcola tenendo in considerazione le regole previste da ciascun fondo. L'assegno pensionistico, in altre parole, è calcolato pro-rata tenendo conto dei diversi ordinamenti di ogni gestione. Il cumulo gratuito può essere utilizzato sia per il raggiungimento della regolare pensione di vecchiaia, sia per arrivare alla pensione anticipata.</rdfs:comment>
     <rdfs:label xml:lang="it">Cumulo</rdfs:label>
     <rdfs:label xml:lang="en">Cumulus scheme</rdfs:label>
   </owl:NamedIndividual>
@@ -3143,15 +3143,15 @@
     <rdfs:label xml:lang="it">Gestione ex-INPDAP</rdfs:label>
   </owl:NamedIndividual>
 
-  <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/pensions/PensioneDiAnzianità-Anticipata">
+  <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/pensions/PensioneDiAnzianita-Anticipata">
     <rdf:type rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ServizioPensionistico"/>
     <rdfs:comment xml:lang="en">An instance of Pension service class that identifies the pension products referable to early retirement, that is, the pension treatment that a worker can also achieve before the fulfillment of the registry age provided for by the law for retirement, provided that he is in possession of specific contribution requirements. The early retirement replaces the so -called seniority pension, in force until 31/12/2011 and still requested if the requirements on the indicated date are met.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Istanza della classe Servizio pensionistico che identifica i prodotti pensionistici riferibili alla pensione anticipata cioè il trattamento pensionistico che un lavoratore può conseguire anche prima del compimento dell’età anagrafica prevista dalla legge per il pensionamento, purché egli sia in possesso di specifici requisiti contributivi. La pensione anticipata sostituisce la cd. pensione di anzianità, in vigore fino al 31/12/2011 e ancora richiedibile se soddisfatti i requisiti alla data indicata.</rdfs:comment>
+    <rdfs:comment xml:lang="it">Istanza della classe Servizio pensionistico che identifica i prodotti pensionistici riferibili alla pensione anticipata cioè il trattamento pensionistico che un lavoratore può conseguire anche prima del compimento dell'età anagrafica prevista dalla legge per il pensionamento, purché egli sia in possesso di specifici requisiti contributivi. La pensione anticipata sostituisce la cd. pensione di anzianità, in vigore fino al 31/12/2011 e ancora richiedibile se soddisfatti i requisiti alla data indicata.</rdfs:comment>
     <rdfs:label xml:lang="it">Pensione di anzianità - anticipata</rdfs:label>
     <rdfs:label xml:lang="en">Seniority pension - early retirement</rdfs:label>
   </owl:NamedIndividual>
 
-  <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/pensions/PensioneDiReversibilità">
+  <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/pensions/PensioneDiReversibilita">
     <rdf:type rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ServizioPensionistico"/>
     <rdfs:comment xml:lang="en">An instance of the Pension service class that identifies the recognized pension products, in the event of the death of the pensioner, in favor of the surviving family members, namely, the spouse, also separated or divorced with divorce allowance, the children and equivalent, and to very specific and residual conditions - in the absence of spouse and children - also parents or celibate brothers and unmarried sisters.</rdfs:comment>
     <rdfs:comment xml:lang="it">Istanza della classe Servizio pensionistico che identifica i prodotti pensionistici riconosciuti, in caso di decesso del pensionato, in favore dei familiari superstiti ovvero il coniuge, anche separato o divorziato con assegno divorzile, i figli ed equiparati, e a ben precise e residuali condizioni – in assenza di coniuge e figli - anche i genitori o i fratelli celibi e le sorelle nubili.</rdfs:comment>
@@ -3162,7 +3162,7 @@
   <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/pensions/PensioneDiVecchiaia">
     <rdf:type rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ServizioPensionistico"/>
     <rdfs:comment xml:lang="en">An instance of the Pension service class that identifies the pension products referable to the old -age pension, that is, the pension treatment envisaged for all people who, due to the advanced age, are no longer able to ensure an income by carrying out a work activity. The granting of the treatment is subordinate, as well as to the termination of the work activity and the achievement of a certain insurance seniority, above all to the achievement of a certain registry age (so -called &quot;retirement age&quot;).</rdfs:comment>
-    <rdfs:comment xml:lang="it">Istanza della classe Servizio pensionistico che identifica i prodotti pensionistici riferibili alla pensione di vecchiaia cioè il trattamento pensionistico previsto per tutte le persone che, a causa dell’età avanzata, non sono più in grado di assicurarsi un reddito mediante lo svolgimento di un’attività di lavoro. La concessione del trattamento è subordinato, oltre che alla cessazione dell’attività di lavoro e al conseguimento di una certa anzianità assicurativa, soprattutto al raggiungimento di una determinata età anagrafica (c.d. “età pensionabile”).</rdfs:comment>
+    <rdfs:comment xml:lang="it">Istanza della classe Servizio pensionistico che identifica i prodotti pensionistici riferibili alla pensione di vecchiaia cioè il trattamento pensionistico previsto per tutte le persone che, a causa dell'età avanzata, non sono più in grado di assicurarsi un reddito mediante lo svolgimento di un'attività di lavoro. La concessione del trattamento è subordinato, oltre che alla cessazione dell'attività di lavoro e al conseguimento di una certa anzianità assicurativa, soprattutto al raggiungimento di una determinata età anagrafica (c.d. &quot;età pensionabile&quot;).</rdfs:comment>
     <rdfs:label xml:lang="en">Old-age pension</rdfs:label>
     <rdfs:label xml:lang="it">Pensione di vecchiaia</rdfs:label>
   </owl:NamedIndividual>
@@ -3384,7 +3384,7 @@
             <owl:someValuesFrom>
               <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/pensions/PeriodoAttivitàEstera"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/pensions/PeriodoAttivitaEstera"/>
               </owl:Restriction>
             </owl:someValuesFrom>
 
@@ -3821,7 +3821,7 @@
         <owl:someValuesFrom>
           <owl:Restriction>
             <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-            <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/pensions/PeriodoAttivitàEstera"/>
+            <owl:someValuesFrom rdf:resource="https://w3id.org/italia/social-security/onto/pensions/PeriodoAttivitaEstera"/>
           </owl:Restriction>
         </owl:someValuesFrom>
 

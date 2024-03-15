@@ -114,6 +114,24 @@ INPSPensions:aggiungeDettaglioDiDichiarazione a owl:InverseFunctionalProperty,
     rdfs:comment "Pone in relazione due o più dettagli di dichiarazione. Questi sono associati alla stessa dichiarazione."@it,
         "Relates two or more declaration details. These are associated with the same declaration."@en .
 
+INPSPensions:eDichiarazioneDi a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "is declaration of"@en,
+        "è dichiarazione di"@it ;
+    rdfs:domain INPSPensions:Dichiarazione ;
+    rdfs:range INPSCore:RuoloDiPersona ;
+    rdfs:comment "Associa la dichiarazione con il ruolo di persona che l'ha dichiarata."@it,
+        "Match the declaration with the role of the person who stated it."@en .
+
+INPSPensions:eDocumentoDi a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "is document of"@en,
+        "è documento di"@it ;
+    rdfs:domain INPSPensions:DocumentoAllegato ;
+    rdfs:range INPSCore:RuoloDiPersona ;
+    rdfs:comment "Associa il documento allegato all'unico ruolo di persona a cui si riferisce."@it,
+        "Associates the attached document with the only role of person to whom it refers."@en .
+
 INPSPensions:haAllegatoPerPP a owl:InverseFunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "ha allegato per PP"@it,
@@ -190,7 +208,7 @@ INPSPensions:haDatoreDiLavoro a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "ha datore di lavoro"@it,
         "has employer"@en ;
-    rdfs:domain INPSPensions:AttivitàEstera ;
+    rdfs:domain INPSPensions:AttivitaEstera ;
     rdfs:range INPSPensions:DatoreDiLavoro ;
     rdfs:comment "Relationship between a foreign activity and the related and only employer."@en,
         "Relzione tra una attività estera e il relativo e unico datore di lavoro."@it .
@@ -337,7 +355,7 @@ INPSPensions:haNazioneEstera a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "ha nazione estera"@it,
         "has foreign nation"@en ;
-    rdfs:domain INPSPensions:AttivitàEstera ;
+    rdfs:domain INPSPensions:AttivitaEstera ;
     rdfs:range INPSPensions:NazioneEstera ;
     rdfs:comment "Binds a work abroad with the foreign nation in which it took place."@en,
         "Lega una attività svolta all'estero con la nazione estera in cui si è svolta."@it .
@@ -351,11 +369,11 @@ INPSPensions:haPeriodoACarico a owl:InverseFunctionalProperty,
     rdfs:comment "Relationship between a PB Holder family member role and the time interval in which he was declared tax dependent on said holder."@en,
         "Relazione tra un ruolo di Componenete di famiglia di Titolare PP e l'intervallo di tempo in cui è stato dichiarato fiscalmente a carico di detto titolare."@it .
 
-INPSPensions:haPeriodoAttivitàEstera a owl:ObjectProperty ;
+INPSPensions:haPeriodoAttivitaEstera a owl:ObjectProperty ;
     rdfs:label "ha periodo attività estera"@it,
         "has foreign activity period"@en ;
-    rdfs:domain INPSPensions:AttivitàEstera ;
-    rdfs:range INPSPensions:PeriodoAttivitàEstera ;
+    rdfs:domain INPSPensions:AttivitaEstera ;
+    rdfs:range INPSPensions:PeriodoAttivitaEstera ;
     rdfs:comment "Binds a work abroad to its period of carrying out, that is, to the time interval in which it took place. It is an alternative to the use of the property CL:hasAdressInTime if it is not necessary to indicate the location of residence at the foreign state."@en,
         "Lega una attività svolta all'estero al suo periodo di svolgimento cioè all'intervallo di tempo in cui è avvenuta. È alternativo all'uso della proprietà CLV:hasAdressinTime nel caso in cui non sia necessario indicare la località di residenza presso lo stato estero."@it .
 
@@ -382,7 +400,7 @@ INPSPensions:haProdottoPensionisticoEstero a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "ha prodotto pensionistico estero"@it,
         "has foreign pension product"@en ;
-    rdfs:domain INPSPensions:AttivitàEstera ;
+    rdfs:domain INPSPensions:AttivitaEstera ;
     rdfs:range INPSPensions:ProdottoPensionisticoEstero ;
     rdfs:comment "Relationship between a work abroad and the related foreign pension product. Only the activities carried out at nations in agreement with Italy (EU or bilateral) participate in this relationship."@en,
         "Relazione tra una attività estera e il relativo prodotto pensionistico estero. Solo le attività svolte presso nazioni in convenzione con l'Italia (UE o bilaterale) partecipano a questa relazione."@it .
@@ -443,14 +461,14 @@ INPSPensions:haServizioPensionistico a owl:FunctionalProperty,
     rdfs:comment "Binds a pension product to the pension service chosen in the application phase."@en,
         "Lega un prodotto pensionistico al servizio pensionistico prescelto in fase di domanda."@it .
 
-INPSPensions:haSvoltoAttivitàEstera a owl:InverseFunctionalProperty,
+INPSPensions:haSvoltoAttivitaEstera a owl:InverseFunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "ha svolto attività estera"@it,
         "has worked abroad"@en ;
     rdfs:domain [ a owl:Restriction ;
             owl:onProperty RO:holdsRoleInTime ;
             owl:someValuesFrom INPSPensions:TitolarePP ] ;
-    rdfs:range INPSPensions:AttivitàEstera ;
+    rdfs:range INPSPensions:AttivitaEstera ;
     rdfs:comment "Relationship between the PB holder and its activity carried out abroad in a certain period."@en,
         "Relazione tra il titolare PP e una sua attività svolta all'estero in un determinato periodo."@it .
 
@@ -628,24 +646,6 @@ INPSPensions:raggruppaTipologia a owl:InverseFunctionalProperty,
     rdfs:range INPSPensions:TipologiaDiPensione ;
     rdfs:comment "Relationship between a type of pension and a species of pension that specializes its pension form. Not all types have associated species."@en,
         "Relazione tra un tipo di pensione e una tipologia di pensione che ne specializza la forma pensionistica. Non tutti i tipi hanno delle tipologie associate."@it .
-
-INPSPensions:èDichiarazioneDi a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "is declaration of"@en,
-        "è dichiarazione di"@it ;
-    rdfs:domain INPSPensions:Dichiarazione ;
-    rdfs:range INPSCore:RuoloDiPersona ;
-    rdfs:comment "Associa la dichiarazione con il ruolo di persona che l'ha dichiarata."@it,
-        "Match the declaration with the role of the person who stated it."@en .
-
-INPSPensions:èDocumentoDi a owl:FunctionalProperty,
-        owl:ObjectProperty ;
-    rdfs:label "is document of"@en,
-        "è documento di"@it ;
-    rdfs:domain INPSPensions:DocumentoAllegato ;
-    rdfs:range INPSCore:RuoloDiPersona ;
-    rdfs:comment "Associa il documento allegato all'unico ruolo di persona a cui si riferisce."@it,
-        "Associates the attached document with the only role of person to whom it refers."@en .
 
 L0:hasLastMember a owl:ObjectProperty .
 
@@ -836,7 +836,7 @@ INPSPensions:dataDiNaturalizzazione a owl:DatatypeProperty,
     rdfs:comment "Data in cui una persona ha acquisto la cittadinanza italiana per naturalizzazione."@it,
         "Date on which a person became an Italian citizen by naturalization."@en .
 
-INPSPensions:dataValitàFormulario a owl:DatatypeProperty,
+INPSPensions:dataValitaFormulario a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "data valità formulario"@it,
         "form validity date"@en ;
@@ -845,10 +845,10 @@ INPSPensions:dataValitàFormulario a owl:DatatypeProperty,
     rdfs:comment "It is the start date of the validity of the published form."@en,
         "È la data di inizio validità del formulario pubblicato."@it .
 
-INPSPensions:descrizioneAttivitàEstera a owl:DatatypeProperty ;
+INPSPensions:descrizioneAttivitaEstera a owl:DatatypeProperty ;
     rdfs:label "descrizione attività estera"@it,
         "work abroad description"@en ;
-    rdfs:domain INPSPensions:AttivitàEstera ;
+    rdfs:domain INPSPensions:AttivitaEstera ;
     rdfs:range xsd:string ;
     rdfs:comment "Additional note regarding a period of work performed abroad."@en,
         "Annotazione aggiuntiva riguardante un periodo di lavoro svolto all'estero."@it .
@@ -958,7 +958,7 @@ INPSPensions:IBAN a owl:DatatypeProperty,
                     INPSPensions:LibrettoBancarioNominativo ) ] ;
     rdfs:range xsd:string ;
     rdfs:comment "Identification Bank Account Number: code that uniquely identifies, internationally, the bank or postal account of a customer at a financial intermediary. The IBAN code are made up of 27 characters and consist of: two characters of the national theme (\"IT\" for those referring to Italy), two control numbers, calculated on the basis of the other characters of the IBAN, CIN code (Control Internal Number), a character that serves to verify the correct transcription of the next 22 characters, ABI code (five characters assigned by the Italian banking association to identify the bank), CAB code (bank code), made up of five characters to identify the dependency of the credit institution identified by the ABI code, 12 characters for the account number (preceded by the zero in the event that the account number was less than 12 characters)."@en,
-        "Identification Bank Account Number: codice che identifica in maniera univoca, a livello internazionale, il conto, corrente o postale, di un cliente presso un intermediario finanziario. I codici IBAN sono formati da 27 caratteri e sono composti da: due caratteri della sigla nazionale (“IT” per quelli riferiti all'Italia), due numeri di controllo, calcolati sulla base degli altri caratteri dell’IBAN, codice CIN (Control Internal Number), un carattere che serve a verificare la corretta trascrizione dei successivi 22 caratteri, codice ABI (cinque caratteri assegnati dall’Associazione Bancaria Italiana per identificare la banca), codice CAB (Codice di avviamento bancario),formato da cinque caratteri per individuare la dipendenza dell’istituto di credito identificato dal codice ABI, 12 caratteri per il numero di conto corrente (preceduto dagli zero nel caso in cui il numero del conto fosse inferiore ai 12 caratteri)."@it .
+        "Identification Bank Account Number: codice che identifica in maniera univoca, a livello internazionale, il conto, corrente o postale, di un cliente presso un intermediario finanziario. I codici IBAN sono formati da 27 caratteri e sono composti da: due caratteri della sigla nazionale (\"IT\" per quelli riferiti all'Italia), due numeri di controllo, calcolati sulla base degli altri caratteri dell'IBAN, codice CIN (Control Internal Number), un carattere che serve a verificare la corretta trascrizione dei successivi 22 caratteri, codice ABI (cinque caratteri assegnati dall'Associazione Bancaria Italiana per identificare la banca), codice CAB (Codice di avviamento bancario),formato da cinque caratteri per individuare la dipendenza dell'istituto di credito identificato dal codice ABI, 12 caratteri per il numero di conto corrente (preceduto dagli zero nel caso in cui il numero del conto fosse inferiore ai 12 caratteri)."@it .
 
 INPSPensions:identificativoDocumento a owl:DatatypeProperty,
         owl:FunctionalProperty ;
@@ -1101,7 +1101,7 @@ INPSPensions:numeroPraticaPP a owl:DatatypeProperty,
     rdfs:comment "Codice identificativo di una pratica inerente ad una prestazione pensionistica."@it,
         "Identification code of a practice relating to a pension benefit."@en .
 
-INPSPensions:obbligatorietàTipoDocumento a owl:DatatypeProperty,
+INPSPensions:obbligatorietaTipoDocumento a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "document type mandatory"@en,
         "obbligatorietà tipo documento"@it ;
@@ -1158,7 +1158,7 @@ INPSPensions:tipoPeriodoEstero a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "tipo periodo estero"@it,
         "work abroad type"@en ;
-    rdfs:domain INPSPensions:PeriodoAttivitàEstera ;
+    rdfs:domain INPSPensions:PeriodoAttivitaEstera ;
     rdfs:comment "Tipologia di attività svolta nel periodo di permenenza all'estero."@it,
         "Type of activity carried out during the period of permanence abroad."@en .
 
@@ -1186,7 +1186,7 @@ INPSPensions:tipoRichiestaPensioneEstera a owl:DatatypeProperty,
         "tipo richiesta pensione estera"@it ;
     rdfs:domain INPSPensions:StatoDiDomandaPP ;
     rdfs:range xsd:string ;
-    rdfs:comment "La proprietà indica la modalità con cui si vogliono utilizzare i periodi contributivi versati in una nazione estera convenzionata. I possibili valori sono: - \"Pensione italiana ed estera\": si attiva un collegamento con l’estero per chiedere anche la pensione estera, i contributi versati all’estero saranno utili per il diritto a pensione in Italia ma non utili per per la misura; - \"Pensione italiana\": non si attiva il collegamento con l’estero ma ci si limita a chiedere la contribuzione estera utile al perfezionamento del diritto contributivo per la pensione in Italia; - \"Pensione estera\": caso in cui il richiedente è già titolare di pensione italiana e, all’età pensionabile estera, chiede la pensione estera, in questa opzione l’INPS si limita a effettuare il collegamento con l’estero e a notificare la ‘decisione’ estera al richiedente quando arriva."@it,
+    rdfs:comment "La proprietà indica la modalità con cui si vogliono utilizzare i periodi contributivi versati in una nazione estera convenzionata. I possibili valori sono: - \"Pensione italiana ed estera\": si attiva un collegamento con l'estero per chiedere anche la pensione estera, i contributi versati all'estero saranno utili per il diritto a pensione in Italia ma non utili per per la misura; - \"Pensione italiana\": non si attiva il collegamento con l'estero ma ci si limita a chiedere la contribuzione estera utile al perfezionamento del diritto contributivo per la pensione in Italia; - \"Pensione estera\": caso in cui il richiedente è già titolare di pensione italiana e, all'età pensionabile estera, chiede la pensione estera, in questa opzione l'INPS si limita a effettuare il collegamento con l'estero e a notificare la ‘decisione' estera al richiedente quando arriva."@it,
         "The property indicates how to use the contributory periods paid in a conventioned foreign nation. The possible values are: - \"Italian and foreign pension\": a connection with the foreign institution is activated to also request the foreign pension, the contributions paid abroad will be useful for the right to pension in Italy but not useful for the measure; - \"Italian pension\": the connection with abroad is not activated but the foreign contribution is used to establish the right to pension in Italy; - \"foreign pension\": the applicant is already the holder of Italian pension and asks for the foreign pension, in this option INPS makes the connection with the foreign institution and notifies the foreign 'decision' to the applicant when he arrives."@en .
 
 INPSPensions:valoreDettaglioDiDichiarazione a owl:DatatypeProperty ;
@@ -1230,7 +1230,7 @@ INPSCore:RuoloDiAgente a owl:Class .
 
 INPSCore:RuoloDiPersona a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf INPSPensions:èDocumentoDi ] ;
+            owl:onProperty [ owl:inverseOf INPSPensions:eDocumentoDi ] ;
             owl:someValuesFrom owl:Thing ] .
 
 INPSCore:RuoloDiPersonaDeceduta a owl:Class .
@@ -1243,7 +1243,7 @@ INPSPensions:AmministratoreDiSostegno a owl:Class ;
     rdfs:label "Amministratore di sostegno"@it,
         "Support administrator"@en ;
     rdfs:comment "Specialization of a Tutorial role that admits the subjects responsible for the protection, with the lower possible limitation of the ability to act, of people without or in part of autonomy in carrying out the functions of daily life, through temporary or permanent support interventions. (L. 6/2004)"@en,
-        "Specializzazione di Figura tutoriale che accoglie i soggetti preposti alla tutela, con la minore limitazione possibile della capacità di agire, di persone prive in tutto o in parte di autonomia nell’espletamento delle funzioni di vita quotidiana, mediante interventi di sostegno temporaneo o permanente. (L. 6/2004)"@it .
+        "Specializzazione di Figura tutoriale che accoglie i soggetti preposti alla tutela, con la minore limitazione possibile della capacità di agire, di persone prive in tutto o in parte di autonomia nell'espletamento delle funzioni di vita quotidiana, mediante interventi di sostegno temporaneo o permanente. (L. 6/2004)"@it .
 
 INPSPensions:AssociazioneSindacale a owl:Class ;
     rdfs:label "Associazione sindacale"@it,
@@ -1251,12 +1251,12 @@ INPSPensions:AssociazioneSindacale a owl:Class ;
     rdfs:comment "Classification of trade union associations for which INPS can be delegated for the collection of contributions."@en,
         "Classificazione delle associazioni sindacali per le quali si può delegare l'INPS per la riscossione dei contributi."@it .
 
-INPSPensions:AttivitàEstera a owl:Class ;
+INPSPensions:AttivitaEstera a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:onProperty INPSPensions:haNazioneEstera ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf INPSPensions:haSvoltoAttivitàEstera ] ;
+            owl:onProperty [ owl:inverseOf INPSPensions:haSvoltoAttivitaEstera ] ;
             owl:someValuesFrom owl:Thing ] ;
     rdfs:label "Attività estera"@it,
         "Work abroad"@en ;
@@ -1478,7 +1478,7 @@ INPSPensions:DescrittoreRichiesta a owl:Class ;
 INPSPensions:DetrazioneDiImposta a owl:Class ;
     rdfs:label "Detrazione di imposta"@it,
         "Tax deduction"@en ;
-    rdfs:comment "Le detrazioni d’imposta costituiscono un beneficio fiscale e sono importi che, sottratti dall’imposta lorda, calcolata per scaglioni di reddito, determinano una minore imposta a carico dei contribuenti. L'ente INPS ammette tali detrazioni sulle prestazioni pensionistiche previa opportuna richiesta da presentare annualmente o al momento in cui maturano, o si perdono, i requisti per ottenerla. Ne consegue che ciascuna istanza della classe è riferita ad un periodo di validità, perciò la classe è definita sottoclasse di TI:TimeIndexedEvent."@it,
+    rdfs:comment "Le detrazioni d'imposta costituiscono un beneficio fiscale e sono importi che, sottratti dall'imposta lorda, calcolata per scaglioni di reddito, determinano una minore imposta a carico dei contribuenti. L'ente INPS ammette tali detrazioni sulle prestazioni pensionistiche previa opportuna richiesta da presentare annualmente o al momento in cui maturano, o si perdono, i requisti per ottenerla. Ne consegue che ciascuna istanza della classe è riferita ad un periodo di validità, perciò la classe è definita sottoclasse di TI:TimeIndexedEvent."@it,
         "Tax deductions establish a tax benefit and are amounts which, subtracted from the gross tax, calculated by income brackets, determine a lower tax burden on taxpayers. The INPS allows such deductions on pension benefits following a request to be presented annually or at the moment in which the requirements to obtain it accrue or are lost. So each instance of the class refers to a validity period, therefore the class is defined as a subclass of TI:TimeIndexedEvent."@en .
 
 INPSPensions:DetrazioneFamiliareACarico a owl:Class ;
@@ -1530,7 +1530,7 @@ INPSPensions:DipendenzaEsteraDiBanca a owl:Class ;
 INPSPensions:DipendenzaItalianaDiBanca a owl:Class ;
     rdfs:label "Dipendenza italiana di banca"@it,
         "Italian bank dependency"@en ;
-    rdfs:comment "Sottoclasse di Ufficio pagatore che raggruppa le localizzazioni operative di una banca collocate in Italia che erogano il servizio di pagamento di pensione ad un qualche Titolare PP. L’espressione generica di dipedenza riassume i diversi termini (agenzia, filiale, succursale, sede, rappresentanza, sportello) variamente graduati, nella particolare organizzazione di ciascuna banca, che può attribuire denominazione, ordinamento, importanza e funzioni diverse alle proprie dipendenze. È superclasse di Sportello di pagamento, essendo abilitata anche questa forma di pagamento."@it,
+    rdfs:comment "Sottoclasse di Ufficio pagatore che raggruppa le localizzazioni operative di una banca collocate in Italia che erogano il servizio di pagamento di pensione ad un qualche Titolare PP. L'espressione generica di dipedenza riassume i diversi termini (agenzia, filiale, succursale, sede, rappresentanza, sportello) variamente graduati, nella particolare organizzazione di ciascuna banca, che può attribuire denominazione, ordinamento, importanza e funzioni diverse alle proprie dipendenze. È superclasse di Sportello di pagamento, essendo abilitata anche questa forma di pagamento."@it,
         "Subclass of Payer office that groups the operational locations of a bank placed in Italy that provide the pension payment service to some PP holder. The generic expression of dependency summarizes the different terms (agency, branch, head office, representation, counter) variously graduated, in the particular organization of each bank, which can attribute denomination, system, importance and different functions to its dependencies. It is superclass of Payment desk, since this form of payment is also enabled."@en .
 
 INPSPensions:DocumentoAllegato a owl:Class ;
@@ -1538,14 +1538,14 @@ INPSPensions:DocumentoAllegato a owl:Class ;
             owl:onProperty INPSPensions:dataCaricamentoDocumento ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
+            owl:onProperty INPSPensions:eDocumentoDi ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
             owl:onProperty INPSPensions:haTipoDocumentoAllegato ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
             owl:onProperty INPSPensions:nomeDocumento ;
             owl:someValuesFrom rdfs:Literal ],
-        [ a owl:Restriction ;
-            owl:onProperty INPSPensions:èDocumentoDi ;
-            owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSPensions:haAllegatoPerPP ] ;
             owl:someValuesFrom owl:Thing ] ;
@@ -1599,7 +1599,7 @@ INPSPensions:FondoPensionistico a owl:Class ;
 
 INPSPensions:Formulario a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty INPSPensions:dataValitàFormulario ;
+            owl:onProperty INPSPensions:dataValitaFormulario ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
             owl:onProperty INPSPensions:versioneFormulario ;
@@ -1651,7 +1651,7 @@ INPSPensions:NazioneEsteraConvenzioneBilaterale a owl:Class ;
     rdfs:label "Foreign nation bilateral convention"@en,
         "Nazione estera convenzione bilaterale"@it ;
     owl:disjointWith INPSPensions:NazioneEsteraConvenzioneUE ;
-    rdfs:comment "Sottoclasse di Nazione estera che classifica gli stati extracomunitari con i quali l’Italia ha stipulato una Convenzione Bilaterale in materia di sicurezza sociale."@it,
+    rdfs:comment "Sottoclasse di Nazione estera che classifica gli stati extracomunitari con i quali l'Italia ha stipulato una Convenzione Bilaterale in materia di sicurezza sociale."@it,
         "Subclass of Foreign nation that classifies the non-EU States with which Italy has entered into a bilateral convention on social security."@en .
 
 INPSPensions:NazioneEsteraConvenzioneUE a owl:Class ;
@@ -1689,7 +1689,7 @@ INPSPensions:PeriodoACarico a owl:Class ;
     rdfs:comment "Sottoclasse di TI:TimeInterval che classifica i periodi di tempo in cui un familiare, tipicamente un figlio, è fiscalmente a carico del Titolare PP."@it,
         "Subclass of Ti:TimeInterval that classifies the periods of time in which a family member, typically a child, is fiscally dependent by the PB Holder."@en .
 
-INPSPensions:PeriodoAttivitàEstera a owl:Class ;
+INPSPensions:PeriodoAttivitaEstera a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:onProperty INPSPensions:tipoPeriodoEstero ;
             owl:someValuesFrom rdfs:Literal ] ;
@@ -1704,7 +1704,7 @@ INPSPensions:PrestazionePensionistica a owl:Class ;
         "Prestazione pensionistica"@it ;
     rdfs:subClassOf L0:Collection ;
     rdfs:comment "Instantiation of pension benefits provided by the INPS. The pension performance is one of the different forms of protection and assistance of workers who materialize in the provision of sums of money or other utilities, and prepared to cover situations of need in which workers or their family can come to find themselves following certain events attributable or not to carry out the work and aimed at guaranteeing the continuity of income. In the case of the pension, is protected the impossibility of the percipient to ensure an income for itself and its family for some reasons, in particular for the overcoming of a certain age or seniority of service or for illness or for death. To financially support these protections, a mandatory contribution taxation is envisaged, i.e. the payment of specific charges (contributions), on the remuneration paid to each worker. Pension benefits are paid only if the interested party has submitted a specific application. In general, a pension benefit can embrace more applications submitted by the same applicant and identifies the social security relationship between an applicant and INPS, starting from the sending of the first pension application up to the termination by the death of the benefit holder (the survivors will give rise to a new pension performance). In this sense, the class is subclass of L0: Collection allowing to collect, with the property Lo:hasMember, the set of events (subclasses of TI:TimeIndexedEvent) inherent to the benefit that followed over time. In this ontology the subjects, events and, in general, the elements defined in relation to the Pension Benefit show, for brevity, the acronym PB."@en,
-        "Istanziazione delle prestazioni pensionistiche erogate dall'ente INPS. La prestazione pensionistica rientra tra le diverse forme di tutela ed assistenza dei lavoratori che si traducono nell’erogazione di prestazioni di somme di denaro o altre utilità, e predisposte in relazione a situazioni di bisogno in cui i lavoratori stessi o i loro famigliari possono venire a trovarsi in seguito al verificarsi di determinati eventi riconducibili o meno allo svolgimento dell’attività lavorativa e finalizzate sostanzialmente a garantire la continuità del reddito. Nel caso della pensione viene tutelata l'impossibilità del percipiente di assicurare un reddito per se e per i famigliari a proprio carico per sopraggiunti motivi ostativi, in particolare per il superamento di una certa età o anzianita di servizio o per malattia o per decesso. Per sostenere finanziariamente tali tutele è prevista una imposizione contributiva obbligatoria, ossia il pagamento di specifici oneri (contributi), sulla retribuzione corrisposta a ciascun lavoratore. Le prestazioni pensionistiche non vengono erogate “d’ufficio” dall’Ente, ma soltanto se l’interessato/assicurato ha presentato un’apposita domanda. In generale una prestazione pensionistica può abbracciare più domande presentate da uno stesso richiedente e identifica il rapporto previdenziale in essere tra detto richiedente e l'ente INPS, a partire dall'invio della prima domanda di pensione fino alla terminazione per decesso del titolare della prestazione (gli eventuali superstiti daranno luogo a una nuova prestazione pensionistica). In tal senso la classe è sottoclasse di L0:Collection consentendo di raccogliere tramite la proprietà L0:hasMember l'insieme degli eventi (definiti tramite la classe TI:TimeIndexedEvent) inerenti la prestazione succedutesi nel tempo. In questa ontologia i soggetti, gli eventi e, in generale, gli elementi definti in relazione alla Prestazione Pensionistica presentano, per brevità, l'acronimo PP."@it .
+        "Istanziazione delle prestazioni pensionistiche erogate dall'ente INPS. La prestazione pensionistica rientra tra le diverse forme di tutela ed assistenza dei lavoratori che si traducono nell'erogazione di prestazioni di somme di denaro o altre utilità, e predisposte in relazione a situazioni di bisogno in cui i lavoratori stessi o i loro famigliari possono venire a trovarsi in seguito al verificarsi di determinati eventi riconducibili o meno allo svolgimento dell'attività lavorativa e finalizzate sostanzialmente a garantire la continuità del reddito. Nel caso della pensione viene tutelata l'impossibilità del percipiente di assicurare un reddito per se e per i famigliari a proprio carico per sopraggiunti motivi ostativi, in particolare per il superamento di una certa età o anzianita di servizio o per malattia o per decesso. Per sostenere finanziariamente tali tutele è prevista una imposizione contributiva obbligatoria, ossia il pagamento di specifici oneri (contributi), sulla retribuzione corrisposta a ciascun lavoratore. Le prestazioni pensionistiche non vengono erogate \"d'ufficio\" dall'Ente, ma soltanto se l'interessato/assicurato ha presentato un'apposita domanda. In generale una prestazione pensionistica può abbracciare più domande presentate da uno stesso richiedente e identifica il rapporto previdenziale in essere tra detto richiedente e l'ente INPS, a partire dall'invio della prima domanda di pensione fino alla terminazione per decesso del titolare della prestazione (gli eventuali superstiti daranno luogo a una nuova prestazione pensionistica). In tal senso la classe è sottoclasse di L0:Collection consentendo di raccogliere tramite la proprietà L0:hasMember l'insieme degli eventi (definiti tramite la classe TI:TimeIndexedEvent) inerenti la prestazione succedutesi nel tempo. In questa ontologia i soggetti, gli eventi e, in generale, gli elementi definti in relazione alla Prestazione Pensionistica presentano, per brevità, l'acronimo PP."@it .
 
 INPSPensions:ProdottoPensionistico a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
@@ -2176,7 +2176,7 @@ TI:TimeInterval a owl:Class .
                     owl:onProperty [ owl:inverseOf CLV:withAddress ] ;
                     owl:someValuesFrom [ a owl:Restriction ;
                             owl:onProperty TI:atTime ;
-                            owl:someValuesFrom INPSPensions:PeriodoAttivitàEstera ] ] ] ;
+                            owl:someValuesFrom INPSPensions:PeriodoAttivitaEstera ] ] ] ;
     owl:intersectionOf (
             [ a owl:Class ;
                 owl:unionOf (
@@ -2275,7 +2275,7 @@ TI:TimeInterval a owl:Class .
     dct:title "Distribuzione RDF/XML dell'ontologia INPS - pensioni"@it,
         "RDF/XML distribution of the INPS ontology - pensions"@en .
 
-INPSPensions:AnzianitàAnticipataVecchiaia a INPSPensions:GruppoServizioPensionistico,
+INPSPensions:AnzianitaAnticipataVecchiaia a INPSPensions:GruppoServizioPensionistico,
         owl:NamedIndividual ;
     rdfs:label "Anzianità - anticipata - vecchiaia"@it,
         "Seniority Early Old-age"@en ;
@@ -2286,7 +2286,7 @@ INPSPensions:Cumulo a owl:NamedIndividual ;
     rdfs:label "Cumulo"@it,
         "Cumulus scheme"@en ;
     rdfs:comment "An instance of Pension scheme that identifies the possibility of accessing the pension benefit by adding the periods of enrollment to different schemes for free to have a single pension, even in cases where the contribution requirements required for the individual scheme have not actually been accrued. The specificity of the calculation of the pension through cumulation contribution consists in the fact that the amount is calculated taking into consideration the rules provided for by each fund. The pension allowance, in other words, is calculated pro-rata considering the different systems of each scheme. The cumulus can be used both to achieve the regular old -age pension and to arrive at early retirement."@en,
-        "Istanza di Gestione pensionistica che identifica la possibilità di accedere alla prestanzione pensionistica sommando gratuitamente i periodi di iscrizione a enti diversi per avere un'unica pensione, anche nei casi in cui non siano stati effettivamente maturati i requisiti contributivi richiesti per le singole gestioni. La specificità del calcolo della pensione tramite cumulo contributivo consiste nel fatto che l’importo si calcola tenendo in considerazione le regole previste da ciascun fondo. L’assegno pensionistico, in altre parole, è calcolato pro-rata tenendo conto dei diversi ordinamenti di ogni gestione. Il cumulo gratuito può essere utilizzato sia per il raggiungimento della regolare pensione di vecchiaia, sia per arrivare alla pensione anticipata."@it .
+        "Istanza di Gestione pensionistica che identifica la possibilità di accedere alla prestanzione pensionistica sommando gratuitamente i periodi di iscrizione a enti diversi per avere un'unica pensione, anche nei casi in cui non siano stati effettivamente maturati i requisiti contributivi richiesti per le singole gestioni. La specificità del calcolo della pensione tramite cumulo contributivo consiste nel fatto che l'importo si calcola tenendo in considerazione le regole previste da ciascun fondo. L'assegno pensionistico, in altre parole, è calcolato pro-rata tenendo conto dei diversi ordinamenti di ogni gestione. Il cumulo gratuito può essere utilizzato sia per il raggiungimento della regolare pensione di vecchiaia, sia per arrivare alla pensione anticipata."@it .
 
 INPSPensions:GestioneExINPDAP a owl:NamedIndividual ;
     rdfs:label "Ex-INPDAP scheme "@en,
@@ -2294,14 +2294,14 @@ INPSPensions:GestioneExINPDAP a owl:NamedIndividual ;
     rdfs:comment "An instance of Pension scheme that identifies the one intended for employees of the public administration that is all those who in the past were headed by the INPDAP (Istituto Nazionale Previdenza Dipendenti Pubblica Amministrazione)) now suppressed and whose members have merged into INPS - Public Dependent Scheme."@en,
         "Istanza di Gestione pensionistica che identifica la gestione destinata ai dipendenti dell'amministrzione pubblica ovvero tutti coloro che in passato facevano capo all'INPDAP (Istituto Nazionale Previdenza Dipendenti Pubblica Amministrazione) ora soppresso e i cui iscritti sono confluiti in INPS Gestione Dipendenti Pubblici."@it .
 
-INPSPensions:PensioneDiAnzianità-Anticipata a INPSPensions:ServizioPensionistico,
+INPSPensions:PensioneDiAnzianita-Anticipata a INPSPensions:ServizioPensionistico,
         owl:NamedIndividual ;
     rdfs:label "Pensione di anzianità - anticipata"@it,
         "Seniority pension - early retirement"@en ;
     rdfs:comment "An instance of Pension service class that identifies the pension products referable to early retirement, that is, the pension treatment that a worker can also achieve before the fulfillment of the registry age provided for by the law for retirement, provided that he is in possession of specific contribution requirements. The early retirement replaces the so -called seniority pension, in force until 31/12/2011 and still requested if the requirements on the indicated date are met."@en,
-        "Istanza della classe Servizio pensionistico che identifica i prodotti pensionistici riferibili alla pensione anticipata cioè il trattamento pensionistico che un lavoratore può conseguire anche prima del compimento dell’età anagrafica prevista dalla legge per il pensionamento, purché egli sia in possesso di specifici requisiti contributivi. La pensione anticipata sostituisce la cd. pensione di anzianità, in vigore fino al 31/12/2011 e ancora richiedibile se soddisfatti i requisiti alla data indicata."@it .
+        "Istanza della classe Servizio pensionistico che identifica i prodotti pensionistici riferibili alla pensione anticipata cioè il trattamento pensionistico che un lavoratore può conseguire anche prima del compimento dell'età anagrafica prevista dalla legge per il pensionamento, purché egli sia in possesso di specifici requisiti contributivi. La pensione anticipata sostituisce la cd. pensione di anzianità, in vigore fino al 31/12/2011 e ancora richiedibile se soddisfatti i requisiti alla data indicata."@it .
 
-INPSPensions:PensioneDiReversibilità a INPSPensions:ServizioPensionistico,
+INPSPensions:PensioneDiReversibilita a INPSPensions:ServizioPensionistico,
         owl:NamedIndividual ;
     rdfs:label "Pensione di reversibilità"@it,
         "Survivor's pension"@en ;
@@ -2313,7 +2313,7 @@ INPSPensions:PensioneDiVecchiaia a INPSPensions:ServizioPensionistico,
     rdfs:label "Old-age pension"@en,
         "Pensione di vecchiaia"@it ;
     rdfs:comment "An instance of the Pension service class that identifies the pension products referable to the old -age pension, that is, the pension treatment envisaged for all people who, due to the advanced age, are no longer able to ensure an income by carrying out a work activity. The granting of the treatment is subordinate, as well as to the termination of the work activity and the achievement of a certain insurance seniority, above all to the achievement of a certain registry age (so -called \"retirement age\")."@en,
-        "Istanza della classe Servizio pensionistico che identifica i prodotti pensionistici riferibili alla pensione di vecchiaia cioè il trattamento pensionistico previsto per tutte le persone che, a causa dell’età avanzata, non sono più in grado di assicurarsi un reddito mediante lo svolgimento di un’attività di lavoro. La concessione del trattamento è subordinato, oltre che alla cessazione dell’attività di lavoro e al conseguimento di una certa anzianità assicurativa, soprattutto al raggiungimento di una determinata età anagrafica (c.d. “età pensionabile”)."@it .
+        "Istanza della classe Servizio pensionistico che identifica i prodotti pensionistici riferibili alla pensione di vecchiaia cioè il trattamento pensionistico previsto per tutte le persone che, a causa dell'età avanzata, non sono più in grado di assicurarsi un reddito mediante lo svolgimento di un'attività di lavoro. La concessione del trattamento è subordinato, oltre che alla cessazione dell'attività di lavoro e al conseguimento di una certa anzianità assicurativa, soprattutto al raggiungimento di una determinata età anagrafica (c.d. \"età pensionabile\")."@it .
 
 INPSPensions:Superstiti a INPSPensions:GruppoServizioPensionistico,
         owl:NamedIndividual ;
@@ -2393,7 +2393,7 @@ INPSPensions:Totalizzazione a owl:NamedIndividual ;
             owl:onProperty CLV:hasAdressinTime ;
             owl:someValuesFrom [ a owl:Restriction ;
                     owl:onProperty TI:atTime ;
-                    owl:someValuesFrom INPSPensions:PeriodoAttivitàEstera ] ] .
+                    owl:someValuesFrom INPSPensions:PeriodoAttivitaEstera ] ] .
 
 [] a owl:Restriction ;
     owl:onProperty INPSPensions:haProdottoPensionistico ;

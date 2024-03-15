@@ -20,7 +20,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 INPSRL: a owl:Ontology ;
-    owl:versionIRI INPSRL:1.0 ;
+    owl:versionIRI <https://w3id.org/italia/social-security/onto/relevant-legislation/1.0> ;
     owl:imports CLV:,
         COV:,
         CPV:,
@@ -40,14 +40,14 @@ INPSRL: a owl:Ontology ;
         INPSRL:Lavoratore,
         INPSRL:ModelloA1 ;
     adms:hasOntologyLanguage adms:OWL ;
-    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-N-TRIPLES>,
-        <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-TURTLE>,
-        <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-XML> ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-XML> ;
     adms:hasTask adms:AnnotationTask,
         adms:QueryFormulationTask,
         adms:SearchTask ;
-    adms:last INPSRL:1.0 ;
-    adms:officialURI "https://w3id.org/italia/social-security/onto/relevantLegislation"^^xsd:anyURI ;
+    adms:last <https://w3id.org/italia/social-security/onto/relevant-legislation/1.0> ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/relevant-legislation"^^xsd:anyURI ;
     adms:prefix "INPSRel-leg" ;
     adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
     adms:status "catalogued",
@@ -68,7 +68,7 @@ INPSRL: a owl:Ontology ;
     dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
     dct:description "Ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
         "This is the ontology of the INPS Organization about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
-    dct:identifier "https://w3id.org/italia/social-security/onto/relevantLegislation" ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/relevant-legislation" ;
     dct:issued "2024-03-06T00:00:00+00:00"^^xsd:dateTime ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
@@ -188,7 +188,7 @@ INPSRL:haRapportoDiLavoroConOrganizzazione a owl:FunctionalProperty,
     rdfs:comment "Relationship between an employment and the involved organization."@en,
         "Relazione tra un rapporto di lavoro e l'organizzazione coinvolta."@it .
 
-INPSRL:haSettoreAttività a owl:FunctionalProperty,
+INPSRL:haSettoreAttivita a owl:FunctionalProperty,
         owl:ObjectProperty ;
     rdfs:label "ha settore attività"@it,
         "has business area"@en ;
@@ -336,7 +336,7 @@ INPSRL:dataAssunzione a owl:DatatypeProperty,
     rdfs:comment "La data in cui il lavoratore ha iniziato un rapporto di lavoro."@it,
         "The date of beginning of an Employment Relationship."@en .
 
-INPSRL:dataInizioAttività a owl:DatatypeProperty,
+INPSRL:dataInizioAttivita a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "data inizio attività"@it,
         "start date of activity"@en ;
@@ -352,7 +352,7 @@ INPSRL:descrizioneDichiarazione a owl:DatatypeProperty ;
     rdfs:comment "La descrizione che riguarda una dichiarazione."@it,
         "The description of a declaration."@en .
 
-INPSRL:fineValidità a owl:DatatypeProperty,
+INPSRL:fineValidita a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "expiring date"@en,
         "fine validità"@it ;
@@ -378,7 +378,7 @@ INPSRL:giorniPerSettimanaPianoLavoroPrevistoEstero a owl:DatatypeProperty,
     rdfs:comment "Number of days in a week the worker plans to work abroad in a specific abroad work plan."@en,
         "Numero di giorni di lavoro previsti per settimana in un piano di lavoro estero."@it .
 
-INPSRL:inizioValidità a owl:DatatypeProperty,
+INPSRL:inizioValidita a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "inizio validità"@it,
         "validity start date"@en ;
@@ -450,8 +450,7 @@ INPSRL:Aeroporto a owl:Class ;
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSRL:lavoraPressoAeroporto ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Aeroporto"@it,
-        "Airport"@en ;
+    rdfs:label "Airport"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty CLV:hasCurrentAddress ;
             owl:someValuesFrom owl:Thing ] ;
@@ -546,7 +545,7 @@ INPSRL:Lavoratore a owl:Class ;
 
 INPSRL:LavoratoreAutonomo a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty INPSRL:dataInizioAttività ;
+            owl:onProperty INPSRL:dataInizioAttivita ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
             owl:onProperty INPSRL:lavoratoreAutonomoHaTiplogia ;
@@ -587,10 +586,10 @@ INPSRL:ModelloA1 a owl:Class ;
             owl:onProperty INPSRL:certificaDistacco ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
-            owl:onProperty INPSRL:fineValidità ;
+            owl:onProperty INPSRL:fineValidita ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
-            owl:onProperty INPSRL:inizioValidità ;
+            owl:onProperty INPSRL:inizioValidita ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
             owl:onProperty [ owl:inverseOf INPSRL:praticaRilasciaModelloA1 ] ;
@@ -599,7 +598,7 @@ INPSRL:ModelloA1 a owl:Class ;
         "Modello A1"@it ;
     rdfs:subClassOf aco:Certificate ;
     rdfs:comment "A1 Form certifies which social security legislation applies to the person holding the model. It is usually necessary to apply for it in case the concerned person, due to the exercise of work activity has connections with more than one EU Country. According to EU regulations (EC Reg. No. 883/2010 and EC Reg. No. 987/2009), a person is subject to the social security legislation of a single State even if the work activity is carried out on the territory of more than one State. Therefore, the issuance of Form A1 means that the person, the holder of the form, is not subject to the legislation of any of the other Countries with which links are in place - in other words, that this person is not obliged to pay social security contributions (including health insurance) to the other countries. The A1 Form remains valid until the expiration date indicated in it or until it is withdrawn by the issuing institution."@en,
-        "Il modello A1 certifica quale legislazione in materia di sicurezza sociale si applica al soggetto titolare del modello. Solitamente è necessario richiederlo nei casi in cui la persona interessata, in ragione dell’esercizio dell’attività lavorativa si trovi ad avere dei collegamenti con più di un paese dell’UE. In base ai regolamenti comunitari (Reg. CE n. 883/2010 e Reg. CE n. 987/2009), una persona è soggetta alla legislazione di sicurezza sociale di un unico Stato anche se l’attività lavorativa viene svolta sul territorio di più Stati membri. Pertanto il rilascio del modello A1 fa sì che la persona, titolare del formulario, non sia soggetta alla legislazione di nessuno degli altri paesi con cui sono in atto dei collegamenti - in altre parole, che questa persona non è obbligata a versare contributi di sicurezza sociale (compresa l’assicurazione sanitaria) agli altri paesi. Il modello A1 rimane valido fino alla data di scadenza in esso indicata o fino al ritiro del modello da parte dell’istituzione che l’ha rilasciato."@it .
+        "Il modello A1 certifica quale legislazione in materia di sicurezza sociale si applica al soggetto titolare del modello. Solitamente è necessario richiederlo nei casi in cui la persona interessata, in ragione dell'esercizio dell'attività lavorativa si trovi ad avere dei collegamenti con più di un paese dell'UE. In base ai regolamenti comunitari (Reg. CE n. 883/2010 e Reg. CE n. 987/2009), una persona è soggetta alla legislazione di sicurezza sociale di un unico Stato anche se l'attività lavorativa viene svolta sul territorio di più Stati membri. Pertanto il rilascio del modello A1 fa sì che la persona, titolare del formulario, non sia soggetta alla legislazione di nessuno degli altri paesi con cui sono in atto dei collegamenti - in altre parole, che questa persona non è obbligata a versare contributi di sicurezza sociale (compresa l'assicurazione sanitaria) agli altri paesi. Il modello A1 rimane valido fino alla data di scadenza in esso indicata o fino al ritiro del modello da parte dell'istituzione che l'ha rilasciato."@it .
 
 INPSRL:PersonaleDiVoloECabina a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
@@ -688,7 +687,7 @@ INPSRL:RichiedenteModelloA1 a owl:Class ;
 
 INPSRL:SettoreAttivita a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf INPSRL:haSettoreAttività ] ;
+            owl:onProperty [ owl:inverseOf INPSRL:haSettoreAttivita ] ;
             owl:someValuesFrom owl:Thing ] ;
     rdfs:label "Business Area"@en,
         "Settore attività"@it ;
@@ -767,12 +766,12 @@ INPSRL:TitolarePratica a owl:Class ;
     foaf:name "Digital Transformation Team"@en,
         "Team per la Trasformazione Digitale"@it .
 
-<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-N-TRIPLES> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-N-TRIPLES> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.n3> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.n3> ;
     dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
         "This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
@@ -780,12 +779,12 @@ INPSRL:TitolarePratica a owl:Class ;
     dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - legislazione pertinente"@it,
         "N-TRIPLES distribution of the INPS ontology - relevant legislation"@en .
 
-<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-TURTLE> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-TURTLE> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.ttl> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.ttl> ;
     dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
         "This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
@@ -793,12 +792,12 @@ INPSRL:TitolarePratica a owl:Class ;
     dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - legislazione pertinente"@it,
         "RDF/Turtle distribution of the INPS ontology - relevant legislation"@en .
 
-<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-XML> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-XML> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.owl> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.owl> ;
     dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
         "This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
