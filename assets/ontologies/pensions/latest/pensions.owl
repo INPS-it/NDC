@@ -1,12 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:ns0="https://w3id.org/italia/onto/ADMS/"
-         xmlns:dc="http://purl.org/dc/terms/"
-         xmlns:foaf="http://xmlns.com/foaf/0.1/"
-         xmlns:dcat="http://www.w3.org/ns/dcat#"
-         xmlns:vcard="http://www.w3.org/2006/vcard/ns#">
+<rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/pensions/"
+     xml:base="https://w3id.org/italia/social-security/onto/pensions/"
+     xmlns:L0="https://w3id.org/italia/onto/l0/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:CPV="https://w3id.org/italia/onto/CPV/"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+	 xmlns:dct="http://purl.org/dc/terms/"
+	 xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
+	 xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	 xmlns:dcat="http://www.w3.org/ns/dcat#"
+	 xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+	 xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:COV="https://w3id.org/italia/onto/COV/"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:CPSV="https://w3id.org/italia/onto/CPSV/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:INPSPensions="https://w3id.org/italia/social-security/onto/pensions/"
+     xmlns:TI="https://w3id.org/italia/onto/TI/"
+     xmlns:INPSCore="https://w3id.org/italia/social-security/onto/core/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:RO="https://w3id.org/italia/onto/RO/">
 
   <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/pensions/">
     <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/pensions/1.0"/>
@@ -15,6 +33,7 @@
     <owl:imports rdf:resource="https://w3id.org/italia/onto/CPV/"/>
     <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/"/>
     <owl:imports rdf:resource="https://w3id.org/italia/onto/RO/"/>
+	<owl:imports rdf:resource="https://w3id.org/italia/social-security/onto/core/"/>
     <rdfs:label xml:lang="en">Pensions INPS Ontology</rdfs:label>
     <rdfs:label xml:lang="it">Ontologia Pensioni di INPS</rdfs:label>
     <rdfs:comment xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono la prestazione pensionistica erogata dall'istituto. Tra di esse troviamo, ad esempio, i vari stati in cui si puo trovare la domanda o le diverse modalità di pagamento con cui INPS eroga la prestazione al cittadino.</rdfs:comment>
@@ -22,84 +41,84 @@
     <owl:versionInfo xml:lang="en">1.0 - Modified on 06 Marzo 2024</owl:versionInfo>
     <owl:versionInfo xml:lang="it">1.0 - Modificata il 06 Marzo 2024</owl:versionInfo>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/pensions/"/>
-    <ns0:acronym>inps</ns0:acronym>
-    <ns0:hasContributor>
+    <adms:acronym>inps</adms:acronym>
+    <adms:hasContributor>
       <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/td">
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <dc:identifier>TD</dc:identifier>
+        <dct:identifier>TD</dct:identifier>
         <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
         <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
       </rdf:Description>
-    </ns0:hasContributor>
+    </adms:hasContributor>
 
-    <ns0:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
-    <ns0:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica"/>
-    <ns0:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
-    <ns0:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensions/UfficioPagatore"/>
-    <ns0:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
-    <ns0:hasSemanticAssetDistribution>
-      <ns0:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/pensions/distribution/PENSIONS-N-TRIPLES">
+    <adms:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensions/UfficioPagatore"/>
+    <adms:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
+    <adms:hasSemanticAssetDistribution>
+      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/pensions/distribution/PENSIONS-N-TRIPLES">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensions/latest"/>
         <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensions/latest/pensions.n3"/>
-        <dc:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e alle relazioni che descrivono la prestazione pensionistica erogata dall'istituto. Tra di esse troviamo, ad esempio, i vari stati in cui si puo trovare la domanda o le diverse modalità di pagamento con cui INPS eroga la prestazione al cittadino.</dc:description>
-        <dc:description xml:lang="en">This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the pension benefit provided by the institution. These include, for example, the states in which the application can be found or the different payment methods wherewith INPS provides the service to the citizen.</dc:description>
-        <dc:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
-        <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dc:title xml:lang="it">Distribuzione N-TRIPLES dell'ontologia INPS - pensioni</dc:title>
-        <dc:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - pensions</dc:title>
-      </ns0:SemanticAssetDistribution>
-    </ns0:hasSemanticAssetDistribution>
+        <dct:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e alle relazioni che descrivono la prestazione pensionistica erogata dall'istituto. Tra di esse troviamo, ad esempio, i vari stati in cui si puo trovare la domanda o le diverse modalità di pagamento con cui INPS eroga la prestazione al cittadino.</dct:description>
+        <dct:description xml:lang="en">This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the pension benefit provided by the institution. These include, for example, the states in which the application can be found or the different payment methods wherewith INPS provides the service to the citizen.</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione N-TRIPLES dell'ontologia INPS - pensioni</dct:title>
+        <dct:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - pensions</dct:title>
+      </adms:SemanticAssetDistribution>
+    </adms:hasSemanticAssetDistribution>
 
-    <ns0:hasSemanticAssetDistribution>
-      <ns0:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/pensions/distribution/PENSIONS-RDF-TURTLE">
+    <adms:hasSemanticAssetDistribution>
+      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/pensions/distribution/PENSIONS-RDF-TURTLE">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensions/latest"/>
         <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensions/latest/pensions.ttl"/>
-        <dc:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e alle relazioni che descrivono la prestazione pensionistica erogata dall'istituto. Tra di esse troviamo, ad esempio, i vari stati in cui si puo trovare la domanda o le diverse modalità di pagamento con cui INPS eroga la prestazione al cittadino.</dc:description>
-        <dc:description xml:lang="en">This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the pension benefit provided by the institution. These include, for example, the states in which the application can be found or the different payment methods wherewith INPS provides the service to the citizen.</dc:description>
-        <dc:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
-        <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dc:title xml:lang="it">Distribuzione RDF/Turtle dell'ontologia INPS - pensioni</dc:title>
-        <dc:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - pensions</dc:title>
-      </ns0:SemanticAssetDistribution>
-    </ns0:hasSemanticAssetDistribution>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e alle relazioni che descrivono la prestazione pensionistica erogata dall'istituto. Tra di esse troviamo, ad esempio, i vari stati in cui si puo trovare la domanda o le diverse modalità di pagamento con cui INPS eroga la prestazione al cittadino.</dct:description>
+        <dct:description xml:lang="en">This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the pension benefit provided by the institution. These include, for example, the states in which the application can be found or the different payment methods wherewith INPS provides the service to the citizen.</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione RDF/Turtle dell'ontologia INPS - pensioni</dct:title>
+        <dct:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - pensions</dct:title>
+      </adms:SemanticAssetDistribution>
+    </adms:hasSemanticAssetDistribution>
 
-    <ns0:hasSemanticAssetDistribution>
-      <ns0:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/pensions/distribution/PENSIONS-RDF-XML">
+    <adms:hasSemanticAssetDistribution>
+      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/pensions/distribution/PENSIONS-RDF-XML">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
         <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensions/latest"/>
         <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensions/latest/pensions.owl"/>
-        <dc:description xml:lang="it">Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e alle relazioni che descrivono la prestazione pensionistica erogata dall'istituto. Tra di esse troviamo, ad esempio, i vari stati in cui si puo trovare la domanda o le diverse modalità di pagamento con cui INPS eroga la prestazione al cittadino.</dc:description>
-        <dc:description xml:lang="en">This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the pension benefit provided by the institution. These include, for example, the states in which the application can be found or the different payment methods wherewith INPS provides the service to the citizen.</dc:description>
-        <dc:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
-        <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dc:title xml:lang="it">Distribuzione RDF/XML dell'ontologia INPS - pensioni</dc:title>
-        <dc:title xml:lang="en">RDF/XML distribution of the INPS ontology - pensions</dc:title>
-      </ns0:SemanticAssetDistribution>
-    </ns0:hasSemanticAssetDistribution>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e alle relazioni che descrivono la prestazione pensionistica erogata dall'istituto. Tra di esse troviamo, ad esempio, i vari stati in cui si puo trovare la domanda o le diverse modalità di pagamento con cui INPS eroga la prestazione al cittadino.</dct:description>
+        <dct:description xml:lang="en">This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the pension benefit provided by the institution. These include, for example, the states in which the application can be found or the different payment methods wherewith INPS provides the service to the citizen.</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione RDF/XML dell'ontologia INPS - pensioni</dct:title>
+        <dct:title xml:lang="en">RDF/XML distribution of the INPS ontology - pensions</dct:title>
+      </adms:SemanticAssetDistribution>
+    </adms:hasSemanticAssetDistribution>
 
-    <ns0:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
-    <ns0:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
-    <ns0:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
-    <ns0:last rdf:resource="https://w3id.org/italia/social-security/onto/pensions/1.0"/>
-    <ns0:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/pensions</ns0:officialURI>
-    <ns0:prefix>INPSPensions</ns0:prefix>
-    <ns0:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
-    <ns0:status>catalogued</ns0:status>
-    <ns0:status>published</ns0:status>
-    <ns0:target xml:lang="it">Cittadini</ns0:target>
-    <ns0:target xml:lang="it">Imprese</ns0:target>
-    <ns0:target xml:lang="it">Pubbliche Amministrazioni</ns0:target>
-    <ns0:type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
+    <adms:last rdf:resource="https://w3id.org/italia/social-security/onto/pensions/1.0"/>
+    <adms:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/pensions</adms:officialURI>
+    <adms:prefix>INPSPensions</adms:prefix>
+    <adms:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
+    <adms:status>catalogued</adms:status>
+    <adms:status>published</adms:status>
+    <adms:target xml:lang="it">Cittadini</adms:target>
+    <adms:target xml:lang="it">Imprese</adms:target>
+    <adms:target xml:lang="it">Pubbliche Amministrazioni</adms:target>
+    <adms:type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
     <dcat:contactPoint rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
     <dcat:keyword xml:lang="en">Pension Benefit</dcat:keyword>
     <dcat:keyword xml:lang="it">Prestazione Pensionistica</dcat:keyword>
@@ -108,30 +127,30 @@
     <dcat:keyword xml:lang="en">Paying Office</dcat:keyword>
     <dcat:keyword xml:lang="it">Ufficio Pagatore</dcat:keyword>
     <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
-    <dc:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
-    <dc:creator>
+    <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
+    <dct:creator>
       <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
         <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <dc:identifier>inps</dc:identifier>
+        <dct:identifier>inps</dct:identifier>
         <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
         <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
       </rdf:Description>
-    </dc:creator>
+    </dct:creator>
 
-    <dc:description xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono la prestazione pensionistica erogata dall'istituto. Tra di esse troviamo, ad esempio, i vari stati in cui si puo trovare la domanda o le diverse modalità di pagamento con cui INPS eroga la prestazione al cittadino.</dc:description>
-    <dc:description xml:lang="en">This is the ontology of the INPS Organization about entities and relationships that describe the pension benefit provided by the institution. These include, for example, the states in which the application can be found or the different payment methods wherewith INPS provides the service to the citizen.</dc:description>
-    <dc:identifier>https://w3id.org/italia/social-security/onto/pensions</dc:identifier>
-    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-03-06T00:00:00+00:00</dc:issued>
-    <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
-    <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
-    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-03-06T00:00:00+00:00</dc:modified>
-    <dc:publisher rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
-    <dc:rightsHolder rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
-    <dc:title xml:lang="en">Pensions INPS Ontology</dc:title>
-    <dc:title xml:lang="it">Ontologia Pensioni di INPS </dc:title>
+    <dct:description xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono la prestazione pensionistica erogata dall'istituto. Tra di esse troviamo, ad esempio, i vari stati in cui si puo trovare la domanda o le diverse modalità di pagamento con cui INPS eroga la prestazione al cittadino.</dct:description>
+    <dct:description xml:lang="en">This is the ontology of the INPS Organization about entities and relationships that describe the pension benefit provided by the institution. These include, for example, the states in which the application can be found or the different payment methods wherewith INPS provides the service to the citizen.</dct:description>
+    <dct:identifier>https://w3id.org/italia/social-security/onto/pensions</dct:identifier>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-03-06T00:00:00+00:00</dct:issued>
+    <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-03-06T00:00:00+00:00</dct:modified>
+    <dct:publisher rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
+    <dct:rightsHolder rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
+    <dct:title xml:lang="en">Pensions INPS Ontology</dct:title>
+    <dct:title xml:lang="it">Ontologia Pensioni di INPS </dct:title>
   </owl:Ontology>
 
   <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#boolean">
