@@ -20,7 +20,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 INPSRL: a owl:Ontology ;
-    owl:versionIRI <https://w3id.org/italia/social-security/onto/relevant-legislation/1.0> ;
+    owl:versionIRI INPSRL:1.0 ;
     owl:imports CLV:,
         COV:,
         CPV:,
@@ -40,14 +40,14 @@ INPSRL: a owl:Ontology ;
         INPSRL:Lavoratore,
         INPSRL:ModelloA1 ;
     adms:hasOntologyLanguage adms:OWL ;
-    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-N-TRIPLES>,
-        <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-TURTLE>,
-        <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-XML> ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-XML> ;
     adms:hasTask adms:AnnotationTask,
         adms:QueryFormulationTask,
         adms:SearchTask ;
-    adms:last <https://w3id.org/italia/social-security/onto/relevant-legislation/1.0> ;
-    adms:officialURI "https://w3id.org/italia/social-security/onto/relevant-legislation"^^xsd:anyURI ;
+    adms:last INPSRL:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/relevantLegislation"^^xsd:anyURI ;
     adms:prefix "INPSRel-leg" ;
     adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
     adms:status "catalogued",
@@ -68,7 +68,7 @@ INPSRL: a owl:Ontology ;
     dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
     dct:description "Ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
         "This is the ontology of the INPS Organization about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
-    dct:identifier "https://w3id.org/italia/social-security/onto/relevant-legislation" ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/relevantLegislation" ;
     dct:issued "2024-03-06T00:00:00+00:00"^^xsd:dateTime ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
@@ -766,12 +766,12 @@ INPSRL:TitolarePratica a owl:Class ;
     foaf:name "Digital Transformation Team"@en,
         "Team per la Trasformazione Digitale"@it .
 
-<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-N-TRIPLES> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-N-TRIPLES> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.n3> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.n3> ;
     dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
         "This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
@@ -779,12 +779,12 @@ INPSRL:TitolarePratica a owl:Class ;
     dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - legislazione pertinente"@it,
         "N-TRIPLES distribution of the INPS ontology - relevant legislation"@en .
 
-<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-TURTLE> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-TURTLE> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.ttl> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.ttl> ;
     dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
         "This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
@@ -792,12 +792,12 @@ INPSRL:TitolarePratica a owl:Class ;
     dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - legislazione pertinente"@it,
         "RDF/Turtle distribution of the INPS ontology - relevant legislation"@en .
 
-<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-XML> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-XML> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.owl> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.owl> ;
     dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
         "This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/relevantLegislation/"
      xml:base="https://w3id.org/italia/social-security/onto/relevantLegislation/"
      xmlns:L0="https://w3id.org/italia/onto/l0/"
@@ -26,86 +26,30 @@
      xmlns:time="http://www.w3.org/2006/time#"
      xmlns:RO="https://w3id.org/italia/onto/RO/">
 
-  <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/">
+  <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/relevant-legislation/">
     <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/relevant-legislation/1.0"/>
     <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/"/>
     <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/"/>
     <owl:imports rdf:resource="https://w3id.org/italia/onto/CPV/"/>
     <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/"/>
     <owl:imports rdf:resource="https://w3id.org/italia/onto/RO/"/>
-	<owl:imports rdf:resource="https://w3id.org/italia/social-security/onto/core/"/>
     <rdfs:label xml:lang="en">Relevant Legislation INPS Ontology</rdfs:label>
     <rdfs:label xml:lang="it">Ontologia Legislazione Pertinente di INPS</rdfs:label>
     <rdfs:comment xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1).</rdfs:comment>
     <rdfs:comment xml:lang="en">This is the ontology of the INPS Organization about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1).</rdfs:comment>
     <owl:versionInfo xml:lang="en">1.0 - Modified on 06 Marzo 2024</owl:versionInfo>
     <owl:versionInfo xml:lang="it">1.0 - Modificata il 06 Marzo 2024</owl:versionInfo>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/"/>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/relevant-legislation/"/>
     <adms:acronym>inps</adms:acronym>
-    <adms:hasContributor>
-      <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/td">
-        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <dct:identifier>TD</dct:identifier>
-        <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
-        <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
-      </rdf:Description>
-    </adms:hasContributor>
-
+    <adms:hasContributor rdf:resource="https://w3id.org/italia/social-security/data/organization/td"/>
     <adms:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
-    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1"/>
-    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
-    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/relevant-legislation/ModelloA1"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/relevant-legislation/Distacco"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/relevant-legislation/Lavoratore"/>
     <adms:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
-    <adms:hasSemanticAssetDistribution>
-      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-N-TRIPLES">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.n3"/>
-        <dct:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1).</dct:description>
-        <dct:description xml:lang="en">This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1).</dct:description>
-        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
-        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dct:title xml:lang="it">Distribuzione N-TRIPLES dell'ontologia INPS - legislazione pertinente</dct:title>
-        <dct:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - relevant legislation</dct:title>
-      </adms:SemanticAssetDistribution>
-    </adms:hasSemanticAssetDistribution>
-
-    <adms:hasSemanticAssetDistribution>
-      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-TURTLE">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.ttl"/>
-        <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1).</dct:description>
-        <dct:description xml:lang="en">This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1).</dct:description>
-        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
-        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dct:title xml:lang="it">Distribuzione RDF/Turtle dell'ontologia INPS - legislazione pertinente</dct:title>
-        <dct:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - relevant legislation</dct:title>
-      </adms:SemanticAssetDistribution>
-    </adms:hasSemanticAssetDistribution>
-
-    <adms:hasSemanticAssetDistribution>
-      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-XML">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.owl"/>
-        <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1).</dct:description>
-        <dct:description xml:lang="en">This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1).</dct:description>
-        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
-        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dct:title xml:lang="it">Distribuzione RDF/XML dell'ontologia INPS - legislazione pertinente</dct:title>
-        <dct:title xml:lang="en">RDF/XML distribution of the INPS ontology - relevant legislation</dct:title>
-      </adms:SemanticAssetDistribution>
-    </adms:hasSemanticAssetDistribution>
-
+    <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-N-TRIPLES"/>
+    <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-TURTLE"/>
+    <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-XML"/>
     <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
     <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
     <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
@@ -128,18 +72,7 @@
     <dcat:keyword xml:lang="it">Lavoratore</dcat:keyword>
     <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
     <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
-    <dct:creator>
-      <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
-        <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
-        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <dct:identifier>inps</dct:identifier>
-        <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
-        <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
-      </rdf:Description>
-    </dct:creator>
-
+    <dct:creator rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
     <dct:description xml:lang="it">Ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1).</dct:description>
     <dct:description xml:lang="en">This is the ontology of the INPS Organization about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1).</dct:description>
     <dct:identifier>https://w3id.org/italia/social-security/onto/relevant-legislation</dct:identifier>
@@ -153,1023 +86,1289 @@
     <dct:title xml:lang="it">Ontologia Legislazione Pertinente di INPS </dct:title>
   </owl:Ontology>
 
-  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#backwardCompatibleWith">
-  </owl:AnnotationProperty>
 
-  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#dateTime">
-  </rdfs:Datatype>
 
-  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#double">
-  </rdfs:Datatype>
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#integer">
-  </rdfs:Datatype>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/ACO/certifies">
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasCurrentAddress">
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/SM/hasOnlineContactPoint">
-  </owl:ObjectProperty>
+    <!-- http://www.w3.org/2000/01/rdf-schema#backwardCompatibleWith -->
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/certificaDistacco">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/ACO/certifies"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
-    <rdfs:comment xml:lang="en">Relationship between A1 Form and the secondment that it certifies.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra il modello A1 e il distacco che esso certifica.</rdfs:comment>
-    <rdfs:label xml:lang="it">certifica distacco</rdfs:label>
-    <rdfs:label xml:lang="en">certifies secondment</rdfs:label>
-  </owl:ObjectProperty>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#backwardCompatibleWith"/>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/contattiRelativiADistacco">
-    <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/SM/hasOnlineContactPoint"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
-    <rdfs:comment xml:lang="it">I contatti (telefono, email) del Titolare al momento del distacco.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Relationship to retrieve the Holder's contact point (telephone email) when issuing the Claim.</rdfs:comment>
-    <rdfs:label xml:lang="it">contatti relativi a distacco</rdfs:label>
-    <rdfs:label xml:lang="en">secondment contact point</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/delegatoHaTipologia">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
-    <rdfs:backwardCompatibleWith xml:lang="it">Relazione tra un delegato e il suo tipo</rdfs:backwardCompatibleWith>
-    <rdfs:comment xml:lang="en">Relationship between the delegate and his type.</rdfs:comment>
-    <rdfs:label xml:lang="en">delegate has type</rdfs:label>
-    <rdfs:label xml:lang="it">delegato ha tipologia</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/distaccoPressoDomicilioEstero">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
-    <rdfs:comment xml:lang="en">Relationship between the secondment and the abroad address in which it takes place.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra lo specifico distacco e l'indirizzo estero in cui ha luogo.</rdfs:comment>
-    <rdfs:label xml:lang="en">abroad domicile secondment</rdfs:label>
-    <rdfs:label xml:lang="it">distacco in domicilio estero</rdfs:label>
-  </owl:ObjectProperty>
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/distaccoRelativoALavoratore">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
-    <rdfs:comment xml:lang="en">Relationship between the secondment and the worker involved.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra il distacco e il lavoratore coinvolto.</rdfs:comment>
-    <rdfs:label xml:lang="it">distacco relativo a lavoratore</rdfs:label>
-    <rdfs:label xml:lang="en">secondment of worker</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaAllegato">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1"/>
-    <rdfs:range>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Allegato">
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#dateTime -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#double -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#double"/>
+
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#integer -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/onto/ACO/certifies -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/ACO/certifies"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CLV/hasCurrentAddress -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/CLV/hasCurrentAddress"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/SM/hasOnlineContactPoint -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/SM/hasOnlineContactPoint"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/certificaDistacco -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/certificaDistacco">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/ACO/certifies"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
+        <rdfs:comment xml:lang="en">Relationship between A1 Form and the secondment that it certifies.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra il modello A1 e il distacco che esso certifica.</rdfs:comment>
+        <rdfs:label xml:lang="it">certifica distacco</rdfs:label>
+        <rdfs:label xml:lang="en">certifies secondment</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/contattiRelativiADistacco -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/contattiRelativiADistacco">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/onto/SM/hasOnlineContactPoint"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
+        <rdfs:comment xml:lang="it">I contatti (telefono, email) del Titolare al momento del distacco.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relationship to retrieve the Holder&apos;s contact point (telephone email) when issuing the Claim.</rdfs:comment>
+        <rdfs:label xml:lang="it">contatti relativi a distacco</rdfs:label>
+        <rdfs:label xml:lang="en">secondment contact point</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/delegatoHaTipologia -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/delegatoHaTipologia">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
+        <rdfs:backwardCompatibleWith xml:lang="it">Relazione tra un delegato e il suo tipo</rdfs:backwardCompatibleWith>
+        <rdfs:comment xml:lang="en">Relationship between the delegate and his type.</rdfs:comment>
+        <rdfs:label xml:lang="en">delegate has type</rdfs:label>
+        <rdfs:label xml:lang="it">delegato ha tipologia</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/distaccoPressoDomicilioEstero -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/distaccoPressoDomicilioEstero">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
+        <rdfs:comment xml:lang="en">Relationship between the secondment and the abroad address in which it takes place.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra lo specifico distacco e l&apos;indirizzo estero in cui ha luogo.</rdfs:comment>
+        <rdfs:label xml:lang="en">abroad domicile secondment</rdfs:label>
+        <rdfs:label xml:lang="it">distacco in domicilio estero</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/distaccoRelativoALavoratore -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/distaccoRelativoALavoratore">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
+        <rdfs:comment xml:lang="en">Relationship between the secondment and the worker involved.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra il distacco e il lavoratore coinvolto.</rdfs:comment>
+        <rdfs:label xml:lang="it">distacco relativo a lavoratore</rdfs:label>
+        <rdfs:label xml:lang="en">secondment of worker</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaAllegato -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaAllegato">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Allegato"/>
+        <rdfs:comment xml:lang="en">Relations among the Claim and its attachments.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra la domanda e i suoi allegati.</rdfs:comment>
+        <rdfs:label xml:lang="en">claim has attachment</rdfs:label>
+        <rdfs:label xml:lang="it">domanda ha allegato</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaDichiarazione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaDichiarazione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Dichiarazione"/>
+        <rdfs:comment xml:lang="en">Relationship among the Claim and the declarations stated in it.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra la domanda e le dichiarazioni presente in essa.</rdfs:comment>
+        <rdfs:label xml:lang="en">claim has declaration</rdfs:label>
+        <rdfs:label xml:lang="it">domanda ha dichiarazione</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/haAeroportoComeBaseDiServizio -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haAeroportoComeBaseDiServizio">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoraPressoAeroporto"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">Relationship between the flight crew and his headquarter airport.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra il personale di volo e cabina e l&apos;aeroporto in cui fa base.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha aeroporto come base di servizio</rdfs:label>
+        <rdfs:label xml:lang="en">has headquarter airport</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/haDomandaRilascioModelloA1 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haDomandaRilascioModelloA1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1"/>
+        <rdfs:comment xml:lang="en">Relationship between the Claim and the Application of the A1 form.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra la domanda e la pratica per il rilascio del modello A1</rdfs:comment>
+        <rdfs:label xml:lang="it">ha domanda rilascio modello A1</rdfs:label>
+        <rdfs:label xml:lang="en">has A1 form claim</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/haDomicilioEstero -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haDomicilioEstero">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/CPV/Person"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
+        <rdfs:comment xml:lang="en">Relationship among a person and his abroad domiciles.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra una persona e i suoi domicili esteri.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha domicilio estero</rdfs:label>
+        <rdfs:label xml:lang="en">has abroad domicile</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/haPianoDiLavoroEstero -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haPianoDiLavoroEstero">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
+        <rdfs:comment xml:lang="en">Relationship among the secondment and the abroad work plans in case of work in several countries.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra il distacco e i piani di lavoro esteri nel caso in cui sia coinvolto più di un paese.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha piano di lavoro estero</rdfs:label>
+        <rdfs:label xml:lang="en">has abroad work plan</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/haRapportoDiLavoroConOrganizzazione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haRapportoDiLavoroConOrganizzazione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoro"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        <rdfs:comment xml:lang="en">Relationship between an employment and the involved organization.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra un rapporto di lavoro e l&apos;organizzazione coinvolta.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha rapporto di lavoro con organizzazione</rdfs:label>
+        <rdfs:label xml:lang="en">has employment with organization</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/haSettoreAttivita -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haSettoreAttivita">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/SettoreAttivita"/>
+        <rdfs:comment xml:lang="en">Relationship linking an Organization to its Business Area.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra l&apos;azienda e il suo settore attività</rdfs:comment>
+        <rdfs:label xml:lang="it">ha settore attività</rdfs:label>
+        <rdfs:label xml:lang="en">has business area</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/lavoraPressoAeroporto -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoraPressoAeroporto">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PersonaleDiVoloECabina"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Aeroporto"/>
+        <rdfs:comment xml:lang="en">Relationship linking the Flight and Cabin Crew to an Airport they work in.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che lega il Personale di Volo e Cabina ad un Aeroporto in cui lavora.</rdfs:comment>
+        <rdfs:label xml:lang="it">lavora presso aeroporto</rdfs:label>
+        <rdfs:label xml:lang="en">works in airport</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreAutonomoHaTiplogia -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreAutonomoHaTiplogia">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreAutonomo"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/tipologiaLavoratoreAutonomo"/>
+        <rdfs:comment xml:lang="en">Relationship between the independent worker and his category.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra il lavoratore autonomo e la sua tipologia.</rdfs:comment>
+        <rdfs:label xml:lang="en">independent worker has category</rdfs:label>
+        <rdfs:label xml:lang="it">lavoratore autonomo ha tiplogia</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreDelegaDelegato -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreDelegaDelegato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Worker to the delegated Person or Organization.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che lega un Lavoratore alla Persona o all&apos;Ente delegato.</rdfs:comment>
+        <rdfs:label xml:lang="it">lavoratore delega delegato</rdfs:label>
+        <rdfs:label xml:lang="en">worker assigns delegate</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreHaRapportoDiLavoro -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreHaRapportoDiLavoro">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoro"/>
+        <rdfs:comment xml:lang="en">Relationship linking a Worker to the Employment Relationship that involves him.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che lega un Lavoratore al Rapporto di Lavoro che lo riguarda.</rdfs:comment>
+        <rdfs:label xml:lang="it">lavoratore ha rapporto di lavoro</rdfs:label>
+        <rdfs:label xml:lang="en">worker has employment relationship</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/modelloA1HaTipologiaAccordo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/modelloA1HaTipologiaAccordo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaAccordoModelloA1"/>
+        <rdfs:comment xml:lang="en">Relationship between the secondment and the agreement type</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra il distacco e la tipologia di accordo</rdfs:comment>
+        <rdfs:label xml:lang="en">a1 form has agreement type</rdfs:label>
+        <rdfs:label xml:lang="it">modello A1 ha tipologia accordo</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/pianoLavoroPerStato -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/pianoLavoroPerStato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Country"/>
+        <rdfs:comment xml:lang="en">Relationship linking an Expected Abroad Work Plan to the Country the work plan relates to.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che lega un Piano Lavoro Previsto Estero allo Stato al quale è riferito.</rdfs:comment>
+        <rdfs:label xml:lang="it">piano lavoro per stato</rdfs:label>
+        <rdfs:label xml:lang="en">work plan for country</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/praticaGestitaDaSedeINPS -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/praticaGestitaDaSedeINPS">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Pratica"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
+        <rdfs:comment xml:lang="en">Relationship linking each Application to the INPS Office by which it is instructed.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che lega ciascuna Pratica alla Sede INPS da cui è gestita.</rdfs:comment>
+        <rdfs:label xml:lang="en">application instructed by INPS office</rdfs:label>
+        <rdfs:label xml:lang="it">pratica gestita da sede INPS</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/praticaRilasciaModelloA1 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/praticaRilasciaModelloA1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1"/>
+        <rdfs:comment xml:lang="en">Relationship linking each Application to the A1 Form it issues.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che lega ciascuna Pratica al Modello A1 che rilascia.</rdfs:comment>
+        <rdfs:label xml:lang="en">application issues A1 form</rdfs:label>
+        <rdfs:label xml:lang="it">pratica rilascia modello A1</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/presentaDomandaRilascioModelloA1 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/presentaDomandaRilascioModelloA1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RichiedenteModelloA1"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1"/>
+        <rdfs:comment xml:lang="en">Relationship linking each A1 Form Applicant to the A1 Form Claim he or she submits.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione che lega ciascun Richiedente Modello A1 alla Domanda che presenta.</rdfs:comment>
+        <rdfs:label xml:lang="it">presenta domanda rilascio modello A1</rdfs:label>
+        <rdfs:label xml:lang="en">submits A1 form application</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipoOrario -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipoOrario">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoroAllEstero"/>
+        <rdfs:comment xml:lang="en">Relationship between the abroad employment and the working schedule agreed.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra un rapporto di lavoro estero e il tipo di orario stabilito nel contratto.</rdfs:comment>
+        <rdfs:label xml:lang="en">abroad employment relationship has work schedule type</rdfs:label>
+        <rdfs:label xml:lang="it">rapporto di lavoro estero ha tipo orario</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipologia -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipologia">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoroAllEstero"/>
+        <rdfs:comment xml:lang="en">Relationship between an abroad employment and his type</rdfs:comment>
+        <rdfs:comment xml:lang="it">Relazione tra un contratto di lavoro estero e la sua tipologia.</rdfs:comment>
+        <rdfs:label xml:lang="en">abroad employment relationship has type</rdfs:label>
+        <rdfs:label xml:lang="it">rapporto di lavoro estero ha tipologia</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/codiceDomandaRilascioModelloA1 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/codiceDomandaRilascioModelloA1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1"/>
+        <rdfs:comment xml:lang="it">Codice identificativo della domanda di rilascio del modello A1.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identification code of the A1 form claim.</rdfs:comment>
+        <rdfs:label xml:lang="en">a1 form claim code</rdfs:label>
+        <rdfs:label xml:lang="it">codice domanda rilascio modello a1</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/codicePraticaRilascioModelloA1 -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/codicePraticaRilascioModelloA1">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1"/>
+        <rdfs:comment xml:lang="it">Codice identificativo della pratica di rilascio del modello A1.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Identification code of the application A1 form.</rdfs:comment>
+        <rdfs:label xml:lang="en">application a1 form code</rdfs:label>
+        <rdfs:label xml:lang="it">codice pratica rilascio modello a1</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/dataAssunzione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/dataAssunzione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoroAllEstero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">La data in cui il lavoratore ha iniziato un rapporto di lavoro.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The date of beginning of an Employment Relationship.</rdfs:comment>
+        <rdfs:label xml:lang="it">data assunzione</rdfs:label>
+        <rdfs:label xml:lang="en">hiring date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/dataInizioAttivita -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/dataInizioAttivita">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreAutonomo"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">La data in cui il lavoratore autonomo inizia la sua attività lavorativa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The date on which the be-self worker started his activity.</rdfs:comment>
+        <rdfs:label xml:lang="it">data inizio attività</rdfs:label>
+        <rdfs:label xml:lang="en">start date of activity</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/descrizioneDichiarazione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/descrizioneDichiarazione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Dichiarazione"/>
+        <rdfs:comment xml:lang="it">La descrizione che riguarda una dichiarazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The description of a declaration.</rdfs:comment>
+        <rdfs:label xml:lang="en">declaration description</rdfs:label>
+        <rdfs:label xml:lang="it">descrizione dichiarazione</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/fineValidita -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/fineValidita">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1"/>
+        <rdfs:comment xml:lang="it">Data di fine della validità del Modello A1</rdfs:comment>
+        <rdfs:comment xml:lang="en">When the A1 Form is expired.</rdfs:comment>
+        <rdfs:label xml:lang="en">expiring date</rdfs:label>
+        <rdfs:label xml:lang="it">fine validità</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/giorniPerMesePianoLavoroPrevistoEstero -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/giorniPerMesePianoLavoroPrevistoEstero">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of days in a month the worker plans to work abroad in a specific abroad work plan.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Numero di giorni di lavoro previsti per mese in un piano di lavoro estero.</rdfs:comment>
+        <rdfs:label xml:lang="it">giorni per mese piano lavoro previsto estero</rdfs:label>
+        <rdfs:label xml:lang="en">planned monthly days in abroad work plan</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/giorniPerSettimanaPianoLavoroPrevistoEstero -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/giorniPerSettimanaPianoLavoroPrevistoEstero">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment xml:lang="en">Number of days in a week the worker plans to work abroad in a specific abroad work plan.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Numero di giorni di lavoro previsti per settimana in un piano di lavoro estero.</rdfs:comment>
+        <rdfs:label xml:lang="it">giorni per settimana piano lavoro previsto estero</rdfs:label>
+        <rdfs:label xml:lang="en">planned weekly days in abroad work plan</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/inizioValidita -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/inizioValidita">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1"/>
+        <rdfs:comment xml:lang="it">Indica la data di inizio validità di un Modello A1</rdfs:comment>
+        <rdfs:comment xml:lang="en">It specifies the start date of validity for an A1 Form.</rdfs:comment>
+        <rdfs:label xml:lang="it">inizio validità</rdfs:label>
+        <rdfs:label xml:lang="en">validity start date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/nomeAeroporto -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/nomeAeroporto">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Aeroporto"/>
+        <rdfs:comment xml:lang="en">It is the name of an Airport.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È il nome di un Aeroporto.</rdfs:comment>
+        <rdfs:label xml:lang="en">airport name</rdfs:label>
+        <rdfs:label xml:lang="it">nome aeroporto</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/redditoPianoLavoroPrevistoEstero -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/redditoPianoLavoroPrevistoEstero">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">It is the income that is expected to derive from work executed in a specific foreign country. It is specified in an Abroad Work Plan.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È il reddito che si prospetta deriverà dal lavoro svolto in un Paese estero. Viene specificata nel contesto di un Piano di Lavoro Estero.</rdfs:comment>
+        <rdfs:label xml:lang="en">income in expected abroad work plan</rdfs:label>
+        <rdfs:label xml:lang="it">reddito piano lavoro previsto estero</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/stimaPercentualeAnnualePianoLavoroPrevistoEstero -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/stimaPercentualeAnnualePianoLavoroPrevistoEstero">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:comment xml:lang="en">It is the percentage of annual work that is expected to be executed in a specific foreign country. It is specified in an Abroad Work Plan.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la percenatuale di lavoro annuale che si prospetta verrà svolta in un Paese estero. Viene specificata nel contesto di un Piano di Lavoro Estero.</rdfs:comment>
+        <rdfs:label xml:lang="en">annual percentage in expected abroad work plan</rdfs:label>
+        <rdfs:label xml:lang="it">stima percentuale annuale piano lavoro previsto estero</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/valoreDichiarazione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/valoreDichiarazione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Dichiarazione"/>
+        <rdfs:comment xml:lang="en">It is the value of a declaration in the Claim.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È il contenuto di una dichiarazione presente nella Domanda.</rdfs:comment>
+        <rdfs:label xml:lang="en">declaration value</rdfs:label>
+        <rdfs:label xml:lang="it">valore dichiarazione</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/onto/ACO/Certificate -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/ACO/Certificate"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CLV/Address -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Address"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CLV/Country -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Country"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/COV/Organization -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/Organization"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPV/Person -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPV/Person"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoro"/>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiAgente -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/core/SedeINPS -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/Aeroporto -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Aeroporto">
         <owl:equivalentClass>
-          <owl:Restriction>
-            <owl:onProperty>
-              <rdf:Description>
-                <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaAllegato"/>
-              </rdf:Description>
-            </owl:onProperty>
-
-            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoraPressoAeroporto"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/nomeAeroporto"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasCurrentAddress"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An airport is an aerodrome with extended facilities, mostly for commercial air transport.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un aeroporto è un&apos;infrastruttura attrezzata per il decollo e l&apos;atterraggio di aeromobili, per il transito dei relativi passeggeri e del loro bagaglio, per il ricovero e il rifornimento dei velivoli.</rdfs:comment>
+        <rdfs:label xml:lang="en">Airport</rdfs:label>
+    </owl:Class>
 
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/Allegato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Allegato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaAllegato"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:comment xml:lang="en">A file (text or image) uploaded into the system. For example, a copy of an ID document.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Un file (testuale o immagine) che viene caricato sul sistema insieme a una domanda. Potrebbe per esempio essere la fotocopia di una carta d'identità.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un file (testuale o immagine) che viene caricato sul sistema insieme a una domanda. Potrebbe per esempio essere la fotocopia di una carta d&apos;identità.</rdfs:comment>
         <rdfs:label xml:lang="it">Allegato</rdfs:label>
         <rdfs:label xml:lang="en">Attachment</rdfs:label>
-      </owl:Class>
-    </rdfs:range>
+    </owl:Class>
 
-    <rdfs:comment xml:lang="en">Relations among the Claim and its attachments.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra la domanda e i suoi allegati.</rdfs:comment>
-    <rdfs:label xml:lang="en">claim has attachment</rdfs:label>
-    <rdfs:label xml:lang="it">domanda ha allegato</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaDichiarazione">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Dichiarazione"/>
-    <rdfs:comment xml:lang="en">Relationship among the Claim and the declarations stated in it.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra la domanda e le dichiarazioni presente in essa.</rdfs:comment>
-    <rdfs:label xml:lang="en">claim has declaration</rdfs:label>
-    <rdfs:label xml:lang="it">domanda ha dichiarazione</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haAeroportoComeBaseDiServizio">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoraPressoAeroporto"/>
-    <rdfs:comment xml:lang="en">Relationship between the flight crew and his headquarter airport.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra il personale di volo e cabina e l'aeroporto in cui fa base.</rdfs:comment>
-    <rdfs:label xml:lang="it">ha aeroporto come base di servizio</rdfs:label>
-    <rdfs:label xml:lang="en">has headquarter airport</rdfs:label>
-  </owl:ObjectProperty>
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato -->
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haDomandaRilascioModelloA1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1"/>
-    <rdfs:comment xml:lang="en">Relationship between the Claim and the Application of the A1 form.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra la domanda e la pratica per il rilascio del modello A1</rdfs:comment>
-    <rdfs:label xml:lang="it">ha domanda rilascio modello A1</rdfs:label>
-    <rdfs:label xml:lang="en">has A1 form claim</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haDomicilioEstero">
-    <rdfs:domain>
-      <owl:Class rdf:about="https://w3id.org/italia/onto/CPV/Person">
-      </owl:Class>
-    </rdfs:domain>
-
-    <rdfs:range rdf:resource="https://w3id.org/italia/onto/CLV/Address"/>
-    <rdfs:comment xml:lang="en">Relationship among a person and his abroad domiciles.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra una persona e i suoi domicili esteri.</rdfs:comment>
-    <rdfs:label xml:lang="it">ha domicilio estero</rdfs:label>
-    <rdfs:label xml:lang="en">has abroad domicile</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haPianoDiLavoroEstero">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
-    <rdfs:comment xml:lang="en">Relationship among the secondment and the abroad work plans in case of work in several countries.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra il distacco e i piani di lavoro esteri nel caso in cui sia coinvolto più di un paese.</rdfs:comment>
-    <rdfs:label xml:lang="it">ha piano di lavoro estero</rdfs:label>
-    <rdfs:label xml:lang="en">has abroad work plan</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haRapportoDiLavoroConOrganizzazione">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoro"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
-    <rdfs:comment xml:lang="en">Relationship between an employment and the involved organization.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra un rapporto di lavoro e l'organizzazione coinvolta.</rdfs:comment>
-    <rdfs:label xml:lang="it">ha rapporto di lavoro con organizzazione</rdfs:label>
-    <rdfs:label xml:lang="en">has employment with organization</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/haSettoreAttivita">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/onto/COV/Organization"/>
-    <rdfs:range>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/SettoreAttivita">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato">
         <owl:equivalentClass>
-          <owl:Restriction>
-            <owl:onProperty>
-              <rdf:Description>
-                <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/haSettoreAttivita"/>
-              </rdf:Description>
-            </owl:onProperty>
-
-            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/delegatoHaTipologia"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
         </owl:equivalentClass>
-
-        <rdfs:comment xml:lang="en">A Business Area indicates the business sector in which an Organization operates.</rdfs:comment>
-        <rdfs:comment xml:lang="it">Il Settore Attività indica il campo di atticità di cui si occupa un'Azienda.</rdfs:comment>
-        <rdfs:label xml:lang="en">Business Area</rdfs:label>
-        <rdfs:label xml:lang="it">Settore attività</rdfs:label>
-      </owl:Class>
-    </rdfs:range>
-
-    <rdfs:comment xml:lang="en">Relationship linking an Organization to its Business Area.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra l'azienda e il suo settore attività</rdfs:comment>
-    <rdfs:label xml:lang="it">ha settore attività</rdfs:label>
-    <rdfs:label xml:lang="en">has business area</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoraPressoAeroporto">
-    <rdfs:domain>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/PersonaleDiVoloECabina">
         <owl:equivalentClass>
-          <owl:Restriction>
-            <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoraPressoAeroporto"/>
-            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreDelegaDelegato"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente"/>
+        <rdfs:comment xml:lang="en">A person sent or authorized to represent others.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Persona cui sono stati conferiti un incarico specifico di rappresentanza oppure l&apos;esercizio di poteri o funzioni spettanti ad altra persona o organo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Delegate</rdfs:label>
+        <rdfs:label xml:lang="it">Delegato</rdfs:label>
+    </owl:Class>
 
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/Dichiarazione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Dichiarazione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaDichiarazione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/descrizioneDichiarazione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A formal or explicit statement or announcement.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Comunicazione ufficiale di fatti o notizie di una certa importanza.</rdfs:comment>
+        <rdfs:label xml:lang="en">Declaration</rdfs:label>
+        <rdfs:label xml:lang="it">Dichiarazione</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/contattiRelativiADistacco"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/distaccoPressoDomicilioEstero"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/modelloA1HaTipologiaAccordo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/certificaDistacco"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Il distacco è lo strumento, previsto dalla normativa comunitaria, di promozione e aiuto alla libera circolazione dei lavoratori. Evita anche che la mobilità possa pregiudicare i lavoratori stessi.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The secondment is the tool, provided for in EU law, to promote and aid the free movement of workers. It also prevents mobility from being detrimental to the workers themselves.</rdfs:comment>
+        <rdfs:label xml:lang="it">Distacco</rdfs:label>
+        <rdfs:label xml:lang="en">Secondment</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1 -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaDichiarazione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/haDomandaRilascioModelloA1"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/presentaDomandaRilascioModelloA1"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Claim for the release of an A1 Form.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Richiesta di rilascio del certificato &quot;Modello A1&quot;.</rdfs:comment>
+        <rdfs:label xml:lang="en">A1 Form Claim</rdfs:label>
+        <rdfs:label xml:lang="it">Domanda rilascio modello A1</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreAutonomo"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreParasubordinato"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreSubordinato"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePrivato"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePubblico"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/distaccoRelativoALavoratore"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
+        <rdfs:comment xml:lang="en">A Person who performs a manual or intellectual activity in a context of producing goods or providing services, carrying out his or her work for remuneration.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Persona che svolge un&apos;attività manuale o intellettuale in un contesto di produzione di beni o erogazione di servizi, svolgendo la sua attività lavorativa a titolo oneroso.</rdfs:comment>
+        <rdfs:label xml:lang="it">Lavoratore</rdfs:label>
+        <rdfs:label xml:lang="en">Worker</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreAutonomo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreAutonomo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreAutonomoHaTiplogia"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/dataInizioAttivita"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePubblico"/>
+        <rdfs:comment xml:lang="en">An independent worker is one who is self-employed, meaning that he or she is not subordinate to anyone, and therefore free from any employer.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Il lavoratore autonomo è un lavoratore indipendente, ovvero che esercita la sua attività lavorativa in proprio, non subordinato ad alcuno, svincolato quindi da un datore di lavoro.</rdfs:comment>
+        <rdfs:label xml:lang="en">Independent Worker</rdfs:label>
+        <rdfs:label xml:lang="it">Lavoratore autonomo</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreParasubordinato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreParasubordinato">
+        <rdfs:comment xml:lang="it">Lavotore coinvolto in  rapporti di collaborazione svolti in modo continuativo nel tempo, coordinati con la struttura organizzativa del datore di lavoro committente, in modo prevalentemente personale e senza vincolo di subordinazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Worker involved in collaborative relationships carried out continuously over time, coordinated with the organizational structure of the principal employer, in a predominantly personal way and without subordination.</rdfs:comment>
+        <rdfs:label xml:lang="it">Lavoratore parasubordinato</rdfs:label>
+        <rdfs:label xml:lang="en">Parasubordinated Worker</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePrivato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePrivato">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePubblico"/>
+        <rdfs:comment xml:lang="it">Lavoratore che opera nell&apos;ambito di un&apos;Azienda Privata.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Worker that operates in a Private Organization.</rdfs:comment>
+        <rdfs:label xml:lang="it">Lavoratore privato</rdfs:label>
+        <rdfs:label xml:lang="en">Private Sector Worker</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePubblico -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePubblico">
+        <rdfs:comment xml:lang="it">Lavoratore che opera nell&apos;ambito di un&apos;Azienda Pubblico.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Worker that operates in a Public Organization.</rdfs:comment>
+        <rdfs:label xml:lang="it">Lavoratore pubblico</rdfs:label>
+        <rdfs:label xml:lang="en">Public Sector Worker</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreSubordinato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreSubordinato">
+        <rdfs:comment xml:lang="en">An Employee is a Person who is paid to work for an Organization or for an Employer.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Un Lavoratore Subordinato è una persona pagata per lavorare per un&apos;Azienda o per un Datore di Lavore.</rdfs:comment>
+        <rdfs:label xml:lang="en">Employee</rdfs:label>
+        <rdfs:label xml:lang="it">Lavoratore subordinato</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1 -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/certificaDistacco"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/praticaRilasciaModelloA1"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/fineValidita"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/inizioValidita"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/ACO/Certificate"/>
+        <rdfs:comment xml:lang="en">A1 Form certifies which social security legislation applies to the person holding the model. It is usually necessary to apply for it in case the concerned person, due to the exercise of work activity has connections with more than one EU Country. According to EU regulations (EC Reg. No. 883/2010 and EC Reg. No. 987/2009), a person is subject to the social security legislation of a single State even if the work activity is carried out on the territory of more than one State. Therefore, the issuance of Form A1 means that the person, the holder of the form, is not subject to the legislation of any of the other Countries with which links are in place - in other words, that this person is not obliged to pay social security contributions (including health insurance) to the other countries. The A1 Form remains valid until the expiration date indicated in it or until it is withdrawn by the issuing institution.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Il modello A1 certifica quale legislazione in materia di sicurezza sociale si applica al soggetto titolare del modello. Solitamente è necessario richiederlo nei casi in cui la persona interessata, in ragione dell’esercizio dell’attività lavorativa si trovi ad avere dei collegamenti con più di un paese dell’UE. In base ai regolamenti comunitari (Reg. CE n. 883/2010 e Reg. CE n. 987/2009), una persona è soggetta alla legislazione di sicurezza sociale di un unico Stato anche se l’attività lavorativa viene svolta sul territorio di più Stati membri. Pertanto il rilascio del modello A1 fa sì che la persona, titolare del formulario, non sia soggetta alla legislazione di nessuno degli altri paesi con cui sono in atto dei collegamenti - in altre parole, che questa persona non è obbligata a versare contributi di sicurezza sociale (compresa l’assicurazione sanitaria) agli altri paesi. Il modello A1 rimane valido fino alla data di scadenza in esso indicata o fino al ritiro del modello da parte dell’istituzione che l’ha rilasciato.</rdfs:comment>
+        <rdfs:label xml:lang="en">A1 Form</rdfs:label>
+        <rdfs:label xml:lang="it">Modello A1</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/PersonaleDiVoloECabina -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/PersonaleDiVoloECabina">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoraPressoAeroporto"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
         <rdfs:comment xml:lang="it">Sottoclasse di Lavoratore che classifica il Personale di Volo e Cabina. Ciascuno di questi lavora presso almeno un Aeroporto e ha un Aeroporto come base di servizio.</rdfs:comment>
         <rdfs:comment xml:lang="en">Sub-class of Worker that classifies Flight and Cabin Crew. Each of them works in at least one Airport and has an Airport as home base.</rdfs:comment>
         <rdfs:label xml:lang="en">Flight and Cabin Crew</rdfs:label>
         <rdfs:label xml:lang="it">Personale di volo e cabina</rdfs:label>
-      </owl:Class>
-    </rdfs:domain>
+    </owl:Class>
 
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Aeroporto"/>
-    <rdfs:comment xml:lang="en">Relationship linking the Flight and Cabin Crew to an Airport they work in.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione che lega il Personale di Volo e Cabina ad un Aeroporto in cui lavora.</rdfs:comment>
-    <rdfs:label xml:lang="it">lavora presso aeroporto</rdfs:label>
-    <rdfs:label xml:lang="en">works in airport</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreAutonomoHaTiplogia">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreAutonomo"/>
-    <rdfs:range>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/tipologiaLavoratoreAutonomo">
-        <rdfs:comment xml:lang="en">It is the category of Independent Worker.</rdfs:comment>
-        <rdfs:comment xml:lang="it">È la tipologia di Lavoratore Autonomo.</rdfs:comment>
-        <rdfs:label xml:lang="en">Independent worker category</rdfs:label>
-        <rdfs:label xml:lang="it">Tipologia lavoratore autonomo</rdfs:label>
-      </owl:Class>
-    </rdfs:range>
 
-    <rdfs:comment xml:lang="en">Relationship between the independent worker and his category.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra il lavoratore autonomo e la sua tipologia.</rdfs:comment>
-    <rdfs:label xml:lang="en">independent worker has category</rdfs:label>
-    <rdfs:label xml:lang="it">lavoratore autonomo ha tiplogia</rdfs:label>
-  </owl:ObjectProperty>
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero -->
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreDelegaDelegato">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
-    <rdfs:comment xml:lang="en">Relationship linking a Worker to the delegated Person or Organization.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione che lega un Lavoratore alla Persona o all'Ente delegato.</rdfs:comment>
-    <rdfs:label xml:lang="it">lavoratore delega delegato</rdfs:label>
-    <rdfs:label xml:lang="en">worker assigns delegate</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreHaRapportoDiLavoro">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoro"/>
-    <rdfs:comment xml:lang="en">Relationship linking a Worker to the Employment Relationship that involves him.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione che lega un Lavoratore al Rapporto di Lavoro che lo riguarda.</rdfs:comment>
-    <rdfs:label xml:lang="it">lavoratore ha rapporto di lavoro</rdfs:label>
-    <rdfs:label xml:lang="en">worker has employment relationship</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/modelloA1HaTipologiaAccordo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco"/>
-    <rdfs:range>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaAccordoModelloA1">
-        <rdfs:comment xml:lang="it">Specifica la tipologia di accordo per il rilascio del Modello A1.</rdfs:comment>
-        <rdfs:comment xml:lang="en">Specifies the type of agreement for the A1 Form.</rdfs:comment>
-        <rdfs:label xml:lang="en">Agreement type for A1 form</rdfs:label>
-        <rdfs:label xml:lang="it">Tipologia accordo modello A1</rdfs:label>
-      </owl:Class>
-    </rdfs:range>
-
-    <rdfs:comment xml:lang="en">Relationship between the secondment and the agreement type</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra il distacco e la tipologia di accordo</rdfs:comment>
-    <rdfs:label xml:lang="en">a1 form has agreement type</rdfs:label>
-    <rdfs:label xml:lang="it">modello A1 ha tipologia accordo</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/pianoLavoroPerStato">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
-    <rdfs:range>
-      <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Country">
-      </owl:Class>
-    </rdfs:range>
-
-    <rdfs:comment xml:lang="en">Relationship linking an Expected Abroad Work Plan to the Country the work plan relates to.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione che lega un Piano Lavoro Previsto Estero allo Stato al quale è riferito.</rdfs:comment>
-    <rdfs:label xml:lang="it">piano lavoro per stato</rdfs:label>
-    <rdfs:label xml:lang="en">work plan for country</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/praticaGestitaDaSedeINPS">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Pratica"/>
-    <rdfs:range>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/SedeINPS">
-      </owl:Class>
-    </rdfs:range>
-
-    <rdfs:comment xml:lang="en">Relationship linking each Application to the INPS Office by which it is instructed.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione che lega ciascuna Pratica alla Sede INPS da cui è gestita.</rdfs:comment>
-    <rdfs:label xml:lang="en">application instructed by INPS office</rdfs:label>
-    <rdfs:label xml:lang="it">pratica gestita da sede INPS</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/praticaRilasciaModelloA1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1"/>
-    <rdfs:comment xml:lang="en">Relationship linking each Application to the A1 Form it issues.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione che lega ciascuna Pratica al Modello A1 che rilascia.</rdfs:comment>
-    <rdfs:label xml:lang="en">application issues A1 form</rdfs:label>
-    <rdfs:label xml:lang="it">pratica rilascia modello A1</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/presentaDomandaRilascioModelloA1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-    <rdfs:domain>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/RichiedenteModelloA1">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero">
         <owl:equivalentClass>
-          <owl:Restriction>
-            <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/presentaDomandaRilascioModelloA1"/>
-            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/pianoLavoroPerStato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/haPianoDiLavoroEstero"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/redditoPianoLavoroPrevistoEstero"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/stimaPercentualeAnnualePianoLavoroPrevistoEstero"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Piano che descrive l&apos;attività lavorativa che ci si aspetta di svolgere in un Paese estero. Questo include una stima in termini di tempo e reddito di suddetta attività lavorativa.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Plan that describes the working activity expected to be carried out in a foreign Country. This plan include a time and income estimate of the working activity. </rdfs:comment>
+        <rdfs:label xml:lang="en">Expected Abroad Work Plan</rdfs:label>
+        <rdfs:label xml:lang="it">Piano lavoro previsto estero</rdfs:label>
+    </owl:Class>
 
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/Pratica -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Pratica">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/praticaGestitaDaSedeINPS"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Abstract class that aggregates the different types of practices initiated by the INPS.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Classe astratta che raggruppa i diversi tipi di pratica possibili presso l&apos;INPS.</rdfs:comment>
+        <rdfs:label xml:lang="en">Application</rdfs:label>
+        <rdfs:label xml:lang="it">Pratica</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1 -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/haDomandaRilascioModelloA1"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Pratica"/>
+        <rdfs:comment xml:lang="en">Application activated in case of posted workers or abroad employment relationships that fall under the Relevant Legislation. In case it has a positive outcome, it issues an A1 Form.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Pratica avviata in caso di distacco di un lavoratore o di lavoro all&apos;estero che rientra nei termini della Legislazione Applicabile. In caso di esito positivo la pratica porta al rilascio del Modello A1.</rdfs:comment>
+        <rdfs:label xml:lang="en">Application A1 Form</rdfs:label>
+        <rdfs:label xml:lang="it">Pratica rilascio modello A1</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoro -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoro">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreHaRapportoDiLavoro"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Employment relationship between a Worker and an Organization or an employer.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Rapporo di lavoro tra un lavoratore e un&apos;Azienza o un datore di lavoro.</rdfs:comment>
+        <rdfs:label xml:lang="en">Employment Relationship</rdfs:label>
+        <rdfs:label xml:lang="it">Rapporto di lavoro</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoroAllEstero -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoroAllEstero">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipoOrario"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipologia"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/dataAssunzione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoro"/>
+        <rdfs:comment xml:lang="it">Sottoclasse di Rapporto di Lavoro che classifica i rapporti di lavoro stipulati con un&apos;Azienza estera.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Sub-class of Employment Relationship which classifies those employment relationships formed with foreign Organizations.</rdfs:comment>
+        <rdfs:label xml:lang="en">Abroad Employment Relationship</rdfs:label>
+        <rdfs:label xml:lang="it">Rapporto di lavoro all&apos;estero</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/RichiedenteModelloA1 -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/RichiedenteModelloA1">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/presentaDomandaRilascioModelloA1"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
         <rdfs:subClassOf>
-          <owl:Class>
-            <owl:unionOf>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
-                <rdf:rest>
-                  <rdf:Description>
-                    <rdf:first>
-                      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/TitolarePratica">
-                        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
-                        <rdfs:comment xml:lang="it">Sottoclasse di Persona (Fisica) che classifica le persone a cui, facendo seguito alla presentazione di idonea domanda, sono riconosciuti i requisiti per accedere al Modello A1. Nel caso il Titolare sia colui che presenta la domanda, corrisponde al Richiedente.</rdfs:comment>
-                        <rdfs:comment xml:lang="en">Sub-class of Person (Physical) which classifies the people who, following the presentation of a suitable application, are recognized as having the requisites for accessing the A1 Form. If the Holder issues the Claim, it corresponds to the Applicant.</rdfs:comment>
-                        <rdfs:label xml:lang="en">Application Holder</rdfs:label>
-                        <rdfs:label xml:lang="it">Titolare pratica</rdfs:label>
-                      </owl:Class>
-                    </rdf:first>
-
-                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                  </rdf:Description>
-                </rdf:rest>
-
-              </rdf:Description>
-            </owl:unionOf>
-
-          </owl:Class>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/TitolarePratica"/>
+                </owl:unionOf>
+            </owl:Class>
         </rdfs:subClassOf>
-
         <rdfs:comment xml:lang="it">Lavoratore, o ente da lui delegato, che richiede il rilascio del Modello A1.</rdfs:comment>
         <rdfs:comment xml:lang="en">Worker, or delegate entity, that issues a Form A1 Claim.</rdfs:comment>
         <rdfs:label xml:lang="en">A1 Form Applicant</rdfs:label>
         <rdfs:label xml:lang="it">Richiedente modello A1</rdfs:label>
-      </owl:Class>
-    </rdfs:domain>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/SettoreAttivita -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/SettoreAttivita">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/haSettoreAttivita"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">A Business Area indicates the business sector in which an Organization operates.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Il Settore Attività indica il campo di atticità di cui si occupa un&apos;Azienda.</rdfs:comment>
+        <rdfs:label xml:lang="en">Business Area</rdfs:label>
+        <rdfs:label xml:lang="it">Settore attività</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/TipoOrarioDiLavoro -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/TipoOrarioDiLavoro">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipoOrario"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Indica il tipo di orario di lavoro per un Rapporto di Lavoro all&apos;estero.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the kind of work schedule for an Abroad Employment Relationship.</rdfs:comment>
+        <rdfs:label xml:lang="it">Tipo orario di lavoro</rdfs:label>
+        <rdfs:label xml:lang="en">Work schedule type</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaAccordoModelloA1 -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaAccordoModelloA1">
+        <rdfs:comment xml:lang="it">Specifica la tipologia di accordo per il rilascio del Modello A1.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the type of agreement for the A1 Form.</rdfs:comment>
+        <rdfs:label xml:lang="en">Agreement type for A1 form</rdfs:label>
+        <rdfs:label xml:lang="it">Tipologia accordo modello A1</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaDelegato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaDelegato">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/delegatoHaTipologia"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Specifica la tipologia di Delegato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Specifies the type of a Delegate.</rdfs:comment>
+        <rdfs:label xml:lang="en">Delegate type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipologia delegato</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaRapportoDiLavoro -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaRapportoDiLavoro">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipologia"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">Indica il tipo di Rapporto di Lavoro all&apos;estero.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates the kind of Abroad Employment Relationship.</rdfs:comment>
+        <rdfs:label xml:lang="en">Employment relationship type</rdfs:label>
+        <rdfs:label xml:lang="it">Tipologia rapporto di lavoro</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/TitolarePratica -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/TitolarePratica">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
+        <rdfs:comment xml:lang="it">Sottoclasse di Persona (Fisica) che classifica le persone a cui, facendo seguito alla presentazione di idonea domanda, sono riconosciuti i requisiti per accedere al Modello A1. Nel caso il Titolare sia colui che presenta la domanda, corrisponde al Richiedente.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Sub-class of Person (Physical) which classifies the people who, following the presentation of a suitable application, are recognized as having the requisites for accessing the A1 Form. If the Holder issues the Claim, it corresponds to the Applicant.</rdfs:comment>
+        <rdfs:label xml:lang="en">Application Holder</rdfs:label>
+        <rdfs:label xml:lang="it">Titolare pratica</rdfs:label>
+    </owl:Class>
 
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1"/>
-    <rdfs:comment xml:lang="en">Relationship linking each A1 Form Applicant to the A1 Form Claim he or she submits.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione che lega ciascun Richiedente Modello A1 alla Domanda che presenta.</rdfs:comment>
-    <rdfs:label xml:lang="it">presenta domanda rilascio modello A1</rdfs:label>
-    <rdfs:label xml:lang="en">submits A1 form application</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipoOrario">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoroAllEstero"/>
-    <rdfs:comment xml:lang="en">Relationship between the abroad employment and the working schedule agreed.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra un rapporto di lavoro estero e il tipo di orario stabilito nel contratto.</rdfs:comment>
-    <rdfs:label xml:lang="en">abroad employment relationship has work schedule type</rdfs:label>
-    <rdfs:label xml:lang="it">rapporto di lavoro estero ha tipo orario</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipologia">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoroAllEstero"/>
-    <rdfs:comment xml:lang="en">Relationship between an abroad employment and his type</rdfs:comment>
-    <rdfs:comment xml:lang="it">Relazione tra un contratto di lavoro estero e la sua tipologia.</rdfs:comment>
-    <rdfs:label xml:lang="en">abroad employment relationship has type</rdfs:label>
-    <rdfs:label xml:lang="it">rapporto di lavoro estero ha tipologia</rdfs:label>
-  </owl:ObjectProperty>
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/tipologiaLavoratoreAutonomo -->
 
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/codiceDomandaRilascioModelloA1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1"/>
-    <rdfs:comment xml:lang="it">Codice identificativo della domanda di rilascio del modello A1.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Identification code of the A1 form claim.</rdfs:comment>
-    <rdfs:label xml:lang="en">a1 form claim code</rdfs:label>
-    <rdfs:label xml:lang="it">codice domanda rilascio modello a1</rdfs:label>
-  </owl:DatatypeProperty>
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/tipologiaLavoratoreAutonomo">
+        <rdfs:comment xml:lang="en">It is the category of Independent Worker.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la tipologia di Lavoratore Autonomo.</rdfs:comment>
+        <rdfs:label xml:lang="en">Independent worker category</rdfs:label>
+        <rdfs:label xml:lang="it">Tipologia lavoratore autonomo</rdfs:label>
+    </owl:Class>
 
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/codicePraticaRilascioModelloA1">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1"/>
-    <rdfs:comment xml:lang="it">Codice identificativo della pratica di rilascio del modello A1.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Identification code of the application A1 form.</rdfs:comment>
-    <rdfs:label xml:lang="en">application a1 form code</rdfs:label>
-    <rdfs:label xml:lang="it">codice pratica rilascio modello a1</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/dataAssunzione">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoroAllEstero"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <rdfs:comment xml:lang="it">La data in cui il lavoratore ha iniziato un rapporto di lavoro.</rdfs:comment>
-    <rdfs:comment xml:lang="en">The date of beginning of an Employment Relationship.</rdfs:comment>
-    <rdfs:label xml:lang="it">data assunzione</rdfs:label>
-    <rdfs:label xml:lang="en">hiring date</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/dataInizioAttivita">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreAutonomo"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-    <rdfs:comment xml:lang="it">La data in cui il lavoratore autonomo inizia la sua attività lavorativa.</rdfs:comment>
-    <rdfs:comment xml:lang="en">The date on which the be-self worker started his activity.</rdfs:comment>
-    <rdfs:label xml:lang="it">data inizio attività</rdfs:label>
-    <rdfs:label xml:lang="en">start date of activity</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/descrizioneDichiarazione">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Dichiarazione"/>
-    <rdfs:comment xml:lang="it">La descrizione che riguarda una dichiarazione.</rdfs:comment>
-    <rdfs:comment xml:lang="en">The description of a declaration.</rdfs:comment>
-    <rdfs:label xml:lang="en">declaration description</rdfs:label>
-    <rdfs:label xml:lang="it">descrizione dichiarazione</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/fineValidita">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1"/>
-    <rdfs:comment xml:lang="it">Data di fine della validità del Modello A1</rdfs:comment>
-    <rdfs:comment xml:lang="en">When the A1 Form is expired.</rdfs:comment>
-    <rdfs:label xml:lang="en">expiring date</rdfs:label>
-    <rdfs:label xml:lang="it">fine validità</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/giorniPerMesePianoLavoroPrevistoEstero">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:comment xml:lang="en">Number of days in a month the worker plans to work abroad in a specific abroad work plan.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Numero di giorni di lavoro previsti per mese in un piano di lavoro estero.</rdfs:comment>
-    <rdfs:label xml:lang="it">giorni per mese piano lavoro previsto estero</rdfs:label>
-    <rdfs:label xml:lang="en">planned monthly days in abroad work plan</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/giorniPerSettimanaPianoLavoroPrevistoEstero">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-    <rdfs:comment xml:lang="en">Number of days in a week the worker plans to work abroad in a specific abroad work plan.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Numero di giorni di lavoro previsti per settimana in un piano di lavoro estero.</rdfs:comment>
-    <rdfs:label xml:lang="it">giorni per settimana piano lavoro previsto estero</rdfs:label>
-    <rdfs:label xml:lang="en">planned weekly days in abroad work plan</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/inizioValidita">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1"/>
-    <rdfs:comment xml:lang="it">Indica la data di inizio validità di un Modello A1</rdfs:comment>
-    <rdfs:comment xml:lang="en">It specifies the start date of validity for an A1 Form.</rdfs:comment>
-    <rdfs:label xml:lang="it">inizio validità</rdfs:label>
-    <rdfs:label xml:lang="en">validity start date</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/nomeAeroporto">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Aeroporto"/>
-    <rdfs:comment xml:lang="en">It is the name of an Airport.</rdfs:comment>
-    <rdfs:comment xml:lang="it">È il nome di un Aeroporto.</rdfs:comment>
-    <rdfs:label xml:lang="en">airport name</rdfs:label>
-    <rdfs:label xml:lang="it">nome aeroporto</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/redditoPianoLavoroPrevistoEstero">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-    <rdfs:comment xml:lang="en">It is the income that is expected to derive from work executed in a specific foreign country. It is specified in an Abroad Work Plan.</rdfs:comment>
-    <rdfs:comment xml:lang="it">È il reddito che si prospetta deriverà dal lavoro svolto in un Paese estero. Viene specificata nel contesto di un Piano di Lavoro Estero.</rdfs:comment>
-    <rdfs:label xml:lang="en">income in expected abroad work plan</rdfs:label>
-    <rdfs:label xml:lang="it">reddito piano lavoro previsto estero</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/stimaPercentualeAnnualePianoLavoroPrevistoEstero">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
-    <rdfs:comment xml:lang="en">It is the percentage of annual work that is expected to be executed in a specific foreign country. It is specified in an Abroad Work Plan.</rdfs:comment>
-    <rdfs:comment xml:lang="it">È la percenatuale di lavoro annuale che si prospetta verrà svolta in un Paese estero. Viene specificata nel contesto di un Piano di Lavoro Estero.</rdfs:comment>
-    <rdfs:label xml:lang="en">annual percentage in expected abroad work plan</rdfs:label>
-    <rdfs:label xml:lang="it">stima percentuale annuale piano lavoro previsto estero</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/valoreDichiarazione">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Dichiarazione"/>
-    <rdfs:comment xml:lang="en">It is the value of a declaration in the Claim.</rdfs:comment>
-    <rdfs:comment xml:lang="it">È il contenuto di una dichiarazione presente nella Domanda.</rdfs:comment>
-    <rdfs:label xml:lang="en">declaration value</rdfs:label>
-    <rdfs:label xml:lang="it">valore dichiarazione</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:Class rdf:about="https://w3id.org/italia/onto/ACO/Certificate">
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/onto/CLV/Address">
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/onto/COV/Organization">
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore"/>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoro"/>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente">
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva">
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Aeroporto">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoraPressoAeroporto"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/nomeAeroporto"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/onto/CLV/hasCurrentAddress"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-
-    <rdfs:comment xml:lang="en">An airport is an aerodrome with extended facilities, mostly for commercial air transport.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Un aeroporto è un'infrastruttura attrezzata per il decollo e l'atterraggio di aeromobili, per il transito dei relativi passeggeri e del loro bagaglio, per il ricovero e il rifornimento dei velivoli.</rdfs:comment>
-    <rdfs:label xml:lang="en">Airport</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/delegatoHaTipologia"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreDelegaDelegato"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiAgente"/>
-    <rdfs:comment xml:lang="en">A person sent or authorized to represent others.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Persona cui sono stati conferiti un incarico specifico di rappresentanza oppure l'esercizio di poteri o funzioni spettanti ad altra persona o organo.</rdfs:comment>
-    <rdfs:label xml:lang="en">Delegate</rdfs:label>
-    <rdfs:label xml:lang="it">Delegato</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Dichiarazione">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaDichiarazione"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/descrizioneDichiarazione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="en">A formal or explicit statement or announcement.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Comunicazione ufficiale di fatti o notizie di una certa importanza.</rdfs:comment>
-    <rdfs:label xml:lang="en">Declaration</rdfs:label>
-    <rdfs:label xml:lang="it">Dichiarazione</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Distacco">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/contattiRelativiADistacco"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/distaccoPressoDomicilioEstero"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/modelloA1HaTipologiaAccordo"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/certificaDistacco"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="it">Il distacco è lo strumento, previsto dalla normativa comunitaria, di promozione e aiuto alla libera circolazione dei lavoratori. Evita anche che la mobilità possa pregiudicare i lavoratori stessi.</rdfs:comment>
-    <rdfs:comment xml:lang="en">The secondment is the tool, provided for in EU law, to promote and aid the free movement of workers. It also prevents mobility from being detrimental to the workers themselves.</rdfs:comment>
-    <rdfs:label xml:lang="it">Distacco</rdfs:label>
-    <rdfs:label xml:lang="en">Secondment</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/domandaHaDichiarazione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/haDomandaRilascioModelloA1"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/presentaDomandaRilascioModelloA1"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="en">Claim for the release of an A1 Form.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Richiesta di rilascio del certificato &quot;Modello A1&quot;.</rdfs:comment>
-    <rdfs:label xml:lang="en">A1 Form Claim</rdfs:label>
-    <rdfs:label xml:lang="it">Domanda rilascio modello A1</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Lavoratore">
-    <owl:equivalentClass>
-      <owl:Class>
-        <owl:unionOf>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreAutonomo"/>
-            <rdf:rest>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreParasubordinato"/>
-                <rdf:rest>
-                  <rdf:Description>
-                    <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreSubordinato"/>
-                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                  </rdf:Description>
-                </rdf:rest>
-
-              </rdf:Description>
-            </rdf:rest>
-
-          </rdf:Description>
-        </owl:unionOf>
-
-      </owl:Class>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Class>
-        <owl:unionOf>
-          <rdf:Description>
-            <rdf:first>
-              <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePrivato">
-                <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePubblico"/>
-                <rdfs:comment xml:lang="it">Lavoratore che opera nell'ambito di un'Azienda Privata.</rdfs:comment>
-                <rdfs:comment xml:lang="en">Worker that operates in a Private Organization.</rdfs:comment>
-                <rdfs:label xml:lang="it">Lavoratore privato</rdfs:label>
-                <rdfs:label xml:lang="en">Private Sector Worker</rdfs:label>
-              </owl:Class>
-            </rdf:first>
-
-            <rdf:rest>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePubblico"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-              </rdf:Description>
-            </rdf:rest>
-
-          </rdf:Description>
-        </owl:unionOf>
-
-      </owl:Class>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/distaccoRelativoALavoratore"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
-    <rdfs:comment xml:lang="en">A Person who performs a manual or intellectual activity in a context of producing goods or providing services, carrying out his or her work for remuneration.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Persona che svolge un'attività manuale o intellettuale in un contesto di produzione di beni o erogazione di servizi, svolgendo la sua attività lavorativa a titolo oneroso.</rdfs:comment>
-    <rdfs:label xml:lang="it">Lavoratore</rdfs:label>
-    <rdfs:label xml:lang="en">Worker</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreAutonomo">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreAutonomoHaTiplogia"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/dataInizioAttivita"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePubblico"/>
-    <rdfs:comment xml:lang="en">An independent worker is one who is self-employed, meaning that he or she is not subordinate to anyone, and therefore free from any employer.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Il lavoratore autonomo è un lavoratore indipendente, ovvero che esercita la sua attività lavorativa in proprio, non subordinato ad alcuno, svincolato quindi da un datore di lavoro.</rdfs:comment>
-    <rdfs:label xml:lang="en">Independent Worker</rdfs:label>
-    <rdfs:label xml:lang="it">Lavoratore autonomo</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreParasubordinato">
-    <rdfs:comment xml:lang="it">Lavotore coinvolto in  rapporti di collaborazione svolti in modo continuativo nel tempo, coordinati con la struttura organizzativa del datore di lavoro committente, in modo prevalentemente personale e senza vincolo di subordinazione.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Worker involved in collaborative relationships carried out continuously over time, coordinated with the organizational structure of the principal employer, in a predominantly personal way and without subordination.</rdfs:comment>
-    <rdfs:label xml:lang="it">Lavoratore parasubordinato</rdfs:label>
-    <rdfs:label xml:lang="en">Parasubordinated Worker</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratorePubblico">
-    <rdfs:comment xml:lang="it">Lavoratore che opera nell'ambito di un'Azienda Pubblico.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Worker that operates in a Public Organization.</rdfs:comment>
-    <rdfs:label xml:lang="it">Lavoratore pubblico</rdfs:label>
-    <rdfs:label xml:lang="en">Public Sector Worker</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreSubordinato">
-    <rdfs:comment xml:lang="en">An Employee is a Person who is paid to work for an Organization or for an Employer.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Un Lavoratore Subordinato è una persona pagata per lavorare per un'Azienda o per un Datore di Lavore.</rdfs:comment>
-    <rdfs:label xml:lang="en">Employee</rdfs:label>
-    <rdfs:label xml:lang="it">Lavoratore subordinato</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/certificaDistacco"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/praticaRilasciaModelloA1"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/fineValidita"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/inizioValidita"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/ACO/Certificate"/>
-    <rdfs:comment xml:lang="en">A1 Form certifies which social security legislation applies to the person holding the model. It is usually necessary to apply for it in case the concerned person, due to the exercise of work activity has connections with more than one EU Country. According to EU regulations (EC Reg. No. 883/2010 and EC Reg. No. 987/2009), a person is subject to the social security legislation of a single State even if the work activity is carried out on the territory of more than one State. Therefore, the issuance of Form A1 means that the person, the holder of the form, is not subject to the legislation of any of the other Countries with which links are in place - in other words, that this person is not obliged to pay social security contributions (including health insurance) to the other countries. The A1 Form remains valid until the expiration date indicated in it or until it is withdrawn by the issuing institution.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Il modello A1 certifica quale legislazione in materia di sicurezza sociale si applica al soggetto titolare del modello. Solitamente è necessario richiederlo nei casi in cui la persona interessata, in ragione dell'esercizio dell'attività lavorativa si trovi ad avere dei collegamenti con più di un paese dell'UE. In base ai regolamenti comunitari (Reg. CE n. 883/2010 e Reg. CE n. 987/2009), una persona è soggetta alla legislazione di sicurezza sociale di un unico Stato anche se l'attività lavorativa viene svolta sul territorio di più Stati membri. Pertanto il rilascio del modello A1 fa sì che la persona, titolare del formulario, non sia soggetta alla legislazione di nessuno degli altri paesi con cui sono in atto dei collegamenti - in altre parole, che questa persona non è obbligata a versare contributi di sicurezza sociale (compresa l'assicurazione sanitaria) agli altri paesi. Il modello A1 rimane valido fino alla data di scadenza in esso indicata o fino al ritiro del modello da parte dell'istituzione che l'ha rilasciato.</rdfs:comment>
-    <rdfs:label xml:lang="en">A1 Form</rdfs:label>
-    <rdfs:label xml:lang="it">Modello A1</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/PianoLavoroPrevistoEstero">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/pianoLavoroPerStato"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/haPianoDiLavoroEstero"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/redditoPianoLavoroPrevistoEstero"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/stimaPercentualeAnnualePianoLavoroPrevistoEstero"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="it">Piano che descrive l'attività lavorativa che ci si aspetta di svolgere in un Paese estero. Questo include una stima in termini di tempo e reddito di suddetta attività lavorativa.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Plan that describes the working activity expected to be carried out in a foreign Country. This plan include a time and income estimate of the working activity. </rdfs:comment>
-    <rdfs:label xml:lang="en">Expected Abroad Work Plan</rdfs:label>
-    <rdfs:label xml:lang="it">Piano lavoro previsto estero</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Pratica">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/praticaGestitaDaSedeINPS"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="en">Abstract class that aggregates the different types of practices initiated by the INPS.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Classe astratta che raggruppa i diversi tipi di pratica possibili presso l'INPS.</rdfs:comment>
-    <rdfs:label xml:lang="en">Application</rdfs:label>
-    <rdfs:label xml:lang="it">Pratica</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/haDomandaRilascioModelloA1"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Pratica"/>
-    <rdfs:comment xml:lang="en">Application activated in case of posted workers or abroad employment relationships that fall under the Relevant Legislation. In case it has a positive outcome, it issues an A1 Form.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Pratica avviata in caso di distacco di un lavoratore o di lavoro all'estero che rientra nei termini della Legislazione Applicabile. In caso di esito positivo la pratica porta al rilascio del Modello A1.</rdfs:comment>
-    <rdfs:label xml:lang="en">Application A1 Form</rdfs:label>
-    <rdfs:label xml:lang="it">Pratica rilascio modello A1</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoro">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/lavoratoreHaRapportoDiLavoro"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="en">Employment relationship between a Worker and an Organization or an employer.</rdfs:comment>
-    <rdfs:comment xml:lang="it">Rapporo di lavoro tra un lavoratore e un'Azienza o un datore di lavoro.</rdfs:comment>
-    <rdfs:label xml:lang="en">Employment Relationship</rdfs:label>
-    <rdfs:label xml:lang="it">Rapporto di lavoro</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoroAllEstero">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipoOrario"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipologia"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/dataAssunzione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/RapportoDiLavoro"/>
-    <rdfs:comment xml:lang="it">Sottoclasse di Rapporto di Lavoro che classifica i rapporti di lavoro stipulati con un'Azienza estera.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Sub-class of Employment Relationship which classifies those employment relationships formed with foreign Organizations.</rdfs:comment>
-    <rdfs:label xml:lang="en">Abroad Employment Relationship</rdfs:label>
-    <rdfs:label xml:lang="it">Rapporto di lavoro all'estero</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/TipoOrarioDiLavoro">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipoOrario"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-
-    <rdfs:comment xml:lang="it">Indica il tipo di orario di lavoro per un Rapporto di Lavoro all'estero.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Indicates the kind of work schedule for an Abroad Employment Relationship.</rdfs:comment>
-    <rdfs:label xml:lang="it">Tipo orario di lavoro</rdfs:label>
-    <rdfs:label xml:lang="en">Work schedule type</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaDelegato">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/delegatoHaTipologia"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-
-    <rdfs:comment xml:lang="it">Specifica la tipologia di Delegato.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Specifies the type of a Delegate.</rdfs:comment>
-    <rdfs:label xml:lang="en">Delegate type</rdfs:label>
-    <rdfs:label xml:lang="it">Tipologia delegato</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaRapportoDiLavoro">
-    <rdfs:subClassOf>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/rapportoDiLavoroEsteroHaTipologia"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </rdfs:subClassOf>
-
-    <rdfs:comment xml:lang="it">Indica il tipo di Rapporto di Lavoro all'estero.</rdfs:comment>
-    <rdfs:comment xml:lang="en">Indicates the kind of Abroad Employment Relationship.</rdfs:comment>
-    <rdfs:label xml:lang="en">Employment relationship type</rdfs:label>
-    <rdfs:label xml:lang="it">Tipologia rapporto di lavoro</rdfs:label>
-  </owl:Class>
 
   <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII">
     <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
@@ -1182,26 +1381,91 @@
     <vcard:hasEmail rdf:resource="mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it"/>
   </rdf:Description>
 
-  <owl:AllDisjointClasses rdf:nodeID="genid64">
-    <owl:members>
-      <rdf:Description>
-        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreAutonomo"/>
-        <rdf:rest>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreParasubordinato"/>
-            <rdf:rest>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreSubordinato"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-              </rdf:Description>
-            </rdf:rest>
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
+    <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dct:identifier>inps</dct:identifier>
+    <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
+    <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
+  </rdf:Description>
 
-          </rdf:Description>
-        </rdf:rest>
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/td">
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dct:identifier>TD</dct:identifier>
+    <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
+    <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
+  </rdf:Description>
 
-      </rdf:Description>
-    </owl:members>
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-N-TRIPLES">
+    <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest"/>
+    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.n3"/>
+    <dct:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1).</dct:description>
+    <dct:description xml:lang="en">This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1).</dct:description>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dct:title xml:lang="it">Distribuzione N-TRIPLES dell'ontologia INPS - legislazione pertinente</dct:title>
+    <dct:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - relevant legislation</dct:title>
+  </rdf:Description>
 
-  </owl:AllDisjointClasses>
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-TURTLE">
+    <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest"/>
+    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.ttl"/>
+    <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1).</dct:description>
+    <dct:description xml:lang="en">This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1).</dct:description>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dct:title xml:lang="it">Distribuzione RDF/Turtle dell'ontologia INPS - legislazione pertinente</dct:title>
+    <dct:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - relevant legislation</dct:title>
+  </rdf:Description>
 
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/relevant-legislation/distribution/RELLEG-RDF-XML">
+    <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevant-legislation/latest"/>
+    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevant-legislation/latest/relevant-legislation.owl"/>
+    <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1).</dct:description>
+    <dct:description xml:lang="en">This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1).</dct:description>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dct:title xml:lang="it">Distribuzione RDF/XML dell'ontologia INPS - legislazione pertinente</dct:title>
+    <dct:title xml:lang="en">RDF/XML distribution of the INPS ontology - relevant legislation</dct:title>
+  </rdf:Description>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreAutonomo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreParasubordinato"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/LavoratoreSubordinato"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.4) https://github.com/owlcs/owlapi -->
+
