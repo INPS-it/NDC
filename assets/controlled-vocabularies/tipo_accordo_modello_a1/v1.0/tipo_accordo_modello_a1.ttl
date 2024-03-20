@@ -1,11 +1,11 @@
-@prefix ns1: <http://www.w3.org/2004/02/skos/core#> .
-@prefix ns2: <http://purl.org/dc/terms/> .
+@prefix ns1: <http://purl.org/dc/terms/> .
+@prefix ns2: <http://www.w3.org/2004/02/skos/core#> .
 @prefix ns3: <http://www.w3.org/ns/dcat#> .
 @prefix ns4: <http://www.w3.org/2006/vcard/ns#> .
-@prefix ns5: <http://xmlns.com/foaf/0.1/> .
-@prefix ns6: <http://www.w3.org/ns/adms#> .
+@prefix ns5: <http://www.w3.org/ns/adms#> .
+@prefix ns6: <https://w3id.org/italia/onto/NDC/> .
 @prefix ns7: <http://rdf-vocabulary.ddialliance.org/xkos#> .
-@prefix ns8: <https://w3id.org/italia/onto/NDC/> .
+@prefix ns8: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -13,53 +13,55 @@
 ### Annotations
 
 <https://w3id.org/italia/data/standard/SKOS> a <http://dati.gov.it/onto/dcatapit#Standard>,
-        ns2:Standard ;
-    ns2:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
-    ns2:identifier "SKOS" ;
-    ns2:title "Simple Knowledge Organization System - SKOS" .
+        ns1:Standard ;
+    ns1:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    ns1:identifier "SKOS" ;
+    ns1:title "Simple Knowledge Organization System - SKOS" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1> a <http://dati.gov.it/onto/dcatapit#Dataset>,
-        <https://w3id.org/italia/social-security/onto/relevant-legislation/TipologiaAccordoModelloA1>,
-        ns1:ConceptScheme,
-        ns6:Asset ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1> a <http://dati.gov.it/onto/dcatapit#Dataset>,
+        ns2:ConceptScheme,
+        ns5:Asset,
+        <https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaAccordoModelloA1> ;
     rdfs:label "This is the controlled vocabulary of the model agreement A1 type adopted by INPS classification"@en,
         "Vocabolario Controllato sul tipo di accordo modello A1 adottato dall'INPS"@it ;
-    ns1:prefLabel "Vocabolario Controllato sul tipo di accordo modello A1 adottato dall'INPS"@it ;
+    ns2:prefLabel "Vocabolario Controllato sul tipo di accordo modello A1 adottato dall'INPS"@it ;
     rdfs:comment "Classification of the model agreement A1 type adopted by INPS controlled vocabulary"@en,
         "Vocabolario Controllato sul tipo di accordo modello A1 adottato dall'INPS"@it ;
     owl:versionInfo "0.1" ;
-    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1> ;
-    ns1:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/01>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/02>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/03>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/04>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/05>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/06>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/07>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/08>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/09>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/10>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/11>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/12>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1/13> ;
-    ns2:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    ns2:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
-    ns2:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:description "Classification of the model agreement A1 type adopted by INPS controlled vocabulary"@en,
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1> ;
+    ns1:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    ns1:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    ns1:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns1:description "Classification of the model agreement A1 type adopted by INPS controlled vocabulary"@en,
         "Vocabolario Controllato sul tipo di accordo modello A1 adottato dall'INPS"@it ;
-    ns2:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1" ;
-    ns2:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-    ns2:modified "2024-03-05"^^xsd:date ;
-    ns2:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:relation <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1> ;
-    ns2:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns2:title "Classification of the model agreement A1 type adopted by INPS controlled vocabulary"@en,
+    ns1:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1" ;
+    ns1:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns1:modified "2024-03-05"^^xsd:date ;
+    ns1:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns1:relation <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1> ;
+    ns1:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns1:title "Classification of the model agreement A1 type adopted by INPS controlled vocabulary"@en,
         "Vocabolario Controllato sul tipo di accordo modello A1 adottato dall'INPS"@it ;
-    ns2:type <http://purl.org/adms/assettype/CodeList> ;
+    ns1:type <http://purl.org/adms/assettype/CodeList> ;
+    ns7:numberOfLevels "1" ;
+    ns2:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/02>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/03>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/04>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/05>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/06>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/07>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/08>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/09>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/10>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/11>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/12>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/13> ;
+    ns5:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
     ns3:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
-    ns3:distribution <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TAM_CSV>,
-        <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TAM_JSON_LD>,
-        <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TAM_RDF_TURTLE> ;
+    ns3:distribution <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TAM_CSV>,
+        <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TAM_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TAM_RDF_TURTLE> ;
     ns3:keyword "A1 Model"@en,
         "inps"@en,
         "inps"@it,
@@ -69,100 +71,98 @@
         "pensioni"@it,
         "relevant legislation"@en ;
     ns3:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
-    ns6:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
-    ns7:numberOfLevels "1" ;
-    ns8:keyConcept "tipo_accordo_modello_a1" .
+    ns6:keyConcept "tipo_accordo_modello_a1" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/01> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/01> a ns2:Concept ;
     rdfs:label "Lavoratore autonomo distaccato"@it ;
-    ns1:prefLabel "Lavoratore autonomo distaccato"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "01"@it ;
-    ns2:identifier "01"@it .
+    ns2:prefLabel "Lavoratore autonomo distaccato"@it ;
+    ns1:identifier "01"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "01"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/02> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/02> a ns2:Concept ;
     rdfs:label "Lavoratore autonomo che esercita un'attivit� in pi� stati"@it ;
-    ns1:prefLabel "Lavoratore autonomo che esercita un'attivit� in pi� stati"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "02"@it ;
-    ns2:identifier "02"@it .
+    ns2:prefLabel "Lavoratore autonomo che esercita un'attivit� in pi� stati"@it ;
+    ns1:identifier "02"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "02"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/03> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/03> a ns2:Concept ;
     rdfs:label "Lavoratore autonomo e subordinato che esercita un'attivit� in pi� stati"@it ;
-    ns1:prefLabel "Lavoratore autonomo e subordinato che esercita un'attivit� in pi� stati"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "03"@it ;
-    ns2:identifier "03"@it .
+    ns2:prefLabel "Lavoratore autonomo e subordinato che esercita un'attivit� in pi� stati"@it ;
+    ns1:identifier "03"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "03"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/04> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/04> a ns2:Concept ;
     rdfs:label "Dipendente pubblico"@it ;
-    ns1:prefLabel "Dipendente pubblico"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "04"@it ;
-    ns2:identifier "04"@it .
+    ns2:prefLabel "Dipendente pubblico"@it ;
+    ns1:identifier "04"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "04"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/05> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/05> a ns2:Concept ;
     rdfs:label "Dipendente pubblico che svolge attivit� di lavoro subordinato e/o autonomo in pi� stati"@it ;
-    ns1:prefLabel "Dipendente pubblico che svolge attivit� di lavoro subordinato e/o autonomo in pi� stati"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "05"@it ;
-    ns2:identifier "05"@it .
+    ns2:prefLabel "Dipendente pubblico che svolge attivit� di lavoro subordinato e/o autonomo in pi� stati"@it ;
+    ns1:identifier "05"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "05"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/06> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/06> a ns2:Concept ;
     rdfs:label "Lavoratore subordinato che esercita un'attivit� in pi� stati"@it ;
-    ns1:prefLabel "Lavoratore subordinato che esercita un'attivit� in pi� stati"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "06"@it ;
-    ns2:identifier "06"@it .
+    ns2:prefLabel "Lavoratore subordinato che esercita un'attivit� in pi� stati"@it ;
+    ns1:identifier "06"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "06"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/07> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/07> a ns2:Concept ;
     rdfs:label "Lavoratore subordinato/autonomo che � assoggettato alla legislazione dello Stato in cui lavora"@it ;
-    ns1:prefLabel "Lavoratore subordinato/autonomo che � assoggettato alla legislazione dello Stato in cui lavora"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "07"@it ;
-    ns2:identifier "07"@it .
+    ns2:prefLabel "Lavoratore subordinato/autonomo che � assoggettato alla legislazione dello Stato in cui lavora"@it ;
+    ns1:identifier "07"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "07"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/08> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/08> a ns2:Concept ;
     rdfs:label "Personale di volo e di cabina"@it ;
-    ns1:prefLabel "Personale di volo e di cabina"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "08"@it ;
-    ns2:identifier "08"@it .
+    ns2:prefLabel "Personale di volo e di cabina"@it ;
+    ns1:identifier "08"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "08"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/09> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/09> a ns2:Concept ;
     rdfs:label "Eccezione - Accordo in deroga generico"@it ;
-    ns1:prefLabel "Eccezione - Accordo in deroga generico"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "09"@it ;
-    ns2:identifier "09"@it .
+    ns2:prefLabel "Eccezione - Accordo in deroga generico"@it ;
+    ns1:identifier "09"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "09"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/10> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/10> a ns2:Concept ;
     rdfs:label "Eccezione - Accordo in deroga lavoratore autonomo"@it ;
-    ns1:prefLabel "Eccezione - Accordo in deroga lavoratore autonomo"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "10"@it ;
-    ns2:identifier "10"@it .
+    ns2:prefLabel "Eccezione - Accordo in deroga lavoratore autonomo"@it ;
+    ns1:identifier "10"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "10"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/11> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/11> a ns2:Concept ;
     rdfs:label "Eccezione - Accordo in deroga lavoratore dipendente DATORE DI LAVORO DOMESTICO"@it ;
-    ns1:prefLabel "Eccezione - Accordo in deroga lavoratore dipendente DATORE DI LAVORO DOMESTICO"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "11"@it ;
-    ns2:identifier "11"@it .
+    ns2:prefLabel "Eccezione - Accordo in deroga lavoratore dipendente DATORE DI LAVORO DOMESTICO"@it ;
+    ns1:identifier "11"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "11"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/12> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/12> a ns2:Concept ;
     rdfs:label "Lavoratore subordinato distaccato DATORE DI LAVORO DOMESTICO"@it ;
-    ns1:prefLabel "Lavoratore subordinato distaccato DATORE DI LAVORO DOMESTICO"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "12"@it ;
-    ns2:identifier "12"@it .
+    ns2:prefLabel "Lavoratore subordinato distaccato DATORE DI LAVORO DOMESTICO"@it ;
+    ns1:identifier "12"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "12"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1/13> a ns1:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/13> a ns2:Concept ;
     rdfs:label "Lavoratore Marittimo"@it ;
-    ns1:prefLabel "Lavoratore Marittimo"@it ;
-    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_A1> ;
-    ns1:notation "13"@it ;
-    ns2:identifier "13"@it .
+    ns2:prefLabel "Lavoratore Marittimo"@it ;
+    ns1:identifier "13"@it ;
+    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1> ;
+    ns2:notation "13"@it .
 
 <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a <http://dati.gov.it/onto/dcatapit#Organization>,
         ns4:Kind,
@@ -171,40 +171,40 @@
     ns4:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
 
 <https://w3id.org/italia/social-security/data/organization/inps> a <http://dati.gov.it/onto/dcatapit#Agent>,
-        ns5:Agent ;
-    ns2:identifier "inps" ;
-    ns5:name "Istituto Nazionale della Previdenza Sociale"@it,
+        ns8:Agent ;
+    ns1:identifier "inps" ;
+    ns8:name "Istituto Nazionale della Previdenza Sociale"@it,
         "National Institute for Social Security"@en .
 
-<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TAM_CSV> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TAM_CSV> a <http://dati.gov.it/onto/dcatapit#Distribution>,
         ns3:Distribution ;
-    ns2:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di accordo modello A1 adottato dall'INPS"@it,
+    ns1:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di accordo modello A1 adottato dall'INPS"@it,
         "This is the distribution in CSV of the model agreement A1 type adopted by INPS controlled vocabulary"@en ;
-    ns2:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-    ns2:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns2:title "CSV distribution of the model agreement A1 type adopted by INPS controlled vocabulary"@en,
+    ns1:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns1:title "CSV distribution of the model agreement A1 type adopted by INPS controlled vocabulary"@en,
         "Distribuzione CSV del vocabolario controllato sul tipo di accordo modello A1 adottato dall'INPS"@it ;
     ns3:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_accordo_modello_a1/latest> ;
     ns3:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_accordo_modello_a1/latest/tipo_accordo_modello_a1.csv> .
 
-<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TAM_JSON_LD> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TAM_JSON_LD> a <http://dati.gov.it/onto/dcatapit#Distribution>,
         ns3:Distribution ;
-    ns2:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di accordo modello A1 adottato dall'INPS"@it,
+    ns1:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di accordo modello A1 adottato dall'INPS"@it,
         "This is the distribution in JSON_LD of the model agreement A1 type adopted by INPS controlled vocabulary"@en ;
-    ns2:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
-    ns2:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns2:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di accordo modello A1 adottato dall'INPS"@it,
+    ns1:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns1:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di accordo modello A1 adottato dall'INPS"@it,
         "JSON_LD distribution of the model agreement A1 type adopted by INPS controlled vocabulary"@en ;
     ns3:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_accordo_modello_a1/latest> ;
     ns3:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_accordo_modello_a1/latest/tipo_accordo_modello_a1.json> .
 
-<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TAM_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TAM_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
         ns3:Distribution ;
-    ns2:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di accordo modello A1 adottato dall'INPS"@it,
+    ns1:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di accordo modello A1 adottato dall'INPS"@it,
         "This is the distribution in RDF/turtle of the model agreement A1 type adopted by INPS controlled vocabulary"@en ;
-    ns2:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
-    ns2:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns2:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di accordo modello A1 adottato dall'INPS"@it,
+    ns1:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns1:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di accordo modello A1 adottato dall'INPS"@it,
         "RDF/Turtle distribution of the model agreement A1 type adopted by INPS controlled vocabulary"@en ;
     ns3:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_accordo_modello_a1/latest> ;
     ns3:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_accordo_modello_a1/latest/tipo_accordo_modello_a1.ttl> .

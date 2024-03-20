@@ -10,7 +10,7 @@ info:
   contact:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
-  description: https://w3id.org/italia/social-security/onto/relevant-legislation/DomandaRilascioModelloA1
+  description: https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1
 paths: {}
 servers: []
 tags: []
@@ -19,24 +19,24 @@ components:
 
     IdDomandaRilascioModelloA1:
       type: string
-      description: https://w3id.org/italia/social-security/onto/relevant-legislation/codiceDomandaRilascioModelloA1
+      description: https://w3id.org/italia/social-security/onto/relevantLegislation/codiceDomandaRilascioModelloA1
       example: '0238'
       maxLength: 50
       minLength: 1
 
     DomandaRilascioModelloA1:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/relevant-legislation/DomandaRilascioModelloA1
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1
       # This custom property defines the associated json-ld
       #   context that can be used to semantically describe
       #   the instances.
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/relevant-legislation/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/relevantLegislation/"
         codice_domanda_rilascio_modello_a1: codiceDomandaRilascioModelloA1
         domanda_ha_dichiarazione:
           "@id": domandaHaDichiarazione
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/relevant-legislation/DomandaRilascioModelloA1
+      description: https://w3id.org/italia/social-security/onto/relevantLegislation/DomandaRilascioModelloA1
       required:
       - codice_domanda_rilascio_modello_a1
       properties:
@@ -53,13 +53,13 @@ components:
 
     Dichiarazione:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/relevant-legislation/Dichiarazione
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/relevantLegislation/Dichiarazione
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/relevant-legislation/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/relevantLegislation/"
         valore_dichiarazione: valoreDichiarazione
         descrizione_dichiarazione: descrizioneDichiarazione
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/relevant-legislation/Dichiarazione
+      description: https://w3id.org/italia/social-security/onto/relevantLegislation/Dichiarazione
       required:
       - valore_dichiarazione
       - descrizione_dichiarazione

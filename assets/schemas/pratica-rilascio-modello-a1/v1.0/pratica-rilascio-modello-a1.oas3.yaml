@@ -10,7 +10,7 @@ info:
   contact:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
-  description: https://w3id.org/italia/social-security/onto/relevant-legislation/PraticaRilascioModelloA1
+  description: https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1
 paths: {}
 servers: []
 tags: []
@@ -22,19 +22,19 @@ components:
 
     IdPraticaRilascioModelloA1:
       type: string
-      description: https://w3id.org/italia/social-security/onto/relevant-legislation/codicePraticaRilascioModelloA1
+      description: https://w3id.org/italia/social-security/onto/relevantLegislation/codicePraticaRilascioModelloA1
       example: '0489'
       maxLength: 50
       minLength: 1
 
     PraticaRilascioModelloA1:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/relevant-legislation/PraticaRilascioModelloA1
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1
       # This custom property defines the associated json-ld
       #   context that can be used to semantically describe
       #   the instances.
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/relevant-legislation/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/relevantLegislation/"
         codice_pratica_rilascio_modello_a1: codicePraticaRilascioModelloA1
         ha_domanda_rilascio_modello_a1:
           "@id": haDomandaRilascioModelloA1
@@ -43,7 +43,7 @@ components:
         pratica_gestita_da_sede_inps:
           "@id": praticaGestitaDaSedeINPS
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/relevant-legislation/PraticaRilascioModelloA1
+      description: https://w3id.org/italia/social-security/onto/relevantLegislation/PraticaRilascioModelloA1
       required:
       - codice_pratica_rilascio_modello_a1
       properties:
@@ -72,13 +72,13 @@ components:
 
     ModelloA1:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/relevant-legislation/ModelloA1
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/relevant-legislation/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/relevantLegislation/"
         inizio_validità: inizioValidità
         fine_validità: fineValidità
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/relevant-legislation/ModelloA1
+      description: https://w3id.org/italia/social-security/onto/relevantLegislation/ModelloA1
       required:
       - inizio_validità
       - fine_validità

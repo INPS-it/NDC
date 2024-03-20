@@ -1,11 +1,11 @@
-@prefix ns1: <http://www.w3.org/ns/dcat#> .
-@prefix ns2: <http://www.w3.org/2004/02/skos/core#> .
-@prefix ns3: <http://purl.org/dc/terms/> .
-@prefix ns4: <http://www.w3.org/2006/vcard/ns#> .
-@prefix ns5: <http://www.w3.org/ns/adms#> .
-@prefix ns6: <https://w3id.org/italia/onto/NDC/> .
-@prefix ns7: <http://xmlns.com/foaf/0.1/> .
-@prefix ns8: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix ns1: <http://xmlns.com/foaf/0.1/> .
+@prefix ns2: <http://purl.org/dc/terms/> .
+@prefix ns3: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns4: <http://www.w3.org/ns/dcat#> .
+@prefix ns5: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns6: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix ns7: <http://www.w3.org/ns/adms#> .
+@prefix ns8: <https://w3id.org/italia/onto/NDC/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -13,150 +13,150 @@
 ### Annotations
 
 <https://w3id.org/italia/data/standard/SKOS> a <http://dati.gov.it/onto/dcatapit#Standard>,
-        ns3:Standard ;
-    ns3:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
-    ns3:identifier "SKOS" ;
-    ns3:title "Simple Knowledge Organization System - SKOS" .
+        ns2:Standard ;
+    ns2:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    ns2:identifier "SKOS" ;
+    ns2:title "Simple Knowledge Organization System - SKOS" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato> a <http://dati.gov.it/onto/dcatapit#Dataset>,
-        <https://w3id.org/italia/social-security/onto/relevant-legislation/TipologiaDelegato>,
-        ns2:ConceptScheme,
-        ns5:Asset ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato> a <http://dati.gov.it/onto/dcatapit#Dataset>,
+        ns3:ConceptScheme,
+        ns7:Asset,
+        <https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaDelegato> ;
     rdfs:label "This is the controlled vocabulary of the delegate type adopted by INPS classification"@en,
         "Vocabolario Controllato sul tipo di delegato adottato dall'INPS"@it ;
-    ns2:prefLabel "Vocabolario Controllato sul tipo di delegato adottato dall'INPS"@it ;
+    ns3:prefLabel "Vocabolario Controllato sul tipo di delegato adottato dall'INPS"@it ;
     rdfs:comment "Classification of the delegate type adopted by INPS controlled vocabulary"@en,
         "Vocabolario Controllato sul tipo di delegato adottato dall'INPS"@it ;
     owl:versionInfo "0.1" ;
-    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato> ;
-    ns1:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
-    ns1:distribution <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TDLG_CSV>,
-        <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TDLG_JSON_LD>,
-        <https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TDLG_RDF_TURTLE> ;
-    ns1:keyword "inps"@en,
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato> ;
+    ns2:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    ns2:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    ns2:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:description "Classification of the delegate type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di delegato adottato dall'INPS"@it ;
+    ns2:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato" ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns2:modified "2024-03-05"^^xsd:date ;
+    ns2:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:relation <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1> ;
+    ns2:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:title "Classification of the delegate type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di delegato adottato dall'INPS"@it ;
+    ns2:type <http://purl.org/adms/assettype/CodeList> ;
+    ns6:numberOfLevels "1" ;
+    ns3:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/02>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/03>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/04>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/05>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/06>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/07> ;
+    ns7:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    ns4:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    ns4:distribution <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TDLG_CSV>,
+        <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TDLG_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TDLG_RDF_TURTLE> ;
+    ns4:keyword "inps"@en,
         "inps"@it,
         "legislazione pertinente"@it,
         "pension",
         "pensioni"@it,
         "relevant legislation"@en ;
-    ns1:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
-    ns2:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/01>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/02>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/03>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/04>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/05>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/06>,
-        <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/07> ;
-    ns3:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    ns3:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
-    ns3:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:description "Classification of the delegate type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di delegato adottato dall'INPS"@it ;
-    ns3:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato" ;
-    ns3:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-    ns3:modified "2024-03-05"^^xsd:date ;
-    ns3:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:relation <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_accordo_modello_a1> ;
-    ns3:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
-    ns3:title "Classification of the delegate type adopted by INPS controlled vocabulary"@en,
-        "Vocabolario Controllato sul tipo di delegato adottato dall'INPS"@it ;
-    ns3:type <http://purl.org/adms/assettype/CodeList> ;
-    ns5:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
-    ns6:keyConcept "tipo_delegato" ;
-    ns8:numberOfLevels "1" .
+    ns4:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    ns8:keyConcept "tipo_delegato" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/01> a ns2:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/01> a ns3:Concept ;
     rdfs:label "CITTADINO"@it ;
-    ns2:prefLabel "CITTADINO"@it ;
-    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato> ;
-    ns2:notation "01"@it ;
-    ns3:identifier "01"@it .
+    ns3:prefLabel "CITTADINO"@it ;
+    ns2:identifier "01"@it ;
+    ns3:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato> ;
+    ns3:notation "01"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/02> a ns2:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/02> a ns3:Concept ;
     rdfs:label "PATRONATO"@it ;
-    ns2:prefLabel "PATRONATO"@it ;
-    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato> ;
-    ns2:notation "02"@it ;
-    ns3:identifier "02"@it .
+    ns3:prefLabel "PATRONATO"@it ;
+    ns2:identifier "02"@it ;
+    ns3:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato> ;
+    ns3:notation "02"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/03> a ns2:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/03> a ns3:Concept ;
     rdfs:label "CONSULENTE/COMMERCIALISTA"@it ;
-    ns2:prefLabel "CONSULENTE/COMMERCIALISTA"@it ;
-    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato> ;
-    ns2:notation "03"@it ;
-    ns3:identifier "03"@it .
+    ns3:prefLabel "CONSULENTE/COMMERCIALISTA"@it ;
+    ns2:identifier "03"@it ;
+    ns3:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato> ;
+    ns3:notation "03"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/04> a ns2:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/04> a ns3:Concept ;
     rdfs:label "ASSOCIAZIONE DI CATEGORIA"@it ;
-    ns2:prefLabel "ASSOCIAZIONE DI CATEGORIA"@it ;
-    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato> ;
-    ns2:notation "04"@it ;
-    ns3:identifier "04"@it .
+    ns3:prefLabel "ASSOCIAZIONE DI CATEGORIA"@it ;
+    ns2:identifier "04"@it ;
+    ns3:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato> ;
+    ns3:notation "04"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/05> a ns2:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/05> a ns3:Concept ;
     rdfs:label "AZIENDA"@it ;
-    ns2:prefLabel "AZIENDA"@it ;
-    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato> ;
-    ns2:notation "05"@it ;
-    ns3:identifier "05"@it .
+    ns3:prefLabel "AZIENDA"@it ;
+    ns2:identifier "05"@it ;
+    ns3:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato> ;
+    ns3:notation "05"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/06> a ns2:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/06> a ns3:Concept ;
     rdfs:label "AMMINISTRAZIONE E ENTI PUBBLICI"@it ;
-    ns2:prefLabel "AMMINISTRAZIONE E ENTI PUBBLICI"@it ;
-    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato> ;
-    ns2:notation "06"@it ;
-    ns3:identifier "06"@it .
+    ns3:prefLabel "AMMINISTRAZIONE E ENTI PUBBLICI"@it ;
+    ns2:identifier "06"@it ;
+    ns3:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato> ;
+    ns3:notation "06"@it .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato/07> a ns2:Concept ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato/07> a ns3:Concept ;
     rdfs:label "Associazione Categoria Datori Lavoro Domestico"@it ;
-    ns2:prefLabel "Associazione Categoria Datori Lavoro Domestico"@it ;
-    ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevant-legislation/tipo_delegato> ;
-    ns2:notation "07"@it ;
-    ns3:identifier "07"@it .
+    ns3:prefLabel "Associazione Categoria Datori Lavoro Domestico"@it ;
+    ns2:identifier "07"@it ;
+    ns3:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_delegato> ;
+    ns3:notation "07"@it .
 
 <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a <http://dati.gov.it/onto/dcatapit#Organization>,
-        ns4:Kind,
-        ns4:Organization ;
-    ns4:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
-    ns4:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+        ns5:Kind,
+        ns5:Organization ;
+    ns5:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns5:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
 
 <https://w3id.org/italia/social-security/data/organization/inps> a <http://dati.gov.it/onto/dcatapit#Agent>,
-        ns7:Agent ;
-    ns3:identifier "inps" ;
-    ns7:name "Istituto Nazionale della Previdenza Sociale"@it,
+        ns1:Agent ;
+    ns2:identifier "inps" ;
+    ns1:name "Istituto Nazionale della Previdenza Sociale"@it,
         "National Institute for Social Security"@en .
 
-<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TDLG_CSV> a <http://dati.gov.it/onto/dcatapit#Distribution>,
-        ns1:Distribution ;
-    ns1:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_delegato/latest> ;
-    ns1:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_delegato/latest/tipo_delegato.csv> ;
-    ns3:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it,
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TDLG_CSV> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns4:Distribution ;
+    ns2:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it,
         "This is the distribution in CSV of the delegate type adopted by INPS controlled vocabulary"@en ;
-    ns3:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-    ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns3:title "CSV distribution of the delegate type adopted by INPS controlled vocabulary"@en,
-        "Distribuzione CSV del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it .
+    ns2:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    ns2:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns2:title "CSV distribution of the delegate type adopted by INPS controlled vocabulary"@en,
+        "Distribuzione CSV del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it ;
+    ns4:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_delegato/latest> ;
+    ns4:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_delegato/latest/tipo_delegato.csv> .
 
-<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TDLG_JSON_LD> a <http://dati.gov.it/onto/dcatapit#Distribution>,
-        ns1:Distribution ;
-    ns1:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_delegato/latest> ;
-    ns1:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_delegato/latest/tipo_delegato.json> ;
-    ns3:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it,
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TDLG_JSON_LD> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns4:Distribution ;
+    ns2:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it,
         "This is the distribution in JSON_LD of the delegate type adopted by INPS controlled vocabulary"@en ;
-    ns3:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
-    ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns3:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it,
-        "JSON_LD distribution of the delegate type adopted by INPS controlled vocabulary"@en .
+    ns2:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    ns2:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns2:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it,
+        "JSON_LD distribution of the delegate type adopted by INPS controlled vocabulary"@en ;
+    ns4:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_delegato/latest> ;
+    ns4:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_delegato/latest/tipo_delegato.json> .
 
-<https://w3id.org/italia/social-security/data/relevant-legislation/distribution/TDLG_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
-        ns1:Distribution ;
-    ns1:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_delegato/latest> ;
-    ns1:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_delegato/latest/tipo_delegato.ttl> ;
-    ns3:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it,
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TDLG_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns4:Distribution ;
+    ns2:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it,
         "This is the distribution in RDF/turtle of the delegate type adopted by INPS controlled vocabulary"@en ;
-    ns3:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
-    ns3:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns3:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it,
-        "RDF/Turtle distribution of the delegate type adopted by INPS controlled vocabulary"@en .
+    ns2:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    ns2:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns2:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di delegato adottato dall'INPS"@it,
+        "RDF/Turtle distribution of the delegate type adopted by INPS controlled vocabulary"@en ;
+    ns4:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_delegato/latest> ;
+    ns4:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_delegato/latest/tipo_delegato.ttl> .
 
 ### Serialized using the ttlser deterministic serializer v1.2.0

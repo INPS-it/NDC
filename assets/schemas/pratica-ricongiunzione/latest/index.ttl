@@ -13,15 +13,24 @@
 <https://w3id.org/italia/social-security/onto/contributions> a owl:Ontology ;
     foaf:name "Ontologia INPS relativa ai contributi previdenziali" .
 
+### Classes
+
+INPSContributions:AdeguamentoPerRicongiunzione a owl:Class ;
+    rdfs:label "Adeguamento Per Ricongiunzione"@it,
+        "Aggregation Adjustment"@en ;
+    rdfs:subClassOf INPSContributions:AdeguamentoContributivo ;
+    rdfs:comment "Istituto che consente, a chi ha posizioni assicurative in gestioni previdenziali diverse, di riunire, mediante trasferimento, tutti i periodi contributivi presso un’unica gestione, allo scopo di ottenere una sola pensione. Tale ricongiunzione avviene a domanda dell’assicurato o dei suoi superstiti e deve riguardare tutti i periodi di contribuzione che il lavoratore ha maturato in almeno due diverse forme previdenziali fino al momento della richiesta e che non siano già stati utilizzati per liquidare una pensione. I periodi così ricongiunti sono utilizzabili come se fossero stati versati nel fondo di destinazione e danno diritto ad un trattamento pensionistico basato sui requisiti di quest’ultimo fondo. A fronte della presentazione della domanda, l'INPS istruisce la relativa pratica per la valutazione dell'accoglimento della richiesta e la determinazione di eventuali oneri a carico del Richiedente."@it,
+        "The aggregation of insurance periods allows the transfer of existing contributions from at multiple institutes to a single institute in order to obtain a unified pension. The aggregation of insurance periods can be carried out free of charge or for payment."@en .
+
 ### Individuals
 
 <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
         owl:NamedIndividual,
         vcard:Kind,
         vcard:Organization ;
-    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
-        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
-    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    foaf:name "Central Management of Information Technology and Innovations"@en,
+        "Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
     vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
 
 <https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
@@ -41,7 +50,7 @@
 
 ### Annotations
 
-<https://w3id.org/italia/schemas/pratica-ricongiuzione/latest/pratica-ricongiuzione.oas3.yaml> a dcatapit:Dataset,
+<https://w3id.org/italia/schemas/pratica-ricongiunzione/latest/pratica-ricongiunzione.oas3.yaml> a dcatapit:Dataset,
         dcatapit:Distribution ;
     rdfs:label "Consultazione Adeguamento Per Ricongiunzione API"@it ;
     rdfs:comment "Servizio di notifica"@it ;
@@ -49,13 +58,15 @@
     admsapit:acronym "inps" ;
     admsapit:hasKeyClass INPSContributions:AdeguamentoPerRicongiunzione ;
     admsapit:prefix "INPSContributions"^^xsd:string ;
+    admsapit:status "catalogued",
+        "published" ;
     admsapit:target "Cittadini"@it,
         "Imprese"@it,
         "Pubbliche Amministrazioni"@it ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/pratica-ricongiuzione/latest> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/pratica-ricongiunzione/latest> ;
     dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
-    dcat:distribution <https://w3id.org/italia/schemas/pratica-ricongiuzione/latest/pratica-ricongiuzione.oas3.yaml> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/pratica-ricongiuzione/latest/pratica-ricongiuzione.oas3.yaml> ;
+    dcat:distribution <https://w3id.org/italia/schemas/pratica-ricongiunzione/latest/pratica-ricongiunzione.oas3.yaml> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/pratica-ricongiunzione/latest/pratica-ricongiunzione.oas3.yaml> ;
     dcat:keyword "Aggregation Application"@en,
         "Domestic Worker"@en,
         "Lavoratore Domestico"@it,
@@ -68,9 +79,9 @@
     dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
     dct:conformsTo <https://w3id.org/italia/social-security/onto/contributions> ;
     dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    dct:description "Lo schema dati del servizio che viene invocato per ottenere le informazioni sulla pratica di ricongiunzione, che consente, a chi ha posizioni assicurative in gestioni previdenziali diverse, di riunire, mediante trasferimento, tutti i periodi contributivi presso un’unica gestione, allo scopo di ottenere una sola pensione." ;
+    dct:description "Il servizio viene invocato per ottenere le informazioni sulla pratica di ricongiunzione, che consente, a chi ha posizioni assicurative in gestioni previdenziali diverse, di riunire, mediante trasferimento, tutti i periodi contributivi presso un’unica gestione, allo scopo di ottenere una sola pensione." ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
-    dct:identifier <https://w3id.org/italia/schemas/pratica-ricongiuzione> ;
+    dct:identifier <https://w3id.org/italia/schemas/pratica-ricongiunzione> ;
     dct:issued "2024-02-13"^^xsd:date ;
     dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
     dct:modified "2024-02-20"^^xsd:date ;
