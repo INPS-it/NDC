@@ -19,9 +19,9 @@
     ns1:title "Simple Knowledge Organization System - SKOS" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1> a <http://dati.gov.it/onto/dcatapit#Dataset>,
+        <https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaAccordoModelloA1>,
         ns2:ConceptScheme,
-        ns5:Asset,
-        <https://w3id.org/italia/social-security/onto/relevantLegislation/TipologiaAccordoModelloA1> ;
+        ns5:Asset ;
     rdfs:label "This is the controlled vocabulary of the model agreement A1 type adopted by INPS classification"@en,
         "Vocabolario Controllato sul tipo di accordo modello A1 adottato dall'INPS"@it ;
     ns2:prefLabel "Vocabolario Controllato sul tipo di accordo modello A1 adottato dall'INPS"@it ;
@@ -43,7 +43,6 @@
     ns1:title "Classification of the model agreement A1 type adopted by INPS controlled vocabulary"@en,
         "Vocabolario Controllato sul tipo di accordo modello A1 adottato dall'INPS"@it ;
     ns1:type <http://purl.org/adms/assettype/CodeList> ;
-    ns7:numberOfLevels "1" ;
     ns2:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/01>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/02>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/03>,
@@ -57,7 +56,6 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/11>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/12>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_a1/13> ;
-    ns5:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
     ns3:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     ns3:distribution <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TAM_CSV>,
         <https://w3id.org/italia/social-security/data/relevantLegislation/distribution/TAM_JSON_LD>,
@@ -71,7 +69,9 @@
         "pensioni"@it,
         "relevant legislation"@en ;
     ns3:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
-    ns6:keyConcept "tipo_accordo_modello_a1" .
+    ns5:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    ns6:keyConcept "tipo_accordo_modello_a1" ;
+    ns7:numberOfLevels "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/relevantLegislation/tipo_accordo_modello_A1/01> a ns2:Concept ;
     rdfs:label "Lavoratore autonomo distaccato"@it ;
