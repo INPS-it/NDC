@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/relevantLegislation/"
-     xml:base="https://w3id.org/italia/social-security/onto/relevantLegislation/"
+<rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/pensions/"
+     xml:base="https://w3id.org/italia/social-security/onto/pensions/"
      xmlns:L0="https://w3id.org/italia/onto/l0/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
@@ -19,7 +19,7 @@
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:CPSV="https://w3id.org/italia/onto/CPSV/"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:INPSRL="https://w3id.org/italia/social-security/onto/relevantLegislation/"
+     xmlns:INPSPensions="https://w3id.org/italia/social-security/onto/pensions/"
      xmlns:TI="https://w3id.org/italia/onto/TI/"
      xmlns:INPSCore="https://w3id.org/italia/social-security/onto/core/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -4310,6 +4310,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
     <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+	<dct:identifier>DirezioneCentraleTII</dct:identifier>
     <foaf:name xml:lang="en">Central Management of Information Technology and Innovations</foaf:name>
     <foaf:name xml:lang="it">Direzione Centrale Tecnologia, Informatica e Innovazione</foaf:name>
     <vcard:fn>Direzione Centrale Tecnologia, Informatica e Innovazione</vcard:fn>
