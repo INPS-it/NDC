@@ -76,8 +76,8 @@ INPSService: a owl:Ontology ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
     dct:modified "2024-01-17T00:00:00+00:00"^^xsd:dateTime ;
-    dct:publisher <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
-    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
     dct:title "INPS services Ontology"@en,
         "Ontologia INPS relativa ai servizi previdenziali"@it .
 
@@ -1331,9 +1331,9 @@ CPSV:NonActive a owl:NamedIndividual,
         vcard:Kind,
         vcard:Organization ;
     dct:identifier "DirezioneCentraleTII" ;
-    foaf:name "Central Management of Information Technology and Innovations"@en,
-        "Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
-    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
     vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
 
 <https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,

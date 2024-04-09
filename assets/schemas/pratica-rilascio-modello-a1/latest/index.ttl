@@ -33,13 +33,6 @@
     foaf:name "Istituto nazionale della previdenza sociale"@it,
         "National institute for Social Security"@en .
 
-<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
-        foaf:Agent,
-        owl:NamedIndividual ;
-    dct:identifier "TD" ;
-    foaf:name "Digital Transformation Team"@en,
-        "Team per la Trasformazione Digitale"@it .
-
 ### Annotations
 
 <https://w3id.org/italia/schemas/pratica-rilascio-modello-a1/latest/pratica-rilascio-modello-a1.oas3.yaml> a dcatapit:Dataset,
@@ -73,8 +66,8 @@
     dct:issued "2024-03-08"^^xsd:date ;
     dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
     dct:modified "2024-03-08"^^xsd:date ;
-    dct:publisher <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
-    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
     dct:title "Consultazione Pratica Rilascio Modello A1 API"@it .
 
 ### Serialized using the ttlser deterministic serializer v1.2.0
