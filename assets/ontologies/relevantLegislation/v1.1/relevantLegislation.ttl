@@ -4,7 +4,9 @@
 @prefix COV: <https://w3id.org/italia/onto/COV/> .
 @prefix CPV: <https://w3id.org/italia/onto/CPV/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix INPSContributions: <https://w3id.org/italia/social-security/onto/contributions/> .
 @prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
 @prefix INPSRL: <https://w3id.org/italia/social-security/onto/relevantLegislation/> .
@@ -14,6 +16,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix RO: <https://w3id.org/italia/onto/RO/> .
 @prefix SM: <https://w3id.org/italia/onto/SM/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 INPSRL: a owl:Ontology ;
@@ -762,6 +765,72 @@ INPSRL:TitolarePratica a owl:Class ;
     rdfs:subClassOf INPSRL:Lavoratore ;
     rdfs:comment "Sottoclasse di Persona (Fisica) che classifica le persone a cui, facendo seguito alla presentazione di idonea domanda, sono riconosciuti i requisiti per accedere al Modello A1. Nel caso il Titolare sia colui che presenta la domanda, corrisponde al Richiedente."@it,
         "Sub-class of Person (Physical) which classifies the people who, following the presentation of a suitable application, are recognized as having the requisites for accessing the A1 Form. If the Holder issues the Claim, it corresponds to the Applicant."@en .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
+        "This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - legislazione pertinente"@it,
+        "N-TRIPLES distribution of the INPS ontology - relevant legislation"@en .
+
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
+        "This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - legislazione pertinente"@it,
+        "RDF/Turtle distribution of the INPS ontology - relevant legislation"@en .
+
+<https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1)."@it,
+        "This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1)."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - legislazione pertinente"@it,
+        "RDF/XML distribution of the INPS ontology - relevant legislation"@en .
 
 ### Axioms
 

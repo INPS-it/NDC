@@ -3,13 +3,16 @@
 @prefix COV: <https://w3id.org/italia/onto/COV/> .
 @prefix CPV: <https://w3id.org/italia/onto/CPV/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
 @prefix L0: <https://w3id.org/italia/onto/l0/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 INPSCore: a owl:Ontology ;
@@ -283,6 +286,70 @@ L0:Agent a owl:Class .
             CPV:Person ) .
 
 ### Individuals
+
+<https://w3id.org/italia/social-security/data/core/distribution/CORE-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/core/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/core/latest/core.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle componenti del dominio funzionale dell'istituto comuni a procedure e servizi svolti dall'ente stesso. Tra di essi troviamo, ad esempio, le dislocazioni territoriali, come le sedi, e le entità astratte, come i ruoli."@it,
+        "This is the distribution in N-TRIPLES of the INPS Ontology about components of the institution's functional domain common to procedures and services performed by the institution itself. These include, for example, territorial dislocations, such as locations, and abstract entities, such as roles."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Core"@it,
+        "N-TRIPLES distribution of the INPS ontology - Core"@en .
+
+<https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/core/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/core/latest/core.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle componenti del dominio funzionale dell'istituto comuni a procedure e servizi svolti dall'ente stesso. Tra di essi troviamo, ad esempio, le dislocazioni territoriali, come le sedi, e le entità astratte, come i ruoli."@it,
+        "This is the distribution in RDF/Turtle of the INPS Ontology about components of the institution's functional domain common to procedures and services performed by the institution itself. These include, for example, territorial dislocations, such as locations, and abstract entities, such as roles."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Core"@it,
+        "RDF/Turtle distribution of the INPS ontology - Core"@en .
+
+<https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/core/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/core/latest/core.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle componenti del dominio funzionale dell'istituto comuni a procedure e servizi svolti dall'ente stesso. Tra di essi troviamo, ad esempio, le dislocazioni territoriali, come le sedi, e le entità astratte, come i ruoli."@it,
+        "This is the distribution in RDF/XML of the INPS Ontology about components of the institution's functional domain common to procedures and services performed by the institution itself. These include, for example, territorial dislocations, such as locations, and abstract entities, such as roles."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Core"@it,
+        "RDF/XML distribution of the INPS ontology - Core"@en .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
 
 INPSCore:INPS a owl:NamedIndividual ;
     rdfs:label "INPS"@en,

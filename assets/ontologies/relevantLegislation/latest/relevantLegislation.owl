@@ -1416,6 +1416,89 @@
         <rdfs:label xml:lang="it">Tipologia lavoratore autonomo</rdfs:label>
     </owl:Class>
 
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII">
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+	<dct:identifier>DirezioneCentraleTII</dct:identifier>
+    <foaf:name xml:lang="en">INPS - Central Management of Information Technology and Innovations</foaf:name>
+    <foaf:name xml:lang="it">INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</foaf:name>
+    <vcard:fn>INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</vcard:fn>
+    <vcard:hasEmail rdf:resource="mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
+    <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dct:identifier>inps</dct:identifier>
+    <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
+    <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/td">
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dct:identifier>TD</dct:identifier>
+    <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
+    <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-N-TRIPLES">
+    <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest"/>
+    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.n3"/>
+    <dct:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1).</dct:description>
+    <dct:description xml:lang="en">This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1).</dct:description>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dct:title xml:lang="it">Distribuzione N-TRIPLES dell'ontologia INPS - legislazione pertinente</dct:title>
+    <dct:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - relevant legislation</dct:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-TURTLE">
+    <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest"/>
+    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.ttl"/>
+    <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1).</dct:description>
+    <dct:description xml:lang="en">This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1).</dct:description>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dct:title xml:lang="it">Distribuzione RDF/Turtle dell'ontologia INPS - legislazione pertinente</dct:title>
+    <dct:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - relevant legislation</dct:title>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/relevantLegislation/distribution/RELLEG-RDF-XML">
+    <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/relevantLegislation/latest"/>
+    <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/relevantLegislation/latest/relevantLegislation.owl"/>
+    <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell'ontologia INPS Ontologia INPS relativa alle entità e alle relazioni che descrivono le modalità di richiesta e di rilascio del certificato di legislazione applicabile (Documento portatile A1).</dct:description>
+    <dct:description xml:lang="en">This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the methods of requesting and issuing the certificate of applicable legislation (Portable Document A1).</dct:description>
+    <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+    <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+    <dct:title xml:lang="it">Distribuzione RDF/XML dell'ontologia INPS - legislazione pertinente</dct:title>
+    <dct:title xml:lang="en">RDF/XML distribution of the INPS ontology - relevant legislation</dct:title>
+  </rdf:Description>
 
 
     <!--

@@ -656,9 +656,114 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Restriction>
+
+<!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- https://w3id.org/italia/social-security/data/core/distribution/CORE-N-TRIPLES -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/core/distribution/CORE-N-TRIPLES">
+      <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/core/latest"/>
+      <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/core/latest/core.n3"/>
+      <dct:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle componenti del dominio funzionale dell'istituto comuni a procedure e servizi svolti dall'ente stesso. Tra di essi troviamo, ad esempio, le dislocazioni territoriali, come le sedi, e le entità astratte, come i ruoli.</dct:description>
+      <dct:description xml:lang="en">This is the distribution in N-TRIPLES of the INPS Ontology about components of the institution's functional domain common to procedures and services performed by the institution itself. These include, for example, territorial dislocations, such as locations, and abstract entities, such as roles.</dct:description>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
+      <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      <dct:title xml:lang="it">Distribuzione N-TRIPLES dell'ontologia INPS - Core</dct:title>
+      <dct:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - Core</dct:title>
+    </rdf:Description>
+
+    <!-- https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-TURTLE -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-TURTLE">
+      <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/core/latest"/>
+      <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/core/latest/core.ttl"/>
+      <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle componenti del dominio funzionale dell'istituto comuni a procedure e servizi svolti dall'ente stesso. Tra di essi troviamo, ad esempio, le dislocazioni territoriali, come le sedi, e le entità astratte, come i ruoli.</dct:description>
+      <dct:description xml:lang="en">This is the distribution in RDF/Turtle of the INPS Ontology about components of the institution's functional domain common to procedures and services performed by the institution itself. These include, for example, territorial dislocations, such as locations, and abstract entities, such as roles.</dct:description>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+      <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      <dct:title xml:lang="it">Distribuzione RDF/Turtle dell'ontologia INPS - Core</dct:title>
+      <dct:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - Core</dct:title>
+    </rdf:Description>
+
+    <!-- https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-XML -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/core/distribution/CORE-RDF-XML">
+      <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/core/latest"/>
+      <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/core/latest/core.owl"/>
+      <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle componenti del dominio funzionale dell'istituto comuni a procedure e servizi svolti dall'ente stesso. Tra di essi troviamo, ad esempio, le dislocazioni territoriali, come le sedi, e le entità astratte, come i ruoli.</dct:description>
+      <dct:description xml:lang="en">This is the distribution in RDF/XML of the INPS Ontology about components of the institution's functional domain common to procedures and services performed by the institution itself. These include, for example, territorial dislocations, such as locations, and abstract entities, such as roles.</dct:description>
+      <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+      <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+      <dct:title xml:lang="it">Distribuzione RDF/XML dell'ontologia INPS - Core</dct:title>
+      <dct:title xml:lang="en">RDF/XML distribution of the INPS ontology - Core</dct:title>
+    </rdf:Description>
+
+	<!-- https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII">
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+      <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+		<dct:identifier>DirezioneCentraleTII</dct:identifier>
+      <foaf:name xml:lang="en">INPS - Central Management of Information Technology and Innovations</foaf:name>
+      <foaf:name xml:lang="it">INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</foaf:name>
+      <vcard:fn>INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</vcard:fn>
+      <vcard:hasEmail rdf:resource="mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it"/>
+    </rdf:Description>
+
+	  <!-- https://w3id.org/italia/social-security/data/organization/inps -->
+
+      <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <dct:identifier>inps</dct:identifier>
+        <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
+        <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
+      </rdf:Description>
+
+    <!-- https://w3id.org/italia/social-security/data/organization/td -->
+
+    <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/td">
+      <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+      <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+      <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+      <dct:identifier>TD</dct:identifier>
+      <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
+      <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
+    </rdf:Description>
+
+    <!-- https://w3id.org/italia/social-security/onto/core/INPS -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/core/INPS">
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+        <rdfs:comment xml:lang="it">L'Istituto Nazionale della Previdenza Sociale è l'Ente Pubblico che gestisce la liquidazione e il pagamento delle pensioni e delle indennità di natura previdenziale e assistenziale. Le pensioni sono prestazioni previdenziali, determinate sulla base di rapporti assicurativi e finanziate con i contributi di lavoratori e aziende pubbliche e private. Invece, le prestazioni assistenziali o “a sostegno del reddito” tutelano i lavoratori che si trovano in particolari momenti di difficoltà della loro vita lavorativa e provvedono al pagamento di somme destinate a coloro che hanno redditi modesti e famiglie numerose. Per alcune di queste prestazioni l’INPS è coinvolto solo nella fase di erogazione, mentre per altre svolge tutto il procedimento di assegnazione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The National Institute for Social Security is the Italian Public Organization that supplies pensions and other services of social security to who has the right. It also does contributory activity collecting the contributions. The services are based on a mandatory insurance relationship and are funded with the contributions of employed workers, elaborated as a percentage of the wage. It also manages welfare services or &quot;income support&quot; services that protect workers who find themselves in particular difficult moments in their working life and provide for the payment of sums intended for those with modest incomes and large families.</rdfs:comment>
+        <rdfs:label xml:lang="en">INPS</rdfs:label>
+        <rdfs:label xml:lang="it">INPS</rdfs:label>
+    </owl:NamedIndividual>
+
 </rdf:RDF>
-
-
 
 <!-- Generated by the OWL API (version 2.4) https://github.com/owlcs/owlapi -->
 
