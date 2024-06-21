@@ -1,0 +1,154 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dc:Standard,
+        <http://dati.gov.it/onto/dcatapit#Standard> ;
+    dc:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dc:identifier "SKOS" ;
+    dc:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento> a adms:Asset,
+        <http://dati.gov.it/onto/dcatapit#Dataset>,
+        <https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaDocumento>,
+        skos:ConceptScheme ;
+    rdfs:label "Controlled vocabulary on types of identification documents"@en,
+        "Vocabolario controllato sui tipi di documenti di riconoscimento##"@it ;
+    skos:prefLabel "Vocabolario controllato sui tipi di documenti di riconoscimento"@it ;
+    rdfs:comment "Controlled vocabulary on types of identification documents"@en,
+        "Vocabolario controllato sui tipi di documenti di riconoscimento"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dc:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dc:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dc:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dc:description "Controlled vocabulary on types of identification documents"@en,
+        "Vocabolario controllato sui tipi di documenti di riconoscimento"@it ;
+    dc:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento" ;
+    dc:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dc:modified "2024-05-20"^^xsd:date ;
+    dc:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dc:relation <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_contratto>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_parentela>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_permesso> ;
+    dc:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dc:title "Controlled vocabulary on types of identification documents"@en,
+        "Vocabolario controllato sui tipi di documenti di riconoscimento"@it ;
+    dc:type <http://purl.org/adms/assettype/CodeList> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/TDO_CSV>,
+        <https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/TDO_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/TDO_RDF_TURTLE> ;
+    dcat:keyword "documento d'identità"@it,
+        "domestic work services"@en,
+        "identification document"@en,
+        "inps"@en,
+        "inps"@it,
+        "servizi per il lavoro domestico"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    NDC:keyConcept "tipo_documento" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/4>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/6>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/7>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/8>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/10> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/1> a skos:Concept ;
+    rdfs:label "CARTA IDENTITA'"@it ;
+    skos:prefLabel "CARTA IDENTITA'"@it ;
+    dc:identifier "1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento> ;
+    skos:notation "1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/2> a skos:Concept ;
+    rdfs:label "PASSAPORTO ITALIANO"@it ;
+    skos:prefLabel "PASSAPORTO ITALIANO"@it ;
+    dc:identifier "2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento> ;
+    skos:notation "2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/3> a skos:Concept ;
+    rdfs:label "PATENTE GUIDA"@it ;
+    skos:prefLabel "PATENTE GUIDA"@it ;
+    dc:identifier "3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento> ;
+    skos:notation "3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/4> a skos:Concept ;
+    rdfs:label "TESSERA MINISTERIALE"@it ;
+    skos:prefLabel "TESSERA MINISTERIALE"@it ;
+    dc:identifier "4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento> ;
+    skos:notation "4"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/6> a skos:Concept ;
+    rdfs:label "PASSAPORTO STRANIERO"@it ;
+    skos:prefLabel "PASSAPORTO STRANIERO"@it ;
+    dc:identifier "6"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento> ;
+    skos:notation "6"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/7> a skos:Concept ;
+    rdfs:label "VISTO CONSOLARE"@it ;
+    skos:prefLabel "VISTO CONSOLARE"@it ;
+    dc:identifier "7"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento> ;
+    skos:notation "7"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/8> a skos:Concept ;
+    rdfs:label "CARTA IDENTITA' STRANIERA"@it ;
+    skos:prefLabel "CARTA IDENTITA' STRANIERA"@it ;
+    dc:identifier "8"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento> ;
+    skos:notation "8"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento/10> a skos:Concept ;
+    rdfs:label "PERMESSO SOGGIORNO art.13 DL 113/2018"@it ;
+    skos:prefLabel "PERMESSO SOGGIORNO art.13 DL 113/2018"@it ;
+    dc:identifier "10"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_documento> ;
+    skos:notation "10"@it .
+
+<https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/TDO_CSV> a dcat:Distribution,
+        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+    dc:description "Questa è la distribuzione CSV del vocabolario controllato sui tipi di documenti di identità"@it,
+        "This is the distribution in CSV of the ID type controlled vocabulary"@en ;
+    dc:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dc:title "CSV distribution of the ID type controlled vocabulary"@en,
+        "Distribuzione CSV del vocabolario controllato sui tipi di documento di identità"@it ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_documento/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_documento/latest/tipo_documento.csv> .
+
+<https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/TDO_JSON_LD> a dcat:Distribution,
+        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+    dc:description "Questa è la distribuzione JSON_LD del vocabolario controllato sui tipi di documenti di identità"@it,
+        "This is the distribution in JSON_LD of the ID type controlled vocabulary"@en ;
+    dc:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+    dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dc:title "Distribuzione JSON_LD del vocabolario controllato sui tipi di documento di identità"@it,
+        "JSON_LD distribution of the ID type controlled vocabulary"@en ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_documento/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_documento/latest/tipo_documento.json> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a foaf:Agent,
+        <http://dati.gov.it/onto/dcatapit#Agent> ;
+    dc:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

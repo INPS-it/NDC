@@ -1,0 +1,655 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dc:Standard,
+        <http://dati.gov.it/onto/dcatapit#Standard> ;
+    dc:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dc:identifier "SKOS" ;
+    dc:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> a adms:Asset,
+        <http://dati.gov.it/onto/dcatapit#Dataset>,
+        <https://w3id.org/italia/social-security/onto/domesticWorkServices/MotiviPermesso>,
+        skos:ConceptScheme ;
+    rdfs:label "Controlled vocabulary of work permit types"@en,
+        "Vocabolario controllato dei tipi di permessi di lavoro"@it ;
+    skos:prefLabel "Vocabolario controllato dei tipi di permessi di lavoro"@it ;
+    rdfs:comment "Controlled vocabulary of work permit types"@en,
+        "Vocabolario controllato dei tipi di permessi di lavoro"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dc:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dc:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dc:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dc:description "Controlled vocabulary of work permit types"@en,
+        "Vocabolario controllato dei tipi di permessi di lavoro"@it ;
+    dc:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso" ;
+    dc:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dc:modified "2024-05-20"^^xsd:date ;
+    dc:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dc:relation <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_contratto>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/tipo_retribuzione> ;
+    dc:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dc:title "Controlled vocabulary of work permit types"@en,
+        "Vocabolario controllato dei tipi di permessi di lavoro"@it ;
+    dc:type <http://purl.org/adms/assettype/CodeList> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/MOPE_CSV>,
+        <https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/MOPE_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/MOPE_RDF_TURTLE> ;
+    dcat:keyword "domestic work services"@en,
+        "inps"@en,
+        "inps"@it,
+        "permesso da lavoro"@it,
+        "servizi per il lavoro domestico"@it,
+        "work permit"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    NDC:keyConcept "motivi_permesso" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/50CUK>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/50FFK>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/50FRK>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/50FUK>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ADZNE>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/AFFIS>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/APORI>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ASIL3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ASIL6>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ASMIN>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ATAPO>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ATCIT>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ATSPO>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/BIFAM>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CALAM>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CASIL>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CPSUS>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CSST1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CUREM>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CURME>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/DUBLI>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/EXFAM>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMB2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMB3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMI1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMI2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMIA>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMIG>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMPR>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FORME>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ICT01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/INTMI>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LASTA>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVAR>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVAU>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVO3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVO4>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVOB>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVOR>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVPL>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVT1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVTU>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LRE20>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LSE20>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LSMAR>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LTE20>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/MICT1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/MINET>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/MRICE>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/NOREF>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/NOREQ>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/PRINV>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/PROSO>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/PROSU>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/PROTE>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/PTUKR>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/RELIG>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/RETRA>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/RIC01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/RICRL>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/SALUT>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/SFRUL>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/STUD0>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/STUD1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/STURL>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/TIRC1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/UEA10>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/UEA20>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/VACLA>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/VALOR>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/VIOLE>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/VOLON> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/50CUK> a skos:Concept ;
+    rdfs:label "ARTICOLO 50 TUE"@it ;
+    skos:prefLabel "ARTICOLO 50 TUE"@it ;
+    dc:identifier "50CUK"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "50CUK"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/50FFK> a skos:Concept ;
+    rdfs:label "ARTICOLO 50 TUE-FAMILIARE LAV. FRONT."@it ;
+    skos:prefLabel "ARTICOLO 50 TUE-FAMILIARE LAV. FRONT."@it ;
+    dc:identifier "50FFK"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "50FFK"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/50FRK> a skos:Concept ;
+    rdfs:label "ARTICOLO 50 TUE-LAV. FRONTALIERO"@it ;
+    skos:prefLabel "ARTICOLO 50 TUE-LAV. FRONTALIERO"@it ;
+    dc:identifier "50FRK"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "50FRK"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/50FUK> a skos:Concept ;
+    rdfs:label "ARTICOLO 50 TUE-FAMILIARE"@it ;
+    skos:prefLabel "ARTICOLO 50 TUE-FAMILIARE"@it ;
+    dc:identifier "50FUK"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "50FUK"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ADZNE> a skos:Concept ;
+    rdfs:label "ADOZIONE"@it ;
+    skos:prefLabel "ADOZIONE"@it ;
+    dc:identifier "ADZNE"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "ADZNE"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/AFFIS> a skos:Concept ;
+    rdfs:label "AFFIDAMENTO"@it ;
+    skos:prefLabel "AFFIDAMENTO"@it ;
+    dc:identifier "AFFIS"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "AFFIS"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/APORI> a skos:Concept ;
+    rdfs:label "RICON. APOLIDE-DPR 334/04 ART. 1 C. 1 LET. C."@it ;
+    skos:prefLabel "RICON. APOLIDE-DPR 334/04 ART. 1 C. 1 LET. C."@it ;
+    dc:identifier "APORI"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "APORI"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ASIL3> a skos:Concept ;
+    rdfs:label "ASILO"@it ;
+    skos:prefLabel "ASILO"@it ;
+    dc:identifier "ASIL3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "ASIL3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ASIL6> a skos:Concept ;
+    rdfs:label "RICHIESTA ASILO"@it ;
+    skos:prefLabel "RICHIESTA ASILO"@it ;
+    dc:identifier "ASIL6"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "ASIL6"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ASMIN> a skos:Concept ;
+    rdfs:label "ASSISTENZA MINORI DL 8.1.07 N.5 ART. 2 C. 6"@it ;
+    skos:prefLabel "ASSISTENZA MINORI DL 8.1.07 N.5 ART. 2 C. 6"@it ;
+    dc:identifier "ASMIN"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "ASMIN"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ATAPO> a skos:Concept ;
+    rdfs:label "ATTESA STATUS APOLIDIA ART.11 DPR.394/99"@it ;
+    skos:prefLabel "ATTESA STATUS APOLIDIA ART.11 DPR.394/99"@it ;
+    dc:identifier "ATAPO"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "ATAPO"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ATCIT> a skos:Concept ;
+    rdfs:label "ATTESA CITTAD. ART.11 DPR.394/99 L92/91"@it ;
+    skos:prefLabel "ATTESA CITTAD. ART.11 DPR.394/99 L92/91"@it ;
+    dc:identifier "ATCIT"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "ATCIT"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ATSPO> a skos:Concept ;
+    rdfs:label "ATTIVITA SPORTIVA"@it ;
+    skos:prefLabel "ATTIVITA SPORTIVA"@it ;
+    dc:identifier "ATSPO"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "ATSPO"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/BIFAM> a skos:Concept ;
+    rdfs:label "MOTIVI FAMILIARI ART.9 TER C. 6 T.U.I."@it ;
+    skos:prefLabel "MOTIVI FAMILIARI ART.9 TER C. 6 T.U.I."@it ;
+    dc:identifier "BIFAM"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "BIFAM"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CALAM> a skos:Concept ;
+    rdfs:label "CALAMITA' NATURALI ART.20 BIS TUI"@it ;
+    skos:prefLabel "CALAMITA' NATURALI ART.20 BIS TUI"@it ;
+    dc:identifier "CALAM"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "CALAM"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CASIL> a skos:Concept ;
+    rdfs:label "ASILO ART. 9, C.1 BIS"@it ;
+    skos:prefLabel "ASILO ART. 9, C.1 BIS"@it ;
+    dc:identifier "CASIL"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "CASIL"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CPSUS> a skos:Concept ;
+    rdfs:label "PROTEZIONE SUSSIDIARIA ART. 9, C.1 BIS"@it ;
+    skos:prefLabel "PROTEZIONE SUSSIDIARIA ART. 9, C.1 BIS"@it ;
+    dc:identifier "CPSUS"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "CPSUS"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CSST1> a skos:Concept ;
+    rdfs:label "PERM.SOGGIORNO CE SOGG. LUNGO PERIODO"@it ;
+    skos:prefLabel "PERM.SOGGIORNO CE SOGG. LUNGO PERIODO"@it ;
+    dc:identifier "CSST1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "CSST1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CUREM> a skos:Concept ;
+    rdfs:label "CURE MEDICHE"@it ;
+    skos:prefLabel "CURE MEDICHE"@it ;
+    dc:identifier "CUREM"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "CUREM"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/CURME> a skos:Concept ;
+    rdfs:label "CURE MEDICHE ART.19 C2 L.DBIS TUI"@it ;
+    skos:prefLabel "CURE MEDICHE ART.19 C2 L.DBIS TUI"@it ;
+    dc:identifier "CURME"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "CURME"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/DUBLI> a skos:Concept ;
+    rdfs:label "CONVENZIONE DUBLINO L.523/92 DEL 1/6/92"@it ;
+    skos:prefLabel "CONVENZIONE DUBLINO L.523/92 DEL 1/6/92"@it ;
+    dc:identifier "DUBLI"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "DUBLI"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/EXFAM> a skos:Concept ;
+    rdfs:label "EXFAMILIARE ART.14 DLVO 30/07"@it ;
+    skos:prefLabel "EXFAMILIARE ART.14 DLVO 30/07"@it ;
+    dc:identifier "EXFAM"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "EXFAM"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMB2> a skos:Concept ;
+    rdfs:label "MOTIVI FAMILIARI BLU CARD"@it ;
+    skos:prefLabel "MOTIVI FAMILIARI BLU CARD"@it ;
+    dc:identifier "FAMB2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "FAMB2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMB3> a skos:Concept ;
+    rdfs:label "MOTIVI FAMILIARI ART.9 TER C. 5 T.U.I."@it ;
+    skos:prefLabel "MOTIVI FAMILIARI ART.9 TER C. 5 T.U.I."@it ;
+    dc:identifier "FAMB3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "FAMB3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMI1> a skos:Concept ;
+    rdfs:label "FAMIGLIA MINORE"@it ;
+    skos:prefLabel "FAMIGLIA MINORE"@it ;
+    dc:identifier "FAMI1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "FAMI1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMI2> a skos:Concept ;
+    rdfs:label "MOTIVI FAMILIARI ART.10 C.1LET.B L.47/17"@it ;
+    skos:prefLabel "MOTIVI FAMILIARI ART.10 C.1LET.B L.47/17"@it ;
+    dc:identifier "FAMI2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "FAMI2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMIA> a skos:Concept ;
+    rdfs:label "FAM.ASILO ART.29BIS D.L.VO286/98"@it ;
+    skos:prefLabel "FAM.ASILO ART.29BIS D.L.VO286/98"@it ;
+    dc:identifier "FAMIA"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "FAMIA"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMIG> a skos:Concept ;
+    rdfs:label "MOTIVI FAMILIARI"@it ;
+    skos:prefLabel "MOTIVI FAMILIARI"@it ;
+    dc:identifier "FAMIG"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "FAMIG"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FAMPR> a skos:Concept ;
+    rdfs:label "FAM.PROT.SUSS. ART.29BIS DL.VO286/98"@it ;
+    skos:prefLabel "FAM.PROT.SUSS. ART.29BIS DL.VO286/98"@it ;
+    dc:identifier "FAMPR"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "FAMPR"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/FORME> a skos:Concept ;
+    rdfs:label "FORMAZIONE MED. ART.39 TER TUI"@it ;
+    skos:prefLabel "FORMAZIONE MED. ART.39 TER TUI"@it ;
+    dc:identifier "FORME"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "FORME"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/ICT01> a skos:Concept ;
+    rdfs:label "TRASF INTRAS ART.27 QUIN.C17 TUI"@it ;
+    skos:prefLabel "TRASF INTRAS ART.27 QUIN.C17 TUI"@it ;
+    dc:identifier "ICT01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "ICT01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/INTMI> a skos:Concept ;
+    rdfs:label "INTEGRAZIONE MINORE"@it ;
+    skos:prefLabel "INTEGRAZIONE MINORE"@it ;
+    dc:identifier "INTMI"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "INTMI"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LASTA> a skos:Concept ;
+    rdfs:label "LAVORO STAGIONALE"@it ;
+    skos:prefLabel "LAVORO STAGIONALE"@it ;
+    dc:identifier "LASTA"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LASTA"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVAR> a skos:Concept ;
+    rdfs:label "LAVORO DI TIPO ARTISTICO"@it ;
+    skos:prefLabel "LAVORO DI TIPO ARTISTICO"@it ;
+    dc:identifier "LAVAR"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LAVAR"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVAU> a skos:Concept ;
+    rdfs:label "MOTIVI COMMERCIALI/LAVORO AUTONOMO"@it ;
+    skos:prefLabel "MOTIVI COMMERCIALI/LAVORO AUTONOMO"@it ;
+    dc:identifier "LAVAU"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LAVAU"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVO3> a skos:Concept ;
+    rdfs:label "LAVORO SUBORDINATO-ATTESA OCCUPAZIONE"@it ;
+    skos:prefLabel "LAVORO SUBORDINATO-ATTESA OCCUPAZIONE"@it ;
+    dc:identifier "LAVO3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LAVO3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVO4> a skos:Concept ;
+    rdfs:label "ATTESA OCCUPAZIONE CIRCOLARI DIP.LIB.CIV"@it ;
+    skos:prefLabel "ATTESA OCCUPAZIONE CIRCOLARI DIP.LIB.CIV"@it ;
+    dc:identifier "LAVO4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LAVO4"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVOB> a skos:Concept ;
+    rdfs:label "ATTESA OCCUP.EXPBLUCARD ART27 QUATER C17"@it ;
+    skos:prefLabel "ATTESA OCCUP.EXPBLUCARD ART27 QUATER C17"@it ;
+    dc:identifier "LAVOB"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LAVOB"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVOR> a skos:Concept ;
+    rdfs:label "LAVORO SUBORDINATO"@it ;
+    skos:prefLabel "LAVORO SUBORDINATO"@it ;
+    dc:identifier "LAVOR"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LAVOR"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVPL> a skos:Concept ;
+    rdfs:label "LAVORO STAGIONALE PLURIENNALE DPR 394/99"@it ;
+    skos:prefLabel "LAVORO STAGIONALE PLURIENNALE DPR 394/99"@it ;
+    dc:identifier "LAVPL"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LAVPL"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVT1> a skos:Concept ;
+    rdfs:label "LAVORO CASI PARTICOLARI ART.27 QUATERTUI"@it ;
+    skos:prefLabel "LAVORO CASI PARTICOLARI ART.27 QUATERTUI"@it ;
+    dc:identifier "LAVT1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LAVT1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LAVTU> a skos:Concept ;
+    rdfs:label "LAVORO CASI PARTICOLARI lett.e ART.27 T.U.I."@it ;
+    skos:prefLabel "LAVORO CASI PARTICOLARI lett.e ART.27 T.U.I."@it ;
+    dc:identifier "LAVTU"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LAVTU"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LRE20> a skos:Concept ;
+    rdfs:label "LAVORO SUBORDINATO-R"@it ;
+    skos:prefLabel "LAVORO SUBORDINATO-R"@it ;
+    dc:identifier "LRE20"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LRE20"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LSE20> a skos:Concept ;
+    rdfs:label "EMERSIONE DL 34/2020 ART.103 C.1"@it ;
+    skos:prefLabel "EMERSIONE DL 34/2020 ART.103 C.1"@it ;
+    dc:identifier "LSE20"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LSE20"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LSMAR> a skos:Concept ;
+    rdfs:label "LAVORO SUB - MARITTIMI ART. 27 CO.1 SEPT"@it ;
+    skos:prefLabel "LAVORO SUB - MARITTIMI ART. 27 CO.1 SEPT"@it ;
+    dc:identifier "LSMAR"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LSMAR"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/LTE20> a skos:Concept ;
+    rdfs:label "EMERSIONE DL 34/2020 ART.103 C.2"@it ;
+    skos:prefLabel "EMERSIONE DL 34/2020 ART.103 C.2"@it ;
+    dc:identifier "LTE20"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "LTE20"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/MICT1> a skos:Concept ;
+    rdfs:label "TRASF INTRAS MOBILITA' ART.27 SEX.C9 TUI"@it ;
+    skos:prefLabel "TRASF INTRAS MOBILITA' ART.27 SEX.C9 TUI"@it ;
+    dc:identifier "MICT1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "MICT1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/MINET> a skos:Concept ;
+    rdfs:label "MINORE ETA' ART.28 DPR 394/99"@it ;
+    skos:prefLabel "MINORE ETA' ART.28 DPR 394/99"@it ;
+    dc:identifier "MINET"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "MINET"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/MRICE> a skos:Concept ;
+    rdfs:label "MOBIL.RICER. ART.27 TER C.11 SEPTIES TUI"@it ;
+    skos:prefLabel "MOBIL.RICER. ART.27 TER C.11 SEPTIES TUI"@it ;
+    dc:identifier "MRICE"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "MRICE"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/NOREF> a skos:Concept ;
+    rdfs:label "PROT.SPECIALE ART.32 C.3,D.LGS 25/2008"@it ;
+    skos:prefLabel "PROT.SPECIALE ART.32 C.3,D.LGS 25/2008"@it ;
+    dc:identifier "NOREF"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "NOREF"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/NOREQ> a skos:Concept ;
+    rdfs:label "PROTEZIONE SPECIALE ART.19 CO 1.2 TUI"@it ;
+    skos:prefLabel "PROTEZIONE SPECIALE ART.19 CO 1.2 TUI"@it ;
+    dc:identifier "NOREQ"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "NOREQ"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/PRINV> a skos:Concept ;
+    rdfs:label "ART.2 L.155/05"@it ;
+    skos:prefLabel "ART.2 L.155/05"@it ;
+    dc:identifier "PRINV"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "PRINV"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/PROSO> a skos:Concept ;
+    rdfs:label "PROTEZIONE SOCIALE ART.18 TUI"@it ;
+    skos:prefLabel "PROTEZIONE SOCIALE ART.18 TUI"@it ;
+    dc:identifier "PROSO"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "PROSO"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/PROSU> a skos:Concept ;
+    rdfs:label "PROTEZIONE SUSSIDIARIA ART. 17 D.L.VO 251"@it ;
+    skos:prefLabel "PROTEZIONE SUSSIDIARIA ART. 17 D.L.VO 251"@it ;
+    dc:identifier "PROSU"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "PROSU"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/PROTE> a skos:Concept ;
+    rdfs:label "PROTEZIONE TEMPORANEA ART. 20 DLG 286/98"@it ;
+    skos:prefLabel "PROTEZIONE TEMPORANEA ART. 20 DLG 286/98"@it ;
+    dc:identifier "PROTE"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "PROTE"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/PTUKR> a skos:Concept ;
+    rdfs:label "PROT.TEMPORANEA ART.20 TUI EMERG.UCRAINA"@it ;
+    skos:prefLabel "PROT.TEMPORANEA ART.20 TUI EMERG.UCRAINA"@it ;
+    dc:identifier "PTUKR"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "PTUKR"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/RELIG> a skos:Concept ;
+    rdfs:label "MOTIVI RELIGIOSI"@it ;
+    skos:prefLabel "MOTIVI RELIGIOSI"@it ;
+    dc:identifier "RELIG"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "RELIG"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/RETRA> a skos:Concept ;
+    rdfs:label "REGIME TRANSITORIO ART.1 C9 D.L.113/2018"@it ;
+    skos:prefLabel "REGIME TRANSITORIO ART.1 C9 D.L.113/2018"@it ;
+    dc:identifier "RETRA"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "RETRA"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/RIC01> a skos:Concept ;
+    rdfs:label "RICERCATORE ART.27 TER C.7 TUI"@it ;
+    skos:prefLabel "RICERCATORE ART.27 TER C.7 TUI"@it ;
+    dc:identifier "RIC01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "RIC01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/RICRL> a skos:Concept ;
+    rdfs:label "RICERCATORE-RIC.LAV ART.27TER C.9BIS TUI"@it ;
+    skos:prefLabel "RICERCATORE-RIC.LAV ART.27TER C.9BIS TUI"@it ;
+    dc:identifier "RICRL"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "RICRL"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/SALUT> a skos:Concept ;
+    rdfs:label "CURE MEDICHE ARTT.19 C2 L.D E 36 TUI"@it ;
+    skos:prefLabel "CURE MEDICHE ARTT.19 C2 L.D E 36 TUI"@it ;
+    dc:identifier "SALUT"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "SALUT"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/SFRUL> a skos:Concept ;
+    rdfs:label "GRAVE SFRUTTAMENTO LAVORATIVO ART.22 TUI"@it ;
+    skos:prefLabel "GRAVE SFRUTTAMENTO LAVORATIVO ART.22 TUI"@it ;
+    dc:identifier "SFRUL"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "SFRUL"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/STUD0> a skos:Concept ;
+    rdfs:label "STUDENTE ART. 39 TUI"@it ;
+    skos:prefLabel "STUDENTE ART. 39 TUI"@it ;
+    dc:identifier "STUD0"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "STUD0"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/STUD1> a skos:Concept ;
+    rdfs:label "STUDENTE ART.39 BIS C.1 QUATER TUI"@it ;
+    skos:prefLabel "STUDENTE ART.39 BIS C.1 QUATER TUI"@it ;
+    dc:identifier "STUD1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "STUD1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/STURL> a skos:Concept ;
+    rdfs:label "STUDENTE-RIC.LAV ART.39 BIS 1 C.1 TUI"@it ;
+    skos:prefLabel "STUDENTE-RIC.LAV ART.39 BIS 1 C.1 TUI"@it ;
+    dc:identifier "STURL"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "STURL"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/TIRC1> a skos:Concept ;
+    rdfs:label "TIROCINANTE ART.39 BIS C.1 QUATER TUI"@it ;
+    skos:prefLabel "TIROCINANTE ART.39 BIS C.1 QUATER TUI"@it ;
+    dc:identifier "TIRC1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "TIRC1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/UEA10> a skos:Concept ;
+    rdfs:label "FAMILIARE UE ART.10 DIR 2004/38/CE"@it ;
+    skos:prefLabel "FAMILIARE UE ART.10 DIR 2004/38/CE"@it ;
+    dc:identifier "UEA10"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "UEA10"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/UEA20> a skos:Concept ;
+    rdfs:label "FAMILIARE UE ART.20 DIR 2004/38/CE"@it ;
+    skos:prefLabel "FAMILIARE UE ART.20 DIR 2004/38/CE"@it ;
+    dc:identifier "UEA20"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "UEA20"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/VACLA> a skos:Concept ;
+    rdfs:label "VACANZE LAVORO"@it ;
+    skos:prefLabel "VACANZE LAVORO"@it ;
+    dc:identifier "VACLA"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "VACLA"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/VALOR> a skos:Concept ;
+    rdfs:label "VALORE CIVILE ART.42 BIS TUI"@it ;
+    skos:prefLabel "VALORE CIVILE ART.42 BIS TUI"@it ;
+    dc:identifier "VALOR"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "VALOR"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/VIOLE> a skos:Concept ;
+    rdfs:label "VIOLENZA DOMESTICA ART.18 BIS TUI"@it ;
+    skos:prefLabel "VIOLENZA DOMESTICA ART.18 BIS TUI"@it ;
+    dc:identifier "VIOLE"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "VIOLE"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso/VOLON> a skos:Concept ;
+    rdfs:label "VOLONTARIATO ART.27 C.5 TUI"@it ;
+    skos:prefLabel "VOLONTARIATO ART.27 C.5 TUI"@it ;
+    dc:identifier "VOLON"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_permesso> ;
+    skos:notation "VOLON"@it .
+
+<https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/MOPE_CSV> a dcat:Distribution,
+        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+    dc:description "Questa è la distribuzione CSV del vocabolario controllato sui motivi per i permessi di lavoro"@it,
+        "This is the distribution in CSV of the employee leave controlled vocabulary"@en ;
+    dc:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dc:title "CSV distribution of the work leave controlled vocabulary"@en,
+        "Distribuzione CSV del vocabolario controllato sui motivi di permesso di lavoro"@it ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/motivi_permesso/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/motivi_permesso/latest/motivi_permesso.csv> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a foaf:Agent,
+        <http://dati.gov.it/onto/dcatapit#Agent> ;
+    dc:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

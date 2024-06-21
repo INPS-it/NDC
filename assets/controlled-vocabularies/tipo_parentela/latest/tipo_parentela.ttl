@@ -1,0 +1,321 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dc:Standard,
+        <http://dati.gov.it/onto/dcatapit#Standard> ;
+    dc:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dc:identifier "SKOS" ;
+    dc:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> a adms:Asset,
+        <http://dati.gov.it/onto/dcatapit#Dataset>,
+        <https://w3id.org/italia/social-security/onto/procedura18-e-20/TipologiaRapportoDiParentela>,
+        skos:ConceptScheme ;
+    rdfs:label "Controlled vocabulary on the type of relationship between two individuals"@en,
+        "Vocabolario controllato sul tipo di parentela tra due individui"@it ;
+    skos:prefLabel "Vocabolario controllato sul tipo di parentela tra due individui"@it ;
+    rdfs:comment "Controlled vocabulary on the type of relationship between two individuals"@en,
+        "Vocabolario controllato sul tipo di parentela tra due individui"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dc:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dc:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dc:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dc:description "Controlled vocabulary on the type of relationship between two individuals"@en,
+        "Vocabolario controllato sul tipo di parentela tra due individui"@it ;
+    dc:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela" ;
+    dc:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dc:modified "2024-05-20"^^xsd:date ;
+    dc:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dc:relation <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_contratto>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_documento>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_permesso> ;
+    dc:title "Controlled vocabulary on the type of relationship between two individuals"@en,
+        "Vocabolario controllato sul tipo di parentela tra due individui"@it ;
+    dc:type <http://purl.org/adms/assettype/CodeList> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/procedura18-e-20/distribution/TPA_CSV>,
+        <https://w3id.org/italia/social-security/data/procedura18-e-20/distribution/TPA_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/procedura18-e-20/distribution/TPA_RDF_TURTLE> ;
+    dcat:keyword "domestic work services"@en,
+        "inps"@en,
+        "inps"@it,
+        "parentela"@it,
+        "relationship"@en,
+        "servizi per il lavoro domestico"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    NDC:keyConcept "tipo_parentela" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/4>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/5>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/6>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/7>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/8>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/9>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/10>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/11>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/12>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/13>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/14>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/15>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/16>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/17>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/18>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/19>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/20>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/21>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/22>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/23>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/24>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/25>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/26>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/27>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/28>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/29> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/1> a skos:Concept ;
+    rdfs:label "Figlio"@it ;
+    skos:prefLabel "Figlio"@it ;
+    dc:identifier "1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/2> a skos:Concept ;
+    rdfs:label "Figlia"@it ;
+    skos:prefLabel "Figlia"@it ;
+    dc:identifier "2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/3> a skos:Concept ;
+    rdfs:label "Padre"@it ;
+    skos:prefLabel "Padre"@it ;
+    dc:identifier "3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/4> a skos:Concept ;
+    rdfs:label "Madre"@it ;
+    skos:prefLabel "Madre"@it ;
+    dc:identifier "4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "4"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/5> a skos:Concept ;
+    rdfs:label "Nuora"@it ;
+    skos:prefLabel "Nuora"@it ;
+    dc:identifier "5"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "5"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/6> a skos:Concept ;
+    rdfs:label "Genero"@it ;
+    skos:prefLabel "Genero"@it ;
+    dc:identifier "6"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "6"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/7> a skos:Concept ;
+    rdfs:label "Suocero"@it ;
+    skos:prefLabel "Suocero"@it ;
+    dc:identifier "7"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "7"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/8> a skos:Concept ;
+    rdfs:label "Suocera"@it ;
+    skos:prefLabel "Suocera"@it ;
+    dc:identifier "8"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "8"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/9> a skos:Concept ;
+    rdfs:label "Nonno"@it ;
+    skos:prefLabel "Nonno"@it ;
+    dc:identifier "9"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "9"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/10> a skos:Concept ;
+    rdfs:label "Nonna"@it ;
+    skos:prefLabel "Nonna"@it ;
+    dc:identifier "10"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "10"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/11> a skos:Concept ;
+    rdfs:label "Nipote (da Nonno)"@it ;
+    skos:prefLabel "Nipote (da Nonno)"@it ;
+    dc:identifier "11"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "11"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/12> a skos:Concept ;
+    rdfs:label "Moglie Nipote (da Nonno)"@it ;
+    skos:prefLabel "Moglie Nipote (da Nonno)"@it ;
+    dc:identifier "12"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "12"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/13> a skos:Concept ;
+    rdfs:label "Marito Nipote (da Nonno)"@it ;
+    skos:prefLabel "Marito Nipote (da Nonno)"@it ;
+    dc:identifier "13"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "13"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/14> a skos:Concept ;
+    rdfs:label "Fratello"@it ;
+    skos:prefLabel "Fratello"@it ;
+    dc:identifier "14"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "14"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/15> a skos:Concept ;
+    rdfs:label "Sorella"@it ;
+    skos:prefLabel "Sorella"@it ;
+    dc:identifier "15"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "15"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/16> a skos:Concept ;
+    rdfs:label "Cognato"@it ;
+    skos:prefLabel "Cognato"@it ;
+    dc:identifier "16"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "16"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/17> a skos:Concept ;
+    rdfs:label "Cognata"@it ;
+    skos:prefLabel "Cognata"@it ;
+    dc:identifier "17"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "17"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/18> a skos:Concept ;
+    rdfs:label "Bisnonno"@it ;
+    skos:prefLabel "Bisnonno"@it ;
+    dc:identifier "18"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "18"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/19> a skos:Concept ;
+    rdfs:label "Bisnonna"@it ;
+    skos:prefLabel "Bisnonna"@it ;
+    dc:identifier "19"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "19"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/20> a skos:Concept ;
+    rdfs:label "Pronipote"@it ;
+    skos:prefLabel "Pronipote"@it ;
+    dc:identifier "20"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "20"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/21> a skos:Concept ;
+    rdfs:label "Moglie Pronipote"@it ;
+    skos:prefLabel "Moglie Pronipote"@it ;
+    dc:identifier "21"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "21"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/22> a skos:Concept ;
+    rdfs:label "Marito Pronipote"@it ;
+    skos:prefLabel "Marito Pronipote"@it ;
+    dc:identifier "22"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "22"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/23> a skos:Concept ;
+    rdfs:label "Zio"@it ;
+    skos:prefLabel "Zio"@it ;
+    dc:identifier "23"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "23"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/24> a skos:Concept ;
+    rdfs:label "Zia"@it ;
+    skos:prefLabel "Zia"@it ;
+    dc:identifier "24"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "24"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/25> a skos:Concept ;
+    rdfs:label "Moglie Zio"@it ;
+    skos:prefLabel "Moglie Zio"@it ;
+    dc:identifier "25"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "25"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/26> a skos:Concept ;
+    rdfs:label "Marito Zia"@it ;
+    skos:prefLabel "Marito Zia"@it ;
+    dc:identifier "26"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "26"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/27> a skos:Concept ;
+    rdfs:label "Nipote-C (da Figli Fratello o Sorella)"@it ;
+    skos:prefLabel "Nipote-C (da Figli Fratello o Sorella)"@it ;
+    dc:identifier "27"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "27"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/28> a skos:Concept ;
+    rdfs:label "Moglie Nipote-C (da Figli Fratello o Sorella)"@it ;
+    skos:prefLabel "Moglie Nipote-C (da Figli Fratello o Sorella)"@it ;
+    dc:identifier "28"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "28"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela/29> a skos:Concept ;
+    rdfs:label "Marito Nipote-C (da Figli Fratello o Sorella)"@it ;
+    skos:prefLabel "Marito Nipote-C (da Figli Fratello o Sorella)"@it ;
+    dc:identifier "29"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/procedura18-e-20/tipo_parentela> ;
+    skos:notation "29"@it .
+
+<https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/TPA_CSV> a dcat:Distribution,
+        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+    dc:description "Questa è la distribuzione CSV del vocabolario controllato sui tipi di parentela"@it,
+        "This is the distribution in CSV of the family relationship type controlled vocabulary"@en ;
+    dc:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dc:title "CSV distribution of the family relationship type controlled vocabulary"@en,
+        "Distribuzione CSV del vocabolario controllato sui tipi di parentela"@it ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_parentela/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_parentela/latest/tipo_parentela.csv> .
+
+<https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/TPA_JSON_LD> a dcat:Distribution,
+        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+    dc:description "Questa è la distribuzione JSON/LD del vocabolario controllato sui tipi di parentela"@it,
+        "This is the distribution in JSON/LD of the family relationship type controlled vocabulary"@en ;
+    dc:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+    dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dc:title "Distribuzione JSON/LD del vocabolario controllato sui tipi di parentela"@it,
+        "JSON/LD distribution of the family relationship type controlled vocabulary"@en ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_parentela/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_parentela/latest/tipo_parentela.json> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a foaf:Agent,
+        <http://dati.gov.it/onto/dcatapit#Agent> ;
+    dc:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0
