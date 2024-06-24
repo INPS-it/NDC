@@ -1,0 +1,187 @@
+openapi: 3.0.3
+info:
+  title: Schema del Rapporto di Lavoro Domestico In Verifica
+  version: 202406.04.00
+  x-summary: Schema del Rapporto di Lavoro Domestico In Verifica compatibile con l'Ontologia INPS relativa ai contributi previdenziali.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+    LavoratoreDomestico:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/lavoratore-domestico/latest/lavoratore-domestico.oas3.yaml#/components/schemas/LavoratoreDomestico"
+    ContrattoLavoro:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml#/components/schemas/ContrattoLavoroDomestico"
+    DatoreDiLavoroDomestico:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/datore-di-lavoro-domestico/latest/datore-di-lavoro-domestico.oas3.yaml#/components/schemas/DatoreDiLavoroDomestico"
+
+    IdRapportoLavoroDomesticoInVerifica:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro
+      description: https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro
+      example: '149638'
+      maxLength: 50
+      minLength: 1
+
+    RapportoLavoroDomesticoInVerifica:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/domesticWorkServices/"
+        emersione_lavoro_irregolare_rapporto_in_verifica: emersioneLavoroIrregolare
+        in_verifica_presso_sede_inps: inVerificaPresso
+        in_verifica_presso_direzione_centrale_inps: inVerificaPresso
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica
+      required:
+      - codice_rapporto_lavoro_in_verifica
+      - data_firma_contratto_rapporto_in_verifica
+      - data_comunicazione_inizio_rapporto_in_verifica
+      - emersione_lavoro_irregolare_rapporto_in_verifica
+      properties:
+        codice_rapporto_lavoro_in_verifica:
+          $ref: "#/components/schemas/IdRapportoLavoroDomesticoInVerifica"
+        data_firma_contratto_rapporto_in_verifica:
+          $ref: "#/components/schemas/DataFirmaContrattoRapportoInVerifica"
+        data_comunicazione_inizio_rapporto_in_verifica:
+          $ref: "#/components/schemas/DataComunicazioneInizioRapportoInVerifica"
+        emersione_lavoro_irregolare_rapporto_in_verifica:
+          type: string
+          format: boolean
+        in_verifica_presso_sede_inps:
+          type: object
+          items:
+            $ref: "#/components/schemas/SedeINPS"
+        in_verifica_presso_direzione_centrale_inps:
+          type: object
+          items:
+            $ref: "#/components/schemas/DirezioneCentraleINPS"
+        ha_lavoratore_domestico_rapporto_in_verifica:
+          type: object
+          items:
+            $ref: "#/components/schemas/LavoratoreDomestico"
+        ha_datore_di_lavoro_domestico_rapporto_in_verifica:
+          type: object
+          items:
+            $ref: "#/components/schemas/DatoreDiLavoroDomestico"
+        ha_contratto_di_lavoro_domestico_rapporto_in_verifica:
+          type: object
+          items:
+            $ref: "#/components/schemas/ContrattoLavoro"
+      example:
+        codice_rapporto_lavoro_in_verifica:
+          $ref: "#/components/schemas/IdRapportoLavoroDomesticoInVerifica/example"
+        data_firma_contratto_rapporto_in_verifica:
+          $ref: "#/components/schemas/DataFirmaContrattoRapportoInVerifica/example"
+        data_comunicazione_inizio_rapporto_in_verifica:
+          $ref: "#/components/schemas/DataComunicazioneInizioRapportoInVerifica/example"
+        emersione_lavoro_irregolare_rapporto_in_verifica: 'true'
+        in_verifica_presso_sede_inps:
+          $ref: "#/components/schemas/SedeINPS/example"
+        in_verifica_presso_direzione_centrale_inps:
+          $ref: "#/components/schemas/DirezioneCentraleINPS/example"
+        ha_lavoratore_domestico_rapporto_in_verifica:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/lavoratore-domestico/latest/lavoratore-domestico.oas3.yaml#/components/schemas/LavoratoreDomestico/example"
+        ha_datore_di_lavoro_domestico_rapporto_in_verifica:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/datore-di-lavoro-domestico/latest/datore-di-lavoro-domestico.oas3.yaml#/components/schemas/DatoreDiLavoroDomestico/example"
+        ha_contratto_di_lavoro_domestico_rapporto_in_verifica:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml#/components/schemas/ContrattoLavoroDomestico/example"
+
+    DataComunicazioneInizioRapportoInVerifica:
+      type: string
+      format: date
+      pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      x-refersTo: https://w3id.org/italia/social-security/onto/contributions/dataComunicazioneInizioRapporto
+      description: https://w3id.org/italia/social-security/onto/contributions/dataComunicazioneInizioRapporto
+      example: '2022-06-20'
+      maxLength: 50
+      minLength: 1
+
+    DataFirmaContrattoRapportoInVerifica:
+      type: string
+      format: date
+      pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      x-refersTo: https://w3id.org/italia/social-security/onto/contributions/dataFirmaContratto
+      description: https://w3id.org/italia/social-security/onto/contributions/dataFirmaContratto
+      example: '2022-06-10'
+      maxLength: 50
+      minLength: 1
+
+    SedeINPS:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/core/"
+        denominazione_sede_inps: denominazioneSedeINPS
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      required:
+      - codice_sede_inps
+      - denominazione_sede_inps
+      properties:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS"
+        denominazione_sede_inps:
+          type: string
+          maxLength: 255
+      example:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS/example"
+        denominazione_sede_inps: "INPS Roma San Giovanni"
+
+    CodiceSedeINPS:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      description: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      example: '1485975'
+      maxLength: 50
+      minLength: 1
+
+    DirezioneCentraleINPS:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/core/DirezioneCentraleINPS
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/core/"
+        denominazione_direzione_centrale_inps: denominazioneDirezioneCentraleINPS
+        gestisce_sede_inps: gestisceSedeINPS
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/core/DirezioneCentraleINPS
+      required:
+      - codice_direzione_centrale_inps
+      - denominazione_direzione_centrale_inps
+      properties:
+        codice_direzione_centrale_inps:
+          $ref: "#/components/schemas/CodiceDirezioneCentraleINPS"
+        denominazione_direzione_centrale_inps:
+          type: string
+          maxLength: 255
+        gestisce_sede_inps:
+          type: object
+          items:
+            $ref: "#/components/schemas/SedeINPS"
+      example:
+        codice_direzione_centrale_inps:
+          $ref: "#/components/schemas/CodiceDirezioneCentraleINPS/example"
+        denominazione_direzione_centrale_inps: "Direzione Centrale Pensioni"
+        gestisce_sede_inps:
+          $ref: "#/components/schemas/SedeINPS/example"
+
+    CodiceDirezioneCentraleINPS:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/core/codiceDirezioneCentraleINPS
+      description: https://w3id.org/italia/social-security/onto/core/codiceDirezioneCentraleINPS
+      example: '1589635'
+      maxLength: 50
+      minLength: 1

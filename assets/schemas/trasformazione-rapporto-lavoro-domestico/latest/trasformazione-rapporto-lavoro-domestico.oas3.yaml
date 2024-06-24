@@ -1,0 +1,63 @@
+openapi: 3.0.3
+info:
+  title: Schema della Trasformazione del Rapporto di Lavoro Domestico
+  version: 202406.06.00
+  x-summary: Schema della Trasformazione del Rapporto di Lavoro Doemestico compatibile con l'Ontologia INPS relativa ai servizi per la gestione del Lavoro Domestico.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/domesticWorkServices/TrasformazioneRapportoDiLavoroDomestico
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+    RapportoDiLavoroDomesticoAttivo:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/rapporto-lavoro-domestico-attivo/latest/rapporto-lavoro-domestico-attivo.oas3.yaml#/components/schemas/RapportoDiLavoroDomesticoAttivo"
+
+    IdTrasformazioneRapportoDiLavoro:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/domesticWorkServices/codiceVariazioneRapportoDiLavoroDomestico
+      description: https://w3id.org/italia/social-security/onto/domesticWorkServices/codiceVariazioneRapportoDiLavoroDomestico
+      example: '148695'
+      maxLength: 50
+      minLength: 1
+
+    TrasformazioneRapportoDiLavoro:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/domesticWorkServices/TrasformazioneRapportoDiLavoroDomestico
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/domesticWorkServices/"
+        data_trasformazione_rapporto_lavoro: dataVariazioneRapportoDiLavoroDomestico
+        trasformazione_modifica_rapporto_di_lavoro_domestico:
+          "@id": modificaRapportoDiLavoroDomestico
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/domesticWorkServices/TrasformazioneRapportoDiLavoroDomestico
+      required:
+      - codice_trasformazione_rapporto_lavoro_domestico
+      - data_trasformazione_rapporto_lavoro
+      properties:
+        codice_trasformazione_rapporto_lavoro_domestico:
+          $ref: "#/components/schemas/IdTrasformazioneRapportoDiLavoro"
+        data_trasformazione_rapporto_lavoro:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        trasformazione_modifica_rapporto_di_lavoro_domestico:
+          type: object
+          items:
+            $ref: "#/components/schemas/RapportoDiLavoroDomesticoAttivo"
+      example:
+        codice_trasformazione_rapporto_lavoro_domestico:
+          $ref: "#/components/schemas/IdTrasformazioneRapportoDiLavoro/example"
+        data_trasformazione_rapporto_lavoro: '2024-02-16'
+        trasformazione_modifica_rapporto_di_lavoro_domestico:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/rapporto-lavoro-domestico-attivo/latest/rapporto-lavoro-domestico-attivo.oas3.yaml#/components/schemas/RapportoDiLavoroDomesticoAttivo/example"

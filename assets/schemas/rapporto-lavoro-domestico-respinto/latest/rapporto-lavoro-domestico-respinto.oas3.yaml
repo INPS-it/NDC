@@ -1,0 +1,204 @@
+openapi: 3.0.3
+info:
+  title: Schema del Rapporto di Lavoro Domestico Respinto
+  version: 202406.04.00
+  x-summary: Schema del Rapporto di Lavoro Domestico Respinto compatibile con l'Ontologia INPS relativa ai contributi previdenziali.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoRespinto
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+    LavoratoreDomestico:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/lavoratore-domestico/latest/lavoratore-domestico.oas3.yaml#/components/schemas/LavoratoreDomestico"
+    ContrattoLavoro:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml#/components/schemas/ContrattoLavoroDomestico"
+    DatoreDiLavoroDomestico:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/datore-di-lavoro-domestico/latest/datore-di-lavoro-domestico.oas3.yaml#/components/schemas/DatoreDiLavoroDomestico"
+    RapportoLavoroDomesticoInVerifica:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/rapporto-lavoro-domestico-in-verifica/latest/rapporto-lavoro-domestico-in-verifica.oas3.yaml#/components/schemas/RapportoLavoroDomesticoInVerifica"
+
+    IdRapportoLavoroDomesticoRespinto:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro
+      description: https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro
+      example: '182746'
+      maxLength: 50
+      minLength: 1
+
+    RapportoLavoroDomesticoRespinto:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoRespinto
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/domesticWorkServices/"
+        data_respingimento: dataRespingimento
+        emersione_lavoro_irregolare_rapportoro_respinto: emersioneLavoroIrregolare
+        respinto_da_sede_inps: respintoDa
+        respinto_da_direzione_centrale_inps: respintoDa
+        rapporto_lavoro_domestico_respinto_ha_stato_precedente:
+          "@id": rapportoDiLavorDomesticoRespintoHaStatoPrecedente
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoRespinto
+      required:
+      - codice_rapporto_lavoro_respinto
+      - data_firma_contratto_rapporto_respinto
+      - data_comunicazione_inizio_rapporto_respinto
+      - data_respingimento
+      - emersione_lavoro_irregolare_rapporto_respinto
+      properties:
+        codice_rapporto_lavoro_respinto:
+          $ref: "#/components/schemas/IdRapportoLavoroDomesticoRespinto"
+        data_firma_contratto_rapporto_respinto:
+          $ref: "#/components/schemas/DataFirmaContrattoRapportoRespinto"
+        data_comunicazione_inizio_rapporto_respinto:
+          $ref: "#/components/schemas/DataComunicazioneInizioRapportoRespinto"
+        emersione_lavoro_irregolare_rapporto_respinto:
+          type: string
+          format: boolean
+        data_respingimento:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        respinto_da_sede_inps:
+          type: object
+          items:
+            $ref: "#/components/schemas/SedeINPS"
+        respinto_da_direzione_centrale_inps:
+          type: object
+          items:
+            $ref: "#/components/schemas/DirezioneCentraleINPS"
+        rapporto_lavoro_domestico_respinto_ha_stato_precedente:
+          type: object
+          items:
+            $ref: "#/components/schemas/RapportoLavoroDomesticoInVerifica"
+        ha_lavoratore_domestico_rapporto_respinto:
+          type: object
+          items:
+            $ref: "#/components/schemas/LavoratoreDomestico"
+        ha_datore_di_lavoro_domestico_rapporto_respinto:
+          type: object
+          items:
+            $ref: "#/components/schemas/DatoreDiLavoroDomestico"
+        ha_contratto_di_lavoro_domestico_rapporto_respinto:
+          type: object
+          items:
+            $ref: "#/components/schemas/ContrattoLavoro"
+      example:
+        codice_rapporto_lavoro_respinto:
+          $ref: "#/components/schemas/IdRapportoLavoroDomesticoRespinto/example"
+        data_firma_contratto_rapporto_respinto:
+          $ref: "#/components/schemas/DataFirmaContrattoRapportoRespinto/example"
+        data_comunicazione_inizio_rapporto_respinto:
+          $ref: "#/components/schemas/DataComunicazioneInizioRapportoRespinto/example"
+        data_respingimento: '2020-02-13'
+        emersione_lavoro_irregolare_rapporto_respinto: 'true'
+        respinto_da_sede_inps:
+          $ref: "#/components/schemas/SedeINPS/example"
+        respinto_da_direzione_centrale_inps:
+          $ref: "#/components/schemas/DirezioneCentraleINPS/example"
+        rapporto_lavoro_domestico_respinto_ha_stato_precedente:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/rapporto-lavoro-domestico-in-verifica/latest/rapporto-lavoro-domestico-in-verifica.oas3.yaml#/components/schemas/RapportoLavoroDomesticoInVerifica/example"
+        ha_lavoratore_domestico_rapporto_respinto:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/lavoratore-domestico/latest/lavoratore-domestico.oas3.yaml#/components/schemas/LavoratoreDomestico/example"
+        ha_datore_di_lavoro_domestico_rapporto_respinto:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/datore-di-lavoro-domestico/latest/datore-di-lavoro-domestico.oas3.yaml#/components/schemas/DatoreDiLavoroDomestico/example"
+        ha_contratto_di_lavoro_domestico_rapporto_respinto:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml#/components/schemas/ContrattoLavoroDomestico/example"
+
+    DataComunicazioneInizioRapportoRespinto:
+      type: string
+      format: date
+      pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      x-refersTo: https://w3id.org/italia/social-security/onto/contributions/dataComunicazioneInizioRapporto
+      description: https://w3id.org/italia/social-security/onto/contributions/dataComunicazioneInizioRapporto
+      example: '2020-02-10'
+      maxLength: 50
+      minLength: 1
+
+    DataFirmaContrattoRapportoRespinto:
+      type: string
+      format: date
+      pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      x-refersTo: https://w3id.org/italia/social-security/onto/contributions/dataFirmaContratto
+      description: https://w3id.org/italia/social-security/onto/contributions/dataFirmaContratto
+      example: '2020-02-01'
+      maxLength: 50
+      minLength: 1
+
+    SedeINPS:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/core/"
+        denominazione_sede_inps: denominazioneSedeINPS
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      required:
+      - codice_sede_inps
+      - denominazione_sede_inps
+      properties:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS"
+        denominazione_sede_inps:
+          type: string
+          maxLength: 255
+      example:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS/example"
+        denominazione_sede_inps: "INPS Roma Eur"
+
+    CodiceSedeINPS:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      description: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      example: '1875946'
+      maxLength: 50
+      minLength: 1
+
+    DirezioneCentraleINPS:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/core/DirezioneCentraleINPS
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/core/"
+        denominazione_direzione_centrale_inps: denominazioneDirezioneCentraleINPS
+        gestisce_sede_inps: gestisceSedeINPS
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/core/DirezioneCentraleINPS
+      required:
+      - codice_direzione_centrale_inps
+      - denominazione_direzione_centrale_inps
+      properties:
+        codice_direzione_centrale_inps:
+          $ref: "#/components/schemas/CodiceDirezioneCentraleINPS"
+        denominazione_direzione_centrale_inps:
+          type: string
+          maxLength: 255
+        gestisce_sede_inps:
+          type: object
+          items:
+            $ref: "#/components/schemas/SedeINPS"
+      example:
+        codice_direzione_centrale_inps:
+          $ref: "#/components/schemas/CodiceDirezioneCentraleINPS/example"
+        denominazione_direzione_centrale_inps: "Direzione Centrale Organizzazione"
+        gestisce_sede_inps:
+          $ref: "#/components/schemas/SedeINPS/example"
+
+    CodiceDirezioneCentraleINPS:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/core/codiceDirezioneCentraleINPS
+      description: https://w3id.org/italia/social-security/onto/core/codiceDirezioneCentraleINPS
+      example: '1579842'
+      maxLength: 50
+      minLength: 1

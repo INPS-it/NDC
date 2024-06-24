@@ -1,0 +1,126 @@
+openapi: 3.0.3
+info:
+  title: Schema del Rapporto di Lavoro Domestico Cessato
+  version: 202406.04.00
+  x-summary: Schema del Rapporto di Lavoro Domestico Cessato compatibile con l'Ontologia INPS relativa ai contributi previdenziali.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+    LavoratoreDomestico:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/lavoratore-domestico/latest/lavoratore-domestico.oas3.yaml#/components/schemas/LavoratoreDomestico"
+    ContrattoLavoro:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml#/components/schemas/ContrattoLavoroDomestico"
+    DatoreDiLavoroDomestico:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/datore-di-lavoro-domestico/latest/datore-di-lavoro-domestico.oas3.yaml#/components/schemas/DatoreDiLavoroDomestico"
+    RapportoDiLavoroDomesticoAttivo:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/rapporto-lavoro-domestico-attivo/latest/rapporto-lavoro-domestico-attivo.oas3.yaml#/components/schemas/RapportoDiLavoroDomesticoAttivo"
+
+    IdRapportoLavoroDomesticoCessato:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro
+      description: https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro
+      example: '168487'
+      maxLength: 50
+      minLength: 1
+
+    RapportoLavoroDomesticoCessato:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/contributions/"
+        data_firma_contratto_rapporto_cessato: dataFirmaContratto
+        data_comunicazione_fine_rapporto_cessato: dataComunicazioneFineRapporto
+        ha_lavoratore_domestico_rapporto_cessato:
+          "@id": haLavoratoreDomestico
+        ha_datore_di_lavoro_domestico_rapporto_cessato:
+          "@id": haDatoreDiLavoroDomestico
+        ha_contratto_di_lavoro_domestico_rapporto_cessato:
+          "@id": haContrattoDiLavoroDomestico
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato
+      required:
+      - codice_rapporto_lavoro_cessato
+      - data_firma_contratto_rapporto_cessato
+      - data_comunicazione_fine_rapporto_cessato
+      - data_inizio_rapporto_lavoro_domestico_cessato
+      - data_cessazione_rapporto_di_lavoro_cessato
+      properties:
+        codice_rapporto_lavoro_cessato:
+          $ref: "#/components/schemas/IdRapportoLavoroDomesticoCessato"
+        data_firma_contratto_rapporto_cessato:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        data_comunicazione_fine_rapporto_cessato:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        data_inizio_rapporto_lavoro_domestico_cessato:
+          $ref: "#/components/schemas/DataInizioRapportoLavoroDomesticoCessato"
+        data_cessazione_rapporto_di_lavoro_cessato:
+          $ref: "#/components/schemas/DataCessazioneRapportoDiLavoroDomesticoCessato"
+        ha_lavoratore_domestico_rapporto_cessato:
+          type: object
+          items:
+            $ref: "#/components/schemas/LavoratoreDomestico"
+        ha_datore_di_lavoro_domestico_rapporto_cessato:
+          type: object
+          items:
+            $ref: "#/components/schemas/DatoreDiLavoroDomestico"
+        ha_contratto_di_lavoro_domestico_rapporto_cessato:
+          type: object
+          items:
+            $ref: "#/components/schemas/ContrattoLavoro"
+        rapporto_di_lavoro_domestico_cessato_ha_stato_precedente:
+          type: object
+          items:
+            $ref: "#/components/schemas/RapportoDiLavoroDomesticoAttivo"
+      example:
+        codice_rapporto_lavoro_cessato:
+          $ref: "#/components/schemas/IdRapportoLavoroDomesticoCessato/example"
+        data_firma_contratto_rapporto_cessato: '2023-04-12'
+        data_comunicazione_fine_rapporto_cessato: '2023-05-01'
+        data_inizio_rapporto_lavoro_domestico_cessato:
+          $ref: "#/components/schemas/DataInizioRapportoLavoroDomesticoCessato/example"
+        data_cessazione_rapporto_di_lavoro_cessato:
+          $ref: "#/components/schemas/DataCessazioneRapportoDiLavoroDomesticoCessato/example"
+        ha_lavoratore_domestico_rapporto_cessato:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/lavoratore-domestico/latest/lavoratore-domestico.oas3.yaml#/components/schemas/LavoratoreDomestico/example"
+        ha_datore_di_lavoro_domestico_rapporto_cessato:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/datore-di-lavoro-domestico/latest/datore-di-lavoro-domestico.oas3.yaml#/components/schemas/DatoreDiLavoroDomestico/example"
+        ha_contratto_di_lavoro_domestico_rapporto_cessato:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/contratto-di-lavoro-domestico/latest/contratto-di-lavoro-domestico.oas3.yaml#/components/schemas/ContrattoLavoroDomestico/example"
+
+    DataInizioRapportoLavoroDomesticoCessato:
+      type: string
+      format: date
+      pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      x-refersTo: https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInizioRapportoDiLavoroCessato
+      description: https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInizioRapportoDiLavoroCessato
+      example: '2023-05-03'
+      maxLength: 50
+      minLength: 1
+
+    DataCessazioneRapportoDiLavoroDomesticoCessato:
+      type: string
+      format: date
+      pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      x-refersTo: https://w3id.org/italia/social-security/onto/domesticWorkServices/dataCessazioneRapportoDiLavoroCessato
+      description: https://w3id.org/italia/social-security/onto/domesticWorkServices/dataCessazioneRapportoDiLavoroCessato
+      example: '2023-07-03'
+      maxLength: 50
+      minLength: 1
