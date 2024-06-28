@@ -1,0 +1,92 @@
+openapi: 3.0.3
+info:
+  title: Schema dello Stato di Accolta Di Domanda NASpI
+  version: 202406.27.00
+  x-summary: Schema dello Stato di Accolta Di Domanda NASpI compatibile con l'Ontologia INPS relativa ai servizi per la gestione della richiesta di una prestazione NASpI.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiAccoltaDiDomandaNASpI
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    CodiceStatoAccoltaDomandaNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      example: '19685234'
+      maxLength: 50
+      minLength: 1
+
+    StatoDiAccoltaDiDomandaNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiAccoltaDiDomandaNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        numero_protocollo_naspi_stato_di_accolta: numeroProtocolloNASpI
+        data_presentazione_naspi_stato_di_accolta: dataPresentazioneNASpI
+        contribuzione_post_prestazioni_fruite: contribuzionePostPrestazioniFruite
+        contribuzione_ante_prestazioni_fruite: contribuzioneAntePrestazioniFruite
+        contribuzione_indisponibile: contribuzioneIndisponibile
+        numero_settimane_lavorate: numeroSettimaneLavorate
+        importo_retribuzione_utile_complessiva: importoRetribuzioneUtileComplessiva
+        importo_mensile_iniziale: importoMensileIniziale
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiAccoltaDiDomandaNASpI
+      required:
+      - codice_stato_di_accolta_di_domanda_naspi
+      - numero_protocollo_naspi_stato_di_accolta
+      - data_presentazione_naspi_stato_di_accolta
+      - contribuzione_post_prestazioni_fruite
+      - contribuzione_ante_prestazioni_fruite
+      - contribuzione_indisponibile
+      - numero_settimane_lavorate
+      - importo_retribuzione_utile_complessiva
+      - importo_mensile_iniziale
+      properties:
+        codice_stato_di_accolta_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoAccoltaDomandaNASpI"
+        numero_protocollo_naspi_stato_di_accolta:
+          type: string
+          maxLength: 255
+        data_presentazione_naspi_stato_di_accolta:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        contribuzione_post_prestazioni_fruite:
+          type: number
+          format: decimal32
+        contribuzione_ante_prestazioni_fruite:
+          type: number
+          format: decimal32
+        contribuzione_indisponibile:
+          type: number
+          format: decimal32
+        numero_settimane_lavorate:
+          type: number
+          format: decimal32
+        importo_retribuzione_utile_complessiva:
+          type: number
+          format: decimal32
+        importo_mensile_iniziale:
+          type: number
+          format: decimal32
+      example:
+        codice_stato_di_accolta_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoAccoltaDomandaNASpI/example"
+        numero_protocollo_naspi_stato_di_accolta: '17584652'
+        data_presentazione_naspi_stato_di_accolta: "2019-02-11"
+        contribuzione_post_prestazioni_fruite: 25.4
+        contribuzione_ante_prestazioni_fruite: 13.6
+        contribuzione_indisponibile: 5
+        numero_settimane_lavorate: 48
+        importo_retribuzione_utile_complessiva: 32709.65
+        importo_mensile_iniziale: 1659.42

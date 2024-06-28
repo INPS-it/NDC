@@ -1,0 +1,88 @@
+openapi: 3.0.3
+info:
+  title: Schema dello Stato di Riesame Di Domanda NASpI
+  version: 202406.27.00
+  x-summary: Schema dello Stato di Riesame Di Domanda NASpI compatibile con l'Ontologia INPS relativa ai servizi per la gestione della richiesta di una prestazione NASpI.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRiesameDiDomandaNASpI
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    CodiceStatoRiesameDomandaNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      example: '14589525'
+      maxLength: 50
+      minLength: 1
+
+    StatoDiRiesameDiDomandaNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRiesameDiDomandaNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        numero_protocollo_naspi_stato_di_riesame: numeroProtocolloNASpI
+        data_presentazione_naspi_stato_di_riesame: dataPresentazioneNASpI
+        ha_atto_di_riesame_domanda_naspi:
+          "@id": haAttoDiRiesameDomandaNASpI
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRiesameDiDomandaNASpI
+      required:
+      - codice_stato_di_riesame_di_domanda_naspi
+      - numero_protocollo_naspi_stato_di_riesame
+      - data_presentazione_naspi_stato_di_riesame
+      properties:
+        codice_stato_di_riesame_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoRiesameDomandaNASpI"
+        numero_protocollo_naspi_stato_di_riesame:
+          type: string
+          maxLength: 255
+        data_presentazione_naspi_stato_di_riesame:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        ha_atto_di_riesame_domanda_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/AttoDiRiesameDomandaNASpI"
+      example:
+        codice_stato_di_riesame_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoRiesameDomandaNASpI/example"
+        numero_protocollo_naspi_stato_di_riesame: '17584652'
+        data_presentazione_naspi_stato_di_riesame: "2019-02-11"
+        ha_atto_di_riesame_domanda_naspi:
+          $ref: "#/components/schemas/AttoDiRiesameDomandaNASpI/example"
+
+    AttoDiRiesameDomandaNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiRiesameDomandaNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiRiesameDomandaNASpI
+      required:
+      - codice_atto_riesame_domanda_naspi
+      properties:
+        codice_atto_riesame_domanda_naspi:
+          $ref: "#/components/schemas/CodiceAttoRiesameDomandaNASpI"
+      example:
+        codice_atto_riesame_domanda_naspi:
+          $ref: "#/components/schemas/CodiceAttoRiesameDomandaNASpI/example"
+
+    CodiceAttoRiesameDomandaNASpI:
+      type: string
+      x-refersTo: http://purl.org/dc/terms/identifier
+      description: http://purl.org/dc/terms/identifier
+      example: '589456'
+      maxLength: 50
+      minLength: 1

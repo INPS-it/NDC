@@ -1,0 +1,399 @@
+openapi: 3.0.3
+info:
+  title: Schema della Domanda NASpI
+  version: 202406.27.00
+  x-summary: Schema della Domanda NASpI compatibile con l'Ontologia INPS relativa ai servizi per la gestione della richiesta di una prestazione NASpI.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/social-safety-net/DomandaNASpI
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+    RichiedenteNASpI:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/richiedente-naspi/latest/richiedente-naspi.oas3.yaml#/components/schemas/RichiedenteNASpI"
+    StatoDiAccoltaDiDomandaNASpI:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/stato-di-accolta-domanda-naspi/latest/stato-di-accolta-domanda-naspi.oas3.yaml#/components/schemas/StatoDiAccoltaDiDomandaNASpI"
+    StatoDiRiesameDiDomandaNASpI:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/stato-di-riesame-domanda-naspi/latest/stato-di-riesame-domanda-naspi.oas3.yaml#/components/schemas/StatoDiRiesameDiDomandaNASpI"
+    StatoDiRicorsoDiDomandaNASpI:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/stato-di-ricorso-domanda-naspi/latest/stato-di-ricorso-domanda-naspi.oas3.yaml#/components/schemas/StatoDiRicorsoDiDomandaNASpI"
+
+    IdDomandaNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroPraticaNASpIDelDelegato
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroPraticaNASpIDelDelegato
+      example: '14734695'
+      maxLength: 50
+      minLength: 1
+
+    DomandaNASpi:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/DomandaNASpI
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        nota_domanda_naspi: notaDomandaNASpI
+        se_indennita_mancato_preavviso: seIndennitàMancatoPreavviso
+        ha_richiedente_naspi:
+          "@id": haRichiedenteNASpI
+        ha_destinatario_domanda_naspi:
+          "@id": haDestinatarioDomandaNASpI
+        ha_stato_di_bozza_di_domanda_naspi:
+          "@id": haStatoDiDomandaNASpI
+        ha_stato_di_protocollata_di_domanda_naspi:
+          "@id": haStatoDiDomandaNASpI
+        ha_stato_di_integrazione_di_domanda_naspi:
+          "@id": haStatoDiDomandaNASpI
+        ha_stato_di_accolta_di_domanda_naspi:
+          "@id": haStatoDiDomandaNASpI
+        ha_stato_di_rifiutata_di_domanda_naspi:
+          "@id": haStatoDiDomandaNASpI
+        ha_stato_di_riesame_di_domanda_naspi:
+          "@id": haStatoDiDomandaNASpI
+        ha_stato_di_ricorso_di_domanda_naspi:
+          "@id": haStatoDiDomandaNASpI
+        ha_allegato_per_naspi:
+          "@id": haAllegatoPerNASPI
+        ha_modalita_di_pagamento_naspi:
+          "@id": haModalitàDiPagamentoNASpI
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/DomandaNASpI
+      required:
+      - codice_domanda_naspi
+      - nota_domanda_naspi
+      - se_indennita_mancato_preavviso
+      properties:
+        codice_domanda_naspi:
+          $ref: "#/components/schemas/IdDomandaNASpI"
+        nota_domanda_naspi:
+          type: string
+          maxLength: 255
+        se_indennita_mancato_preavviso:
+          type: string
+          format: boolean
+        ha_richiedente_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/RichiedenteNASpI"
+        ha_destinatario_domanda_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/SedeINPS"
+        ha_stato_di_bozza_di_domanda_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/StatoDiBozzaDiDomandaNASpI"
+        ha_stato_di_protocollata_di_domanda_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/StatoDiProtocollataDiDomandaNASpI"
+        ha_stato_di_integrazione_di_domanda_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/StatoDiIntegrazioneDiDomandaNASpI"
+        ha_stato_di_accolta_di_domanda_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/StatoDiAccoltaDiDomandaNASpI"
+        ha_stato_di_rifiutata_di_domanda_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/StatoDiRifiutataDiDomandaNASpI"
+        ha_stato_di_riesame_di_domanda_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/StatoDiRiesameDiDomandaNASpI"
+        ha_stato_di_ricorso_di_domanda_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/StatoDiRicorsoDiDomandaNASpI"
+        ha_allegato_per_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/DocumentoAllegatoDomandaNASpI"
+        ha_modalita_di_pagamento_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/ModalitaDiPagamentoNASpI"
+      example:
+        codice_domanda_naspi:
+          $ref: "#/components/schemas/IdDomandaNASpI/example"
+        nota_domanda_naspi: 'Domanda NASpI causa licenziamento'
+        se_indennita_mancato_preavviso: 'true'
+        ha_richiedente_naspi:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/richiedente-naspi/latest/richiedente-naspi.oas3.yaml#/components/schemas/RichiedenteNASpI/example"
+        ha_destinatario_domanda_naspi:
+          $ref: "#/components/schemas/SedeINPS/example"
+        ha_stato_di_bozza_di_domanda_naspi:
+          $ref: "#/components/schemas/StatoDiBozzaDiDomandaNASpI/example"
+        ha_stato_di_protocollata_di_domanda_naspi:
+          $ref: "#/components/schemas/StatoDiProtocollataDiDomandaNASpI/example"
+        ha_stato_di_integrazione_di_domanda_naspi:
+          $ref: "#/components/schemas/StatoDiIntegrazioneDiDomandaNASpI/example"
+        ha_stato_di_accolta_di_domanda_naspi:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/stato-di-accolta-domanda-naspi/latest/stato-di-accolta-domanda-naspi.oas3.yaml#/components/schemas/StatoDiAccoltaDiDomandaNASpI/example"
+        ha_stato_di_rifiutata_di_domanda_naspi:
+          $ref: "#/components/schemas/StatoDiRifiutataDiDomandaNASpI/example"
+        ha_stato_di_riesame_di_domanda_naspi:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/stato-di-riesame-domanda-naspi/latest/stato-di-riesame-domanda-naspi.oas3.yaml#/components/schemas/StatoDiRiesameDiDomandaNASpI/example"
+        ha_stato_di_ricorso_di_domanda_naspi:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/stato-di-ricorso-domanda-naspi/latest/stato-di-ricorso-domanda-naspi.oas3.yaml#/components/schemas/StatoDiRicorsoDiDomandaNASpI/example"
+        ha_allegato_per_naspi:
+          $ref: "#/components/schemas/DocumentoAllegatoDomandaNASpI/example"
+        ha_modalita_di_pagamento_naspi:
+          $ref: "#/components/schemas/ModalitaDiPagamentoNASpI/example"
+
+    SedeINPS:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/core/"
+        denominazione_sede_inps: denominazioneSedeINPS
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      required:
+      - codice_sede_inps
+      - denominazione_sede_inps
+      properties:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS"
+        denominazione_sede_inps:
+          type: string
+          maxLength: 255
+      example:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS/example"
+        denominazione_sede_inps: "INPS Roma Eur"
+
+    CodiceSedeINPS:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      description: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      example: '1296589'
+      maxLength: 50
+      minLength: 1
+
+    StatoDiBozzaDiDomandaNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiBozzaDiDomandaNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        numero_protocollo_naspi_stato_di_bozza: numeroProtocolloNASpI
+        data_presentazione_naspi_stato_di_bozza: dataPresentazioneNASpI
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiBozzaDiDomandaNASpI
+      required:
+      - codice_stato_di_bozza_di_domanda_naspi
+      - numero_protocollo_naspi_stato_di_bozza
+      - data_presentazione_naspi_stato_di_bozza
+      properties:
+        codice_stato_di_bozza_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoBozzaDomandaNASpI"
+        numero_protocollo_naspi_stato_di_bozza:
+          type: string
+          maxLength: 255
+        data_presentazione_naspi_stato_di_bozza:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        codice_stato_di_bozza_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoBozzaDomandaNASpI/example"
+        numero_protocollo_naspi_stato_di_bozza: '12459683'
+        data_presentazione_naspi_stato_di_bozza: "2022-03-07"
+
+    CodiceStatoBozzaDomandaNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      example: '12485963'
+      maxLength: 50
+      minLength: 1
+
+    StatoDiProtocollataDiDomandaNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiProtocollataDiDomandaNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        numero_protocollo_naspi_stato_di_protocollata: numeroProtocolloNASpI
+        data_presentazione_naspi_stato_di_protocollata: dataPresentazioneNASpI
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiProtocollataDiDomandaNASpI
+      required:
+      - codice_stato_di_protocollata_di_domanda_naspi
+      - numero_protocollo_naspi_stato_di_protocollata
+      - data_presentazione_naspi_stato_di_protocollata
+      properties:
+        codice_stato_di_protocollata_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoProtocollataDomandaNASpI"
+        numero_protocollo_naspi_stato_di_protocollata:
+          type: string
+          maxLength: 255
+        data_presentazione_naspi_stato_di_protocollata:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        codice_stato_di_protocollata_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoProtocollataDomandaNASpI/example"
+        numero_protocollo_naspi_stato_di_protocollata: '16259683'
+        data_presentazione_naspi_stato_di_protocollata: "2022-04-14"
+
+    CodiceStatoProtocollataDomandaNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      example: '13585963'
+      maxLength: 50
+      minLength: 1
+
+    StatoDiIntegrazioneDiDomandaNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiIntegrazioneDiDomandaNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        numero_protocollo_naspi_stato_di_integrazione: numeroProtocolloNASpI
+        data_presentazione_naspi_stato_di_integrazione: dataPresentazioneNASpI
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiIntegrazioneDiDomandaNASpI
+      required:
+      - codice_stato_di_integrazione_di_domanda_naspi
+      - numero_protocollo_naspi_stato_di_integrazione
+      - data_presentazione_naspi_stato_di_integrazione
+      properties:
+        codice_stato_di_integrazione_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoIntegrazioneDomandaNASpI"
+        numero_protocollo_naspi_stato_di_integrazione:
+          type: string
+          maxLength: 255
+        data_presentazione_naspi_stato_di_integrazione:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        codice_stato_di_integrazione_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoIntegrazioneDomandaNASpI/example"
+        numero_protocollo_naspi_stato_di_integrazione: '247569856'
+        data_presentazione_naspi_stato_di_integrazione: "2021-05-10"
+
+    CodiceStatoIntegrazioneDomandaNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      example: '26458597'
+      maxLength: 50
+      minLength: 1
+
+    StatoDiRifiutataDiDomandaNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRifiutataDiDomandaNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        numero_protocollo_naspi_stato_di_rifiutata: numeroProtocolloNASpI
+        data_presentazione_naspi_stato_di_rifiutata: dataPresentazioneNASpI
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRifiutataDiDomandaNASpI
+      required:
+      - codice_stato_di_rifiutata_di_domanda_naspi
+      - numero_protocollo_naspi_stato_di_rifiutata
+      - data_presentazione_naspi_stato_di_rifiutata
+      properties:
+        codice_stato_di_rifiutata_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoRifiutataDomandaNASpI"
+        numero_protocollo_naspi_stato_di_rifiutata:
+          type: string
+          maxLength: 255
+        data_presentazione_naspi_stato_di_rifiutata:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        codice_stato_di_rifiutata_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoRifiutataDomandaNASpI/example"
+        numero_protocollo_naspi_stato_di_rifiutata: '167584856'
+        data_presentazione_naspi_stato_di_rifiutata: "2020-12-06"
+
+    CodiceStatoRifiutataDomandaNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      example: '13259685'
+      maxLength: 50
+      minLength: 1
+
+    DocumentoAllegatoDomandaNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/DocumentoAllegato
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+        nome_documento_domanda_naspi: nomeDocumento
+        data_caricamento_documento_domanda_naspi: dataCaricamentoDocumento
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/pensions/DocumentoAllegato
+      required:
+      - identificativo_documento_domanda_naspi
+      - nome_documento_domanda_naspi
+      - data_caricamento_documento_domanda_naspi
+      properties:
+        identificativo_documento_domanda_naspi:
+          $ref: "#/components/schemas/IdentificativoDocumentoDomandaNASpI"
+        nome_documento_domanda_naspi:
+          type: string
+          maxLength: 255
+        data_caricamento_documento_domanda_naspi:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        identificativo_documento_domanda_naspi:
+          $ref: "#/components/schemas/IdentificativoDocumentoDomandaNASpI/example"
+        nome_documento_domanda_naspi: 'Carta di Identità'
+        data_caricamento_documento_domanda_naspi: "2022-05-16"
+
+    IdentificativoDocumentoDomandaNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/pensions/identificativoDocumento
+      description: https://w3id.org/italia/social-security/onto/pensions/identificativoDocumento
+      example: '1485675'
+      maxLength: 50
+      minLength: 1
+
+    ModalitaDiPagamentoNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/ModalitàDiPagamentoNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        bic: BIC
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/ModalitàDiPagamentoNASpI
+      required:
+      - iban
+      - bic
+      properties:
+        iban:
+          $ref: "#/components/schemas/IBANTitolareNASpI"
+        bic:
+          type: string
+          maxLength: 255
+      example:
+        iban:
+          $ref: "#/components/schemas/IBANTitolareNASpI/example"
+        bic: 'UNCRITMM'
+
+    IBANTitolareNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/IBAN
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/IBAN
+      example: 'IT60X0542811101000000123456'
+      maxLength: 50
+      minLength: 1

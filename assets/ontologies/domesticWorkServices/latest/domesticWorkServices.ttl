@@ -1,0 +1,1949 @@
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPSV: <https://w3id.org/italia/onto/CPSV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSContributions: <https://w3id.org/italia/social-security/onto/contributions/> .
+@prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
+@prefix INPSDWS: <https://w3id.org/italia/social-security/onto/domesticWorkServices/> .
+@prefix INPSPensions: <https://w3id.org/italia/social-security/onto/pensions/> .
+@prefix INPSRL: <https://w3id.org/italia/social-security/onto/relevantLegislation/> .
+@prefix INPSService: <https://w3id.org/italia/social-security/onto/services/> .
+@prefix L0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix TI: <https://w3id.org/italia/onto/TI/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+INPSDWS: a owl:Ontology ;
+    owl:versionIRI INPSDWS:1.0 ;
+    owl:imports COV:,
+        CPSV:,
+        INPSContributions:,
+        INPSCore:,
+        L0:,
+        TI:,
+        xsd: ;
+    rdfs:label "INPS Domestic Work Services Ontology"@en,
+        "Ontologia INPS relativa ai servizi per il lavoro domestico"@it ;
+    rdfs:comment "INPS ontology relating to the entities and relationships that enable INPS services for the management of domestic work. Among them we find, for example, the service for registration, variation, termination of the domestic employment relationship or consultation of the contribution statement."@en,
+        "Ontologia INPS relativa alle entità e le relazioni che abilitano i servizi INPS per la gestione del Lavoro Domestico. Tra di essi troviamo, ad esempio, il servizio per l'iscrizione, la variazione, la cessazione del rapporto di lavoro domesitco o la consultazione dell'estratto contributivo."@it ;
+    owl:versionInfo "Version 1.0 - Modified on 06 June 2024"@en,
+        "Versione 1.0 - Modificata il 06 Giugno 2024"@it ;
+    rdfs:isDefinedBy INPSDWS: ;
+    adms:acronym "inps" ;
+    adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+    adms:hasFormalityLevel adms:Formal ;
+    adms:hasKeyClass INPSDWS:CessazioneRapportoDiLavoroDomestico,
+        INPSDWS:IscrizioneRapportoDiLavoroDomestico,
+        INPSDWS:RapportoDiLavoroDomesticoAnnullato,
+        INPSDWS:RapportoDiLavoroDomesticoInVerifica,
+        INPSDWS:RapportoDiLavoroDomesticoIscritto,
+        INPSDWS:RapportoDiLavoroDomesticoRespinto,
+        INPSDWS:VariazioneRapportoDiLavoroDomestico ;
+    adms:hasOntologyLanguage adms:OWL ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/services/distribution/DOMESTICWORKSERVICES-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/services/distribution/DOMESTICWORKSERVICES-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/services/distribution/DOMESTICWORKSERVICES-RDF-XML> ;
+    adms:hasTask adms:AnnotationTask,
+        adms:QueryFormulationTask,
+        adms:SearchTask ;
+    adms:last INPSDWS:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/domesticWorkServices"^^xsd:anyURI ;
+    adms:prefix "inpsdws" ;
+    adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+    adms:status "catalogued",
+        "published" ;
+    adms:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    adms:type adms:ServiceOnytology ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:keyword "cessazione rapporto di lavoro domestico"@it,
+        "datore di lavoro domestico"@it,
+        "domestic work employer"@en,
+        "domestic work employment relationship registration"@en,
+        "domestic work employment relationship termination"@en,
+        "domestic work employment relationship variation"@en,
+        "domestic worker"@en,
+        "iscrizione rapporto di lavoro domestico"@it,
+        "lavoratore domestico"@it,
+        "variazione rapporto di lavoro domestico"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Ontologia INPS relativa alle entità e le relazioni che abilitano i servizi INPS per la gestione del Lavoro Domestico. Tra di essi troviamo, ad esempio, il servizio per l'iscrizione, la variazione, la cessazione del rapporto di lavoro domesitco o la consultazione dell'estratto contributivo."@it,
+        "This is the INPS ontology relating to the entities and relationships that enable INPS services for the management of domestic work. Among them we find, for example, the service for registration, variation, termination of the domestic employment relationship or consultation of the contribution statement."@en ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/services" ;
+    dct:issued "2024-06-06T00:00:00+00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-01-17T00:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "INPS Domestic Work Services Ontology"@en,
+        "Ontologia INPS relativa ai servizi per il Lavoro Domestico"@it .
+
+### Object Properties
+
+INPSContributions:haContrattoDiLavoroDomestico a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:range INPSContributions:ContrattoDiLavoroDomestico .
+
+INPSDWS:agenteConsultaEstrattoContributivo a owl:ObjectProperty ;
+    rdfs:label "Agent consults contribution statement"@en,
+        "agenteConsultaEstrattoContributivo"@it ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:DatoreDiLavoroDomestico
+                    INPSRL:Delegato ) ] ;
+    rdfs:range INPSDWS:EstrattoContributivoRapportoDiLavoroDomesticoDatoreLavoro ;
+    rdfs:comment "An agent, i.e. a domestic employer or its delegate, consults the contribution statement. "@en,
+        "Un agente, ovvero un datore di lavoro domestico o un suo delegato, consulta l’estratto contributivo. "@it .
+
+INPSDWS:annullaRapportoDiLavoroDomestico a owl:ObjectProperty ;
+    rdfs:label "annullaRapportoDiLavoroDomestico"@it,
+        "Cancels domestic work relationship "@en ;
+    rdfs:domain INPSDWS:AnnullamentoRapportoDiLavoroDomestico ;
+    rdfs:range INPSDWS:RapportoDiLavoroDomesticoAnnullato ;
+    rdfs:comment "L’annullamento del rapporto di lavoro domestico genera un rapporto di lavoro domestico annullato. Questa object property collega la classe “Annullamento del Rapporto di Lavoro Domestico” e “Rapporto di Lavoro Domestico Annullato”. "@it,
+        "The cancellation of the domestic employment relationship generates a cancelled domestic employment relationship. This object property binds the class ‘Cancellation of Domestic Employment Relationship’ and ‘Domestic Employment Relationship Cancelled’. "@en .
+
+INPSDWS:annullatoDa a owl:ObjectProperty ;
+    rdfs:label "annullato Da"@it,
+        "Cancelled by"@en ;
+    rdfs:domain INPSDWS:RapportoDiLavoroDomesticoAnnullato ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:DatoreDiLavoroDomestico
+                    INPSCore:SedeINPS
+                    INPSRL:Delegato ) ] ;
+    rdfs:comment "A domestic employment relationship may be cancelled by the domestic employer or its delegate. "@en,
+        "Un rapporto di lavoro domestico può essere annullato dal datore di lavoro domestico o il suo delegato. "@it .
+
+INPSDWS:cessazioneGeneraRapportoDiLavoroDomesticoCessato a owl:ObjectProperty ;
+    rdfs:label "cessazioneGeneraRapportoDiLavoroDomesticoCessato"@it,
+        "Termination Generates Terminated Domestic Work Relationship"@en ;
+    rdfs:domain INPSDWS:CessazioneRapportoDiLavoroDomestico ;
+    rdfs:range INPSContributions:RapportoDiLavoroDomesticoCessato ;
+    rdfs:comment "La cessazione di un rapporto di lavoro domestico effettuata dal datore di lavoro domestico o da un suo delegato sul portale INPS per il lavoro domestico genera un rapporto di lavoro domestico cessato. "@it,
+        "The termination of a domestic employment relationship by the domestic employer or its delegate on the INPS domestic employment portal generates a terminated domestic employment relationship. "@en .
+
+INPSDWS:COIscrizioneGenerataAPartireDa a owl:ObjectProperty ;
+    rdfs:label "COIscrizioneGenerataAPartireDa"@it,
+        "Mandatory Communication of Registration generated from"@en ;
+    rdfs:domain INPSDWS:ComunicazioneObbligatoriaAssunzione ;
+    rdfs:range INPSDWS:IscrizioneRapportoDiLavoroDomestico ;
+    rdfs:comment "La comunicazione obbligatoria di iscrizione viene generata a partire dall’iscrizione di un rapporto di lavoro domestico all’interno del portale INPS del lavoro domestico da parte del datore di lavoro domestico. "@it,
+        "The mandatory registration communication is generated from the registration of a domestic employment relationship within the INPS domestic work portal by the domestic employer. "@en .
+
+INPSDWS:comunicazioneBidirezionaleRiguardaRapportoDiLavoroDomestico a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Bidirectional Communication Concerns Domestic Work Employment Relationship "@en,
+        "comunicazioneBidirezionaleRiguardaRapportoDiLavoroDomestico"@it ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:comment "La comunicazione bidirezionale, eseguita sul portale INPS dei servizi per il lavoro domestico, ha come oggetto un rapporto di lavoro domestico. "@it,
+        "The bidirectional communication, carried out on the INPS portal of domestic work services, concerns a domestic work relationship. "@en .
+
+INPSDWS:consultaRapportoDiLavoro a owl:ObjectProperty ;
+    rdfs:label "consultaRapportoDiLavoroDomestico"@it,
+        "Consults Domestic Work Relationships"@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:DatoreDiLavoroDomestico
+                    INPSContributions:LavoratoreDomestico
+                    INPSRL:Delegato ) ] ;
+    rdfs:range INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:comment "Il lavoratore domestico, il datore di lavoro domestico o un delegato possono consultare i rapporti di lavoro domestico a loro associati. "@it,
+        "The domestic worker, the domestic employer or his delegate may consult the domestic employment relationships associated with them. "@en .
+
+INPSDWS:consultatiTramiteEstrattoContributivo a owl:ObjectProperty ;
+    rdfs:label "consultatiTramiteEstrattoContributivo"@it,
+        "Consulted by contribution statement"@en ;
+    rdfs:domain INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:range INPSDWS:EstrattoContributivoRapportoDiLavoroDomestico ;
+    rdfs:comment "I contributi trimestrali ordinari possono essere consultati tramite l’estratto contributivo del rapporto di lavoro domestico. "@it,
+        "Ordinary quarterly contributions can be consulted by means of the contribution statement of the domestic employment relationship. "@en .
+
+INPSDWS:contrattoHaMotiviDiPermesso a owl:ObjectProperty ;
+    rdfs:label "Contract has employee leaves "@en,
+        "contrattoHaMotiviDiPermesso"@it ;
+    rdfs:domain INPSContributions:ContrattoDiLavoroDomestico ;
+    rdfs:range INPSDWS:MotiviPermesso ;
+    rdfs:comment "A contract has employee leaves. "@en,
+        "Un contratto ha permessi di lavoro. "@it .
+
+INPSDWS:contribuenteInviaComunicazioneBidirezionaleA a owl:ObjectProperty ;
+    rdfs:label "contribuenteInviaComunicazioneBidirezionaleA"@it,
+        "Contributor Sends Bidirectional Communication To"@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:DatoreDiLavoroDomestico
+                    INPSRL:Delegato ) ] ;
+    rdfs:range INPSCore:SedeINPS ;
+    owl:inverseOf INPSDWS:inpsInviaComunicazioneBidirezionaleA ;
+    rdfs:comment "A contributor can send a bidirectional communication to his or her INPS office via the INPS domestic work portal. "@en,
+        "Un contribuente può inviare una comunicazione bidirezionale alla propria sede INPS tramite il portale del lavoro domestico dell'INPS. "@it .
+
+INPSDWS:COVariazioneGenerataAPartireDa a owl:ObjectProperty ;
+    rdfs:label "COVariazioneGenerataAPartireDa"@it,
+        "Mandatory Communication of Variation generated from"@en ;
+    rdfs:domain INPSDWS:ComunicazioneObbligatoriaVariazione ;
+    rdfs:comment "La comunicazione obbligatoria di variazione viene generata a partire dalla variazione di un rapporto di lavoro domestico all’interno del portale INPS del lavoro domestico da parte del datore di lavoro domestico. "@it,
+        "The mandatory variation communication is generated from the variation of a domestic employment relationship within the INPS domestic work portal by the domestic employer. "@en .
+
+INPSDWS:effettuaIscrizioneRapportoDiLavoroDomestico a owl:ObjectProperty ;
+    rdfs:label "effettuaIscrizioneRapportoDiLavoroDomestico"@it,
+        "Performs Domestic Work Report Registration"@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:DatoreDiLavoroDomestico
+                    INPSCore:SedeINPS
+                    INPSRL:Delegato ) ] ;
+    rdfs:range INPSDWS:IscrizioneRapportoDiLavoroDomestico ;
+    rdfs:comment "A domestic employer or its delegate performs the registration of a domestic employment relationship. In some specific cases, the INPS office may also register a domestic employment relationship. "@en,
+        "Un datore di lavoro domestico o il suo delegato effettua l’iscrizione di un rapporto di lavoro domestico. In alcuni casi specifici sono anche la sede INPS può effettuare l’iscrizione di un rapporto di lavoro domestico. "@it .
+
+INPSDWS:effettuaVariazioneRapportoDiLavoroDomestico a owl:ObjectProperty ;
+    rdfs:label "effettuaVariazioneRapportoDiLavoroDomestico"@it,
+        "Performs Domestic Work Report Variation"@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:DatoreDiLavoroDomestico
+                    INPSRL:Delegato ) ] ;
+    rdfs:range INPSDWS:VariazioneRapportoDiLavoroDomestico ;
+    rdfs:comment "A domestic employer or its delegate performs the variation of a domestic employment relationship. "@en,
+        "Un datore di lavoro domestico o il suo delegato effettua la variazione di un rapporto di lavoro domestico. "@it .
+
+INPSDWS:esitoValutazioneAutomaticaConRilevazioneDelRischioGenera a owl:ObjectProperty ;
+    rdfs:label "Automatic Risk Assessment Outcome Generates"@en,
+        "esitoValutazioneAutomaticaConRilevazioneDelRischioGenera"@it ;
+    rdfs:domain INPSDWS:EsitoValutazioneAutomaticaConRilevazioneRischio ;
+    rdfs:range INPSDWS:RapportoDiLavoroDomesticoInVerifica ;
+    rdfs:comment "An automatic assessment of a registered domestic employment relationship that detect the risk of improper domestic work generates an domestic employment relationship under verification. "@en,
+        "Una valutazione automatica di un rapporto di lavoro domestico iscritto che rileva rischio di lavoro domestico improprio genera un rapporto di lavoro domestico in verifica. "@it .
+
+INPSDWS:esitoValutazioneAutomaticaSenzaRilevazioneRischioGenera a owl:ObjectProperty ;
+    rdfs:label "Automatic assessment without Risk evaluation outcome generates"@en,
+        "esitoValutazioneAutomaticaSenzaRilevazioneRischioGenera"@it ;
+    rdfs:domain INPSDWS:EsitoVautazioneAutomaticaSenzaRilevazioneRischio ;
+    rdfs:range INPSDWS:RapportoDiLavoroDomesticoAccolto ;
+    rdfs:comment "An automatic assessment of a registered domestic employment relationship that does not detect the risk of improper domestic work generates an active domestic employment relationship. "@en,
+        "Una valutazione automatica di un rapporto di lavoro domestico iscritto che non rileva rischio di lavoro domestico improprio genera un rapporto di lavoro domestico attivo. "@it .
+
+INPSDWS:esitoValutazioneConRilevazioneRischioGenera a owl:ObjectProperty ;
+    rdfs:label "esitoValutazioneConRilevazioneRischioGenera"@it,
+        "Risk Assessment outcome generates "@en ;
+    rdfs:domain INPSDWS:EsitoValutazioneConfermaRilevazioneRischio ;
+    rdfs:range INPSDWS:RapportoDiLavoroDomesticoRespinto ;
+    rdfs:comment "La valutazione che conferma il rischio di rapporto di lavoro domestico improprio genera un rapporto di lavoro domestico respinto. "@it,
+        "The assessment confirming the risk of an improper domestic employment relationship generates a rejected domestic employment relationship. "@en .
+
+INPSDWS:esitoValutazioneSenzaRilevazioneRischioGenera a owl:ObjectProperty ;
+    rdfs:label "Assessment without Risk evaluation outcome generates"@en,
+        "esitoValutazioneSenzaRilevazioneRischioGenera"@it ;
+    rdfs:domain INPSDWS:EsitoValutazioneSenzaRilevazioneRischio ;
+    rdfs:range INPSDWS:RapportoDiLavoroDomesticoAccolto ;
+    rdfs:comment "An assessment of a domestic employment relationship under verification that does not detect the risk of improper domestic work generates an active domestic employment relationship. "@en,
+        "Una valutazione di un rapporto di lavoro domestico in fase di verifica che non rileva il rischio di lavoro domestico improprio genera un rapporto di lavoro domestico attivo."@it .
+
+INPSDWS:haDettaglioComunicazioneBidirezionale a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "haDettaglioComunicazioneBidirezionale"@it,
+        "Has Bidirectional Communication Detail"@en ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range INPSDWS:DettaglioComunicazioneBidirezionale ;
+    rdfs:comment "Binds a bidirectional communication to its details. "@en,
+        "Collega una comunicazione bidirezionale ai propri dettagli. "@it .
+
+INPSDWS:haDocumentoAllegato a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "haDocumentoAllegato"@it,
+        "Has Attached Document"@en ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range INPSPensions:DocumentoAllegato ;
+    rdfs:comment "Binds a bidirectional communication to the attached documents. "@en,
+        "Collega una comunicazione bidirezionale ai documenti allegati. "@it .
+
+INPSDWS:haDocumentoIdentita a owl:ObjectProperty ;
+    rdfs:label "ha documento d'identità"@it,
+        "has identity document"@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:DatoreDiLavoroDomestico
+                    INPSContributions:LavoratoreDomestico ) ] ;
+    rdfs:range INPSDWS:DocumentoIdentita ;
+    rdfs:comment "la relazione collega una persona al documento d'identità di cui è titolare"@it,
+        "the relationship links a person to the identity document they hold"@en .
+
+INPSDWS:haEsitoComunicazioneBidirezionale a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "haEsitoComunicazioneBidirezionale"@it,
+        "Has Bidirectional Communication Outcome"@en ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range INPSDWS:EsitoComunicazioneBidirezionale ;
+    rdfs:comment "Binds a bidirectional communication to its outcome. "@en,
+        "Collega una comunicazione bidirezionale al proprio esito "@it .
+
+INPSDWS:haEsitoValutazione a owl:ObjectProperty ;
+    rdfs:label "haEsitoValutazione"@it,
+        "Has assessment outcome"@en ;
+    rdfs:domain INPSDWS:ValutazioneDeiFattoriDiRischio ;
+    rdfs:range INPSDWS:EsitoValutazioneFattoriDiRischio ;
+    rdfs:comment "Collega la valutazione dei fattori di rischio al suo esito. "@it,
+        "It links the assessment of risk factors to its outcome. "@en .
+
+INPSDWS:haEsitoValutazioneAutomatica a owl:ObjectProperty ;
+    rdfs:label "haEsitoValutazioneAutomatica"@it,
+        "Has automatic assessment outcome"@en ;
+    rdfs:domain INPSDWS:ValutazioneAutomaticaFattoriDiRischio ;
+    rdfs:range INPSDWS:EsitoValutazioneAutomatica ;
+    rdfs:comment "Collega la valutazione automatica dei fattori di rischio al suo esito. "@it,
+        "It links the automatic assessment of risk factors to its outcome. "@en .
+
+INPSDWS:haMotivoCessazione a owl:ObjectProperty ;
+    rdfs:label "haMotivoCessazione"@it,
+        "Has termination reason"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomesticoCessato ;
+    rdfs:range INPSDWS:MotivoCessazione ;
+    rdfs:comment "Collega il contratto di lavoro domestico ai motivi di cessazione. "@it,
+        "It links the domestic employment contract to termination reason. "@en .
+
+INPSDWS:haStatoComunicazioneBidirezionale a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Has Bidirectional Communication Status"@en,
+        "haStatoComunicazioneBidirezionale"@it ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range INPSDWS:StatoComunicazioneBidirezionale ;
+    rdfs:comment "Binds a bidirectional communication to its status. "@en,
+        "Collega una comunicazione bidirezionale al proprio stato "@it .
+
+INPSDWS:haStatoDiPagamentoContributiLavoratoreDomestico a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Has Domestic labor contribution payment status "@en,
+        "haStatoDiPagamentoContributiLavoratoreDomestico"@it ;
+    rdfs:domain INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:range INPSDWS:StatoDiPagamentoContributiLavoratoreDomestico ;
+    rdfs:comment "Binds quarterly ordinary contributions to payment status. "@en,
+        "Collega i contributi trimestrali ordinari al priprio stato di pagamento. "@it .
+
+INPSDWS:haTipologiaDiContratto a owl:ObjectProperty ;
+    rdfs:label "Has contract type"@en,
+        "haTipologiaDiContratto"@it ;
+    rdfs:domain INPSContributions:ContrattoDiLavoroDomestico ;
+    rdfs:range INPSDWS:TipologiaContratto ;
+    rdfs:comment "Collega il contratto di lavoro domestico ai tipi di contratto. "@it,
+        "It links the domestic employment contract to contract types. "@en .
+
+INPSDWS:haTipologiaDocumento a owl:ObjectProperty ;
+    rdfs:label "Has identification document type"@en,
+        "haTipologiaDocumento"@it ;
+    rdfs:domain INPSDWS:DocumentoIdentita ;
+    rdfs:range INPSDWS:TipologiaDocumento ;
+    rdfs:comment "Collega il contratto di lavoro domestico ai tipi di documenti di identità. "@it,
+        "It links the domestic employment contract to identification document types. "@en .
+
+INPSDWS:haTipologiaMansioneLavoratoreDomestico a owl:ObjectProperty ;
+    rdfs:label "Has Domestic Workers' role type"@en,
+        "haTipologiaMansioneLavoratoreDomestico"@it ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:range INPSDWS:TipologiaMansioneLavoratoreDomestico ;
+    rdfs:comment "Collega un rapporto di lavoro domestico ai tipi di ruoli che possono essere assunti dal lavoratore. "@it,
+        "It links a domestic employment relationship to the types of roles that can be taken on by the worker. "@en .
+
+INPSDWS:haTipologiaPermessoSoggiorno a owl:ObjectProperty ;
+    rdfs:label "Has residence permit type"@en,
+        "haTipologiaPermessoSoggiorno"@it ;
+    rdfs:range INPSDWS:TipologiaPermessoSoggiorno ;
+    rdfs:comment "Collega il contratto di lavoro domestico ai tipi di permesso di soggiorno. "@it,
+        "It links the domestic employment contract to residence permit types. "@en .
+
+INPSDWS:haTipologiaRapportoDiParentela a owl:ObjectProperty ;
+    rdfs:label "Has family relationship type"@en,
+        "haTipologiaRapportoDiParentela"@it ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:range INPSDWS:TipologiaRapportoDiParentela ;
+    rdfs:comment "Collega il contratto di lavoro domestico ai tipi di rapport di parentela. "@it,
+        "It links the domestic employment contract to family relationship types. "@en .
+
+INPSDWS:haTipologiaRetribuzione a owl:ObjectProperty ;
+    rdfs:label "Has remuneration type"@en,
+        "haTipologiaRetribuzione"@it ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:range INPSDWS:TipologiaRetribuzione ;
+    rdfs:comment "Collega il contratto di lavoro domestico ai tipi di retribuzione. "@it,
+        "It links the domestic employment contract to remuneration types. "@en .
+
+INPSDWS:inpsInviaComunicazioneBidirezionaleA a owl:ObjectProperty ;
+    rdfs:label "INPS sends bidirectional communication to"@en,
+        "inpsInviaComunicazioneBidirezionaleA"@it ;
+    rdfs:comment "La sede INPS può inviare comunicazione bidirezionale a contribuente tramite il portale INPS per il lavoro domestico. "@it,
+        "The INPS office sends bidirectional communication to the contributor via the INPS portal for domestic work. "@en .
+
+INPSDWS:inVerificaPresso a owl:ObjectProperty ;
+    rdfs:label "inVerificaPresso"@it,
+        "Under verification at"@en ;
+    rdfs:domain INPSDWS:RapportoDiLavoroDomesticoInVerifica ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    INPSCore:DirezioneCentraleINPS
+                    INPSCore:SedeINPS ) ] ;
+    rdfs:comment "A domestic employment relationship under verification may be under verification at INPS central office or at a local office. "@en,
+        "Un rapporto di lavoro domestico in verifica può essre in verifica presso la sede centrali INPS o una sede locale. "@it .
+
+INPSDWS:inviaComunicazioneObbligatoria a owl:ObjectProperty ;
+    rdfs:label "inviaComunicazioneObbligatoria"@it,
+        "Sends mandatory communication"@en ;
+    rdfs:domain INPSCore:SedeINPS ;
+    rdfs:range INPSDWS:ComunicazioneObbligatoriaRapportoDiLavoroDomestico ;
+    rdfs:comment "La sede INPS invia la comunicazione obbligatoria al ministero del lavoro. "@it,
+        "The INPS office sends the mandatory communication to the Ministry of Labour. "@en .
+
+INPSDWS:invianoComunicazioneBidirezionale a owl:ObjectProperty ;
+    rdfs:label "invianoComunicazioneBidirezionale"@it,
+        "Sends Bidirectional Communication"@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:DatoreDiLavoroDomestico
+                    INPSCore:SedeINPS
+                    INPSRL:Delegato ) ] ;
+    rdfs:range INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:comment "Il datore di lavoro domestico, il suo delegato o la sede INPs invia le comunicazioni bidirezionali. "@it,
+        "The domestic employer, its delegate or the INPS office sends the bidirectional communications. "@en .
+
+INPSDWS:invianoComunicazioneBidirezionaleCorrelata a owl:ObjectProperty ;
+    rdfs:label "invianoComunicazioneBidirezionaleCorrelata"@it,
+        "Sends Related Bidirectional Communication"@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:DatoreDiLavoroDomestico
+                    INPSCore:SedeINPS
+                    INPSRL:Delegato ) ] ;
+    rdfs:range INPSDWS:ComunicazioneBidirezionaleCorrelata ;
+    rdfs:comment "Il datore di lavoro domestico, il suo delegato o la sede INPs invia le comunicazioni bidirezionali correlate. "@it,
+        "The domestic employer, its delegate or the INPS office sends the related bidirectional communications. "@en .
+
+INPSDWS:iscriveRapportoDiLavoroDomestico a owl:ObjectProperty ;
+    rdfs:label "iscriveRapportoDiLavoroDomestico"@it,
+        "Registers domestic work relationship"@en ;
+    rdfs:domain INPSDWS:IscrizioneRapportoDiLavoroDomestico ;
+    rdfs:range INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:comment "Collega l’iscrizione di un rapporto di lavoro domestico sul portale INPS dei servizi per il lavoro domestico al rapporto di lavoro domestico. "@it,
+        "It links the registration of a domestic work relationship on the INPS domestic work services portal to the domestic work relationship. "@en .
+
+INPSDWS:lavoratoreConsultaEstrattoContributivoLavoratoreDomestico a owl:ObjectProperty ;
+    rdfs:label "Domestic worker consults domestic work contributions"@en,
+        "lavoratoreConsultaEstrattoContributivoLavoratoreDomestico"@it ;
+    rdfs:domain INPSContributions:LavoratoreDomestico ;
+    rdfs:range INPSDWS:EstrattoContributivoRapportoDiLavoroDomesticoLavoratore ;
+    rdfs:comment "A domestic worker can consult his or her contribution statement via the INPS service portal for domestic work. "@en,
+        "Un lavoratore domestico tramite il portale INPS dei servizi per il lavoro domestico può consultare il proprio estratto contributivo. "@it .
+
+INPSDWS:modificaRapportoDiLavoroDomestico a owl:ObjectProperty ;
+    rdfs:label "modificaRapportoDiLavoroDomestico"@it,
+        "Modifies domestic work relationship"@en ;
+    rdfs:domain INPSDWS:VariazioneRapportoDiLavoroDomestico ;
+    rdfs:range INPSContributions:RapportoDiLavoroDomesticoAttivo ;
+    rdfs:comment "A domestic employment relationship variation modifies an active domestic employment relationship. "@en,
+        "Una variazione di rapporto di lavoro domestico modifica un rapporto di lavoro domestico attivo. "@it .
+
+INPSDWS:prorogaRapportoDiLavoroDomesticoCessato a owl:ObjectProperty ;
+    rdfs:label "Extension of terminated domestic work relationship"@en,
+        "Proroga rapporto di lavoro domestico cessato"@it ;
+    rdfs:domain INPSDWS:ProrogaRapportoDiLavoro ;
+    rdfs:range INPSDWS:RapportoDiLavoroDomesticoAnnullato ;
+    rdfs:comment "La relazione collega l'evento di proroga ad un rapporto di lavoro domestico cessato"@it,
+        "The relation links the extension event to a terminated domestic employment relationship"@en .
+
+INPSDWS:raccoglieIscrizioneRapportoDiLavoroDomestico a owl:ObjectProperty ;
+    rdfs:label "Collects domestic work relationship registration "@en,
+        "raccoglieIscrizioneRapportoDiLavoroDomestico"@it ;
+    rdfs:domain INPSCore:SedeINPS ;
+    rdfs:range INPSDWS:IscrizioneRapportoDiLavoroDomestico ;
+    rdfs:comment "La sede INPS raccoglie le iscrizioni dei rapporti di lavoro domestico effettuate sul portale INPS dei servizi per il lavoro domestico. "@it,
+        "The INPS office collects the registrations of domestic work relationships made on the INPS portal of domestic work services. "@en .
+
+INPSDWS:raccoglieVariazioneRapportoDiLavoroDomestico a owl:ObjectProperty ;
+    rdfs:label "Collects domestic work relationship variation"@en,
+        "raccoglieVariazioneRapportoDiLavoroDomestico"@it ;
+    rdfs:domain INPSCore:SedeINPS ;
+    rdfs:range INPSDWS:VariazioneRapportoDiLavoroDomestico ;
+    rdfs:comment "La sede INPS raccoglie le variazioni dei rapporti di lavoro domestico effettuate sul portale INPS dei servizi per il lavoro domestico. "@it,
+        "The INPS office collects the variations of domestic work relationships made on the INPS portal of domestic work services. "@en .
+
+INPSDWS:rapportoDiLavoorDomesticoCessatoHaStatoPrecedente a owl:ObjectProperty ;
+    rdfs:label "rapportoDiLavoroDomesticoCessatoHaStatoPrecedente"@it,
+        "Terminated domestic work relationship has previous status "@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomesticoCessato ;
+    rdfs:range INPSDWS:RapportoDiLavoroDomesticoAccolto ;
+    rdfs:comment "Binds the Terminated Domestic Work Relationship to its previous status. "@en,
+        "Collega il Rapporto di Lavoro Domestico Cessato al proprio stato precedente. "@it .
+
+INPSDWS:rapportoDiLavoroDomesticoAccoltoHaStatoPrecedente a owl:ObjectProperty ;
+    rdfs:domain INPSDWS:RapportoDiLavoroDomesticoAccolto ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    INPSDWS:RapportoDiLavoroDomesticoInVerifica
+                    INPSDWS:RapportoDiLavoroDomesticoIscritto ) ] .
+
+INPSDWS:rapportoDiLavoroDomesticoAnnullatoHaStatoPrecedente a owl:ObjectProperty ;
+    rdfs:label "Cancelled domestic work relationship has previous status"@en,
+        "rapportoDiLavoroDomesticoAnnullatoHaStatoPrecedente"@it ;
+    rdfs:domain INPSDWS:RapportoDiLavoroDomesticoAnnullato ;
+    rdfs:range INPSDWS:RapportoDiLavoroDomesticoAccolto ;
+    rdfs:comment "Binds the Cancelled Domestic Work Relationship to its previous status. "@en,
+        "Collega il Rapporto di Lavoro Domestico Annullato al proprio stato precedente. "@it .
+
+INPSDWS:rapportoDiLavoroDomesticoAttivoHaStatoPrecedente a owl:ObjectProperty ;
+    rdfs:label "Active domestic work relationship has previous status"@en,
+        "Rapporto di lavoro domestico attivo ha stato precedente"@it ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomesticoAttivo ;
+    rdfs:range INPSDWS:RapportoDiLavoroDomesticoAccolto ;
+    rdfs:comment " Collega il Rapporto di Lavoro Domestico Attivo al proprio stato precedente. "@it,
+        "Binds the Active Domestic Work Relationship to its previous status. "@en .
+
+INPSDWS:rapportoDiLavoroDomesticoInVerificaHaStatoPrecedente a owl:ObjectProperty ;
+    rdfs:label "rapportoDiLavoroDomesticoInVerificaHaStatoPrecedente"@it .
+
+INPSDWS:rapportoDiLavoroDomesticoRespintoHaStatoPrecedente a owl:ObjectProperty ;
+    rdfs:label "rapportoDiLavorDomesticoRespintoHaStatoPrecedente"@it,
+        "Rejected domestic work relationship has previous status"@en ;
+    rdfs:domain INPSDWS:RapportoDiLavoroDomesticoRespinto ;
+    rdfs:range INPSDWS:RapportoDiLavoroDomesticoInVerifica ;
+    rdfs:comment "Binds the Rejected Domestic Work Relationship to its previous status. "@en,
+        "Collega il Rapporto di Lavoro Domestico Respinto al proprio stato precedente. "@it .
+
+INPSDWS:respintoDa a owl:ObjectProperty ;
+    rdfs:label "Rejected By"@en,
+        "respintoDa"@it ;
+    rdfs:domain INPSDWS:RapportoDiLavoroDomesticoRespinto ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    INPSCore:DirezioneCentraleINPS
+                    INPSCore:SedeINPS ) ] ;
+    rdfs:comment "La Direzione centrale dell’INPS o una sede INPS può respingere un Rapporto di Lavoro Domestico in seguito alla fase di verifica. L’object property collega il Rapporto di Lavoro Domestico Iscritto con Direzione Centrale INPS o Sede INPS. "@it,
+        "The INPS Central Directorate or an INPS Office may reject a Domestic Work Report following the verification stage. The object property links the Rejected Domestic Work Relationship with INPS Central Directorate or INPS Office. "@en .
+
+INPSDWS:sonoDovutiTramitePagamento a owl:ObjectProperty ;
+    rdfs:label "Are Due By Payment"@en,
+        "sonoDovutiTramitePagamento"@it ;
+    rdfs:domain INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:range INPSService:Pagamento ;
+    rdfs:comment "Il pagamento del contributo trimestrale ordinario associato con rapporto di lavoro domestico attivo viene corrisposto tramite il pagamento. "@it,
+        "The payment of the ordinary quarterly contribution associated with an active domestic employment relationship is made by payment. "@en .
+
+INPSDWS:trasformaRapportoDiLavoroDomesticoCessato a owl:ObjectProperty ;
+    rdfs:label "Transform terminated domestic employment relationship"@en,
+        "Trasforma rapporto di lavoro domestico cessato"@it ;
+    rdfs:domain INPSDWS:TrasformazioneRapportoDiLavoroDomestico ;
+    rdfs:range INPSDWS:RapportoDiLavoroDomesticoAnnullato ;
+    rdfs:comment "La relazione collega un evento di trasformazione del rapporto di lavoro ad un rapporto di lavoro domestico cessato"@it,
+        "The relation links an event of transformation of the employment relationship to a terminated domestic work relationship"@en .
+
+INPSDWS:valutatoDa a owl:ObjectProperty ;
+    rdfs:label "Assessed by"@en,
+        "valutatoDa"@it ;
+    rdfs:domain INPSDWS:RapportoDiLavoroDomesticoInVerifica ;
+    rdfs:range INPSDWS:ValutazioneDeiFattoriDiRischio ;
+    rdfs:comment "Il rapporto di lavoro domestico in verifica viene valutato tramite una valutazione dei fattori di rischio di rapporto di lavoro domestico improprio (es rapporto di lavoro tra parenti). "@it,
+        "The domestic employment relationship under verification is assessed by means of a risk factor assessment of improper domestic employment relationships (e.g. working relationships between relatives). "@en .
+
+INPSDWS:valutatoTramiteValutazioneAutomatica a owl:ObjectProperty ;
+    rdfs:label "Assessed by automatic assessment "@en,
+        "valutato tramite valutazione automatica"@it ;
+    rdfs:domain INPSDWS:RapportoDiLavoroDomesticoIscritto ;
+    rdfs:range INPSDWS:ValutazioneAutomaticaFattoriDiRischio ;
+    rdfs:comment "A registered domestic work relationship is assessed by means of an automatic evaluation in order to detect the risk of improper domestic work relationships. "@en,
+        "Un rapporto di lavoro domestico iscritto viene valutato tramite una valutazione automatica al fine di rilevare il rischio di rapporto di lavoro domestico improprio. "@it .
+
+INPSDWS:valutazioneAutomaticaEseguitaDa a owl:ObjectProperty ;
+    rdfs:label "Automatic assessment performed by "@en,
+        "valutazioneAutomaticaEseguitaDa"@it ;
+    rdfs:domain INPSDWS:AgenteSoftwarePerLaRilevazionediRischioRapportoIrregolare ;
+    rdfs:range INPSDWS:ValutazioneAutomaticaFattoriDiRischio ;
+    rdfs:comment "A registered domestic work relationship undergoes an automatic assessment of risk factors. This automatic assessment is performed by a software agent. "@it,
+        "Un rapporto di lavoro domestico iscritto viene sottoposto ad una valutazione automatica dei fattori di rischio. Tale valutazione automatica viene eseguita da un agente software. "@it .
+
+INPSDWS:valutazioneEseguitaDa a owl:ObjectProperty ;
+    rdfs:label "Assessment performed by "@en,
+        "valutazioneEseguitaDa"@it ;
+    rdfs:domain INPSDWS:ValutazioneDeiFattoriDiRischio ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    INPSCore:DirezioneCentraleINPS
+                    INPSCore:SedeINPS ) ] ;
+    rdfs:comment "La valutazione dei fattori di rischio di rapporto di lavoro domestico improprio viene eseguita  dalla Direzione centrale dell’INPS o da una sede territoriale. "@it,
+        "The assessment of risk factors for improper domestic work relationships is performed by the INPS central directorate or a local office. "@en .
+
+INPSDWS:èCorrellataA a owl:ObjectProperty ;
+    rdfs:label "Is related to"@en,
+        "èCorrellataA"@it ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionaleCorrelata ;
+    rdfs:range INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:comment "A related bidirectional communication is related to a bidirectional communication. "@en,
+        "Una comunicazione bidirezionale correlata è correlate ad una comunicazione bidirezionale. "@it .
+
+L0:hasFirstMember a owl:ObjectProperty .
+
+L0:hasLastMember a owl:ObjectProperty .
+
+### Datatypes
+
+xsd:boolean a rdfs:Datatype .
+
+xsd:dateTime a rdfs:Datatype .
+
+xsd:string a rdfs:Datatype .
+
+### Data Properties
+
+INPSContributions:codiceRapportoDiLavoro a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice rapporto di lavoro"@it ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico .
+
+INPSContributions:dataFirmaContratto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data firma contratto"@it ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico .
+
+INPSDWS:canaleNotificaRisposta a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "canale Notifica Risposta"@it,
+        "Reply notification channel"@en ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Identifica il canale attraverso il quale si intende ricevere una notifica di avvenuta risposta da parte dell’INPS. Ad oggi l’unico canale disponibile è quello del 'Cassetto'."@it,
+        "Identifies the channel through which you intend to receive a notification of a response from INPS. To date the only channel available is the 'Drawer'."@en .
+
+INPSDWS:codiceProtocolloComunicazioneBidirezionale a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Bidirectional Communication Protocol Code"@en,
+        "codice Protocollo Comunicazione Bidirezionale"@it ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Identifica il codice di protocollo relativa alla comunicazione inviata dal datore di lavoro o relativo delegato o dall’INPS; si può presentare il caso in cui si evidenzia ‘protocollazione in corso’ e quindi la comunicazione è in fase di invio all’INPS, in tal caso è necessario attendere qualche minuto per l’attribuzione del numero di protocollo."@it,
+        "Identifies the protocol code relating to the communication sent by the employer or its delegate or by INPS; a case may arise in which 'protocol in progress' is highlighted and therefore the communication is being sent to INPS, in which case it is necessary to wait a few minutes for the protocol number to be assigned."@en .
+
+INPSDWS:codiceVariazioneRapportoDiLavoroDomestico a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codiceVariazioneRapportoDiLavoroDomestico"@it,
+        "Domestic Work Employment Relationship Variation code"@en ;
+    rdfs:domain INPSDWS:VariazioneRapportoDiLavoroDomestico ;
+    rdfs:range xsd:string ;
+    rdfs:comment "codice identificativo della variazione del rapporto di lavoro domestico"@it,
+        "identification code of the change in the domestic employment relationship"@en .
+
+INPSDWS:dataAperturaComunicazioneBidirezionale a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Bidirectional Communication Opening Date"@en,
+        "data Apertura Comunicazione Bidirezionale"@it ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Identifica il periodo in cui è stata inviata la comunicazione."@it,
+        "Identifies the period in which the communication was sent."@en .
+
+INPSDWS:dataCessazioneRapportoDiLavoroCessato a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataCessazioneRapportoDiLavoroCessato"@it,
+        "Termination date"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomesticoCessato ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di cessazione del rapporto di lavoro."@it,
+        "Date of termination of the employment relationship."@en .
+
+INPSDWS:dataChiusuraComunicazioneBidirezionale a owl:DatatypeProperty ;
+    rdfs:label "Bidirectional Communication Closing Date "@en,
+        "data Chiusura Comunicazione Bidirezionale"@it ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Identifica il periodo in cui è stata ricevuta una risposta alla comunicazione inviata."@it,
+        "Identifies the period in which a response to the sent communication was received."@en .
+
+INPSDWS:dataInizioRapportoDiLavoroCessato a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataInizioRapportoDiLavoroCessato"@it,
+        "Starting Date of Terminated Employment Relationship"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomesticoCessato ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di inizio del rapporto di lavoro cessato."@it,
+        "Start date of the terminated employment relationship."@en .
+
+INPSDWS:dataInizioRapportoLavoroAttivo a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataInizioRapportoLavoroAttivo"@it,
+        "Starting Date of Active Employment Relationship"@en ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomesticoAttivo ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di inizio del rapporto di lavoro attivo."@it,
+        "Start date of the active employment relationship."@en .
+
+INPSDWS:dataInvioComunicaizoneAssunzione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataInvioComunicaizoneAssunzione"@it,
+        "Hiring communication submission date"@en ;
+    rdfs:domain INPSDWS:ComunicazioneObbligatoriaAssunzione ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di invio della comunicazione obbligatoria di assunzione."@it,
+        "Date of sending of the mandatory hiring communication."@en .
+
+INPSDWS:dataInvioComunicazioneCessazione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataInvioComunicazioneCessazione"@it,
+        "Termination communication submission date"@en ;
+    rdfs:domain INPSDWS:ComunicazioneObbligatoriaCessazione ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di invio della comunicazione obbligatoria di cessazione del rapporto di lavoro domestico."@it,
+        "Date of sending of the mandatory communication of termination of the domestic work relationship."@en .
+
+INPSDWS:dataInvioComunicazioneProroga a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataInvioComunicazioneProroga"@it,
+        "Extension communication submission date"@en ;
+    rdfs:domain INPSDWS:ComunicazioneObbligatoriaProroga ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di invio della comunicazione obbligatoria di proroga del rapporto di lavoro domestico."@it,
+        "Date of sending of the mandatory communication of extension of the domestic work relationship."@en .
+
+INPSDWS:dataInvioComunicazioneTrasformazione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataInvioComunicazioneTrasformazione"@it,
+        "Transformation communication submission date"@en ;
+    rdfs:domain INPSDWS:ComunicazioneObbligatoriaTrasformazione ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di invio della comunicazione obbligatoria di trasformazione del rapporto di lavoro domestico."@it,
+        "Date of sending of the mandatory communication of transformation of the domestic work relationship."@en .
+
+INPSDWS:dataInvioComunicazioneVariazioneMansione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataInvioComunicazioneVariazioneMansione"@it,
+        "date of sending the change of job notification"@en ;
+    rdfs:domain INPSDWS:ComunicazioneObbligatoriaDiVariazioneMansioneLavoratoreDomestico ;
+    rdfs:comment "Data di invio della comunicazione obbligatoria relativa alla variazione di mansione del lavoratore domestico."@it,
+        "Date of sending the mandatory communication regarding the domestic worker's job change."@en .
+
+INPSDWS:dataIscrizioneRapportoLavoro a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataIscrizioneRapportoLavoro"@it,
+        "Registration of the Employment Relationship Date"@en ;
+    rdfs:domain INPSDWS:IscrizioneRapportoDiLavoroDomestico ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di iscrizione di un rapporto di lavoro domestico da parte del datore di lavoro domestico sul portale INPS dei servizi per la gestioe del lavoro domestico"@it,
+        "Date of the registration of a domestic employment relationship by a domestic employer over the INPS Domestic Work Service portal"@en .
+
+INPSDWS:dataPresentazioneAnnullamento a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Cancellation date"@en,
+        "dataPresentazioneAnnullamento"@it ;
+    rdfs:domain INPSDWS:RapportoDiLavoroDomesticoAnnullato ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di presentazione dell'annullamento del rapporto di lavoro."@it,
+        "Date of cancellation of the employment relationship."@en .
+
+INPSDWS:dataRespingimento a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data respingimento"@it,
+        "Rejection date"@en ;
+    rdfs:domain INPSDWS:RapportoDiLavoroDomesticoRespinto ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di respingimento del rapporto di lavoro."@it,
+        "Date of rejection of the employment relationship."@en .
+
+INPSDWS:dataScadenza a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataScadenza"@it,
+        "Due date"@en ;
+    rdfs:domain INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di scadenza del pagamento dei contributi per i lavoratori domestici"@it,
+        "Due date of a domestic worker's contribution payment"@en .
+
+INPSDWS:dataScadenzaDocumentoIdentita a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data di scadenza del documento d'identità"@it,
+        "expiry date of the identity document"@en ;
+    rdfs:domain INPSDWS:DocumentoIdentita ;
+    rdfs:comment "data oltre la quale il documento d'ientità non è più valido e deve essere rinnovato"@it,
+        "date beyond which the identity document is no longer valid and must be renewed"@en .
+
+INPSDWS:dataVariazioneRapportoDiLavoroDomestico a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data variazione rapporto di lavoro domestico"@it,
+        "Domestic work relationship variation date"@en ;
+    rdfs:domain INPSDWS:VariazioneRapportoDiLavoroDomestico ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "data della variazione dela rapporto di lavoro domestico"@it,
+        "date of the domestic work relationship variation"@en .
+
+INPSDWS:descrizioneContributo a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Contribution description"@en,
+        "descrizioneContributo"@it ;
+    rdfs:domain INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Identifica la tipologia di pagamento effettuato o da effettuare che può essere un contributo o una nota di rettifica relativa a un pagamento effettuato con un importo inferiore al dovuto e/o in ritardo."@it,
+        "Identifies the type of payment made or to be made which can be a contribution or a correction note relating to a payment made with an amount less than due and/or late."@en .
+
+INPSDWS:descrizioneRichiesta a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "descrizione Richiesta"@it,
+        "Request description"@en ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Descrizione necessaria della richiesta che il datore di lavoro domestico fa attraverso una comunicazione bidirezionale."@it,
+        "Necessary description of the request that the domestic employer makes through bidirectional communication."@en .
+
+INPSDWS:destinatario a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "destinatario"@it,
+        "Recipient"@en ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Indica a chi si intende inviare la comunicazione: per le comunicazioni inviate alla sede INPS dal datore di lavoro o relativo delegato, in tale sezione si avrà la sola informazione \"Ruolo: INPS\"; per le comunicazioni inviate dalla sede INPS al datore di lavoro o relativo delegato questa sezione presenta le anagrafiche e recapiti telematici del datore di lavoro o del relativo delegato."@it,
+        "Indicates to whom you intend to send the communication: for communications sent to the INPS office by the employer or relative delegate, in this section you will only have the information \"Role: INPS\"; for communications sent from the INPS office to the employer or its delegate, this section presents the details and electronic contact details of the employer or its delegate."@en .
+
+INPSDWS:emersioneLavoroIrregolare a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Emersion of irregular employment"@en,
+        "emersioneLavoroIrregolare"@it ;
+    rdfs:domain INPSContributions:RapportoDiLavoroDomestico ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "Domestic Work Employment relationship originated from the emersion of an irregular employment"@en,
+        "Rapporto di Lavoro Domestico generato dall'emersione di un rapporto di lavoro irregolare"@it .
+
+INPSDWS:mittente a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "mittente"@it,
+        "Sender"@en ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Identifica il soggetto che ha inviato la comunicazione che può essere quindi: INPS o il contribuente, quest'ultimo può essere il datore di lavoro o il proprio delegato."@it,
+        "Identifies the person who sent the communication which can therefore be: INPS or the taxpayer, the latter can be the employer or his delegate."@en .
+
+INPSDWS:noteOggetto a owl:DatatypeProperty ;
+    rdfs:label "note Oggetto"@it,
+        "Object Notes"@en ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Informazioni aggiuntive facoltative sulla comunicazione."@it,
+        "Optional additional communication information."@en .
+
+INPSDWS:numeroDocumentoIdentita a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ID number"@en,
+        "numero documento d'iIdentità"@it ;
+    rdfs:domain INPSDWS:DocumentoIdentita ;
+    rdfs:comment "number that identifies the identity document"@en,
+        "numero che identifica il documento d'identità" .
+
+INPSDWS:oggettoRichiesta a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "oggetto Richiesta"@it,
+        "Request Object"@en ;
+    rdfs:domain INPSDWS:ComunicazioneBidirezionale ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Identifica la tipologia di richiesta che si intende visualizzare:• MAV: non pervenuti-Inesattezze riscontrate-Impossibilità di stampa dal Portale,• Anagrafiche: mancato aggiornamento-variazioni,• Contributi: versati e non risultanti nell’estratto del lavoratore,• Rapporti di lavoro: Sospesi,• Avviso Bonario/Accertamento: conferma o modifica,• Regolarizzazioni."@it,
+        "Identifies the type of request you intend to view:• MAV: not received - Inaccuracies found - Impossibility of printing from the Portal,• Personal data: failure to update changes,• Contributions: paid and not shown in the worker's statement,• Employment relationships: Suspended,• Friendly Notice/Assessment: confirmation or modification,• Regularizations."@en .
+
+INPSDWS:periodoDiRiferimento a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "periodo Di Riferimento"@it,
+        "Reference Period"@en ;
+    rdfs:domain INPSContributions:ContributoTrimestraleOrdinario ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Contribution reference period."@en,
+        "Periodo di riferimento contributivo."@it .
+
+INPSService:dataPagamento a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain INPSContributions:ContributoTrimestraleOrdinario .
+
+### Classes
+
+CPSV:Service a owl:Class .
+
+INPSContributions:ContrattoDiLavoroDomestico a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:contrattoHaMotiviDiPermesso ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haTipologiaDiContratto ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributions:haContrattoDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSContributions:ContributoTrimestraleOrdinario a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:consultatiTramiteEstrattoContributivo ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataScadenza ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:descrizioneContributo ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haStatoDiPagamentoContributiLavoratoreDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:periodoDiRiferimento ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:sonoDovutiTramitePagamento ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSContributions:DatoreDiLavoroDomestico a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:agenteConsultaEstrattoContributivo ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:consultaRapportoDiLavoro ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:contribuenteInviaComunicazioneBidirezionaleA ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:effettuaIscrizioneRapportoDiLavoroDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haDocumentoIdentita ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:invianoComunicazioneBidirezionale ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:invianoComunicazioneBidirezionaleCorrelata ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:annullatoDa ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:disjointWith INPSContributions:LavoratoreDomestico,
+        INPSRL:Delegato .
+
+INPSContributions:LavoratoreDomestico a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:consultaRapportoDiLavoro ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haDocumentoIdentita ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haTipologiaPermessoSoggiorno ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:lavoratoreConsultaEstrattoContributivoLavoratoreDomestico ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSContributions:RapportoDiLavoroDomestico a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSContributions:dataFirmaContratto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributions:haContrattoDiLavoroDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haTipologiaMansioneLavoratoreDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haTipologiaRetribuzione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:comunicazioneBidirezionaleRiguardaRapportoDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:consultaRapportoDiLavoro ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:iscriveRapportoDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSContributions:RapportoDiLavoroDomesticoAttivo a owl:Class ;
+    rdfs:label "Active domestic work relationship"@en,
+        "Rapporto di lavoro domestico attivo"@it ;
+    rdfs:subClassOf INPSContributions:RapportoDiLavoroDomestico,
+        INPSDWS:StatoIntermedioRapportoDiLavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataInizioRapportoLavoroAttivo ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:rapportoDiLavoroDomesticoAttivoHaStatoPrecedente ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:modificaRapportoDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:disjointWith INPSDWS:RapportoDiLavoroDomesticoInVerifica .
+
+INPSContributions:RapportoDiLavoroDomesticoCessato a owl:Class ;
+    rdfs:subClassOf INPSContributions:RapportoDiLavoroDomestico,
+        INPSDWS:StatoFinaleRapportoDILavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataCessazioneRapportoDiLavoroCessato ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataInizioRapportoDiLavoroCessato ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haMotivoCessazione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:rapportoDiLavoorDomesticoCessatoHaStatoPrecedente ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:cessazioneGeneraRapportoDiLavoroDomesticoCessato ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSCore:DirezioneCentraleINPS a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:inVerificaPresso ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:respintoDa ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:valutazioneEseguitaDa ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:disjointWith INPSCore:SedeINPS .
+
+INPSCore:SedeINPS a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:effettuaIscrizioneRapportoDiLavoroDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:invianoComunicazioneBidirezionale ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:invianoComunicazioneBidirezionaleCorrelata ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:annullatoDa ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:contribuenteInviaComunicazioneBidirezionaleA ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:inVerificaPresso ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:respintoDa ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:valutazioneEseguitaDa ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSDWS:AgenteSoftwarePerLaRilevazionediRischioRapportoIrregolare a owl:Class ;
+    rdfs:label "AgenteSoftware Per La Rilevazione di Rischio Rapporto Irregolare"@it,
+        "Software agent for Irregular Domestic Work Relationship Risk Detection"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:valutazioneAutomaticaEseguitaDa ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Automatic software for assessing the risk of improper domestic employment relationships (e.g. employment relationships between relatives, non-domestic but employee employment relationships)."@en,
+        "Software automatico per la valutazione del rischio di rapporto di lavoro domestico improprio (es. rapporto di lavoro tra parenti, rapporto di lavoro non domestico ma dipendente)."@it .
+
+INPSDWS:AnnullamentoRapportoDiLavoroDomestico a owl:Class ;
+    rdfs:label "AnnullamentoRapportoDiLavoroDomestico"@it,
+        "Domestic work relationship Cancellation"@en ;
+    rdfs:subClassOf INPSDWS:ServizioLavoroDomestico,
+        L0:EventOrSituation,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:annullaRapportoDiLavoroDomestico ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Cancellation of the domestic employment relationship is a service accessible via the INPS portal dedicated to domestic work services and aimed at domestic employers in order to cancel a registered employment contract. Cancellation can be carried out within 5 days from the date of commencement of the employment relationship indicated on the contract.  In the ontology the concept is modelled both as an event and as a service."@en,
+        "L'Annullamento del rapporto di lavoro domestico è un servizio  accessibile tramite il portale INPS dedicato ai servizi per il lavoro domestico e rivolto ai datori di lavoro domestico per annullare il contratto di lavoro iscritto. L'Annullamento può essere effettuato entro 5 giorni dalla data di inizio del rapporto di lavoro indicata sul contratto.  Nell'ontologia il concetto è modellato sia come evento che come servizio."@it .
+
+INPSDWS:CessazioneRapportoDiLavoroDomestico a owl:Class ;
+    rdfs:label "Cessazione del rapporto di lavoro domestico"@it,
+        "Domestic Employment Relationship Termination"@en ;
+    rdfs:subClassOf INPSDWS:VariazioneRapportoDiLavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:cessazioneGeneraRapportoDiLavoroDomesticoCessato ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "La Cessazione del rapporto di lavoro domestico è un servizio  accessibile tramite il portale INPS dedicato ai servizi per il lavoro domestico e rivolto ai datori di lavoro domestico per interropmere il contratto di lavoro. Nell'ontologia il concetto è modellato sia come evento che come servizio."@it,
+        "Termination of the domestic employment relationship is a service accessible via the INPS portal dedicated to domestic work services and aimed at domestic employers to terminate their employment contract. In the ontology the concept is modelled both as an event and as a service."@en .
+
+INPSDWS:ComunicataSospensioneObbligoContributivo a owl:Class ;
+    rdfs:label "Comunicata Sospensione Obbligo Contributivo"@it,
+        "Reported Suspension of Contribution Obligation"@en ;
+    rdfs:subClassOf INPSDWS:StatoDiPagamentoContributiLavoratoreDomestico ;
+    rdfs:comment "Sono i periodi contributivi per i quali è stata comunicata la sospensione dell’obbligo contributivi."@it,
+        "These are the contribution periods for which the suspension of the contribution obligation was communicated."@en .
+
+INPSDWS:ComunicazioneBidirezionale a owl:Class ;
+    rdfs:label "Bidirectional Communication"@en,
+        "Comunicazione Bidirezionale"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:canaleNotificaRisposta ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:codiceProtocolloComunicazioneBidirezionale ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:comunicazioneBidirezionaleRiguardaRapportoDiLavoroDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataAperturaComunicazioneBidirezionale ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataChiusuraComunicazioneBidirezionale ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:descrizioneRichiesta ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:destinatario ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haDettaglioComunicazioneBidirezionale ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haDocumentoAllegato ;
+            owl:maxCardinality "3"^^xsd:nonNegativeInteger ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haEsitoComunicazioneBidirezionale ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haStatoComunicazioneBidirezionale ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:mittente ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:noteOggetto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:oggettoRichiesta ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:invianoComunicazioneBidirezionale ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Service provided by the Domestic Work Drawer which has as its main objective the creation of a structured mode of communication between the employer and the Institute. With this functionality, the domestic employer can send a request to the relevant office by choosing an object from those available (personal data, MAV, contributions, employment relationship, etc.). It is possible to attach supporting documentation to the request."@en,
+        "Servizio previsto dal Cassetto per il Lavoro Domestico che ha come principale obiettivo la realizzazione di una modalità strutturata di comunicazione tra il datore di lavoro e l’Istituto. Con questa funzionalità il datore di lavoro domestico può inviare alla sede di competenza una richiesta scegliendo un oggetto tra quelli disponibili (anagrafiche, MAV, contributi, rapporto di lavoro, ecc.). È possibile allegare la documentazione a supporto alla richiesta."@it .
+
+INPSDWS:ComunicazioneBidirezionaleAccolta a owl:Class ;
+    rdfs:label "Bidirectional Communication Accepted"@en,
+        "Comunicazione Bidirezionale Accolta"@it ;
+    rdfs:subClassOf INPSDWS:EsitoComunicazioneBidirezionale ;
+    owl:disjointWith INPSDWS:ComunicazioneBidirezionaleRespinta ;
+    rdfs:comment "Class that identifies all bidirectional communications with \"Accepted\" outcome."@en,
+        "Classe che identifica tutte le comunicazioni bidirezionali con esito \"Accolta\"."@it .
+
+INPSDWS:ComunicazioneBidirezionaleAperta a owl:Class ;
+    rdfs:label "Comunicazione Bidirezionale Aperta"@it,
+        "Open bidirectional communication"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf L0:hasFirstMember ] ;
+            owl:someValuesFrom INPSDWS:StatoComunicazioneBidirezionale ] ;
+    rdfs:comment "Class that identifies all bidirectional communications with \"Open\" status."@en,
+        "Classe che identifica tutte le comunicazioni bidirezionali con stato \"Aperto\"." .
+
+INPSDWS:ComunicazioneBidirezionaleChiusa a owl:Class ;
+    rdfs:label "Closed bidirectional communication"@en,
+        "Comunicazione Bidirezionale Chiusa"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf L0:hasLastMember ] ;
+            owl:someValuesFrom INPSDWS:StatoComunicazioneBidirezionale ] ;
+    rdfs:comment "Class that identifies all bidirectional communications with \"Close\" status."@en,
+        "Classe che identifica tutte le comunicazioni bidirezionali con stato \"Chiuso\"."@it .
+
+INPSDWS:ComunicazioneBidirezionaleCorrelata a owl:Class ;
+    rdfs:label "Comunicazione Bidirezionale Correlata"@it,
+        "Related Bidirectional Communication"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:èCorrellataA ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:invianoComunicazioneBidirezionaleCorrelata ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Bidirectional communication related to a previous communication."@en,
+        "Comunicazione bidirezionale connessa ad una comunicazione precedente."@it .
+
+INPSDWS:ComunicazioneBidirezionaleRespinta a owl:Class ;
+    rdfs:label "Bidirectional Communication Rejected"@en,
+        "Comunicazione Bidirezionale Respinta"@it ;
+    rdfs:subClassOf INPSDWS:EsitoComunicazioneBidirezionale ;
+    rdfs:comment "Class that identifies all bidirectional communications with \"Rejected\" outcome."@en,
+        "Classe che identifica tutte le comunicazioni bidirezionali con esito \"Respinto\"."@it .
+
+INPSDWS:ComunicazioneObbligatoriaAssunzione a owl:Class ;
+    rdfs:label "Comunicazione obbligatoria di assunzione"@it,
+        "Mandatory notification of employment"@en ;
+    rdfs:subClassOf INPSDWS:ComunicazioneObbligatoriaRapportoDiLavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:COIscrizioneGenerataAPartireDa ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataInvioComunicaizoneAssunzione ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    owl:disjointWith INPSDWS:ComunicazioneObbligatoriaVariazione ;
+    rdfs:comment "Con la comunicazione obbligatoria di assunzione, il datore di lavoro mette in regola la colf o badante, adempiendo contemporaneamente a tutti gli obblighi di denuncia agli uffici competenti e agli enti previdenziali. La mancata comunicazione dell’assunzione di un lavoratore domestico comporta sanzioni pesanti. L'obbligo di comunicare l’assunzione all’Inps vale per tutti i tipi di lavoro domestico, e qualunque sia la durata del rapporto lavoro e deve essere effettuata entro 24 ore del giorno precedente l’inizio del rapporto di lavoro (incluso il periodo di prova), anche se festivo."@it,
+        "With the mandatory hiring notification, the employer brings the housekeeper or carer into compliance, simultaneously fulfilling all reporting obligations to the competent offices and social security bodies. Failure to communicate the hiring of a domestic worker leads to heavy penalties. The obligation to communicate the hiring to INPS applies to all types of domestic work, and whatever the duration of the employment relationship and must be carried out within 24 hours of the day before the start of the employment relationship (including the test), even if it's a holiday."@en .
+
+INPSDWS:ComunicazioneObbligatoriaCessazione a owl:Class ;
+    rdfs:label "Comunicazione obbligatoria di cessazione"@it,
+        "Mandatory communication of termination"@en ;
+    rdfs:subClassOf INPSDWS:ComunicazioneObbligatoriaVariazione,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataInvioComunicazioneCessazione ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:comment "Quando termina il rapporto di lavoro domestico, sia per licenziamento sia per dimissioni, il datore di lavoro deve darne comunicazione all’Inps entro 5 giorni dall’evento. Se il contratto è a tempo determinato e alla scadenza non segue il rinnovo, non è richiesta alcuna comunicazione. L'annullamento di una denuncia di assunzione è consentito entro 5 giorni dalla data indicata quale inizio del rapporto di lavoro; superato detto termine, dovrà essere comunicata la cessazione."@it,
+        "When the domestic work relationship ends, whether due to dismissal or resignation, the employer must notify INPS within 5 days of the event. If the contract is for a fixed term and is not renewed upon expiry, no communication is required. The cancellation of an employment notification is permitted within 5 days from the date indicated as the start of the employment relationship; once this deadline has passed, the termination must be communicated."@en .
+
+INPSDWS:ComunicazioneObbligatoriaDiVariazioneMansioneLavoratoreDomestico a owl:Class ;
+    rdfs:label "Comunicazione obbligatoria di variazione mansione lavoratore domestico"@it,
+        "Mandatory notification of job change domestic worker"@en ;
+    rdfs:subClassOf INPSDWS:ComunicazioneObbligatoriaVariazione,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataInvioComunicazioneVariazioneMansione ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:comment "Comunicazione obbligatoria relativa ad una variazione della mansione del lavoratore domestico "@it,
+        "Mandatory communication regarding a change in the domestic worker's job description"@en .
+
+INPSDWS:ComunicazioneObbligatoriaProroga a owl:Class ;
+    rdfs:label "Comunicazione obbligatoria di proroga"@it,
+        "Mandatory communication of extension"@en ;
+    rdfs:subClassOf INPSDWS:ComunicazioneObbligatoriaVariazione,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataInvioComunicazioneProroga ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:comment "Comunicazione obbligatoria riguardante la proroga del rapporto di lavoro domestico. Può essere prorogato per un massimo di 4 volte, con un limite di 24 mesi totali di contratto a tempo determinato (principale contratto + proroghe)."@it,
+        "Mandatory communication regarding the extension of the domestic work relationship. It can be extended a maximum of 4 times, with a limit of 24 total months of fixed-term contract (main contract + extensions)."@en .
+
+INPSDWS:ComunicazioneObbligatoriaRapportoDiLavoroDomestico a owl:Class ;
+    rdfs:label "Comunicazione Obbligatoria Rapporto Di Lavoro Domestico"@it,
+        "Mandatory Communication Of Domestic Employment Relationship "@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf (
+                    INPSDWS:ComunicazioneObbligatoriaAssunzione
+                    INPSDWS:ComunicazioneObbligatoriaVariazione ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:inviaComunicazioneObbligatoria ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Comunicazione obbligatoria da parte del datore di lavoro domestico verso l'istituto INPS riguardante l'attivazione, la variazione o la cessazione di un rapporto di lavoro domestico. "@it,
+        "Mandatory communication by the domestic employer to the INPS institute regarding the activation, variation or termination of a domestic work relationship."@en .
+
+INPSDWS:ComunicazioneObbligatoriaTrasformazione a owl:Class ;
+    rdfs:label "Comunicazione obbligatoria di trasformazione"@it,
+        "Transformation communication"@en ;
+    rdfs:subClassOf INPSDWS:ComunicazioneObbligatoriaVariazione,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataInvioComunicazioneTrasformazione ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:comment "Comunicazione obbligatoria riguardante la trasformazione del rapporto di lavoro domestico da tempo determinato a tempo indeterminato. "@it,
+        "Mandatory communication regarding the transformation of the domestic work relationship from fixed-term to permanent."@en .
+
+INPSDWS:ComunicazioneObbligatoriaVariazione a owl:Class ;
+    rdfs:label "Comunicazione obbligatoria di variazione"@it,
+        "Mandatory communication of variation"@en ;
+    rdfs:subClassOf INPSDWS:ComunicazioneObbligatoriaRapportoDiLavoroDomestico,
+        [ a owl:Class ;
+            owl:unionOf (
+                    INPSDWS:ComunicazioneObbligatoriaCessazione
+                    INPSDWS:ComunicazioneObbligatoriaDiVariazioneMansioneLavoratoreDomestico
+                    INPSDWS:ComunicazioneObbligatoriaProroga
+                    INPSDWS:ComunicazioneObbligatoriaTrasformazione ) ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:COVariazioneGenerataAPartireDa ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Comunicazione obbligatoria riguardante qualsiasi tipo di variazione del rapporto di lavoro domestico, quale: la modifica del tipo di contratto, la proroga del contratto in essere, la variazione del numero delle ore di lavoro, la variazione dell’importo della retribuzione. Le variazioni riguardanti orario e retribuzione sono soggette ad un limite massimo complessivo di due comunicazioni al trimestre, mentre non vi sono limiti per tutte le altre comunicazioni che non hanno effetto sul calcolo dei contributi da versare."@it,
+        "Mandatory communication regarding any type of change in the domestic work relationship, such as: change in the type of contract, extension of the existing contract, change in the number of working hours, change in the amount of remuneration. Changes regarding hours and remuneration are subject to an overall maximum limit of two communications per quarter, while there are no limits for all other communications which have no effect on the calculation of the contributions to be paid."@en .
+
+INPSDWS:DaRecuperoCrediti a owl:Class ;
+    rdfs:label "Da Recupero Crediti"@it,
+        "From debt collection"@en ;
+    rdfs:subClassOf INPSDWS:StatoDiPagamentoContributiLavoratoreDomestico ;
+    rdfs:comment "Payments from credit recovery."@en,
+        "Versamenti provenienti da recupero del credito."@it .
+
+INPSDWS:DettaglioComunicazioneBidirezionale a owl:Class ;
+    rdfs:label "Bidirectional Communication Detail"@en,
+        "Dettaglio Comunicazione Bidirezionale"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haDettaglioComunicazioneBidirezionale ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Class that identifies all the detailed information of a specific bidirectional communication."@en,
+        "Classe che identifica tute le informazioni di dettaglio di una comunicazione bidirezionale specifica."@it .
+
+INPSDWS:DocumentoIdentita a owl:Class ;
+    rdfs:label "Documento D'Identità"@it,
+        "Identity Document"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataScadenzaDocumentoIdentita ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haTipologiaDocumento ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:numeroDocumentoIdentita ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haDocumentoIdentita ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "An identity document is a document issued by a state authority that certifies the identity of its holder, such as an identity card, passport or driving license."@en,
+        "Un documento d'identità è un documento di riconoscimeto emesso da un'autorità statale che certifica l'identità del suo possessore, come ad esempio la carta d'identità, il passaporto o la patente di guida. Ai sensi dell'articolo 1 comma 1, lettera d) del DPR 445/2000 un documento d'identità è la carta d'identità ed ogni altro docuemnto munito di fotografia del titolare e rlasciato, su supporto cartaceo, amgnatico o informatico, da una pubblica amministrazione competente dello stato italiano o di altri Stati, con finalità prevalente di dimostrare l'identità personale del suo titolare."@it .
+
+INPSDWS:EsitoComunicazioneBidirezionale a owl:Class ;
+    rdfs:label "Bidirectional Communication Outcome"@en,
+        "Esito Comunicazione Bidirezionale"@it ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf (
+                    INPSDWS:ComunicazioneBidirezionaleAccolta
+                    INPSDWS:ComunicazioneBidirezionaleRespinta ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haEsitoComunicazioneBidirezionale ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Class that identifies the outcome of a bidirectional communication which can take on two values: Accepted or Rejected."@en,
+        "Classe che identifica l'esito di una comunicazione bidirezionale che puo assumere due valori: Accolta o Respinta."@it .
+
+INPSDWS:EsitoValutazioneAutomatica a owl:Class ;
+    rdfs:label "Automatic Assessment Result"@en,
+        "EsitoValutazioneAutomatica"@it ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf (
+                    INPSDWS:EsitoValutazioneAutomaticaConRilevazioneRischio
+                    INPSDWS:EsitoVautazioneAutomaticaSenzaRilevazioneRischio ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haEsitoValutazioneAutomatica ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Esito della valutazione automatica del rapporto di Lavoro Domestico Iscritto"@it,
+        "Outcome of the automatic assessment of the registered domestic work relationship"@en .
+
+INPSDWS:EsitoValutazioneAutomaticaConRilevazioneRischio a owl:Class ;
+    rdfs:label "Automatic Assessment Result with Risk Detection"@en,
+        "EsitoValutazioneAutomaticaConRilevazioneRischio"@it ;
+    rdfs:subClassOf INPSDWS:EsitoValutazioneAutomatica,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:esitoValutazioneAutomaticaConRilevazioneDelRischioGenera ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:disjointWith INPSDWS:EsitoVautazioneAutomaticaSenzaRilevazioneRischio ;
+    rdfs:comment "Automatic assessment of the Registered Domestic Employment Relationship that had a positive outcome in risk assessment. "@en,
+        "Valutazione automatica del rapporto di Lavoro Domestico Iscritto che ha avuto come esito la rilevazione di fattori di rischio"@it .
+
+INPSDWS:EsitoValutazioneConfermaRilevazioneRischio a owl:Class ;
+    rdfs:label "EsitoValutazioneConfermaRilevazioneRischio"@it,
+        "Risk Assessment positive outcome"@en ;
+    rdfs:subClassOf INPSDWS:EsitoValutazioneFattoriDiRischio,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:esitoValutazioneConRilevazioneRischioGenera ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:disjointWith INPSDWS:EsitoValutazioneSenzaRilevazioneRischio ;
+    rdfs:comment "Esito della valutazione del rapporto di lavoro domestico in verifica che conferma la presenza di fattori di rischio nel rapporto di lavoro"@it,
+        "Risk assessment positive outcome confirming that a domestic work relationship has a relevant risk of being improper."@en .
+
+INPSDWS:EsitoValutazioneFattoriDiRischio a owl:Class ;
+    rdfs:label "EsitoValutazioneFattoriDiRischio"@it,
+        "Risk Factor Assessment Result"@en ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf (
+                    INPSDWS:EsitoValutazioneConfermaRilevazioneRischio
+                    INPSDWS:EsitoValutazioneSenzaRilevazioneRischio ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haEsitoValutazione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Esito della valutazione dei fattori di rischio di rapporto di lavoro domestico improprio (es. rapporto di lavoro tra parenti, rapporto di lavoro non domestico ma dipendente) ottenuta dalla valutazione condotta dagli uffici INPS nell'ambtito di un procedimento sui rapporti di lavoro in verifica"@it,
+        "Improper domestic work relationship risk assessment outcome obtained from the assessment conducted by INPS offices over a domestic work relationship under verification. "@en .
+
+INPSDWS:EsitoValutazioneSenzaRilevazioneRischio a owl:Class ;
+    rdfs:label "Assessment Result Without Risk Assessment"@en,
+        "EsitoValutazioneSenzaRilevazioneRischio"@it ;
+    rdfs:subClassOf INPSDWS:EsitoValutazioneFattoriDiRischio,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:esitoValutazioneSenzaRilevazioneRischioGenera ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Esito della valutazione del rapporto di lavoro domestico iscritto senza valutazione del rischio"@it,
+        "Outcome of the assessment of the registered domestic work relationship without risk evaluation"@en .
+
+INPSDWS:EsitoVautazioneAutomaticaSenzaRilevazioneRischio a owl:Class ;
+    rdfs:label "Automatic Assessement without Risk evalutation outcome"@en,
+        "EsitoVautazioneAutomaticaSenzaRilevazioneRischio"@it ;
+    rdfs:subClassOf INPSDWS:EsitoValutazioneAutomatica,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:esitoValutazioneAutomaticaSenzaRilevazioneRischioGenera ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Esito della Valutazione automatica del rapporto di lavoro domestico iscritto senza rilevazione del rischio"@it,
+        "Outcome of automatic assessment of registered domestic work without risk assessment"@en .
+
+INPSDWS:EstrattoContributivoRapportoDiLavoroDomestico a owl:Class ;
+    rdfs:label "Contribution Statement for Domestic Work"@it,
+        "Estratto Contributivo Rapporto Di Lavoro Domestico"@it ;
+    rdfs:subClassOf INPSDWS:ServizioLavoroDomestico,
+        [ a owl:Class ;
+            owl:unionOf (
+                    INPSDWS:EstrattoContributivoRapportoDiLavoroDomesticoDatoreLavoro
+                    INPSDWS:EstrattoContributivoRapportoDiLavoroDomesticoLavoratore ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:consultatiTramiteEstrattoContributivo ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "L'Estratto conto contributivo del lavoro domestico è il documento che elenca i contributi registrati in favore del lavoratore domestico. La sua consultazione è resa disponible tramite il Portale internet INPS all'interno del Cassetto per il lavoro domestico. Nell'ontologia è definito come servizio per il lavoro domestico."@it,
+        "The Contribution Statement for Domestic Work is the document that lists the contributions registered in favour of the domestic worker. Its consultation is made available via the INPS Internet Portal within the Domestic Work Drawer. It is defined in the ontology as a service for domestic work."@en .
+
+INPSDWS:EstrattoContributivoRapportoDiLavoroDomesticoDatoreLavoro a owl:Class ;
+    rdfs:label "Contribution Statement for the Domestic Employer"@en,
+        "Estratto Contributivo Rapporto Di Lavoro Domestico Datore Lavoro"@it ;
+    rdfs:subClassOf INPSDWS:EstrattoContributivoRapportoDiLavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:agenteConsultaEstrattoContributivo ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:disjointWith INPSDWS:EstrattoContributivoRapportoDiLavoroDomesticoLavoratore ;
+    rdfs:comment "L'Estratto conto contributivo per il datore di lavoro domestico può essere consultato dal datore di lavoro domestico per visualizzare i contributi versati o da versare al lavoratore domestico nell'ambito di ciascun rapporto di lavoro attivo e caratterizzata pertanto come servizio  Nell'ontologia la classe è definita come sottoclasse di EstrattoContributivo RapportoDiLavoroDomestico."@it,
+        "Statement for the Domestic Employer can be consulted by the domestic employer in order to view the contributions paid or payable to the domestic worker within each active employment relationship and is therefore characterized as a service in the ontology, the class is defined as a subclass of Domestic Employment Relationship Contribution Statement. "@en .
+
+INPSDWS:EstrattoContributivoRapportoDiLavoroDomesticoLavoratore a owl:Class ;
+    rdfs:label "Contribution Statement for Domestic Workers"@en,
+        "Estratto Contributivo Rapporto Di Lavoro Domestico Lavoratore"@it ;
+    rdfs:subClassOf INPSDWS:EstrattoContributivoRapportoDiLavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:lavoratoreConsultaEstrattoContributivoLavoratoreDomestico ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "L'Estratto conto contributivo per il lavoratore domestico può essere consultato dal lavoratore domestico per visualizzare i contributi versati nell'ambito di ciascun rapporto di lavoro attivo. Nell'ontologia la classe è definita come sottoclasse di EstrattoContributivo e caratterizzata pertanto come servizio."@it,
+        "The Contribution Statement for Domestic Workers may be consulted by the domestic worker to view the contributions paid under each active employment relationship. In the ontology, the class is defined as a subclass of the Contribution Statement and therefore characterized as a service."@en .
+
+INPSDWS:GestioneRimborsi a owl:Class ;
+    rdfs:label "GestioneRimborsi"@it,
+        "Refund Management"@en ;
+    rdfs:subClassOf INPSDWS:ServizioLavoroDomestico ;
+    rdfs:comment "La Gestione dei rimborsi è un servizio disponibile nel portale internet INPS dedicato ai servizi per il lavoro domestico, rivolto ai datori di lavoro domestico. Il servizio permette di richiedere un contributo in presenza di crediti per importi versati in eccesso o per duplicazioni di versamento. Il rimborso viene corrisposto al datore di lavoro domestico dopo aver effettuato il controllo dei versamenti."@it,
+        "Refund Management is a service available on the INPS internet portal dedicated to services for domestic work, aimed at employers. The service makes it possible to request a contribution in the presence of credits for amounts paid in excess or for duplicate payments. The reimbursement is paid to the domestic employer after the payments have been checked."@en .
+
+INPSDWS:IscrizioneRapportoDiLavoroDomestico a owl:Class ;
+    rdfs:label "Domestic Work Relationship Registration"@en,
+        "Iscrizione Rapporto Di Lavoro Domestico"@it ;
+    rdfs:subClassOf INPSDWS:ServizioLavoroDomestico,
+        L0:EventOrSituation,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataIscrizioneRapportoLavoro ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:iscriveRapportoDiLavoroDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:COIscrizioneGenerataAPartireDa ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:effettuaIscrizioneRapportoDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:raccoglieIscrizioneRapportoDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "L'Iscrizione del Rapporto di lavoro domestico consente al datore di lavoro o ad un soggetto da lui delegato di registrare i dati di un nuovo rapporto di lavoro nei registri INPS, comunicandone quindi l'esistenza all'Istituto ai fini dell'attivazione degli obblighi contributivi del datore di lavoro. Nell'ontologia il concetto è modellato come sia come un evento che accade e si svolge nel tempo sia come un servizio per il datore di lavoro o un suo delegato disponibile sul portale INPS"@it,
+        "The Registration of Domestic Work Relationship allows the employer or a party delegated by the employer to register the data of a new work relationship in the INPS registers, thus communicating its existence to the Institute for the purposes of activating the employer's contribution obligations. In the ontology the concept is modelled as both an event that occurs and takes place over time and a service for the employer or his delegate available on the INPS portal."@en .
+
+INPSDWS:MotiviPermesso a owl:Class ;
+    rdfs:label "Employee leave "@en,
+        "MotiviPermesso"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:contrattoHaMotiviDiPermesso ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Ai lavoratori sono concessi dei permessi di lavoro ovvero dei periodi di astensione dall’obbligo della prestazione lavorativa, con il mantenimento del posto di lavoro, la conservazione del trattamento retributivo ed economico e il riconoscimento dell’anzianità di servizio. Tali permessi sono concessi a fronte di speficiche motivazioni."@it,
+        "Workers are granted work leaves or periods of abstention from the obligation to work, with job retention, preservation of remuneration and salary and recognition of length of service. Such work leaves are granted for specific reasons."@en .
+
+INPSDWS:MotivoCessazione a owl:Class ;
+    rdfs:label "Motivo Cessazione"@it,
+        "Termination reason"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haMotivoCessazione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "An employment relationship may be terminated for one of these reasons- expiry of the term, in the case of a fixed-term contract;- resignation by the employee- termination of the relationship by mutual agreement between the employee and employer;- dismissal by the employer (Law No. 604 of 15 July 1966). For dismissal to be lawful it must be justified by:a) conduct so serious on the part of the employee that it breaks the relationship of trust with the employer that constitutes the prerequisite of the employment relationship (so-called just cause). In this hypothesis, dismissal is immediate, without a notice period;b) conduct on the part of the employee which, although less serious than that constituting a just cause for dismissal, nevertheless constitutes a significant breach of his contractual obligations (justified subjective reason). In this case, the employee is entitled to a notice period, the duration of which is generally established by the collective agreement applied and indicated in the individual contract. Failing this, you must be paid an indemnity in lieu of notice.(c) objective needs of the employer attributable to production activity, the organisation of work or the smooth running of the company; in this case, the dismissal does not depend, therefore, on the employee's behaviour and he is entitled, in any case, to the notice period or the relevant indemnity (objective justified reason).In some particular cases, governed by special rules, no just cause or justified reason is required for the termination of the relationship. These are, in particular, cases of dismissal due to (a) failure to complete the probationary period;(b) at the end of the three-year apprenticeship period.Special rules also apply to the dismissal of domestic workers and managers for whom, likewise, no just cause or objective reason is required."@en,
+        "Un rapporto di lavoro può cessare per uno di questi motivi:•	scadenza del termine, in caso di contratto a tempo determinato;•	dimissioni da parte del lavoratore;•	risoluzione del rapporto di comune accordo tra il lavoratore e datore di lavoro;•	licenziamento da parte del datore di lavoro (legge 15 luglio 1966, n. 604Apre in una nuova scheda). Perché il licenziamento sia legittimo deve essere motivato da:a)	un comportamento tanto grave da parte del lavoratore da far venir meno il rapporto di fiducia con il datore di lavoro che costituisce il presupposto del rapporto di lavoro (c.d. giusta causa). In questa ipotesi il licenziamento è immediato, senza periodo di preavviso;b)	un comportamento da parte del lavoratore che, per quanto meno grave di quello integrante una giusta causa di licenziamento, costituisce comunque un notevole inadempimento dei tuoi obblighi contrattuali (giustificato motivo soggettivo). In questo caso il lavoratore ha diritto ad un periodo di preavviso, la cui durata è in genere stabilita dal contratto collettivo applicato e indicata nel contratto individuale. In mancanza, dovrà esserti corrisposta un’indennità sostitutiva di preavviso.c)	esigenze oggettive del datore di lavoro riconducibili all’attività produttiva, all’organizzazione del lavoro o al regolare funzionamento dell’assetto aziendale; in questo caso il licenziamento non dipende, quindi, da un comportamento del lavoratore e ha diritto, comunque, al periodo di preavviso o alla relativa indennità (giustificato motivo oggettivo).In alcuni casi particolari, regolati da norme speciali, non occorrono una giusta causa o un giustificato motivo per la conclusione del rapporto. Si tratta, in particolare, delle ipotesi di licenziamento dovute: a)	al mancato superamento del periodo di prova;b)	al termine del periodo triennale di apprendistato.Regole particolari valgono, inoltre, per il licenziamento dei lavoratori domestici e dei dirigenti per i quali, allo stesso modo, non occorrono giusta causa o giustificato motivo oggettivo."@it .
+
+INPSDWS:PagamentoDaEffettuare a owl:Class ;
+    rdfs:label "Pagamento Da Effettuare"@it,
+        "Payment Due"@en ;
+    rdfs:subClassOf INPSDWS:StatoDiPagamentoContributiLavoratoreDomestico ;
+    rdfs:comment "Identifica i periodi contributivi che risultano scoperti, per i quali cioè non è ancora stato effettuato il pagamento."@it,
+        "Identifies the contribution periods that are uncovered, i.e. for which payment has not yet been made."@en .
+
+INPSDWS:PagamentoIncassato a owl:Class ;
+    rdfs:label "Pagamento Incassato"@it,
+        "Payment Collected"@en ;
+    rdfs:subClassOf INPSDWS:StatoDiPagamentoContributiLavoratoreDomestico ;
+    rdfs:comment "Identifica tutti i pagamenti che risultano incassati e che sono presenti nell’estratto conto contributivo del lavoratore."@it,
+        "Identifies all payments that have been collected and are present in the worker's contribution statement."@en .
+
+INPSDWS:PagamentoIncassatoInLavorazione a owl:Class ;
+    rdfs:label "Pagamento Incassato In Lavorazione"@it,
+        "Payment Collected In Processing"@en ;
+    rdfs:subClassOf INPSDWS:StatoDiPagamentoContributiLavoratoreDomestico ;
+    rdfs:comment "Identifica tutti quei pagamenti che risultano incassati, ma che non sono ancora presenti sull’estratto contributivo del lavoratore."@it,
+        "Identifies all those payments that have been collected, but which are not yet present on the worker's contribution statement."@en .
+
+INPSDWS:ProrogaRapportoDiLavoro a owl:Class ;
+    rdfs:label "Employment Relationship Extension"@en,
+        "Proroga Rapporto Di Lavoro"@it ;
+    rdfs:subClassOf INPSDWS:VariazioneRapportoDiLavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:prorogaRapportoDiLavoroDomesticoCessato ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Proroga del Rapporto di Lavoro Domestico è un servizio del portale dei Servizi del Lavoro Domestico di INPS. Tramite questo servizio un datore di lavoro domestico può prorogare la durata del rapporto di lavoro domestico a tempo determinato. La proroga di un contratto di lavoro domestico a tempo determinato può essere effettuata per un massimo di 4 volte con un limite di 24 mesi totali di contratto a tempo determinato (D.L. 87/2018). La proroga di un rapporto di lavoro domestico costituisce un tipo di variazione del rapporto di lavoro domestico."@it,
+        "The Domestic Employment Relationship Extension is a service of the INPS Domestic Employment Services portal. Through this service, a domestic employer can extend the duration of a fixed-term domestic employment relationship. The extension of a fixed-term domestic employment contract can be made for a maximum of 4 times with a limit of 24 total months of fixed-term contract (D.L. 87/2018). The extension of a domestic employment relationship constitutes a type of variation of the domestic employment relationship."@en .
+
+INPSDWS:RapportoDiLavoroDomesticoAccolto a owl:Class ;
+    rdfs:label "Accepted domestic work relationship"@en,
+        "Rapporto di lavoro domestico accolto"@it ;
+    rdfs:subClassOf INPSContributions:RapportoDiLavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:rapportoDiLavoroDomesticoAccoltoHaStatoPrecedente ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:rapportoDiLavoorDomesticoCessatoHaStatoPrecedente ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:rapportoDiLavoroDomesticoAttivoHaStatoPrecedente ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:rapportoDiLavoroDomesticoInVerificaHaStatoPrecedente ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Il Rapporto di lavoro domestico accolto è un rapporto di lavoro che, a seguito dei controlli e delle valutazioni eseguite non è stato giudicato fittizio"@it,
+        "The accepted domestic work relationship is an employment relationship which, following the checks and assessments carried out, has not been judged to be fictitious"@en .
+
+INPSDWS:RapportoDiLavoroDomesticoAnnullato a owl:Class ;
+    rdfs:label "Domestic Employment Relationship Cancelled"@en,
+        "Rapporto Di Lavoro Domestico Annullato"@it ;
+    rdfs:subClassOf INPSContributions:RapportoDiLavoroDomestico,
+        INPSDWS:StatoFinaleRapportoDILavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:annullatoDa ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataPresentazioneAnnullamento ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:rapportoDiLavoroDomesticoAnnullatoHaStatoPrecedente ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:annullaRapportoDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:prorogaRapportoDiLavoroDomesticoCessato ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:trasformaRapportoDiLavoroDomesticoCessato ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Class that identifies, if exist in the INPS archives, all employment relationships in the last five years that have not been canceled as they never existed."@en,
+        "Classe che identifica, se presenti negli archivi INPS, tutti i rapporti di lavoro negli ultimi cinque anni che non sono stati annullati in quanto mai sussistiti."@it .
+
+INPSDWS:RapportoDiLavoroDomesticoInVerifica a owl:Class ;
+    rdfs:label "Domestic Employment Relationship Under Verification"@en,
+        "Rapporto Di Lavoro Domestico In Verifica"@it ;
+    rdfs:subClassOf INPSContributions:RapportoDiLavoroDomestico,
+        INPSDWS:StatoIntermedioRapportoDiLavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:inVerificaPresso ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:rapportoDiLavoroDomesticoInVerificaHaStatoPrecedente ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:valutatoDa ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:esitoValutazioneAutomaticaConRilevazioneDelRischioGenera ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:rapportoDiLavoroDomesticoAccoltoHaStatoPrecedente ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:rapportoDiLavoroDomesticoRespintoHaStatoPrecedente ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:disjointWith INPSDWS:RapportoDiLavoroDomesticoIscritto ;
+    rdfs:comment "Class that identifies, if exist in the INPS archives, all employment relationships of the last five years that are being verified at the headquarters."@en,
+        "Classe che identifica, se presenti negli archivi INPS, tutti i rapporti di lavoro degli ultimi cinque anni che sono in verifica presso la sede."@it .
+
+INPSDWS:RapportoDiLavoroDomesticoIscritto a owl:Class ;
+    rdfs:label "RapportoDiLavoroDomesticoIscritto"@it,
+        "Registered Domestic Employment Relationship "@en ;
+    rdfs:subClassOf INPSContributions:RapportoDiLavoroDomestico,
+        INPSDWS:StatoInizialeRapportoDiLavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:valutatoTramiteValutazioneAutomatica ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:rapportoDiLavoroDomesticoAccoltoHaStatoPrecedente ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "A Registered Domestic Work Relationship is a Domestic Work Relationship that has been registered by the Domestic Employer within the INPS Domestic Work Services Portal (Domestic Work Enrolment section). A Registered Domestic Work Relationship is subject to an automatic assessment of the risk of an improper domestic work relationship (e.g. a relationship between relatives). A positive outcome of the assessment transforms the Registered Domestic Work Relationship into an Active one, a negative outcome of the assessment transforms it into a Verified Domestic Work Relationship as further investigations are carried out by the institute."@en,
+        "Il Rapporto di Lavoro Domestico Iscritto è un rapporto di Lavoro Domestico che è stato registrato dal Datore di Lavoro Domestico all'interno del portale dei servizi per il Lavoro Domestico INPS (sezione Iscrizione del Lavoro Domestico). Un Rapporto di Lavoro Domestico Iscritto viene sottoposto ad una valutazione automatica del rischio di rapporto di lavoro domestico improprio (es: rapporto tra parenti). L'esito positivo della valutazione trasforma il Rapporto di Lavoro Domestico Iscritto in Attivo, l'esito negativo della valutazione lo traforma in un Rapporto di Lavoro In Verifica in quanto ulteriori approfondimenti vengono effettuati da parte dell'istituto."@it .
+
+INPSDWS:RapportoDiLavoroDomesticoRespinto a owl:Class ;
+    rdfs:label "Domestic Employment Relationship Rejected"@en,
+        "Rapporto Di Lavoro Domestico Respinto"@it ;
+    rdfs:subClassOf INPSContributions:RapportoDiLavoroDomestico,
+        INPSDWS:StatoFinaleRapportoDILavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataRespingimento ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:rapportoDiLavoroDomesticoRespintoHaStatoPrecedente ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:respintoDa ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:esitoValutazioneConRilevazioneRischioGenera ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Class which identifies, if exist in the INPS archives, all employment relationships of the last five years which have been verified by the INPS office with negative results."@en,
+        "Classe che identifica, se presenti negli archivi INPS, tutti i rapporti di lavoro degli ultimi cinque anni che sono stati verificati dalla sede INPS con esito negativo."@it .
+
+INPSDWS:RichiestaNotificaScadenzaPagamentoContributiLavoratoreDomestico a owl:Class ;
+    rdfs:label "Request for Notification of Contribution Payment Due Date for Domestic Workers"@en,
+        "RichiestaNotificaScadenzaPagamentoContributiLavoratoreDomestico"@it ;
+    rdfs:subClassOf INPSDWS:ServizioLavoroDomestico ;
+    rdfs:comment "Il sistema consente all’utente, dato un rapporto di lavoro domestico in essere, di attivare una notifica al verificarsi di specifici eventi per riceve un avviso via SMS, via mail o attraverso altri canali di comunicazione. È possibile ad esempio ricevere una notifica in prossimità della scadenza di pagamento dei contributi o a conclusione con esito positivo di una procedura di rimborso, cioè al momento dell’emissione del rimborso."@it,
+        "The system allows the user, given an existing domestic employment relationship, to trigger a notification when specific events occur in order to receive an alert via SMS, email or other communication channels. It is possible, for example, to receive a notification close to the contribution payment deadline or at the successful conclusion of a refund procedure, i.e. when the refund is issued."@en .
+
+INPSDWS:ServizioLavoroDomestico a owl:Class ;
+    rdfs:label "Domestic Work Service"@en,
+        "ServizioLavoroDomestico"@it ;
+    rdfs:subClassOf CPSV:Service,
+        [ a owl:Class ;
+            owl:unionOf (
+                    INPSDWS:AnnullamentoRapportoDiLavoroDomestico
+                    INPSDWS:EstrattoContributivoRapportoDiLavoroDomestico
+                    INPSDWS:GestioneRimborsi
+                    INPSDWS:IscrizioneRapportoDiLavoroDomestico
+                    INPSDWS:RichiestaNotificaScadenzaPagamentoContributiLavoratoreDomestico
+                    INPSDWS:SospensioneObbligoContributivoLavoroDomestico
+                    INPSDWS:VariazioneRapportoDiLavoroDomestico ) ] ;
+    rdfs:comment "La classe Servizio Lavoro Domestico è utilizzata nell'ontologia per descrivere i servizi INPS dedicati al lavoro domestico. È modellata come superclasse dei servizi disponibili nel portale INPS a supporto dei datori di lavoro domestici, dei soggetti loro delegati e del lavoratori domestici"@it,
+        "The Domestic Work Service class is used in the ontology to describe the INPS services dedicated to domestic work. It is modelled as a superclass of the services available in the INPS portal to support employers of domestic workers, their delegates and domestic workers."@en .
+
+INPSDWS:SospensioneObbligoContributivoLavoroDomestico a owl:Class ;
+    rdfs:label "SospensioneObbligoContributivo"@it,
+        "Suspension of Contribution Obligation"@en ;
+    rdfs:subClassOf INPSDWS:ServizioLavoroDomestico ;
+    rdfs:comment "La sospensione dell'obbligo contributivo si verifica in presenza di alcune casistiche ben individuate nei casi di assenza del lavoratore domestico. Nell'ontologia il concetto indica il servizio disponibile nel portale INPS dedicato ai servizi per il lavoro utile al datore di lavoro domestico per inviare la comunicazione della sospensione del versamento dei contributi."@it,
+        "The suspension of the contribution obligation occurs in the presence of certain well-identified cases where the domestic worker is absent. In the ontology, the concept refers to the service available on the INPS portal dedicated to employment services, which is useful for the domestic employer to send notification of the suspension of contribution payments."@en .
+
+INPSDWS:StatoComunicazioneBidirezionale a owl:Class ;
+    rdfs:label "Bidirectional Communication Status"@en,
+        "Stato Comunicazione Bidirezionale"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haStatoComunicazioneBidirezionale ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Class that identifies the state of a bidirectional communication which can take on two values: Open or Closed."@en,
+        "Classe che identifica lo stato di una comunicazione bidirezionale che può assumere due valori: Aperto o Chiuso."@it .
+
+INPSDWS:StatoDiPagamentoContributiLavoratoreDomestico a owl:Class ;
+    rdfs:label "Domestic Worker Contribution Payment Status"@en,
+        "Stato Di Pagamento Contributi Lavoratore Domestico"@it ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf (
+                    INPSDWS:ComunicataSospensioneObbligoContributivo
+                    INPSDWS:DaRecuperoCrediti
+                    INPSDWS:PagamentoDaEffettuare
+                    INPSDWS:PagamentoIncassato
+                    INPSDWS:PagamentoIncassatoInLavorazione ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haStatoDiPagamentoContributiLavoratoreDomestico ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Class that identifies the status of a domestic worker contributions payment which can take on five values: Payment Collected, Payment Collected in Process, Payment Due, From Debt Collection and Reported Suspension of Contribution Obligation."@en,
+        "Classe che identifica lo stato di un pagamento contributi lavoratore domestico che può assumere cinque valori: Pagamento Incassato, Pagamento Incassato in Lavorazione, Pagamento Effettuato, Da Recupero Crediti e Comunicata Sospensione Obbligo Contributivo."@it .
+
+INPSDWS:StatoFinaleRapportoDILavoroDomestico a owl:Class ;
+    rdfs:label "Final Status of Domestic Work Relationship"@en,
+        "Stato Finale Rapporto Di Lavoro Domestico"@it ;
+    rdfs:comment "Class that identifies the final status of a Domestic Work Relationship which can take 3 values: Cancelled, Terminated or Rejected."@en,
+        "Classe che identifica lo stato finale di un Rapporto di Lavoro Domestico che può assumere 3 valori: Annullato, Cessato o Respinto."@it .
+
+INPSDWS:StatoInizialeRapportoDiLavoroDomestico a owl:Class ;
+    rdfs:label "Initial Status of Domestic Employment Relationship"@en,
+        "StatoInizialeRapportoDiLavoroDomestico"@it ;
+    rdfs:comment "Class identifying the initial status of a Domestic Employment Relationship or the status of an Registered Domestic Employment Relationship."@en,
+        "Classe che identifica lo stato iniziale di un Rapporto di Lavoro Domestico ovvero lo stato di un Rapporto di Lavoro Domestico Iscritto."@it .
+
+INPSDWS:StatoIntermedioRapportoDiLavoroDomestico a owl:Class ;
+    rdfs:label "Intermediate Status of Domestic Work"@en,
+        "StatoIntermedioRapportoDiLavoroDomestico"@it ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf (
+                    INPSContributions:RapportoDiLavoroDomesticoAttivo
+                    INPSDWS:RapportoDiLavoroDomesticoInVerifica ) ] ;
+    rdfs:comment "Class identifying the intermediate status of a Domestic Work Relationship that can take 2 values: In Verification or Active."@en,
+        "Classe che identifica lo stato intermedio di un Rapporto di Lavoro Domestico che può assumere 2 valori: In Verifica o Attivo."@it .
+
+INPSDWS:TipologiaContratto a owl:Class ;
+    rdfs:label "TipologiaContratto"@it,
+        "Type of employment contract"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haTipologiaDiContratto ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Il Rapporto di Lavoro Domestico può essere sancito da diverse tipologie di contratto, ovvero:  contratto a tempo indeterminato, contratto a tempo determinato o contratto a tempo determinato a sostituzione"@it,
+        "The domestic employment relationship can be established by different types of contract, namely: open-ended contract, fixed-term contract or fixed-term contract as a substitute"@en .
+
+INPSDWS:TipologiaDocumento a owl:Class ;
+    rdfs:label "TipologiaDocumento"@it,
+        "Types of identification documents"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haTipologiaDocumento ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Tipi di documento di identità:  carta d'identità, passaporto italiano, patente di guida, tessera ministeriale, passaporto straniero, visto consolare, carta d'identità straniera, permesso di soggiorno (art. 13 DL 113/2018)"@it,
+        "Types of identity document: identity card, Italian passport, driving license, ministerial card, foreign passport, consular visa, foreign identity card, residence permit (art. 13 DL 113/2018)"@en .
+
+INPSDWS:TipologiaMansioneLavoratoreDomestico a owl:Class ;
+    rdfs:label "Tipologia Mansione del lavoratore domestico"@it,
+        "Type of Domestic worker's role"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haTipologiaMansioneLavoratoreDomestico ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "A Domestic Worker can carry out two types of roles: housekeeper or carer."@en,
+        "Un Lavoratore Domestico può svolgere due tipi di mansioni: colf o badante."@it .
+
+INPSDWS:TipologiaPermessoSoggiorno a owl:Class ;
+    rdfs:label "Residence Permit Types"@en,
+        "TipologiaPermessoSoggiorno"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haTipologiaPermessoSoggiorno ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Tipologia di Permesso di Soggiorno in possesso del Lavoratore Domestico"@it,
+        "Type of Residence Permit held by the Domestic Worker"@en .
+
+INPSDWS:TipologiaRapportoDiParentela a owl:Class ;
+    rdfs:label "TipologiaRapportoDiParentela"@it,
+        "Type of family relationship"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haTipologiaRapportoDiParentela ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Tipologia di Rapporto di Parentela possibili tra due individui"@it,
+        "Type of family relationship possible between two individuals"@en .
+
+INPSDWS:TipologiaRetribuzione a owl:Class ;
+    rdfs:label "Remuneration type"@en,
+        "TipologiaRetribuzione"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haTipologiaRetribuzione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Tipologia di retribuzione di un Lavoratore "@it,
+        "Type of remuneration of a Worker"@en .
+
+INPSDWS:TrasformazioneRapportoDiLavoroDomestico a owl:Class ;
+    rdfs:label "Domestic Employment Relationship Transformation"@en,
+        "Trasformazione Rapporto Di Lavoro Domestico"@it ;
+    rdfs:subClassOf INPSDWS:VariazioneRapportoDiLavoroDomestico,
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:trasformaRapportoDiLavoroDomesticoCessato ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Domestic Employment Relationship Transformation concerns the transition of a fixed-term contract into a fixed-term contract. In the ontology it is a subclass of Employment Relationship Transformation. An Employment Relationship Transformation requires the sending of a mandatory Transformation Communication"@en,
+        "La Trasformazione del rapporto di lavoro domestico riguarda la transizione di un contratto a tempo determinato in un contratto a tempo determinato. Nell'ontologia è una sottoclasse di Variazione Rapporto Di Lavoro Domestico. Una trasformazione del Rapporto di lavoro richiede l'invio di una comunicazione obbligatoria di trasformazione ."@it .
+
+INPSDWS:ValutazioneAutomaticaFattoriDiRischio a owl:Class ;
+    rdfs:label "Risk factor automatic assessment "@en,
+        "ValutazioneAutomaticaFattoriDiRischio"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haEsitoValutazioneAutomatica ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:valutatoTramiteValutazioneAutomatica ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:valutazioneAutomaticaEseguitaDa ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Automatic evaluation of risk factors associated with an improper domestic work relationship (e.g. domestic work between relatives) of a domestic work relationship registered on the INPS portal."@en,
+        "Valutazione automatica dei fattori di rischio associati ad un rapporto di lavoro domestico improprio (es: lavoro domestico tra parenti) di un rapporto di lavoro iscritto sul portale INPS."@it .
+
+INPSDWS:ValutazioneDeiFattoriDiRischio a owl:Class ;
+    rdfs:label "Risk factor assessment "@en,
+        "ValutazioneDeiFattoriDiRischio"@it ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:haEsitoValutazione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:valutazioneEseguitaDa ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:valutatoDa ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Evaluation of risk factors associated with an improper domestic work relationship (e.g. domestic work between relatives) of a domestic work relationship registered on the INPS portal."@en,
+        "Valutazione dei fattori di rischio associati ad un rapporto di lavoro domestico improprio (es: lavoro domestico tra parenti) di un rapporto di lavoro iscritto sul portale INPS."@it .
+
+INPSDWS:VariazioneMansioneLavoroDomestico a owl:Class ;
+    rdfs:label "Domestic Role Variation"@en,
+        "Variazione Mansione Lavoro Domestico"@it ;
+    rdfs:subClassOf INPSDWS:VariazioneRapportoDiLavoroDomestico ;
+    rdfs:comment "Domestic Role Variation is a type of change in the domestic employment relationship relating to the role played by the domestic worker initially agreed between the domestic worker and the employer and declared in the contract. The intended roles are domestic helper or carer. In the ontology it is a subclass of Employment Relationship Variation, constituting a specific case of it"@en,
+        "La Variazione della mansione di lavoro domestico è un tipo i variazione del rapporto di lavoro domestico relativa al ruolo svolto dal lavoratore domestico inizialmente concordato tra lavoratore domestico e datore di lavoro e dichiarato nel contratto. Le mansioni previste sono colf o badante. Nell'ontologia è sottoclasse di Variazione Rapporto di Lavoro, costituendone una casistica specifica."@it .
+
+INPSDWS:VariazioneOrediLavoroDomestico a owl:Class ;
+    rdfs:label "Variation in Domestic Work Working Hours"@en,
+        "Variazione Ore Di Lavoro Domestico"@it ;
+    rdfs:subClassOf INPSDWS:VariazioneRapportoDiLavoroDomestico ;
+    rdfs:comment "La Variazione delle ore di lavoro domestico è un tipo di variazione possibile del rapporto lavoro domestico che riguarda le ore di lavoro prestata dal lavoratore domestico inizialmente indicate nel contratto. Nell'ontologia la classe è definita come sottoclassi di Variazione Rapporto di Lavoro Domestico"@it,
+        "Variation of working hours for a domestic worker is a type of possible variation of the domestic employment relationship that concerns the hours worked by the domestic worker initially specified in the contract. In the ontology, the class is defined as subclasses of Domestic Work Relationship Variation"@en .
+
+INPSDWS:VariazioneRapportoDiLavoroDomestico a owl:Class ;
+    rdfs:label "Domestic Employment Relationship Variation"@it,
+        "Variazione Rapporto Di Lavoro Domestico"@it ;
+    rdfs:subClassOf INPSDWS:ServizioLavoroDomestico,
+        L0:EventOrSituation,
+        [ a owl:Class ;
+            owl:unionOf (
+                    INPSDWS:CessazioneRapportoDiLavoroDomestico
+                    INPSDWS:ProrogaRapportoDiLavoro
+                    INPSDWS:TrasformazioneRapportoDiLavoroDomestico
+                    INPSDWS:VariazioneMansioneLavoroDomestico
+                    INPSDWS:VariazioneOrediLavoroDomestico
+                    INPSDWS:VariazioneRetribuzioneLavoroDomestico ) ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:codiceVariazioneRapportoDiLavoroDomestico ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:dataVariazioneRapportoDiLavoroDomestico ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:modificaRapportoDiLavoroDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:effettuaVariazioneRapportoDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:raccoglieVariazioneRapportoDiLavoroDomestico ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:COVariazioneGenerataAPartireDa ] ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:unionOf (
+                            INPSDWS:CessazioneRapportoDiLavoroDomestico
+                            INPSDWS:ProrogaRapportoDiLavoro
+                            INPSDWS:TrasformazioneRapportoDiLavoroDomestico
+                            INPSDWS:VariazioneMansioneLavoroDomestico ) ] ] ;
+    rdfs:comment "La Variazione del Rapporto di lavoro domestico consente di modificare alcuni dati e caratteristiche o di cambiare lo stato del rapporto. Nell'ontologia il concetto è osservato e definito sia come evento che accade e del quale viene conseguentemente tenuta traccia nei dati e documenti che come servizio abilitato dai sistemi dell'INPS. è inoltre definito come classe sovraordinata ad altre che ne rappresentano una tipizzazione, alcune delle quali devono essere seguite da una comunicazione obbligatoria da parte di INPS verso il Ministero del lavoro e altre no. Le sottoclassi sono: Variazione Mansione, Variazione Ore di Lavoro, Trasformazione rapporto di lavoro, Cessazione del rapporto di lavoro, Proroga del rapporto di lavoro."@it,
+        "The Domestic Employment Relationship Variation allows to modify certain data and characteristics or to change the status of the relationship. In the ontology, the concept is observed and defined both as an event that occurs and of which a trace is consequently kept in the data and documents, and as a service enabled by the INPS systems. It is also defined as a class superordinate to others that represent a type of it, some of which must be followed by a compulsory communication from INPS to the Ministry of Labour, and others not. The subclasses are: Role Variation, Variation of Work Hours, Employment Relationship Transformation, Employment Relationship Termination, Employment Relationship Extension."@en .
+
+INPSDWS:VariazioneRetribuzioneLavoroDomestico a owl:Class ;
+    rdfs:label "Variation in Remuneration of Domestic Workers"@en,
+        "Variazione Retribuzione del Lavoro Domestico"@it ;
+    rdfs:subClassOf INPSDWS:VariazioneRapportoDiLavoroDomestico ;
+    rdfs:comment "La Variazione retribuzione del lavoro domestico è un tipo di variazine del rapporto di lavoro che modifica il dato  relativo alla modalità di calcolo dell'importo della retribuzione che può essere mensile o oraria. Nell'ontologia è modellata come sottoclasse di Variazione rapporto di lavoro e ne rappresenta una tipologia specifica."@it,
+        "The Domestic Workers' Remuneration Variation is a type of domestic work relationship variation that changes how the amount of remuneration is calculated, which may be monthly or hourly. In the ontology, it is modelled as a subclass of Employment Relationship Variation and represents a specific type."@en .
+
+INPSPensions:DocumentoAllegato a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:haDocumentoAllegato ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSRL:Delegato a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSDWS:agenteConsultaEstrattoContributivo ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:consultaRapportoDiLavoro ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:contribuenteInviaComunicazioneBidirezionaleA ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:effettuaIscrizioneRapportoDiLavoroDomestico ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:invianoComunicazioneBidirezionale ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSDWS:invianoComunicazioneBidirezionaleCorrelata ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:annullatoDa ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSService:Pagamento a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSDWS:sonoDovutiTramitePagamento ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+L0:EventOrSituation a owl:Class .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+### Axioms
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSContributions:DatoreDiLavoroDomestico
+            INPSContributions:LavoratoreDomestico
+            INPSRL:Delegato ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSContributions:DatoreDiLavoroDomestico
+            INPSCore:SedeINPS
+            INPSRL:Delegato ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSContributions:RapportoDiLavoroDomesticoCessato
+            INPSDWS:RapportoDiLavoroDomesticoAnnullato
+            INPSDWS:RapportoDiLavoroDomesticoRespinto ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSDWS:AnnullamentoRapportoDiLavoroDomestico
+            INPSDWS:EstrattoContributivoRapportoDiLavoroDomestico
+            INPSDWS:GestioneRimborsi
+            INPSDWS:IscrizioneRapportoDiLavoroDomestico
+            INPSDWS:RichiestaNotificaScadenzaPagamentoContributiLavoratoreDomestico
+            INPSDWS:SospensioneObbligoContributivoLavoroDomestico
+            INPSDWS:VariazioneRapportoDiLavoroDomestico ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSDWS:CessazioneRapportoDiLavoroDomestico
+            INPSDWS:ProrogaRapportoDiLavoro
+            INPSDWS:TrasformazioneRapportoDiLavoroDomestico
+            INPSDWS:VariazioneMansioneLavoroDomestico ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSDWS:CessazioneRapportoDiLavoroDomestico
+            INPSDWS:ProrogaRapportoDiLavoro
+            INPSDWS:TrasformazioneRapportoDiLavoroDomestico
+            INPSDWS:VariazioneMansioneLavoroDomestico
+            INPSDWS:VariazioneOrediLavoroDomestico
+            INPSDWS:VariazioneRetribuzioneLavoroDomestico ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSDWS:ComunicataSospensioneObbligoContributivo
+            INPSDWS:DaRecuperoCrediti
+            INPSDWS:PagamentoDaEffettuare
+            INPSDWS:PagamentoIncassato
+            INPSDWS:PagamentoIncassatoInLavorazione ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSDWS:ComunicazioneObbligatoriaCessazione
+            INPSDWS:ComunicazioneObbligatoriaDiVariazioneMansioneLavoratoreDomestico
+            INPSDWS:ComunicazioneObbligatoriaProroga
+            INPSDWS:ComunicazioneObbligatoriaTrasformazione ) .
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf L0:hasFirstMember ] ;
+    owl:someValuesFrom INPSDWS:StatoComunicazioneBidirezionale ;
+    rdfs:subClassOf INPSDWS:ComunicazioneBidirezionaleAperta .
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf L0:hasLastMember ] ;
+    owl:someValuesFrom INPSDWS:StatoComunicazioneBidirezionale ;
+    rdfs:subClassOf INPSDWS:ComunicazioneBidirezionaleChiusa .
+
+[] a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf INPSDWS:COVariazioneGenerataAPartireDa ] ;
+    owl:someValuesFrom [ a owl:Class ;
+            owl:unionOf (
+                    INPSDWS:CessazioneRapportoDiLavoroDomestico
+                    INPSDWS:ProrogaRapportoDiLavoro
+                    INPSDWS:TrasformazioneRapportoDiLavoroDomestico
+                    INPSDWS:VariazioneMansioneLavoroDomestico ) ] ;
+    rdfs:subClassOf INPSDWS:VariazioneRapportoDiLavoroDomestico .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

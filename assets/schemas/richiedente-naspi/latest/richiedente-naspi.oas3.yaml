@@ -1,0 +1,100 @@
+openapi: 3.0.3
+info:
+  title: Schema del Richiedente NASpI
+  version: 202406.27.00
+  x-summary: Schema del Richiedente NASpI compatibile con l'Ontologia INPS relativa ai servizi per la gestione della richiesta di una prestazione NASpI.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/social-safety-net/RichiedenteNASpI
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdRichiedenteNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/onto/CPV/taxCode
+      description: https://w3id.org/italia/onto/CPV/taxCode
+      example: 'MRCDRH22S28H501Y'
+      maxLength: 50
+      minLength: 1
+
+    RichiedenteNASpi:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/RichiedenteNASpI
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        se_iscritto_albo_cassa_professionale: seIscrittoAlbo-CassaProfessionale
+        se_svolge_attivita_profesionale: seSvolgeAttivitàProfesionale
+        se_titolare_partita_iva: seTitolarePartitaIVA
+        se_svolge_attivita_a_partita_iva: seSvolgeAttivitàAPartitaIVA
+        se_titolare_assegno_di_invalidita: seTitolareAssegnoDiInvalidità
+        se_stato_di_malattia_in_corso: seStatoDiMalattiaInCorso
+        se_stato_di_malattia_pregressa: seStatoDiMalattiaPregressa
+        se_socio_di_societa: seSocioDiSocietà
+        se_licenziato_per_superamento_periodo_comporto: seLicenziatoPerSuperamentoPeriodoComporto
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/RichiedenteNASpI
+      required:
+      - codice_fiscale_richiedente_naspi
+      - se_iscritto_albo_cassa_professionale
+      - se_svolge_attivita_profesionale
+      - se_titolare_partita_iva
+      - se_svolge_attivita_a_partita_iva
+      - se_titolare_assegno_di_invalidita
+      - se_stato_di_malattia_in_corso
+      - se_stato_di_malattia_pregressa
+      - se_socio_di_societa
+      - se_licenziato_per_superamento_periodo_comporto
+      properties:
+        codice_fiscale_richiedente_naspi:
+          $ref: "#/components/schemas/IdRichiedenteNASpI"
+        se_iscritto_albo_cassa_professionale:
+          type: string
+          format: boolean
+        se_svolge_attivita_profesionale:
+          type: string
+          format: boolean
+        se_titolare_partita_iva:
+          type: string
+          format: boolean
+        se_svolge_attivita_a_partita_iva:
+          type: string
+          format: boolean
+        se_titolare_assegno_di_invalidita:
+          type: string
+          format: boolean
+        se_stato_di_malattia_in_corso:
+          type: string
+          format: boolean
+        se_stato_di_malattia_pregressa:
+          type: string
+          format: boolean
+        se_socio_di_societa:
+          type: string
+          format: boolean
+        se_licenziato_per_superamento_periodo_comporto:
+          type: string
+          format: boolean
+      example:
+        codice_fiscale_richiedente_naspi:
+          $ref: "#/components/schemas/IdRichiedenteNASpI/example"
+        se_iscritto_albo_cassa_professionale: 'true'
+        se_svolge_attivita_profesionale: 'false'
+        se_titolare_partita_iva: 'true'
+        se_svolge_attivita_a_partita_iva: 'true'
+        se_titolare_assegno_di_invalidita: 'false'
+        se_stato_di_malattia_in_corso: 'false'
+        se_stato_di_malattia_pregressa: 'false'
+        se_socio_di_societa: 'false'
+        se_licenziato_per_superamento_periodo_comporto: 'false'

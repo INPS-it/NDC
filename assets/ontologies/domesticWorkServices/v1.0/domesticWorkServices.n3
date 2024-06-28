@@ -1,0 +1,1971 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ns0: <https://w3id.org/italia/onto/ADMS/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/>
+  a owl:Ontology ;
+  owl:versionIRI <https://w3id.org/italia/social-security/onto/domesticWorkServices/1_0> ;
+  owl:imports <https://w3id.org/italia/onto/COV/>, <https://w3id.org/italia/onto/CPSV/>, <https://w3id.org/italia/social-security/onto/core/>, <https://w3id.org/italia/social-security/onto/contributions/>, <https://w3id.org/italia/onto/l0/>, xsd:, <https://w3id.org/italia/onto/TI/> ;
+  rdfs:label "INPS Domestic Work Services Ontology"@en, "Ontologia INPS relativa ai servizi per il lavoro domestico"@it ;
+  rdfs:comment "Ontologia INPS relativa alle entità e le relazioni che abilitano i servizi INPS per la gestione del Lavoro Domestico. Tra di essi troviamo, ad esempio, il servizio per l'iscrizione, la variazione, la cessazione del rapporto di lavoro domesitco o la consultazione dell'estratto contributivo."@it, "INPS ontology relating to the entities and relationships that enable INPS services for the management of domestic work. Among them we find, for example, the service for registration, variation, termination of the domestic employment relationship or consultation of the contribution statement."@en ;
+  owl:versionInfo "Version 1.0 - Modified on 06 June 2024"@en, "Versione 1.0 - Modificata il 06 Giugno 2024"@it ;
+  rdfs:isDefinedBy <https://w3id.org/italia/social-security/onto/domesticWorkServices/> ;
+  ns0:acronym "inps" ;
+  ns0:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+  ns0:hasFormalityLevel ns0:Formal ;
+  ns0:hasKeyClass <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoIscritto>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoRespinto>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAnnullato>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/IscrizioneRapportoDiLavoroDomestico>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/CessazioneRapportoDiLavoroDomestico> ;
+  ns0:hasOntologyLanguage ns0:OWL ;
+  ns0:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/services/distribution/DOMESTICWORKSERVICES-N-TRIPLES>, <https://w3id.org/italia/social-security/data/services/distribution/DOMESTICWORKSERVICES-RDF-TURTLE>, <https://w3id.org/italia/social-security/data/services/distribution/DOMESTICWORKSERVICES-RDF-XML> ;
+  ns0:hasTask ns0:AnnotationTask, ns0:QueryFormulationTask, ns0:SearchTask ;
+  ns0:officialURI "https://w3id.org/italia/social-security/onto/domesticWorkServices"^^xsd:anyURI ;
+  ns0:prefix "inpsdws" ;
+  ns0:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+  ns0:status "catalogued", "published" ;
+  ns0:target "Cittadini"@it, "Imprese"@it, "Pubbliche Amministrazioni"@it ;
+  ns0:type ns0:ServiceOnytology ;
+  dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+  dcat:keyword "domestic worker"@en, "lavoratore domestico"@it, "datore di lavoro domestico"@it, "domestic work employer"@en, "iscrizione rapporto di lavoro domestico"@it, "variazione rapporto di lavoro domestico"@it, "cessazione rapporto di lavoro domestico"@it, "domestic work employment relationship registration"@en, "domestic work employment relationship variation"@en, "domestic work employment relationship termination"@en ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+  dc:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+  dc:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+  dc:description "Ontologia INPS relativa alle entità e le relazioni che abilitano i servizi INPS per la gestione del Lavoro Domestico. Tra di essi troviamo, ad esempio, il servizio per l'iscrizione, la variazione, la cessazione del rapporto di lavoro domesitco o la consultazione dell'estratto contributivo."@it, "This is the INPS ontology relating to the entities and relationships that enable INPS services for the management of domestic work. Among them we find, for example, the service for registration, variation, termination of the domestic employment relationship or consultation of the contribution statement."@en ;
+  dc:identifier "https://w3id.org/italia/social-security/onto/services" ;
+  dc:issued "2024-06-06T00:00:00+00:00"^^xsd:dateTime ;
+  dc:language <http://publications.europa.eu/resource/authority/language/ENG>, <http://publications.europa.eu/resource/authority/language/ITA> ;
+  dc:modified "2024-01-17T00:00:00+00:00"^^xsd:dateTime ;
+  dc:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+  dc:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+  dc:title "INPS Domestic Work Services Ontology"@en, "Ontologia INPS relativa ai servizi per il Lavoro Domestico"@it .
+
+xsd:boolean a rdfs:Datatype .
+xsd:dateTime a rdfs:Datatype .
+xsd:string a rdfs:Datatype .
+<https://w3id.org/italia/onto/l0/hasFirstMember> a owl:ObjectProperty .
+<https://w3id.org/italia/onto/l0/hasLastMember> a owl:ObjectProperty .
+<https://w3id.org/italia/social-security/onto/contributions/haContrattoDiLavoroDomestico>
+  a owl:ObjectProperty, owl:FunctionalProperty, owl:InverseFunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/contributions/ContrattoDiLavoroDomestico> .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/COIscrizioneGenerataAPartireDa>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaAssunzione> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/IscrizioneRapportoDiLavoroDomestico> ;
+  rdfs:comment "La comunicazione obbligatoria di iscrizione viene generata a partire dall’iscrizione di un rapporto di lavoro domestico all’interno del portale INPS del lavoro domestico da parte del datore di lavoro domestico. "@it, "The mandatory registration communication is generated from the registration of a domestic employment relationship within the INPS domestic work portal by the domestic employer. "@en ;
+  rdfs:label "COIscrizioneGenerataAPartireDa"@it, "Mandatory Communication of Registration generated from"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/COVariazioneGenerataAPartireDa>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaVariazione> ;
+  rdfs:comment "La comunicazione obbligatoria di variazione viene generata a partire dalla variazione di un rapporto di lavoro domestico all’interno del portale INPS del lavoro domestico da parte del datore di lavoro domestico. "@it, "The mandatory variation communication is generated from the variation of a domestic employment relationship within the INPS domestic work portal by the domestic employer. "@en ;
+  rdfs:label "COVariazioneGenerataAPartireDa"@it, "Mandatory Communication of Variation generated from"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/agenteConsultaEstrattoContributivo>
+  a owl:ObjectProperty ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato>
+   )
+  ] ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomesticoDatoreLavoro> ;
+  rdfs:comment "An agent, i.e. a domestic employer or its delegate, consults the contribution statement. "@en, "Un agente, ovvero un datore di lavoro domestico o un suo delegato, consulta l’estratto contributivo. "@it ;
+  rdfs:label "Agent consults contribution statement"@en, "agenteConsultaEstrattoContributivo"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/annullaRapportoDiLavoroDomestico>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/AnnullamentoRapportoDiLavoroDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAnnullato> ;
+  rdfs:comment "L’annullamento del rapporto di lavoro domestico genera un rapporto di lavoro domestico annullato. Questa object property collega la classe “Annullamento del Rapporto di Lavoro Domestico” e “Rapporto di Lavoro Domestico Annullato”. "@it, "The cancellation of the domestic employment relationship generates a cancelled domestic employment relationship. This object property binds the class ‘Cancellation of Domestic Employment Relationship’ and ‘Domestic Employment Relationship Cancelled’. "@en ;
+  rdfs:label "Cancels domestic work relationship "@en, "annullaRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/annullatoDa>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAnnullato> ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/core/SedeINPS>
+     <https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato>
+   )
+  ] ;
+  rdfs:comment "A domestic employment relationship may be cancelled by the domestic employer or its delegate. "@en, "Un rapporto di lavoro domestico può essere annullato dal datore di lavoro domestico o il suo delegato. "@it ;
+  rdfs:label "Cancelled by"@en, "annullato Da"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/cessazioneGeneraRapportoDiLavoroDomesticoCessato>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/CessazioneRapportoDiLavoroDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato> ;
+  rdfs:comment "La cessazione di un rapporto di lavoro domestico effettuata dal datore di lavoro domestico o da un suo delegato sul portale INPS per il lavoro domestico genera un rapporto di lavoro domestico cessato. "@it, "The termination of a domestic employment relationship by the domestic employer or its delegate on the INPS domestic employment portal generates a terminated domestic employment relationship. "@en ;
+  rdfs:label "Termination Generates Terminated Domestic Work Relationship"@en, "cessazioneGeneraRapportoDiLavoroDomesticoCessato"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/comunicazioneBidirezionaleRiguardaRapportoDiLavoroDomestico>
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico> ;
+  rdfs:comment "La comunicazione bidirezionale, eseguita sul portale INPS dei servizi per il lavoro domestico, ha come oggetto un rapporto di lavoro domestico. "@it, "The bidirectional communication, carried out on the INPS portal of domestic work services, concerns a domestic work relationship. "@en ;
+  rdfs:label "Bidirectional Communication Concerns Domestic Work Employment Relationship "@en, "comunicazioneBidirezionaleRiguardaRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/consultaRapportoDiLavoro>
+  a owl:ObjectProperty ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico>
+     <https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato>
+   )
+  ] ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico> ;
+  rdfs:comment "Il lavoratore domestico, il datore di lavoro domestico o un delegato possono consultare i rapporti di lavoro domestico a loro associati. "@it, "The domestic worker, the domestic employer or his delegate may consult the domestic employment relationships associated with them. "@en ;
+  rdfs:label "Consults Domestic Work Relationships"@en, "consultaRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/consultatiTramiteEstrattoContributivo>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomestico> ;
+  rdfs:comment "I contributi trimestrali ordinari possono essere consultati tramite l’estratto contributivo del rapporto di lavoro domestico. "@it, "Ordinary quarterly contributions can be consulted by means of the contribution statement of the domestic employment relationship. "@en ;
+  rdfs:label "Consulted by contribution statement"@en, "consultatiTramiteEstrattoContributivo"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/contrattoHaMotiviDiPermesso>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/ContrattoDiLavoroDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/MotiviPermesso> ;
+  rdfs:comment "A contract has employee leaves. "@en, "Un contratto ha permessi di lavoro. "@it ;
+  rdfs:label "Contract has employee leaves "@en, "contrattoHaMotiviDiPermesso"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/contribuenteInviaComunicazioneBidirezionaleA>
+  a owl:ObjectProperty ;
+  owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/inpsInviaComunicazioneBidirezionaleA> ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato>
+   )
+  ] ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/core/SedeINPS> ;
+  rdfs:comment "A contributor can send a bidirectional communication to his or her INPS office via the INPS domestic work portal. "@en, "Un contribuente può inviare una comunicazione bidirezionale alla propria sede INPS tramite il portale del lavoro domestico dell'INPS. "@it ;
+  rdfs:label "Contributor Sends Bidirectional Communication To"@en, "contribuenteInviaComunicazioneBidirezionaleA"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/effettuaIscrizioneRapportoDiLavoroDomestico>
+  a owl:ObjectProperty ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/core/SedeINPS>
+     <https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato>
+   )
+  ] ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/IscrizioneRapportoDiLavoroDomestico> ;
+  rdfs:comment "A domestic employer or its delegate performs the registration of a domestic employment relationship. In some specific cases, the INPS office may also register a domestic employment relationship. "@en, "Un datore di lavoro domestico o il suo delegato effettua l’iscrizione di un rapporto di lavoro domestico. In alcuni casi specifici sono anche la sede INPS può effettuare l’iscrizione di un rapporto di lavoro domestico. "@it ;
+  rdfs:label "Performs Domestic Work Report Registration"@en, "effettuaIscrizioneRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/effettuaVariazioneRapportoDiLavoroDomestico>
+  a owl:ObjectProperty ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato>
+   )
+  ] ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico> ;
+  rdfs:comment "A domestic employer or its delegate performs the variation of a domestic employment relationship. "@en, "Un datore di lavoro domestico o il suo delegato effettua la variazione di un rapporto di lavoro domestico. "@it ;
+  rdfs:label "Performs Domestic Work Report Variation"@en, "effettuaVariazioneRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/esitoValutazioneAutomaticaConRilevazioneDelRischioGenera>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneAutomaticaConRilevazioneRischio> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica> ;
+  rdfs:comment "An automatic assessment of a registered domestic employment relationship that detect the risk of improper domestic work generates an domestic employment relationship under verification. "@en, "Una valutazione automatica di un rapporto di lavoro domestico iscritto che rileva rischio di lavoro domestico improprio genera un rapporto di lavoro domestico in verifica. "@it ;
+  rdfs:label "Automatic Risk Assessment Outcome Generates"@en, "esitoValutazioneAutomaticaConRilevazioneDelRischioGenera"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/esitoValutazioneAutomaticaSenzaRilevazioneRischioGenera>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoVautazioneAutomaticaSenzaRilevazioneRischio> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAccolto> ;
+  rdfs:comment "An automatic assessment of a registered domestic employment relationship that does not detect the risk of improper domestic work generates an active domestic employment relationship. "@en, "Una valutazione automatica di un rapporto di lavoro domestico iscritto che non rileva rischio di lavoro domestico improprio genera un rapporto di lavoro domestico attivo. "@it ;
+  rdfs:label "Automatic assessment without Risk evaluation outcome generates"@en, "esitoValutazioneAutomaticaSenzaRilevazioneRischioGenera"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/esitoValutazioneConRilevazioneRischioGenera>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneConfermaRilevazioneRischio> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoRespinto> ;
+  rdfs:comment "La valutazione che conferma il rischio di rapporto di lavoro domestico improprio genera un rapporto di lavoro domestico respinto. "@it, "The assessment confirming the risk of an improper domestic employment relationship generates a rejected domestic employment relationship. "@en ;
+  rdfs:label "Risk Assessment outcome generates "@en, "esitoValutazioneConRilevazioneRischioGenera"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/esitoValutazioneSenzaRilevazioneRischioGenera>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneSenzaRilevazioneRischio> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAccolto> ;
+  rdfs:comment "An assessment of a domestic employment relationship under verification that does not detect the risk of improper domestic work generates an active domestic employment relationship. "@en, "Una valutazione di un rapporto di lavoro domestico in fase di verifica che non rileva il rischio di lavoro domestico improprio genera un rapporto di lavoro domestico attivo."@it ;
+  rdfs:label "Assessment without Risk evaluation outcome generates"@en, "esitoValutazioneSenzaRilevazioneRischioGenera"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haDettaglioComunicazioneBidirezionale>
+  a owl:ObjectProperty, owl:FunctionalProperty, owl:InverseFunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/DettaglioComunicazioneBidirezionale> ;
+  rdfs:comment "Binds a bidirectional communication to its details. "@en, "Collega una comunicazione bidirezionale ai propri dettagli. "@it ;
+  rdfs:label "Has Bidirectional Communication Detail"@en, "haDettaglioComunicazioneBidirezionale"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haDocumentoAllegato>
+  a owl:ObjectProperty, owl:InverseFunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/pensions/DocumentoAllegato> ;
+  rdfs:comment "Binds a bidirectional communication to the attached documents. "@en, "Collega una comunicazione bidirezionale ai documenti allegati. "@it ;
+  rdfs:label "Has Attached Document"@en, "haDocumentoAllegato"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haDocumentoIdentita>
+  a owl:ObjectProperty ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico>
+   )
+  ] ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/DocumentoIdentita> ;
+  rdfs:comment "la relazione collega una persona al documento d'identità di cui è titolare"@it, "the relationship links a person to the identity document they hold"@en ;
+  rdfs:label "ha documento d'identità"@it, "has identity document"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haEsitoComunicazioneBidirezionale>
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoComunicazioneBidirezionale> ;
+  rdfs:comment "Binds a bidirectional communication to its outcome. "@en, "Collega una comunicazione bidirezionale al proprio esito "@it ;
+  rdfs:label "Has Bidirectional Communication Outcome"@en, "haEsitoComunicazioneBidirezionale"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haEsitoValutazione>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ValutazioneDeiFattoriDiRischio> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneFattoriDiRischio> ;
+  rdfs:comment "Collega la valutazione dei fattori di rischio al suo esito. "@it, "It links the assessment of risk factors to its outcome. "@en ;
+  rdfs:label "Has assessment outcome"@en, "haEsitoValutazione"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haEsitoValutazioneAutomatica>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ValutazioneAutomaticaFattoriDiRischio> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneAutomatica> ;
+  rdfs:comment "Collega la valutazione automatica dei fattori di rischio al suo esito. "@it, "It links the automatic assessment of risk factors to its outcome. "@en ;
+  rdfs:label "Has automatic assessment outcome"@en, "haEsitoValutazioneAutomatica"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haMotivoCessazione>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/MotivoCessazione> ;
+  rdfs:comment "Collega il contratto di lavoro domestico ai motivi di cessazione. "@it, "It links the domestic employment contract to termination reason. "@en ;
+  rdfs:label "Has termination reason"@en, "haMotivoCessazione"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haStatoComunicazioneBidirezionale>
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoComunicazioneBidirezionale> ;
+  rdfs:comment "Binds a bidirectional communication to its status. "@en, "Collega una comunicazione bidirezionale al proprio stato "@it ;
+  rdfs:label "Has Bidirectional Communication Status"@en, "haStatoComunicazioneBidirezionale"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haStatoDiPagamentoContributiLavoratoreDomestico>
+  a owl:ObjectProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoDiPagamentoContributiLavoratoreDomestico> ;
+  rdfs:comment "Binds quarterly ordinary contributions to payment status. "@en, "Collega i contributi trimestrali ordinari al priprio stato di pagamento. "@it ;
+  rdfs:label "Has Domestic labor contribution payment status "@en, "haStatoDiPagamentoContributiLavoratoreDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaDiContratto>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/ContrattoDiLavoroDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaContratto> ;
+  rdfs:comment "Collega il contratto di lavoro domestico ai tipi di contratto. "@it, "It links the domestic employment contract to contract types. "@en ;
+  rdfs:label "Has contract type"@en, "haTipologiaDiContratto"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaDocumento>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/DocumentoIdentita> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaDocumento> ;
+  rdfs:comment "Collega il contratto di lavoro domestico ai tipi di documenti di identità. "@it, "It links the domestic employment contract to identification document types. "@en ;
+  rdfs:label "Has identification document type"@en, "haTipologiaDocumento"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaMansioneLavoratoreDomestico>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaMansioneLavoratoreDomestico> ;
+  rdfs:comment "Collega un rapporto di lavoro domestico ai tipi di ruoli che possono essere assunti dal lavoratore. "@it, "It links a domestic employment relationship to the types of roles that can be taken on by the worker. "@en ;
+  rdfs:label "Has Domestic Workers' role type"@en, "haTipologiaMansioneLavoratoreDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaPermessoSoggiorno>
+  a owl:ObjectProperty ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaPermessoSoggiorno> ;
+  rdfs:comment "Collega il contratto di lavoro domestico ai tipi di permesso di soggiorno. "@it, "It links the domestic employment contract to residence permit types. "@en ;
+  rdfs:label "Has residence permit type"@en, "haTipologiaPermessoSoggiorno"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaRapportoDiParentela>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaRapportoDiParentela> ;
+  rdfs:comment "Collega il contratto di lavoro domestico ai tipi di rapport di parentela. "@it, "It links the domestic employment contract to family relationship types. "@en ;
+  rdfs:label "Has family relationship type"@en, "haTipologiaRapportoDiParentela"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaRetribuzione>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaRetribuzione> ;
+  rdfs:comment "Collega il contratto di lavoro domestico ai tipi di retribuzione. "@it, "It links the domestic employment contract to remuneration types. "@en ;
+  rdfs:label "Has remuneration type"@en, "haTipologiaRetribuzione"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/inVerificaPresso>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica> ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/core/DirezioneCentraleINPS>
+     <https://w3id.org/italia/social-security/onto/core/SedeINPS>
+   )
+  ] ;
+  rdfs:comment "A domestic employment relationship under verification may be under verification at INPS central office or at a local office. "@en, "Un rapporto di lavoro domestico in verifica può essre in verifica presso la sede centrali INPS o una sede locale. "@it ;
+  rdfs:label "Under verification at"@en, "inVerificaPresso"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/inpsInviaComunicazioneBidirezionaleA>
+  a owl:ObjectProperty ;
+  rdfs:comment "La sede INPS può inviare comunicazione bidirezionale a contribuente tramite il portale INPS per il lavoro domestico. "@it, "The INPS office sends bidirectional communication to the contributor via the INPS portal for domestic work. "@en ;
+  rdfs:label "INPS sends bidirectional communication to"@en, "inpsInviaComunicazioneBidirezionaleA"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/inviaComunicazioneObbligatoria>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/core/SedeINPS> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaRapportoDiLavoroDomestico> ;
+  rdfs:comment "La sede INPS invia la comunicazione obbligatoria al ministero del lavoro. "@it, "The INPS office sends the mandatory communication to the Ministry of Labour. "@en ;
+  rdfs:label "Sends mandatory communication"@en, "inviaComunicazioneObbligatoria"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/invianoComunicazioneBidirezionale>
+  a owl:ObjectProperty ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/core/SedeINPS>
+     <https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato>
+   )
+  ] ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:comment "Il datore di lavoro domestico, il suo delegato o la sede INPs invia le comunicazioni bidirezionali. "@it, "The domestic employer, its delegate or the INPS office sends the bidirectional communications. "@en ;
+  rdfs:label "Sends Bidirectional Communication"@en, "invianoComunicazioneBidirezionale"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/invianoComunicazioneBidirezionaleCorrelata>
+  a owl:ObjectProperty ;
+  rdfs:domain [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/core/SedeINPS>
+     <https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato>
+   )
+  ] ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleCorrelata> ;
+  rdfs:comment "Il datore di lavoro domestico, il suo delegato o la sede INPs invia le comunicazioni bidirezionali correlate. "@it, "The domestic employer, its delegate or the INPS office sends the related bidirectional communications. "@en ;
+  rdfs:label "Sends Related Bidirectional Communication"@en, "invianoComunicazioneBidirezionaleCorrelata"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/iscriveRapportoDiLavoroDomestico>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/IscrizioneRapportoDiLavoroDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico> ;
+  rdfs:comment "Collega l’iscrizione di un rapporto di lavoro domestico sul portale INPS dei servizi per il lavoro domestico al rapporto di lavoro domestico. "@it, "It links the registration of a domestic work relationship on the INPS domestic work services portal to the domestic work relationship. "@en ;
+  rdfs:label "Registers domestic work relationship"@en, "iscriveRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/lavoratoreConsultaEstrattoContributivoLavoratoreDomestico>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomesticoLavoratore> ;
+  rdfs:comment "A domestic worker can consult his or her contribution statement via the INPS service portal for domestic work. "@en, "Un lavoratore domestico tramite il portale INPS dei servizi per il lavoro domestico può consultare il proprio estratto contributivo. "@it ;
+  rdfs:label "Domestic worker consults domestic work contributions"@en, "lavoratoreConsultaEstrattoContributivoLavoratoreDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/modificaRapportoDiLavoroDomestico>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoAttivo> ;
+  rdfs:comment "A domestic employment relationship variation modifies an active domestic employment relationship. "@en, "Una variazione di rapporto di lavoro domestico modifica un rapporto di lavoro domestico attivo. "@it ;
+  rdfs:label "Modifies domestic work relationship"@en, "modificaRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/prorogaRapportoDiLavoroDomesticoCessato>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ProrogaRapportoDiLavoro> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAnnullato> ;
+  rdfs:comment "La relazione collega l'evento di proroga ad un rapporto di lavoro domestico cessato"@it, "The relation links the extension event to a terminated domestic employment relationship"@en ;
+  rdfs:label "Extension of terminated domestic work relationship"@en, "Proroga rapporto di lavoro domestico cessato"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/raccoglieIscrizioneRapportoDiLavoroDomestico>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/core/SedeINPS> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/IscrizioneRapportoDiLavoroDomestico> ;
+  rdfs:comment "La sede INPS raccoglie le iscrizioni dei rapporti di lavoro domestico effettuate sul portale INPS dei servizi per il lavoro domestico. "@it, "The INPS office collects the registrations of domestic work relationships made on the INPS portal of domestic work services. "@en ;
+  rdfs:label "Collects domestic work relationship registration "@en, "raccoglieIscrizioneRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/raccoglieVariazioneRapportoDiLavoroDomestico>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/core/SedeINPS> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico> ;
+  rdfs:comment "La sede INPS raccoglie le variazioni dei rapporti di lavoro domestico effettuate sul portale INPS dei servizi per il lavoro domestico. "@it, "The INPS office collects the variations of domestic work relationships made on the INPS portal of domestic work services. "@en ;
+  rdfs:label "Collects domestic work relationship variation"@en, "raccoglieVariazioneRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoorDomesticoCessatoHaStatoPrecedente>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAccolto> ;
+  rdfs:comment "Binds the Terminated Domestic Work Relationship to its previous status. "@en, "Collega il Rapporto di Lavoro Domestico Cessato al proprio stato precedente. "@it ;
+  rdfs:label "Terminated domestic work relationship has previous status "@en, "rapportoDiLavoroDomesticoCessatoHaStatoPrecedente"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoAccoltoHaStatoPrecedente>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAccolto> ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoIscritto>
+   )
+  ] .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoAnnullatoHaStatoPrecedente>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAnnullato> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAccolto> ;
+  rdfs:comment "Binds the Cancelled Domestic Work Relationship to its previous status. "@en, "Collega il Rapporto di Lavoro Domestico Annullato al proprio stato precedente. "@it ;
+  rdfs:label "Cancelled domestic work relationship has previous status"@en, "rapportoDiLavoroDomesticoAnnullatoHaStatoPrecedente"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoAttivoHaStatoPrecedente>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoAttivo> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAccolto> ;
+  rdfs:comment " Collega il Rapporto di Lavoro Domestico Attivo al proprio stato precedente. "@it, "Binds the Active Domestic Work Relationship to its previous status. "@en ;
+  rdfs:label "Active domestic work relationship has previous status"@en, "Rapporto di lavoro domestico attivo ha stato precedente"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoInVerificaHaStatoPrecedente>
+  a owl:ObjectProperty ;
+  rdfs:label "rapportoDiLavoroDomesticoInVerificaHaStatoPrecedente"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoRespintoHaStatoPrecedente>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoRespinto> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica> ;
+  rdfs:comment "Binds the Rejected Domestic Work Relationship to its previous status. "@en, "Collega il Rapporto di Lavoro Domestico Respinto al proprio stato precedente. "@it ;
+  rdfs:label "Rejected domestic work relationship has previous status"@en, "rapportoDiLavorDomesticoRespintoHaStatoPrecedente"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/respintoDa>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoRespinto> ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/core/DirezioneCentraleINPS>
+     <https://w3id.org/italia/social-security/onto/core/SedeINPS>
+   )
+  ] ;
+  rdfs:comment "La Direzione centrale dell’INPS o una sede INPS può respingere un Rapporto di Lavoro Domestico in seguito alla fase di verifica. L’object property collega il Rapporto di Lavoro Domestico Iscritto con Direzione Centrale INPS o Sede INPS. "@it, "The INPS Central Directorate or an INPS Office may reject a Domestic Work Report following the verification stage. The object property links the Rejected Domestic Work Relationship with INPS Central Directorate or INPS Office. "@en ;
+  rdfs:label "Rejected By"@en, "respintoDa"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/sonoDovutiTramitePagamento>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/services/Pagamento> ;
+  rdfs:comment "Il pagamento del contributo trimestrale ordinario associato con rapporto di lavoro domestico attivo viene corrisposto tramite il pagamento. "@it, "The payment of the ordinary quarterly contribution associated with an active domestic employment relationship is made by payment. "@en ;
+  rdfs:label "Are Due By Payment"@en, "sonoDovutiTramitePagamento"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/trasformaRapportoDiLavoroDomesticoCessato>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/TrasformazioneRapportoDiLavoroDomestico> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAnnullato> ;
+  rdfs:comment "La relazione collega un evento di trasformazione del rapporto di lavoro ad un rapporto di lavoro domestico cessato"@it, "The relation links an event of transformation of the employment relationship to a terminated domestic work relationship"@en ;
+  rdfs:label "Transform terminated domestic employment relationship"@en, "Trasforma rapporto di lavoro domestico cessato"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/valutatoDa>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/ValutazioneDeiFattoriDiRischio> ;
+  rdfs:comment "Il rapporto di lavoro domestico in verifica viene valutato tramite una valutazione dei fattori di rischio di rapporto di lavoro domestico improprio (es rapporto di lavoro tra parenti). "@it, "The domestic employment relationship under verification is assessed by means of a risk factor assessment of improper domestic employment relationships (e.g. working relationships between relatives). "@en ;
+  rdfs:label "Assessed by"@en, "valutatoDa"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/valutatoTramiteValutazioneAutomatica>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoIscritto> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/ValutazioneAutomaticaFattoriDiRischio> ;
+  rdfs:comment "A registered domestic work relationship is assessed by means of an automatic evaluation in order to detect the risk of improper domestic work relationships. "@en, "Un rapporto di lavoro domestico iscritto viene valutato tramite una valutazione automatica al fine di rilevare il rischio di rapporto di lavoro domestico improprio. "@it ;
+  rdfs:label "Assessed by automatic assessment "@en, "valutato tramite valutazione automatica"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/valutazioneAutomaticaEseguitaDa>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/AgenteSoftwarePerLaRilevazionediRischioRapportoIrregolare> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/ValutazioneAutomaticaFattoriDiRischio> ;
+  rdfs:comment "A registered domestic work relationship undergoes an automatic assessment of risk factors. This automatic assessment is performed by a software agent. "@it, "Un rapporto di lavoro domestico iscritto viene sottoposto ad una valutazione automatica dei fattori di rischio. Tale valutazione automatica viene eseguita da un agente software. "@it ;
+  rdfs:label "Automatic assessment performed by "@en, "valutazioneAutomaticaEseguitaDa"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/valutazioneEseguitaDa>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ValutazioneDeiFattoriDiRischio> ;
+  rdfs:range [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/core/DirezioneCentraleINPS>
+     <https://w3id.org/italia/social-security/onto/core/SedeINPS>
+   )
+  ] ;
+  rdfs:comment "La valutazione dei fattori di rischio di rapporto di lavoro domestico improprio viene eseguita  dalla Direzione centrale dell’INPS o da una sede territoriale. "@it, "The assessment of risk factors for improper domestic work relationships is performed by the INPS central directorate or a local office. "@en ;
+  rdfs:label "Assessment performed by "@en, "valutazioneEseguitaDa"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/èCorrellataA>
+  a owl:ObjectProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleCorrelata> ;
+  rdfs:range <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:comment "A related bidirectional communication is related to a bidirectional communication. "@en, "Una comunicazione bidirezionale correlata è correlate ad una comunicazione bidirezionale. "@it ;
+  rdfs:label "Is related to"@en, "èCorrellataA"@it .
+
+<https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico> ;
+  rdfs:label "codice rapporto di lavoro"@it .
+
+<https://w3id.org/italia/social-security/onto/contributions/dataFirmaContratto>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico> ;
+  rdfs:label "data firma contratto"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/canaleNotificaRisposta>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Identifica il canale attraverso il quale si intende ricevere una notifica di avvenuta risposta da parte dell’INPS. Ad oggi l’unico canale disponibile è quello del 'Cassetto'."@it, "Identifies the channel through which you intend to receive a notification of a response from INPS. To date the only channel available is the 'Drawer'."@en ;
+  rdfs:label "Reply notification channel"@en, "canale Notifica Risposta"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/codiceProtocolloComunicazioneBidirezionale>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Identifica il codice di protocollo relativa alla comunicazione inviata dal datore di lavoro o relativo delegato o dall’INPS; si può presentare il caso in cui si evidenzia ‘protocollazione in corso’ e quindi la comunicazione è in fase di invio all’INPS, in tal caso è necessario attendere qualche minuto per l’attribuzione del numero di protocollo."@it, "Identifies the protocol code relating to the communication sent by the employer or its delegate or by INPS; a case may arise in which 'protocol in progress' is highlighted and therefore the communication is being sent to INPS, in which case it is necessary to wait a few minutes for the protocol number to be assigned."@en ;
+  rdfs:label "Bidirectional Communication Protocol Code"@en, "codice Protocollo Comunicazione Bidirezionale"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/codiceVariazioneRapportoDiLavoroDomestico>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico> ;
+  rdfs:range xsd:string ;
+  rdfs:comment "codice identificativo della variazione del rapporto di lavoro domestico"@it, "identification code of the change in the domestic employment relationship"@en ;
+  rdfs:label "Domestic Work Employment Relationship Variation code"@en, "codiceVariazioneRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataAperturaComunicazioneBidirezionale>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Identifica il periodo in cui è stata inviata la comunicazione."@it, "Identifies the period in which the communication was sent."@en ;
+  rdfs:label "Bidirectional Communication Opening Date"@en, "data Apertura Comunicazione Bidirezionale"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataCessazioneRapportoDiLavoroCessato>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Data di cessazione del rapporto di lavoro."@it, "Date of termination of the employment relationship."@en ;
+  rdfs:label "Termination date"@en, "dataCessazioneRapportoDiLavoroCessato"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataChiusuraComunicazioneBidirezionale>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Identifica il periodo in cui è stata ricevuta una risposta alla comunicazione inviata."@it, "Identifies the period in which a response to the sent communication was received."@en ;
+  rdfs:label "Bidirectional Communication Closing Date "@en, "data Chiusura Comunicazione Bidirezionale"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInizioRapportoDiLavoroCessato>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Data di inizio del rapporto di lavoro cessato."@it, "Start date of the terminated employment relationship."@en ;
+  rdfs:label "Starting Date of Terminated Employment Relationship"@en, "dataInizioRapportoDiLavoroCessato"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInizioRapportoLavoroAttivo>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoAttivo> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Data di inizio del rapporto di lavoro attivo."@it, "Start date of the active employment relationship."@en ;
+  rdfs:label "Starting Date of Active Employment Relationship"@en, "dataInizioRapportoLavoroAttivo"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInvioComunicaizoneAssunzione>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaAssunzione> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Data di invio della comunicazione obbligatoria di assunzione."@it, "Date of sending of the mandatory hiring communication."@en ;
+  rdfs:label "Hiring communication submission date"@en, "dataInvioComunicaizoneAssunzione"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInvioComunicazioneCessazione>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaCessazione> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Data di invio della comunicazione obbligatoria di cessazione del rapporto di lavoro domestico."@it, "Date of sending of the mandatory communication of termination of the domestic work relationship."@en ;
+  rdfs:label "Termination communication submission date"@en, "dataInvioComunicazioneCessazione"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInvioComunicazioneProroga>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaProroga> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Data di invio della comunicazione obbligatoria di proroga del rapporto di lavoro domestico."@it, "Date of sending of the mandatory communication of extension of the domestic work relationship."@en ;
+  rdfs:label "Extension communication submission date"@en, "dataInvioComunicazioneProroga"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInvioComunicazioneTrasformazione>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaTrasformazione> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Data di invio della comunicazione obbligatoria di trasformazione del rapporto di lavoro domestico."@it, "Date of sending of the mandatory communication of transformation of the domestic work relationship."@en ;
+  rdfs:label "Transformation communication submission date"@en, "dataInvioComunicazioneTrasformazione"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInvioComunicazioneVariazioneMansione>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaDiVariazioneMansioneLavoratoreDomestico> ;
+  rdfs:comment "Data di invio della comunicazione obbligatoria relativa alla variazione di mansione del lavoratore domestico."@it, "Date of sending the mandatory communication regarding the domestic worker's job change."@en ;
+  rdfs:label "dataInvioComunicazioneVariazioneMansione"@it, "date of sending the change of job notification"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataIscrizioneRapportoLavoro>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/IscrizioneRapportoDiLavoroDomestico> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Data di iscrizione di un rapporto di lavoro domestico da parte del datore di lavoro domestico sul portale INPS dei servizi per la gestioe del lavoro domestico"@it, "Date of the registration of a domestic employment relationship by a domestic employer over the INPS Domestic Work Service portal"@en ;
+  rdfs:label "Registration of the Employment Relationship Date"@en, "dataIscrizioneRapportoLavoro"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataPresentazioneAnnullamento>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAnnullato> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Data di presentazione dell'annullamento del rapporto di lavoro."@it, "Date of cancellation of the employment relationship."@en ;
+  rdfs:label "Cancellation date"@en, "dataPresentazioneAnnullamento"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataRespingimento>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoRespinto> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Data di respingimento del rapporto di lavoro."@it, "Date of rejection of the employment relationship."@en ;
+  rdfs:label "Rejection date"@en, "data respingimento"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataScadenza>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "Data di scadenza del pagamento dei contributi per i lavoratori domestici"@it, "Due date of a domestic worker's contribution payment"@en ;
+  rdfs:label "Due date"@en, "dataScadenza"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataScadenzaDocumentoIdentita>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/DocumentoIdentita> ;
+  rdfs:comment "data oltre la quale il documento d'ientità non è più valido e deve essere rinnovato"@it, "date beyond which the identity document is no longer valid and must be renewed"@en ;
+  rdfs:label "data di scadenza del documento d'identità"@it, "expiry date of the identity document"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/dataVariazioneRapportoDiLavoroDomestico>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico> ;
+  rdfs:range xsd:dateTime ;
+  rdfs:comment "data della variazione dela rapporto di lavoro domestico"@it, "date of the domestic work relationship variation"@en ;
+  rdfs:label "Domestic work relationship variation date"@en, "data variazione rapporto di lavoro domestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/descrizioneContributo>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario> ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Identifica la tipologia di pagamento effettuato o da effettuare che può essere un contributo o una nota di rettifica relativa a un pagamento effettuato con un importo inferiore al dovuto e/o in ritardo."@it, "Identifies the type of payment made or to be made which can be a contribution or a correction note relating to a payment made with an amount less than due and/or late."@en ;
+  rdfs:label "Contribution description"@en, "descrizioneContributo"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/descrizioneRichiesta>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Descrizione necessaria della richiesta che il datore di lavoro domestico fa attraverso una comunicazione bidirezionale."@it, "Necessary description of the request that the domestic employer makes through bidirectional communication."@en ;
+  rdfs:label "Request description"@en, "descrizione Richiesta"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/destinatario>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Indica a chi si intende inviare la comunicazione: per le comunicazioni inviate alla sede INPS dal datore di lavoro o relativo delegato, in tale sezione si avrà la sola informazione \"Ruolo: INPS\"; per le comunicazioni inviate dalla sede INPS al datore di lavoro o relativo delegato questa sezione presenta le anagrafiche e recapiti telematici del datore di lavoro o del relativo delegato."@it, "Indicates to whom you intend to send the communication: for communications sent to the INPS office by the employer or relative delegate, in this section you will only have the information \"Role: INPS\"; for communications sent from the INPS office to the employer or its delegate, this section presents the details and electronic contact details of the employer or its delegate."@en ;
+  rdfs:label "Recipient"@en, "destinatario"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/emersioneLavoroIrregolare>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico> ;
+  rdfs:range xsd:boolean ;
+  rdfs:comment "Domestic Work Employment relationship originated from the emersion of an irregular employment"@en, "Rapporto di Lavoro Domestico generato dall'emersione di un rapporto di lavoro irregolare"@it ;
+  rdfs:label "Emersion of irregular employment"@en, "emersioneLavoroIrregolare"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/mittente>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Identifica il soggetto che ha inviato la comunicazione che può essere quindi: INPS o il contribuente, quest'ultimo può essere il datore di lavoro o il proprio delegato."@it, "Identifies the person who sent the communication which can therefore be: INPS or the taxpayer, the latter can be the employer or his delegate."@en ;
+  rdfs:label "Sender"@en, "mittente"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/noteOggetto>
+  a owl:DatatypeProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Informazioni aggiuntive facoltative sulla comunicazione."@it, "Optional additional communication information."@en ;
+  rdfs:label "Object Notes"@en, "note Oggetto"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/numeroDocumentoIdentita>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/DocumentoIdentita> ;
+  rdfs:comment "number that identifies the identity document"@en, "numero che identifica il documento d'identità" ;
+  rdfs:label "ID number"@en, "numero documento d'iIdentità"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/oggettoRichiesta>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale> ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Identifica la tipologia di richiesta che si intende visualizzare:• MAV: non pervenuti-Inesattezze riscontrate-Impossibilità di stampa dal Portale,• Anagrafiche: mancato aggiornamento-variazioni,• Contributi: versati e non risultanti nell’estratto del lavoratore,• Rapporti di lavoro: Sospesi,• Avviso Bonario/Accertamento: conferma o modifica,• Regolarizzazioni."@it, "Identifies the type of request you intend to view:• MAV: not received - Inaccuracies found - Impossibility of printing from the Portal,• Personal data: failure to update changes,• Contributions: paid and not shown in the worker's statement,• Employment relationships: Suspended,• Friendly Notice/Assessment: confirmation or modification,• Regularizations."@en ;
+  rdfs:label "Request Object"@en, "oggetto Richiesta"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/periodoDiRiferimento>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario> ;
+  rdfs:range xsd:string ;
+  rdfs:comment "Contribution reference period."@en, "Periodo di riferimento contributivo."@it ;
+  rdfs:label "Reference Period"@en, "periodo Di Riferimento"@it .
+
+<https://w3id.org/italia/social-security/onto/services/dataPagamento>
+  a owl:DatatypeProperty, owl:FunctionalProperty ;
+  rdfs:domain <https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario> .
+
+<https://w3id.org/italia/onto/CPSV/Service> a owl:Class .
+<https://w3id.org/italia/onto/l0/EventOrSituation> a owl:Class .
+<https://w3id.org/italia/social-security/onto/contributions/ContrattoDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/contrattoHaMotiviDiPermesso> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaDiContratto> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/contributions/haContrattoDiLavoroDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ] .
+
+<https://w3id.org/italia/social-security/onto/contributions/ContributoTrimestraleOrdinario>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/consultatiTramiteEstrattoContributivo> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haStatoDiPagamentoContributiLavoratoreDomestico> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/sonoDovutiTramitePagamento> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataScadenza> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/descrizioneContributo> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/periodoDiRiferimento> ;
+    owl:someValuesFrom rdfs:Literal
+  ] .
+
+<https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/agenteConsultaEstrattoContributivo> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/consultaRapportoDiLavoro> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/contribuenteInviaComunicazioneBidirezionaleA> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/effettuaIscrizioneRapportoDiLavoroDomestico> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haDocumentoIdentita> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/invianoComunicazioneBidirezionale> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/invianoComunicazioneBidirezionaleCorrelata> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/annullatoDa> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  owl:disjointWith <https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico>, <https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato> .
+
+<https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/consultaRapportoDiLavoro> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haDocumentoIdentita> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaPermessoSoggiorno> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/lavoratoreConsultaEstrattoContributivoLavoratoreDomestico> ;
+    owl:someValuesFrom owl:Thing
+  ] .
+
+<https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/contributions/haContrattoDiLavoroDomestico> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaMansioneLavoratoreDomestico> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaRetribuzione> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/comunicazioneBidirezionaleRiguardaRapportoDiLavoroDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/consultaRapportoDiLavoro> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/iscriveRapportoDiLavoroDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/contributions/dataFirmaContratto> ;
+    owl:someValuesFrom rdfs:Literal
+  ] .
+
+<https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoAttivo>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoIntermedioRapportoDiLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoAttivoHaStatoPrecedente> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/modificaRapportoDiLavoroDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInizioRapportoLavoroAttivo> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  owl:disjointWith <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica> ;
+  rdfs:label "Active domestic work relationship"@en, "Rapporto di lavoro domestico attivo"@it .
+
+<https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoFinaleRapportoDILavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haMotivoCessazione> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoorDomesticoCessatoHaStatoPrecedente> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/cessazioneGeneraRapportoDiLavoroDomesticoCessato> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataCessazioneRapportoDiLavoroCessato> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInizioRapportoDiLavoroCessato> ;
+    owl:someValuesFrom rdfs:Literal
+  ] .
+
+<https://w3id.org/italia/social-security/onto/core/DirezioneCentraleINPS>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/inVerificaPresso> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/respintoDa> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/valutazioneEseguitaDa> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  owl:disjointWith <https://w3id.org/italia/social-security/onto/core/SedeINPS> .
+
+<https://w3id.org/italia/social-security/onto/core/SedeINPS>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/effettuaIscrizioneRapportoDiLavoroDomestico> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/invianoComunicazioneBidirezionale> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/invianoComunicazioneBidirezionaleCorrelata> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/annullatoDa> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/contribuenteInviaComunicazioneBidirezionaleA> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/inVerificaPresso> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/respintoDa> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/valutazioneEseguitaDa> ] ;
+    owl:someValuesFrom owl:Thing
+  ] .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/AgenteSoftwarePerLaRilevazionediRischioRapportoIrregolare>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/valutazioneAutomaticaEseguitaDa> ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Automatic software for assessing the risk of improper domestic employment relationships (e.g. employment relationships between relatives, non-domestic but employee employment relationships)."@en, "Software automatico per la valutazione del rischio di rapporto di lavoro domestico improprio (es. rapporto di lavoro tra parenti, rapporto di lavoro non domestico ma dipendente)."@it ;
+  rdfs:label "AgenteSoftware Per La Rilevazione di Rischio Rapporto Irregolare"@it, "Software agent for Irregular Domestic Work Relationship Risk Detection"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/AnnullamentoRapportoDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/onto/l0/EventOrSituation>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/ServizioLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/annullaRapportoDiLavoroDomestico> ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Cancellation of the domestic employment relationship is a service accessible via the INPS portal dedicated to domestic work services and aimed at domestic employers in order to cancel a registered employment contract. Cancellation can be carried out within 5 days from the date of commencement of the employment relationship indicated on the contract.  In the ontology the concept is modelled both as an event and as a service."@en, "L'Annullamento del rapporto di lavoro domestico è un servizio  accessibile tramite il portale INPS dedicato ai servizi per il lavoro domestico e rivolto ai datori di lavoro domestico per annullare il contratto di lavoro iscritto. L'Annullamento può essere effettuato entro 5 giorni dalla data di inizio del rapporto di lavoro indicata sul contratto.  Nell'ontologia il concetto è modellato sia come evento che come servizio."@it ;
+  rdfs:label "AnnullamentoRapportoDiLavoroDomestico"@it, "Domestic work relationship Cancellation"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/CessazioneRapportoDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/cessazioneGeneraRapportoDiLavoroDomesticoCessato> ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "La Cessazione del rapporto di lavoro domestico è un servizio  accessibile tramite il portale INPS dedicato ai servizi per il lavoro domestico e rivolto ai datori di lavoro domestico per interropmere il contratto di lavoro. Nell'ontologia il concetto è modellato sia come evento che come servizio."@it, "Termination of the domestic employment relationship is a service accessible via the INPS portal dedicated to domestic work services and aimed at domestic employers to terminate their employment contract. In the ontology the concept is modelled both as an event and as a service."@en ;
+  rdfs:label "Cessazione del rapporto di lavoro domestico"@it, "Domestic Employment Relationship Termination"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicataSospensioneObbligoContributivo>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoDiPagamentoContributiLavoratoreDomestico> ;
+  rdfs:comment "Sono i periodi contributivi per i quali è stata comunicata la sospensione dell’obbligo contributivi."@it, "These are the contribution periods for which the suspension of the contribution obligation was communicated."@en ;
+  rdfs:label "Comunicata Sospensione Obbligo Contributivo"@it, "Reported Suspension of Contribution Obligation"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionale>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/comunicazioneBidirezionaleRiguardaRapportoDiLavoroDomestico> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haDettaglioComunicazioneBidirezionale> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haEsitoComunicazioneBidirezionale> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haStatoComunicazioneBidirezionale> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/invianoComunicazioneBidirezionale> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haDocumentoAllegato> ;
+    owl:maxCardinality "3"^^xsd:nonNegativeInteger
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/canaleNotificaRisposta> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/codiceProtocolloComunicazioneBidirezionale> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataAperturaComunicazioneBidirezionale> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataChiusuraComunicazioneBidirezionale> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/descrizioneRichiesta> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/destinatario> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/mittente> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/noteOggetto> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/oggettoRichiesta> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  rdfs:comment "Service provided by the Domestic Work Drawer which has as its main objective the creation of a structured mode of communication between the employer and the Institute. With this functionality, the domestic employer can send a request to the relevant office by choosing an object from those available (personal data, MAV, contributions, employment relationship, etc.). It is possible to attach supporting documentation to the request."@en, "Servizio previsto dal Cassetto per il Lavoro Domestico che ha come principale obiettivo la realizzazione di una modalità strutturata di comunicazione tra il datore di lavoro e l’Istituto. Con questa funzionalità il datore di lavoro domestico può inviare alla sede di competenza una richiesta scegliendo un oggetto tra quelli disponibili (anagrafiche, MAV, contributi, rapporto di lavoro, ecc.). È possibile allegare la documentazione a supporto alla richiesta."@it ;
+  rdfs:label "Bidirectional Communication"@en, "Comunicazione Bidirezionale"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleAccolta>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoComunicazioneBidirezionale> ;
+  owl:disjointWith <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleRespinta> ;
+  rdfs:comment "Class that identifies all bidirectional communications with \"Accepted\" outcome."@en, "Classe che identifica tutte le comunicazioni bidirezionali con esito \"Accolta\"."@it ;
+  rdfs:label "Bidirectional Communication Accepted"@en, "Comunicazione Bidirezionale Accolta"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleAperta>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/onto/l0/hasFirstMember> ] ;
+    owl:someValuesFrom <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoComunicazioneBidirezionale>
+  ] ;
+  rdfs:comment "Class that identifies all bidirectional communications with \"Open\" status."@en, "Classe che identifica tutte le comunicazioni bidirezionali con stato \"Aperto\"." ;
+  rdfs:label "Comunicazione Bidirezionale Aperta"@it, "Open bidirectional communication"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleChiusa>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/onto/l0/hasLastMember> ] ;
+    owl:someValuesFrom <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoComunicazioneBidirezionale>
+  ] ;
+  rdfs:comment "Class that identifies all bidirectional communications with \"Close\" status."@en, "Classe che identifica tutte le comunicazioni bidirezionali con stato \"Chiuso\"."@it ;
+  rdfs:label "Closed bidirectional communication"@en, "Comunicazione Bidirezionale Chiusa"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleCorrelata>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/èCorrellataA> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/invianoComunicazioneBidirezionaleCorrelata> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Bidirectional communication related to a previous communication."@en, "Comunicazione bidirezionale connessa ad una comunicazione precedente."@it ;
+  rdfs:label "Comunicazione Bidirezionale Correlata"@it, "Related Bidirectional Communication"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleRespinta>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoComunicazioneBidirezionale> ;
+  rdfs:comment "Class that identifies all bidirectional communications with \"Rejected\" outcome."@en, "Classe che identifica tutte le comunicazioni bidirezionali con esito \"Respinto\"."@it ;
+  rdfs:label "Bidirectional Communication Rejected"@en, "Comunicazione Bidirezionale Respinta"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaAssunzione>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaRapportoDiLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/COIscrizioneGenerataAPartireDa> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInvioComunicaizoneAssunzione> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  owl:disjointWith <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaVariazione> ;
+  rdfs:comment "Con la comunicazione obbligatoria di assunzione, il datore di lavoro mette in regola la colf o badante, adempiendo contemporaneamente a tutti gli obblighi di denuncia agli uffici competenti e agli enti previdenziali. La mancata comunicazione dell’assunzione di un lavoratore domestico comporta sanzioni pesanti. L'obbligo di comunicare l’assunzione all’Inps vale per tutti i tipi di lavoro domestico, e qualunque sia la durata del rapporto lavoro e deve essere effettuata entro 24 ore del giorno precedente l’inizio del rapporto di lavoro (incluso il periodo di prova), anche se festivo."@it, "With the mandatory hiring notification, the employer brings the housekeeper or carer into compliance, simultaneously fulfilling all reporting obligations to the competent offices and social security bodies. Failure to communicate the hiring of a domestic worker leads to heavy penalties. The obligation to communicate the hiring to INPS applies to all types of domestic work, and whatever the duration of the employment relationship and must be carried out within 24 hours of the day before the start of the employment relationship (including the test), even if it's a holiday."@en ;
+  rdfs:label "Comunicazione obbligatoria di assunzione"@it, "Mandatory notification of employment"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaCessazione>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaVariazione>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInvioComunicazioneCessazione> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  rdfs:comment "Quando termina il rapporto di lavoro domestico, sia per licenziamento sia per dimissioni, il datore di lavoro deve darne comunicazione all’Inps entro 5 giorni dall’evento. Se il contratto è a tempo determinato e alla scadenza non segue il rinnovo, non è richiesta alcuna comunicazione. L'annullamento di una denuncia di assunzione è consentito entro 5 giorni dalla data indicata quale inizio del rapporto di lavoro; superato detto termine, dovrà essere comunicata la cessazione."@it, "When the domestic work relationship ends, whether due to dismissal or resignation, the employer must notify INPS within 5 days of the event. If the contract is for a fixed term and is not renewed upon expiry, no communication is required. The cancellation of an employment notification is permitted within 5 days from the date indicated as the start of the employment relationship; once this deadline has passed, the termination must be communicated."@en ;
+  rdfs:label "Comunicazione obbligatoria di cessazione"@it, "Mandatory communication of termination"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaDiVariazioneMansioneLavoratoreDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaVariazione>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInvioComunicazioneVariazioneMansione> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  rdfs:comment "Comunicazione obbligatoria relativa ad una variazione della mansione del lavoratore domestico "@it, "Mandatory communication regarding a change in the domestic worker's job description"@en ;
+  rdfs:label "Comunicazione obbligatoria di variazione mansione lavoratore domestico"@it, "Mandatory notification of job change domestic worker"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaProroga>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaVariazione>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInvioComunicazioneProroga> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  rdfs:comment "Comunicazione obbligatoria riguardante la proroga del rapporto di lavoro domestico. Può essere prorogato per un massimo di 4 volte, con un limite di 24 mesi totali di contratto a tempo determinato (principale contratto + proroghe)."@it, "Mandatory communication regarding the extension of the domestic work relationship. It can be extended a maximum of 4 times, with a limit of 24 total months of fixed-term contract (main contract + extensions)."@en ;
+  rdfs:label "Comunicazione obbligatoria di proroga"@it, "Mandatory communication of extension"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaRapportoDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaAssunzione>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaVariazione>
+   )
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/inviaComunicazioneObbligatoria> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Comunicazione obbligatoria da parte del datore di lavoro domestico verso l'istituto INPS riguardante l'attivazione, la variazione o la cessazione di un rapporto di lavoro domestico. "@it, "Mandatory communication by the domestic employer to the INPS institute regarding the activation, variation or termination of a domestic work relationship."@en ;
+  rdfs:label "Comunicazione Obbligatoria Rapporto Di Lavoro Domestico"@it, "Mandatory Communication Of Domestic Employment Relationship "@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaTrasformazione>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaVariazione>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataInvioComunicazioneTrasformazione> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  rdfs:comment "Comunicazione obbligatoria riguardante la trasformazione del rapporto di lavoro domestico da tempo determinato a tempo indeterminato. "@it, "Mandatory communication regarding the transformation of the domestic work relationship from fixed-term to permanent."@en ;
+  rdfs:label "Comunicazione obbligatoria di trasformazione"@it, "Transformation communication"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaVariazione>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaRapportoDiLavoroDomestico>, [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaCessazione>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaDiVariazioneMansioneLavoratoreDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaProroga>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaTrasformazione>
+   )
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/COVariazioneGenerataAPartireDa> ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Comunicazione obbligatoria riguardante qualsiasi tipo di variazione del rapporto di lavoro domestico, quale: la modifica del tipo di contratto, la proroga del contratto in essere, la variazione del numero delle ore di lavoro, la variazione dell’importo della retribuzione. Le variazioni riguardanti orario e retribuzione sono soggette ad un limite massimo complessivo di due comunicazioni al trimestre, mentre non vi sono limiti per tutte le altre comunicazioni che non hanno effetto sul calcolo dei contributi da versare."@it, "Mandatory communication regarding any type of change in the domestic work relationship, such as: change in the type of contract, extension of the existing contract, change in the number of working hours, change in the amount of remuneration. Changes regarding hours and remuneration are subject to an overall maximum limit of two communications per quarter, while there are no limits for all other communications which have no effect on the calculation of the contributions to be paid."@en ;
+  rdfs:label "Comunicazione obbligatoria di variazione"@it, "Mandatory communication of variation"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/DaRecuperoCrediti>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoDiPagamentoContributiLavoratoreDomestico> ;
+  rdfs:comment "Payments from credit recovery."@en, "Versamenti provenienti da recupero del credito."@it ;
+  rdfs:label "Da Recupero Crediti"@it, "From debt collection"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/DettaglioComunicazioneBidirezionale>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haDettaglioComunicazioneBidirezionale> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Class that identifies all the detailed information of a specific bidirectional communication."@en, "Classe che identifica tute le informazioni di dettaglio di una comunicazione bidirezionale specifica."@it ;
+  rdfs:label "Bidirectional Communication Detail"@en, "Dettaglio Comunicazione Bidirezionale"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/DocumentoIdentita>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaDocumento> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haDocumentoIdentita> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataScadenzaDocumentoIdentita> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/numeroDocumentoIdentita> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  rdfs:comment "An identity document is a document issued by a state authority that certifies the identity of its holder, such as an identity card, passport or driving license."@en, "Un documento d'identità è un documento di riconoscimeto emesso da un'autorità statale che certifica l'identità del suo possessore, come ad esempio la carta d'identità, il passaporto o la patente di guida. Ai sensi dell'articolo 1 comma 1, lettera d) del DPR 445/2000 un documento d'identità è la carta d'identità ed ogni altro docuemnto munito di fotografia del titolare e rlasciato, su supporto cartaceo, amgnatico o informatico, da una pubblica amministrazione competente dello stato italiano o di altri Stati, con finalità prevalente di dimostrare l'identità personale del suo titolare."@it ;
+  rdfs:label "Documento D'Identità"@it, "Identity Document"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoComunicazioneBidirezionale>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleAccolta>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleRespinta>
+   )
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haEsitoComunicazioneBidirezionale> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Class that identifies the outcome of a bidirectional communication which can take on two values: Accepted or Rejected."@en, "Classe che identifica l'esito di una comunicazione bidirezionale che puo assumere due valori: Accolta o Respinta."@it ;
+  rdfs:label "Bidirectional Communication Outcome"@en, "Esito Comunicazione Bidirezionale"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneAutomatica>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneAutomaticaConRilevazioneRischio>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoVautazioneAutomaticaSenzaRilevazioneRischio>
+   )
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haEsitoValutazioneAutomatica> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Esito della valutazione automatica del rapporto di Lavoro Domestico Iscritto"@it, "Outcome of the automatic assessment of the registered domestic work relationship"@en ;
+  rdfs:label "Automatic Assessment Result"@en, "EsitoValutazioneAutomatica"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneAutomaticaConRilevazioneRischio>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneAutomatica>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/esitoValutazioneAutomaticaConRilevazioneDelRischioGenera> ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  owl:disjointWith <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoVautazioneAutomaticaSenzaRilevazioneRischio> ;
+  rdfs:comment "Automatic assessment of the Registered Domestic Employment Relationship that had a positive outcome in risk assessment. "@en, "Valutazione automatica del rapporto di Lavoro Domestico Iscritto che ha avuto come esito la rilevazione di fattori di rischio"@it ;
+  rdfs:label "Automatic Assessment Result with Risk Detection"@en, "EsitoValutazioneAutomaticaConRilevazioneRischio"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneConfermaRilevazioneRischio>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneFattoriDiRischio>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/esitoValutazioneConRilevazioneRischioGenera> ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  owl:disjointWith <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneSenzaRilevazioneRischio> ;
+  rdfs:comment "Esito della valutazione del rapporto di lavoro domestico in verifica che conferma la presenza di fattori di rischio nel rapporto di lavoro"@it, "Risk assessment positive outcome confirming that a domestic work relationship has a relevant risk of being improper."@en ;
+  rdfs:label "EsitoValutazioneConfermaRilevazioneRischio"@it, "Risk Assessment positive outcome"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneFattoriDiRischio>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneConfermaRilevazioneRischio>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneSenzaRilevazioneRischio>
+   )
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haEsitoValutazione> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Esito della valutazione dei fattori di rischio di rapporto di lavoro domestico improprio (es. rapporto di lavoro tra parenti, rapporto di lavoro non domestico ma dipendente) ottenuta dalla valutazione condotta dagli uffici INPS nell'ambtito di un procedimento sui rapporti di lavoro in verifica"@it, "Improper domestic work relationship risk assessment outcome obtained from the assessment conducted by INPS offices over a domestic work relationship under verification. "@en ;
+  rdfs:label "EsitoValutazioneFattoriDiRischio"@it, "Risk Factor Assessment Result"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneSenzaRilevazioneRischio>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneFattoriDiRischio>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/esitoValutazioneSenzaRilevazioneRischioGenera> ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Esito della valutazione del rapporto di lavoro domestico iscritto senza valutazione del rischio"@it, "Outcome of the assessment of the registered domestic work relationship without risk evaluation"@en ;
+  rdfs:label "Assessment Result Without Risk Assessment"@en, "EsitoValutazioneSenzaRilevazioneRischio"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoVautazioneAutomaticaSenzaRilevazioneRischio>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/EsitoValutazioneAutomatica>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/esitoValutazioneAutomaticaSenzaRilevazioneRischioGenera> ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Esito della Valutazione automatica del rapporto di lavoro domestico iscritto senza rilevazione del rischio"@it, "Outcome of automatic assessment of registered domestic work without risk assessment"@en ;
+  rdfs:label "Automatic Assessement without Risk evalutation outcome"@en, "EsitoVautazioneAutomaticaSenzaRilevazioneRischio"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ServizioLavoroDomestico>, [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomesticoDatoreLavoro>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomesticoLavoratore>
+   )
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/consultatiTramiteEstrattoContributivo> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "L'Estratto conto contributivo del lavoro domestico è il documento che elenca i contributi registrati in favore del lavoratore domestico. La sua consultazione è resa disponible tramite il Portale internet INPS all'interno del Cassetto per il lavoro domestico. Nell'ontologia è definito come servizio per il lavoro domestico."@it, "The Contribution Statement for Domestic Work is the document that lists the contributions registered in favour of the domestic worker. Its consultation is made available via the INPS Internet Portal within the Domestic Work Drawer. It is defined in the ontology as a service for domestic work."@en ;
+  rdfs:label "Contribution Statement for Domestic Work"@it, "Estratto Contributivo Rapporto Di Lavoro Domestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomesticoDatoreLavoro>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/agenteConsultaEstrattoContributivo> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  owl:disjointWith <https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomesticoLavoratore> ;
+  rdfs:comment "L'Estratto conto contributivo per il datore di lavoro domestico può essere consultato dal datore di lavoro domestico per visualizzare i contributi versati o da versare al lavoratore domestico nell'ambito di ciascun rapporto di lavoro attivo e caratterizzata pertanto come servizio  Nell'ontologia la classe è definita come sottoclasse di EstrattoContributivo RapportoDiLavoroDomestico."@it, "Statement for the Domestic Employer can be consulted by the domestic employer in order to view the contributions paid or payable to the domestic worker within each active employment relationship and is therefore characterized as a service in the ontology, the class is defined as a subclass of Domestic Employment Relationship Contribution Statement. "@en ;
+  rdfs:label "Contribution Statement for the Domestic Employer"@en, "Estratto Contributivo Rapporto Di Lavoro Domestico Datore Lavoro"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomesticoLavoratore>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/lavoratoreConsultaEstrattoContributivoLavoratoreDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "L'Estratto conto contributivo per il lavoratore domestico può essere consultato dal lavoratore domestico per visualizzare i contributi versati nell'ambito di ciascun rapporto di lavoro attivo. Nell'ontologia la classe è definita come sottoclasse di EstrattoContributivo e caratterizzata pertanto come servizio."@it, "The Contribution Statement for Domestic Workers may be consulted by the domestic worker to view the contributions paid under each active employment relationship. In the ontology, the class is defined as a subclass of the Contribution Statement and therefore characterized as a service."@en ;
+  rdfs:label "Contribution Statement for Domestic Workers"@en, "Estratto Contributivo Rapporto Di Lavoro Domestico Lavoratore"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/GestioneRimborsi>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ServizioLavoroDomestico> ;
+  rdfs:comment "La Gestione dei rimborsi è un servizio disponibile nel portale internet INPS dedicato ai servizi per il lavoro domestico, rivolto ai datori di lavoro domestico. Il servizio permette di richiedere un contributo in presenza di crediti per importi versati in eccesso o per duplicazioni di versamento. Il rimborso viene corrisposto al datore di lavoro domestico dopo aver effettuato il controllo dei versamenti."@it, "Refund Management is a service available on the INPS internet portal dedicated to services for domestic work, aimed at employers. The service makes it possible to request a contribution in the presence of credits for amounts paid in excess or for duplicate payments. The reimbursement is paid to the domestic employer after the payments have been checked."@en ;
+  rdfs:label "GestioneRimborsi"@it, "Refund Management"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/IscrizioneRapportoDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/onto/l0/EventOrSituation>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/ServizioLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/iscriveRapportoDiLavoroDomestico> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/COIscrizioneGenerataAPartireDa> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/effettuaIscrizioneRapportoDiLavoroDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/raccoglieIscrizioneRapportoDiLavoroDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataIscrizioneRapportoLavoro> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  rdfs:comment "L'Iscrizione del Rapporto di lavoro domestico consente al datore di lavoro o ad un soggetto da lui delegato di registrare i dati di un nuovo rapporto di lavoro nei registri INPS, comunicandone quindi l'esistenza all'Istituto ai fini dell'attivazione degli obblighi contributivi del datore di lavoro. Nell'ontologia il concetto è modellato come sia come un evento che accade e si svolge nel tempo sia come un servizio per il datore di lavoro o un suo delegato disponibile sul portale INPS"@it, "The Registration of Domestic Work Relationship allows the employer or a party delegated by the employer to register the data of a new work relationship in the INPS registers, thus communicating its existence to the Institute for the purposes of activating the employer's contribution obligations. In the ontology the concept is modelled as both an event that occurs and takes place over time and a service for the employer or his delegate available on the INPS portal."@en ;
+  rdfs:label "Domestic Work Relationship Registration"@en, "Iscrizione Rapporto Di Lavoro Domestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/MotiviPermesso>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/contrattoHaMotiviDiPermesso> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Ai lavoratori sono concessi dei permessi di lavoro ovvero dei periodi di astensione dall’obbligo della prestazione lavorativa, con il mantenimento del posto di lavoro, la conservazione del trattamento retributivo ed economico e il riconoscimento dell’anzianità di servizio. Tali permessi sono concessi a fronte di speficiche motivazioni."@it, "Workers are granted work leaves or periods of abstention from the obligation to work, with job retention, preservation of remuneration and salary and recognition of length of service. Such work leaves are granted for specific reasons."@en ;
+  rdfs:label "Employee leave "@en, "MotiviPermesso"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/MotivoCessazione>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haMotivoCessazione> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "An employment relationship may be terminated for one of these reasons- expiry of the term, in the case of a fixed-term contract;- resignation by the employee- termination of the relationship by mutual agreement between the employee and employer;- dismissal by the employer (Law No. 604 of 15 July 1966). For dismissal to be lawful it must be justified by:a) conduct so serious on the part of the employee that it breaks the relationship of trust with the employer that constitutes the prerequisite of the employment relationship (so-called just cause). In this hypothesis, dismissal is immediate, without a notice period;b) conduct on the part of the employee which, although less serious than that constituting a just cause for dismissal, nevertheless constitutes a significant breach of his contractual obligations (justified subjective reason). In this case, the employee is entitled to a notice period, the duration of which is generally established by the collective agreement applied and indicated in the individual contract. Failing this, you must be paid an indemnity in lieu of notice.(c) objective needs of the employer attributable to production activity, the organisation of work or the smooth running of the company; in this case, the dismissal does not depend, therefore, on the employee's behaviour and he is entitled, in any case, to the notice period or the relevant indemnity (objective justified reason).In some particular cases, governed by special rules, no just cause or justified reason is required for the termination of the relationship. These are, in particular, cases of dismissal due to (a) failure to complete the probationary period;(b) at the end of the three-year apprenticeship period.Special rules also apply to the dismissal of domestic workers and managers for whom, likewise, no just cause or objective reason is required."@en, """Un rapporto di lavoro può cessare per uno di questi motivi:•	scadenza del termine, in caso di contratto a tempo determinato;•	dimissioni da parte del lavoratore;•	risoluzione del rapporto di comune accordo tra il lavoratore e datore di lavoro;•	licenziamento da parte del datore di lavoro (legge 15 luglio 1966, n. 604Apre in una nuova scheda). Perché il licenziamento sia legittimo deve essere motivato da:a)	un comportamento tanto grave da parte del lavoratore da far venir meno il rapporto di fiducia con il datore di lavoro che costituisce il presupposto del rapporto di lavoro (c.d. giusta causa). In questa ipotesi il licenziamento è immediato, senza periodo di preavviso;b)	un comportamento da parte del lavoratore che, per quanto meno grave di quello integrante una giusta causa di licenziamento, costituisce comunque un notevole inadempimento dei tuoi obblighi contrattuali (giustificato motivo soggettivo). In questo caso il lavoratore ha diritto ad un periodo di preavviso, la cui durata è in genere stabilita dal contratto collettivo applicato e indicata nel contratto individuale. In mancanza, dovrà esserti corrisposta un’indennità sostitutiva di preavviso.c)	esigenze oggettive del datore di lavoro riconducibili all’attività produttiva, all’organizzazione del lavoro o al regolare funzionamento dell’assetto aziendale; in questo caso il licenziamento non dipende, quindi, da un comportamento del lavoratore e ha diritto, comunque, al periodo di preavviso o alla relativa indennità (giustificato motivo oggettivo).In alcuni casi particolari, regolati da norme speciali, non occorrono una giusta causa o un giustificato motivo per la conclusione del rapporto. Si tratta, in particolare, delle ipotesi di licenziamento dovute: a)	al mancato superamento del periodo di prova;b)	al termine del periodo triennale di apprendistato.Regole particolari valgono, inoltre, per il licenziamento dei lavoratori domestici e dei dirigenti per i quali, allo stesso modo, non occorrono giusta causa o giustificato motivo oggettivo."""@it ;
+  rdfs:label "Motivo Cessazione"@it, "Termination reason"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/PagamentoDaEffettuare>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoDiPagamentoContributiLavoratoreDomestico> ;
+  rdfs:comment "Identifica i periodi contributivi che risultano scoperti, per i quali cioè non è ancora stato effettuato il pagamento."@it, "Identifies the contribution periods that are uncovered, i.e. for which payment has not yet been made."@en ;
+  rdfs:label "Pagamento Da Effettuare"@it, "Payment Due"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/PagamentoIncassato>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoDiPagamentoContributiLavoratoreDomestico> ;
+  rdfs:comment "Identifica tutti i pagamenti che risultano incassati e che sono presenti nell’estratto conto contributivo del lavoratore."@it, "Identifies all payments that have been collected and are present in the worker's contribution statement."@en ;
+  rdfs:label "Pagamento Incassato"@it, "Payment Collected"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/PagamentoIncassatoInLavorazione>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoDiPagamentoContributiLavoratoreDomestico> ;
+  rdfs:comment "Identifica tutti quei pagamenti che risultano incassati, ma che non sono ancora presenti sull’estratto contributivo del lavoratore."@it, "Identifies all those payments that have been collected, but which are not yet present on the worker's contribution statement."@en ;
+  rdfs:label "Pagamento Incassato In Lavorazione"@it, "Payment Collected In Processing"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ProrogaRapportoDiLavoro>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/prorogaRapportoDiLavoroDomesticoCessato> ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Proroga del Rapporto di Lavoro Domestico è un servizio del portale dei Servizi del Lavoro Domestico di INPS. Tramite questo servizio un datore di lavoro domestico può prorogare la durata del rapporto di lavoro domestico a tempo determinato. La proroga di un contratto di lavoro domestico a tempo determinato può essere effettuata per un massimo di 4 volte con un limite di 24 mesi totali di contratto a tempo determinato (D.L. 87/2018). La proroga di un rapporto di lavoro domestico costituisce un tipo di variazione del rapporto di lavoro domestico."@it, "The Domestic Employment Relationship Extension is a service of the INPS Domestic Employment Services portal. Through this service, a domestic employer can extend the duration of a fixed-term domestic employment relationship. The extension of a fixed-term domestic employment contract can be made for a maximum of 4 times with a limit of 24 total months of fixed-term contract (D.L. 87/2018). The extension of a domestic employment relationship constitutes a type of variation of the domestic employment relationship."@en ;
+  rdfs:label "Employment Relationship Extension"@en, "Proroga Rapporto Di Lavoro"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAccolto>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoAccoltoHaStatoPrecedente> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoorDomesticoCessatoHaStatoPrecedente> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoAttivoHaStatoPrecedente> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoInVerificaHaStatoPrecedente> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Il Rapporto di lavoro domestico accolto è un rapporto di lavoro che, a seguito dei controlli e delle valutazioni eseguite non è stato giudicato fittizio"@it, "The accepted domestic work relationship is an employment relationship which, following the checks and assessments carried out, has not been judged to be fictitious"@en ;
+  rdfs:label "Accepted domestic work relationship"@en, "Rapporto di lavoro domestico accolto"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAnnullato>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoFinaleRapportoDILavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/annullatoDa> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoAnnullatoHaStatoPrecedente> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/annullaRapportoDiLavoroDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/prorogaRapportoDiLavoroDomesticoCessato> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/trasformaRapportoDiLavoroDomesticoCessato> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataPresentazioneAnnullamento> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  rdfs:comment "Class that identifies, if exist in the INPS archives, all employment relationships in the last five years that have not been canceled as they never existed."@en, "Classe che identifica, se presenti negli archivi INPS, tutti i rapporti di lavoro negli ultimi cinque anni che non sono stati annullati in quanto mai sussistiti."@it ;
+  rdfs:label "Domestic Employment Relationship Cancelled"@en, "Rapporto Di Lavoro Domestico Annullato"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoIntermedioRapportoDiLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/inVerificaPresso> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoInVerificaHaStatoPrecedente> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/valutatoDa> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/esitoValutazioneAutomaticaConRilevazioneDelRischioGenera> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoAccoltoHaStatoPrecedente> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoRespintoHaStatoPrecedente> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  owl:disjointWith <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoIscritto> ;
+  rdfs:comment "Class that identifies, if exist in the INPS archives, all employment relationships of the last five years that are being verified at the headquarters."@en, "Classe che identifica, se presenti negli archivi INPS, tutti i rapporti di lavoro degli ultimi cinque anni che sono in verifica presso la sede."@it ;
+  rdfs:label "Domestic Employment Relationship Under Verification"@en, "Rapporto Di Lavoro Domestico In Verifica"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoIscritto>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoInizialeRapportoDiLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/valutatoTramiteValutazioneAutomatica> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoAccoltoHaStatoPrecedente> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "A Registered Domestic Work Relationship is a Domestic Work Relationship that has been registered by the Domestic Employer within the INPS Domestic Work Services Portal (Domestic Work Enrolment section). A Registered Domestic Work Relationship is subject to an automatic assessment of the risk of an improper domestic work relationship (e.g. a relationship between relatives). A positive outcome of the assessment transforms the Registered Domestic Work Relationship into an Active one, a negative outcome of the assessment transforms it into a Verified Domestic Work Relationship as further investigations are carried out by the institute."@en, "Il Rapporto di Lavoro Domestico Iscritto è un rapporto di Lavoro Domestico che è stato registrato dal Datore di Lavoro Domestico all'interno del portale dei servizi per il Lavoro Domestico INPS (sezione Iscrizione del Lavoro Domestico). Un Rapporto di Lavoro Domestico Iscritto viene sottoposto ad una valutazione automatica del rischio di rapporto di lavoro domestico improprio (es: rapporto tra parenti). L'esito positivo della valutazione trasforma il Rapporto di Lavoro Domestico Iscritto in Attivo, l'esito negativo della valutazione lo traforma in un Rapporto di Lavoro In Verifica in quanto ulteriori approfondimenti vengono effettuati da parte dell'istituto."@it ;
+  rdfs:label "RapportoDiLavoroDomesticoIscritto"@it, "Registered Domestic Employment Relationship "@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoRespinto>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomestico>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoFinaleRapportoDILavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/rapportoDiLavoroDomesticoRespintoHaStatoPrecedente> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/respintoDa> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/esitoValutazioneConRilevazioneRischioGenera> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataRespingimento> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  rdfs:comment "Class which identifies, if exist in the INPS archives, all employment relationships of the last five years which have been verified by the INPS office with negative results."@en, "Classe che identifica, se presenti negli archivi INPS, tutti i rapporti di lavoro degli ultimi cinque anni che sono stati verificati dalla sede INPS con esito negativo."@it ;
+  rdfs:label "Domestic Employment Relationship Rejected"@en, "Rapporto Di Lavoro Domestico Respinto"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/RichiestaNotificaScadenzaPagamentoContributiLavoratoreDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ServizioLavoroDomestico> ;
+  rdfs:comment "Il sistema consente all’utente, dato un rapporto di lavoro domestico in essere, di attivare una notifica al verificarsi di specifici eventi per riceve un avviso via SMS, via mail o attraverso altri canali di comunicazione. È possibile ad esempio ricevere una notifica in prossimità della scadenza di pagamento dei contributi o a conclusione con esito positivo di una procedura di rimborso, cioè al momento dell’emissione del rimborso."@it, "The system allows the user, given an existing domestic employment relationship, to trigger a notification when specific events occur in order to receive an alert via SMS, email or other communication channels. It is possible, for example, to receive a notification close to the contribution payment deadline or at the successful conclusion of a refund procedure, i.e. when the refund is issued."@en ;
+  rdfs:label "Request for Notification of Contribution Payment Due Date for Domestic Workers"@en, "RichiestaNotificaScadenzaPagamentoContributiLavoratoreDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ServizioLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/onto/CPSV/Service>, [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/AnnullamentoRapportoDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/GestioneRimborsi>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/IscrizioneRapportoDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/RichiestaNotificaScadenzaPagamentoContributiLavoratoreDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/SospensioneObbligoContributivoLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico>
+   )
+  ] ;
+  rdfs:comment "La classe Servizio Lavoro Domestico è utilizzata nell'ontologia per descrivere i servizi INPS dedicati al lavoro domestico. È modellata come superclasse dei servizi disponibili nel portale INPS a supporto dei datori di lavoro domestici, dei soggetti loro delegati e del lavoratori domestici"@it, "The Domestic Work Service class is used in the ontology to describe the INPS services dedicated to domestic work. It is modelled as a superclass of the services available in the INPS portal to support employers of domestic workers, their delegates and domestic workers."@en ;
+  rdfs:label "Domestic Work Service"@en, "ServizioLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/SospensioneObbligoContributivoLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ServizioLavoroDomestico> ;
+  rdfs:comment "La sospensione dell'obbligo contributivo si verifica in presenza di alcune casistiche ben individuate nei casi di assenza del lavoratore domestico. Nell'ontologia il concetto indica il servizio disponibile nel portale INPS dedicato ai servizi per il lavoro utile al datore di lavoro domestico per inviare la comunicazione della sospensione del versamento dei contributi."@it, "The suspension of the contribution obligation occurs in the presence of certain well-identified cases where the domestic worker is absent. In the ontology, the concept refers to the service available on the INPS portal dedicated to employment services, which is useful for the domestic employer to send notification of the suspension of contribution payments."@en ;
+  rdfs:label "SospensioneObbligoContributivo"@it, "Suspension of Contribution Obligation"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoComunicazioneBidirezionale>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haStatoComunicazioneBidirezionale> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Class that identifies the state of a bidirectional communication which can take on two values: Open or Closed."@en, "Classe che identifica lo stato di una comunicazione bidirezionale che può assumere due valori: Aperto o Chiuso."@it ;
+  rdfs:label "Bidirectional Communication Status"@en, "Stato Comunicazione Bidirezionale"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoDiPagamentoContributiLavoratoreDomestico>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicataSospensioneObbligoContributivo>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/DaRecuperoCrediti>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/PagamentoDaEffettuare>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/PagamentoIncassato>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/PagamentoIncassatoInLavorazione>
+   )
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haStatoDiPagamentoContributiLavoratoreDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Class that identifies the status of a domestic worker contributions payment which can take on five values: Payment Collected, Payment Collected in Process, Payment Due, From Debt Collection and Reported Suspension of Contribution Obligation."@en, "Classe che identifica lo stato di un pagamento contributi lavoratore domestico che può assumere cinque valori: Pagamento Incassato, Pagamento Incassato in Lavorazione, Pagamento Effettuato, Da Recupero Crediti e Comunicata Sospensione Obbligo Contributivo."@it ;
+  rdfs:label "Domestic Worker Contribution Payment Status"@en, "Stato Di Pagamento Contributi Lavoratore Domestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoFinaleRapportoDILavoroDomestico>
+  a owl:Class ;
+  rdfs:comment "Class that identifies the final status of a Domestic Work Relationship which can take 3 values: Cancelled, Terminated or Rejected."@en, "Classe che identifica lo stato finale di un Rapporto di Lavoro Domestico che può assumere 3 valori: Annullato, Cessato o Respinto."@it ;
+  rdfs:label "Final Status of Domestic Work Relationship"@en, "Stato Finale Rapporto Di Lavoro Domestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoInizialeRapportoDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:comment "Class identifying the initial status of a Domestic Employment Relationship or the status of an Registered Domestic Employment Relationship."@en, "Classe che identifica lo stato iniziale di un Rapporto di Lavoro Domestico ovvero lo stato di un Rapporto di Lavoro Domestico Iscritto."@it ;
+  rdfs:label "Initial Status of Domestic Employment Relationship"@en, "StatoInizialeRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoIntermedioRapportoDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoAttivo>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoInVerifica>
+   )
+  ] ;
+  rdfs:comment "Class identifying the intermediate status of a Domestic Work Relationship that can take 2 values: In Verification or Active."@en, "Classe che identifica lo stato intermedio di un Rapporto di Lavoro Domestico che può assumere 2 valori: In Verifica o Attivo."@it ;
+  rdfs:label "Intermediate Status of Domestic Work"@en, "StatoIntermedioRapportoDiLavoroDomestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaContratto>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaDiContratto> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Il Rapporto di Lavoro Domestico può essere sancito da diverse tipologie di contratto, ovvero:  contratto a tempo indeterminato, contratto a tempo determinato o contratto a tempo determinato a sostituzione"@it, "The domestic employment relationship can be established by different types of contract, namely: open-ended contract, fixed-term contract or fixed-term contract as a substitute"@en ;
+  rdfs:label "TipologiaContratto"@it, "Type of employment contract"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaDocumento>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaDocumento> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Tipi di documento di identità:  carta d'identità, passaporto italiano, patente di guida, tessera ministeriale, passaporto straniero, visto consolare, carta d'identità straniera, permesso di soggiorno (art. 13 DL 113/2018)"@it, "Types of identity document: identity card, Italian passport, driving license, ministerial card, foreign passport, consular visa, foreign identity card, residence permit (art. 13 DL 113/2018)"@en ;
+  rdfs:label "TipologiaDocumento"@it, "Types of identification documents"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaMansioneLavoratoreDomestico>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaMansioneLavoratoreDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "A Domestic Worker can carry out two types of roles: housekeeper or carer."@en, "Un Lavoratore Domestico può svolgere due tipi di mansioni: colf o badante."@it ;
+  rdfs:label "Tipologia Mansione del lavoratore domestico"@it, "Type of Domestic worker's role"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaPermessoSoggiorno>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaPermessoSoggiorno> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Tipologia di Permesso di Soggiorno in possesso del Lavoratore Domestico"@it, "Type of Residence Permit held by the Domestic Worker"@en ;
+  rdfs:label "Residence Permit Types"@en, "TipologiaPermessoSoggiorno"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaRapportoDiParentela>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaRapportoDiParentela> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Tipologia di Rapporto di Parentela possibili tra due individui"@it, "Type of family relationship possible between two individuals"@en ;
+  rdfs:label "TipologiaRapportoDiParentela"@it, "Type of family relationship"@en .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/TipologiaRetribuzione>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haTipologiaRetribuzione> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Tipologia di retribuzione di un Lavoratore "@it, "Type of remuneration of a Worker"@en ;
+  rdfs:label "Remuneration type"@en, "TipologiaRetribuzione"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/TrasformazioneRapportoDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico>, [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/trasformaRapportoDiLavoroDomesticoCessato> ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Domestic Employment Relationship Transformation concerns the transition of a fixed-term contract into a fixed-term contract. In the ontology it is a subclass of Employment Relationship Transformation. An Employment Relationship Transformation requires the sending of a mandatory Transformation Communication"@en, "La Trasformazione del rapporto di lavoro domestico riguarda la transizione di un contratto a tempo determinato in un contratto a tempo determinato. Nell'ontologia è una sottoclasse di Variazione Rapporto Di Lavoro Domestico. Una trasformazione del Rapporto di lavoro richiede l'invio di una comunicazione obbligatoria di trasformazione ."@it ;
+  rdfs:label "Domestic Employment Relationship Transformation"@en, "Trasformazione Rapporto Di Lavoro Domestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ValutazioneAutomaticaFattoriDiRischio>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haEsitoValutazioneAutomatica> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/valutatoTramiteValutazioneAutomatica> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/valutazioneAutomaticaEseguitaDa> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Automatic evaluation of risk factors associated with an improper domestic work relationship (e.g. domestic work between relatives) of a domestic work relationship registered on the INPS portal."@en, "Valutazione automatica dei fattori di rischio associati ad un rapporto di lavoro domestico improprio (es: lavoro domestico tra parenti) di un rapporto di lavoro iscritto sul portale INPS."@it ;
+  rdfs:label "Risk factor automatic assessment "@en, "ValutazioneAutomaticaFattoriDiRischio"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/ValutazioneDeiFattoriDiRischio>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/haEsitoValutazione> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/valutazioneEseguitaDa> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/valutatoDa> ] ;
+    owl:someValuesFrom owl:Thing
+  ] ;
+  rdfs:comment "Evaluation of risk factors associated with an improper domestic work relationship (e.g. domestic work between relatives) of a domestic work relationship registered on the INPS portal."@en, "Valutazione dei fattori di rischio associati ad un rapporto di lavoro domestico improprio (es: lavoro domestico tra parenti) di un rapporto di lavoro iscritto sul portale INPS."@it ;
+  rdfs:label "Risk factor assessment "@en, "ValutazioneDeiFattoriDiRischio"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneMansioneLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico> ;
+  rdfs:comment "Domestic Role Variation is a type of change in the domestic employment relationship relating to the role played by the domestic worker initially agreed between the domestic worker and the employer and declared in the contract. The intended roles are domestic helper or carer. In the ontology it is a subclass of Employment Relationship Variation, constituting a specific case of it"@en, "La Variazione della mansione di lavoro domestico è un tipo i variazione del rapporto di lavoro domestico relativa al ruolo svolto dal lavoratore domestico inizialmente concordato tra lavoratore domestico e datore di lavoro e dichiarato nel contratto. Le mansioni previste sono colf o badante. Nell'ontologia è sottoclasse di Variazione Rapporto di Lavoro, costituendone una casistica specifica."@it ;
+  rdfs:label "Domestic Role Variation"@en, "Variazione Mansione Lavoro Domestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneOrediLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico> ;
+  rdfs:comment "La Variazione delle ore di lavoro domestico è un tipo di variazione possibile del rapporto lavoro domestico che riguarda le ore di lavoro prestata dal lavoratore domestico inizialmente indicate nel contratto. Nell'ontologia la classe è definita come sottoclassi di Variazione Rapporto di Lavoro Domestico"@it, "Variation of working hours for a domestic worker is a type of possible variation of the domestic employment relationship that concerns the hours worked by the domestic worker initially specified in the contract. In the ontology, the class is defined as subclasses of Domestic Work Relationship Variation"@en ;
+  rdfs:label "Variation in Domestic Work Working Hours"@en, "Variazione Ore Di Lavoro Domestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/onto/l0/EventOrSituation>, <https://w3id.org/italia/social-security/onto/domesticWorkServices/ServizioLavoroDomestico>, [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/CessazioneRapportoDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/ProrogaRapportoDiLavoro>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/TrasformazioneRapportoDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneMansioneLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneOrediLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRetribuzioneLavoroDomestico>
+   )
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/modificaRapportoDiLavoroDomestico> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/COVariazioneGenerataAPartireDa> ] ;
+    owl:someValuesFrom [
+      a owl:Class ;
+      owl:unionOf (
+       <https://w3id.org/italia/social-security/onto/domesticWorkServices/CessazioneRapportoDiLavoroDomestico>
+       <https://w3id.org/italia/social-security/onto/domesticWorkServices/ProrogaRapportoDiLavoro>
+       <https://w3id.org/italia/social-security/onto/domesticWorkServices/TrasformazioneRapportoDiLavoroDomestico>
+       <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneMansioneLavoroDomestico>
+     )
+    ]
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/effettuaVariazioneRapportoDiLavoroDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/raccoglieVariazioneRapportoDiLavoroDomestico> ] ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/codiceVariazioneRapportoDiLavoroDomestico> ;
+    owl:someValuesFrom rdfs:Literal
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/dataVariazioneRapportoDiLavoroDomestico> ;
+    owl:someValuesFrom rdfs:Literal
+  ] ;
+  rdfs:comment "La Variazione del Rapporto di lavoro domestico consente di modificare alcuni dati e caratteristiche o di cambiare lo stato del rapporto. Nell'ontologia il concetto è osservato e definito sia come evento che accade e del quale viene conseguentemente tenuta traccia nei dati e documenti che come servizio abilitato dai sistemi dell'INPS. è inoltre definito come classe sovraordinata ad altre che ne rappresentano una tipizzazione, alcune delle quali devono essere seguite da una comunicazione obbligatoria da parte di INPS verso il Ministero del lavoro e altre no. Le sottoclassi sono: Variazione Mansione, Variazione Ore di Lavoro, Trasformazione rapporto di lavoro, Cessazione del rapporto di lavoro, Proroga del rapporto di lavoro."@it, "The Domestic Employment Relationship Variation allows to modify certain data and characteristics or to change the status of the relationship. In the ontology, the concept is observed and defined both as an event that occurs and of which a trace is consequently kept in the data and documents, and as a service enabled by the INPS systems. It is also defined as a class superordinate to others that represent a type of it, some of which must be followed by a compulsory communication from INPS to the Ministry of Labour, and others not. The subclasses are: Role Variation, Variation of Work Hours, Employment Relationship Transformation, Employment Relationship Termination, Employment Relationship Extension."@en ;
+  rdfs:label "Domestic Employment Relationship Variation"@it, "Variazione Rapporto Di Lavoro Domestico"@it .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRetribuzioneLavoroDomestico>
+  a owl:Class ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico> ;
+  rdfs:comment "La Variazione retribuzione del lavoro domestico è un tipo di variazine del rapporto di lavoro che modifica il dato  relativo alla modalità di calcolo dell'importo della retribuzione che può essere mensile o oraria. Nell'ontologia è modellata come sottoclasse di Variazione rapporto di lavoro e ne rappresenta una tipologia specifica."@it, "The Domestic Workers' Remuneration Variation is a type of domestic work relationship variation that changes how the amount of remuneration is calculated, which may be monthly or hourly. In the ontology, it is modelled as a subclass of Employment Relationship Variation and represents a specific type."@en ;
+  rdfs:label "Variation in Remuneration of Domestic Workers"@en, "Variazione Retribuzione del Lavoro Domestico"@it .
+
+<https://w3id.org/italia/social-security/onto/pensions/DocumentoAllegato>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/haDocumentoAllegato> ] ;
+    owl:someValuesFrom owl:Thing
+  ] .
+
+<https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/agenteConsultaEstrattoContributivo> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/consultaRapportoDiLavoro> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/contribuenteInviaComunicazioneBidirezionaleA> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/effettuaIscrizioneRapportoDiLavoroDomestico> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/invianoComunicazioneBidirezionale> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty <https://w3id.org/italia/social-security/onto/domesticWorkServices/invianoComunicazioneBidirezionaleCorrelata> ;
+    owl:someValuesFrom owl:Thing
+  ], [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/annullatoDa> ] ;
+    owl:someValuesFrom owl:Thing
+  ] .
+
+<https://w3id.org/italia/social-security/onto/services/Pagamento>
+  a owl:Class ;
+  rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/sonoDovutiTramitePagamento> ] ;
+    owl:someValuesFrom owl:Thing
+  ] .
+
+<https://w3id.org/italia/social-security/data/organization/inps>
+  a <https://w3id.org/italia/onto/COV/PublicOrganization>, <http://dati.gov.it/onto/dcatapit#Agent>, foaf:Agent, owl:NamedIndividual ;
+  dc:identifier "inps" ;
+  foaf:name "Istituto nazionale della previdenza sociale"@it, "National institute for Social Security"@en .
+
+[]
+  a owl:Restriction ;
+  owl:onProperty [ owl:inverseOf <https://w3id.org/italia/onto/l0/hasFirstMember> ] ;
+  owl:someValuesFrom <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoComunicazioneBidirezionale> ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleAperta> .
+
+[]
+  a owl:Restriction ;
+  owl:onProperty [ owl:inverseOf <https://w3id.org/italia/onto/l0/hasLastMember> ] ;
+  owl:someValuesFrom <https://w3id.org/italia/social-security/onto/domesticWorkServices/StatoComunicazioneBidirezionale> ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneBidirezionaleChiusa> .
+
+[]
+  a owl:Restriction ;
+  owl:onProperty [ owl:inverseOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/COVariazioneGenerataAPartireDa> ] ;
+  owl:someValuesFrom [
+    a owl:Class ;
+    owl:unionOf (
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/CessazioneRapportoDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/ProrogaRapportoDiLavoro>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/TrasformazioneRapportoDiLavoroDomestico>
+     <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneMansioneLavoroDomestico>
+   )
+  ] ;
+  rdfs:subClassOf <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico> .
+
+[]
+  a owl:AllDisjointClasses ;
+  owl:members (
+   <https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/contributions/LavoratoreDomestico>
+   <https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato>
+ ) .
+
+[]
+  a owl:AllDisjointClasses ;
+  owl:members (
+   <https://w3id.org/italia/social-security/onto/contributions/DatoreDiLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/core/SedeINPS>
+   <https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato>
+ ) .
+
+[]
+  a owl:AllDisjointClasses ;
+  owl:members (
+   <https://w3id.org/italia/social-security/onto/contributions/RapportoDiLavoroDomesticoCessato>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoAnnullato>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/RapportoDiLavoroDomesticoRespinto>
+ ) .
+
+[]
+  a owl:AllDisjointClasses ;
+  owl:members (
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/AnnullamentoRapportoDiLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/GestioneRimborsi>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/IscrizioneRapportoDiLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/RichiestaNotificaScadenzaPagamentoContributiLavoratoreDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/SospensioneObbligoContributivoLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRapportoDiLavoroDomestico>
+ ) .
+
+[]
+  a owl:AllDisjointClasses ;
+  owl:members (
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/CessazioneRapportoDiLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/ProrogaRapportoDiLavoro>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/TrasformazioneRapportoDiLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneMansioneLavoroDomestico>
+ ) .
+
+[]
+  a owl:AllDisjointClasses ;
+  owl:members (
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/CessazioneRapportoDiLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/ProrogaRapportoDiLavoro>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/TrasformazioneRapportoDiLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneMansioneLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneOrediLavoroDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/VariazioneRetribuzioneLavoroDomestico>
+ ) .
+
+[]
+  a owl:AllDisjointClasses ;
+  owl:members (
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicataSospensioneObbligoContributivo>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/DaRecuperoCrediti>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/PagamentoDaEffettuare>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/PagamentoIncassato>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/PagamentoIncassatoInLavorazione>
+ ) .
+
+[]
+  a owl:AllDisjointClasses ;
+  owl:members (
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaCessazione>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaDiVariazioneMansioneLavoratoreDomestico>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaProroga>
+   <https://w3id.org/italia/social-security/onto/domesticWorkServices/ComunicazioneObbligatoriaTrasformazione>
+ ) .

@@ -1,0 +1,171 @@
+openapi: 3.0.3
+info:
+  title: Schema dello Stato Di Erogato NASpI
+  version: 202406.27.00
+  x-summary: Schema dello Stato Di Erogato NASpI compatibile con l'Ontologia INPS relativa ai servizi per la gestione della richiesta di una prestazione NASpI.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiErogatoDiNASpI
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    CodiceStatoDiErogatoNASpI:
+      type: string
+      x-refersTo: http://purl.org/dc/terms/identifier
+      description: http://purl.org/dc/terms/identifier
+      example: '1485795'
+      maxLength: 50
+      minLength: 1
+
+    StatoDiErogatoDiNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiErogatoDiNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        importo_lordo_mensile_indennita_naspi: importoLordoMensileIndennitàNASpI
+        se_richiesta_detrazione_per_lavoro_dipendente: seRichiestaDetrazionePerLavoroDipendente
+        ha_comunicazione_eventi_in_espatrio:
+          "@id": haComunicazioneEventiInEspatrio
+        ha_sanzione_naspi:
+          "@id": haSanzioneNASpI
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiErogatoDiNASpI
+      required:
+      - codice_stato_di_erogato_naspi
+      - importo_lordo_mensile_indennita_naspi
+      - se_richiesta_detrazione_per_lavoro_dipendente
+      properties:
+        codice_stato_di_erogato_naspi:
+          $ref: "#/components/schemas/CodiceStatoDiErogatoNASpI"
+        importo_lordo_mensile_indennita_naspi:
+          type: number
+          format: decimal32
+        se_richiesta_detrazione_per_lavoro_dipendente:
+          type: string
+          format: boolean
+        ha_comunicazione_eventi_in_espatrio:
+          type: object
+          items:
+            $ref: "#/components/schemas/AttoDiNotificaEventoInEspatrio"
+        ha_sanzione_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/SanzionePerViolazioneObblighiNASpI"
+      example:
+        codice_stato_di_erogato_naspi:
+          $ref: "#/components/schemas/CodiceStatoDiErogatoNASpI/example"
+        importo_lordo_mensile_indennita_naspi: 2000
+        se_richiesta_detrazione_per_lavoro_dipendente: 'false'
+        ha_comunicazione_eventi_in_espatrio:
+          $ref: "#/components/schemas/AttoDiNotificaEventoInEspatrio/example"
+        ha_sanzione_naspi:
+          $ref: "#/components/schemas/SanzionePerViolazioneObblighiNASpI/example"
+
+    AttoDiNotificaEventoInEspatrio:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiNotificaEventoInEspatrio
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiNotificaEventoInEspatrio
+      required:
+      - codice_atto_notifica_envento_in_espatrio_naspi
+      properties:
+        codice_atto_notifica_envento_in_espatrio_naspi:
+          $ref: "#/components/schemas/CodiceAttoNotificaEventoInEspatrio"
+      example:
+        codice_atto_notifica_envento_in_espatrio_naspi:
+          $ref: "#/components/schemas/CodiceAttoNotificaEventoInEspatrio/example"
+
+    CodiceAttoNotificaEventoInEspatrio:
+      type: string
+      x-refersTo: http://purl.org/dc/terms/identifier
+      description: http://purl.org/dc/terms/identifier
+      example: '6895745'
+      maxLength: 50
+      minLength: 1
+
+    SanzionePerViolazioneObblighiNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/SanzionePerViolazioneObblighiNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        importo_sanzione_naspi: importoSanzioneNASpI
+        data_validita_sanzione_naspi: dataValiditàSanzioneNASpI
+        ha_atto_di_notifica_violazione:
+          "@id": haAttoDiNotificaViolazione
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/SanzionePerViolazioneObblighiNASpI
+      required:
+      - codice_atto_notifica_envento_in_espatrio_naspi
+      - importo_sanzione_naspi
+      - data_validita_sanzione_naspi
+      properties:
+        codice_atto_notifica_envento_in_espatrio_naspi:
+          $ref: "#/components/schemas/CodiceSanzionePerViolazioneObblighiNASpI"
+        importo_sanzione_naspi:
+          type: number
+          format: decimal32
+        data_validita_sanzione_naspi:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        ha_atto_di_notifica_violazione:
+          type: object
+          items:
+            $ref: "#/components/schemas/AttoDiNotificaViolazioneObblighiAttivazione"
+      example:
+        codice_atto_notifica_envento_in_espatrio_naspi:
+          $ref: "#/components/schemas/CodiceSanzionePerViolazioneObblighiNASpI/example"
+        importo_sanzione_naspi: 1215
+        data_validita_sanzione_naspi: "2020-07-03"
+        ha_atto_di_notifica_violazione:
+          $ref: "#/components/schemas/AttoDiNotificaViolazioneObblighiAttivazione/example"
+
+    CodiceSanzionePerViolazioneObblighiNASpI:
+      type: string
+      x-refersTo: http://purl.org/dc/terms/identifier
+      description: http://purl.org/dc/terms/identifier
+      example: '2548575'
+      maxLength: 50
+      minLength: 1
+
+    AttoDiNotificaViolazioneObblighiAttivazione:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiNotificaViolazioneObblighiAttivazione
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        data_avvenuta_violazione_attivazione: dataAvvenutaViolazioneAttivazione
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiNotificaViolazioneObblighiAttivazione
+      required:
+      - codice_atto_notifica_violazione_obblighi_attivazione_naspi
+      - data_avvenuta_violazione_attivazione
+      properties:
+        codice_atto_notifica_violazione_obblighi_attivazione_naspi:
+          $ref: "#/components/schemas/CodiceAttoNotificaViolazioneObblighiAttivazione"
+        data_avvenuta_violazione_attivazione:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        codice_atto_notifica_violazione_obblighi_attivazione_naspi:
+          $ref: "#/components/schemas/CodiceAttoNotificaViolazioneObblighiAttivazione/example"
+        data_avvenuta_violazione_attivazione: "2020-06-15"
+
+    CodiceAttoNotificaViolazioneObblighiAttivazione:
+      type: string
+      x-refersTo: http://purl.org/dc/terms/identifier
+      description: http://purl.org/dc/terms/identifier
+      example: '35485968'
+      maxLength: 50
+      minLength: 1

@@ -1,0 +1,88 @@
+openapi: 3.0.3
+info:
+  title: Schema dello Stato di Ricorso Di Domanda NASpI
+  version: 202406.27.00
+  x-summary: Schema dello Stato di Ricorso Di Domanda NASpI compatibile con l'Ontologia INPS relativa ai servizi per la gestione della richiesta di una prestazione NASpI.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRicorsoDiDomandaNASpI
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    CodiceStatoRicorsoDomandaNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      example: '2945856'
+      maxLength: 50
+      minLength: 1
+
+    StatoDiRicorsoDiDomandaNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRicorsoDiDomandaNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        numero_protocollo_naspi_stato_di_ricorso: numeroProtocolloNASpI
+        data_presentazione_naspi_stato_di_ricorso: dataPresentazioneNASpI
+        ha_atto_di_ricorso_domanda_naspi:
+          "@id": haAttoDiRicorsoDomandaNASpI
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRicorsoDiDomandaNASpI
+      required:
+      - codice_stato_di_ricorso_di_domanda_naspi
+      - numero_protocollo_naspi_stato_di_ricorso
+      - data_presentazione_naspi_stato_di_ricorso
+      properties:
+        codice_stato_di_ricorso_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoRicorsoDomandaNASpI"
+        numero_protocollo_naspi_stato_di_ricorso:
+          type: string
+          maxLength: 255
+        data_presentazione_naspi_stato_di_ricorso:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        ha_atto_di_ricorso_domanda_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/AttoDiRicorsoDomandaNASpI"
+      example:
+        codice_stato_di_ricorso_di_domanda_naspi:
+          $ref: "#/components/schemas/CodiceStatoRicorsoDomandaNASpI/example"
+        numero_protocollo_naspi_stato_di_ricorso: '24859756'
+        data_presentazione_naspi_stato_di_ricorso: "2024-11-23"
+        ha_atto_di_ricorso_domanda_naspi:
+          $ref: "#/components/schemas/AttoDiRicorsoDomandaNASpI/example"
+
+    AttoDiRicorsoDomandaNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiRicorsoDomandaNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiRicorsoDomandaNASpI
+      required:
+      - codice_atto_ricorso_domanda_naspi
+      properties:
+        codice_atto_ricorso_domanda_naspi:
+          $ref: "#/components/schemas/CodiceAttoRicorsoDomandaNASpI"
+      example:
+        codice_atto_ricorso_domanda_naspi:
+          $ref: "#/components/schemas/CodiceAttoRicorsoDomandaNASpI/example"
+
+    CodiceAttoRicorsoDomandaNASpI:
+      type: string
+      x-refersTo: http://purl.org/dc/terms/identifier
+      description: http://purl.org/dc/terms/identifier
+      example: '645855'
+      maxLength: 50
+      minLength: 1

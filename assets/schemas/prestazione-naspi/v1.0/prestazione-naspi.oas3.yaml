@@ -1,0 +1,306 @@
+openapi: 3.0.3
+info:
+  title: Schema della Prestazione NASpI
+  version: 202406.27.00
+  x-summary: Schema della Prestazione NASpI compatibile con l'Ontologia INPS relativa ai servizi per la gestione della richiesta di una prestazione NASpI.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/social-safety-net/PrestazioneNASpI
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+    DomandaNASpi:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/domanda-naspi/latest/domanda-naspi.oas3.yaml#/components/schemas/DomandaNASpi"
+    StatoDiErogatoDiNASpI:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/stato-di-erogato-prestazione-naspi/latest/stato-di-erogato-prestazione-naspi.oas3.yaml#/components/schemas/StatoDiErogatoDiNASpI"
+
+    CodicePrestazioneNASpI:
+      type: string
+      x-refersTo: http://purl.org/dc/terms/identifier
+      description: http://purl.org/dc/terms/identifier
+      example: '2642356'
+      maxLength: 50
+      minLength: 1
+
+    PrestazioneNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/PrestazioneNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        durata_teorica_prestazione_naspi: durataTeoricaPrestazioneNASpI
+        durata_effettiva_prestazione_naspi: durataEffettivaPrestazioneNASpI
+        numero_settimane_contributive_utilizzate: numeroSettimaneContributiveUtilizzate
+        data_inizio_prestazione_naspi: dataInizioPrestazioneNASpI
+        data_fine_prestazione_naspi: dataFinePrestazioneNASpI
+        ha_comunicazione_naspi:
+          "@id": haComunicazioneNASpI
+        ha_beneficiario_prestazione_di_sostegno_al_reddito:
+          "@id": haBeneficiarioPrestazioneDiSostegnoAlReddito
+        ha_domanda_naspi:
+          "@id": haDomandaNASpI
+        ha_stato_di_erogato_prestazione_naspi:
+          "@id": haStatoDiPrestazioneNASpI
+        ha_stato_di_sospeso_prestazione_naspi:
+          "@id": haStatoDiPrestazioneNASpI
+        ha_stato_di_decaduto_prestazione_naspi:
+          "@id": haStatoDiPrestazioneNASpI
+        ha_stato_di_cessato_prestazione_naspi:
+          "@id": haStatoDiPrestazioneNASpI
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/PrestazioneNASpI
+      required:
+      - codice_prestazione_naspi
+      - durata_teorica_prestazione_naspi
+      - durata_effettiva_prestazione_naspi
+      - numero_settimane_contributive_utilizzate
+      - data_inizio_prestazione_naspi
+      - data_fine_prestazione_naspi
+      properties:
+        codice_prestazione_naspi:
+          $ref: "#/components/schemas/CodicePrestazioneNASpI"
+        durata_teorica_prestazione_naspi:
+          type: number
+          format: decimal32
+        durata_effettiva_prestazione_naspi:
+          type: number
+          format: decimal32
+        numero_settimane_contributive_utilizzate:
+          type: number
+          format: decimal32
+        data_inizio_prestazione_naspi:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        data_fine_prestazione_naspi:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        ha_comunicazione_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/ComunicazioneNASpI"
+        ha_beneficiario_prestazione_di_sostegno_al_reddito:
+          type: object
+          items:
+            $ref: "#/components/schemas/BeneficiarioPrestazioneDiSostegnoAlRedditoNASpI"
+        ha_domanda_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/DomandaNASpi"
+        ha_stato_di_erogato_prestazione_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/StatoDiErogatoDiNASpI"
+        ha_stato_di_sospeso_prestazione_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/StatoDiSospesoDiNASpI"
+        ha_stato_di_decaduto_prestazione_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/StatoDiDecadutoDiNASpI"
+        ha_stato_di_cessato_prestazione_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/StatoDiCessatoDiNASpI"
+      example:
+        codice_prestazione_naspi:
+          $ref: "#/components/schemas/CodicePrestazioneNASpI/example"
+        durata_teorica_prestazione_naspi: 200
+        durata_effettiva_prestazione_naspi: 180
+        numero_settimane_contributive_utilizzate: 30
+        data_inizio_prestazione_naspi: "2023-01-08"
+        data_fine_prestazione_naspi: "2023-08-08"
+        ha_comunicazione_naspi:
+          $ref: "#/components/schemas/ComunicazioneNASpI/example"
+        ha_beneficiario_prestazione_di_sostegno_al_reddito:
+          $ref: "#/components/schemas/BeneficiarioPrestazioneDiSostegnoAlRedditoNASpI/example"
+        ha_domanda_naspi:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/domanda-naspi/latest/domanda-naspi.oas3.yaml#/components/schemas/DomandaNASpi/example"
+        ha_stato_di_erogato_prestazione_naspi:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/stato-di-erogato-prestazione-naspi/latest/stato-di-erogato-prestazione-naspi.oas3.yaml#/components/schemas/StatoDiErogatoDiNASpI/example"
+        ha_stato_di_sospeso_prestazione_naspi:
+          $ref: "#/components/schemas/StatoDiSospesoDiNASpI/example"
+        ha_stato_di_decaduto_prestazione_naspi:
+          $ref: "#/components/schemas/StatoDiDecadutoDiNASpI/example"
+        ha_stato_di_cessato_prestazione_naspi:
+          $ref: "#/components/schemas/StatoDiCessatoDiNASpI/example"
+
+    ComunicazioneNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/ComunicazioneNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        nota_comunicazione_naspi: notaComunicazioneNASpI
+        comunicazione_ha_allegato_per_naspi:
+          "@id": haAllegatoPerNASPI
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/ComunicazioneNASpI
+      required:
+      - codice_comunicazione_naspi
+      - nota_comunicazione_naspi
+      properties:
+        codice_comunicazione_naspi:
+          $ref: "#/components/schemas/CodiceComunicazioneNASpI"
+        nota_comunicazione_naspi:
+          type: string
+          maxLength: 255
+        comunicazione_ha_allegato_per_naspi:
+          type: object
+          items:
+            $ref: "#/components/schemas/DocumentoAllegatoComunicazioneNASpI"
+      example:
+        codice_comunicazione_naspi:
+          $ref: "#/components/schemas/CodiceComunicazioneNASpI/example"
+        nota_comunicazione_naspi: "Reddito previsto nuova attività lavorativa"
+        comunicazione_ha_allegato_per_naspi:
+          $ref: "#/components/schemas/DocumentoAllegatoComunicazioneNASpI/example"
+
+    CodiceComunicazioneNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroProtocolloNASpI
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroProtocolloNASpI
+      example: '1554289'
+      maxLength: 50
+      minLength: 1
+
+    DocumentoAllegatoComunicazioneNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/DocumentoAllegato
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+        nome_documento_comunicazione_naspi: nomeDocumento
+        data_caricamento_documento_comunicazione_naspi: dataCaricamentoDocumento
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/pensions/DocumentoAllegato
+      required:
+      - identificativo_documento_comunicazione_naspi
+      - nome_documento_comunicazione_naspi
+      - data_caricamento_documento_comunicazione_naspi
+      properties:
+        identificativo_documento_comunicazione_naspi:
+          $ref: "#/components/schemas/IdentificativoDocumentoComunicazioneNASpI"
+        nome_documento_comunicazione_naspi:
+          type: string
+          maxLength: 255
+        data_caricamento_documento_comunicazione_naspi:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        identificativo_documento_comunicazione_naspi:
+          $ref: "#/components/schemas/IdentificativoDocumentoComunicazioneNASpI/example"
+        nome_documento_comunicazione_naspi: 'Tessera Sanitaria'
+        data_caricamento_documento_comunicazione_naspi: "2023-12-16"
+
+    IdentificativoDocumentoComunicazioneNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/pensions/identificativoDocumento
+      description: https://w3id.org/italia/social-security/onto/pensions/identificativoDocumento
+      example: '168957452'
+      maxLength: 50
+      minLength: 1
+
+    BeneficiarioPrestazioneDiSostegnoAlRedditoNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/BeneficiarioPrestazioneDiSostegnoAlReddito
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/BeneficiarioPrestazioneDiSostegnoAlReddito
+      required:
+      - codice_beneficiario_prestazione_di_sostegno_al_reddito_naspi
+      properties:
+        codice_beneficiario_prestazione_di_sostegno_al_reddito_naspi:
+          $ref: "#/components/schemas/CodiceBeneficiarioPrestazioneDiSostegnoAlRedditoNASpI"
+      example:
+        codice_beneficiario_prestazione_di_sostegno_al_reddito_naspi:
+          $ref: "#/components/schemas/CodiceBeneficiarioPrestazioneDiSostegnoAlRedditoNASpI/example"
+
+    CodiceBeneficiarioPrestazioneDiSostegnoAlRedditoNASpI:
+      type: string
+      x-refersTo: https://w3id.org/italia/onto/CPV/taxCode
+      description: https://w3id.org/italia/onto/CPV/taxCode
+      example: 'MRCDRH15D26H501Y'
+      maxLength: 50
+      minLength: 1
+
+    StatoDiSospesoDiNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiSospesoDiNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiSospesoDiNASpI
+      required:
+      - codice_stato_di_sospeso_prestazione_naspi
+      properties:
+        codice_stato_di_sospeso_prestazione_naspi:
+          $ref: "#/components/schemas/CodiceStatoDiSospesoPrestazioneNASpI"
+      example:
+        codice_stato_di_sospeso_prestazione_naspi:
+          $ref: "#/components/schemas/CodiceStatoDiSospesoPrestazioneNASpI/example"
+
+    CodiceStatoDiSospesoPrestazioneNASpI:
+      type: string
+      x-refersTo: http://purl.org/dc/terms/identifier
+      description: http://purl.org/dc/terms/identifier
+      example: '2598567'
+      maxLength: 50
+      minLength: 1
+
+    StatoDiDecadutoDiNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiDecadutoDiNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiDecadutoDiNASpI
+      required:
+      - codice_stato_di_decaduto_prestazione_naspi
+      properties:
+        codice_stato_di_decaduto_prestazione_naspi:
+          $ref: "#/components/schemas/CodiceStatoDiDecadutoPrestazioneNASpI"
+      example:
+        codice_stato_di_decaduto_prestazione_naspi:
+          $ref: "#/components/schemas/CodiceStatoDiDecadutoPrestazioneNASpI/example"
+
+    CodiceStatoDiDecadutoPrestazioneNASpI:
+      type: string
+      x-refersTo: http://purl.org/dc/terms/identifier
+      description: http://purl.org/dc/terms/identifier
+      example: '15547886'
+      maxLength: 50
+      minLength: 1
+
+    StatoDiCessatoDiNASpI:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiCessatoDiNASpI
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiCessatoDiNASpI
+      required:
+      - codice_stato_di_cessato_prestazione_naspi
+      properties:
+        codice_stato_di_cessato_prestazione_naspi:
+          $ref: "#/components/schemas/CodiceStatoDiCessatoPrestazioneNASpI"
+      example:
+        codice_stato_di_cessato_prestazione_naspi:
+          $ref: "#/components/schemas/CodiceStatoDiCessatoPrestazioneNASpI/example"
+
+    CodiceStatoDiCessatoPrestazioneNASpI:
+      type: string
+      x-refersTo: http://purl.org/dc/terms/identifier
+      description: http://purl.org/dc/terms/identifier
+      example: '148579946'
+      maxLength: 50
+      minLength: 1
