@@ -18,6 +18,7 @@
 @prefix RO: <https://w3id.org/italia/onto/RO/> .
 @prefix smapit: <https://w3id.org/italia/onto/SM/> .
 @prefix TI: <https://w3id.org/italia/onto/TI/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 INPSSafety: a owl:Ontology ;
@@ -29,8 +30,8 @@ INPSSafety: a owl:Ontology ;
         TI: ;
     rdfs:label "INPS Ontology related to NASpI (New Social Insurance for Employment)"@en,
         "Ontologia INPS relativa a NASpI (Nuova Assicurazione Sociale per l'Impiego) "@it ;
-    rdfs:comment "INPS ontology relating to the entities and relationships that enable INPS services for the management of domestic work. Among them we find, for example, the service for registration, variation, termination of the domestic employment relationship or consultation of the contribution statement."@en,
-        "Ontologia INPS relativa alle entità e le relazioni che abilitano i servizi INPS per la gestione del Lavoro Domestico. Tra di essi troviamo, ad esempio, il servizio per l'iscrizione, la variazione, la cessazione del rapporto di lavoro domesitco o la consultazione dell'estratto contributivo."@it ;
+    rdfs:comment "L'ontologia INPS relativa alla NASpI rappresenta un insieme strutturato di concetti e relazioni che descrivono in modo dettagliato il sistema di indennità di disoccupazione NASpI erogato dall'Istituto Nazionale della Previdenza Sociale (INPS)."@it,
+        "The INPS ontology related to NASpI represents a structured set of concepts and relationships that provide a detailed description of the NASpI unemployment benefit system administered by the Italian National Institute of Social Security (INPS)."@en ;
     owl:versionInfo "Version 1.0 - Modified on 06 June 2024"@en,
         "Versione 1.0 - Modificata il 26 Giugno 2024"@it ;
     rdfs:isDefinedBy INPSSafety: ;
@@ -43,9 +44,9 @@ INPSSafety: a owl:Ontology ;
         INPSSafety:Inoccupato,
         INPSSafety:RichiedenteNASpI ;
     adms:hasOntologyLanguage adms:OWL ;
-    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/services/distribution/SAFETY-N-TRIPLES>,
-        <https://w3id.org/italia/social-security/data/services/distribution/SAFETY-RDF-TURTLE>,
-        <https://w3id.org/italia/social-security/data/services/distribution/SAFETY-RDF-XML> ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-RDF-XML> ;
     adms:hasTask adms:AnnotationTask,
         adms:QueryFormulationTask,
         adms:SearchTask ;
@@ -71,7 +72,7 @@ INPSSafety: a owl:Ontology ;
     dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
     dct:description "L'ontologia INPS relativa alla NASpI rappresenta un insieme strutturato di concetti e relazioni che descrivono in modo dettagliato il sistema di indennità di disoccupazione NASpI erogato dall'Istituto Nazionale della Previdenza Sociale (INPS)."@it,
         "The INPS ontology related to NASpI represents a structured set of concepts and relationships that provide a detailed description of the NASpI unemployment benefit system administered by the Italian National Institute of Social Security (INPS)."@en ;
-    dct:identifier "https://w3id.org/italia/social-security/onto/services" ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/social-safety-net" ;
     dct:issued "2024-06-06T00:00:00+00:00"^^xsd:dateTime ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
@@ -2913,6 +2914,16 @@ ateco-2007:A a owl:NamedIndividual .
 <http://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/swiss/CH> a INPSSafety:StatoCompetente,
         owl:NamedIndividual .
 
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
 <https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
         dcatapit:Agent,
         foaf:Agent,
@@ -2920,6 +2931,52 @@ ateco-2007:A a owl:NamedIndividual .
     dct:identifier "inps" ;
     foaf:name "Istituto nazionale della previdenza sociale"@it,
         "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+<https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/socialSafetyNet/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/socialSafetyNet/latest/socialSafetyNet.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alla NASpI che rappresenta un insieme strutturato di concetti e relazioni che descrivono in modo dettagliato il sistema di indennità di disoccupazione NASpI erogato dall'Istituto Nazionale della Previdenza Sociale (INPS)."@it,
+        "This is the distribution in N-TRIPLES of the INPS Ontology relating to NASpI which represents a structured set of concepts and relationships that describe in detail the NASpI unemployment benefit system provided by the National Institute of Social Security (INPS)."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - NASpI"@it,
+        "N-TRIPLES distribution of the INPS ontology - NASpI"@en .
+
+<https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/socialSafetyNet/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/socialSafetyNet/latest/socialSafetyNet.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alla NASpI che rappresenta un insieme strutturato di concetti e relazioni che descrivono in modo dettagliato il sistema di indennità di disoccupazione NASpI erogato dall'Istituto Nazionale della Previdenza Sociale (INPS)."@it,
+        "This is the distribution in RDF/Turtle of the INPS Ontology relating to NASpI which represents a structured set of concepts and relationships that describe in detail the NASpI unemployment benefit system provided by the National Institute of Social Security (INPS)."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - NASpI"@it,
+        "RDF/Turtle distribution of the INPS ontology - NASpI"@en .
+
+<https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/socialSafetyNet/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/socialSafetyNet/latest/socialSafetyNet.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alla NASpI che rappresenta un insieme strutturato di concetti e relazioni che descrivono in modo dettagliato il sistema di indennità di disoccupazione NASpI erogato dall'Istituto Nazionale della Previdenza Sociale (INPS)."@it,
+        "This is the distribution in RDF/XML of the INPS Ontology relating to NASpI which represents a structured set of concepts and relationships that describe in detail the NASpI unemployment benefit system provided by the National Institute of Social Security (INPS)."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - NASpI"@it,
+        "RDF/XML distribution of the INPS ontology - NASpI"@en .
 
 ### Axioms
 

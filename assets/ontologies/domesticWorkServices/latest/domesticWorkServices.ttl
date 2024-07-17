@@ -16,6 +16,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix TI: <https://w3id.org/italia/onto/TI/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 INPSDWS: a owl:Ontology ;
@@ -45,9 +46,9 @@ INPSDWS: a owl:Ontology ;
         INPSDWS:RapportoDiLavoroDomesticoRespinto,
         INPSDWS:VariazioneRapportoDiLavoroDomestico ;
     adms:hasOntologyLanguage adms:OWL ;
-    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/services/distribution/DOMESTICWORKSERVICES-N-TRIPLES>,
-        <https://w3id.org/italia/social-security/data/services/distribution/DOMESTICWORKSERVICES-RDF-TURTLE>,
-        <https://w3id.org/italia/social-security/data/services/distribution/DOMESTICWORKSERVICES-RDF-XML> ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/DOMESTICWORKSERVICES-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/DOMESTICWORKSERVICES-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/DOMESTICWORKSERVICES-RDF-XML> ;
     adms:hasTask adms:AnnotationTask,
         adms:QueryFormulationTask,
         adms:SearchTask ;
@@ -77,7 +78,7 @@ INPSDWS: a owl:Ontology ;
     dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
     dct:description "Ontologia INPS relativa alle entità e le relazioni che abilitano i servizi INPS per la gestione del Lavoro Domestico. Tra di essi troviamo, ad esempio, il servizio per l'iscrizione, la variazione, la cessazione del rapporto di lavoro domesitco o la consultazione dell'estratto contributivo."@it,
         "This is the INPS ontology relating to the entities and relationships that enable INPS services for the management of domestic work. Among them we find, for example, the service for registration, variation, termination of the domestic employment relationship or consultation of the contribution statement."@en ;
-    dct:identifier "https://w3id.org/italia/social-security/onto/services" ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/domesticWorkServices" ;
     dct:issued "2024-06-06T00:00:00+00:00"^^xsd:dateTime ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
@@ -1857,6 +1858,55 @@ L0:EventOrSituation a owl:Class .
 
 ### Individuals
 
+<https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/DOMESTICWORKSERVICES-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/domesticWorkServices/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/domesticWorkServices/latest/domesticWorkServices.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e le relazioni che abilitano i servizi INPS per la gestione del Lavoro Domestico. Tra di essi troviamo, ad esempio, il servizio per l'iscrizione, la variazione, la cessazione del rapporto di lavoro domesitco o la consultazione dell'estratto contributivo."@it,
+        "This is the distribution in N-TRIPLES of the INPS Ontology relating to the entities and relationships that enable INPS services for the management of domestic work. Among them we find, for example, the service for registration, variation, termination of the domestic employment relationship or consultation of the contribution statement."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Servizi Lavoro Domestico"@it,
+        "N-TRIPLES distribution of the INPS ontology - Domestic Work Services"@en .
+
+<https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/DOMESTICWORKSERVICES-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/domesticWorkServices/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/domesticWorkServices/latest/domesticWorkServices.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e le relazioni che abilitano i servizi INPS per la gestione del Lavoro Domestico. Tra di essi troviamo, ad esempio, il servizio per l'iscrizione, la variazione, la cessazione del rapporto di lavoro domesitco o la consultazione dell'estratto contributivo."@it,
+        "This is the distribution in RDF/Turtle of the INPS Ontology relating to the entities and relationships that enable INPS services for the management of domestic work. Among them we find, for example, the service for registration, variation, termination of the domestic employment relationship or consultation of the contribution statement."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Servizi Lavoro Domestico"@it,
+        "RDF/Turtle distribution of the INPS ontology - Domestic Work Services"@en .
+
+<https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/DOMESTICWORKSERVICES-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/domesticWorkServices/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/domesticWorkServices/latest/domesticWorkServices.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e le relazioni che abilitano i servizi INPS per la gestione del Lavoro Domestico. Tra di essi troviamo, ad esempio, il servizio per l'iscrizione, la variazione, la cessazione del rapporto di lavoro domesitco o la consultazione dell'estratto contributivo."@it,
+        "This is the distribution in RDF/XML of the INPS Ontology relating to the entities and relationships that enable INPS services for the management of domestic work. Among them we find, for example, the service for registration, variation, termination of the domestic employment relationship or consultation of the contribution statement."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Servizi Lavoro Domestico"@it,
+        "RDF/XML distribution of the INPS ontology - Domestic Work Services"@en .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
 <https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
         dcatapit:Agent,
         foaf:Agent,
@@ -1864,6 +1914,13 @@ L0:EventOrSituation a owl:Class .
     dct:identifier "inps" ;
     foaf:name "Istituto nazionale della previdenza sociale"@it,
         "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
 
 ### Axioms
 

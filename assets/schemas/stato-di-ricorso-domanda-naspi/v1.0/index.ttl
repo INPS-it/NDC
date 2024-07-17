@@ -1,5 +1,6 @@
 @prefix admsapit: <https://w3id.org/italia/onto/ADMS/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
 @prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -9,38 +10,32 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-INPSSafety: a owl:Ontology ;
+<https://w3id.org/italia/social-security/onto/social-safety-net/> a owl:Ontology ;
     foaf:name "Ontologia INPS relativa a NASpI (Nuova Assicurazione Sociale per l'Impiego)" .
 
-### Classes
-
-INPSSafety:StatoDiRicorsoDiDomandaNASpI a owl:Class ;
-    rdfs:label "###CLASSDESCREN###"@en,
-        "###CLASSDESCRIT###"@it ;
-    rdfs:comment "###CLASSDESCRIT_LONG###"@it .
 
 ### Individuals
 
-<https://w3id.org/italia/work-accident/data/organization/inail> a dcatapit:Agent,
-        foaf:Agent,
-        owl:NamedIndividual ;
-    dct:identifier "inail" ;
-    foaf:name "Istituto Nazionale per l'Assicurazione contro gli Infortuni sul Lavoro"@it,
-        "National Institute for Insurance against Accidents at Work"@en .
-
-<https://w3id.org/italia/work-accident/data/organization/td> a dcatapit:Agent,
-        foaf:Agent,
-        owl:NamedIndividual ;
-    dct:identifier "TD" ;
-    foaf:name "Digital Transformation Team"@en,
-        "Team per la Trasformazione Digitale"@it .
-
-<https://w3id.org/italia/work-accident/data/organization/ufficioV> a dcatapit:Organization,
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
         owl:NamedIndividual,
         vcard:Kind,
         vcard:Organization ;
-    vcard:fn "INAIL Ufficio V - D.C.O.D" ;
-    vcard:hasEmail <mailto:dcod@inail.it> .
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+
+
 
 ### Annotations
 
@@ -48,35 +43,30 @@ INPSSafety:StatoDiRicorsoDiDomandaNASpI a owl:Class ;
         dcatapit:Distribution ;
     rdfs:label "Consultazione Stato Di Ricorso Di Domanda NASpI API"@it ;
     rdfs:comment "Servizio di notifica"@it ;
-    owl:versionInfo "0.1"@it ;
-    admsapit:acronym "inail" ;
+    owl:versionInfo "1.0"@it ;
+    admsapit:acronym "inps" ;
     admsapit:hasKeyClass INPSSafety:StatoDiRicorsoDiDomandaNASpI ;
     admsapit:prefix "INPSSafety"^^xsd:string ;
     admsapit:target "Cittadini"@it,
         "Imprese"@it,
         "Pubbliche Amministrazioni"@it ;
-    dcat:accessURL <https://github.com/InailUfficio5/inail-ndc/blob/main/assets/schemas/stato-di-ricorso-domanda-naspi/latest> ;
-    dcat:contactPoint <https://w3id.org/italia/work-accident/data/organization/ufficioV> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/stato-di-ricorso-domanda-naspi/latest> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     dcat:distribution <https://w3id.org/italia/schemas/stato-di-ricorso-domanda-naspi/latest/stato-di-ricorso-domanda-naspi.oas3.yaml> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/InailUfficio5/inail-ndc/main/assets/schemas/stato-di-ricorso-domanda-naspi/latest/stato-di-ricorso-domanda-naspi.oas3.yaml> ;
-    dcat:keyword "Domanda NASpI"@it,
-        "Fascicolo di lavoro"@it,
-        "Inoccupato"@it,
-        "Lavoratore"@it,
-        "Richiedente NASpI"@it,
-        "Worker"@en ;
+    dcat:downloadURL https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/stato-di-ricorso-domanda-naspi/latest/stato-di-ricorso-domanda-naspi.oas3.yaml> ;
+    dcat:keyword "Worker"@en,"Lavoratore"@it,"Domanda NASpI"@it,"Inoccupato"@it,"Richiedente NASpI"@it,"Fascicolo di lavoro"@it ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
     dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    dct:conformsTo INPSSafety: ;
-    dct:creator <https://w3id.org/italia/work-accident/data/organization/inail> ;
-    dct:description "Il servizio viene invocato per ottenere le informazioni sullo stato di ricorso di domanda NASpI. Riguarda le domande respinte per non possesso dei requisiti previsti e verso cui il richiedente ha inoltrato domanda di ricorso." ;
+    dct:conformsTo <https://w3id.org/italia/social-security/onto/social-safety-net/> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+	dct:description "Il servizio viene invocato per ottenere le informazioni sullo stato di ricorso di domanda NASpI. Riguarda le domande respinte per non possesso dei requisiti previsti e verso cui il richiedente ha inoltrato domanda di ricorso." ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
     dct:identifier <https://w3id.org/italia/schemas/stato-di-ricorso-domanda-naspi> ;
-    dct:issued "2024-02-13"^^xsd:date ;
+    dct:issued "2024-06-13"^^xsd:date ;
     dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
     dct:modified "2024-06-27"^^xsd:date ;
-    dct:publisher <https://w3id.org/italia/work-accident/data/organization/inail> ;
-    dct:rightsHolder <https://w3id.org/italia/work-accident/data/organization/inail> ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
     dct:title "Consultazione Stato Di Ricorso Di Domanda NASpI API"@it .
 
 ### Serialized using the ttlser deterministic serializer v1.2.0
