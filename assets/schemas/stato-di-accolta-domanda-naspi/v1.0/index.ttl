@@ -1,6 +1,6 @@
 @prefix admsapit: <https://w3id.org/italia/onto/ADMS/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
@@ -10,9 +10,8 @@
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://w3id.org/italia/social-security/onto/social-safety-net/> a owl:Ontology ;
+INPSSafety: a owl:Ontology ;
     foaf:name "Ontologia INPS relativa a NASpI (Nuova Assicurazione Sociale per l'Impiego)" .
-
 
 ### Individuals
 
@@ -34,9 +33,6 @@
     foaf:name "Istituto nazionale della previdenza sociale"@it,
         "National institute for Social Security"@en .
 
-
-
-
 ### Annotations
 
 <https://w3id.org/italia/schemas/stato-di-accolta-domanda-naspi/latest/stato-di-accolta-domanda-naspi.oas3.yaml> a dcatapit:Dataset,
@@ -53,13 +49,18 @@
     dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/stato-di-accolta-domanda-naspi/latest> ;
     dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     dcat:distribution <https://w3id.org/italia/schemas/stato-di-accolta-domanda-naspi/latest/stato-di-accolta-domanda-naspi.oas3.yaml> ;
-    dcat:downloadURL https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/stato-di-accolta-domanda-naspi/latest/stato-di-accolta-domanda-naspi.oas3.yaml> ;
-    dcat:keyword "Worker"@en,"Lavoratore"@it,"Domanda NASpI"@it,"Inoccupato"@it,"Richiedente NASpI"@it,"Fascicolo di lavoro"@it ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/stato-di-accolta-domanda-naspi/latest/stato-di-accolta-domanda-naspi.oas3.yaml> ;
+    dcat:keyword "Domanda NASpI"@it,
+        "Fascicolo di lavoro"@it,
+        "Inoccupato"@it,
+        "Lavoratore"@it,
+        "Richiedente NASpI"@it,
+        "Worker"@en ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
     dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    dct:conformsTo <https://w3id.org/italia/social-security/onto/social-safety-net/> ;
+    dct:conformsTo INPSSafety: ;
     dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-	dct:description "Il servizio viene invocato per ottenere le informazioni sullo stato di accolta di domanda NASpI. Riguarda le domande accolte che abilitano all'erogazione della Prestazione NASpI." ;
+    dct:description "Il servizio viene invocato per ottenere le informazioni sullo stato di accolta di domanda NASpI. Riguarda le domande accolte che abilitano all'erogazione della Prestazione NASpI." ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
     dct:identifier <https://w3id.org/italia/schemas/stato-di-accolta-domanda-naspi> ;
     dct:issued "2024-06-13"^^xsd:date ;
