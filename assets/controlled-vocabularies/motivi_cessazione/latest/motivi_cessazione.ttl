@@ -1,24 +1,26 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix NDC: <https://w3id.org/italia/onto/NDC/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 ### Annotations
 
 <https://w3id.org/italia/data/standard/SKOS> a dc:Standard,
-        <http://dati.gov.it/onto/dcatapit#Standard> ;
+        dcatapit:Standard ;
     dc:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
     dc:identifier "SKOS" ;
     dc:title "Simple Knowledge Organization System - SKOS" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/domesticWorkServices/motivi_cessazione> a adms:Asset,
-        <http://dati.gov.it/onto/dcatapit#Dataset>,
+        dcatapit:Dataset,
         <https://w3id.org/italia/social-security/onto/domesticWorkServices/MotivoCessazioneRapportoDiLavoro>,
         skos:ConceptScheme ;
     rdfs:label "Controlled vocabulary of reasons for termination of an employment relationship"@en,
@@ -180,9 +182,9 @@
     skos:notation "RC"@it .
 
 <https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/MC_CSV> a dcat:Distribution,
-        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+        dcatapit:Distribution ;
     dc:description "Questa è la distribuzione CSV del vocabolario controllato sui motivi di cessazione di un rapporto di lavoro"@it,
-        "This is the distribution in CSV of the contract termination reason controlled vocabulary"@en ;
+        "This is the distribution in CSV of the termination of contract clause controlled vocabulary"@en ;
     dc:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
     dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
     dc:title "CSV distribution of the work contract termination reason controlled vocabulary"@en,
@@ -190,8 +192,36 @@
     dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/motivi_cessazione/latest> ;
     dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/motivi_cessazione/latest/motivi_cessazione.csv> .
 
-<https://w3id.org/italia/social-security/data/organization/inps> a foaf:Agent,
-        <http://dati.gov.it/onto/dcatapit#Agent> ;
+<https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/MC_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dc:description "Questa è la distribuzione JSON_LD del vocabolario controllato sui motivi di cessazione di un rapporto di lavoro"@it,
+        "This is the distribution in JSON_LD of the termination of contract clause controlled vocabulary"@en ;
+    dc:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dc:title "Distribuzione JSON_LD del vocabolario controllato sui motivi di cessazione di un rapporto di lavoro"@it,
+        "JSON_LD distribution of the termination of contract clause controlled vocabulary"@en ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/motivi_cessazione/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/motivi_cessazione/latest/motivi_cessazione.json> .
+
+<https://w3id.org/italia/social-security/data/domesticWorkServices/distribution/MC_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dc:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sui motivi di cessazione di un rapporto di lavoro"@it,
+        "This is the distribution in RDF/turtle of the termination of contract clause controlled vocabulary"@en ;
+    dc:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dc:title "Distribuzione RDF/Turtle del vocabolario controllato sui motivi di cessazione di un rapporto di lavoro"@it,
+        "RDF/Turtle distribution of the termination of contract clause controlled vocabulary"@en ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/motivi_cessazione/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/motivi_cessazione/latest/motivi_cessazione.ttl> .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
     dc:identifier "inps" ;
     foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
         "National Institute for Social Security"@en .

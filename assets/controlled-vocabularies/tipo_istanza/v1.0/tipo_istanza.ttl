@@ -3627,17 +3627,6 @@
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_istanza> ;
     ns2:notation "0081-0500-0200"@it .
 
-<https://w3id.org/italia/social-security/data/contributions/distribution/TI_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
-        ns3:Distribution ;
-    ns1:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di istanza adottato dall'INPS"@it,
-        "This is the distribution in RDF/turtle of the istanza type adopted by INPS controlled vocabulary"@en ;
-    ns1:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
-    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    ns1:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di istanza adottato dall'INPS"@it,
-        "RDF/Turtle distribution of the istanza type adopted by INPS controlled vocabulary"@en ;
-    ns3:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_istanza/latest> ;
-    ns3:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_istanza/latest/tipo_istanza.ttl> .
-
 <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a <http://dati.gov.it/onto/dcatapit#Organization>,
         ns4:Kind,
         ns4:Organization ;
@@ -3671,5 +3660,16 @@
         "JSON_LD distribution of the istance type adopted by INPS controlled vocabulary"@en ;
     ns3:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_istanza/latest> ;
     ns3:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_istanza/latest/tipo_istanza.json> .
+
+<https://w3id.org/italia/social-security/data/pensions/distribution/TI_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns3:Distribution ;
+    ns1:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di istanza adottato dall'INPS"@it,
+        "This is the distribution in RDF/turtle of the istanza type adopted by INPS controlled vocabulary"@en ;
+    ns1:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    ns1:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    ns1:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di istanza adottato dall'INPS"@it,
+        "RDF/Turtle distribution of the istanza type adopted by INPS controlled vocabulary"@en ;
+    ns3:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_istanza/latest> ;
+    ns3:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_istanza/latest/tipo_istanza.ttl> .
 
 ### Serialized using the ttlser deterministic serializer v1.2.0
