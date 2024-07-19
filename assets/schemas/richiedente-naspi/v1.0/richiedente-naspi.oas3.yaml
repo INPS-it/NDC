@@ -11,7 +11,7 @@ info:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
   description: |-
-    https://w3id.org/italia/social-security/onto/social-safety-net/RichiedenteNASpI
+    https://w3id.org/italia/social-security/onto/socialSafetyNet/RichiedenteNASpI
 paths: {}
 servers: []
 tags: []
@@ -28,12 +28,12 @@ components:
 
     RichiedenteNASpi:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/RichiedenteNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/RichiedenteNASpI
       # This custom property defines the associated json-ld
       #   context that can be used to semantically describe
       #   the instances.
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         se_iscritto_albo_cassa_professionale: seIscrittoAlbo-CassaProfessionale
         se_svolge_attivita_profesionale: seSvolgeAttivitàProfesionale
         se_titolare_partita_iva: seTitolarePartitaIVA
@@ -44,7 +44,7 @@ components:
         se_socio_di_societa: seSocioDiSocietà
         se_licenziato_per_superamento_periodo_comporto: seLicenziatoPerSuperamentoPeriodoComporto
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/RichiedenteNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/RichiedenteNASpI
       required:
       - codice_fiscale_richiedente_naspi
       - se_iscritto_albo_cassa_professionale

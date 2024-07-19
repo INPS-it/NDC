@@ -11,7 +11,7 @@ info:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
   description: |-
-    https://w3id.org/italia/social-security/onto/social-safety-net/PrestazioneNASpI
+    https://w3id.org/italia/social-security/onto/socialSafetyNet/PrestazioneNASpI
 paths: {}
 servers: []
 tags: []
@@ -32,9 +32,9 @@ components:
 
     PrestazioneNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/PrestazioneNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/PrestazioneNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         durata_teorica_prestazione_naspi: durataTeoricaPrestazioneNASpI
         durata_effettiva_prestazione_naspi: durataEffettivaPrestazioneNASpI
         numero_settimane_contributive_utilizzate: numeroSettimaneContributiveUtilizzate
@@ -55,7 +55,7 @@ components:
         ha_stato_di_cessato_prestazione_naspi:
           "@id": haStatoDiPrestazioneNASpI
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/PrestazioneNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/PrestazioneNASpI
       required:
       - codice_prestazione_naspi
       - durata_teorica_prestazione_naspi
@@ -136,14 +136,14 @@ components:
 
     ComunicazioneNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/ComunicazioneNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/ComunicazioneNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         nota_comunicazione_naspi: notaComunicazioneNASpI
         comunicazione_ha_allegato_per_naspi:
           "@id": haAllegatoPerNASPI
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/ComunicazioneNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/ComunicazioneNASpI
       required:
       - codice_comunicazione_naspi
       - nota_comunicazione_naspi
@@ -166,8 +166,8 @@ components:
 
     CodiceComunicazioneNASpI:
       type: string
-      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroProtocolloNASpI
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroProtocolloNASpI
+      x-refersTo: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroProtocolloNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroProtocolloNASpI
       example: '1554289'
       maxLength: 50
       minLength: 1
@@ -211,11 +211,11 @@ components:
 
     BeneficiarioPrestazioneDiSostegnoAlRedditoNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/BeneficiarioPrestazioneDiSostegnoAlReddito
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/BeneficiarioPrestazioneDiSostegnoAlReddito
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/BeneficiarioPrestazioneDiSostegnoAlReddito
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/BeneficiarioPrestazioneDiSostegnoAlReddito
       required:
       - codice_beneficiario_prestazione_di_sostegno_al_reddito_naspi
       properties:
@@ -235,11 +235,11 @@ components:
 
     StatoDiSospesoDiNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiSospesoDiNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiSospesoDiNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiSospesoDiNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiSospesoDiNASpI
       required:
       - codice_stato_di_sospeso_prestazione_naspi
       properties:
@@ -259,11 +259,11 @@ components:
 
     StatoDiDecadutoDiNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiDecadutoDiNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiDecadutoDiNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiDecadutoDiNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiDecadutoDiNASpI
       required:
       - codice_stato_di_decaduto_prestazione_naspi
       properties:
@@ -283,11 +283,11 @@ components:
 
     StatoDiCessatoDiNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiCessatoDiNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiCessatoDiNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiCessatoDiNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiCessatoDiNASpI
       required:
       - codice_stato_di_cessato_prestazione_naspi
       properties:

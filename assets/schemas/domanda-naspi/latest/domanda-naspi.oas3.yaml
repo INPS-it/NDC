@@ -11,7 +11,7 @@ info:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
   description: |-
-    https://w3id.org/italia/social-security/onto/social-safety-net/DomandaNASpI
+    https://w3id.org/italia/social-security/onto/socialSafetyNet/DomandaNASpI
 paths: {}
 servers: []
 tags: []
@@ -28,20 +28,20 @@ components:
 
     IdDomandaNASpI:
       type: string
-      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroPraticaNASpIDelDelegato
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroPraticaNASpIDelDelegato
+      x-refersTo: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroPraticaNASpIDelDelegato
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroPraticaNASpIDelDelegato
       example: '14734695'
       maxLength: 50
       minLength: 1
 
     DomandaNASpi:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/DomandaNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/DomandaNASpI
       # This custom property defines the associated json-ld
       #   context that can be used to semantically describe
       #   the instances.
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         nota_domanda_naspi: notaDomandaNASpI
         se_indennita_mancato_preavviso: seIndennitàMancatoPreavviso
         ha_richiedente_naspi:
@@ -67,7 +67,7 @@ components:
         ha_modalita_di_pagamento_naspi:
           "@id": haModalitàDiPagamentoNASpI
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/DomandaNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/DomandaNASpI
       required:
       - codice_domanda_naspi
       - nota_domanda_naspi
@@ -185,13 +185,13 @@ components:
 
     StatoDiBozzaDiDomandaNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiBozzaDiDomandaNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiBozzaDiDomandaNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         numero_protocollo_naspi_stato_di_bozza: numeroProtocolloNASpI
         data_presentazione_naspi_stato_di_bozza: dataPresentazioneNASpI
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiBozzaDiDomandaNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiBozzaDiDomandaNASpI
       required:
       - codice_stato_di_bozza_di_domanda_naspi
       - numero_protocollo_naspi_stato_di_bozza
@@ -214,21 +214,21 @@ components:
 
     CodiceStatoBozzaDomandaNASpI:
       type: string
-      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      x-refersTo: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
       example: '12485963'
       maxLength: 50
       minLength: 1
 
     StatoDiProtocollataDiDomandaNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiProtocollataDiDomandaNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiProtocollataDiDomandaNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         numero_protocollo_naspi_stato_di_protocollata: numeroProtocolloNASpI
         data_presentazione_naspi_stato_di_protocollata: dataPresentazioneNASpI
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiProtocollataDiDomandaNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiProtocollataDiDomandaNASpI
       required:
       - codice_stato_di_protocollata_di_domanda_naspi
       - numero_protocollo_naspi_stato_di_protocollata
@@ -251,21 +251,21 @@ components:
 
     CodiceStatoProtocollataDomandaNASpI:
       type: string
-      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      x-refersTo: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
       example: '13585963'
       maxLength: 50
       minLength: 1
 
     StatoDiIntegrazioneDiDomandaNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiIntegrazioneDiDomandaNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiIntegrazioneDiDomandaNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         numero_protocollo_naspi_stato_di_integrazione: numeroProtocolloNASpI
         data_presentazione_naspi_stato_di_integrazione: dataPresentazioneNASpI
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiIntegrazioneDiDomandaNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiIntegrazioneDiDomandaNASpI
       required:
       - codice_stato_di_integrazione_di_domanda_naspi
       - numero_protocollo_naspi_stato_di_integrazione
@@ -288,21 +288,21 @@ components:
 
     CodiceStatoIntegrazioneDomandaNASpI:
       type: string
-      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      x-refersTo: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
       example: '26458597'
       maxLength: 50
       minLength: 1
 
     StatoDiRifiutataDiDomandaNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRifiutataDiDomandaNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiRifiutataDiDomandaNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         numero_protocollo_naspi_stato_di_rifiutata: numeroProtocolloNASpI
         data_presentazione_naspi_stato_di_rifiutata: dataPresentazioneNASpI
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRifiutataDiDomandaNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiRifiutataDiDomandaNASpI
       required:
       - codice_stato_di_rifiutata_di_domanda_naspi
       - numero_protocollo_naspi_stato_di_rifiutata
@@ -325,8 +325,8 @@ components:
 
     CodiceStatoRifiutataDomandaNASpI:
       type: string
-      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      x-refersTo: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
       example: '13259685'
       maxLength: 50
       minLength: 1
@@ -370,12 +370,12 @@ components:
 
     ModalitaDiPagamentoNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/ModalitàDiPagamentoNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/ModalitàDiPagamentoNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         bic: BIC
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/ModalitàDiPagamentoNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/ModalitàDiPagamentoNASpI
       required:
       - iban
       - bic
@@ -392,8 +392,8 @@ components:
 
     IBANTitolareNASpI:
       type: string
-      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/IBAN
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/IBAN
+      x-refersTo: https://w3id.org/italia/social-security/onto/socialSafetyNet/IBAN
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/IBAN
       example: 'IT60X0542811101000000123456'
       maxLength: 50
       minLength: 1

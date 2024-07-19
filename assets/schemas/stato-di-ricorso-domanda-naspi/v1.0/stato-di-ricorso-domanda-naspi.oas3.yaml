@@ -11,7 +11,7 @@ info:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
   description: |-
-    https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRicorsoDiDomandaNASpI
+    https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiRicorsoDiDomandaNASpI
 paths: {}
 servers: []
 tags: []
@@ -20,23 +20,23 @@ components:
 
     CodiceStatoRicorsoDomandaNASpI:
       type: string
-      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      x-refersTo: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
       example: '2945856'
       maxLength: 50
       minLength: 1
 
     StatoDiRicorsoDiDomandaNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRicorsoDiDomandaNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiRicorsoDiDomandaNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         numero_protocollo_naspi_stato_di_ricorso: numeroProtocolloNASpI
         data_presentazione_naspi_stato_di_ricorso: dataPresentazioneNASpI
         ha_atto_di_ricorso_domanda_naspi:
           "@id": haAttoDiRicorsoDomandaNASpI
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiRicorsoDiDomandaNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiRicorsoDiDomandaNASpI
       required:
       - codice_stato_di_ricorso_di_domanda_naspi
       - numero_protocollo_naspi_stato_di_ricorso
@@ -65,11 +65,11 @@ components:
 
     AttoDiRicorsoDomandaNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiRicorsoDomandaNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/AttoDiRicorsoDomandaNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiRicorsoDomandaNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/AttoDiRicorsoDomandaNASpI
       required:
       - codice_atto_ricorso_domanda_naspi
       properties:

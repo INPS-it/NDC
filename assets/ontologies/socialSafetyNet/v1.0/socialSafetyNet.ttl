@@ -10,7 +10,7 @@
 @prefix INPSContributions: <https://w3id.org/italia/social-security/onto/contributions/> .
 @prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
 @prefix INPSPensions: <https://w3id.org/italia/social-security/onto/pensions/> .
-@prefix INPSSafety: <https://w3id.org/italia/social-security/onto/social-safety-net/> .
+@prefix INPSSafety: <https://w3id.org/italia/social-security/onto/socialSafetyNet/> .
 @prefix L0: <https://w3id.org/italia/onto/l0/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -44,14 +44,14 @@ INPSSafety: a owl:Ontology ;
         INPSSafety:Inoccupato,
         INPSSafety:RichiedenteNASpI ;
     adms:hasOntologyLanguage adms:OWL ;
-    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-N-TRIPLES>,
-        <https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-RDF-TURTLE>,
-        <https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-RDF-XML> ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/socialSafetyNet/distribution/SAFETY-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/socialSafetyNet/distribution/SAFETY-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/socialSafetyNet/distribution/SAFETY-RDF-XML> ;
     adms:hasTask adms:AnnotationTask,
         adms:QueryFormulationTask,
         adms:SearchTask ;
     adms:last INPSSafety:1.0 ;
-    adms:officialURI "https://w3id.org/italia/social-security/onto/social-safety-net"^^xsd:anyURI ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/socialSafetyNet"^^xsd:anyURI ;
     adms:prefix "INPSSafety" ;
     adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
     adms:status "catalogued",
@@ -72,7 +72,7 @@ INPSSafety: a owl:Ontology ;
     dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
     dct:description "L'ontologia INPS relativa alla NASpI rappresenta un insieme strutturato di concetti e relazioni che descrivono in modo dettagliato il sistema di indennità di disoccupazione NASpI erogato dall'Istituto Nazionale della Previdenza Sociale (INPS)."@it,
         "The INPS ontology related to NASpI represents a structured set of concepts and relationships that provide a detailed description of the NASpI unemployment benefit system administered by the Italian National Institute of Social Security (INPS)."@en ;
-    dct:identifier "https://w3id.org/italia/social-security/onto/social-safety-net" ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/socialSafetyNet" ;
     dct:issued "2024-06-06T00:00:00+00:00"^^xsd:dateTime ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
@@ -2939,7 +2939,7 @@ ateco-2007:A a owl:NamedIndividual .
     foaf:name "Digital Transformation Team"@en,
         "Team per la Trasformazione Digitale"@it .
 
-<https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-N-TRIPLES> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/socialSafetyNet/distribution/SAFETY-N-TRIPLES> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;
@@ -2952,7 +2952,7 @@ ateco-2007:A a owl:NamedIndividual .
     dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - NASpI"@it,
         "N-TRIPLES distribution of the INPS ontology - NASpI"@en .
 
-<https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-RDF-TURTLE> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/socialSafetyNet/distribution/SAFETY-RDF-TURTLE> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;
@@ -2965,7 +2965,7 @@ ateco-2007:A a owl:NamedIndividual .
     dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - NASpI"@it,
         "RDF/Turtle distribution of the INPS ontology - NASpI"@en .
 
-<https://w3id.org/italia/social-security/data/social-safety-net/distribution/SAFETY-RDF-XML> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/socialSafetyNet/distribution/SAFETY-RDF-XML> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;

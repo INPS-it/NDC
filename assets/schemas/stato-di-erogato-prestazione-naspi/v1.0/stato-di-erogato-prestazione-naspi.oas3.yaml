@@ -11,7 +11,7 @@ info:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
   description: |-
-    https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiErogatoDiNASpI
+    https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiErogatoDiNASpI
 paths: {}
 servers: []
 tags: []
@@ -28,9 +28,9 @@ components:
 
     StatoDiErogatoDiNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiErogatoDiNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiErogatoDiNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         importo_lordo_mensile_indennita_naspi: importoLordoMensileIndennitàNASpI
         se_richiesta_detrazione_per_lavoro_dipendente: seRichiestaDetrazionePerLavoroDipendente
         ha_comunicazione_eventi_in_espatrio:
@@ -38,7 +38,7 @@ components:
         ha_sanzione_naspi:
           "@id": haSanzioneNASpI
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiErogatoDiNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiErogatoDiNASpI
       required:
       - codice_stato_di_erogato_naspi
       - importo_lordo_mensile_indennita_naspi
@@ -72,11 +72,11 @@ components:
 
     AttoDiNotificaEventoInEspatrio:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiNotificaEventoInEspatrio
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/AttoDiNotificaEventoInEspatrio
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiNotificaEventoInEspatrio
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/AttoDiNotificaEventoInEspatrio
       required:
       - codice_atto_notifica_envento_in_espatrio_naspi
       properties:
@@ -96,15 +96,15 @@ components:
 
     SanzionePerViolazioneObblighiNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/SanzionePerViolazioneObblighiNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/SanzionePerViolazioneObblighiNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         importo_sanzione_naspi: importoSanzioneNASpI
         data_validita_sanzione_naspi: dataValiditàSanzioneNASpI
         ha_atto_di_notifica_violazione:
           "@id": haAttoDiNotificaViolazione
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/SanzionePerViolazioneObblighiNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/SanzionePerViolazioneObblighiNASpI
       required:
       - codice_atto_notifica_envento_in_espatrio_naspi
       - importo_sanzione_naspi
@@ -141,12 +141,12 @@ components:
 
     AttoDiNotificaViolazioneObblighiAttivazione:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiNotificaViolazioneObblighiAttivazione
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/AttoDiNotificaViolazioneObblighiAttivazione
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         data_avvenuta_violazione_attivazione: dataAvvenutaViolazioneAttivazione
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/AttoDiNotificaViolazioneObblighiAttivazione
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/AttoDiNotificaViolazioneObblighiAttivazione
       required:
       - codice_atto_notifica_violazione_obblighi_attivazione_naspi
       - data_avvenuta_violazione_attivazione

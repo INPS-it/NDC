@@ -11,7 +11,7 @@ info:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
   description: |-
-    https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiAccoltaDiDomandaNASpI
+    https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiAccoltaDiDomandaNASpI
 paths: {}
 servers: []
 tags: []
@@ -20,17 +20,17 @@ components:
 
     CodiceStatoAccoltaDomandaNASpI:
       type: string
-      x-refersTo: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/numeroDomusNASpI
+      x-refersTo: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroDomusNASpI
       example: '19685234'
       maxLength: 50
       minLength: 1
 
     StatoDiAccoltaDiDomandaNASpI:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiAccoltaDiDomandaNASpI
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiAccoltaDiDomandaNASpI
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/social-safety-net/"
+        "@vocab": "https://w3id.org/italia/social-security/onto/socialSafetyNet/"
         numero_protocollo_naspi_stato_di_accolta: numeroProtocolloNASpI
         data_presentazione_naspi_stato_di_accolta: dataPresentazioneNASpI
         contribuzione_post_prestazioni_fruite: contribuzionePostPrestazioniFruite
@@ -40,7 +40,7 @@ components:
         importo_retribuzione_utile_complessiva: importoRetribuzioneUtileComplessiva
         importo_mensile_iniziale: importoMensileIniziale
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/social-safety-net/StatoDiAccoltaDiDomandaNASpI
+      description: https://w3id.org/italia/social-security/onto/socialSafetyNet/StatoDiAccoltaDiDomandaNASpI
       required:
       - codice_stato_di_accolta_di_domanda_naspi
       - numero_protocollo_naspi_stato_di_accolta
