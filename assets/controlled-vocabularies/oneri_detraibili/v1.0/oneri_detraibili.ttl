@@ -1,0 +1,688 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix detraibilicat: <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili/categoria/> .
+@prefix detraibilicod: <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili/concetto/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSUC: <https://w3id.org/italia/social-security/onto/CUStatement/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+detraibilicat:19 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Oneri detraibili al 19%"@it ;
+    skos:prefLabel "Oneri detraibili al 19%"@it ;
+    dct:identifier "19" ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:narrower detraibilicod:1,
+        detraibilicod:2,
+        detraibilicod:3,
+        detraibilicod:4,
+        detraibilicod:5,
+        detraibilicod:6,
+        detraibilicod:7,
+        detraibilicod:8,
+        detraibilicod:9,
+        detraibilicod:10,
+        detraibilicod:11,
+        detraibilicod:12,
+        detraibilicod:13,
+        detraibilicod:14,
+        detraibilicod:15,
+        detraibilicod:16,
+        detraibilicod:17,
+        detraibilicod:18,
+        detraibilicod:20,
+        detraibilicod:21,
+        detraibilicod:22,
+        detraibilicod:24,
+        detraibilicod:25,
+        detraibilicod:26,
+        detraibilicod:27,
+        detraibilicod:28,
+        detraibilicod:29,
+        detraibilicod:30,
+        detraibilicod:31,
+        detraibilicod:32,
+        detraibilicod:33,
+        detraibilicod:35,
+        detraibilicod:36,
+        detraibilicod:38,
+        detraibilicod:39,
+        detraibilicod:40,
+        detraibilicod:43,
+        detraibilicod:44,
+        detraibilicod:45,
+        detraibilicod:46,
+        detraibilicod:47,
+        detraibilicod:48,
+        detraibilicod:99 ;
+    skos:notation "19" ;
+    xkos:depth 1 .
+
+detraibilicat:26 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Oneri detraibili al 26%"@it ;
+    skos:prefLabel "Oneri detraibili al 26%"@it ;
+    dct:identifier "26" ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:narrower detraibilicod:61,
+        detraibilicod:62 ;
+    skos:notation "26" ;
+    xkos:depth 1 .
+
+detraibilicat:30 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Oneri detraibili al 30%"@it ;
+    skos:prefLabel "Oneri detraibili al 30%"@it ;
+    dct:identifier "30" ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:narrower detraibilicod:71 ;
+    skos:notation "30" ;
+    xkos:depth 1 .
+
+detraibilicat:35 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Oneri detraibili al 35%"@it ;
+    skos:prefLabel "Oneri detraibili al 35%"@it ;
+    dct:identifier "35" ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:narrower detraibilicod:76 ;
+    skos:notation "35" ;
+    xkos:depth 1 .
+
+detraibilicat:90 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Oneri detraibili al 90%"@it ;
+    skos:prefLabel "Oneri detraibili al 90%"@it ;
+    dct:identifier "90" ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:narrower detraibilicod:81 ;
+    skos:notation "90" ;
+    xkos:depth 1 .
+
+detraibilicod:1 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese sanitarie"@it ;
+    skos:prefLabel "Spese sanitarie"@it ;
+    dct:identifier "1"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "1"@it ;
+    xkos:depth 2 .
+
+detraibilicod:2 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese sanitarie per familiari non a carico"@it ;
+    skos:prefLabel "Spese sanitarie per familiari non a carico"@it ;
+    dct:identifier "2"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "2"@it ;
+    xkos:depth 2 .
+
+detraibilicod:3 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese sanitarie per persona con disabilità"@it ;
+    skos:prefLabel "Spese sanitarie per persona con disabilità"@it ;
+    dct:identifier "3"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "3"@it ;
+    xkos:depth 2 .
+
+detraibilicod:4 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese per veicoli per persona con disabilità"@it ;
+    skos:prefLabel "Spese per veicoli per persona con disabilità"@it ;
+    dct:identifier "4"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "4"@it ;
+    xkos:depth 2 .
+
+detraibilicod:5 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese per l’acquisto di cani guida"@it ;
+    skos:prefLabel "Spese per l’acquisto di cani guida"@it ;
+    dct:identifier "5"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "5"@it ;
+    xkos:depth 2 .
+
+detraibilicod:6 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Totale spese sanitarie per le quali è stata richiesta la rateizzazione nella precedente dichiarazione"@it ;
+    skos:prefLabel "Totale spese sanitarie per le quali è stata richiesta la rateizzazione nella precedente dichiarazione"@it ;
+    dct:identifier "6"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "6"@it ;
+    xkos:depth 2 .
+
+detraibilicod:7 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Interessi per mutui ipotecari per acquisto abitazione principale stipulati fino al 31 dicembre 2021"@it ;
+    skos:prefLabel "Interessi per mutui ipotecari per acquisto abitazione principale stipulati fino al 31 dicembre 2021"@it ;
+    dct:identifier "7"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "7"@it ;
+    xkos:depth 2 .
+
+detraibilicod:8 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Interessi per mutui ipotecari per acquisto altri immobili"@it ;
+    skos:prefLabel "Interessi per mutui ipotecari per acquisto altri immobili"@it ;
+    dct:identifier "8"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "8"@it ;
+    xkos:depth 2 .
+
+detraibilicod:9 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Interessi per mutui contratti nel 1997 per recupero edilizio"@it ;
+    skos:prefLabel "Interessi per mutui contratti nel 1997 per recupero edilizio"@it ;
+    dct:identifier "9"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "9"@it ;
+    xkos:depth 2 .
+
+detraibilicod:10 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Interessi per mutui ipotecari per costruzione abitazione principale stipulati fino al 31 dicembre 2021"@it ;
+    skos:prefLabel "Interessi per mutui ipotecari per costruzione abitazione principale stipulati fino al 31 dicembre 2021"@it ;
+    dct:identifier "10"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "10"@it ;
+    xkos:depth 2 .
+
+detraibilicod:11 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Interessi per prestiti o mutui agrari stipulati fino al 31 dicembre 2021"@it ;
+    skos:prefLabel "Interessi per prestiti o mutui agrari stipulati fino al 31 dicembre 2021"@it ;
+    dct:identifier "11"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "11"@it ;
+    xkos:depth 2 .
+
+detraibilicod:12 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese per istruzione sostenute per la frequenza di scuole dell’infanzia, del primo ciclo di istruzione e della scuola secondaria di secondo grado del sistema nazionale di istruzione"@it ;
+    skos:prefLabel "Spese per istruzione sostenute per la frequenza di scuole dell’infanzia, del primo ciclo di istruzione e della scuola secondaria di secondo grado del sistema nazionale di istruzione"@it ;
+    dct:identifier "12"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "12"@it ;
+    xkos:depth 2 .
+
+detraibilicod:13 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese per istruzione sostenute per la frequenza di corsi di istruzione universitaria presso università statali e non statali"@it ;
+    skos:prefLabel "Spese per istruzione sostenute per la frequenza di corsi di istruzione universitaria presso università statali e non statali"@it ;
+    dct:identifier "13"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "13"@it ;
+    xkos:depth 2 .
+
+detraibilicod:14 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese funebri"@it ;
+    skos:prefLabel "Spese funebri"@it ;
+    dct:identifier "14"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "14"@it ;
+    xkos:depth 2 .
+
+detraibilicod:15 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese per addetti all’assistenza personale"@it ;
+    skos:prefLabel "Spese per addetti all’assistenza personale"@it ;
+    dct:identifier "15"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "15"@it ;
+    xkos:depth 2 .
+
+detraibilicod:16 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese per attività sportive per ragazzi (palestre, piscine ed altre strutture sportive)"@it ;
+    skos:prefLabel "Spese per attività sportive per ragazzi (palestre, piscine ed altre strutture sportive)"@it ;
+    dct:identifier "16"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "16"@it ;
+    xkos:depth 2 .
+
+detraibilicod:17 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese per intermediazione immobiliare"@it ;
+    skos:prefLabel "Spese per intermediazione immobiliare"@it ;
+    dct:identifier "17"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "17"@it ;
+    xkos:depth 2 .
+
+detraibilicod:18 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese per canoni di locazione sostenute da studenti universitari fuori sede"@it ;
+    skos:prefLabel "Spese per canoni di locazione sostenute da studenti universitari fuori sede"@it ;
+    dct:identifier "18"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "18"@it ;
+    xkos:depth 2 .
+
+detraibilicod:20 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali a favore delle popolazioni colpite"@it ;
+    skos:prefLabel "Erogazioni liberali a favore delle popolazioni colpite"@it ;
+    dct:identifier "20"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "20"@it ;
+    xkos:depth 2 .
+
+detraibilicod:21 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali alle società ed associazioni sportive dilettantistiche"@it ;
+    skos:prefLabel "Erogazioni liberali alle società ed associazioni sportive dilettantistiche"@it ;
+    dct:identifier "21"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "21"@it ;
+    xkos:depth 2 .
+
+detraibilicod:22 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Contributi associativi alle società di mutuo soccorso"@it ;
+    skos:prefLabel "Contributi associativi alle società di mutuo soccorso"@it ;
+    dct:identifier "22"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "22"@it ;
+    xkos:depth 2 .
+
+detraibilicod:24 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali a favore della società di cultura Biennale di Venezia"@it ;
+    skos:prefLabel "Erogazioni liberali a favore della società di cultura Biennale di Venezia"@it ;
+    dct:identifier "24"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "24"@it ;
+    xkos:depth 2 .
+
+detraibilicod:25 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese relative a beni soggetti a regime vincolistico"@it ;
+    skos:prefLabel "Spese relative a beni soggetti a regime vincolistico"@it ;
+    dct:identifier "25"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "25"@it ;
+    xkos:depth 2 .
+
+detraibilicod:26 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali per attività culturali ed artistiche"@it ;
+    skos:prefLabel "Erogazioni liberali per attività culturali ed artistiche"@it ;
+    dct:identifier "26"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "26"@it ;
+    xkos:depth 2 .
+
+detraibilicod:27 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali a favore di enti operanti nello spettacolo"@it ;
+    skos:prefLabel "Erogazioni liberali a favore di enti operanti nello spettacolo"@it ;
+    dct:identifier "27"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "27"@it ;
+    xkos:depth 2 .
+
+detraibilicod:28 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali a favore di fondazioni operanti nel settore musicale"@it ;
+    skos:prefLabel "Erogazioni liberali a favore di fondazioni operanti nel settore musicale"@it ;
+    dct:identifier "28"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "28"@it ;
+    xkos:depth 2 .
+
+detraibilicod:29 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese veterinarie"@it ;
+    skos:prefLabel "Spese veterinarie"@it ;
+    dct:identifier "29"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "29"@it ;
+    xkos:depth 2 .
+
+detraibilicod:30 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese sostenute per servizi di interpretariato dai soggetti ricosciuti sordomuti"@it ;
+    skos:prefLabel "Spese sostenute per servizi di interpretariato dai soggetti ricosciuti sordomuti"@it ;
+    dct:identifier "30"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "30"@it ;
+    xkos:depth 2 .
+
+detraibilicod:31 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali a favore degli istituti scolastici di ogni ordine e grado"@it ;
+    skos:prefLabel "Erogazioni liberali a favore degli istituti scolastici di ogni ordine e grado"@it ;
+    dct:identifier "31"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "31"@it ;
+    xkos:depth 2 .
+
+detraibilicod:32 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese relative ai contributi versati per il riscatto degli anni di laurea dei familiari a carico"@it ;
+    skos:prefLabel "Spese relative ai contributi versati per il riscatto degli anni di laurea dei familiari a carico"@it ;
+    dct:identifier "32"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "32"@it ;
+    xkos:depth 2 .
+
+detraibilicod:33 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese per asili nido"@it ;
+    skos:prefLabel "Spese per asili nido"@it ;
+    dct:identifier "33"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "33"@it ;
+    xkos:depth 2 .
+
+detraibilicod:35 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali al fondo per l’ammortamento di titoli di Stato"@it ;
+    skos:prefLabel "Erogazioni liberali al fondo per l’ammortamento di titoli di Stato"@it ;
+    dct:identifier "35"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "35"@it ;
+    xkos:depth 2 .
+
+detraibilicod:36 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Premi per assicurazioni sulla vita e contro gli infortuni"@it ;
+    skos:prefLabel "Premi per assicurazioni sulla vita e contro gli infortuni"@it ;
+    dct:identifier "36"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "36"@it ;
+    xkos:depth 2 .
+
+detraibilicod:38 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Premi relativi alle assicurazioni finalizzate alla tutela delle persone con disabilità grave"@it ;
+    skos:prefLabel "Premi relativi alle assicurazioni finalizzate alla tutela delle persone con disabilità grave"@it ;
+    dct:identifier "38"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "38"@it ;
+    xkos:depth 2 .
+
+detraibilicod:39 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Premi per assicurazioni per rischio di non autosufficienza"@it ;
+    skos:prefLabel "Premi per assicurazioni per rischio di non autosufficienza"@it ;
+    dct:identifier "39"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "39"@it ;
+    xkos:depth 2 .
+
+detraibilicod:40 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese sostenute per l’acquisto degli abbonamenti ai servizi di trasporto pubblico locale, regionale e interregionale"@it ;
+    skos:prefLabel "Spese sostenute per l’acquisto degli abbonamenti ai servizi di trasporto pubblico locale, regionale e interregionale"@it ;
+    dct:identifier "40"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "40"@it ;
+    xkos:depth 2 .
+
+detraibilicod:43 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Premi relativi alle assicurazioni aventi per oggetto il rischio di eventi calamitosi"@it ;
+    skos:prefLabel "Premi relativi alle assicurazioni aventi per oggetto il rischio di eventi calamitosi"@it ;
+    dct:identifier "43"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "43"@it ;
+    xkos:depth 2 .
+
+detraibilicod:44 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese sostenute in favore dei minori o di maggiorenni con Disturbo Specifico dell’Apprendimento (DSA)"@it ;
+    skos:prefLabel "Spese sostenute in favore dei minori o di maggiorenni con Disturbo Specifico dell’Apprendimento (DSA)"@it ;
+    dct:identifier "44"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "44"@it ;
+    xkos:depth 2 .
+
+detraibilicod:45 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Spese di iscrizione annuale e abbonamento di ragazzi a conservatori di musica, a istituzioni di alta formazione artistica, musicale e coreutica (AFAM) legalmente riconosciute ai sensi della legge 21 dicembre 1999, n. 508, a scuole di musica iscritte nei registri regionali nonché a cori, bande e scuole di musica riconosciuti da una pubblica amministrazione, per lo studio e la pratica della musica"@it ;
+    skos:prefLabel "Spese di iscrizione annuale e abbonamento di ragazzi a conservatori di musica, a istituzioni di alta formazione artistica, musicale e coreutica (AFAM) legalmente riconosciute ai sensi della legge 21 dicembre 1999, n. 508, a scuole di musica iscritte nei registri regionali nonché a cori, bande e scuole di musica riconosciuti da una pubblica amministrazione, per lo studio e la pratica della musica"@it ;
+    dct:identifier "45"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "45"@it ;
+    xkos:depth 2 .
+
+detraibilicod:46 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Interessi per mutui ipotecari per costruzione abitazione principale stipulati dal 1° gennaio 2022"@it ;
+    skos:prefLabel "Interessi per mutui ipotecari per costruzione abitazione principale stipulati dal 1° gennaio 2022"@it ;
+    dct:identifier "46"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "46"@it ;
+    xkos:depth 2 .
+
+detraibilicod:47 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Interessi per prestiti o mutui agrari stipulati dal 1° gennaio 2022"@it ;
+    skos:prefLabel "Interessi per prestiti o mutui agrari stipulati dal 1° gennaio 2022"@it ;
+    dct:identifier "47"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "47"@it ;
+    xkos:depth 2 .
+
+detraibilicod:48 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Interessi per mutui ipotecari per acquisto abitazione principale stipulati dal 1° gennaio 2022"@it ;
+    skos:prefLabel "Interessi per mutui ipotecari per acquisto abitazione principale stipulati dal 1° gennaio 2022"@it ;
+    dct:identifier "48"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "48"@it ;
+    xkos:depth 2 .
+
+detraibilicod:61 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali a favore delle ONLUS"@it ;
+    skos:prefLabel "Erogazioni liberali a favore delle ONLUS"@it ;
+    dct:identifier "61"@it ;
+    skos:broader detraibilicat:26 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "61"@it ;
+    xkos:depth 2 .
+
+detraibilicod:62 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali a favore dei partiti politici"@it ;
+    skos:prefLabel "Erogazioni liberali a favore dei partiti politici"@it ;
+    dct:identifier "62"@it ;
+    skos:broader detraibilicat:26 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "62"@it ;
+    xkos:depth 2 .
+
+detraibilicod:71 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali in denaro o in natura a favore delle ONLUS, APS e ETS"@it ;
+    skos:prefLabel "Erogazioni liberali in denaro o in natura a favore delle ONLUS, APS e ETS"@it ;
+    dct:identifier "71"@it ;
+    skos:broader detraibilicat:30 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "71"@it ;
+    xkos:depth 2 .
+
+detraibilicod:76 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Erogazioni liberali in denaro o in natura a favore delle organizzazioni di volontariato (OV) e ETS"@it ;
+    skos:prefLabel "Erogazioni liberali in denaro o in natura a favore delle organizzazioni di volontariato (OV) e ETS"@it ;
+    dct:identifier "76"@it ;
+    skos:broader detraibilicat:35 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "76"@it ;
+    xkos:depth 2 .
+
+detraibilicod:81 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Premi relativi alle assicurazioni aventi per oggetto il rischio di eventi calamitosi"@it ;
+    skos:prefLabel "Premi relativi alle assicurazioni aventi per oggetto il rischio di eventi calamitosi"@it ;
+    dct:identifier "81"@it ;
+    skos:broader detraibilicat:90 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "81"@it ;
+    xkos:depth 2 .
+
+detraibilicod:99 a INPSUC:OneriDetraibili,
+        skos:Concept ;
+    rdfs:label "Altri oneri detraibili"@it ;
+    skos:prefLabel "Altri oneri detraibili"@it ;
+    dct:identifier "99"@it ;
+    skos:broader detraibilicat:19 ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    skos:notation "99"@it ;
+    xkos:depth 2 .
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> a adms:Asset,
+        dcatapit:Dataset,
+        INPSUC:OneriDetraibili,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement Tax Reliefs Controlled Vocabulary"@en,
+        "Vocabolario controllato degli oneri detraibili della Cerficazione lavoro dipendente assimilato e assistenza fiscale"@it ;
+    skos:prefLabel "Vocabolario controllato degli oneri detraibili della Cerficazione lavoro dipendente assimilato e assistenza fiscale"@it ;
+    rdfs:comment "Controlled vocabulary on the defined set of tax reliefs in a CU Statement"@en,
+        "Vocabolario controllato degli oneri detraibili che rappresenta le diverse categorie di oneri detraibili con le rispettive aliquote fiscali"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/OD_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/OD_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/OD_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "CU statement tax reliefs"@en,
+        "inps"@en,
+        "inps"@it,
+        "oneri detraibili della certificazione unica"@it,
+        "tax reliefs"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement Tax Reliefs Controlled Vocabulary"@en,
+        "Vocabolario controllato dei tipi oneri detraibili che rappresenta le diverse categorie di oneri detraibili con le rispettive aliquote fiscali"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili" ;
+    dct:issued "2024-10-24"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-22"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement Tax Reliefs Controlled Vocabulary"@en,
+        "Vocabolario controllato degli oneri detraibili che rappresenta le diverse categorie di oneri detraibili con le rispettive aliquote fiscali"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "oneri_detraibili" ;
+    skos:hasTopConcept detraibilicat:19,
+        detraibilicat:26,
+        detraibilicat:30,
+        detraibilicat:35,
+        detraibilicat:90 ;
+    xkos:numberOfLevels "2" .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/OD_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/oneri_detraibili/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/oneri_detraibili/latest/oneri_detraibili.csv> ;
+    dct:description "CU statement tax reliefs controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato sugli oneri detraibili come adottati dall'INPS ed espressi dalla certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement tax reliefs controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato sugli oneri detraibili come adottati dall'INPS ed espressi dalla certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/OD_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/oneri_detraibili/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/oneri_detraibili/latest/oneri_detraibili.json> ;
+    dct:description "CU statement tax reliefs controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato sugli oneri detraibili come adottati dall'INPS ed espressi dalla certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement tax reliefs controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato sugli oneri detraibili come adottati dall'INPS ed espressi dalla certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/OD_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/oneri_detraibili/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/oneri_detraibili/latest/oneri_detraibili.ttl> ;
+    dct:description "CU statement tax reliefs controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato sugli oneri detraibili come adottati dall'INPS ed espressi dalla certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement tax reliefs controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato sugli oneri detraibili come adottati dall'INPS ed espressi dalla certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

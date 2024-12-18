@@ -1,0 +1,80 @@
+@prefix admsapit: <https://w3id.org/italia/onto/ADMS/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSUC: <https://w3id.org/italia/social-security/onto/uniqueCertification/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+INPSUC: a owl:Ontology ;
+    foaf:name "Ontologia INPS relativa alle entità e alle relazioni che descrivono la Certificazione Unica Ordinaria." .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+### Annotations
+
+<https://w3id.org/italia/schemas/certificazione-unica-ordinaria/latest/certificazione-unica-ordinaria.oas3.yaml> a dcatapit:Dataset,
+        dcatapit:Distribution ;
+    rdfs:label "Consultazione Certificazione Unica Ordinaria API"@it ;
+    rdfs:comment "Servizio di notifica"@it ;
+    owl:versionInfo "1.0"@it ;
+    admsapit:acronym "inps" ;
+    admsapit:hasKeyClass INPSUC:CertificazioneUnicaOrdinaria ;
+    admsapit:prefix "INPSUC"^^xsd:string ;
+    admsapit:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/certificazione-unica-ordinaria/latest> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/schemas/certificazione-unica-ordinaria/latest/certificazione-unica-ordinaria.oas3.yaml> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/certificazione-unica-ordinaria/latest/certificazione-unica-ordinaria.oas3.yaml> ;
+    dcat:keyword "Certificazione Unica"@it,
+        "Contribution"@en,
+        "Contributo"@it,
+        "Income"@en,
+        "Reddito"@it,
+        "Unique Certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo INPSUC: ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Il servizio viene invocato per ottenere le informazioni sulla certificazione unica. Definisce il modello della Certificazione Unica Ordinaria che il sostituto d'imposta trasmette all’Agenzia delle Entrate. Detta certificazione prevede una serie di informazioni aggiuntive rispetto a quelle riportate nel modello CU sintetico, informazioni utili all’Agenzia delle Entrate sia per il 730 precompilato, sia per effettuare i controlli d’ufficio e gli accertamenti in tempi più rapidi rispetto al passato" ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+    dct:identifier <https://w3id.org/italia/schemas/certificazione-unica-ordinaria> ;
+    dct:issued "2024-10-28"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-28"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "Consultazione Certificazione Unica Ordinaria API"@it .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

@@ -1,0 +1,386 @@
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
+@prefix CLV: <https://w3id.org/italia/onto/CLV/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPV: <https://w3id.org/italia/onto/CPV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSRL: <https://w3id.org/italia/social-security/onto/relevantLegislation/> .
+@prefix INPSSEP: <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> .
+@prefix INPSSP: <https://w3id.org/italia/social-security/onto/INPSServicePortal/> .
+@prefix INPSTFP: <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> .
+@prefix L0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+INPSSP: a owl:Ontology ;
+    owl:versionIRI INPSSP:1.0 ;
+    owl:imports CLV:,
+        COV:,
+        CPV:,
+        L0:,
+        RO: ;
+    rdfs:label "Ontologia Cassetto previdenziale di INPS"@it,
+        "Service Portal INPS Ontology"@en ;
+    rdfs:comment "Ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondo i criteri dell'istituto."@it,
+        "This INPS ontology describes the main entities and proprieties of the Service Portal according to the INPS agency."@en ;
+    owl:versionInfo "1.0 - Modificata il 29 Ottobre 2024"@it,
+        "1.0 - Modified on 29 October 2024"@en ;
+    rdfs:isDefinedBy INPSSP: ;
+    adms:acronym "inps" ;
+    adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+    adms:hasFormalityLevel adms:Formal ;
+    adms:hasKeyClass INPSSP:CassettoPrevidenziale,
+        INPSSP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo,
+        INPSSP:DelegaRilasciata ;
+    adms:hasOntologyLanguage adms:OWL ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-XML> ;
+    adms:hasTask adms:AnnotationTask,
+        adms:QueryFormulationTask,
+        adms:SearchTask ;
+    adms:last INPSSP:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/INPSServicePortal/"^^xsd:anyURI ;
+    adms:prefix "INPSSP" ;
+    adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+    adms:status "catalogued",
+        "published" ;
+    adms:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    adms:type adms:ServiceOnytology ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:keyword "Cassetto previdenziale"@it,
+        "Service Portal"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell'istituto."@it,
+        "This INPS ontology describes the main entities and proprieties of the Service Portal according to the INPS agency."@en ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/INPSServicePortal" ;
+    dct:issued "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "Ontologia Cassetto previdenziale di INPS "@it,
+        "Service Portal INPS Ontology"@en .
+
+### Object Properties
+
+INPSSP:cassettoPrevidenzialeCostituitoDa a owl:ObjectProperty ;
+    rdfs:label "cassetto previdenziale costituito da "@it,
+        "service portal consisting of"@en ;
+    rdfs:domain INPSSP:CassettoPrevidenziale ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    INPSSP:DelegaRilasciata
+                    INPSSP:DomandaTelematica
+                    INPSSP:PosizioneAssicurativa ) ] ;
+    rdfs:comment "La object property collega il cassetto previdenziale con il gruppo di classi che rappresentano i servizi di cui è costituito"@it,
+        "The object property connects the service portal with the group of classes that represent the services it is made up of"@en .
+
+INPSSP:cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa a owl:ObjectProperty ;
+    rdfs:label "cassetto previdenziale dei lavoratori agricoli autonomi è costituito da"@it,
+        "The social security service portal of self-employed agricultural workers consists of"@en ;
+    rdfs:subPropertyOf INPSSP:cassettoPrevidenzialeCostituitoDa ;
+    rdfs:domain INPSTFP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo ;
+    rdfs:comment "La object property mette in relazione il cassetto previdenziale dei lavoratori agricoli autonomi con il gruppo di classi che rappresentano i servizi di cui il cassetto si compone"@it,
+        "This object property relates the social security service portal of self-employed agricultural workers to the group of classes representing the services that the service is made up of"@en .
+
+INPSSP:cassettoPrevidenzialeLiberoProfessionistaCostituitoDa a owl:ObjectProperty ;
+    rdfs:label "cassetto previdenziale del libero professionista è costituito da"@it,
+        "the self-employed worker's service portal is made up of"@en ;
+    rdfs:subPropertyOf INPSSP:cassettoPrevidenzialeCostituitoDa ;
+    rdfs:domain INPSSEP:CassettoPrevidenzialeLiberoProfessionista ;
+    rdfs:comment "La object property mette in relazione il cassetto previdenziale dei liberi professionsiti con il gruppo di classi che rappresentano i servizi di cui il cassetto si compone"@it,
+        "The object property relates the self-employed workers' service portal to the group of classes that represent the services that the drawer is made up of."@en .
+
+INPSSP:consultaCassettoPrevidenziale a owl:ObjectProperty ;
+    rdfs:label "consult the service portal"@en,
+        "consulta il cassetto previdenziale"@it ;
+    rdfs:domain INPSSP:UtenteDelServizio ;
+    rdfs:range INPSSP:CassettoPrevidenziale ;
+    rdfs:comment "La object property mette in relazione la classe degli utenti del servizio con il cassetto previdenziale"@it,
+        "The object property connects the users of the service with the service portal"@en .
+
+INPSSP:consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo a owl:ObjectProperty ;
+    rdfs:label "consult the self-employed agricultural worker's social security service portal"@en,
+        "consulta il cassetto previdenziale del lavoratore agricolo autonomo"@it ;
+    rdfs:subPropertyOf INPSSP:consultaCassettoPrevidenziale ;
+    rdfs:domain INPSSP:UtenteServizioAgricoltoreAutonomo ;
+    rdfs:range INPSTFP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo ;
+    rdfs:comment "La object property mette in relazione le istanze della classe degli utenti dei servizi disponibili nel cassetto previdenziale dei lavoratori agricoli autonomi con il cassetto previdenziale del lavoratore agricolo autonomo"@it,
+        "The object property connects the users of the services available in the self-employed agricultural workers'service portal with the self-employed agricultural worker's service portal"@en .
+
+INPSSP:consultaCassettoPrevidenzialeLiberoProfessionista a owl:ObjectProperty ;
+    rdfs:label "consult the freelancer's social security service portal"@en,
+        "consulta il cassetto previdenziale del libero professionsita"@it ;
+    rdfs:subPropertyOf INPSSP:consultaCassettoPrevidenziale ;
+    rdfs:domain INPSSP:UtenteServizioLiberoProfessionista ;
+    rdfs:range INPSSEP:CassettoPrevidenzialeLiberoProfessionista ;
+    rdfs:comment "La object property mette in relazione le istanze della classe degli utenti dei servizi disponibili nel cassetto previdenziale dei liberi professionisti con il cassetto previdenziale del libero professionista"@it,
+        "The object property connects the users of the services available in the self-employed workers' service portal with the self-employed workers' service portal"@en .
+
+### Classes
+
+INPSRL:Delegato a owl:Class ;
+    rdfs:label "Delegate"@en,
+        "Delegato"@it ;
+    rdfs:comment "Il delegato è un soggetto abilitato ad agire al posto di un altro (delegante) in forza di una delega da questi ricevuta"@it,
+        "The delegate is a person authorised to act in place of another (delegator) by virtue of a delegation received from the latter"@en .
+
+INPSSEP:CassettoPrevidenzialeLiberoProfessionista a owl:Class ;
+    rdfs:label "Cassetto previdenziale libero professionista"@it,
+        "self-employed worker's sevice portal"@en ;
+    owl:disjointWith INPSTFP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo ;
+    rdfs:comment "Il cassetto previdenziale del libero professionista è un servizio che permette ai lavoratori autonomi iscritti alla Gestione Separata di visualizzare i propri dati, presentare istanze e gestire le comunicaizoni con l'INPS. Nell'ontologia che descrive il cassetto previdenziale dei liberi professionsiti questa classe è modellata come sottoclasse della classe Cassetto previdenziale"@it,
+        "The pension account of the self-employed professional is a service that allows self-employed workers registered with the Separate Management to view their data, submit requests, and manage communications with INPS"@en .
+
+INPSSP:CassettoPrevidenziale a owl:Class ;
+    rdfs:label "Cassetto previdenziale"@it,
+        "INPS Service Portal"@en ;
+    rdfs:comment "Il cassetto previdenziale è un servizio reso disponibile sul portale on line dell'Istituto Nazionale della Previdenza Sociale che consente di consultare le informazioni relative alla situazione contributiva del cittadino contribuente.Nel set di ontologie dedicate alla descrizione del cassetto previdenziale, questa classe è modellata come classe sovraordinata al cassetto previdenziale dei liberi professionisti e al cassetto previdenziale per i lavoratori agricoli autonomi."@it,
+        "The social security drawer is a service made available on the online portal of the National Social Security Institute that allows you to consult information relating to the contributory situation of the citizen contributor"@en .
+
+INPSSP:DelegaRilasciata a owl:Class ;
+    rdfs:label "Delega"@it,
+        "Delegation"@en ;
+    rdfs:comment "Delega rilasciata da un soggetto delegante ad un delegato per lo svolgimento di attività o esercizio di poteri/diritti in sua vece"@it,
+        "Delegation granted by a delegating party to a delegate for the performance of activities or the exercise of powers/rights on their behalf"@en .
+
+INPSSP:DelegaRilasciataLavoratoreAgricoloAutonomo a owl:Class ;
+    rdfs:label "Delega rilasciata da un lavoratore agricolo autonomo"@it,
+        "Power of attorney issued by a self-employed agricultural worker"@en ;
+    owl:disjointWith INPSSP:DelegaRilasciataLiberoProfessionista ;
+    rdfs:comment "La classe rappresenta la delega rilasciata dal lavoratore agricolo autonomo ad un altro soggetto per autorizzarlo ad accedere al cassetto previdenziale del lavoratore agricolo autonomo e utilizzare i servizi disponibili in suo vece. Nell'ontologia descrittiva del cassetto previdenziale, la classe rappresenta anche il servizio che consente l'accesso alla consultaizone delle deleghe rilasciate dal lavoratore agricolo autonomo o ricevute dal soggetto da questi delegato"@it,
+        "The class represents the delegation issued by the self-employed agricultural worker to another person to authorize him to access the self-employed agricultural worker's social security drawer and use the available services on his behalf"@en .
+
+INPSSP:DelegaRilasciataLiberoProfessionista a owl:Class ;
+    rdfs:label "Delega rilasciata dal libero professionista"@it,
+        "Delegation granted by a self-employed professional"@en ;
+    rdfs:comment "La classe rappresenta la delega rilasciata dal libero profesionsita ad un altro soggetto per autorizzarlo ad accedere al cassetto previdenziale del lavoratore agricolo autonomo e utilizzare i servizi disponibili in suo vece. Nell'ontologia descrittiva del cassetto previdenziale, la classe rappresenta anche il servizio che consente l'accesso alla consultaizone delle deleghe rilasciate dal libero professionsita o ricevute dal soggetto da questi delegato"@it,
+        "The class represents the delegation granted by the self-employed professional to another party, authorizing them to access the pension account of the self-employed agricultural worker and to use the available services on their behalf"@en .
+
+INPSSP:DelegatoLavoratoreAgricoloAutonomo a owl:Class ;
+    rdfs:label "Delegate of the self-employed agricultural worker"@en,
+        "Delegato dal lavoratore agricolo autonomo"@it ;
+    owl:disjointWith INPSSP:DelegatoLiberoProfessionista ;
+    rdfs:comment "Il soggetto delegato dal lavoratore agricolo autonomo ad agire al suo posto per l'accesso al cassetto previdenziale, alla consultazione delle informaizoni rese disponibili e all'inoltro di domande e/o istanze"@it,
+        "The party delegated by the self-employed agricultural worker to act on their behalf for accessing the pension account, consulting the available information, and submitting requests and/or applications."@en .
+
+INPSSP:DelegatoLiberoProfessionista a owl:Class ;
+    rdfs:label "Delegate of the self-employed professional"@en,
+        "Delegato dal libero professionista"@it ;
+    rdfs:comment "Il soggetto delegato dal libero professionista ad agire al suo posto per l'accesso al cassetto previdenziale del libero professionista, alla consultazione delle informaizoni rese disponibili e all'inoltro di domande e/o istanze"@it,
+        "The party delegated by the self-employed professional to act on their behalf for accessing the professional's pension account, consulting the available information, and submitting requests and/or application"@en .
+
+INPSSP:DomandaTelematica a owl:Class ;
+    rdfs:label "Domanda telematica"@it,
+        "Online application"@en ;
+    rdfs:comment "An electronic application is a request submitted by a subject to INPS and sent via an electronic channel"@en,
+        "Una domanda telematica è un'istanza presentata da un soggetto all'INPS e inviata tramite un canale telematico. Nell'ontologia del Cassetto previdenziale INPS la classe raggruppa i servizi per l'invio telematico di specifiche istanze"@it .
+
+INPSSP:DomandaTelematicaLavoratoreAgricoloAutonomo a owl:Class ;
+    rdfs:label "Domanda telematica del lavoratore agricolo autonomo"@it,
+        "Telematic application for self-employed agricultural workers"@en ;
+    owl:disjointWith INPSSP:DomandaTelematicaLiberoProfessionista ;
+    rdfs:comment "A telematic application submitted by a self-employed agricultural worker"@en,
+        "Una domanda telematica presentata da un lavoratore agricolo autonomo"@it .
+
+INPSSP:DomandaTelematicaLiberoProfessionista a owl:Class ;
+    rdfs:label "Domanda telematica di un libero professionista"@it,
+        "On line application of a self-employed professional"@en ;
+    rdfs:comment "Domanda telematica presentata da un libero professionista. La classe rappresenta il servizio di invio e di consultazione delle domande telematiche, disponibile nel cassetto previdenziale del libero professionista"@it,
+        "On line application submitted by a self-employed professional"@en .
+
+INPSSP:PosizioneAssicurativa a owl:Class ;
+    rdfs:label "Insurance position"@en,
+        "Posizione assicurativa"@it ;
+    rdfs:comment "La posizione assicurativa consente al contribuente di consultare lo stato dei versamenti contributivi utili all'accesso alle prestazioni previdenziali e assitenziali dell'INPS,  e al calcolo dell'ammontare dei loro importi. Nell'ontologia descrittiva del cassetto previdenziale INPS la classe è indicata come superclasse della Posizione assicurativa del lavoratore agricolo autonomo e Posizione assicurativa del libero professionsita che ne rappresentano sue specializzazioni."@it,
+        "The insurance record allows the contributor to check the status of contribution payments necessary for accessing INPS social security and welfare benefits"@en .
+
+INPSSP:PosizioneAssicurativaLavoratoreAgricoloAutonomo a owl:Class ;
+    rdfs:label "Insurance record of the self-employed agricultural worker"@en,
+        "Posizione assicurativa lavoratore agricolo autonomo"@it ;
+    owl:disjointWith INPSSP:PosizioneAssicurativaLiberoProfessionista ;
+    rdfs:comment "La posizione assicurativa del lavoratore agricolo autonomo consente a questa tipologia di lavoratore di consultare le informazioni sullo stato dei versamenti contributivi"@en,
+        "La posizione assicurativa del lavoratore agricolo autonomo consente a questa tipologia di lavoratore di consultare le informazioni sullo stato dei versamenti contributivi"@it .
+
+INPSSP:PosizioneAssicurativaLiberoProfessionista a owl:Class ;
+    rdfs:label "Insurance record of the self-employed professional"@en,
+        "Posizione assicurativa libero professionista"@it ;
+    rdfs:comment "La posizione assicurativa consente al libero professionista di accedere alle informazioni relative alla propria situaizone contributiva"@it,
+        "The insurance record allows the self-employed professional to access information regarding their contribution status"@en .
+
+INPSSP:UtenteDelServizio a owl:Class ;
+    rdfs:label "Service user"@en,
+        "Utente del servizio"@it ;
+    rdfs:subClassOf [ a owl:Class ;
+            owl:unionOf (
+                    INPSSP:UtenteServizioAgricoltoreAutonomo
+                    INPSSP:UtenteServizioLiberoProfessionista ) ] ;
+    rdfs:comment "L'utente del servizio è un soggetto, persona fisica, ente, azienda, che ha accesso ai servizi resi disponibili nel Cassetto previdenziale. Nell'ontologia questa classe è descritta come superclasse di due concetti che ne specializzano il significato: Utente del servizio agrcoltore agricolo autonomo e utente del servizio libero professionista"@it,
+        "The service user is an individual, entity, or company that has access to the services available in the pension account"@en .
+
+INPSSP:UtenteServizioAgricoltoreAutonomo a owl:Class ;
+    rdfs:label "User of services for the self-employed agricultural worker"@en,
+        "Utente dei servizi per il lavoratore agricolo autonomo"@it ;
+    owl:disjointWith INPSSP:UtenteServizioLiberoProfessionista ;
+    rdfs:comment "L'utente dei servizi per il lavoratore agricolo autonomo è è un soggetto, che può accedere ai servizi per questa categoria di lavoratore disponibile nel relativo cassetto previdenziale. Può trattarsi direttamente del lavoratore oppure di un soggetto doverso autrizzato dalla delega ricevuta dal lavoratore stesso"@it,
+        "The user of services for the self-employed agricultural worker is an individual who can access the services available for this category of worker in their respective pension account"@en .
+
+INPSSP:UtenteServizioLiberoProfessionista a owl:Class ;
+    rdfs:label "User of services for the freelancer"@en,
+        "Utente dei servizi per il libero professionista"@it ;
+    rdfs:comment "L'Utente dei servizi per il libero professionsita è un soggetto, che può accedere ai servizi per questa categoria di lavoratore disponibile nel relativo cassetto previdenziale. Può trattarsi direttamente del professionista, diretto interessato oppure di un soggetto diverso autorizzato tramite delega dal libero professionista"@it,
+        "The User of services for the freelancer is a person who can access the services for this category of worker available in the relevant social security drawer"@en .
+
+INPSTFP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo a owl:Class ;
+    rdfs:label "Cassetto previdenziale lavoratore agricolo autonomo"@it,
+        "Service portale of the self-employed agricultural worker"@en ;
+    rdfs:comment "Il cassetto previdenziale del lavoratore agricolo autonomo è un servizio che consente ai titolari di aziende agricole e ai loro intermediari di consultare e verificare la posizione assicurativa dell'azienda, accedere a servizi di oìconsultazione  einvio di istanze e comunicare con L'INPS."@it,
+        "The self-employed agricultural worker's social security drawer is a service that allows owners of agricultural businesses and their intermediaries to consult and verify the company's insurance position, access consultation and request submission services, and communicate with INPS."@en .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSRL:Delegato ;
+    owl:unionOf (
+            INPSSP:DelegatoLavoratoreAgricoloAutonomo
+            INPSSP:DelegatoLiberoProfessionista ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSSP:CassettoPrevidenziale ;
+    owl:unionOf (
+            INPSSEP:CassettoPrevidenzialeLiberoProfessionista
+            INPSTFP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSSP:DelegaRilasciata ;
+    owl:unionOf (
+            INPSSP:DelegaRilasciataLavoratoreAgricoloAutonomo
+            INPSSP:DelegaRilasciataLiberoProfessionista ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSSP:DomandaTelematica ;
+    owl:unionOf (
+            INPSSP:DomandaTelematicaLavoratoreAgricoloAutonomo
+            INPSSP:DomandaTelematicaLiberoProfessionista ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSSP:PosizioneAssicurativa ;
+    owl:unionOf (
+            INPSSP:PosizioneAssicurativaLavoratoreAgricoloAutonomo
+            INPSSP:PosizioneAssicurativaLiberoProfessionista ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSP:cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:unionOf (
+            INPSSP:DelegaRilasciataLavoratoreAgricoloAutonomo
+            INPSSP:DomandaTelematicaLavoratoreAgricoloAutonomo
+            INPSSP:PosizioneAssicurativaLavoratoreAgricoloAutonomo ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSP:cassettoPrevidenzialeLiberoProfessionistaCostituitoDa ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:unionOf (
+            INPSSP:DelegaRilasciataLiberoProfessionista
+            INPSSP:DomandaTelematicaLiberoProfessionista
+            INPSSP:PosizioneAssicurativaLiberoProfessionista ) .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/INPSServicePortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/INPSServicePortal/latest/INPSServicePortal.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell'istituto."@it,
+        "Service Portal INPS Ontology N-TRIPLES distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Cassetto previdenziale"@it,
+        "N-TRIPLES distribution of the INPS ontology - Service Portal"@en .
+
+<https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/INPSServicePortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/INPSServicePortal/latest/INPSServicePortal.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell'istituto."@it,
+        "Service Portal INPS Ontology RDF/Turtle distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Cassetto previdenziale"@it,
+        "RDF/Turtle distribution of the INPS ontology - Service Portal"@en .
+
+<https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/INPSServicePortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/INPSServicePortal/latest/INPSServicePortal.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell'istituto."@it,
+        "Service Portal INPS Ontology RDF/XML"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Cassetto previdenziale"@it,
+        "RDF/XML distribution of the INPS ontology - Service Portal"@en .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+### Axioms
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSSP:DelegaRilasciata
+            INPSSP:DomandaTelematica
+            INPSSP:PosizioneAssicurativa ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSSP:DelegaRilasciataLavoratoreAgricoloAutonomo
+            INPSSP:DomandaTelematicaLavoratoreAgricoloAutonomo
+            INPSSP:PosizioneAssicurativaLavoratoreAgricoloAutonomo ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSSP:DelegaRilasciataLiberoProfessionista
+            INPSSP:DomandaTelematicaLiberoProfessionista
+            INPSSP:PosizioneAssicurativaLiberoProfessionista ) .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

@@ -1,0 +1,179 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/CodiceTitoloErogazioneAltreIndennitaPre>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement pre deduction system other allowance codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici titolo erogazione altre indennità pre sistema detrazione del TFR maturato attestati dalla Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato dei codici titolo erogazione altre indennità pre sistema detrazione del TFR maturato attestati dalla Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the given set of the pre deduction system other allowance codes with regards to the CU Statement"@en,
+        "Vocabolario controllato dei codici titolo erogazione altre indennità pre sistema detrazione del TFR maturato attestati dalla Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/CTEPRE_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CTEPRE_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CTEPRE_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "codice titolo erogazione altre indennità pre sistema detrazione della certificazione unica"@it,
+        "CU statement pre deduction system other allowance codes"@en,
+        "inps"@en,
+        "inps"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement pre deduction system other allowance codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici titolo erogazione altre indennità pre sistema detrazione del TFR maturato attestati dalla Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre" ;
+    dct:issued "2024-10-22"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-22"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement pre deduction system other allowance codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici titolo erogazione altre indennità pre sistema detrazione del TFR maturato attestati dalla Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "codice_titolo_erogazione_pre" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/A>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/B>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/C>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/D>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/E>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/F>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/N>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/O>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/P> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/A> a skos:Concept ;
+    rdfs:label "se si tratta di anticipazione;"@it ;
+    skos:prefLabel "se si tratta di anticipazione;"@it ;
+    dct:identifier "A"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre> ;
+    skos:notation "A"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/B> a skos:Concept ;
+    rdfs:label "se si tratta di saldo;"@it ;
+    skos:prefLabel "se si tratta di saldo;"@it ;
+    dct:identifier "B"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre> ;
+    skos:notation "B"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/C> a skos:Concept ;
+    rdfs:label "se si tratta di acconto;"@it ;
+    skos:prefLabel "se si tratta di acconto;"@it ;
+    dct:identifier "C"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre> ;
+    skos:notation "C"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/D> a skos:Concept ;
+    rdfs:label "se si tratta di anticipazione non connessa alla cessazione del rapporto di lavoro;"@it ;
+    skos:prefLabel "se si tratta di anticipazione non connessa alla cessazione del rapporto di lavoro;"@it ;
+    dct:identifier "D"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre> ;
+    skos:notation "D"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/E> a skos:Concept ;
+    rdfs:label "se si tratta di saldo non connesso alla cessazione del rapporto di lavoro;"@it ;
+    skos:prefLabel "se si tratta di saldo non connesso alla cessazione del rapporto di lavoro;"@it ;
+    dct:identifier "E"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre> ;
+    skos:notation "E"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/F> a skos:Concept ;
+    rdfs:label "se si tratta di acconto non connesso alla cessazione del rapporto di lavoro;"@it ;
+    skos:prefLabel "Se si tratta di acconto non connesso alla cessazione del rapporto di lavoro;"@it ;
+    dct:identifier "F"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre> ;
+    skos:notation "F"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/N> a skos:Concept ;
+    rdfs:label "se si tratta di saldo relativo all’incentivo all’esodo agevolato;"@it ;
+    skos:prefLabel "se si tratta di saldo relativo all’incentivo all’esodo agevolato;"@it ;
+    dct:identifier "N"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre> ;
+    skos:notation "N"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/O> a skos:Concept ;
+    rdfs:label "se si tratta di acconto relativo all’incentivo all’esodo agevolato;"@it ;
+    skos:prefLabel "se si tratta di acconto relativo all’incentivo all’esodo agevolato;"@it ;
+    dct:identifier "O"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre> ;
+    skos:notation "O"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre/P> a skos:Concept ;
+    rdfs:label "se si tratta di prestazioni erogate in forma rateale dai Fondi di solidarietà bilaterali del credito ordinario, cooperativo e della società pree italiane Spa, per le quali è prevista l’ esclusione della riliquidazione dell’imprea da parte degli uffici finanziari così come previsto dall’art. 47-bis, comma 2 del DL 25/05/2021, n. 73."@it ;
+    skos:prefLabel "se si tratta di prestazioni erogate in forma rateale dai Fondi di solidarietà bilaterali del credito ordinario, cooperativo e della società pree italiane Spa, per le quali è prevista l’ esclusione della riliquidazione dell’imprea da parte degli uffici finanziari così come previsto dall’art. 47-bis, comma 2 del DL 25/05/2021, n. 73."@it ;
+    dct:identifier "P"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_titolo_erogazione_pre> ;
+    skos:notation "P"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CTEPRE_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_titolo_erogazione_pre/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_titolo_erogazione_pre/latest/codice_titolo_erogazione_pre.csv> ;
+    dct:description "CU statement pre deduction system other allowance codes controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici titolo erogazione altre indennità pre sistema detrazione del TFR maturato attestati dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement pre deduction system other allowance codes controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato dei codici titolo erogazione altre indennità pre sistema detrazione del TFR maturato attestati dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CTEPRE_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_titolo_erogazione_pre/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_titolo_erogazione_pre/latest/codice_titolo_erogazione_pre.json> ;
+    dct:description "CU statement pre deduction system other allowance codes controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici titolo erogazione altre indennità pre sistema detrazione del TFR maturato attestati dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement pre deduction system other allowance codes controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato dei codici titolo erogazione altre indennità pre sistema detrazione del TFR maturato attestati dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CTEPRE_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_titolo_erogazione_pre/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_titolo_erogazione_pre/latest/codice_titolo_erogazione_pre.ttl> ;
+    dct:description "CU statement pre deduction system other allowance codes controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato dei codici titolo erogazione altre indennità pre sistema detrazione del TFR maturato attestati dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU Statement pre deduction system other allowance codes controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato dei codici titolo erogazione altre indennità pre sistema detrazione del TFR maturato attestati dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@preacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

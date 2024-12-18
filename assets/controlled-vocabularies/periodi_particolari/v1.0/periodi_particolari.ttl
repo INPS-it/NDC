@@ -1,0 +1,139 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/PeriodiParticolari>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement specific times Controlled Vocabulary"@en,
+        "Vocabolario controllato dei periodi particolari del reddito lavoro dipendente assimilato e assistenza fiscale della Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato dei periodi particolari del reddito lavoro dipendente assimilato e assistenza fiscale della Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the given set of the specific times with regards to employment as well as tax assessment in a CU Statement"@en,
+        "Vocabolario controllato dei periodi particolari del reddito lavoro dipendente assimilato e assistenza fiscale della Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/PP_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/PP_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/PP_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "CU statement specific times"@en,
+        "inps"@en,
+        "inps"@it,
+        "periodi particolari della certificazione unica"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement specific times Controlled Vocabulary"@en,
+        "Vocabolario controllato dei periodi particolari del reddito lavoro dipendente assimilato e assistenza fiscale della Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari" ;
+    dct:issued "2024-10-22"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-22"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement specific times Controlled Vocabulary"@en,
+        "Vocabolario controllato dei periodi particolari del reddito lavoro dipendente assimilato e assistenza fiscale della Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "periodi_particolari" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari/1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari/2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari/3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari/4> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari/1> a skos:Concept ;
+    rdfs:label "nella ipotesi in cui il rapporto di lavoro, intercorso con lo stesso sostituto d’imposta venga interrotto e successivamente ripreso nel corso dell’anno;"@it ;
+    skos:prefLabel "nella ipotesi in cui il rapporto di lavoro, intercorso con lo stesso sostituto d’imposta venga interrotto e successivamente ripreso nel corso dell’anno;"@it ;
+    dct:identifier "1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari> ;
+    skos:notation "1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari/2> a skos:Concept ;
+    rdfs:label "se nel periodo di lavoro sono presenti giorni per i quali non sono previste detrazioni (ad es. periodo di aspettativa non retribuita);"@it ;
+    skos:prefLabel "se nel periodo di lavoro sono presenti giorni per i quali non sono previste detrazioni (ad es. periodo di aspettativa non retribuita);"@it ;
+    dct:identifier "2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari> ;
+    skos:notation "2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari/3> a skos:Concept ;
+    rdfs:label "nel caso in cui la durata del periodo di lavoro è inferiore ai giorni per i quali sono previste le detrazioni (ad es. compensi erogati a sostegno del reddito assoggettati a tassazione ordinaria);"@it ;
+    skos:prefLabel "nel caso in cui la durata del periodo di lavoro è inferiore ai giorni per i quali sono previste le detrazioni (ad es. compensi erogati a sostegno del reddito assoggettati a tassazione ordinaria);"@it ;
+    dct:identifier "3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari> ;
+    skos:notation "3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari/4> a skos:Concept ;
+    rdfs:label "nelle altre ipotesi in cui non vi sia coincidenza tra il numero dei giorni per i quali spettano le detrazioni e la durata del rapporto di lavoro."@it ;
+    skos:prefLabel "nelle altre ipotesi in cui non vi sia coincidenza tra il numero dei giorni per i quali spettano le detrazioni e la durata del rapporto di lavoro."@it ;
+    dct:identifier "4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/periodi_particolari> ;
+    skos:notation "4"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/PP_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/periodi_particolari/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/periodi_particolari/latest/periodi_particolari.csv> ;
+    dct:description "CU statement specific times controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei periodi particolari del reddito lavoro dipendente assimilato e assistenza fiscale della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement specific times controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato dei periodi particolari del reddito lavoro dipendente assimilato e assistenza fiscale della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/PP_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/periodi_particolari/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/periodi_particolari/latest/periodi_particolari.json> ;
+    dct:description "CU statement specific times controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei periodi particolari del reddito lavoro dipendente assimilato e assistenza fiscale della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement specific times controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato dei periodi particolari del reddito lavoro dipendente assimilato e assistenza fiscale della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/PP_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/periodi_particolari/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/periodi_particolari/latest/periodi_particolari.ttl> ;
+    dct:description "CU statement specific times controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato dei periodi particolari del reddito lavoro dipendente assimilato e assistenza fiscale della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU Statement specific times controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato dei periodi particolari del reddito lavoro dipendente assimilato e assistenza fiscale della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

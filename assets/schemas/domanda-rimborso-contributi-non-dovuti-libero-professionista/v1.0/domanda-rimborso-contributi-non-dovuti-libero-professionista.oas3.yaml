@@ -1,0 +1,96 @@
+openapi: 3.0.3
+info:
+  title: Schema della Domanda Rimborso Contributi Non Dovuti Libero Professionista
+  version: 202410.28.00
+  x-summary: Schema della Domanda Rimborso Contributi Non Dovuti Libero Professionista compatibile con l'Ontologia INPS relativa al Cassetto Previdenziale Liberi Professionisti
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdDomandaRimborsoContributiNonDovutiLP:
+      type: string
+      description: https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocolloDomandaTelematicaLiberoProfessionista
+      example: '548851613'
+      maxLength: 50
+      minLength: 1
+
+    DomandaRimborsoContributiNonDovutiLP:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/selfEmploymentPortal/"
+        importo_rimborso: importoRimborso
+        anno_di_rimborso: annoDiRimborso
+        ha_motivo_rimborso:
+          "@id": haMotivoRimborso
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista
+      required:
+      - codice_identificativo_domanda_rimborso
+      - importo_rimborso
+      - anno_di_rimborso
+      properties:
+        codice_identificativo_domanda_rimborso:
+          $ref: "#/components/schemas/IdDomandaRimborsoContributiNonDovutiLP"
+        importo_rimborso:
+          type: number
+          format: double
+        anno_di_rimborso:
+          type: number
+          format: double
+        ha_motivo_rimborso:
+          type: object
+          items:
+            $ref: "#/components/schemas/MotivoRimborso"
+      example:
+        codice_identificativo_domanda_rimborso:
+          $ref: "#/components/schemas/IdDomandaRimborsoContributiNonDovutiLP/example"
+        importo_rimborso: 1274.83
+        anno_di_rimborso: 2024
+        ha_motivo_rimborso:
+          $ref: "#/components/schemas/MotivoRimborso/example"
+
+    IdMotivoRimborso:
+      type: string
+      description: https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceMotivoRimborso
+      example: '15'
+      maxLength: 50
+      minLength: 1
+
+    MotivoRimborso:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/selfEmploymentPortal/"
+        descrizione_motivo_rimborso: descrizioneCodiceMotivoRimborso
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso
+      required:
+      - codice_motivo_rimborso
+      - descrizione_motivo_rimborso
+      properties:
+        codice_motivo_rimborso:
+          $ref: "#/components/schemas/IdMotivoRimborso"
+        descrizione_motivo_rimborso:
+          type: string
+          maxLength: 50
+      example:
+        codice_motivo_rimborso:
+          $ref: "#/components/schemas/IdMotivoRimborso/example"
+        descrizione_motivo_rimborso: "Rimborso Contributi Non Dovuti"

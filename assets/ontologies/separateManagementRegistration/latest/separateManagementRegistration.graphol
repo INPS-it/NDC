@@ -1,0 +1,1879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphol version="3">
+  <project name="procedura_17" version="1.0">
+    <ontology iri="https://w3id.org/italia/social-security/onto/separateManagementRegistration/" lang="en" addLabelFromUserInput="1" addLabelFromSimpleName="0">
+      <imports/>
+      <prefixes>
+        <prefix>
+          <value>CLV</value>
+          <namespace>https://w3id.org/italia/onto/CLV/</namespace>
+        </prefix>
+        <prefix>
+          <value>COV</value>
+          <namespace>https://w3id.org/italia/onto/COV/</namespace>
+        </prefix>
+        <prefix>
+          <value>CPSV</value>
+          <namespace>https://w3id.org/italia/onto/CPSV/</namespace>
+        </prefix>
+        <prefix>
+          <value>CPV</value>
+          <namespace>https://w3id.org/italia/onto/CPV/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSContributions</value>
+          <namespace>https://w3id.org/italia/social-security/onto/contributions/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSCore</value>
+          <namespace>https://w3id.org/italia/social-security/onto/core/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSDWS</value>
+          <namespace>https://w3id.org/italia/social-security/onto/domesticWorkServices/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSPensions</value>
+          <namespace>https://w3id.org/italia/social-security/onto/pensions/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSRL</value>
+          <namespace>https://w3id.org/italia/social-security/onto/relevantLegislation/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSSMR</value>
+          <namespace>https://w3id.org/italia/social-security/onto/separateManagementRegistration/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSSafety</value>
+          <namespace>https://w3id.org/italia/social-security/onto/social-safety-net/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSService</value>
+          <namespace>https://w3id.org/italia/social-security/onto/services/</namespace>
+        </prefix>
+        <prefix>
+          <value>L0</value>
+          <namespace>https://w3id.org/italia/onto/l0/</namespace>
+        </prefix>
+        <prefix>
+          <value>RO</value>
+          <namespace>https://w3id.org/italia/onto/RO/</namespace>
+        </prefix>
+        <prefix>
+          <value>SEP_IRA</value>
+          <namespace>https://w3id.org/italia/social-security/onto/SEP_IRA</namespace>
+        </prefix>
+        <prefix>
+          <value>SM</value>
+          <namespace>https://w3id.org/italia/onto/SM/</namespace>
+        </prefix>
+        <prefix>
+          <value>TI</value>
+          <namespace>https://w3id.org/italia/onto/TI/</namespace>
+        </prefix>
+        <prefix>
+          <value>aco</value>
+          <namespace>https://w3id.org/italia/onto/ACO/</namespace>
+        </prefix>
+        <prefix>
+          <value>foaf</value>
+          <namespace>http://xmlns.com/foaf/0.1/</namespace>
+        </prefix>
+        <prefix>
+          <value>l0</value>
+          <namespace>https://w3id.org/italia/onto/l0/</namespace>
+        </prefix>
+        <prefix>
+          <value>owl</value>
+          <namespace>http://www.w3.org/2002/07/owl#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdf</value>
+          <namespace>http://www.w3.org/1999/02/22-rdf-syntax-ns#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdfs</value>
+          <namespace>http://www.w3.org/2000/01/rdf-schema#</namespace>
+        </prefix>
+        <prefix>
+          <value>skos</value>
+          <namespace>http://www.w3.org/2004/02/skos/core#</namespace>
+        </prefix>
+        <prefix>
+          <value>swrl</value>
+          <namespace>http://www.w3.org/2003/11/swrl#</namespace>
+        </prefix>
+        <prefix>
+          <value>swrlb</value>
+          <namespace>http://www.w3.org/2003/11/swrlb#</namespace>
+        </prefix>
+        <prefix>
+          <value>time</value>
+          <namespace>http://www.w3.org/2006/time#</namespace>
+        </prefix>
+        <prefix>
+          <value>xml</value>
+          <namespace>http://www.w3.org/XML/1998/namespace</namespace>
+        </prefix>
+        <prefix>
+          <value>xsd</value>
+          <namespace>http://www.w3.org/2001/XMLSchema#</namespace>
+        </prefix>
+      </prefixes>
+      <datatypes>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral</datatype>
+        <datatype>http://www.w3.org/2000/01/rdf-schema#Literal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NCName</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NMTOKEN</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#Name</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#base64Binary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#boolean</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#byte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTimeStamp</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#decimal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#double</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#float</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#hexBinary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#int</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#integer</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#language</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#long</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#negativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonNegativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonPositiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#normalizedString</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#positiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#short</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#token</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedByte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedInt</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedLong</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedShort</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#rational</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#real</datatype>
+      </datatypes>
+      <languages>
+        <language>Un agente, sia fisico (ex. una persona, un robot, una quercia), o sociale (ex. una società, un'istituzione, una comunità)</language>
+        <language>de</language>
+        <language>en</language>
+        <language>es</language>
+        <language>fr</language>
+        <language>it</language>
+      </languages>
+      <facets>
+        <facet>http://www.w3.org/2001/XMLSchema#langRange</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#length</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#pattern</facet>
+      </facets>
+      <annotationProperties>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#comment</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#isDefinedBy</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#label</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#deprecated</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#incompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#priorVersion</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#versionInfo</annotationProperty>
+      </annotationProperties>
+      <iris>
+        <iri>
+          <value>http://xmlns.com/foaf/0.1/Document</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/CPSV/Service</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/l0/Activity</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/onto/l0/Activity</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Activity</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/l0/Agent</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/onto/l0/Agent</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Agent</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/onto/l0/Agent</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm></lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>Un agente, sia fisico (ex. una persona, un robot, una quercia), o sociale (ex. una società, un'istituzione, una comunità)</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/l0/Object</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/SedeINPS</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/BeneficiarioDomandaGestioneSeparata</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/BeneficiarioDomandaGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Beneficiario domanda gestione separata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/BeneficiarioDomandaGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Beneficiary of spilt scheme application form</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/BeneficiarioDomandaGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il beneficiario della domanda di iscrizione alla gestione separata è il lavoratore (libero professionista o parasubordinato) che versa i suoi contributi  alla Gestione separata a fini previdenziali e assistenziali.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/BeneficiarioDomandaGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>A spilt scheme beneficiary is someone, such as a self employed person or a dependet contractor, who is required by law to pay their contributions directly to the INPS spilt scheme.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparata</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda iscrizione gestione separata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Spilt scheme application form</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La domanda di iscrizione alla gestione separata è il documento che il beneficiario o un suo delegato invia all'INPS per richiedere l'iscrizione alla Gestione separata e recante le informazioni necessarie a tale scopo, come: dati anagrafici, tipologia di lavoratore, tipologia di attività, data di inizio dell'attività lavorativa. Nell'ontologia che descrive i procedimenti legati all'iscrizione dei lavoratori parasubordinati e dei liberi professionisti la classe è  modellata come superclasse di Domanda Iscrizione gestione Separata Libero Professionista e Domanda Iscrizione Gestione Separata Parasubordinato, che rappresentano sue specializzazioni. Inoltre nell'ontologia la domanda di iscrizione è interpretata e descritta come documento compilato e  inviato dal soggetto interessato e ricevuto da INPS entrando a far parte dei suoi archivi.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The Spilt Scheme Application Form is the official form that has to be sent to the INPS service in order to register for this contribution scheme and access an user details summary . Either a beneficiary or an authorised delagate can fill  in the application form. The required information that must be filled out are: person details, employment status, job title and employment start date. The Spilt scheme application form is a superclass of the Self employed spilt scheme application form and the dependent contractor spilt scheme application form. Those ones are in fact two different forms based on a employee status.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataLiberoProfessionista</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda iscrizione gestione separata libero professionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Self employed spilt scheme application form</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe descrive la domanda di iscrizione inviata a INPS per l'iscrizione alla gestione separata di un Libero professionista, recante quindi i dati significativi per questa categoria di lavoratore. Nell'ontologia è modellata per rappresentare una specializzazione della sua superclasse Domanda iscrizione gestione separata. </lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The self employed spilt scheme application form must be used by all applicants who hold the self employed status. This class is sub class of the SpiltSchemeApplicationForm</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataParasubordinato</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataParasubordinato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda iscrizione gestione separata parasubordinato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataParasubordinato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Dependent contractor spilt scheme application form</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataParasubordinato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe descrive la domanda di iscrizione inviata a INPS per l'iscrizione alla gestione separata di un lavoratore parasubordinato, recante quindi i dati significativi per questa categoria di lavoratore. Nell'ontologia è modellata per rappresentare una specializzazione della sua superclasse Domanda iscrizione gestione separata. </lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataParasubordinato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The dependent contractor spilt scheme application form must be used by dependent contractors only. The info requested in this form is relevant to this type of application. This class is a sub-class of the Spilt Scheme Application Form class.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/GestioneSeparata</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/GestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Gestione separata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/GestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Spilt scheme</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/GestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La gestione separata è un fondo pensionistico finanziato con i contributi previdenziali obbligatori dei lavoratori assicurati. Nasce con la Legge n. 335 del 1995 di riforma del sistema pensionistico con lo scopo di estendere la tutela previdenziale a categorie di lavoratori per i quali fino ad allora non era prevista. La gestione separata. estendendo l'Assicurazione Generale Obbligatoria per i lavoratori subordinati garantisce dunque l'assicurazione di invalidità, vecchiaia e superstiti ai lavoratori autonomi che non svolgono nessuna delle atività rientranti nelle gestioni speciali INPS, nè una libera professione in riferimento alla quale è prevista una specifica cassa previdenziale.
+ La legge individua le categorie di lavoratori che devono iscriversi alla gestione separata per assolvere l'obbligo contributivo e beneficiare conseguentemente delle prestazioni previdenziali e assistenziali, tra questi, hanno obbligo di iscrizione i lavoratori parasubordinati e i liberi professionisti per la cui categoria non è prevista una cassa di previdenza dedicata.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/GestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The Spilt Scheme is a type of pension scheme, where those who are required by law pay their contributions as well as social insurance. The Spilt Scheme was founded in 1995 legislation no. 355, its main goal is to be an asset for their members who up until that moment did not benefit from any pension scheme. In fact, in Italy some types of self employed people and dependent contractors do not have a relevant scheme like the others. Therefore, the Spilt Scheme is essential to them as it covers their members from: disability insurance, pension insurance, and survivors benefits as well. The legislation in place has determined who are those different types of workers who must enrol in the scheme in order to pay their credited contributions. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/IscrizioneGestioneSeparata</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/IscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Iscrizione gestione separata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/IscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Spilt scheme registration</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/IscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'Iscrizione alla gestione separata è la classe che nell'ontologia rappresenta l'evento di iscrizione del lavoratore alla gestione previdenziale. Il concetto è inoltre definito come servizio reso disponibile dall'INPS per effettuare l'azione di iscrizione alla gestione separata, tramite inoltro della domanda di iscrizione.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/IscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The Spilt scheme registration class represents the process of enrolment of a member to the spilt scheme. Moreover, this is a service offered and handled by the INPS service. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/LiberoProfessionistaProtettoConCassa</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/LiberoProfessionistaProtettoConCassa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>LiberoProfessionistaProtettoConCassa</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/LiberoProfessionistaProtettoConCassa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il libero professionsita protetto con cassa è un libero professionista iscritto ad un albo prfessionale e che versa i contributi in una cassa previdenziale di riferimento per la sua professione ma che svolge contestualmente un'altra attività alvorativa che richiede il versamento dei contributi alla gestione separata INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/PEC</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/PEC</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>PEC</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/PEC</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>certifiedEmail(PEC)</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/PEC</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Posta Elettronica Certificata. Indirizzo indicato nella domanda di iscrizione alla gestione separata come domicilio digitale del beneficiario della domanda di iscrizione stessa</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/PEC</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>PEC is a type of certified email system. This is one of the compulsory requirements that a beneficiary of the Spilt Scheme would have to fill in to complete their Application Form. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/cellulare</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/cellulare</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>cellulare</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/cellulare</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>mobileNumber</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/cellulare</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Numero di telefonia mobile indicato nella domanda di iscrizione alla gestione separata come contatto utile a contattare il beneficiario della domanda di iscrizione alla gestione separata</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/cellulare</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Beneficiary of the Spilt Scheme's mobile number is required to complete the Application Form. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/codiceAttivitaAteco</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/codiceAttivitaAteco</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>codice attivita ATECO</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/codiceAttivitaAteco</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Codice identificativo dell'attività svolta dal lavoratore secondo la classificazione ATECO</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/codiceAttivitaAteco</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>ATECOCode</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/codiceAttivitaAteco</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>ATECO code is used to identify  a self employed person's areas of work. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataInizioAttivita</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataInizioAttivita</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>dataInizioAttività</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataInizioAttivita</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>effectiveDate</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataInizioAttivita</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Data nella quale il lavoratore ha iniziato a svolgere l'attività per la quale si rende necessaria la sua iscrizione alla gestione separata.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataInizioAttivita</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Effective date refers to the date or time when a self employed person or a dependent contractor are legally required to register with the Spilt Scheme due to the fact that they have started their job. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataPresentazioneIscrizioneGestioneSeparata</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataPresentazioneIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>dataPresentazioneIscrizioneGestioneSeparata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataPresentazioneIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>spiltSchemeApplicationFormDate</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataPresentazioneIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Data nella quale la domanda di iscrizione alla gestione separata è stata presentata. La domadna di iscrizione deve essere presentata entro 30 giorni dall'inizio dell'attività lavorativa</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataPresentazioneIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The printout of the Spilt Scheme application form must show the date and time that the application was sent. Apllicants must send their application form within 30 days of their effective date.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/domandaIscrizioneGestioneSeparataInviataA</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/domandaIscrizioneGestioneSeparataInviataA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>domandaIscrizioneGestioneSeparataInviataA</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/domandaIscrizioneGestioneSeparataInviataA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>spiltSchemeApplicationFormSentTo</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/domandaIscrizioneGestioneSeparataInviataA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la domanda di iscrizione alla gestione separata alla sede INPS di riferimento competente per il suo accoglimento e per la successiva lavorazione.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/domandaIscrizioneGestioneSeparataInviataA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>This object property links together the Spilt Scheme Application Form class and the INPS Service class. In fact, the Spilt Scheme is a service processed and managed by INPS offices. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/email</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/email</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>email</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/email</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>emailAddress</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/email</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Indirizzo di posta elettronica ordinaria dichiarato nella domanda di iscrizione alla gestione separata come contatto utile a raggiungere il beneficiario</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/email</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Applicants are required to provide an email address.  Email is one of primary forms of communication used by INPS to get in touch with senders. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaContributi</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaContributi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>generaContributi</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaContributi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>hasContributions</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaContributi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La relazione connette tra loro le classi Iscrizione gestione separata e Contributo gestione separata per descrivere l'obbligo di versamento dei contributi conseguente all'iscrizione del lavoratore alla gestione previdenziale.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaContributi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>This object property links together the Spilt Scheme Registration class and the Spilt Scheme Contributions class. Once registered with the Spilt Scheme you must pay your credited contributions into the Scheme Account.  </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaIscrizioneGestioneSeparata</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>generaIscrizioneGestioneSeparata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>hasSpiltSchemeRegistration</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La proprietà mette in relazione la Domanda di iscrizione alla gestione separata con l'Iscrizione alla gestione separata per descrivere come la corretta compilazione  e l'invio della domanda abbiano come effetto l'iscrizione del lavoratore alla gestione separata</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>This object property links together the Spilt Scheme Application Form and the Spilt Scheme Registration class. Those classes are essentional to show all the stages of the application process. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataLiberoProfessionista</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>inviaDomandaGestioneSeparataLiberoProfessionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>hasSelfEmployedSpiltSchemeApplicationForm</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La relazione collega il Libero professionista con obbligo di iscrizione alla gestione separata, nella veste di soggeto che invia la domadna di iscrizione, alla domanda di iscrizione alla gestione separata rivolta a questa tipologia di lavoratore</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>This object property links together the Spilt Scheme Self Employed class and the Self Employed Spilt Scheme Application Form. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataParasubordinato</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataParasubordinato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>inviaDomandaGestioneSeparataParasubordinato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataParasubordinato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>hasDependentContractorSpiltSchemeApplicationForm</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataParasubordinato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La relazione collega il lavoratore parasubordinato, nella veste di soggeto che invia la domadna di iscrizione, alla domanda di iscrizione alla gestione separata rivolta a questa tipologia di lavoratore</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataParasubordinato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>This object property links together the Dependent Contractor class and the Dependent Contractor Spilt Scheme Application Form.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaIscrizioneGestioneSeparata</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>inviaDomandaIscrizioneGestioneSeparata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/iscriveLavoratoreInGestioneSeparata</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/iscriveLavoratoreInGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>iscriveLavoratoreInGestioneSeparata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/iscriveLavoratoreInGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>enrolApplicantInSpiltScheme</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/iscriveLavoratoreInGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La relazione collega la classe Iscrizione gestione separata alla classe gestione separata per indicare come, nei fatti, sia l'azione di iscrizione alla gestione separata ad iscrivere il lavoratore a questa gestione previdenziale.</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/iscriveLavoratoreInGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>This object property links together the Spilt Scheme Registration class and the Spilt Scheme class. Once applied to the Scheme you become an effective Spilt Scheme member.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/numeroProtocolloIscrizioneGestioneSeparata</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/numeroProtocolloIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>numeroProtocolloIscrizioneGestioneSeparata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/numeroProtocolloIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>spiltSchemeRegistrationAssignedNumber</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/numeroProtocolloIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Codice numerico o alfanumerico che indica l'ingresso del documento recante la domanda di iscrizione alla gestione separata negli archivi INPS, assegnandogli un numero identificativo, progressivo nell'anno solare di riferimento</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/numeroProtocolloIscrizioneGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>A number that is issued to an end-user to indicate that the application form is officialy a piece of record retained as evidence by the INPS institute. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/socioStudioAssociato</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/socioStudioAssociato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>socio studio associato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/socioStudioAssociato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>associate Partner</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/socioStudioAssociato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo, di tipo booleano, indica se il libero professionista è associato o meno ad uno studio professionale</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/socioStudioAssociato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>A boolean data type. It refers to a self employed person who can  either be associate partner or not one. </lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/telefono</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/telefono</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>telefono</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/telefono</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>phone Number</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/telefono</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Numero di telefono indicato come contatto del beneficiario nella domanda di iscrizione alla gestione separata </lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/telefono</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Applicants are required to provide a phone number to complete the Spilt Scheme application form.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/versatiInGestioneSeparata</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/versatiInGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>versatiInGestioneSeparata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/versatiInGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>hasContributionsPaidIntoSpiltScheme</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/versatiInGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La proprietà esprime il collegamento tra la classe Contributi gestione separata e  la classe Gestione separata, con lo scopo di formalizzare il legame tra questa categoria di contributo previdenziale obbligatorio e il fondo pensionistico nel quale vengono versati</lexicalForm>
+                <datatype/>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/separateManagementRegistration/versatiInGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>This object property links together the Spilt Scheme Contributions class and the Spilt Scheme class. It refers to the fact that once registered a member pays their contributions into the Spilt Scheme. Contributions are used to fund social welfare benefits and pensions.</lexicalForm>
+                <datatype/>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/social-safety-net/ContributoGestioneSeparata</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/social-safety-net/LavoratoreParasubordinato</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/social-safety-net/LavoratoreParasubordinato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>LavoratoreParasubordinato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionistaProtetto</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionistaProtetto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>LiberoProfessionistaProtetto</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/social-safety-net/partitaIVA</value>
+          <functional/>
+        </iri>
+      </iris>
+    </ontology>
+    <diagrams>
+      <diagram name="Interfaccia" width="5000" height="5000">
+        <node id="n0" color="#fcfcfc" type="concept">
+          <geometry x="170" y="-40" width="110" height="50"/>
+          <iri>https://w3id.org/italia/onto/l0/Object</iri>
+          <label size="12" x="170" customSize="0" y="-40" width="110" height="22"/>
+        </node>
+        <node id="n1" color="#fcfcfc" type="concept">
+          <geometry x="80" y="100" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparata</iri>
+          <label size="12" x="80" customSize="0" y="100" width="110" height="50"/>
+        </node>
+        <node id="n10" color="#fcfcfc" type="concept">
+          <geometry x="490" y="180" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/LiberoProfessionistaProtettoConCassa</iri>
+          <label size="12" x="490" customSize="0" y="180" width="110" height="50"/>
+        </node>
+        <node id="n11" color="#fcfcfc" type="concept">
+          <geometry x="490" y="40" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionistaProtetto</iri>
+          <label size="12" x="490" customSize="0" y="40" width="110" height="36"/>
+        </node>
+        <node id="n12" color="#fcfcfc" type="concept">
+          <geometry x="-240" y="-40" width="110" height="50"/>
+          <iri>https://w3id.org/italia/onto/l0/Activity</iri>
+          <label size="12" x="-240" customSize="0" y="-40" width="110" height="22"/>
+        </node>
+        <node id="n2" color="#fcfcfc" type="concept">
+          <geometry x="-10" y="-40" width="110" height="50"/>
+          <iri>http://xmlns.com/foaf/0.1/Document</iri>
+          <label size="12" x="-10" customSize="0" y="-40" width="110" height="22"/>
+        </node>
+        <node id="n3" color="#fcfcfc" type="concept">
+          <geometry x="-330" y="100" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/IscrizioneGestioneSeparata</iri>
+          <label size="12" x="-330" customSize="0" y="100" width="110" height="36"/>
+        </node>
+        <node id="n4" color="#fcfcfc" type="concept">
+          <geometry x="-420" y="-40" width="110" height="50"/>
+          <iri>https://w3id.org/italia/onto/CPSV/Service</iri>
+          <label size="12" x="-420" customSize="0" y="-40" width="110" height="22"/>
+        </node>
+        <node id="n9" color="#fcfcfc" type="concept">
+          <geometry x="490" y="-100" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista</iri>
+          <label size="12" x="490" customSize="0" y="-100" width="110" height="36"/>
+        </node>
+        <edge target="n2" id="e0" type="inclusion" source="n1">
+          <point x="80" y="100"/>
+          <point x="80" y="40"/>
+          <point x="-10" y="40"/>
+          <point x="-10" y="-40"/>
+        </edge>
+        <edge target="n0" id="e1" type="inclusion" source="n1">
+          <point x="80" y="100"/>
+          <point x="80" y="40"/>
+          <point x="170" y="40"/>
+          <point x="170" y="-40"/>
+        </edge>
+        <edge target="n4" id="e3" type="inclusion" source="n3">
+          <point x="-330" y="100"/>
+          <point x="-330" y="40"/>
+          <point x="-420" y="40"/>
+          <point x="-420" y="-40"/>
+        </edge>
+        <edge target="n9" id="e7" type="inclusion" source="n11">
+          <point x="490" y="40"/>
+          <point x="490" y="-100"/>
+        </edge>
+        <edge target="n11" id="e8" type="inclusion" source="n10">
+          <point x="490" y="180"/>
+          <point x="490" y="40"/>
+        </edge>
+        <edge target="n12" id="e9" type="inclusion" source="n3">
+          <point x="-330" y="100"/>
+          <point x="-330" y="40"/>
+          <point x="-240" y="40"/>
+          <point x="-240" y="-40"/>
+        </edge>
+      </diagram>
+      <diagram name="IscrizioneGestioneSeparata" width="5000" height="5000">
+        <node id="n1" color="#fcfcfc" type="concept">
+          <geometry x="1130" y="20" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/social-safety-net/LavoratoreParasubordinato</iri>
+          <label size="12" x="1130" customSize="0" y="20" width="110" height="36"/>
+        </node>
+        <node id="n10" color="#fcfcfc" type="role">
+          <geometry x="530" y="200" width="70" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataLiberoProfessionista</iri>
+          <label size="12" x="530" customSize="0" y="165" width="295" height="22"/>
+        </node>
+        <node id="n101" color="#fcfcfc" type="domain-restriction">
+          <geometry x="150" y="420" width="20" height="20"/>
+          <label size="12" x="180" customSize="0" y="420" width="39" height="22">exists</label>
+        </node>
+        <node id="n102" color="#fcfcfc" type="attribute">
+          <geometry x="150" y="480" width="20" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/codiceAttivitaAteco</iri>
+          <label size="12" x="150" customSize="0" y="500" width="124" height="22"/>
+        </node>
+        <node id="n103" color="#fcfcfc" type="concept">
+          <geometry x="220" y="200" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataLiberoProfessionista</iri>
+          <label size="12" x="220" customSize="0" y="200" width="110" height="64"/>
+        </node>
+        <node id="n104" color="#000000" type="disjoint-union">
+          <geometry x="100" y="110" width="50" height="30"/>
+        </node>
+        <node id="n105" color="#fcfcfc" type="attribute">
+          <geometry x="-220" y="-280" width="20" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/numeroProtocolloIscrizioneGestioneSeparata</iri>
+          <label size="12" x="-220" customSize="0" y="-302" width="253" height="22"/>
+        </node>
+        <node id="n106" color="#fcfcfc" type="attribute">
+          <geometry x="-220" y="-220" width="20" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataPresentazioneIscrizioneGestioneSeparata</iri>
+          <label size="12" x="-220" customSize="0" y="-242" width="257" height="22"/>
+        </node>
+        <node id="n107" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-120" y="-280" width="20" height="20"/>
+          <label size="12" x="-120" customSize="0" y="-260" width="39" height="22">exists</label>
+        </node>
+        <node id="n108" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-120" y="-220" width="20" height="20"/>
+          <label size="12" x="-120" customSize="0" y="-200" width="39" height="22">exists</label>
+        </node>
+        <node id="n109" color="#fcfcfc" type="concept">
+          <geometry x="-50" y="110" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparata</iri>
+          <label size="12" x="-50" customSize="0" y="110" width="110" height="50"/>
+        </node>
+        <node id="n114" color="#fcfcfc" type="concept">
+          <geometry x="-50" y="500" width="125" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/SedeINPS</iri>
+          <label size="12" x="-50" customSize="0" y="500" width="125" height="22"/>
+        </node>
+        <node id="n116" color="#fcfcfc" type="role">
+          <geometry x="-50" y="310" width="70" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/domandaIscrizioneGestioneSeparataInviataA</iri>
+          <label size="12" x="-50" customSize="0" y="280" width="253" height="22"/>
+        </node>
+        <node id="n118" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-50" y="220" width="20" height="20"/>
+          <label size="12" x="-80" customSize="0" y="220" width="39" height="22">exists</label>
+        </node>
+        <node id="n119" color="#000000" type="range-restriction">
+          <geometry x="-50" y="390" width="20" height="20"/>
+          <label size="12" x="-80" customSize="0" y="390" width="39" height="22">exists</label>
+        </node>
+        <node id="n120" color="#fcfcfc" type="concept">
+          <geometry x="-950" y="200" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/social-safety-net/ContributoGestioneSeparata</iri>
+          <label size="12" x="-950" customSize="0" y="200" width="110" height="50"/>
+        </node>
+        <node id="n126" color="#fcfcfc" type="attribute">
+          <geometry x="-220" y="-20" width="20" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/PEC</iri>
+          <label size="12" x="-220" customSize="0" y="-40" width="31" height="22"/>
+        </node>
+        <node id="n127" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-120" y="-20" width="20" height="20"/>
+          <label size="12" x="-120" customSize="0" y="0" width="39" height="22">exists</label>
+        </node>
+        <node id="n13" color="#fcfcfc" type="domain-restriction">
+          <geometry x="680" y="200" width="20" height="20"/>
+          <label size="12" x="680" customSize="0" y="220" width="39" height="22">exists</label>
+        </node>
+        <node id="n130" color="#fcfcfc" type="concept">
+          <geometry x="1130" y="200" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista</iri>
+          <label size="12" x="1130" customSize="0" y="200" width="110" height="36"/>
+        </node>
+        <node id="n131" color="#fcfcfc" type="concept">
+          <geometry x="1130" y="410" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/LiberoProfessionistaProtettoConCassa</iri>
+          <label size="12" x="1130" customSize="0" y="410" width="110" height="50"/>
+        </node>
+        <node id="n14" color="#000000" type="range-restriction">
+          <geometry x="380" y="200" width="20" height="20"/>
+          <label size="12" x="380" customSize="0" y="220" width="39" height="22">exists</label>
+        </node>
+        <node id="n142" color="#fcfcfc" type="role">
+          <geometry x="910" y="-170" width="70" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaIscrizioneGestioneSeparata</iri>
+          <label size="12" x="910" customSize="0" y="-200" width="235" height="22"/>
+        </node>
+        <node id="n143" color="#fcfcfc" type="domain-restriction">
+          <geometry x="1150" y="-170" width="20" height="20"/>
+          <label size="12" x="1150" customSize="0" y="-192" width="39" height="22">exists</label>
+        </node>
+        <node id="n144" color="#000000" type="range-restriction">
+          <geometry x="530" y="-170" width="20" height="20"/>
+          <label size="12" x="530" customSize="0" y="-192" width="39" height="22">exists</label>
+        </node>
+        <node id="n147" color="#fcfcfc" type="complement">
+          <geometry x="830" y="410" width="50" height="30"/>
+          <label size="12" x="830" customSize="0" y="410" width="26" height="22"/>
+        </node>
+        <node id="n148" color="#fcfcfc" type="concept">
+          <geometry x="1460" y="-420" width="110" height="50"/>
+          <iri>https://w3id.org/italia/onto/l0/Agent</iri>
+          <label size="12" x="1460" customSize="0" y="-420" width="110" height="22"/>
+        </node>
+        <node id="n2" color="#fcfcfc" type="concept">
+          <geometry x="1460" y="110" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/BeneficiarioDomandaGestioneSeparata</iri>
+          <label size="12" x="1460" customSize="0" y="110" width="110" height="50"/>
+        </node>
+        <node id="n3" color="#000000" type="disjoint-union">
+          <geometry x="1270" y="110" width="50" height="30"/>
+        </node>
+        <node id="n5" color="#fcfcfc" type="role">
+          <geometry x="530" y="20" width="70" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/inviaDomandaGestioneSeparataParasubordinato</iri>
+          <label size="12" x="530" customSize="0" y="-20" width="276" height="22"/>
+        </node>
+        <node id="n52" color="#000000" type="disjoint-union">
+          <geometry x="1460" y="-170" width="50" height="30"/>
+        </node>
+        <node id="n54" color="#fcfcfc" type="role">
+          <geometry x="-710" y="200" width="70" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaContributi</iri>
+          <label size="12" x="-710" customSize="0" y="170" width="99" height="22"/>
+        </node>
+        <node id="n55" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-590" y="200" width="20" height="20"/>
+          <label size="12" x="-590" customSize="0" y="220" width="39" height="22">exists</label>
+        </node>
+        <node id="n56" color="#000000" type="range-restriction">
+          <geometry x="-820" y="200" width="20" height="20"/>
+          <label size="12" x="-820" customSize="0" y="220" width="39" height="22">exists</label>
+        </node>
+        <node id="n57" color="#fcfcfc" type="concept">
+          <geometry x="-950" y="20" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/GestioneSeparata</iri>
+          <label size="12" x="-950" customSize="0" y="20" width="110" height="22"/>
+        </node>
+        <node id="n58" color="#fcfcfc" type="role">
+          <geometry x="-710" y="20" width="70" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/iscriveLavoratoreInGestioneSeparata</iri>
+          <label size="12" x="-710" customSize="0" y="-10" width="206" height="22"/>
+        </node>
+        <node id="n59" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-590" y="20" width="20" height="20"/>
+          <label size="12" x="-590" customSize="0" y="40" width="39" height="22">exists</label>
+        </node>
+        <node id="n60" color="#000000" type="range-restriction">
+          <geometry x="-820" y="20" width="20" height="20"/>
+          <label size="12" x="-820" customSize="0" y="40" width="39" height="22">exists</label>
+        </node>
+        <node id="n61" color="#fcfcfc" type="role">
+          <geometry x="-1080" y="110" width="70" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/versatiInGestioneSeparata</iri>
+          <label size="12" x="-1080" customSize="0" y="80" width="150" height="22"/>
+        </node>
+        <node id="n64" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-1080" y="200" width="20" height="20"/>
+          <label size="12" x="-1110" customSize="0" y="200" width="39" height="22">exists</label>
+        </node>
+        <node id="n65" color="#000000" type="range-restriction">
+          <geometry x="-1080" y="20" width="20" height="20"/>
+          <label size="12" x="-1110" customSize="0" y="20" width="39" height="22">exists</label>
+        </node>
+        <node id="n7" color="#fcfcfc" type="domain-restriction">
+          <geometry x="680" y="20" width="20" height="20"/>
+          <label size="12" x="680" customSize="0" y="0" width="39" height="22">exists</label>
+        </node>
+        <node id="n70" color="#fcfcfc" type="role">
+          <geometry x="-280" y="110" width="70" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/generaIscrizioneGestioneSeparata</iri>
+          <label size="12" x="-280" customSize="0" y="80" width="192" height="22"/>
+        </node>
+        <node id="n71" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-170" y="110" width="20" height="20"/>
+          <label size="12" x="-170" customSize="0" y="130" width="39" height="22">exists</label>
+        </node>
+        <node id="n72" color="#000000" type="range-restriction">
+          <geometry x="-400" y="110" width="20" height="20"/>
+          <label size="12" x="-400" customSize="0" y="130" width="39" height="22">exists</label>
+        </node>
+        <node id="n73" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-120" y="-70" width="20" height="20"/>
+          <label size="12" x="-120" customSize="0" y="-50" width="39" height="22">exists</label>
+        </node>
+        <node id="n74" color="#fcfcfc" type="attribute">
+          <geometry x="-220" y="-120" width="20" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/telefono</iri>
+          <label size="12" x="-220" customSize="0" y="-140" width="52" height="22"/>
+        </node>
+        <node id="n75" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-120" y="-170" width="20" height="20"/>
+          <label size="12" x="-120" customSize="0" y="-150" width="39" height="22">exists</label>
+        </node>
+        <node id="n76" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-120" y="-120" width="20" height="20"/>
+          <label size="12" x="-120" customSize="0" y="-100" width="39" height="22">exists</label>
+        </node>
+        <node id="n77" color="#fcfcfc" type="attribute">
+          <geometry x="-220" y="30" width="20" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/email</iri>
+          <label size="12" x="-220" customSize="0" y="10" width="38" height="22"/>
+        </node>
+        <node id="n78" color="#fcfcfc" type="attribute">
+          <geometry x="-220" y="-170" width="20" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/cellulare</iri>
+          <label size="12" x="-220" customSize="0" y="-190" width="53" height="22"/>
+        </node>
+        <node id="n79" color="#fcfcfc" type="attribute">
+          <geometry x="-220" y="-70" width="20" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/dataInizioAttivita</iri>
+          <label size="12" x="-220" customSize="0" y="-90" width="101" height="22"/>
+        </node>
+        <node id="n8" color="#000000" type="range-restriction">
+          <geometry x="380" y="20" width="20" height="20"/>
+          <label size="12" x="380" customSize="0" y="0" width="39" height="22">exists</label>
+        </node>
+        <node id="n80" color="#fcfcfc" type="domain-restriction">
+          <geometry x="-120" y="30" width="20" height="20"/>
+          <label size="12" x="-120" customSize="0" y="50" width="39" height="22">exists</label>
+        </node>
+        <node id="n81" color="#fcfcfc" type="concept">
+          <geometry x="220" y="20" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataParasubordinato</iri>
+          <label size="12" x="220" customSize="0" y="20" width="110" height="64"/>
+        </node>
+        <node id="n82" color="#fcfcfc" type="concept">
+          <geometry x="-520" y="110" width="110" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/IscrizioneGestioneSeparata</iri>
+          <label size="12" x="-520" customSize="0" y="110" width="110" height="36"/>
+        </node>
+        <node id="n90" color="#fcfcfc" type="attribute">
+          <geometry x="290" y="470" width="20" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/socioStudioAssociato</iri>
+          <label size="12" x="290" customSize="0" y="490" width="130" height="22"/>
+        </node>
+        <node id="n91" color="#fcfcfc" type="domain-restriction">
+          <geometry x="220" y="420" width="20" height="20"/>
+          <label size="12" x="250" customSize="0" y="420" width="39" height="22">exists</label>
+        </node>
+        <node id="n93" color="#000000" type="range-restriction">
+          <geometry x="290" y="590" width="20" height="20"/>
+          <label size="12" x="290" customSize="0" y="568" width="39" height="22">exists</label>
+        </node>
+        <node id="n95" color="#fcfcfc" type="attribute">
+          <geometry x="220" y="530" width="20" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/social-safety-net/partitaIVA</iri>
+          <label size="12" x="220" customSize="0" y="550" width="127" height="22"/>
+        </node>
+        <node id="n97" color="#fcfcfc" type="value-domain">
+          <geometry x="290" y="690" width="90" height="40"/>
+          <iri>http://www.w3.org/2001/XMLSchema#boolean</iri>
+          <label size="12" x="290" customSize="0" y="690" width="90" height="22"/>
+        </node>
+        <node id="n98" color="#fcfcfc" type="domain-restriction">
+          <geometry x="290" y="420" width="20" height="20"/>
+          <label size="12" x="320" customSize="0" y="420" width="39" height="22">exists</label>
+        </node>
+        <edge target="n3" id="e0" type="equivalence" source="n2">
+          <point x="1460" y="110"/>
+          <point x="1270" y="110"/>
+        </edge>
+        <edge target="n3" id="e1" type="input" source="n1">
+          <point x="1130" y="20"/>
+          <point x="1130" y="110"/>
+          <point x="1270" y="110"/>
+        </edge>
+        <edge target="n13" id="e10" type="input" source="n10">
+          <point x="530" y="200"/>
+          <point x="680" y="200"/>
+        </edge>
+        <edge target="n98" id="e102" type="input" source="n90">
+          <point x="290" y="470"/>
+          <point x="290" y="420"/>
+        </edge>
+        <edge target="n93" id="e103" type="input" source="n90">
+          <point x="290" y="470"/>
+          <point x="290" y="590"/>
+        </edge>
+        <edge target="n91" id="e104" type="input" source="n95">
+          <point x="220" y="530"/>
+          <point x="220" y="420"/>
+        </edge>
+        <edge target="n103" id="e105" type="equivalence" source="n91">
+          <point x="220" y="420"/>
+          <point x="220" y="270"/>
+          <point x="220" y="200"/>
+        </edge>
+        <edge target="n97" id="e107" type="inclusion" source="n93">
+          <point x="290" y="590"/>
+          <point x="290" y="690"/>
+        </edge>
+        <edge target="n103" id="e108" type="inclusion" source="n98">
+          <point x="290" y="420"/>
+          <point x="290" y="270"/>
+          <point x="220" y="270"/>
+          <point x="220" y="200"/>
+        </edge>
+        <edge target="n103" id="e111" type="equivalence" source="n101">
+          <point x="150" y="420"/>
+          <point x="150" y="270"/>
+          <point x="220" y="270"/>
+          <point x="220" y="200"/>
+        </edge>
+        <edge target="n101" id="e112" type="input" source="n102">
+          <point x="150" y="480"/>
+          <point x="150" y="420"/>
+        </edge>
+        <edge target="n14" id="e113" type="equivalence" source="n103">
+          <point x="220" y="200"/>
+          <point x="380" y="200"/>
+        </edge>
+        <edge target="n104" id="e116" type="input" source="n81">
+          <point x="220" y="20"/>
+          <point x="100" y="20"/>
+          <point x="100" y="110"/>
+        </edge>
+        <edge target="n104" id="e117" type="input" source="n103">
+          <point x="220" y="200"/>
+          <point x="100" y="200"/>
+          <point x="100" y="110"/>
+        </edge>
+        <edge target="n72" id="e118" type="equivalence" source="n82">
+          <point x="-520" y="110"/>
+          <point x="-400" y="110"/>
+        </edge>
+        <edge target="n82" id="e119" type="equivalence" source="n59">
+          <point x="-590" y="20"/>
+          <point x="-520" y="20"/>
+          <point x="-520" y="110"/>
+        </edge>
+        <edge target="n82" id="e120" type="equivalence" source="n55">
+          <point x="-590" y="200"/>
+          <point x="-520" y="200"/>
+          <point x="-520" y="110"/>
+        </edge>
+        <edge target="n107" id="e125" type="input" source="n105">
+          <point x="-220" y="-280"/>
+          <point x="-120" y="-280"/>
+        </edge>
+        <edge target="n108" id="e126" type="input" source="n106">
+          <point x="-220" y="-220"/>
+          <point x="-120" y="-220"/>
+        </edge>
+        <edge target="n104" id="e127" type="equivalence" source="n109">
+          <point x="-50" y="110"/>
+          <point x="100" y="110"/>
+        </edge>
+        <edge target="n71" id="e128" type="equivalence" source="n109">
+          <point x="-50" y="110"/>
+          <point x="-170" y="110"/>
+        </edge>
+        <edge target="n109" id="e129" type="equivalence" source="n107">
+          <point x="-120" y="-280"/>
+          <point x="-50" y="-280"/>
+          <point x="-50" y="110"/>
+        </edge>
+        <edge target="n109" id="e130" type="equivalence" source="n108">
+          <point x="-120" y="-220"/>
+          <point x="-50" y="-220"/>
+          <point x="-50" y="110"/>
+        </edge>
+        <edge target="n80" id="e134" type="equivalence" source="n109">
+          <point x="-50" y="110"/>
+          <point x="-50" y="30"/>
+          <point x="-120" y="30"/>
+        </edge>
+        <edge target="n73" id="e135" type="equivalence" source="n109">
+          <point x="-50" y="110"/>
+          <point x="-50" y="-70"/>
+          <point x="-120" y="-70"/>
+        </edge>
+        <edge target="n76" id="e136" type="equivalence" source="n109">
+          <point x="-50" y="110"/>
+          <point x="-50" y="-120"/>
+          <point x="-120" y="-120"/>
+        </edge>
+        <edge target="n109" id="e138" type="inclusion" source="n75">
+          <point x="-120" y="-170"/>
+          <point x="-50" y="-170"/>
+          <point x="-50" y="110"/>
+        </edge>
+        <edge target="n118" id="e139" type="input" source="n116">
+          <point x="-50" y="310"/>
+          <point x="-50" y="220"/>
+        </edge>
+        <edge target="n119" id="e140" type="input" source="n116">
+          <point x="-50" y="310"/>
+          <point x="-50" y="390"/>
+        </edge>
+        <edge target="n118" id="e141" type="equivalence" source="n109">
+          <point x="-50" y="110"/>
+          <point x="-50" y="220"/>
+        </edge>
+        <edge target="n119" id="e142" type="equivalence" source="n114">
+          <point x="-50" y="500"/>
+          <point x="-50" y="390"/>
+        </edge>
+        <edge target="n56" id="e143" type="equivalence" source="n120">
+          <point x="-950" y="200"/>
+          <point x="-820" y="200"/>
+        </edge>
+        <edge target="n64" id="e144" type="equivalence" source="n120">
+          <point x="-950" y="200"/>
+          <point x="-1080" y="200"/>
+        </edge>
+        <edge target="n127" id="e150" type="input" source="n126">
+          <point x="-220" y="-20"/>
+          <point x="-120" y="-20"/>
+        </edge>
+        <edge target="n109" id="e152" type="equivalence" source="n127">
+          <point x="-120" y="-20"/>
+          <point x="-50" y="-20"/>
+          <point x="-50" y="110"/>
+        </edge>
+        <edge target="n3" id="e155" type="input" source="n130">
+          <point x="1130" y="200"/>
+          <point x="1130" y="110"/>
+          <point x="1270" y="110"/>
+        </edge>
+        <edge target="n52" id="e196" type="equivalence" source="n143">
+          <point x="1150" y="-170"/>
+          <point x="1460" y="-170"/>
+        </edge>
+        <edge target="n143" id="e197" type="input" source="n142">
+          <point x="910" y="-170"/>
+          <point x="1150" y="-170"/>
+        </edge>
+        <edge target="n144" id="e198" type="input" source="n142">
+          <point x="910" y="-170"/>
+          <point x="530" y="-170"/>
+        </edge>
+        <edge target="n144" id="e199" type="equivalence" source="n109">
+          <point x="-50" y="110"/>
+          <point x="-50" y="-170"/>
+          <point x="530" y="-170"/>
+        </edge>
+        <edge target="n1" id="e210" type="equivalence" source="n7">
+          <point x="680" y="20"/>
+          <point x="1130" y="20"/>
+        </edge>
+        <edge target="n142" id="e211" type="inclusion" source="n5">
+          <point x="530" y="20"/>
+          <point x="530" y="-50"/>
+          <point x="910" y="-50"/>
+          <point x="910" y="-170"/>
+        </edge>
+        <edge target="n142" id="e212" type="inclusion" source="n10">
+          <point x="530" y="200"/>
+          <point x="530" y="80"/>
+          <point x="910" y="80"/>
+          <point x="910" y="-170"/>
+        </edge>
+        <edge target="n147" id="e221" type="input" source="n131">
+          <point x="1130" y="410"/>
+          <point x="830" y="410"/>
+        </edge>
+        <edge target="n130" id="e232" type="inclusion" source="n13">
+          <point x="680" y="200"/>
+          <point x="1130" y="200"/>
+        </edge>
+        <edge target="n147" id="e233" type="inclusion" source="n13">
+          <point x="680" y="200"/>
+          <point x="680" y="410"/>
+          <point x="830" y="410"/>
+        </edge>
+        <edge target="n52" id="e234" type="input" source="n148">
+          <point x="1460" y="-420"/>
+          <point x="1460" y="-170"/>
+        </edge>
+        <edge target="n7" id="e4" type="input" source="n5">
+          <point x="530" y="20"/>
+          <point x="680" y="20"/>
+        </edge>
+        <edge target="n8" id="e5" type="input" source="n5">
+          <point x="530" y="20"/>
+          <point x="380" y="20"/>
+        </edge>
+        <edge target="n52" id="e56" type="input" source="n2">
+          <point x="1460" y="110"/>
+          <point x="1460" y="-170"/>
+        </edge>
+        <edge target="n55" id="e57" type="input" source="n54">
+          <point x="-710" y="200"/>
+          <point x="-590" y="200"/>
+        </edge>
+        <edge target="n56" id="e58" type="input" source="n54">
+          <point x="-710" y="200"/>
+          <point x="-820" y="200"/>
+        </edge>
+        <edge target="n59" id="e61" type="input" source="n58">
+          <point x="-710" y="20"/>
+          <point x="-590" y="20"/>
+        </edge>
+        <edge target="n60" id="e62" type="input" source="n58">
+          <point x="-710" y="20"/>
+          <point x="-820" y="20"/>
+        </edge>
+        <edge target="n57" id="e64" type="equivalence" source="n60">
+          <point x="-820" y="20"/>
+          <point x="-950" y="20"/>
+        </edge>
+        <edge target="n65" id="e65" type="input" source="n61">
+          <point x="-1080" y="110"/>
+          <point x="-1080" y="20"/>
+        </edge>
+        <edge target="n64" id="e66" type="input" source="n61">
+          <point x="-1080" y="110"/>
+          <point x="-1080" y="200"/>
+        </edge>
+        <edge target="n57" id="e68" type="equivalence" source="n65">
+          <point x="-1080" y="20"/>
+          <point x="-950" y="20"/>
+        </edge>
+        <edge target="n71" id="e80" type="input" source="n70">
+          <point x="-280" y="110"/>
+          <point x="-170" y="110"/>
+        </edge>
+        <edge target="n72" id="e81" type="input" source="n70">
+          <point x="-280" y="110"/>
+          <point x="-400" y="110"/>
+        </edge>
+        <edge target="n73" id="e85" type="input" source="n79">
+          <point x="-220" y="-70"/>
+          <point x="-120" y="-70"/>
+        </edge>
+        <edge target="n76" id="e86" type="input" source="n74">
+          <point x="-220" y="-120"/>
+          <point x="-120" y="-120"/>
+        </edge>
+        <edge target="n75" id="e88" type="input" source="n78">
+          <point x="-220" y="-170"/>
+          <point x="-120" y="-170"/>
+        </edge>
+        <edge target="n14" id="e9" type="input" source="n10">
+          <point x="530" y="200"/>
+          <point x="380" y="200"/>
+        </edge>
+        <edge target="n80" id="e90" type="input" source="n77">
+          <point x="-220" y="30"/>
+          <point x="-120" y="30"/>
+        </edge>
+        <edge target="n81" id="e92" type="equivalence" source="n8">
+          <point x="380" y="20"/>
+          <point x="220" y="20"/>
+        </edge>
+      </diagram>
+    </diagrams>
+  </project>
+</graphol>

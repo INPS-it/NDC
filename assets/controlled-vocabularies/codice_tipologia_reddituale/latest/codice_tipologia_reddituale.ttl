@@ -1,0 +1,387 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/CodiceTipologiaRedditualeLavoroAutonomoProviggioniERedditiDiversi>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement self employed income type codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici tipologia reddituale lavoro autonomo provvigioni e redditi diversi attestati dalla Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato dei codici tipologia reddituale lavoro autonomo provvigioni e redditi diversi attestati dalla Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the defined set of the self employed income type codes with regards to the CU Statement"@en,
+        "Vocabolario controllato dei codici tipologia reddituale lavoro autonomo provvigioni e redditi diversi attestati dalla Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/CTR_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CTR_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CTR_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "codici tipologia reddituale lavoro autonomo della certificazione unica"@it,
+        "CU statement self employed income type codes"@en,
+        "inps"@en,
+        "inps"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement self employed income type codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici tipologia reddituale lavoro autonomo provvigioni e redditi diversi attestati dalla Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale" ;
+    dct:issued "2024-10-22"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-22"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement self employed income type codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici tipologia reddituale lavoro autonomo provvigioni e redditi diversi attestati dalla Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "codice_tipologia_reddituale" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/A>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/B>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/C>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/D>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/E>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/F>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/G>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/H>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/I>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/J>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/K>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/L>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/L1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/M>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/M1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/M2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/N>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/N1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/N2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/N3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/O>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/O1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/P>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/Q>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/R>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/S>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/T>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/U>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/V>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/V1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/V2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/W>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/X>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/Y>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/ZO> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/A> a skos:Concept ;
+    rdfs:label "prestazioni di lavoro autonomo rientranti nell’esercizio di arte o professione abituale;"@it ;
+    skos:prefLabel "prestazioni di lavoro autonomo rientranti nell’esercizio di arte o professione abituale;"@it ;
+    dct:identifier "A"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "A"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/B> a skos:Concept ;
+    rdfs:label "utilizzazione economica, da parte dell’autore o dell’inventore, di opere dell’ingegno, di brevetti industriali e di processi, formule o informazioni relativi ad esperienze acquisite in campo industriale, commerciale o scientifico;"@it ;
+    skos:prefLabel "utilizzazione economica, da parte dell’autore o dell’inventore, di opere dell’ingegno, di brevetti industriali e di processi, formule o informazioni relativi ad esperienze acquisite in campo industriale, commerciale o scientifico;"@it ;
+    dct:identifier "B"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "B"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/C> a skos:Concept ;
+    rdfs:label "utili derivanti da contratti di associazione in partecipazione e da contratti di cointeressenza, quando l’apporto è costituito esclusivamente dalla prestazione di lavoro;"@it ;
+    skos:prefLabel "utili derivanti da contratti di associazione in partecipazione e da contratti di cointeressenza, quando l’apporto è costituito esclusivamente dalla prestazione di lavoro;"@it ;
+    dct:identifier "C"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "C"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/D> a skos:Concept ;
+    rdfs:label "utili spettanti ai soci promotori ed ai soci fondatori delle società di capitali;"@it ;
+    skos:prefLabel "utili spettanti ai soci promotori ed ai soci fondatori delle società di capitali;"@it ;
+    dct:identifier "D"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "D"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/E> a skos:Concept ;
+    rdfs:label "levata di protesti cambiari da parte dei segretari comunali;"@it ;
+    skos:prefLabel "levata di protesti cambiari da parte dei segretari comunali;"@it ;
+    dct:identifier "E"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "E"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/F> a skos:Concept ;
+    rdfs:label "indennità corrisposte ai giudici onorari di pace e ai vice procuratori onorari;"@it ;
+    skos:prefLabel "indennità corrisposte ai giudici onorari di pace e ai vice procuratori onorari;"@it ;
+    dct:identifier "F"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "F"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/G> a skos:Concept ;
+    rdfs:label "indennità corrisposte per la cessazione di attività sportiva professionale;"@it ;
+    skos:prefLabel "indennità corrisposte per la cessazione di attività sportiva professionale;"@it ;
+    dct:identifier "G"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "G"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/H> a skos:Concept ;
+    rdfs:label "indennità corrisposte per la cessazione dei rapporti di agenzia delle persone fisiche e delle società di persone con esclusione delle somme maturate entro il 31 dicembre 2003, già imputate per competenza e tassate come reddito d’impresa;"@it ;
+    skos:prefLabel "indennità corrisposte per la cessazione dei rapporti di agenzia delle persone fisiche e delle società di persone con esclusione delle somme maturate entro il 31 dicembre 2003, già imputate per competenza e tassate come reddito d’impresa;"@it ;
+    dct:identifier "H"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "H"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/I> a skos:Concept ;
+    rdfs:label "indennità corrisposte per la cessazione da funzioni notarili;"@it ;
+    skos:prefLabel "indennità corrisposte per la cessazione da funzioni notarili;"@it ;
+    dct:identifier "I"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "I"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/J> a skos:Concept ;
+    rdfs:label "compensi corrisposti ai raccoglitori occasionali di tartufi non identificati ai fini dell’imposta sul valore aggiunto, in relazione alla cessione di tartufi;"@it ;
+    skos:prefLabel "compensi corrisposti ai raccoglitori occasionali di tartufi non identificati ai fini dell’imposta sul valore aggiunto, in relazione alla cessione di tartufi;"@it ;
+    dct:identifier "J"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "J"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/K> a skos:Concept ;
+    rdfs:label "assegni di servizio civile universale di cui all’art.16 del D.lgs. n. 40 del 6 marzo 2017;"@it ;
+    skos:prefLabel "assegni di servizio civile universale di cui all’art.16 del D.lgs. n. 40 del 6 marzo 2017;"@it ;
+    dct:identifier "K"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "K"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/L> a skos:Concept ;
+    rdfs:label "redditi derivanti dall’utilizzazione economica di opere dell’ingegno, di brevetti industriali e di processi, formule e informazioni relativi a esperienze acquisite in campo industriale, commerciale o scientifico, che sono percepiti dagli aventi causa a titolo gratuito (ad es. eredi e legatari dell’autore e inventore);"@it ;
+    skos:prefLabel "redditi derivanti dall’utilizzazione economica di opere dell’ingegno, di brevetti industriali e di processi, formule e informazioni relativi a esperienze acquisite in campo industriale, commerciale o scientifico, che sono percepiti dagli aventi causa a titolo gratuito (ad es. eredi e legatari dell’autore e inventore);"@it ;
+    dct:identifier "L"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "L"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/L1> a skos:Concept ;
+    rdfs:label "redditi derivanti dall’utilizzazione economica di opere dell’ingegno, di brevetti industriali e di processi, formule e informazioni relativi a esperienze acquisite in campo industriale, commerciale o scientifico, che sono percepiti da soggetti che abbiano acquistato a titolo oneroso i diritti alla loro utilizzazione;"@it ;
+    skos:prefLabel "redditi derivanti dall’utilizzazione economica di opere dell’ingegno, di brevetti industriali e di processi, formule e informazioni relativi a esperienze acquisite in campo industriale, commerciale o scientifico, che sono percepiti da soggetti che abbiano acquistato a titolo oneroso i diritti alla loro utilizzazione;"@it ;
+    dct:identifier "L1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "L1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/M> a skos:Concept ;
+    rdfs:label "prestazioni di lavoro autonomo non esercitate abitualmente;"@it ;
+    skos:prefLabel "prestazioni di lavoro autonomo non esercitate abitualmente;"@it ;
+    dct:identifier "M"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "M"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/M1> a skos:Concept ;
+    rdfs:label "redditi derivanti dall’assunzione di obblighi di fare, di non fare o permettere;"@it ;
+    skos:prefLabel "redditi derivanti dall’assunzione di obblighi di fare, di non fare o permettere;"@it ;
+    dct:identifier "M1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "M1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/M2> a skos:Concept ;
+    rdfs:label "prestazioni di lavoro autonomo non esercitate abitualmente per le quali sussiste l’obbligo di iscrizione alla Gestione Separata ENPAPI;"@it ;
+    skos:prefLabel "prestazioni di lavoro autonomo non esercitate abitualmente per le quali sussiste l’obbligo di iscrizione alla Gestione Separata ENPAPI;"@it ;
+    dct:identifier "M2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "M2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/N> a skos:Concept ;
+    rdfs:label "le indennità di trasferta, i rimborsi forfetari di spesa, i premi e i compensi erogati ai direttori artistici ed ai collaboratori tecnici per prestazioni di natura non professionale da parte di cori, bande musicali e filodrammatiche che perseguono finalità dilettantistiche;"@it ;
+    skos:prefLabel "le indennità di trasferta, i rimborsi forfetari di spesa, i premi e i compensi erogati ai direttori artistici ed ai collaboratori tecnici per prestazioni di natura non professionale da parte di cori, bande musicali e filodrammatiche che perseguono finalità dilettantistiche;"@it ;
+    dct:identifier "N"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "N"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/N1> a skos:Concept ;
+    rdfs:label "indennità di trasferta, rimborso forfetario di spese, premi e compensi erogati fino al 30 giugno 2023: 1. nell’esercizio diretto di attività sportive dilettantistiche 2.in relazione a rapporti di collaborazione coordinata e continuativa di carattere amministrativo-gestionale di natura non professionale resi a favore di società e associazioni sportive dilettantistiche"@it ;
+    skos:prefLabel "indennità di trasferta, rimborso forfetario di spese, premi e compensi erogati fino al 30 giugno 2023: 1. nell’esercizio diretto di attività sportive dilettantistiche 2.in relazione a rapporti di collaborazione coordinata e continuativa di carattere amministrativo-gestionale di natura non professionale resi a favore di società e associazioni sportive dilettantistiche"@it ;
+    dct:identifier "N1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "N1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/N2> a skos:Concept ;
+    rdfs:label "Sredditi derivanti da prestazioni sportive oggetto di contratto diverso da quello di lavoro subordinato o da quello di collaborazione coordinata e continuativa, ai sensi del decreto legislativo 28 febbraio 2021, n. 36 (art. 53, comma 2 lett. a) del Tuir);"@it ;
+    skos:prefLabel "redditi derivanti da prestazioni sportive oggetto di contratto diverso da quello di lavoro subordinato o da quello di collaborazione coordinata e continuativa, ai sensi del decreto legislativo 28 febbraio 2021, n. 36 (art. 53, comma 2 lett. a) del Tuir);"@it ;
+    dct:identifier "N2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "N2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/N3> a skos:Concept ;
+    rdfs:label "redditi derivanti da prestazioni sportive oggetto di contratto diverso da quello di lavoro subordinato o da quello di collaborazione coordinata e continuativa, ai sensi del decreto legislativo 28 febbraio 2021, n. 36, che prevedono particolari soglie di esenzione a seguito di specifiche disposizioni normative (art. 53, comma 2 lett. a) del Tuir);"@it ;
+    skos:prefLabel "redditi derivanti da prestazioni sportive oggetto di contratto diverso da quello di lavoro subordinato o da quello di collaborazione coordinata e continuativa, ai sensi del decreto legislativo 28 febbraio 2021, n. 36, che prevedono particolari soglie di esenzione a seguito di specifiche disposizioni normative (art. 53, comma 2 lett. a) del Tuir);"@it ;
+    dct:identifier "N3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "N3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/O> a skos:Concept ;
+    rdfs:label "prestazioni di lavoro autonomo non esercitate abitualmente, per le quali non sussiste l’obbligo di iscrizione alla gestione separata (Circ. INPS n. 104/2001);"@it ;
+    skos:prefLabel "prestazioni di lavoro autonomo non esercitate abitualmente, per le quali non sussiste l’obbligo di iscrizione alla gestione separata (Circ. INPS n. 104/2001);"@it ;
+    dct:identifier "O"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "O"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/O1> a skos:Concept ;
+    rdfs:label "redditi derivanti dall’assunzione di obblighi di fare, di non fare o permettere, per le quali non sussiste l’obbligo di iscrizione alla gestione separata (Circ. INPS n. 104/2001);"@it ;
+    skos:prefLabel "redditi derivanti dall’assunzione di obblighi di fare, di non fare o permettere, per le quali non sussiste l’obbligo di iscrizione alla gestione separata (Circ. INPS n. 104/2001);"@it ;
+    dct:identifier "O1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "O1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/P> a skos:Concept ;
+    rdfs:label "compensi corrisposti a soggetti non residenti privi di stabile organizzazione per l’uso o la concessione in uso di attrezzature industriali, commerciali o scientifiche che si trovano nel territorio dello Stato ovvero a società svizzere o stabili organizzazioni di società svizzere che possiedono i requisiti di cui all’art. 15, comma 2 dell’Accordo tra la Comunità europea e la Confederazione svizzera del 26 ottobre 2004 (pubblicato in G.U.C.E. del 29 dicembre 2004 n. L385/30);"@it ;
+    skos:prefLabel "compensi corrisposti a soggetti non residenti privi di stabile organizzazione per l’uso o la concessione in uso di attrezzature industriali, commerciali o scientifiche che si trovano nel territorio dello Stato ovvero a società svizzere o stabili organizzazioni di società svizzere che possiedono i requisiti di cui all’art. 15, comma 2 dell’Accordo tra la Comunità europea e la Confederazione svizzera del 26 ottobre 2004 (pubblicato in G.U.C.E. del 29 dicembre 2004 n. L385/30);"@it ;
+    dct:identifier "P"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "P"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/Q> a skos:Concept ;
+    rdfs:label "provvigioni corrisposte ad agente o rappresentante di commercio monomandatario;"@it ;
+    skos:prefLabel "provvigioni corrisposte ad agente o rappresentante di commercio monomandatario;"@it ;
+    dct:identifier "Q"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "Q"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/R> a skos:Concept ;
+    rdfs:label "provvigioni corrisposte ad agente o rappresentante di commercio plurimandatario;"@it ;
+    skos:prefLabel "provvigioni corrisposte ad agente o rappresentante di commercio plurimandatario;"@it ;
+    dct:identifier "R"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "R"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/S> a skos:Concept ;
+    rdfs:label "provvigioni corrisposte a commissionario;"@it ;
+    skos:prefLabel "provvigioni corrisposte a commissionario;"@it ;
+    dct:identifier "S"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "S"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/T> a skos:Concept ;
+    rdfs:label "provvigioni corrisposte a mediatore;senzione deliberata."@it ;
+    skos:prefLabel "provvigioni corrisposte a mediatore;"@it ;
+    dct:identifier "T"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "T"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/U> a skos:Concept ;
+    rdfs:label "provvigioni corrisposte a procacciatore di affari;"@it ;
+    skos:prefLabel "provvigioni corrisposte a procacciatore di affari;"@it ;
+    dct:identifier "U"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "U"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/V> a skos:Concept ;
+    rdfs:label "provvigioni corrisposte a incaricato per le vendite a domicilio; provvigioni corrisposte a incaricato per la vendita porta a porta e per la vendita ambulante di giornali quotidiani e periodici (L. 25 febbraio 1987, n. 67);"@it ;
+    skos:prefLabel "provvigioni corrisposte a incaricato per le vendite a domicilio; provvigioni corrisposte a incaricato per la vendita porta a porta e per la vendita ambulante di giornali quotidiani e periodici (L. 25 febbraio 1987, n. 67);"@it ;
+    dct:identifier "V"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "V"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/V1> a skos:Concept ;
+    rdfs:label "redditi derivanti da attività commerciali non esercitate abitualmente (ad esempio, provvigioni corrisposte per prestazioni occasionali ad agente o rappresentante di commercio, mediatore, procacciatore d’affari);"@it ;
+    skos:prefLabel "redditi derivanti da attività commerciali non esercitate abitualmente (ad esempio, provvigioni corrisposte per prestazioni occasionali ad agente o rappresentante di commercio, mediatore, procacciatore d’affari);"@it ;
+    dct:identifier "V1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "V1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/V2> a skos:Concept ;
+    rdfs:label "redditi derivanti dalle prestazioni non esercitate abitualmente rese dagli incaricati alla vendita diretta a domicilio;"@it ;
+    skos:prefLabel "redditi derivanti dalle prestazioni non esercitate abitualmente rese dagli incaricati alla vendita diretta a domicilio;"@it ;
+    dct:identifier "V2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "V2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/W> a skos:Concept ;
+    rdfs:label "corrispettivi erogati nel 2023 per prestazioni relative a contratti d’appalto cui si sono resi applicabili le disposizioni contenute nell’art. 25-ter del D.P.R. n. 600 del 29 settembre 1973;"@it ;
+    skos:prefLabel "corrispettivi erogati nel 2023 per prestazioni relative a contratti d’appalto cui si sono resi applicabili le disposizioni contenute nell’art. 25-ter del D.P.R. n. 600 del 29 settembre 1973;"@it ;
+    dct:identifier "W"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "W"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/X> a skos:Concept ;
+    rdfs:label "canoni corrisposti nel 2004 da società o enti residenti ovvero da stabili organizzazioni di società estere di cui all’art. 26-quater, comma 1, lett. a) e b) del D.P.R. 600 del 29 settembre 1973, a società o stabili organizzazioni di società, situate in altro stato membro dell’Unione Europea in presenza dei requisiti di cui al citato art. 26-quater, del D.P.R. 600 del 29 settembre 1973, per i quali è stato effettuato, nell’anno 2006, il rimborso della ritenuta ai sensi dell’art. 4 del D.Lgs. 30 maggio 2005 n. 143;"@it ;
+    skos:prefLabel "canoni corrisposti nel 2004 da società o enti residenti ovvero da stabili organizzazioni di società estere di cui all’art. 26-quater, comma 1, lett. a) e b) del D.P.R. 600 del 29 settembre 1973, a società o stabili organizzazioni di società, situate in altro stato membro dell’Unione Europea in presenza dei requisiti di cui al citato art. 26-quater, del D.P.R. 600 del 29 settembre 1973, per i quali è stato effettuato, nell’anno 2006, il rimborso della ritenuta ai sensi dell’art. 4 del D.Lgs. 30 maggio 2005 n. 143;"@it ;
+    dct:identifier "X"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "X"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/Y> a skos:Concept ;
+    rdfs:label "canoni corrisposti dal 1° gennaio 2005 al 26 luglio 2005 da società o enti residenti ovvero da stabili organizzazioni di società estere di cui all’art. 26-quater, comma 1, lett. a) e b) del D.P.R. n. 600 del 29 settembre 1973, a società o stabili organizzazioni di società, situate in altro stato membro dell’Unione Europea in presenza dei requisiti di cui al citato art. 26-quater, del D.P.R. n. 600 del 29 settembre 1973, per i quali è stato effettuato, nell’anno 2006, il rimborso della ritenuta ai sensi dell’art. 4 del D.Lgs. 30 maggio 2005 n. 143;"@it ;
+    skos:prefLabel "canoni corrisposti dal 1° gennaio 2005 al 26 luglio 2005 da società o enti residenti ovvero da stabili organizzazioni di società estere di cui all’art. 26-quater, comma 1, lett. a) e b) del D.P.R. n. 600 del 29 settembre 1973, a società o stabili organizzazioni di società, situate in altro stato membro dell’Unione Europea in presenza dei requisiti di cui al citato art. 26-quater, del D.P.R. n. 600 del 29 settembre 1973, per i quali è stato effettuato, nell’anno 2006, il rimborso della ritenuta ai sensi dell’art. 4 del D.Lgs. 30 maggio 2005 n. 143;"@it ;
+    dct:identifier "Y"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "Y"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale/ZO> a skos:Concept ;
+    rdfs:label "titolo diverso dai precedenti."@it ;
+    skos:prefLabel "titolo diverso dai precedenti."@it ;
+    dct:identifier "ZO"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_tipologia_reddituale> ;
+    skos:notation "ZO"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CTR_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_tipologia_reddituale/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_tipologia_reddituale/latest/codice_tipologia_reddituale.csv> ;
+    dct:description "CU statement self employed income type codes controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici tipologia reddituale lavoro autonomo provvigioni e redditi diversi attestati dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement self employed income type codes controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato dei codici tipologia reddituale lavoro autonomo provvigioni e redditi diversi attestati dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CTR_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_tipologia_reddituale/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_tipologia_reddituale/latest/codice_tipologia_reddituale.json> ;
+    dct:description "CU statement self employed income type codes controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici tipologia reddituale lavoro autonomo provvigioni e redditi diversi attestati dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement self employed income type codes controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato dei codici tipologia reddituale lavoro autonomo provvigioni e redditi diversi attestati dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CTR_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_tipologia_reddituale/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_tipologia_reddituale/latest/codice_tipologia_reddituale.ttl> ;
+    dct:description "CU statement self employed income type codes controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato dei codici tipologia reddituale lavoro autonomo provvigioni e redditi diversi attestati dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU Statement self employed income type codes controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato dei codici tipologia reddituale lavoro autonomo provvigioni e redditi diversi attestati dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

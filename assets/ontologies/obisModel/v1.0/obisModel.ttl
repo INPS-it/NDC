@@ -1,0 +1,394 @@
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
+@prefix CLV: <https://w3id.org/italia/onto/CLV/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPSV: <https://w3id.org/italia/onto/CPSV/> .
+@prefix CPV: <https://w3id.org/italia/onto/CPV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix DETPENS: <https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
+@prefix INPSObisM: <https://w3id.org/italia/social-security/onto/ObisModel/> .
+@prefix INPSPensions: <https://w3id.org/italia/social-security/onto/pensions/> .
+@prefix L0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
+@prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix TI: <https://w3id.org/italia/onto/TI/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+INPSObisM: a owl:Ontology ;
+    owl:versionIRI INPSObisM:1.0 ;
+    owl:imports CLV:,
+        COV:,
+        CPV:,
+        L0:,
+        RO: ;
+    rdfs:label "Obis Model INPS Ontology"@en,
+        "Ontologia Modello Obis di INPS"@it ;
+    rdfs:comment "Ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondo i criteri dell'istituto."@it,
+        "This INPS ontology describes the main entities and proprieties of the Obis Model according to the INPS agency."@en ;
+    owl:versionInfo "1.0 - Modificata il 29 Ottobre 2024"@it,
+        "1.0 - Modified on 29 October 2024"@en ;
+    rdfs:isDefinedBy INPSObisM: ;
+    adms:acronym "inps" ;
+    adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+    adms:hasFormalityLevel adms:Formal ;
+    adms:hasKeyClass INPSObisM:CertificatoDiPensione,
+        INPSObisM:DatiFiscali,
+        INPSObisM:FascicoloPrevidenzialeCittadino ;
+    adms:hasOntologyLanguage adms:OWL ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-XML> ;
+    adms:hasTask adms:AnnotationTask,
+        adms:QueryFormulationTask,
+        adms:SearchTask ;
+    adms:last INPSObisM:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/ObisModel/"^^xsd:anyURI ;
+    adms:prefix "INPSObisM" ;
+    adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+    adms:status "catalogued",
+        "published" ;
+    adms:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    adms:type adms:ServiceOnytology ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:keyword "Modello Obis"@it,
+        "Obis Model"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell'istituto."@it,
+        "This INPS ontology describes the main entities and proprieties of the Obis Model according to the INPS agency."@en ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/ObisModel" ;
+    dct:issued "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "Obis Model INPS Ontology"@en,
+        "Ontologia Modello Obis di INPS "@it .
+
+### Object Properties
+
+INPSObisM:accedeA a owl:ObjectProperty ;
+    rdfs:label "accede a"@it,
+        "access to"@en ;
+    rdfs:domain INPSPensions:TitolareDiPensione ;
+    rdfs:range INPSObisM:FascicoloPrevidenzialeCittadino ;
+    rdfs:comment "La object property collega il Titolare della pensione con il Fascicolo previdenziale del cittadino, ossia il servizio INPS che consente la consultazione del modello Obis"@it,
+        "The object property connects the Pension Holder with the citizen's Social Security Record, that is the INPS service that allows the consultation of the Obis model"@en .
+
+INPSObisM:certificaDatiPensione a owl:ObjectProperty ;
+    rdfs:label "certifica dati di pensione"@it,
+        "certify pension data"@en ;
+    rdfs:domain INPSObisM:CertificatoDiPensione ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    DETPENS:ImportoPensione
+                    INPSObisM:DatiFiscali ) ] ;
+    rdfs:comment "La object propety collega il Certificato di pensione con le classi rappresentative dei dati che il documento stesso èutile a certificare, ossia l'Importo della pensione erogato eil dettaglio dei dati fiscali"@it,
+        "The object property connects the Pension Certificate with the representative classes of the data that the document itself is useful to certify, i.e. the amount of the pension paid and the details of the fiscal data"@en .
+
+INPSObisM:daAccessoA a owl:ObjectProperty ;
+    rdfs:label "da accesso a"@it,
+        "gives access to"@en ;
+    rdfs:domain INPSObisM:FascicoloPrevidenzialeCittadino ;
+    rdfs:range INPSObisM:CertificatoDiPensione ;
+    rdfs:comment "La object property collega il Fascicolo previdenziale del cittadino al Certificato di pensione "@it,
+        "The object property links the Citizen's social security file to the Pension Certificate"@en .
+
+INPSObisM:presentaDatiRelativiA a owl:ObjectProperty ;
+    rdfs:label "presenta dati relativi a"@it,
+        "presents data relating to"@en ;
+    rdfs:domain INPSObisM:CertificatoDiPensione ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    INPSCore:SedeINPS
+                    INPSPensions:ProdottoPensionistico
+                    INPSPensions:TitolareDiPensione ) ] ;
+    rdfs:comment "La object property collega il Certificato di pensione al gruppo di dati presenti nel documento, ossia quelli relativi al titolare del trattamento pensionistico, alla sede INPS corrispondente al soggetto pagatore e quelli inerenti al prodotto pensionistico erogato"@it,
+        "The object property links the Pension Certificate to the group of data present in the document, i.e. those relating to the pension holder, the INPS office corresponding to the paying entity and those relating to the pension product provided"@en .
+
+INPSPensions:haTipoDiPensione a owl:ObjectProperty ;
+    rdfs:domain INPSPensions:ProdottoPensionistico ;
+    rdfs:range INPSPensions:TipoDiPensione .
+
+TI:atTime a owl:ObjectProperty ;
+    rdfs:domain DETPENS:ImportoPensione ;
+    rdfs:range INPSObisM:TimeInterval .
+
+### Data Properties
+
+INPSObisM:addizionaleComunaleIRPEF a owl:DatatypeProperty ;
+    rdfs:label "addizionale comunale IRPEF"@it,
+        "municipal IRPEF fee"@en ;
+    rdfs:domain INPSObisM:DatiFiscali ;
+    rdfs:comment "L'addizionale comunale IRPEF èun'imposta locale che i comuni italiani possono applicare sui redditi dei cittadini residenti nel loro territorio"@it,
+        "The IRPEF municipal surcharge is a local tax that Italian municipalities can apply on the income of citizens residing in their territory"@en .
+
+INPSObisM:addizionaleRegionaleIRPEF a owl:DatatypeProperty ;
+    rdfs:label "addizionale regionale IRPEF"@it,
+        "regional IRPEF fee"@en ;
+    rdfs:domain INPSObisM:DatiFiscali ;
+    rdfs:comment "L'addizionale regionale IRPEF è un' imposta che si applica al reddito complessivo determinato ai fini dell'IRPEF. Ogni Regione e Provincia autonoma può stabilirne l'aliquota entro i limiti fissati dalla legge statale"@it,
+        "The regional IRPEF surcharge is a tax that is applied to the overall income determined for IRPEF purposes. Each Region and Autonomous Province can establish the rate within the limits set by state law"@en .
+
+INPSObisM:chiavePensione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain INPSPensions:ProdottoPensionistico .
+
+INPSObisM:detrazionePerNucleoFamiliare a owl:DatatypeProperty ;
+    rdfs:label "detrazione per nucleo familiare"@it ;
+    rdfs:domain INPSObisM:DatiFiscali .
+
+INPSObisM:detrazionePerReddito a owl:DatatypeProperty ;
+    rdfs:label "detrazione per reddito"@it ;
+    rdfs:domain INPSObisM:DatiFiscali .
+
+INPSObisM:importoPensioneLorda a owl:DatatypeProperty ;
+    rdfs:label "importo pensione lorda"@it ;
+    rdfs:domain DETPENS:ImportoPensione ;
+    rdfs:comment "importo totale della pensione espresso senza lo scorporo delle deduzioni"@it .
+
+INPSObisM:importoPensioneNetta a owl:DatatypeProperty ;
+    rdfs:label "importo pensione netta"@it ;
+    rdfs:domain DETPENS:ImportoPensione ;
+    rdfs:comment "importo della pensione al netto delle trattenute"@it .
+
+INPSObisM:irpefLorda a owl:DatatypeProperty ;
+    rdfs:label "IRPEF lorda"@it ;
+    rdfs:domain INPSObisM:DatiFiscali .
+
+INPSObisM:perequazioneAutomatica a owl:DatatypeProperty ;
+    rdfs:label "automatic equalization"@en,
+        "perequazione automatica"@it ;
+    rdfs:domain DETPENS:ImportoPensione ;
+    rdfs:comment "Automatic equalization is a mechanism that allows the amount of pensions to be adjusted annually to the increase in the cost of living, so as to try to keep its real purchasing power unchanged"@en,
+        "La perequazione automatica è un meccanismo che consente di adeguare annualmente l'importo delle pensioni all'aumento del costo della vita, così da cercare di conservarne immutato il suo reale potere d'acquisto"@it .
+
+INPSObisM:trattenutaIncumulabilità a owl:DatatypeProperty ;
+    rdfs:domain INPSObisM:CertificatoDiPensione .
+
+INPSObisM:trattenutaIRPEF a owl:DatatypeProperty ;
+    rdfs:label "trattenute IRPEF"@it ;
+    rdfs:domain INPSObisM:DatiFiscali .
+
+INPSObisM:trattenutaSindacale a owl:DatatypeProperty ;
+    rdfs:domain DETPENS:ImportoPensione .
+
+INPSObisM:trattenuteContributoExOnpi a owl:DatatypeProperty ;
+    rdfs:label "trattenute contributo ex Onpi"@it ;
+    rdfs:domain INPSObisM:DatiFiscali .
+
+TI:endTime a owl:DatatypeProperty ;
+    rdfs:domain INPSObisM:TimeInterval .
+
+TI:startTime a owl:DatatypeProperty ;
+    rdfs:domain INPSObisM:TimeInterval .
+
+### Classes
+
+CPSV:Service a owl:Class .
+
+DETPENS:ImportoPensione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSObisM:importoPensioneLorda ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSObisM:importoPensioneNetta ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty TI:atTime ;
+            owl:someValuesFrom owl:Thing ] .
+
+foaf:Document a owl:Class .
+
+INPSCore:RuoloDiPersonaViva a owl:Class .
+
+INPSCore:SedeINPS a owl:Class .
+
+INPSObisM:CertificatoDiPensione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSObisM:certificaDatiPensione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSObisM:presentaDatiRelativiA ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSObisM:daAccessoA ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Certificate of pension"@en,
+        "Certificato di pensione"@it ;
+    rdfs:subClassOf foaf:Document,
+        rico:Record ;
+    rdfs:comment "Il certificato di pensione (Modello Obis) riassume le principali informazioni dele pensioni INPS in pagamento. Il certificato èdisponibile per i pensionati di tutte le gestioni ed èpubblicato annualmente. Nell'ontologia la classe èdefinita come sottoclasse di Record dell'ontologia Record in context (RiCo-On) prodotta Dall'International Council on Archives (ICA), con l'obiettivo di connotare semanticamente le istanze di questa classe come documenti prodotti dall'INPS nel corso della sua attività istituzionale"@it,
+        "The pension certificate (Obis Model) summarizes the main information about INPS pensions in payment. The certificate is available for pensioners from all management sectors and is published annually. In the ontology, the class is defined as a subclass of the Record class in the Record in Context (RiCo-On) ontology produced by the International Council on Archives (ICA), with the aim of semantically characterizing the instances of this class as documents produced by INPS in the course of its institutional activities"@en .
+
+INPSObisM:DatiFiscali a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSObisM:addizionaleComunaleIRPEF ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSObisM:addizionaleRegionaleIRPEF ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSObisM:detrazionePerNucleoFamiliare ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSObisM:detrazionePerReddito ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSObisM:irpefLorda ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSObisM:trattenutaIRPEF ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSObisM:trattenuteContributoExOnpi ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Dati fiscali"@it,
+        "Tax Data"@en ;
+    owl:disjointWith DETPENS:ImportoPensione ;
+    rdfs:comment "La classe dati fiscali raggruppa l'insieme delle informazioni di tipo fiscale contenute nel modello Obis come ad esempio i versamenti eseguiti e le trattenute effettuate sull'importo della pensione"@it,
+        "The tax data class groups together the set of tax-related information contained in the Obis Model, such as payments made and deductions applied to the pension amount"@en .
+
+INPSObisM:FascicoloPrevidenzialeCittadino a owl:Class ;
+    rdfs:label "Citizen's social security file"@en,
+        "Fascicolo previdenziale del cittadino"@it ;
+    rdfs:subClassOf CPSV:Service ;
+    rdfs:comment "Il Fascicolo previdenzile del cittadino èil portale di accesso ai principali servizi messi  disposizione dall'INPS per l'utente. Il servizio consente di gestire la posizione contributiva e previdenziale, le certificazioni sanitarie e reddituali. Nell'ontologia la classe èdefinita come sottoclasse di Service dell'ontologia Core public service vocabulary (CPSV-AP_IT)  al fine di connotare semanticamente in modo forte il Fasciciolo come un servizio reso da un ente pubblico alla sua utenza "@it,
+        "The Citizen's Pension File is the access portal to the main services provided by INPS for users. The service allows users to manage their contribution and pension status, as well as health and income certifications. In the ontology, the class is defined as a subclass of Service in the Core Public Service Vocabulary (CPSV-AP_IT) ontology, in order to strongly semantically characterize the File as a service provided by a public entity to its users"@en .
+
+INPSObisM:TimeInterval a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty TI:endTime ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty TI:startTime ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf TI:atTime ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSPensions:ProdottoPensionistico a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSObisM:chiavePensione ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSPensions:haTipoDiPensione ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSPensions:TipoDiPensione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSPensions:haTipoDiPensione ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSPensions:TitolareDiPensione a owl:Class ;
+    rdfs:label "Pension holder"@en,
+        "Titolare di pensione"@it ;
+    rdfs:subClassOf INPSCore:RuoloDiPersonaViva ;
+    rdfs:comment "Il titolare di pensione èil beneficiario di una o piÃ¹ prestazioni previdenziali e assistenziali dell'INPS"@it,
+        "The pension holder is the beneficiary of one or more INPS social security and welfare benefits"@en .
+
+rico:Record a owl:Class .
+
+[] a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSObisM:certificaDatiPensione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:unionOf (
+            DETPENS:ImportoPensione
+            INPSObisM:DatiFiscali ) .
+
+[] a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSObisM:presentaDatiRelativiA ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:unionOf (
+            INPSCore:SedeINPS
+            INPSPensions:ProdottoPensionistico
+            INPSPensions:TitolareDiPensione ) .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/ObisModel/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/ObisModel/latest/ObisModel.n3> ;
+    dct:description "Obis Model INPS Ontology N-TRIPLES distribution"@en,
+        "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell'istituto."@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Modello Obis"@it,
+        "N-TRIPLES distribution of the INPS ontology - Obis Model"@en .
+
+<https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/ObisModel/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/ObisModel/latest/ObisModel.ttl> ;
+    dct:description "Obis Model INPS Ontology RDF/Turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell'istituto."@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Modello Obis"@it,
+        "RDF/Turtle distribution of the INPS ontology - Obis Model"@en .
+
+<https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/ObisModel/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/ObisModel/latest/ObisModel.owl> ;
+    dct:description "Obis Model INPS Ontology RDF/XML"@en,
+        "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell'istituto."@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Modello Obis"@it,
+        "RDF/XML distribution of the INPS ontology - Obis Model"@en .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+### Axioms
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSCore:SedeINPS
+            INPSPensions:ProdottoPensionistico
+            INPSPensions:TitolareDiPensione ) .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

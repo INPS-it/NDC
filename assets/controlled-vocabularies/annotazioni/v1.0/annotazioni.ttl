@@ -1,0 +1,531 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/Annotazioni>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement annotation codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici alfabetici annotazioni di fine rapporto attestati dalla Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato dei codici alfabetici annotazioni di fine rapporto attestati dalla Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the defined set of the annotation codes with regards to the CU Statement"@en,
+        "Vocabolario controllato dei codici alfabetici annotazioni di fine rapporto attestati dalla Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/ANN_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/ANN_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/ANN_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "codici alfabetici annotazioni della certificazione unica"@it,
+        "CU statement annotation codes"@en,
+        "inps"@en,
+        "inps"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement annotation codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici alfabetici annotazioni di fine rapporto attestati dalla Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni" ;
+    dct:issued "2024-10-22"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-22"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement annotation codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici alfabetici annotazioni di fine rapporto attestati dalla Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "annotazioni" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AA>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AB>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AC>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AD>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AG>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AI>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AK>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AL>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AN>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AO>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AP>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AQ>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AR>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AU>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AV>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AW>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AX>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AY>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BB>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BC>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BD>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BE>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BF>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BG>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BI>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BL>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BN>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BO>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BP>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BR>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BS>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BW>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BZ>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CA>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CB>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CC>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CD>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CE>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CF>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CG>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CH>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CL>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CM>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CP>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CQ>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CR>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CS>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CT>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CU>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CV>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/GI>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/GL>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/ZZ> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AA> a skos:Concept ;
+    rdfs:label "Tributi sospesi: alla ripresa della riscossione il contribuente è tenuto autonomamente al versamento dei tributi oggetto di sospensione con le modalità previste dal provvedimento di ripresa."@it ;
+    skos:prefLabel "Tributi sospesi: alla ripresa della riscossione il contribuente è tenuto autonomamente al versamento dei tributi oggetto di sospensione con le modalità previste dal provvedimento di ripresa."@it ;
+    dct:identifier "AA"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AA"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AB> a skos:Concept ;
+    rdfs:label "Somme corrisposte al percipiente in qualità di erede, di avente diritto ai sensi dell’art. 2122 del codice civile o ai sensi dell’art. 12-bis della legge n. 898 del 1970. Dati del deceduto: CF (…), dati anagrafici (…). Le somme indicate nei punti 1, 2, 3, 4 e 5 della Certificazione non devono essere riportate nella dichiarazione dei redditi; le somme indicate nel punto 801 costituiscono: (…). NOTA – Specificare se trattasi di eredità, di indennità ai sensi dell’art. 2122 del codice civile o di somme erogate ai sensi dell’art. 12-bis della legge n. 898 del 1970."@it ;
+    skos:prefLabel "Somme corrisposte al percipiente in qualità di erede, di avente diritto ai sensi dell’art. 2122 del codice civile o ai sensi dell’art. 12-bis della legge n. 898 del 1970. Dati del deceduto: CF (…), dati anagrafici (…). Le somme indicate nei punti 1, 2, 3, 4 e 5 della Certificazione non devono essere riportate nella dichiarazione dei redditi; le somme indicate nel punto 801 costituiscono: (…). NOTA – Specificare se trattasi di eredità, di indennità ai sensi dell’art. 2122 del codice civile o di somme erogate ai sensi dell’art. 12-bis della legge n. 898 del 1970."@it ;
+    dct:identifier "AB"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AB"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AC> a skos:Concept ;
+    rdfs:label "La detrazione per carichi di famiglia è stata calcolata in relazione alla durata del rapporto di lavoro."@it ;
+    skos:prefLabel "La detrazione per carichi di famiglia è stata calcolata in relazione alla durata del rapporto di lavoro."@it ;
+    dct:identifier "AC"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AC"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AD> a skos:Concept ;
+    rdfs:label "Dati relativi al reddito prodotto all’estero: Stato estero (…), reddito (…)."@it ;
+    skos:prefLabel "Dati relativi al reddito prodotto all’estero: Stato estero (…), reddito (…)."@it ;
+    dct:identifier "AD"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AD"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AG> a skos:Concept ;
+    rdfs:label "Compensi per lavori socialmente utili: il regime agevolato non ha trovato applicazione."@it ;
+    skos:prefLabel "Compensi per lavori socialmente utili: il regime agevolato non ha trovato applicazione."@it ;
+    dct:identifier "AG"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AG"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AI> a skos:Concept ;
+    rdfs:label "Informazioni relative al reddito/i certificato/i: tipologia (…), data inizio e data fine per ciascun periodo di lavoro o pensione (…), importo (…)."@it ;
+    skos:prefLabel "Informazioni relative al reddito/i certificato/i: tipologia (…), data inizio e data fine per ciascun periodo di lavoro o pensione (…), importo (…)."@it ;
+    dct:identifier "AI"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AI"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AK> a skos:Concept ;
+    rdfs:label "Le operazioni di conguaglio sono state effettuate sulla base delle comunicazioni fornite dal Casellario delle pensioni. Se non si possiedono altri redditi e le operazioni di conguaglio sono state correttamente effettuate, si è esonerati dalla presentazione della dichiarazione."@it ;
+    skos:prefLabel "Le operazioni di conguaglio sono state effettuate sulla base delle comunicazioni fornite dal Casellario delle pensioni. Se non si possiedono altri redditi e le operazioni di conguaglio sono state correttamente effettuate, si è esonerati dalla presentazione della dichiarazione."@it ;
+    dct:identifier "AK"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AK"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AL> a skos:Concept ;
+    rdfs:label "Cessazione del rapporto di lavoro: le addizionali regionale e comunale sono state interamente trattenute."@it ;
+    skos:prefLabel "Cessazione del rapporto di lavoro: le addizionali regionale e comunale sono state interamente trattenute."@it ;
+    dct:identifier "AL"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AL"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AN> a skos:Concept ;
+    rdfs:label "La detrazione minima è stata ragguagliata al periodo di lavoro. Il percipiente può fruire della detrazione per l’intero anno in sede di dichiarazione dei redditi, sempreché non sia stata già attribuita da un altro datore di lavoro e risulti effettivamente spettante."@it ;
+    skos:prefLabel "La detrazione minima è stata ragguagliata al periodo di lavoro. Il percipiente può fruire della detrazione per l’intero anno in sede di dichiarazione dei redditi, sempreché non sia stata già attribuita da un altro datore di lavoro e risulti effettivamente spettante."@it ;
+    dct:identifier "AN"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AN"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AO> a skos:Concept ;
+    rdfs:label "Dati relativi agli altri redditi non certificati comunicati dal lavoratore al sostituto per il corretto calcolo delle detrazioni di cui agli artt. 12 e 13 del TUIR: ammontare complessivo degli altri redditi (…)."@it ;
+    skos:prefLabel "Dati relativi agli altri redditi non certificati comunicati dal lavoratore al sostituto per il corretto calcolo delle detrazioni di cui agli artt. 12 e 13 del TUIR: ammontare complessivo degli altri redditi (…)."@it ;
+    dct:identifier "AO"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AO"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AP> a skos:Concept ;
+    rdfs:label "Importo della detrazione forfetaria relativa al mantenimento del cane guida (…)."@it ;
+    skos:prefLabel "Importo della detrazione forfetaria relativa al mantenimento del cane guida (…)."@it ;
+    dct:identifier "AP"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AP"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AQ> a skos:Concept ;
+    rdfs:label "Dati relativi al credito d’imposta per i redditi prodotti all’estero: Reddito complessivo tassato in Italia (…), imposta lorda italiana (…), imposta netta italiana (…). L’imposta estera è stata ridotta proporzionalmente al rapporto tra il reddito estero, determinato in misura convenzionale, ed il reddito che risulterebbe tassabile, in via ordinaria, se la medesima attività lavorativa fosse prestata in Italia."@it ;
+    skos:prefLabel "Dati relativi al credito d’imposta per i redditi prodotti all’estero: Reddito complessivo tassato in Italia (…), imposta lorda italiana (…), imposta netta italiana (…). L’imposta estera è stata ridotta proporzionalmente al rapporto tra il reddito estero, determinato in misura convenzionale, ed il reddito che risulterebbe tassabile, in via ordinaria, se la medesima attività lavorativa fosse prestata in Italia."@it ;
+    dct:identifier "AQ"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AQ"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AR> a skos:Concept ;
+    rdfs:label "Tali importi di oneri deducibili non vanno riportati nella dichiarazione dei redditi."@it ;
+    skos:prefLabel "Tali importi di oneri deducibili non vanno riportati nella dichiarazione dei redditi."@it ;
+    dct:identifier "AR"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AR"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AU> a skos:Concept ;
+    rdfs:label "Contributi per assistenza sanitaria versati ad enti o casse aventi esclusivamente fini assistenziali. Se l’ammontare di detti contributi non è superiore ad euro 3.615,20 eventualmente aumentato dei contributi versati in sostituzione del premio di risultato che non hanno concorso a formare il reddito, l’annotazione deve essere la seguente: “Le spese sanitarie rimborsate per effetto di tali contributi non sono deducibili o detraibili in sede di dichiarazione dei redditi”. Se l’ammontare di detti contributi è superiore ad euro 3.615,20 eventualmente aumentato dei contributi versati in sostituzione del premio di risultato che non hanno concorso a formare il reddito, l’annotazione deve essere la seguente: “Le spese sanitarie rimborsate per effetto di tali contributi sono deducibili o detraibili in sede di dichiarazione dei redditi in proporzione alla quota di contributi eccedente euro 3.615,20 eventualmente aumentata dei contributi versati in sostituzione del premio di risultato che non hanno concorso a formare il reddito; tale quota è pari a euro …”. Se detti contributi hanno concorso a formare il reddito di lavoro dipendente, per qualsiasi importo, l’annotazione deve essere la seguente: “Le spese sanitarie rimborsate per effetto di tali contributi sono deducibili o detraibili in sede di dichiarazione dei redditi; l’ammontare dei contributi non dedotti è pari a euro …”."@it ;
+    skos:prefLabel "Contributi per assistenza sanitaria versati ad enti o casse aventi esclusivamente fini assistenziali. Se l’ammontare di detti contributi non è superiore ad euro 3.615,20 eventualmente aumentato dei contributi versati in sostituzione del premio di risultato che non hanno concorso a formare il reddito, l’annotazione deve essere la seguente: “Le spese sanitarie rimborsate per effetto di tali contributi non sono deducibili o detraibili in sede di dichiarazione dei redditi”. Se l’ammontare di detti contributi è superiore ad euro 3.615,20 eventualmente aumentato dei contributi versati in sostituzione del premio di risultato che non hanno concorso a formare il reddito, l’annotazione deve essere la seguente: “Le spese sanitarie rimborsate per effetto di tali contributi sono deducibili o detraibili in sede di dichiarazione dei redditi in proporzione alla quota di contributi eccedente euro 3.615,20 eventualmente aumentata dei contributi versati in sostituzione del premio di risultato che non hanno concorso a formare il reddito; tale quota è pari a euro …”. Se detti contributi hanno concorso a formare il reddito di lavoro dipendente, per qualsiasi importo, l’annotazione deve essere la seguente: “Le spese sanitarie rimborsate per effetto di tali contributi sono deducibili o detraibili in sede di dichiarazione dei redditi; l’ammontare dei contributi non dedotti è pari a euro …”."@it ;
+    dct:identifier "AU"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AU"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AV> a skos:Concept ;
+    rdfs:label "Spese sanitarie rimborsate per effetto di assicurazioni sanitarie: può essere presentata la dichiarazione dei redditi per far valere deduzioni o detrazioni d’imposta relative alle spese rimborsate"@it ;
+    skos:prefLabel "Spese sanitarie rimborsate per effetto di assicurazioni sanitarie: può essere presentata la dichiarazione dei redditi per far valere deduzioni o detrazioni d’imposta relative alle spese rimborsate"@it ;
+    dct:identifier "AV"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AV"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AW> a skos:Concept ;
+    rdfs:label "Incapienza della retribuzione a subire il prelievo dell’Irpef dovuta in sede di conguaglio di fine anno: sull’Irpef da trattenere dal sostituto successivamente al 28 febbraio sono dovuti gli interessi nella misura dello 0,50% mensile."@it ;
+    skos:prefLabel "Incapienza della retribuzione a subire il prelievo dell’Irpef dovuta in sede di conguaglio di fine anno: sull’Irpef da trattenere dal sostituto successivamente al 28 febbraio sono dovuti gli interessi nella misura dello 0,50% mensile."@it ;
+    dct:identifier "AW"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AW"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AX> a skos:Concept ;
+    rdfs:label "Compensi, tipologia (…), importo (…), ritenute (…) periodo di partecipazione (…); trattasi di anticipazione, assoggettata ad aliquota (…).In caso di rendita integrativa temporanea anticipata riportare, il numero dei giorni (…), la data di inizio (…) e la data di fine (…) del periodo di percezione della rendita, importo della rendita (…); importo imposta sostitutiva operata (…), importo imposta sostitutiva sospesa (…)."@it ;
+    skos:prefLabel "Compensi, tipologia (…), importo (…), ritenute (…) periodo di partecipazione (…); trattasi di anticipazione, assoggettata ad aliquota (…).In caso di rendita integrativa temporanea anticipata riportare, il numero dei giorni (…), la data di inizio (…) e la data di fine (…) del periodo di percezione della rendita, importo della rendita (…); importo imposta sostitutiva operata (…), importo imposta sostitutiva sospesa (…)."@it ;
+    dct:identifier "AX"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AX"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/AY> a skos:Concept ;
+    rdfs:label "Trattamento di fine rapporto, altre indennità e somme erogate: importo maturato fino al 31 dicembre 2000 (…), importo maturato dal 1° gennaio 2001 (…); prestazioni in forma di capitale erogate: importo maturato fino al 31 dicembre 2000 (…), importo maturato dal 1° gennaio 2001 al 31 dicembre 2006 (…)."@it ;
+    skos:prefLabel "Trattamento di fine rapporto, altre indennità e somme erogate: importo maturato fino al 31 dicembre 2000 (…), importo maturato dal 1° gennaio 2001 (…); prestazioni in forma di capitale erogate: importo maturato fino al 31 dicembre 2000 (…), importo maturato dal 1° gennaio 2001 al 31 dicembre 2006 (…)."@it ;
+    dct:identifier "AY"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "AY"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BB> a skos:Concept ;
+    rdfs:label "Saldo 2023 dell’addizionale comunale all’IRPEF non operata in quanto in possesso dei requisiti reddituali per usufruire interamente della fascia di esenzione deliberata."@it ;
+    skos:prefLabel "Saldo 2023 dell’addizionale comunale all’IRPEF non operata in quanto in possesso dei requisiti reddituali per usufruire interamente della fascia di esenzione deliberata."@it ;
+    dct:identifier "BB"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BB"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BC> a skos:Concept ;
+    rdfs:label "Il 90% delle somme percepite dai docenti e dai ricercatori che non hanno fruito dell’abbattimento della base imponibile importo (…). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    skos:prefLabel "Il 90% delle somme percepite dai docenti e dai ricercatori che non hanno fruito dell’abbattimento della base imponibile importo (…). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    dct:identifier "BC"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BC"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BD> a skos:Concept ;
+    rdfs:label "il 50% delle somme percepite dai lavoratori che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (...). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    skos:prefLabel "il 50% delle somme percepite dai lavoratori che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (...). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    dct:identifier "BD"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BD"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BE> a skos:Concept ;
+    rdfs:label "Riscatto volontario della posizione individuale maturata dall’1/1/2001 presso la forma pensionistica complementare: importo del riscatto e degli altri redditi certificati assoggettati a tassazione ordinaria (…), ritenute (…)."@it ;
+    skos:prefLabel "Riscatto volontario della posizione individuale maturata dall’1/1/2001 presso la forma pensionistica complementare: importo del riscatto e degli altri redditi certificati assoggettati a tassazione ordinaria (…), ritenute (…)."@it ;
+    dct:identifier "BE"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BE"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BF> a skos:Concept ;
+    rdfs:label "Riscatto volontario della posizione individuale maturata dall’1/1/2001 presso la forma pensionistica complementare: eccedenza d’imposta risultante dal conguaglio con anticipazioni di prestazioni in forma capitale erogate in anni precedenti ed assoggettate a tassazione separata utilizzata in compensazione delle ritenute (…), eccedenza d’imposta non utilizzata in compensazione (…)."@it ;
+    skos:prefLabel "Riscatto volontario della posizione individuale maturata dall’1/1/2001 presso la forma pensionistica complementare: eccedenza d’imposta risultante dal conguaglio con anticipazioni di prestazioni in forma capitale erogate in anni precedenti ed assoggettate a tassazione separata utilizzata in compensazione delle ritenute (…), eccedenza d’imposta non utilizzata in compensazione (…)."@it ;
+    dct:identifier "BF"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BF"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BG> a skos:Concept ;
+    rdfs:label "Dati relativi alle detrazioni per canoni di locazione: codice canone di locazione (...), giorni (...), percentuale (...), importo canone (...)."@it ;
+    skos:prefLabel "Dati relativi alle detrazioni per canoni di locazione: codice canone di locazione (...), giorni (...), percentuale (...), importo canone (...)."@it ;
+    dct:identifier "BG"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BG"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BI> a skos:Concept ;
+    rdfs:label "In assenza di altri redditi oltre quelli certificati, il contribuente potrà chiedere il rimborso del credito non riconosciuto (punto 372) in sede di dichiarazione dei redditi."@it ;
+    skos:prefLabel "In assenza di altri redditi oltre quelli certificati, il contribuente potrà chiedere il rimborso del credito non riconosciuto (punto 372) in sede di dichiarazione dei redditi."@it ;
+    dct:identifier "BI"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BI"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BL> a skos:Concept ;
+    rdfs:label "Ammontare totale erogato del bonus e delle stock option, importo (…); Ammontare del bonus e delle stock option che eccede la parte fissa della retribuzione, importo (…)."@it ;
+    skos:prefLabel "Ammontare totale erogato del bonus e delle stock option, importo (…); Ammontare del bonus e delle stock option che eccede la parte fissa della retribuzione, importo (…)."@it ;
+    dct:identifier "BL"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BL"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BN> a skos:Concept ;
+    rdfs:label "Acconto 2024 dell’addizionale comunale all’IRPEF non operata in quanto in possesso dei requisiti reddituali per usufruire interamente della fascia di esenzione deliberata."@it ;
+    skos:prefLabel "Acconto 2024 dell’addizionale comunale all’IRPEF non operata in quanto in possesso dei requisiti reddituali per usufruire interamente della fascia di esenzione deliberata."@it ;
+    dct:identifier "BN"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BN"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BO> a skos:Concept ;
+    rdfs:label "Trattamento economico accessorio percepito dal personale del comparto sicurezza e difesa che non ha fruito della detrazione. Per usufruire di tale agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    skos:prefLabel "Trattamento economico accessorio percepito dal personale del comparto sicurezza e difesa che non ha fruito della detrazione. Per usufruire di tale agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    dct:identifier "BO"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BO"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BP> a skos:Concept ;
+    rdfs:label "Addizionale regionale all’Irpef certificata nella Certificazione unica precedente e sospesa a causa di eventi eccezionali, importo (…); saldo addizionale comunale all’Irpef certificata nella CU precedente e sospesa a causa di eventi eccezionali, importo (…)."@it ;
+    skos:prefLabel "Addizionale regionale all’Irpef certificata nella Certificazione unica precedente e sospesa a causa di eventi eccezionali, importo (…); saldo addizionale comunale all’Irpef certificata nella CU precedente e sospesa a causa di eventi eccezionali, importo (…)."@it ;
+    dct:identifier "BP"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BP"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BR> a skos:Concept ;
+    rdfs:label "Dati relativi all’assistenza fiscale: saldo Irpef sospeso, importo (...); addizionale regionale sospesa, importo (...); saldo addizionale comunale sospeso, importo (...); acconto tassazione separata sospeso, importo (...); imposta sostitutiva sui premi di risultato, sospesa, importo (...); cedolare secca su locazioni, sospesa, importo (...)"@it ;
+    skos:prefLabel "Dati relativi all’assistenza fiscale: saldo Irpef sospeso, importo (...); addizionale regionale sospesa, importo (...); saldo addizionale comunale sospeso, importo (...); acconto tassazione separata sospeso, importo (...); imposta sostitutiva sui premi di risultato, sospesa, importo (...); cedolare secca su locazioni, sospesa, importo (...)"@it ;
+    dct:identifier "BR"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BR"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BS> a skos:Concept ;
+    rdfs:label "Acconto addizionale comunale all’Irpef certificata nella CU precedente e sospesa a causa di eventi eccezionali, importo (…)."@it ;
+    skos:prefLabel "Acconto addizionale comunale all’Irpef certificata nella CU precedente e sospesa a causa di eventi eccezionali, importo (…)."@it ;
+    dct:identifier "BS"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BS"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BW> a skos:Concept ;
+    rdfs:label "Redditi esentati da imposizione in Italia: importo del reddito esente percepito (…)"@it ;
+    skos:prefLabel "Redditi esentati da imposizione in Italia: importo del reddito esente percepito (…)"@it ;
+    dct:identifier "BW"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BW"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/BZ> a skos:Concept ;
+    rdfs:label "Importo eccedente il milione di euro assoggettato a tassazione ordinaria, importo (…); ammontare della rivalutazione (…); importo dell’indennità principale corrisposto, importo (...); importo delle altre indennità corrisposto, importo (…)."@it ;
+    skos:prefLabel "Importo eccedente il milione di euro assoggettato a tassazione ordinaria, importo (…); ammontare della rivalutazione (…); importo dell’indennità principale corrisposto, importo (...); importo delle altre indennità corrisposto, importo (…)."@it ;
+    dct:identifier "BZ"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "BZ"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CA> a skos:Concept ;
+    rdfs:label "Agevolazione riconosciuta ai residenti a Campione d’Italia rispettivamente sui redditi di lavoro dipendente con contratto a tempo indeterminato, importo (…); redditi di lavoro dipendente con contratto a tempo determinato, importo (…); redditi da pensione, importo (…); redditi da pensione percepiti dagli orfani, importo (…); altri redditi assimilati, importo (…); assegni periodici corrisposti dal coniuge importo (…)."@it ;
+    skos:prefLabel "Agevolazione riconosciuta ai residenti a Campione d’Italia rispettivamente sui redditi di lavoro dipendente con contratto a tempo indeterminato, importo (…); redditi di lavoro dipendente con contratto a tempo determinato, importo (…); redditi da pensione, importo (…); redditi da pensione percepiti dagli orfani, importo (…); altri redditi assimilati, importo (…); assegni periodici corrisposti dal coniuge importo (…)."@it ;
+    dct:identifier "CA"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CA"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CB> a skos:Concept ;
+    rdfs:label "Detrazione riconosciuta in base a quanto previsto dall’art. 24, del DL n. 4 del 2019, importo (…)."@it ;
+    skos:prefLabel "Detrazione riconosciuta in base a quanto previsto dall’art. 24, del DL n. 4 del 2019, importo (…)."@it ;
+    dct:identifier "CB"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CB"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CC> a skos:Concept ;
+    rdfs:label "In presenza di contributi per previdenza complementare certificati in più certificazioni uniche non conguagliate, verificare che non siano superati i limiti di deducibilità previsti dalle norme."@it ;
+    skos:prefLabel "In presenza di contributi per previdenza complementare certificati in più certificazioni uniche non conguagliate, verificare che non siano superati i limiti di deducibilità previsti dalle norme."@it ;
+    dct:identifier "CC"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CC"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CD> a skos:Concept ;
+    rdfs:label "Importi sospesi di cui al decreto ministeriale 1° settembre 2016 e dai commi 1-bis, 10 e 10-bis per i quali è stata prevista la ripresa della riscossione e versati dal sostituto: IRPEF 2016, importo (…); Tassazione separata 2016, importo (…); Imposta sostitutiva sui premi di risultato 2016, importo (…); Addizionale regionale all’Irpef 2016, importo (…); Saldo Addizionale comunale all’Irpef 2016, importo (…); Imposta TFR 2016, importo (…); Irpef 2017, importo (...); Acconto Addizionale comunale 2017, importo (…); Tassazione separata 2017, importo (…); Imposta sostitutiva sui premi di risultato 2017, importo (…); Imposta TFR 2017, importo (…)."@it ;
+    skos:prefLabel "Importi sospesi di cui al decreto ministeriale 1° settembre 2016 e dai commi 1-bis, 10 e 10-bis per i quali è stata prevista la ripresa della riscossione e versati dal sostituto: IRPEF 2016, importo (…); Tassazione separata 2016, importo (…); Imposta sostitutiva sui premi di risultato 2016, importo (…); Addizionale regionale all’Irpef 2016, importo (…); Saldo Addizionale comunale all’Irpef 2016, importo (…); Imposta TFR 2016, importo (…); Irpef 2017, importo (...); Acconto Addizionale comunale 2017, importo (…); Tassazione separata 2017, importo (…); Imposta sostitutiva sui premi di risultato 2017, importo (…); Imposta TFR 2017, importo (…)."@it ;
+    dct:identifier "CD"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CD"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CE> a skos:Concept ;
+    rdfs:label "Importi sospesi di cui al decreto ministeriale 1° settembre 2016 e dai commi 1-bis, 10 e 10-bis per i quali è stata prevista la ripresa della riscossione, tramite il sostituto d’imposta ma che residuano al momento della cessazione del rapporto di lavoro: : IRPEF 2016, importo (…); Tassazione separata 2016, importo (…); Imposta sostitutiva sui premi di risultato 2016, importo (…); Addizionale regionale all’Irpef 2016, importo (…); Saldo Addizionale comunale all’Irpef 2016, importo (…); Imposta TFR 2016, importo (…); Irpef 2017, importo (...); Acconto Addizionale comunale 2017, importo (…); Tassazione separata 2017, importo (…); Imposta sostitutiva sui premi di risultato 2017, importo (…); imposta TFR 2017, importo (…)."@it ;
+    skos:prefLabel "Importi sospesi di cui al decreto ministeriale 1° settembre 2016 e dai commi 1-bis, 10 e 10-bis per i quali è stata prevista la ripresa della riscossione, tramite il sostituto d’imposta ma che residuano al momento della cessazione del rapporto di lavoro: : IRPEF 2016, importo (…); Tassazione separata 2016, importo (…); Imposta sostitutiva sui premi di risultato 2016, importo (…); Addizionale regionale all’Irpef 2016, importo (…); Saldo Addizionale comunale all’Irpef 2016, importo (…); Imposta TFR 2016, importo (…); Irpef 2017, importo (...); Acconto Addizionale comunale 2017, importo (…); Tassazione separata 2017, importo (…); Imposta sostitutiva sui premi di risultato 2017, importo (…); imposta TFR 2017, importo (…)."@it ;
+    dct:identifier "CE"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CE"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CF> a skos:Concept ;
+    rdfs:label "In caso di utilizzo della dichiarazione precompilata predisposta dall’agenzia delle entrate verificare i dati forniti dalla presente certificazione in quanto potrebbero essere non coincidenti con la dichiarazione precompilata a seguito di variazione della certificazione Unica 2024 avvenuta dopo il 16 marzo."@it ;
+    skos:prefLabel "In caso di utilizzo della dichiarazione precompilata predisposta dall’agenzia delle entrate verificare i dati forniti dalla presente certificazione in quanto potrebbero essere non coincidenti con la dichiarazione precompilata a seguito di variazione della certificazione Unica 2024 avvenuta dopo il 16 marzo."@it ;
+    dct:identifier "CF"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CF"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CG> a skos:Concept ;
+    rdfs:label "Il contribuente, per fruire della quota non dedotta, può presentare la dichiarazione dei redditi, riportare tale onere negli anni successivi ovvero chiedere il rimborso dell’imposta corrispondente."@it ;
+    skos:prefLabel "Il contribuente, per fruire della quota non dedotta, può presentare la dichiarazione dei redditi, riportare tale onere negli anni successivi ovvero chiedere il rimborso dell’imposta corrispondente."@it ;
+    dct:identifier "CG"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CG"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CH> a skos:Concept ;
+    rdfs:label "Importo dei contributi fruiti in sostituzione del premio di risultato, non dedotti in quanto superiore all’ammontare del premio agevolabile, importo (...)."@it ;
+    skos:prefLabel "Importo dei contributi fruiti in sostituzione del premio di risultato, non dedotti in quanto superiore all’ammontare del premio agevolabile, importo (...)."@it ;
+    dct:identifier "CH"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CH"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CL> a skos:Concept ;
+    rdfs:label "Presenza di importi non trattenuti in sede di assistenza fiscale. Il sostituito dovrà procedere autonomamente al versamento degli importi."@it ;
+    skos:prefLabel "Presenza di importi non trattenuti in sede di assistenza fiscale. Il sostituito dovrà procedere autonomamente al versamento degli importi."@it ;
+    dct:identifier "CL"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CL"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CM> a skos:Concept ;
+    rdfs:label "Redditi esentati da imposizione in Italia: importo del reddito esente percepito (...)"@it ;
+    skos:prefLabel "Redditi esentati da imposizione in Italia: importo del reddito esente percepito (...)"@it ;
+    dct:identifier "CM"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CM"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CP> a skos:Concept ;
+    rdfs:label "C.F. sostituto (...), anno (...), codice onere detraibile (...), codice onere deducibile (...), importo rimborsato (...)."@it ;
+    skos:prefLabel "C.F. sostituto (...), anno (...), codice onere detraibile (...), codice onere deducibile (...), importo rimborsato (...)."@it ;
+    dct:identifier "CP"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CP"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CQ> a skos:Concept ;
+    rdfs:label "Il 70% delle somme percepite dai lavoratori impatriati che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (...). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    skos:prefLabel "Il 70% delle somme percepite dai lavoratori impatriati che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (...). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    dct:identifier "CQ"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CQ"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CR> a skos:Concept ;
+    rdfs:label "Il 90% delle somme percepite dai lavoratori impatriati che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (...). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    skos:prefLabel "Il 90% delle somme percepite dai lavoratori impatriati che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (...). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    dct:identifier "CR"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CR"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CS> a skos:Concept ;
+    rdfs:label "Il 50% delle somme percepite dai lavoratori impatriati che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (...). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    skos:prefLabel "Il 50% delle somme percepite dai lavoratori impatriati che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (...). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    dct:identifier "CS"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CS"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CT> a skos:Concept ;
+    rdfs:label "Il 50% delle somme percepite dai lavoratori impatriati che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (…). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    skos:prefLabel "Il 50% delle somme percepite dai lavoratori impatriati che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (…). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    dct:identifier "CT"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CT"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CU> a skos:Concept ;
+    rdfs:label "Il 90% delle somme percepite dai lavoratori impatriati che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (…). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    skos:prefLabel "Il 90% delle somme percepite dai lavoratori impatriati che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (…). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    dct:identifier "CU"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CU"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/CV> a skos:Concept ;
+    rdfs:label "Il 90% delle somme percepite dai docenti e dai ricercatori che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (...). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    skos:prefLabel "Il 90% delle somme percepite dai docenti e dai ricercatori che trasferiscono la residenza in Italia che non hanno fruito dell’abbattimento della base imponibile, importo (...). Per usufruire dell’agevolazione il contribuente è tenuto a presentare la dichiarazione dei redditi."@it ;
+    dct:identifier "CV"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "CV"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/GI> a skos:Concept ;
+    rdfs:label "Le operazioni di conguaglio sono state effettuate dal sostituto estinto"@it ;
+    skos:prefLabel "Le operazioni di conguaglio sono state effettuate dal sostituto estinto"@it ;
+    dct:identifier "GI"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "GI"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/GL> a skos:Concept ;
+    rdfs:label "Indennità di disoccupazione NASPI, destinata alla sottoscrizione di capitale sociale di una cooperativa nella quale il rapporto mutualistico ha ad oggetto la prestazione di attività lavorativa da parte del socio, importo non imponibile (…)."@it ;
+    skos:prefLabel "Indennità di disoccupazione NASPI, destinata alla sottoscrizione di capitale sociale di una cooperativa nella quale il rapporto mutualistico ha ad oggetto la prestazione di attività lavorativa da parte del socio, importo non imponibile (…)."@it ;
+    dct:identifier "GL"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "GL"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni/ZZ> a skos:Concept ;
+    rdfs:label "Altre annotazioni obbligatorie."@it ;
+    skos:prefLabel "Altre annotazioni obbligatorie."@it ;
+    dct:identifier "ZZ"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/annotazioni> ;
+    skos:notation "ZZ"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/ANN_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/annotazioni/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/annotazioni/latest/annotazioni.csv> ;
+    dct:description "CU statement annotation codes controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici alfabetici annotazioni di fine rapporto attestati dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement annotation codes controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato dei codici alfabetici annotazioni di fine rapporto attestati dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/ANN_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/annotazioni/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/annotazioni/latest/annotazioni.json> ;
+    dct:description "CU statement annotation codes controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici alfabetici annotazioni di fine rapporto attestati dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement annotation codes controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato dei codici alfabetici annotazioni di fine rapporto attestati dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/ANN_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/annotazioni/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/annotazioni/latest/annotazioni.ttl> ;
+    dct:description "CU statement annotation codes controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato dei codici alfabetici annotazioni di fine rapporto attestati dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU Statement annotation codes controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato dei codici alfabetici annotazioni di fine rapporto attestati dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

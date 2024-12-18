@@ -1,0 +1,1578 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphol version="3">
+  <project name="cassetto previdenziale" version="1.0">
+    <ontology prefix="INPSSP" addLabelFromUserInput="0" addLabelFromSimpleName="0" lang="en" iri="https://w3id.org/italia/social-security/onto/INPSServicePortal/">
+      <imports/>
+      <prefixes>
+        <prefix>
+          <value>CPSV</value>
+          <namespace>https://w3id.org/italia/onto/CPSV/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSCore</value>
+          <namespace>https://w3id.org/italia/social-security/onto/core/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSRL</value>
+          <namespace>https://w3id.org/italia/social-security/onto/relevantLegislation/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSSEP</value>
+          <namespace>https://w3id.org/italia/social-security/onto/selfEmploymentPortal/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSSP</value>
+          <namespace>https://w3id.org/italia/social-security/onto/INPSServicePortal/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSSafety</value>
+          <namespace>https://w3id.org/italia/social-security/onto/social-safety-net/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSTFP</value>
+          <namespace>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/</namespace>
+        </prefix>
+        <prefix>
+          <value>Proc17</value>
+          <namespace>https://w3id.org/italia/social-security/onto/procedura17/</namespace>
+        </prefix>
+        <prefix>
+          <value>TI</value>
+          <namespace>https://w3id.org/italia/onto/TI/</namespace>
+        </prefix>
+        <prefix>
+          <value>dct</value>
+          <namespace>http://purl.org/dc/terms/</namespace>
+        </prefix>
+        <prefix>
+          <value>l0</value>
+          <namespace>https://w3id.org/italia/onto/l0/</namespace>
+        </prefix>
+        <prefix>
+          <value>owl</value>
+          <namespace>http://www.w3.org/2002/07/owl#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdf</value>
+          <namespace>http://www.w3.org/1999/02/22-rdf-syntax-ns#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdfs</value>
+          <namespace>http://www.w3.org/2000/01/rdf-schema#</namespace>
+        </prefix>
+        <prefix>
+          <value>xml</value>
+          <namespace>http://www.w3.org/XML/1998/namespace</namespace>
+        </prefix>
+        <prefix>
+          <value>xsd</value>
+          <namespace>http://www.w3.org/2001/XMLSchema#</namespace>
+        </prefix>
+      </prefixes>
+      <datatypes>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral</datatype>
+        <datatype>http://www.w3.org/2000/01/rdf-schema#Literal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NCName</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NMTOKEN</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#Name</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#base64Binary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#boolean</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#byte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTimeStamp</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#decimal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#double</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#float</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#hexBinary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#int</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#integer</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#language</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#long</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#negativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonNegativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonPositiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#normalizedString</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#positiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#short</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#token</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedByte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedInt</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedLong</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedShort</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#rational</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#real</datatype>
+      </datatypes>
+      <languages>
+        <language>de</language>
+        <language>en</language>
+        <language>es</language>
+        <language>fr</language>
+        <language>it</language>
+      </languages>
+      <facets>
+        <facet>http://www.w3.org/2001/XMLSchema#langRange</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#length</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#pattern</facet>
+      </facets>
+      <annotationProperties>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#comment</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#isDefinedBy</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#label</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#deprecated</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#incompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#priorVersion</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#versionInfo</annotationProperty>
+      </annotationProperties>
+      <iris>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il cassetto previdenziale è un servizio reso disponibile sul portale on line dell'Istituto Nazionale della Previdenza Sociale che consente di consultare le informazioni relative alla situazione contributiva del cittadino contribuente.Nel set di ontologie dedicate alla descrizione del cassetto previdenziale, questa classe è modellata come classe sovraordinata al cassetto previdenziale dei liberi professionisti e al cassetto previdenziale per i lavoratori agricoli autonomi.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Cassetto previdenziale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>INPS Service Portal</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The social security drawer is a service made available on the online portal of the National Social Security Institute that allows you to consult information relating to the contributory situation of the citizen contributor</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Delega</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Delega rilasciata da un soggetto delegante ad un delegato per lo svolgimento di attività o esercizio di poteri/diritti in sua vece</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Delegation</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Delegation granted by a delegating party to a delegate for the performance of activities or the exercise of powers/rights on their behalf</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Delega rilasciata da un lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la delega rilasciata dal lavoratore agricolo autonomo ad un altro soggetto per autorizzarlo ad accedere al cassetto previdenziale del lavoratore agricolo autonomo e utilizzare i servizi disponibili in suo vece. Nell'ontologia descrittiva del cassetto previdenziale, la classe rappresenta anche il servizio che consente l'accesso alla consultaizone delle deleghe rilasciate dal lavoratore agricolo autonomo o ricevute dal soggetto da questi delegato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Power of attorney issued by a self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the delegation issued by the self-employed agricultural worker to another person to authorize him to access the self-employed agricultural worker's social security drawer and use the available services on his behalf</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la delega rilasciata dal libero profesionsita ad un altro soggetto per autorizzarlo ad accedere al cassetto previdenziale del lavoratore agricolo autonomo e utilizzare i servizi disponibili in suo vece. Nell'ontologia descrittiva del cassetto previdenziale, la classe rappresenta anche il servizio che consente l'accesso alla consultaizone delle deleghe rilasciate dal libero professionsita o ricevute dal soggetto da questi delegato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Delega rilasciata dal libero professionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Delegation granted by a self-employed professional</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the delegation granted by the self-employed professional to another party, authorizing them to access the pension account of the self-employed agricultural worker and to use the available services on their behalf</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Delegato dal lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il soggetto delegato dal lavoratore agricolo autonomo ad agire al suo posto per l'accesso al cassetto previdenziale, alla consultazione delle informaizoni rese disponibili e all'inoltro di domande e/o istanze</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Delegate of the self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The party delegated by the self-employed agricultural worker to act on their behalf for accessing the pension account, consulting the available information, and submitting requests and/or applications.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionista</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Delegato dal libero professionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il soggetto delegato dal libero professionista ad agire al suo posto per l'accesso al cassetto previdenziale del libero professionista, alla consultazione delle informaizoni rese disponibili e all'inoltro di domande e/o istanze</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Delegate of the self-employed professional</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The party delegated by the self-employed professional to act on their behalf for accessing the professional's pension account, consulting the available information, and submitting requests and/or application</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda telematica</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Una domanda telematica è un'istanza presentata da un soggetto all'INPS e inviata tramite un canale telematico. Nell'ontologia del Cassetto previdenziale INPS la classe raggruppa i servizi per l'invio telematico di specifiche istanze</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Online application</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>An electronic application is a request submitted by a subject to INPS and sent via an electronic channel</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Una domanda telematica presentata da un lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda telematica del lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Telematic application for self-employed agricultural workers</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>A telematic application submitted by a self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda telematica di un libero professionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Domanda telematica presentata da un libero professionista. La classe rappresenta il servizio di invio e di consultazione delle domande telematiche, disponibile nel cassetto previdenziale del libero professionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>On line application of a self-employed professional</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>On line application submitted by a self-employed professional</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Posizione assicurativa</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La posizione assicurativa consente al contribuente di consultare lo stato dei versamenti contributivi utili all'accesso alle prestazioni previdenziali e assitenziali dell'INPS,  e al calcolo dell'ammontare dei loro importi. Nell'ontologia descrittiva del cassetto previdenziale INPS la classe è indicata come superclasse della Posizione assicurativa del lavoratore agricolo autonomo e Posizione assicurativa del libero professionsita che ne rappresentano sue specializzazioni.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Insurance position</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The insurance record allows the contributor to check the status of contribution payments necessary for accessing INPS social security and welfare benefits</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Posizione assicurativa lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La posizione assicurativa del lavoratore agricolo autonomo consente a questa tipologia di lavoratore di consultare le informazioni sullo stato dei versamenti contributivi</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Insurance record of the self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La posizione assicurativa del lavoratore agricolo autonomo consente a questa tipologia di lavoratore di consultare le informazioni sullo stato dei versamenti contributivi</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La posizione assicurativa consente al libero professionista di accedere alle informazioni relative alla propria situaizone contributiva</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Posizione assicurativa libero professionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Insurance record of the self-employed professional</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The insurance record allows the self-employed professional to access information regarding their contribution status</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteDelServizio</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteDelServizio</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Utente del servizio</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteDelServizio</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'utente del servizio è un soggetto, persona fisica, ente, azienda, che ha accesso ai servizi resi disponibili nel Cassetto previdenziale. Nell'ontologia questa classe è descritta come superclasse di due concetti che ne specializzano il significato: Utente del servizio agrcoltore agricolo autonomo e utente del servizio libero professionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteDelServizio</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Service user</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteDelServizio</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The service user is an individual, entity, or company that has access to the services available in the pension account</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Utente dei servizi per il lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'utente dei servizi per il lavoratore agricolo autonomo è è un soggetto, che può accedere ai servizi per questa categoria di lavoratore disponibile nel relativo cassetto previdenziale. Può trattarsi direttamente del lavoratore oppure di un soggetto doverso autrizzato dalla delega ricevuta dal lavoratore stesso
+</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>User of services for the self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The user of services for the self-employed agricultural worker is an individual who can access the services available for this category of worker in their respective pension account</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Utente dei servizi per il libero professionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'Utente dei servizi per il libero professionsita è un soggetto, che può accedere ai servizi per questa categoria di lavoratore disponibile nel relativo cassetto previdenziale. Può trattarsi direttamente del professionista, diretto interessato oppure di un soggetto diverso autorizzato tramite delega dal libero professionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>User of services for the freelancer</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The User of services for the freelancer is a person who can access the services for this category of worker available in the relevant social security drawer</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega il cassetto previdenziale con il gruppo di classi che rappresentano i servizi di cui è costituito</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>cassetto previdenziale costituito da </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>service portal consisting of</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the service portal with the group of classes that represent the services it is made up of</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>cassetto previdenziale dei lavoratori agricoli autonomi è costituito da</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property mette in relazione il cassetto previdenziale dei lavoratori agricoli autonomi con il gruppo di classi che rappresentano i servizi di cui il cassetto si compone</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>The social security service portal of self-employed agricultural workers consists of</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>This object property relates the social security service portal of self-employed agricultural workers to the group of classes representing the services that the service is made up of</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property mette in relazione il cassetto previdenziale dei liberi professionsiti con il gruppo di classi che rappresentano i servizi di cui il cassetto si compone</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>cassetto previdenziale del libero professionista è costituito da</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property relates the self-employed workers' service portal to the group of classes that represent the services that the drawer is made up of.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>the self-employed worker's service portal is made up of</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>consulta il cassetto previdenziale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property mette in relazione la classe degli utenti del servizio con il cassetto previdenziale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>consult the service portal</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the users of the service with the service portal</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>consulta il cassetto previdenziale del lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property mette in relazione le istanze della classe degli utenti dei servizi disponibili nel cassetto previdenziale dei lavoratori agricoli autonomi con il cassetto previdenziale del lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>consult the self-employed agricultural worker's social security service portal</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the users of the services available in the self-employed agricultural workers'service portal with the self-employed agricultural worker's service portal</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property mette in relazione le istanze della classe degli utenti dei servizi disponibili nel cassetto previdenziale dei liberi professionisti con il cassetto previdenziale del libero professionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>consulta il cassetto previdenziale del libero professionsita</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>consult the freelancer's social security service portal</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the users of the services available in the self-employed workers' service portal with the self-employed workers' service portal</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Delegato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il delegato è un soggetto abilitato ad agire al posto di un altro (delegante) in forza di una delega da questi ricevuta</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Delegate</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The delegate is a person authorised to act in place of another (delegator) by virtue of a delegation received from the latter</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Cassetto previdenziale libero professionista</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il cassetto previdenziale del libero professionista è un servizio che permette ai lavoratori autonomi iscritti alla Gestione Separata di visualizzare i propri dati, presentare istanze e gestire le comunicaizoni con l'INPS. Nell'ontologia che descrive il cassetto previdenziale dei liberi professionsiti questa classe è modellata come sottoclasse della classe Cassetto previdenziale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>self-employed worker's sevice portal</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The pension account of the self-employed professional is a service that allows self-employed workers registered with the Separate Management to view their data, submit requests, and manage communications with INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Cassetto previdenziale lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il cassetto previdenziale del lavoratore agricolo autonomo è un servizio che consente ai titolari di aziende agricole e ai loro intermediari di consultare e verificare la posizione assicurativa dell'azienda, accedere a servizi di oìconsultazione  einvio di istanze e comunicare con L'INPS.
+</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Service portale of the self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The self-employed agricultural worker's social security drawer is a service that allows owners of agricultural businesses and their intermediaries to consult and verify the company's insurance position, access consultation and request submission services, and communicate with INPS.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+      </iris>
+    </ontology>
+    <diagrams>
+      <diagram name="cassetto previdenziale INPS" width="5000" height="5000">
+        <node id="n0" type="concept" color="#fcfcfc">
+          <geometry x="460" width="110" y="210" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale</iri>
+          <label size="12" x="460" width="110" y="210" customSize="0" height="36"/>
+        </node>
+        <node id="n44" type="concept" color="#fcfcfc">
+          <geometry x="460" width="110" y="-380" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteDelServizio</iri>
+          <label size="12" x="460" width="110" y="-380" customSize="0" height="22"/>
+        </node>
+        <node id="n48" type="role" color="#fcfcfc">
+          <geometry x="460" width="70" y="-190" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale</iri>
+          <label size="12" x="460" width="187" y="-220" customSize="0" height="22"/>
+        </node>
+        <node id="n49" type="domain-restriction" color="#fcfcfc">
+          <geometry x="460" width="20" y="-280" height="20"/>
+          <label size="12" x="460" width="39" y="-302" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n50" type="range-restriction" color="#000000">
+          <geometry x="460" width="20" y="-110" height="20"/>
+          <label size="12" x="460" width="39" y="-132" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n58" type="disjoint-union" color="#000000">
+          <geometry x="460" width="50" y="-20" height="30"/>
+        </node>
+        <node id="n59" type="concept" color="#fcfcfc">
+          <geometry x="10" width="110" y="210" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</iri>
+          <label size="12" x="10" width="110" y="210" customSize="0" height="64"/>
+        </node>
+        <node id="n60" type="concept" color="#fcfcfc">
+          <geometry x="860" width="110" y="210" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista</iri>
+          <label size="12" x="860" width="110" y="210" customSize="0" height="64"/>
+        </node>
+        <node id="n61" type="disjoint-union" color="#000000">
+          <geometry x="460" width="50" y="-480" height="30"/>
+        </node>
+        <node id="n62" type="concept" color="#fcfcfc">
+          <geometry x="660" width="110" y="-590" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista</iri>
+          <label size="12" x="660" width="110" y="-590" customSize="0" height="50"/>
+        </node>
+        <node id="n63" type="concept" color="#fcfcfc">
+          <geometry x="260" width="110" y="-590" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo</iri>
+          <label size="12" x="260" width="110" y="-590" customSize="0" height="64"/>
+        </node>
+        <node id="n65" type="role" color="#fcfcfc">
+          <geometry x="-160" width="70" y="-190" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo</iri>
+          <label size="12" x="-160" width="371" y="-220" customSize="0" height="22"/>
+        </node>
+        <node id="n66" type="domain-restriction" color="#fcfcfc">
+          <geometry x="-160" width="20" y="-310" height="20"/>
+          <label size="12" x="-160" width="39" y="-332" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n67" type="range-restriction" color="#000000">
+          <geometry x="-160" width="20" y="-100" height="20"/>
+          <label size="12" x="-160" width="39" y="-122" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n68" type="role" color="#fcfcfc">
+          <geometry x="1020" width="70" y="-190" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista</iri>
+          <label size="12" x="1020" width="319" y="-220" customSize="0" height="22"/>
+        </node>
+        <node id="n69" type="domain-restriction" color="#fcfcfc">
+          <geometry x="1020" width="20" y="-280" height="20"/>
+          <label size="12" x="1020" width="39" y="-302" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n70" type="range-restriction" color="#000000">
+          <geometry x="1020" width="20" y="-90" height="20"/>
+          <label size="12" x="1020" width="39" y="-112" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n71" type="role" color="#fcfcfc">
+          <geometry x="460" width="70" y="350" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa</iri>
+          <label size="12" x="460" width="202" y="320" customSize="0" height="22"/>
+        </node>
+        <node id="n72" type="concept" color="#fcfcfc">
+          <geometry x="10" width="110" y="560" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa</iri>
+          <label size="12" x="10" width="110" y="560" customSize="0" height="36"/>
+        </node>
+        <node id="n73" type="concept" color="#fcfcfc">
+          <geometry x="460" width="110" y="560" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata</iri>
+          <label size="12" x="460" width="110" y="560" customSize="0" height="22"/>
+        </node>
+        <node id="n74" type="concept" color="#fcfcfc">
+          <geometry x="860" width="110" y="560" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica</iri>
+          <label size="12" x="860" width="110" y="560" customSize="0" height="36"/>
+        </node>
+        <node id="n75" type="domain-restriction" color="#fcfcfc">
+          <geometry x="460" width="20" y="280" height="20"/>
+          <label size="12" x="460" width="39" y="258" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n76" type="range-restriction" color="#000000">
+          <geometry x="460" width="20" y="410" height="20"/>
+          <label size="12" x="460" width="39" y="388" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n77" type="disjoint-union" color="#000000">
+          <geometry x="460" width="50" y="480" height="30"/>
+        </node>
+        <node id="n79" type="disjoint-union" color="#000000">
+          <geometry x="10" width="50" y="640" height="30"/>
+        </node>
+        <node id="n80" type="concept" color="#fcfcfc">
+          <geometry x="-160" width="110" y="780" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo</iri>
+          <label size="12" x="-160" width="110" y="780" customSize="0" height="64"/>
+        </node>
+        <node id="n81" type="concept" color="#fcfcfc">
+          <geometry x="160" width="110" y="780" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista</iri>
+          <label size="12" x="160" width="110" y="780" customSize="0" height="50"/>
+        </node>
+        <node id="n82" type="concept" color="#fcfcfc">
+          <geometry x="300" width="110" y="1000" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo</iri>
+          <label size="12" x="300" width="110" y="1000" customSize="0" height="64"/>
+        </node>
+        <node id="n83" type="concept" color="#fcfcfc">
+          <geometry x="610" width="110" y="1000" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista</iri>
+          <label size="12" x="610" width="110" y="1000" customSize="0" height="50"/>
+        </node>
+        <node id="n84" type="disjoint-union" color="#000000">
+          <geometry x="460" width="50" y="830" height="30"/>
+        </node>
+        <node id="n85" type="concept" color="#fcfcfc">
+          <geometry x="700" width="110" y="780" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo</iri>
+          <label size="12" x="700" width="110" y="780" customSize="0" height="64"/>
+        </node>
+        <node id="n86" type="concept" color="#fcfcfc">
+          <geometry x="1020" width="110" y="780" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista</iri>
+          <label size="12" x="1020" width="110" y="780" customSize="0" height="64"/>
+        </node>
+        <node id="n87" type="disjoint-union" color="#000000">
+          <geometry x="860" width="50" y="650" height="30"/>
+        </node>
+        <node id="n88" type="role" color="#fcfcfc">
+          <geometry x="10" width="70" y="350" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa</iri>
+          <label size="12" x="10" width="381" y="320" customSize="0" height="22"/>
+        </node>
+        <node id="n89" type="domain-restriction" color="#fcfcfc">
+          <geometry x="10" width="20" y="290" height="20"/>
+          <label size="12" x="10" width="39" y="268" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n90" type="range-restriction" color="#000000">
+          <geometry x="-580" width="20" y="350" height="20"/>
+          <label size="12" x="-580" width="39" y="328" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n91" type="disjoint-union" color="#000000">
+          <geometry x="-580" width="50" y="450" height="30"/>
+        </node>
+        <node id="n92" type="role" color="#fcfcfc">
+          <geometry x="860" width="70" y="350" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa</iri>
+          <label size="12" x="860" width="340" y="320" customSize="0" height="22"/>
+        </node>
+        <node id="n93" type="domain-restriction" color="#fcfcfc">
+          <geometry x="860" width="20" y="290" height="20"/>
+          <label size="12" x="860" width="39" y="268" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n94" type="range-restriction" color="#000000">
+          <geometry x="1270" width="20" y="350" height="20"/>
+          <label size="12" x="1270" width="39" y="328" customSize="0" height="22">exists</label>
+        </node>
+        <node id="n95" type="disjoint-union" color="#000000">
+          <geometry x="1270" width="50" y="460" height="30"/>
+        </node>
+        <node id="n96" type="concept" color="#fcfcfc">
+          <geometry x="1600" width="110" y="-570" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</iri>
+          <label size="12" x="1600" width="110" y="-570" customSize="0" height="22"/>
+        </node>
+        <node id="n97" type="disjoint-union" color="#000000">
+          <geometry x="1600" width="50" y="-470" height="30"/>
+        </node>
+        <node id="n98" type="concept" color="#fcfcfc">
+          <geometry x="1420" width="110" y="-370" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionista</iri>
+          <label size="12" x="1420" width="110" y="-370" customSize="0" height="36"/>
+        </node>
+        <node id="n99" type="concept" color="#fcfcfc">
+          <geometry x="1740" width="110" y="-370" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo</iri>
+          <label size="12" x="1740" width="110" y="-370" customSize="0" height="50"/>
+        </node>
+        <edge id="e100" type="input" source="n80" target="n91">
+          <point x="-160" y="780"/>
+          <point x="-160" y="450"/>
+          <point x="-580" y="450"/>
+        </edge>
+        <edge id="e101" type="input" source="n82" target="n84">
+          <point x="300" y="1000"/>
+          <point x="300" y="830"/>
+          <point x="460" y="830"/>
+        </edge>
+        <edge id="e102" type="input" source="n83" target="n84">
+          <point x="610" y="1000"/>
+          <point x="610" y="830"/>
+          <point x="460" y="830"/>
+        </edge>
+        <edge id="e103" type="input" source="n82" target="n91">
+          <point x="300" y="1000"/>
+          <point x="-580" y="1000"/>
+          <point x="-580" y="450"/>
+        </edge>
+        <edge id="e105" type="input" source="n85" target="n91">
+          <point x="700" y="780"/>
+          <point x="700" y="1170"/>
+          <point x="-720" y="1170"/>
+          <point x="-720" y="450"/>
+          <point x="-580" y="450"/>
+        </edge>
+        <edge id="e106" type="inclusion" source="n92" target="n71">
+          <point x="860" y="350"/>
+          <point x="460" y="350"/>
+        </edge>
+        <edge id="e107" type="input" source="n92" target="n93">
+          <point x="860" y="350"/>
+          <point x="860" y="290"/>
+        </edge>
+        <edge id="e108" type="input" source="n92" target="n94">
+          <point x="860" y="350"/>
+          <point x="1270" y="350"/>
+        </edge>
+        <edge id="e110" type="inclusion" source="n93" target="n60">
+          <point x="860" y="290"/>
+          <point x="860" y="210"/>
+        </edge>
+        <edge id="e111" type="inclusion" source="n89" target="n59">
+          <point x="10" y="290"/>
+          <point x="10" y="210"/>
+        </edge>
+        <edge id="e113" type="inclusion" source="n95" target="n94">
+          <point x="1270" y="460"/>
+          <point x="1270" y="350"/>
+        </edge>
+        <edge id="e114" type="input" source="n86" target="n95">
+          <point x="1020" y="780"/>
+          <point x="1150" y="780"/>
+          <point x="1150" y="460"/>
+          <point x="1270" y="460"/>
+        </edge>
+        <edge id="e115" type="input" source="n83" target="n95">
+          <point x="610" y="1000"/>
+          <point x="1270" y="1000"/>
+          <point x="1270" y="460"/>
+        </edge>
+        <edge id="e116" type="input" source="n81" target="n95">
+          <point x="160" y="780"/>
+          <point x="160" y="1270"/>
+          <point x="1510" y="1260"/>
+          <point x="1510" y="460"/>
+          <point x="1270" y="460"/>
+        </edge>
+        <edge id="e117" type="inclusion" source="n97" target="n96">
+          <point x="1600" y="-470"/>
+          <point x="1600" y="-570"/>
+        </edge>
+        <edge id="e118" type="input" source="n98" target="n97">
+          <point x="1420" y="-370"/>
+          <point x="1420" y="-470"/>
+          <point x="1600" y="-470"/>
+        </edge>
+        <edge id="e119" type="input" source="n99" target="n97">
+          <point x="1740" y="-370"/>
+          <point x="1740" y="-470"/>
+          <point x="1600" y="-470"/>
+        </edge>
+        <edge id="e48" type="input" source="n48" target="n49">
+          <point x="460" y="-190"/>
+          <point x="460" y="-280"/>
+        </edge>
+        <edge id="e49" type="input" source="n48" target="n50">
+          <point x="460" y="-190"/>
+          <point x="460" y="-110"/>
+        </edge>
+        <edge id="e51" type="inclusion" source="n50" target="n0">
+          <point x="460" y="-110"/>
+          <point x="460" y="210"/>
+        </edge>
+        <edge id="e56" type="inclusion" source="n58" target="n0">
+          <point x="460" y="-20"/>
+          <point x="460" y="210"/>
+        </edge>
+        <edge id="e60" type="input" source="n59" target="n58">
+          <point x="10" y="210"/>
+          <point x="10" y="-20"/>
+          <point x="460" y="-20"/>
+        </edge>
+        <edge id="e61" type="input" source="n60" target="n58">
+          <point x="860" y="210"/>
+          <point x="860" y="-20"/>
+          <point x="460" y="-20"/>
+        </edge>
+        <edge id="e62" type="inclusion" source="n44" target="n61">
+          <point x="460" y="-380"/>
+          <point x="460" y="-480"/>
+        </edge>
+        <edge id="e63" type="inclusion" source="n49" target="n44">
+          <point x="460" y="-280"/>
+          <point x="460" y="-380"/>
+        </edge>
+        <edge id="e65" type="input" source="n63" target="n61">
+          <point x="260" y="-590"/>
+          <point x="260" y="-480"/>
+          <point x="460" y="-480"/>
+        </edge>
+        <edge id="e66" type="input" source="n62" target="n61">
+          <point x="660" y="-590"/>
+          <point x="660" y="-480"/>
+          <point x="460" y="-480"/>
+        </edge>
+        <edge id="e67" type="inclusion" source="n65" target="n48">
+          <point x="-160" y="-190"/>
+          <point x="460" y="-190"/>
+        </edge>
+        <edge id="e68" type="input" source="n65" target="n66">
+          <point x="-160" y="-190"/>
+          <point x="-160" y="-310"/>
+        </edge>
+        <edge id="e69" type="input" source="n65" target="n67">
+          <point x="-160" y="-190"/>
+          <point x="-160" y="-100"/>
+        </edge>
+        <edge id="e70" type="inclusion" source="n66" target="n63">
+          <point x="-160" y="-310"/>
+          <point x="-160" y="-590"/>
+          <point x="260" y="-590"/>
+        </edge>
+        <edge id="e71" type="inclusion" source="n67" target="n59">
+          <point x="-160" y="-100"/>
+          <point x="-160" y="210"/>
+          <point x="10" y="210"/>
+        </edge>
+        <edge id="e72" type="inclusion" source="n68" target="n48">
+          <point x="1020" y="-190"/>
+          <point x="460" y="-190"/>
+        </edge>
+        <edge id="e73" type="input" source="n68" target="n69">
+          <point x="1020" y="-190"/>
+          <point x="1020" y="-280"/>
+        </edge>
+        <edge id="e74" type="input" source="n68" target="n70">
+          <point x="1020" y="-190"/>
+          <point x="1020" y="-90"/>
+        </edge>
+        <edge id="e75" type="inclusion" source="n69" target="n62">
+          <point x="1020" y="-280"/>
+          <point x="1020" y="-590"/>
+          <point x="660" y="-590"/>
+        </edge>
+        <edge id="e76" type="inclusion" source="n70" target="n60">
+          <point x="1020" y="-90"/>
+          <point x="1020" y="210"/>
+          <point x="860" y="210"/>
+        </edge>
+        <edge id="e79" type="input" source="n71" target="n75">
+          <point x="460" y="350"/>
+          <point x="460" y="280"/>
+        </edge>
+        <edge id="e80" type="input" source="n71" target="n76">
+          <point x="460" y="350"/>
+          <point x="460" y="410"/>
+        </edge>
+        <edge id="e81" type="inclusion" source="n75" target="n0">
+          <point x="460" y="280"/>
+          <point x="460" y="210"/>
+        </edge>
+        <edge id="e82" type="inclusion" source="n76" target="n77">
+          <point x="460" y="410"/>
+          <point x="460" y="480"/>
+        </edge>
+        <edge id="e83" type="input" source="n72" target="n77">
+          <point x="10" y="560"/>
+          <point x="10" y="480"/>
+          <point x="460" y="480"/>
+        </edge>
+        <edge id="e84" type="input" source="n73" target="n77">
+          <point x="460" y="560"/>
+          <point x="460" y="480"/>
+        </edge>
+        <edge id="e85" type="input" source="n74" target="n77">
+          <point x="860" y="560"/>
+          <point x="860" y="480"/>
+          <point x="460" y="480"/>
+        </edge>
+        <edge id="e86" type="inclusion" source="n79" target="n72">
+          <point x="10" y="640"/>
+          <point x="10" y="560"/>
+        </edge>
+        <edge id="e87" type="input" source="n80" target="n79">
+          <point x="-160" y="780"/>
+          <point x="-160" y="640"/>
+          <point x="10" y="640"/>
+        </edge>
+        <edge id="e88" type="input" source="n81" target="n79">
+          <point x="160" y="780"/>
+          <point x="160" y="640"/>
+          <point x="10" y="640"/>
+        </edge>
+        <edge id="e89" type="inclusion" source="n84" target="n73">
+          <point x="460" y="830"/>
+          <point x="460" y="560"/>
+        </edge>
+        <edge id="e92" type="inclusion" source="n87" target="n74">
+          <point x="860" y="650"/>
+          <point x="860" y="560"/>
+        </edge>
+        <edge id="e93" type="input" source="n85" target="n87">
+          <point x="700" y="780"/>
+          <point x="700" y="650"/>
+          <point x="860" y="650"/>
+        </edge>
+        <edge id="e94" type="input" source="n86" target="n87">
+          <point x="1020" y="780"/>
+          <point x="1020" y="650"/>
+          <point x="860" y="650"/>
+        </edge>
+        <edge id="e95" type="inclusion" source="n88" target="n71">
+          <point x="10" y="350"/>
+          <point x="460" y="350"/>
+        </edge>
+        <edge id="e96" type="input" source="n88" target="n89">
+          <point x="10" y="350"/>
+          <point x="10" y="290"/>
+        </edge>
+        <edge id="e97" type="input" source="n88" target="n90">
+          <point x="10" y="350"/>
+          <point x="-580" y="350"/>
+        </edge>
+        <edge id="e99" type="inclusion" source="n91" target="n90">
+          <point x="-580" y="450"/>
+          <point x="-580" y="350"/>
+        </edge>
+      </diagram>
+    </diagrams>
+  </project>
+</graphol>

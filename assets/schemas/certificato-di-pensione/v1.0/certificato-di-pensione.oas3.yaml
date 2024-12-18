@@ -1,0 +1,51 @@
+openapi: 3.0.3
+info:
+  title: Schema del Certificato di Pensione
+  version: 202410.28.00
+  x-summary: Schema del Certificato di Pensione compatibile con l'Ontologia INPS relativa al Certificato di Pensione
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdCertificatoDiPensione:
+      type: string
+      description: https://w3id.org/italia/social-security/onto/ObisModel/identificativoCertificatoDiPensione
+      example: '2148567'
+      maxLength: 50
+      minLength: 1
+
+    CertificatoDiPensione:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/ObisModel/"
+        data_emissione_certificato_di_pensione: dataEmissioneCertificatoDiPensione
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione
+      required:
+      - codice_certificato_di_pensione
+      - data_emissione_certificato_di_pensione
+      properties:
+        codice_certificato_di_pensione:
+          $ref: "#/components/schemas/IdCertificatoDiPensione"
+        data_emissione_certificato_di_pensione:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      example:
+        codice_certificato_di_pensione:
+          $ref: "#/components/schemas/IdCertificatoDiPensione/example"
+        data_emissione_certificato_di_pensione: "2024-12-12"

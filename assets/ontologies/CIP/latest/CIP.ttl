@@ -1,0 +1,784 @@
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
+@prefix CIP: <https://w3id.org/italia/social-security/onto/CIP/> .
+@prefix CLV: <https://w3id.org/italia/onto/CLV/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPSV: <https://w3id.org/italia/onto/CPSV/> .
+@prefix CPV: <https://w3id.org/italia/onto/CPV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSSafety: <https://w3id.org/italia/social-security/onto/social-safety-net/> .
+@prefix L0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix TI: <https://w3id.org/italia/onto/TI/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+CIP: a owl:Ontology ;
+    owl:versionIRI CIP:1.0 ;
+    owl:imports CLV:,
+        COV:,
+        CPV:,
+        L0:,
+        RO: ;
+    rdfs:label "Ontologia Consultazione Info Previdenziali (CIP) di INPS"@it,
+        "Social Security Record INPS Ontology"@en ;
+    rdfs:comment "Ontologia INPS relativa al servizio Consultazione Info Previdenziali (CIP) per dipendenti privati"@it,
+        "The Social Security Record Italian Online Service INPS Ontology"@en ;
+    owl:versionInfo "1.0 - Modificata il 29 Ottobre 2024"@it,
+        "1.0 - Modified on 29 October 2024"@en ;
+    rdfs:isDefinedBy CIP: ;
+    adms:acronym "inps" ;
+    adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+    adms:hasFormalityLevel adms:Formal ;
+    adms:hasKeyClass CIP:ConsultazioneInfoPrevidenzialiCIP,
+        CIP:ConsultazioneIntegrazioneSalariale,
+        CIP:ConsultazioneUNIEMENS ;
+    adms:hasOntologyLanguage adms:OWL ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/CIP/distribution/CIP-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/CIP/distribution/CIP-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/CIP/distribution/CIP-RDF-XML> ;
+    adms:hasTask adms:AnnotationTask,
+        adms:QueryFormulationTask,
+        adms:SearchTask ;
+    adms:last CIP:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/CIP/"^^xsd:anyURI ;
+    adms:prefix "CIP" ;
+    adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+    adms:status "catalogued",
+        "published" ;
+    adms:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    adms:type adms:ServiceOnytology ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:keyword "Consultazione Info Previdenziali CIP"@it,
+        "Consultazione Integrazione Salariale"@it,
+        "Consultazione UNIEMENS"@it,
+        "Employment Integration Allowance Records"@en,
+        "Social Security Record"@en,
+        "UNIEMENS records"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Ontologia INPS relativa alle entità e alle relazioni che descrivono il servizio consultazione info previdenziali (CIP) secondi i criteri dell'istituto."@it,
+        "This INPS ontology describes the entities and properties of the Italian online service CIP according to the criteria of the Institute."@en ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/CIP" ;
+    dct:issued "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "Ontologia Consultazione Info Previdenziali (CIP)"@it,
+        "Social Security Record INPS Ontology"@en .
+
+### Object Properties
+
+CIP:descriveRichiestaDiAnticipo a owl:ObjectProperty ;
+    rdfs:label "descrive richiesta di anticipo"@it,
+        "gives information about advance payment request"@en ;
+    rdfs:domain CIP:ConsultazioneIntegrazioneSalariale ;
+    rdfs:range CIP:AnticipoIntegrazioneSalarialeCausaleCovid ;
+    rdfs:comment " La sezione consultazione integrazione salariale fornisce la consultazione dell' anticipo integrazione salariale causale covid."@it,
+        "Information about employment integration salary advance payment request can be accessed through the employment integration salary records."@en .
+
+CIP:descriveStatodellaDomandaIntegrazioneSalariale a owl:ObjectProperty ;
+    rdfs:label "descrive stato della domanda integrazione salariale"@it,
+        "gives information about the employment integration salaty request status"@en ;
+    rdfs:domain CIP:ConsultazioneIntegrazioneSalariale ;
+    rdfs:range CIP:StatoDomandaIntegrazioneSalariale ;
+    rdfs:comment "Information about the status of your employment integration salary request can be accessed through the employment integration salary records."@en,
+        "La sezione consultazione integrazione salariale fornisce informazioni sullo stato della domanda integrazioni salariali."@it .
+
+CIP:descriveStatoDiAnticipoIntegrazioneSalariale a owl:ObjectProperty ;
+    rdfs:label "descrive stato di anticipo integrazione salariale"@it,
+        "gives information about employment integration salary advance payment status"@en ;
+    rdfs:domain CIP:ConsultazioneIntegrazioneSalariale ;
+    rdfs:range CIP:StatoAnticipoIntegrazioneSalarialeCausaleCovid ;
+    rdfs:comment "Information about the employment integration salary advance payment transaction lifecycle can be accessed through the Employment integration salary records. "@en,
+        "La sezione consultazione integrazione salariale fornisce la consultazione dello stato di anticipo integrazione salariale."@it .
+
+CIP:descriveTipologiaPrestazioneIntegrazioneSalariale a owl:ObjectProperty ;
+    rdfs:label "descrive tipologia prestazione integrazione salariale"@it,
+        "gives information about employment integration salary compensation"@en ;
+    rdfs:domain CIP:ConsultazioneIntegrazioneSalariale ;
+    rdfs:range CIP:TipologiaPrestazionePagamentoDiretto ;
+    rdfs:comment "Descrive le tipologie di prestazioni integrazioni salariali a pagamento diretto "@it,
+        "Information about the different types of integration salary compensation can be accessed through the employment integration salary records. "@en .
+
+CIP:haConsultazioneContrattoDiLavoroSubordinato a owl:ObjectProperty ;
+    rdfs:label "gives information about employment contract"@en,
+        "ha consultazione contratto di lavoro subordinato"@it ;
+    rdfs:domain CIP:ConsultazioneUNIEMENS ;
+    rdfs:range INPSSafety:ContrattoDiLavoroSubordinato ;
+    rdfs:comment "Gives a brief statement of the contracts of employment."@en,
+        "La sezione di Consultazione UNIEMENS fornisce la consultazione da parte del lavoratore subordinato del contratto di lavoro subordinato"@it .
+
+CIP:haConsultazioneContributoFigurativo a owl:ObjectProperty ;
+    rdfs:label "gives information about social welfare benefits"@en,
+        "ha consultazione contributo figurativo"@it ;
+    rdfs:domain CIP:ConsultazioneUNIEMENS ;
+    rdfs:range INPSSafety:ContributoFigurativo ;
+    rdfs:comment "Gives a brief statement of the social welfare benefits an employee may qualify for."@en,
+        "La sezione di Consultazione UNIEMENS fornisce la consultazione da parte del lavoratore subordinato del contributo figurativo."@it .
+
+CIP:haConsultazionePrestazioneANF a owl:ObjectProperty ;
+    rdfs:label "gives information about ANF allowance"@en,
+        "ha consultazione prestazione ANF"@it ;
+    rdfs:domain CIP:ConsultazioneUNIEMENS ;
+    rdfs:range INPSSafety:PrestazioneANF ;
+    rdfs:comment "Gives a brief statement of the main points of the ANF allowance."@en,
+        "La sezione di Consultazione UNIEMENS fornisce la consultazione da parte del lavoratore subordinato delle prestazioni ANF."@it .
+
+CIP:haConsultazioneRapportoDiLavoroSospeso a owl:ObjectProperty ;
+    rdfs:label "gives information about temporary contract suspension"@en,
+        "ha consultazione rapporto di lavoro sospeso"@it ;
+    rdfs:domain CIP:ConsultazioneUNIEMENS ;
+    rdfs:range CIP:RapportoDiLavoroSopeso ;
+    rdfs:comment "Gives a brief statement of the main points of a temporary suspension of a contract."@en,
+        "La sezione di Consultazione UNIEMENS fornisce la consultazione da parte del lavoratore subordinato del rapporto di lavoro sospeso."@it .
+
+CIP:inviaDenunciaMensileUNIEMENS a owl:ObjectProperty ;
+    rdfs:label "invia denuncia mensile UNIEMENS"@it,
+        "sends out UNIEMENS monthly report "@en ;
+    rdfs:domain INPSSafety:DatoreDiLavoro ;
+    rdfs:range CIP:DenunciaMensileUNIEMENS ;
+    rdfs:comment "Il datore di lavoro invia le denunce mensili UNIEMENS."@it,
+        "The UNIEMENS monthly report is sent it out by the employer."@en .
+
+CIP:inviaIntegrazioneSalarialeCovid19 a owl:ObjectProperty ;
+    rdfs:label "invia integrazione salariale covid-19"@it,
+        "sends out covid-19 employment integration salary report"@en ;
+    rdfs:domain INPSSafety:DatoreDiLavoro ;
+    rdfs:range CIP:DomandaIntegrazioneSalarialeAPagamentoDirettoCovid-19 ;
+    rdfs:comment "Il datore di lavoro invia le integrazioni salariali covid-19"@it,
+        "The Covid-19 Employment Integration Salary Report is sent it out by the employer."@en .
+
+CIP:lavoratoreSubordinatoConsultaCIP a owl:ObjectProperty ;
+    rdfs:range CIP:ConsultazioneInfoPrevidenzialiCIP .
+
+CIP:visualizzaDatiDenunciaUNIEMENS a owl:ObjectProperty ;
+    rdfs:label "has access to the UNIEMENS monthly report"@en,
+        "visualizza dati denuncia UNIEMENS"@it ;
+    rdfs:domain CIP:ConsultazioneUNIEMENS ;
+    rdfs:range CIP:DenunciaMensileUNIEMENS ;
+    rdfs:comment "Alcuni dati trasmessi dal datore di lavoro tramite le denunce mensili UNIEMENS possono essere consultati nella sezione di consultazione UNIEMENS all'interno del servizio CIP."@it,
+        "Some of the information included in the UNIEMENS monthly report can be accessed through the UNIEMENS records via the CIP portal."@en .
+
+CIP:visualizzaDatiDomandaIntegrazioneSalariale a owl:ObjectProperty ;
+    rdfs:label "has access to the Employment Integration Salary report"@en,
+        "visualizza dati domanda integrazione salariale"@de ;
+    rdfs:domain CIP:ConsultazioneIntegrazioneSalariale ;
+    rdfs:range CIP:DomandaIntegrazioneSalarialeAPagamentoDirettoCovid-19 ;
+    rdfs:comment "Alcuni dati delle domande di integrazione salariale a pagamento diretto covid-19 possono essere consultati nella sezione di consultazione integrazione salariale all'interno del servio CIP. "@it,
+        "Some of the information included in the Employment Integration Salary Report can be accessed through the Employment Integration Allowance Records via the CIP service portal."@en .
+
+### Datatypes
+
+xsd:dateTime a rdfs:Datatype .
+
+xsd:string a rdfs:Datatype .
+
+### Data Properties
+
+CIP:CFLavoratoreSubordinato a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "CF lavoratore subordinato"@it,
+        "social security number"@en ;
+    rdfs:domain CIP:ConsultazioneInfoPrevidenzialiCIP ;
+    rdfs:range xsd:string ;
+    rdfs:comment "Codice Fiscale lavoratore subordinato"@it,
+        "Employee Social Security Number"@en .
+
+CIP:consultazioneInfoPrevidenzialiPeriodoA a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "consultazione info previdenziali periodo a"@it,
+        "social service statement date to"@it ;
+    rdfs:domain CIP:ConsultazioneInfoPrevidenzialiCIP ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di fine periodo di competenza indicato"@it,
+        "You can specify a data range when you search. This is the finish date of the statement you wish to generate."@en .
+
+CIP:consultazioneInfoPrevidenzialiPeriodoDa a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "consultazione info previdenziali periodo da"@it,
+        "social security statement date from"@en ;
+    rdfs:domain CIP:ConsultazioneInfoPrevidenzialiCIP ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di inizio periodo di competenza indicato"@it,
+        "You can specify a data range when you search. This is the start date of the statement you wish to generate."@en .
+
+CIP:dataCompetenza a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data di competenza"@it,
+        "reference date"@en ;
+    rdfs:domain CIP:ConsultazioneUNIEMENS ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Colonna che riporta il mese e l'anno di competenza"@it,
+        "The defined point in time in which a specified event/information/record must be referred to."@en .
+
+CIP:dataFineRapportoDiLavoroSospeso a owl:DatatypeProperty ;
+    rdfs:label "data fine rapporto di lavoro sospeso"@it,
+        "temporary contract suspension end date"@en ;
+    rdfs:domain CIP:RapportoDiLavoroSopeso ;
+    rdfs:comment "La data di fine del rapporto di lavoro sospeso per aspettativa o distacco sindacale."@it,
+        "The day on which a contract is no longer temporary suspended."@en .
+
+CIP:dataInizioRapportoDiLavoroSospeso a owl:DatatypeProperty ;
+    rdfs:label "data inizio rapporto di lavoro sospeso"@it,
+        "La data di inzio di un rapporto di lavoro sospeso per aspettativa o distacco sindacale."@it,
+        "temporary contract suspension start date"@en ;
+    rdfs:domain CIP:RapportoDiLavoroSopeso ;
+    rdfs:comment "The day when an employment contract is temporary suspended due to extended leave or trade union leave."@en .
+
+CIP:dataPagamentoAnticipoIntegrazioneSalariale a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data pagamento anticipo integrazione salariale"@it,
+        "employment integration salary advance payment date"@en ;
+    rdfs:domain CIP:AnticipoIntegrazioneSalarialeLiquidato ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "La data effettiva dell'anticipo pagamento integrazione salariale."@it,
+        "The date on which the employment integration salary advance payment is paid."@en .
+
+CIP:dataPresentazioneDomandaIntegrazioneSalariale a owl:DatatypeProperty ;
+    rdfs:label "data presentazione domanda integrazione salariale"@it,
+        "employment integration allowance receipt date"@en ;
+    rdfs:domain CIP:ConsultazioneIntegrazioneSalariale ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data in cui la domanda di integrazione salariale viene accolta. "@it,
+        "The date on which the employment integration allowance is contractually effective."@en .
+
+CIP:descrizionePrestazionePagamentoDiretto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "descrizione prestazione pagamento diretto"@it,
+        "employment integration salary compesation description"@en ;
+    rdfs:domain CIP:TipologiaPrestazionePagamentoDiretto ;
+    rdfs:comment "Descrizione della prestazione integrazione salariale a pagamento diretto."@it,
+        "Employment integration salary compesation description"@en .
+
+CIP:numeroMensilitaAspettativa a owl:DatatypeProperty ;
+    rdfs:label "extended leave monthly payment"@en,
+        "numero mensilità aspettativa"@it ;
+    rdfs:domain CIP:SospensionePerAspettativa ;
+    rdfs:comment "Indica il numero di mensilità retribuite per aspettativa "@it,
+        "The number of payments for extended leaves."@en .
+
+CIP:numeroProtocolloDomandaIntegrazioneSalariale a owl:DatatypeProperty ;
+    rdfs:label "employment integration allowance ID number"@en,
+        "numero protocolla domanda integrazione salariale"@it ;
+    rdfs:domain CIP:ConsultazioneIntegrazioneSalariale ;
+    rdfs:range xsd:string ;
+    rdfs:comment "A unique reference number that helps to identify your employment integration allowance."@en,
+        "Il numero di protocollo domanda integrazione salariale."@it .
+
+CIP:periodoPrestazioneIntegrazioneSalarialeA a owl:DatatypeProperty ;
+    rdfs:label "employment integration allowance date to"@en,
+        "prestazione integrazione salariale a"@it ;
+    rdfs:domain CIP:ConsultazioneIntegrazioneSalariale ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di fine prestazione integrazione salariale."@it,
+        "The finish data of an employment integration allowance compensation."@en .
+
+CIP:periodoPrestazioneIntegrazioneSalarialeDa a owl:DatatypeProperty ;
+    rdfs:label "employment integration allowance date from"@en,
+        "periodo prestazione integrazione salariale da"@it ;
+    rdfs:domain CIP:ConsultazioneIntegrazioneSalariale ;
+    rdfs:range xsd:dateTime ;
+    rdfs:comment "Data di inzio di una prestazione relativa alle integrazioni salariali."@it,
+        "The start date of a an employment integration allowance compensation."@en .
+
+CIP:quotaImponibileDistacco a owl:DatatypeProperty ;
+    rdfs:label "quota imponibile distacco"@it,
+        "trade union leave taxable income"@en ;
+    rdfs:domain CIP:SospensionePerDistaccoSindacale ;
+    rdfs:comment "La quota imponibile per distacco sindacale"@it,
+        "The portion of a trade union leave gross income on which an employee is required to pay income taxes."@en .
+
+CIP:retribuzioneTeoricaAspettativa a owl:DatatypeProperty ;
+    rdfs:label "Extended leave salary"@en,
+        "retribuzione teorica aspettativa"@it ;
+    rdfs:domain CIP:SospensionePerAspettativa ;
+    rdfs:comment "La retribuzione teorica durante il periodo di aspettativa."@it,
+        "The salary an employee received when there are no other types of " .
+
+INPSSafety:imponibileContributivo a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain CIP:ConsultazioneUNIEMENS .
+
+### Classes
+
+CIP:AnticipoIntegrazioneSalarialeCausaleCovid a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:descriveRichiestaDiAnticipo ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Anticipo Integrazione Salariale Causale Covid"@it,
+        "Covid-19 Employment Integration Salary Advance Request"@it ;
+    rdfs:comment "Covid-19 employment integration salary advance payment request."@en,
+        "Richiesta di anticipo integrazione salariale causale covid."@it .
+
+CIP:AnticipoIntegrazioneSalarialeLiquidato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty CIP:dataPagamentoAnticipoIntegrazioneSalariale ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Anticipo Integrazione Salariale Liquidato"@it,
+        "Employment Integration Salary Advance Payment Status Delivered"@en ;
+    rdfs:subClassOf CIP:StatoAnticipoIntegrazioneSalarialeCausaleCovid ;
+    rdfs:comment "Anticipo integrazione salariale stato liquidato."@it,
+        "Employment integration salary advance payment delivered."@en .
+
+CIP:ConsultazioneInfoPrevidenzialiCIP a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty CIP:CFLavoratoreSubordinato ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:consultazioneInfoPrevidenzialiPeriodoA ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:consultazioneInfoPrevidenzialiPeriodoDa ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:lavoratoreSubordinatoConsultaCIP ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Consultazione Info Previdenziali CIP"@it,
+        "Social Security Record"@en ;
+    rdfs:subClassOf CPSV:Service ;
+    rdfs:comment "E' un servizio di consultazione previdenziale che fornisce una panoramica più completa rispetto a quella fornita dall'estratto conto."@it,
+        "The Social Security Record (ita:CIP) is an online service that presents social security and financial-related information in a more detailed form than a regular bank statement. "@en .
+
+CIP:ConsultazioneIntegrazioneSalariale a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty CIP:dataPresentazioneDomandaIntegrazioneSalariale ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:descriveRichiestaDiAnticipo ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:descriveStatodellaDomandaIntegrazioneSalariale ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:descriveStatoDiAnticipoIntegrazioneSalariale ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:descriveTipologiaPrestazioneIntegrazioneSalariale ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:numeroProtocolloDomandaIntegrazioneSalariale ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:periodoPrestazioneIntegrazioneSalarialeA ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:periodoPrestazioneIntegrazioneSalarialeDa ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:visualizzaDatiDomandaIntegrazioneSalariale ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Consultazione Integrazione Salariale"@it,
+        "Employment Integration Allowance Records"@en ;
+    owl:disjointWith CIP:ConsultazioneUNIEMENS ;
+    rdfs:comment "Sezione di consultazione dati relativa alle Integrazioni Salariali inviate dal datore di lavoro disponibile tramite il servizio di consultazione info previdenziali CIP. Il servizio consente, tramite un unico punto di accesso, di consultare lo stato, delle domande e dei pagamenti diretti di trattamenti di integrazione salariale."@it,
+        "The Employment Integration Allowance records contains a history of any information with regards to the Employment Integration Allowance report, which is sent each month by the employer, the information presented in this report can be accessed through the Social Security record service (CIP)."@en .
+
+CIP:ConsultazioneUNIEMENS a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty CIP:dataCompetenza ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:haConsultazioneContrattoDiLavoroSubordinato ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:haConsultazioneContributoFigurativo ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:haConsultazionePrestazioneANF ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:haConsultazioneRapportoDiLavoroSospeso ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:visualizzaDatiDenunciaUNIEMENS ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSafety:imponibileContributivo ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Consultazione UNIEMENS"@it,
+        "UNIEMENS records"@en ;
+    rdfs:comment "Sezione di consultazione dati relativa alle denunce mensili UNIEMENS inviate dal datore di lavoro disponibile tramite il servizio di consultazione info previdenziali CIP. "@it,
+        "The UNIEMENS records contains a history of any information with regards to the UNIEMENS monthly report. The UNIEMENS monthly report is sent each month by the employer, the information presented in this report can be accessed through the Social Security record service (CIP)."@en .
+
+CIP:ContributoFigurativoAccreditatoDiUfficio a owl:Class ;
+    rdfs:label "Automatic Benefit"@en,
+        "Contributo Figurativo Accreditato Di Ufficio"@it ;
+    rdfs:comment "I contributi figurativi sono accreditati d’ufficio nel momento dell’ interruzione o della sospensione del rapporto di lavoro in caso di disoccupazione, cassa integrazione o malattia/infortunio sul lavoro ma talvolta sono riconosciuti nel momento in cui si presenta domanda di pensione."@it,
+        "This is a type of benefit that is paid to employees in automatic if there's a suspension of a temporary or permenant discarge of a worker due to shortgae of work, accidents in the workplace or when the state pension application form is sent out."@en .
+
+CIP:ContributoFigurativoAssegnoOrdinarioFIS a owl:Class ;
+    rdfs:label "Contributo Figurativo Assegno Ordinatio FIS",
+        "FIS Automatic Benefit"@en ;
+    rdfs:comment "A person who is supended from employment will be automatically enrolled on FIS benefit."@en,
+        "Assegno di integrazione salariale per lavoratori dipendenti in caso di sospensione o cessazione dell'attività lavorativa."@it .
+
+CIP:ContributoFigurativoAssistenzaAntitubercolare a owl:Class ;
+    rdfs:label "Contributo Figurativo Assistenza Antitubercolare"@it,
+        "TB Allowance"@en ;
+    rdfs:comment "Contributo figurativo a carico dell'INPS per l'assistenza antitubercolare."@it,
+        "Tuberculosis (TB) allowance is a payment to people by the Italian Department of Social Protection (INPS). "@en .
+
+CIP:ContributoFigurativoCassaIntegrazione a owl:Class ;
+    rdfs:label "Contributo Figurativo Cassa Integrazione"@it,
+        "Income Support Benefit"@en ;
+    rdfs:comment "I lavoratori che sono posti in cassa integrazione, hanno diritto alla copertura contributiva dell’intero periodo."@it,
+        "Income Supports is paid to employees who have been put on an income support register."@en .
+
+CIP:ContributoFigurativoCongedoParentale a owl:Class ;
+    rdfs:label "Contributo Figurativo Congedo Parentale"@it,
+        "Parent's Benefit"@en ;
+    rdfs:comment "I periodi di congedo parentale (astensione facoltativa) fruiti durante il rapporto di lavoro sono coperti da contribuzione figurativa (articolo 35, decreto legislativo 26 marzo 2001, n. 151)."@it,
+        "Parent's Benefit is a payment for people in employment to allow them to take time off work ( Italian Law: article 35. 26 March 2001, n. 151)."@en .
+
+CIP:ContributoFigurativoContrattoDiSolidarieta a owl:Class ;
+    rdfs:label "Contributo Figuartivo Contratto Di Solidarietà"@it,
+        "Solidarity Contract Benefit"@en ;
+    rdfs:comment "Nell’ambito dei contratti di solidarietà, la parte di retribuzione persa a causa della contrazione lavorativa viene compensata con un contributo Inps, pari all’80% dello stipendio non corrisposto."@it,
+        "Solidarity Contract Benefit is a payment to people who have a solidarity contract agreement, in other words, reduced work hours and income. It is paid by the Department of Social Protection (INPS) and cover up to 80% of the full income."@en .
+
+CIP:ContributoFigurativoDisoccupazione a owl:Class ;
+    rdfs:label "Contributo Figurativo Disoccupazione"@it,
+        "Unemployment Benefit"@en ;
+    rdfs:comment "I contributi figurativi per disoccupazione indennizzata sono dei versamenti previdenziali che vengono effettuati dall’INPS (Istituto Nazionale della Previdenza Sociale) a favore dei lavoratori che si trovano in stato di disoccupazione involontaria."@it,
+        "Unemployment Benefit is a payment from the INPS (Italian Department of Social Protection) to people who are out of work for involuntary reasons.  "@en .
+
+CIP:ContributoFigurativoInvalidita a owl:Class ;
+    rdfs:label "Contributo Figurativo Invalidità"@it,
+        "Disability Benefit"@en ;
+    rdfs:comment "Contributo figurativo per lavoratori con invalidità."@it,
+        "Disability benefit is a payment that may be paid to people who cannot work because of a long-term disability."@en .
+
+CIP:ContributoFigurativoLavoroSocialmenteUtile a owl:Class ;
+    rdfs:label "Contributo Figurativo Lavoro Socialmente Utile"@it,
+        "Social Work Benefit"@en ;
+    rdfs:comment "Contributo figurativo per coloro che hanno svolto periodi lavorativi come Lavoratori Socialmente Utili."@it,
+        "Social Work Benefit is a payment to people who have practice based profession that promotes social work."@en .
+
+CIP:ContributoFigurativoMalattiaEInfortunio a owl:Class ;
+    rdfs:label "Contributo Figurativo Malattia E Infortunio"@it,
+        "Illness and Injury Benefit"@en ;
+    rdfs:comment "Injury and Illness Benefit is a payment made to employees who are unfit to work for a minum period of 7 days as a result of an injury or because they have contracted a disease."@en,
+        "È la contribuzione figurativa riconosciuta ai fini previdenziali per periodi di malattia o infortunio.La prestazione è rivolta a coloro che si siano trovati nella temporanea inabilità al lavoro per un periodo non inferiore a sette giorni per malattia."@it .
+
+CIP:ContributoFigurativoMobilità a owl:Class ;
+    rdfs:label "Contributo Figurativo Mobilità"@it,
+        "Mobility Benefit"@it ;
+    rdfs:comment "il lavoratore ha diritto all’accredito della contribuzione figurativa per i periodi in cui riscuote l’indennità di mobilità."@it,
+        "Mobility Benefit is a payment to people who have limited mobility."@en .
+
+CIP:DenunciaMensileUNIEMENS a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:inviaDenunciaMensileUNIEMENS ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:visualizzaDatiDenunciaUNIEMENS ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Denuncia Mensile UNIEMENS"@it,
+        "UNIEMENS monthly report"@en ;
+    owl:disjointWith CIP:DomandaIntegrazioneSalarialeAPagamentoDirettoCovid-19 ;
+    rdfs:comment "The UNIEMENS monthly report is a monthly statement sent by the employer to the Italian Department of Social Protection (INPS)."@en,
+        "Una denuncia obbligatoria inviata mensilmente all’INPS dai datori di lavoro del settore privato che svolgono le funzioni di sostituti d’imposta."@it .
+
+CIP:DomandaIntegrazioneSalarialeAccolta a owl:Class ;
+    rdfs:label "Domanda Integrazione Salariale Accolta"@it,
+        "Employment Integration Salary Request Gathered"@en ;
+    rdfs:comment "Domanda integrazione salariale con stato impostato su accolta."@it,
+        "Indicates that the employment integration salary request has been collected."@en .
+
+CIP:DomandaIntegrazioneSalarialeAPagamentoDirettoCovid-19 a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:inviaIntegrazioneSalarialeCovid19 ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:visualizzaDatiDomandaIntegrazioneSalariale ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Covid-19 Employment Integration Salary Report"@en,
+        "Domanda Integrazione Salariale A Pagamento Diretto Covid-19"@it ;
+    rdfs:comment "Modello per invio dati della domanda integrazione salariale a pagamento diretto Covid-19."@it,
+        "The Covid-19 employment integration salary report is a monthly statement that needs to be filled out by the employer and sent it out to the Italian Department of Social Protection (INPS). "@it .
+
+CIP:DomandaIntegrazioneSalarialeParzialmenteAccolta a owl:Class ;
+    rdfs:label "Domanda Integrazione Salariale Parzialemente Accolta"@it,
+        "Employment Integration Salary Request Under Review"@en ;
+    rdfs:comment "A request that is currently under review"@en,
+        "Una domanda integrazione salariale con stato impostato su parzialmente accolta."@it .
+
+CIP:DomandaIntegrazioneSalarialePervenuta a owl:Class ;
+    rdfs:label "Domanda Integrazione Salariale Pervenuta"@it,
+        "Employment Integration Salary Request Received"@en ;
+    rdfs:comment "Domanda integrazione salariale con stato pervenuta"@it,
+        "Employment integration salary request status received. "@en .
+
+CIP:RapportoDiLavoroSopeso a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty CIP:dataFineRapportoDiLavoroSospeso ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:dataInizioRapportoDiLavoroSospeso ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:haConsultazioneRapportoDiLavoroSospeso ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Rapporto di Lavoro Sospeso"@it,
+        "Temporary Contract Suspension"@en ;
+    rdfs:comment "Employees may be granted paid time off work for a period of time for both trade union duties (trade union leave) and/or extended time off (extended leave). Every month an employer send the UNIEMENS statement and fill in the required information in regards to the leave payment, reasons and conditions of a temporary suspension of a contract. This information is accessible to all employees starting from January 2020, however, it does not constitute a certificate."@en,
+        "I dati dichiarati dal datore di lavoro per il periodo in cui il rapporto di lavoro risulti sospeso per aspettativa o distacco sindacale. Le informazioni riferite alla condizione di aspettativa o distacco sindacale e alla retribuzione teorica, trasmesse mensilmente dal datore di lavoro, sono disponibili a partire dalla competenza di gennaio 2020 e non hanno valore certificativo."@it .
+
+CIP:SospensionePerAspettativa a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty CIP:numeroMensilitaAspettativa ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:retribuzioneTeoricaAspettativa ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Extended Paid Leave"@en,
+        "Sospensione per aspettativa"@it ;
+    rdfs:subClassOf CIP:RapportoDiLavoroSopeso ;
+    rdfs:comment "An extended paid leave is a temporary suspension of a contract. it can be granted to an employee prior approval from their employer. If an employee is approved extended leave they may not be working however they are still employees of the company."@en,
+        "L’ aspettativa rappresenta una sospensione temporanea dell’attività lavorativa subordinata, concessa al dipendente con il previo consenso del datore di lavoro. Durante questo periodo, il dipendente mantiene il proprio status di assunto presso l’azienda, seppur non svolga effettivamente le sue mansioni"@it .
+
+CIP:SospensionePerDistaccoSindacale a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty CIP:quotaImponibileDistacco ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Sospensione per distacco sindacale"@it,
+        "Trade Union Leave"@en ;
+    rdfs:subClassOf CIP:RapportoDiLavoroSopeso ;
+    rdfs:comment "A trade unione leave is when an employee is granted paid time off work for trade union duties."@en,
+        "Con la nozione di “ distacco sindacale ” si fa riferimento al diritto, riconosciuto ai dipendenti pubblici, di svolgere, a tempo pieno o parziale, attività sindacale, con la conseguente sospensione dell’attività lavorativa, mantenendo tutte le altre prerogative del rapporto di lavoro (compresa la retribuzione)."@it .
+
+CIP:StatoAnticipoIntegrazioneSalarialeCausaleCovid a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:descriveStatoDiAnticipoIntegrazioneSalariale ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Covid-19 Employment Integration Salary Advance Payment Status"@en,
+        "Stato Anticipo Integrazione Salariale Causale Covid"@it ;
+    rdfs:comment "Describes the transaction lifecycle of a Covid-19 employment integration salary advance payment request"@en,
+        "Stato pagamento anticipo integrazione salariale causale covid."@it .
+
+CIP:StatoDomandaIntegrazioneSalariale a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    CIP:DomandaIntegrazioneSalarialeAccolta
+                    CIP:DomandaIntegrazioneSalarialeParzialmenteAccolta
+                    CIP:DomandaIntegrazioneSalarialePervenuta ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:descriveStatodellaDomandaIntegrazioneSalariale ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Employment Integration Salary Request Status"@en,
+        "Stato Domanda Integrazione Salariale"@it ;
+    rdfs:comment "An employment integration salary request can have different status such as: received, gathered, under review."@en,
+        "Una domanda integrazione salariale può avere diversi stati tra i quali: pervenuta, accolta, accolta parzialmente."@it .
+
+CIP:TipologiaPrestazionePagamentoDiretto a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:oneOf (
+                    CIP:ASO
+                    CIP:CIGD
+                    CIP:CIGO ) ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:descrizionePrestazionePagamentoDiretto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:descriveTipologiaPrestazioneIntegrazioneSalariale ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Employment Integration Salary Compensation"@en,
+        "Tipologia Prestazione Pagamento Diretto"@it ;
+    rdfs:comment "Le tipologie di prestazione sono CIGO/CIGD/ASO "@it,
+        "There are three types of integration salary compensations: CIGO, ASO and CIGD."@en .
+
+CPSV:Service a owl:Class .
+
+foaf:Document a owl:Class .
+
+INPSSafety:ContrattoDiLavoroSubordinato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:haConsultazioneContrattoDiLavoroSubordinato ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSSafety:ContributoFigurativo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:haConsultazioneContributoFigurativo ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSSafety:DatoreDiLavoro a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty CIP:inviaDenunciaMensileUNIEMENS ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty CIP:inviaIntegrazioneSalarialeCovid19 ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSSafety:LavoratoreSubordinato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty CIP:lavoratoreSubordinatoConsultaCIP ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:complementOf INPSSafety:LavoroSubordinatoAgricolo ] ] .
+
+INPSSafety:LavoroSubordinatoAgricolo a owl:Class .
+
+INPSSafety:PrestazioneANF a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf CIP:haConsultazionePrestazioneANF ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+TI:TimeIndexedEvent a owl:Class .
+
+[] a owl:Class ;
+    rdfs:subClassOf CIP:ConsultazioneInfoPrevidenzialiCIP ;
+    owl:unionOf (
+            CIP:ConsultazioneIntegrazioneSalariale
+            CIP:ConsultazioneUNIEMENS ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf CIP:ContributoFigurativoAccreditatoDiUfficio ;
+    owl:unionOf (
+            CIP:ContributoFigurativoAssegnoOrdinarioFIS
+            CIP:ContributoFigurativoAssistenzaAntitubercolare
+            CIP:ContributoFigurativoCassaIntegrazione
+            CIP:ContributoFigurativoContrattoDiSolidarieta
+            CIP:ContributoFigurativoDisoccupazione
+            CIP:ContributoFigurativoInvalidita
+            CIP:ContributoFigurativoLavoroSocialmenteUtile
+            CIP:ContributoFigurativoMobilità ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf foaf:Document ;
+    owl:unionOf (
+            CIP:ConsultazioneIntegrazioneSalariale
+            CIP:ConsultazioneUNIEMENS ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSSafety:ContributoFigurativo ;
+    owl:unionOf (
+            CIP:ContributoFigurativoAccreditatoDiUfficio
+            CIP:ContributoFigurativoCongedoParentale
+            CIP:ContributoFigurativoMalattiaEInfortunio ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf TI:TimeIndexedEvent ;
+    owl:unionOf (
+            CIP:DenunciaMensileUNIEMENS
+            CIP:DomandaIntegrazioneSalarialeAPagamentoDirettoCovid-19 ) .
+
+### Individuals
+
+CIP:ASO a owl:NamedIndividual ;
+    rdfs:label "ASO"@en,
+        "ASO"@it ;
+    rdfs:comment "ASO is a type of financial scheme available to businesses that have been impacted by Covid-19."@en,
+        "Trattamenti di assegno ordinario (ASO)."@it .
+
+CIP:CIGD a owl:NamedIndividual ;
+    rdfs:label "CIGD"@en,
+        "CIGD"@it ;
+    rdfs:comment "La Cassa Integrazione Guadagni in Deroga (CIGD) è un intervento di integrazione salariale a sostegno di imprese che non possono ricorrere agli strumenti ordinari perché esclusi all'origine da questa tutela o perché hanno già esaurito il periodo di fruizione delle tutele ordinarie. "@it,
+        "The Italian CIGD is a type of Covid-19 assistance Scheme available to businesses in Italy. This type of financial support can only be accessed if no other funding scheme is available to a business."@en .
+
+CIP:CIGO a owl:NamedIndividual ;
+    rdfs:label "CIGO"@en,
+        "CIGO"@it ;
+    rdfs:comment "CIGO is a type of financial scheme available to those businesses that have been impacted by Covid-19 and need support to pay employees whose jobs had to be suspended due the pandemic."@en,
+        "La Cassa Integrazione Guadagni Ordinaria (CIGO) per l'industria e l'edilizia integra o sostituisce la retribuzione dei lavoratori a cui è stata sospesa o ridotta l'attività lavorativa per situazioni aziendali dovute a eventi transitori e non imputabili all'impresa o ai dipendenti, incluse le intemperie stagionali e per situazioni temporanee di mercato."@it .
+
+<https://w3id.org/italia/social-security/data/CIP/distribution/CIP-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/CIP/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/CIP/latest/CIP.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa al servizio Consultazione Info Previdenziali (CIP) per dipendenti privati secondo i criteri dell'instituto"@it,
+        "The Social Security Record Italian Online Service INPS Ontology N-TRIPLES distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Consultazione Info Previdenziali (CIP)"@it,
+        "INPS Ontology N-TRIPLES distribution - Social Security Record"@en .
+
+<https://w3id.org/italia/social-security/data/CIP/distribution/CIP-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/CIP/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/CIP/latest/CIP.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa al servizio Consultazione Info Previdenziali (CIP) per dipendenti privati secondo i criteri dell'instituto"@it,
+        "The Social Security Record Italian Online Service INPS Ontology RDF/Turtle distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Consultazione Info Previdenziali (CIP)"@it,
+        "INPS Ontology RDF/Turtle distribution - Social Security Record"@en .
+
+<https://w3id.org/italia/social-security/data/CIP/distribution/CIP-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/CIP/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/CIP/latest/CIP.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa al servizio Consultazione Info Previdenziali (CIP) per dipendenti privati secondo i criteri dell'instituto"@it,
+        "The Social Security Record Italian Online Service INPS OntologyRDF/XML distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Consultazione Info Previdenziali (CIP)"@it,
+        "INPS Ontology RDF/XML distribution - Social Security Record"@en .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+### Axioms
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            CIP:ContributoFigurativoAccreditatoDiUfficio
+            CIP:ContributoFigurativoCongedoParentale
+            CIP:ContributoFigurativoMalattiaEInfortunio ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            CIP:ContributoFigurativoAssegnoOrdinarioFIS
+            CIP:ContributoFigurativoAssistenzaAntitubercolare
+            CIP:ContributoFigurativoCassaIntegrazione
+            CIP:ContributoFigurativoContrattoDiSolidarieta
+            CIP:ContributoFigurativoDisoccupazione
+            CIP:ContributoFigurativoInvalidita
+            CIP:ContributoFigurativoLavoroSocialmenteUtile
+            CIP:ContributoFigurativoMobilità ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            CIP:DomandaIntegrazioneSalarialeAccolta
+            CIP:DomandaIntegrazioneSalarialeParzialmenteAccolta
+            CIP:DomandaIntegrazioneSalarialePervenuta ) .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

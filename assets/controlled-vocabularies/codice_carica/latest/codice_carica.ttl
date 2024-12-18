@@ -1,0 +1,230 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/CodiceCarica>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement Rep Codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici di carica come riportati dalla Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato dei codici di carica di una Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the defined set of rep codes in a CU Statement"@en,
+        "Vocabolario controllato dei codici di carica come riportati dalla Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/CC_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CC_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CC_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "codici di carica della certificazione unica"@it,
+        "CU statement rep codes"@en,
+        "inps"@en,
+        "inps"@it,
+        "rep codes"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement Rep Codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici di carica che identificano il rappresentante firmatario della comunicazione come riportati dalla Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica" ;
+    dct:issued "2024-10-24"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-24"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:relation <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/tipo_contratto>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/tipo_retribuzione> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement Rep Codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici di carica come riportati dalla Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "codice_carica" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/4>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/5>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/6>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/7>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/8>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/9>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/10>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/11>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/12>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/13>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/14>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/15> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/1> a skos:Concept ;
+    rdfs:label "Rappresentante legale, negoziale o di fatto, socio amministratore"@it ;
+    skos:prefLabel "Rappresentante legale, negoziale o di fatto, socio amministratore"@it ;
+    dct:identifier "1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/2> a skos:Concept ;
+    rdfs:label "Rappresentante di minore, inabilitato o interdetto, ovvero curatore dell’eredità giacente, amministratore di eredità devoluta sotto condizione sospensiva o in favore di nascituro non ancora concepito ovvero amministratore di sostegno per le persone con limitata capacità di agire"@it ;
+    skos:prefLabel "Rappresentante di minore, inabilitato o interdetto, ovvero curatore dell’eredità giacente, amministratore di eredità devoluta sotto condizione sospensiva o in favore di nascituro non ancora concepito ovvero amministratore di sostegno per le persone con limitata capacità di agire"@it ;
+    dct:identifier "2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/3> a skos:Concept ;
+    rdfs:label "Curatore fallimentare/curatore della liquidazione giudiziale"@it ;
+    skos:prefLabel "Curatore fallimentare/curatore della liquidazione giudiziale"@it ;
+    dct:identifier "3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/4> a skos:Concept ;
+    rdfs:label "Commissario liquidatore (liquidazione coatta amministrativa ovvero amministrazione straordinaria)"@it ;
+    skos:prefLabel "Commissario liquidatore (liquidazione coatta amministrativa ovvero amministrazione straordinaria)"@it ;
+    dct:identifier "4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "4"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/5> a skos:Concept ;
+    rdfs:label "Commissario giudiziale (amministrazione controllata) ovvero custode giudiziario (custodia giudiziaria), ovvero amministratore giudiziario in qualità di rappresentante dei beni sequestrati"@it ;
+    skos:prefLabel "Commissario giudiziale (amministrazione controllata) ovvero custode giudiziario (custodia giudiziaria), ovvero amministratore giudiziario in qualità di rappresentante dei beni sequestrati"@it ;
+    dct:identifier "5"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "5"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/6> a skos:Concept ;
+    rdfs:label "Rappresentante fiscale di soggetto non residente"@it ;
+    skos:prefLabel "Rappresentante fiscale di soggetto non residente"@it ;
+    dct:identifier "6"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "6"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/7> a skos:Concept ;
+    rdfs:label "Erede"@it ;
+    skos:prefLabel "Erede"@it ;
+    dct:identifier "7"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "7"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/8> a skos:Concept ;
+    rdfs:label "Liquidatore (liquidazione volontaria)"@it ;
+    skos:prefLabel "Liquidatore (liquidazione volontaria)"@it ;
+    dct:identifier "8"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "8"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/9> a skos:Concept ;
+    rdfs:label "Soggetto tenuto a presentare la dichiarazione ai fini IVA per conto del soggetto estinto a seguito di operazioni straordinarie o altre trasformazioni sostanziali soggettive (cessionario d’azienda, società beneficiaria, incorporante, conferitaria, ecc.); ovvero, ai fini delle imposte sui redditi e/o dell’IRAP, rappresentante della società beneficiaria (scissione) o della società risultante dalla fusione o incorporazione"@it ;
+    skos:prefLabel "Soggetto tenuto a presentare la dichiarazione ai fini IVA per conto del soggetto estinto a seguito di operazioni straordinarie o altre trasformazioni sostanziali soggettive (cessionario d’azienda, società beneficiaria, incorporante, conferitaria, ecc.); ovvero, ai fini delle imposte sui redditi e/o dell’IRAP, rappresentante della società beneficiaria (scissione) o della società risultante dalla fusione o incorporazione"@it ;
+    dct:identifier "9"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "9"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/10> a skos:Concept ;
+    rdfs:label "Rappresentante fiscale di soggetto non residente con le limitazioni di cui all’art. 44, comma 3, del D.L. n. 331/1993"@it ;
+    skos:prefLabel "Rappresentante fiscale di soggetto non residente con le limitazioni di cui all’art. 44, comma 3, del D.L. n. 331/1993"@it ;
+    dct:identifier "10"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "10"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/11> a skos:Concept ;
+    rdfs:label "Soggetto esercente l’attività tutoria del minore o interdetto in relazione alla funzione istituzionale rivestita"@it ;
+    skos:prefLabel "Soggetto esercente l’attività tutoria del minore o interdetto in relazione alla funzione istituzionale rivestita"@it ;
+    dct:identifier "11"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "11"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/12> a skos:Concept ;
+    rdfs:label "Liquidatore (liquidazione volontaria di ditta individuale - periodo ante messa in liquidazione)"@it ;
+    skos:prefLabel "Liquidatore (liquidazione volontaria di ditta individuale - periodo ante messa in liquidazione)"@it ;
+    dct:identifier "12"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "12"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/13> a skos:Concept ;
+    rdfs:label "Amministratore di condominio"@it ;
+    skos:prefLabel "Amministratore di condominio"@it ;
+    dct:identifier "13"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "13"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/14> a skos:Concept ;
+    rdfs:label "Soggetto che sottoscrive la dichiarazione per conto di una pubblica amministrazione"@it ;
+    skos:prefLabel "Soggetto che sottoscrive la dichiarazione per conto di una pubblica amministrazione"@it ;
+    dct:identifier "14"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "14"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica/15> a skos:Concept ;
+    rdfs:label "Commissario liquidatore di una pubblica amministrazione"@it ;
+    skos:prefLabel "Commissario liquidatore di una pubblica amministrazione"@it ;
+    dct:identifier "15"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_carica> ;
+    skos:notation "15"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CC_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_carica/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_carica/latest/codice_carica.csv> ;
+    dct:description "CU statement rep codes controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici di carica della certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement rep codes controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato dei codici di carica della certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CC_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_carica/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_carica/latest/codice_carica.json> ;
+    dct:description "CU statement rep codes controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici di carica della certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement rep codes controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato dei codici di carica della certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CC_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_carica/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_carica/latest/codice_carica.ttl> ;
+    dct:description "CU statement rep codes controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato dei codici di carica della certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement rep codes controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato dei codici di carica della certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

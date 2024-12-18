@@ -1,0 +1,751 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/ObisModel/"
+     xml:base="https://w3id.org/italia/social-security/onto/ObisModel/"
+     xmlns:L0="https://w3id.org/italia/onto/l0/"
+     xmlns:RO="https://w3id.org/italia/onto/RO/"
+     xmlns:TI="https://w3id.org/italia/onto/TI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:COV="https://w3id.org/italia/onto/COV/"
+     xmlns:CPV="https://w3id.org/italia/onto/CPV/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:CPSV="https://w3id.org/italia/onto/CPSV/"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rico="https://www.ica.org/standards/RiC/ontology#"
+     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:DETPENS="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/"
+     xmlns:INPSCore="https://w3id.org/italia/social-security/onto/core/"
+     xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
+     xmlns:INPSObisM="https://w3id.org/italia/social-security/onto/ObisModel/"
+     xmlns:INPSPensions="https://w3id.org/italia/social-security/onto/pensions/">
+    <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/">
+        <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/1.0"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CPV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/RO/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/"/>
+        <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
+        <dct:creator rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:description xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:description xml:lang="en">This INPS ontology describes the main entities and proprieties of the Obis Model according to the INPS agency.</dct:description>
+        <dct:identifier>https://w3id.org/italia/social-security/onto/ObisModel</dct:identifier>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dct:issued>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dct:modified>
+        <dct:publisher rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:rightsHolder rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:title xml:lang="en">Obis Model INPS Ontology</dct:title>
+        <dct:title xml:lang="it">Ontologia Modello Obis di INPS </dct:title>
+        <rdfs:comment xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondo i criteri dell&apos;istituto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This INPS ontology describes the main entities and proprieties of the Obis Model according to the INPS agency.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/"/>
+        <rdfs:label xml:lang="en">Obis Model INPS Ontology</rdfs:label>
+        <rdfs:label xml:lang="it">Ontologia Modello Obis di INPS</rdfs:label>
+        <owl:versionInfo xml:lang="it">1.0 - Modificata il 29 Ottobre 2024</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">1.0 - Modified on 29 October 2024</owl:versionInfo>
+        <dcat:contactPoint rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
+        <dcat:keyword xml:lang="it">Modello Obis</dcat:keyword>
+        <dcat:keyword xml:lang="en">Obis Model</dcat:keyword>
+        <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+        <adms:acronym>inps</adms:acronym>
+        <adms:hasContributor rdf:resource="https://w3id.org/italia/social-security/data/organization/td"/>
+        <adms:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/FascicoloPrevidenzialeCittadino"/>
+        <adms:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-N-TRIPLES"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-TURTLE"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-XML"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
+        <adms:last rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/1.0"/>
+        <adms:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/ObisModel/</adms:officialURI>
+        <adms:prefix>INPSObisM</adms:prefix>
+        <adms:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
+        <adms:status>catalogued</adms:status>
+        <adms:status>published</adms:status>
+        <adms:target xml:lang="it">Cittadini</adms:target>
+        <adms:target xml:lang="it">Imprese</adms:target>
+        <adms:target xml:lang="it">Pubbliche Amministrazioni</adms:target>
+        <adms:type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/onto/TI/atTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/atTime">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/TimeInterval"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/accedeA -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/accedeA">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/FascicoloPrevidenzialeCittadino"/>
+        <rdfs:comment xml:lang="it">La object property collega il Titolare della pensione con il Fascicolo previdenziale del cittadino, ossia il servizio INPS che consente la consultazione del modello Obis</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the Pension Holder with the citizen&apos;s Social Security Record, that is the INPS service that allows the consultation of the Obis model</rdfs:comment>
+        <rdfs:label xml:lang="it">accede a</rdfs:label>
+        <rdfs:label xml:lang="en">access to</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/certificaDatiPensione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/certificaDatiPensione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="it">La object propety collega il Certificato di pensione con le classi rappresentative dei dati che il documento stesso èutile a certificare, ossia l&apos;Importo della pensione erogato eil dettaglio dei dati fiscali</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the Pension Certificate with the representative classes of the data that the document itself is useful to certify, i.e. the amount of the pension paid and the details of the fiscal data</rdfs:comment>
+        <rdfs:label xml:lang="it">certifica dati di pensione</rdfs:label>
+        <rdfs:label xml:lang="en">certify pension data</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/daAccessoA -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/daAccessoA">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/FascicoloPrevidenzialeCittadino"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione"/>
+        <rdfs:comment xml:lang="it">La object property collega il Fascicolo previdenziale del cittadino al Certificato di pensione </rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the Citizen&apos;s social security file to the Pension Certificate</rdfs:comment>
+        <rdfs:label xml:lang="it">da accesso a</rdfs:label>
+        <rdfs:label xml:lang="en">gives access to</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/presentaDatiRelativiA -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/presentaDatiRelativiA">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="it">La object property collega il Certificato di pensione al gruppo di dati presenti nel documento, ossia quelli relativi al titolare del trattamento pensionistico, alla sede INPS corrispondente al soggetto pagatore e quelli inerenti al prodotto pensionistico erogato</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the Pension Certificate to the group of data present in the document, i.e. those relating to the pension holder, the INPS office corresponding to the paying entity and those relating to the pension product provided</rdfs:comment>
+        <rdfs:label xml:lang="it">presenta dati relativi a</rdfs:label>
+        <rdfs:label xml:lang="en">presents data relating to</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione"/>
+    </owl:ObjectProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/onto/TI/endTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/endTime">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/TimeInterval"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/onto/TI/startTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/startTime">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/TimeInterval"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/addizionaleComunaleIRPEF -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/addizionaleComunaleIRPEF">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali"/>
+        <rdfs:comment xml:lang="it">L&apos;addizionale comunale IRPEF èun&apos;imposta locale che i comuni italiani possono applicare sui redditi dei cittadini residenti nel loro territorio</rdfs:comment>
+        <rdfs:comment xml:lang="en">The IRPEF municipal surcharge is a local tax that Italian municipalities can apply on the income of citizens residing in their territory</rdfs:comment>
+        <rdfs:label xml:lang="it">addizionale comunale IRPEF</rdfs:label>
+        <rdfs:label xml:lang="en">municipal IRPEF fee</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/addizionaleRegionaleIRPEF -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/addizionaleRegionaleIRPEF">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali"/>
+        <rdfs:comment xml:lang="it">L&apos;addizionale regionale IRPEF è un&apos; imposta che si applica al reddito complessivo determinato ai fini dell&apos;IRPEF. Ogni Regione e Provincia autonoma può stabilirne l&apos;aliquota entro i limiti fissati dalla legge statale</rdfs:comment>
+        <rdfs:comment xml:lang="en">The regional IRPEF surcharge is a tax that is applied to the overall income determined for IRPEF purposes. Each Region and Autonomous Province can establish the rate within the limits set by state law</rdfs:comment>
+        <rdfs:label xml:lang="it">addizionale regionale IRPEF</rdfs:label>
+        <rdfs:label xml:lang="en">regional IRPEF fee</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/chiavePensione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/chiavePensione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerNucleoFamiliare -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerNucleoFamiliare">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali"/>
+        <rdfs:label xml:lang="it">detrazione per nucleo familiare</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerReddito -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerReddito">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali"/>
+        <rdfs:label xml:lang="it">detrazione per reddito</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneLorda -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneLorda">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:comment xml:lang="it">importo totale della pensione espresso senza lo scorporo delle deduzioni</rdfs:comment>
+        <rdfs:label xml:lang="it">importo pensione lorda</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneNetta -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneNetta">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:comment xml:lang="it">importo della pensione al netto delle trattenute</rdfs:comment>
+        <rdfs:label xml:lang="it">importo pensione netta</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/irpefLorda -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/irpefLorda">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali"/>
+        <rdfs:label xml:lang="it">IRPEF lorda</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/perequazioneAutomatica -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/perequazioneAutomatica">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:comment xml:lang="en">Automatic equalization is a mechanism that allows the amount of pensions to be adjusted annually to the increase in the cost of living, so as to try to keep its real purchasing power unchanged</rdfs:comment>
+        <rdfs:comment xml:lang="it">La perequazione automatica è un meccanismo che consente di adeguare annualmente l&apos;importo delle pensioni all&apos;aumento del costo della vita, così da cercare di conservarne immutato il suo reale potere d&apos;acquisto</rdfs:comment>
+        <rdfs:label xml:lang="en">automatic equalization</rdfs:label>
+        <rdfs:label xml:lang="it">perequazione automatica</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/trattenutaIRPEF -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/trattenutaIRPEF">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali"/>
+        <rdfs:label xml:lang="it">trattenute IRPEF</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/trattenutaIncumulabilità -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/trattenutaIncumulabilità">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/trattenutaSindacale -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/trattenutaSindacale">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/trattenuteContributoExOnpi -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/trattenuteContributoExOnpi">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali"/>
+        <rdfs:label xml:lang="it">trattenute contributo ex Onpi</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://dati.gov.it/onto/dcatapit#Distribution -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Distribution"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/Service -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPSV/Service"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/certificaDatiPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/presentaDatiRelativiA"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/daAccessoA"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Record"/>
+        <rdfs:comment xml:lang="it">Il certificato di pensione (Modello Obis) riassume le principali informazioni dele pensioni INPS in pagamento. Il certificato èdisponibile per i pensionati di tutte le gestioni ed èpubblicato annualmente. Nell&apos;ontologia la classe èdefinita come sottoclasse di Record dell&apos;ontologia Record in context (RiCo-On) prodotta Dall&apos;International Council on Archives (ICA), con l&apos;obiettivo di connotare semanticamente le istanze di questa classe come documenti prodotti dall&apos;INPS nel corso della sua attività istituzionale</rdfs:comment>
+        <rdfs:comment xml:lang="en">The pension certificate (Obis Model) summarizes the main information about INPS pensions in payment. The certificate is available for pensioners from all management sectors and is published annually. In the ontology, the class is defined as a subclass of the Record class in the Record in Context (RiCo-On) ontology produced by the International Council on Archives (ICA), with the aim of semantically characterizing the instances of this class as documents produced by INPS in the course of its institutional activities</rdfs:comment>
+        <rdfs:label xml:lang="en">Certificate of pension</rdfs:label>
+        <rdfs:label xml:lang="it">Certificato di pensione</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/addizionaleComunaleIRPEF"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/addizionaleRegionaleIRPEF"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerNucleoFamiliare"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerReddito"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/irpefLorda"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/trattenutaIRPEF"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/trattenuteContributoExOnpi"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:comment xml:lang="it">La classe dati fiscali raggruppa l&apos;insieme delle informazioni di tipo fiscale contenute nel modello Obis come ad esempio i versamenti eseguiti e le trattenute effettuate sull&apos;importo della pensione</rdfs:comment>
+        <rdfs:comment xml:lang="en">The tax data class groups together the set of tax-related information contained in the Obis Model, such as payments made and deductions applied to the pension amount</rdfs:comment>
+        <rdfs:label xml:lang="it">Dati fiscali</rdfs:label>
+        <rdfs:label xml:lang="en">Tax Data</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/FascicoloPrevidenzialeCittadino -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/FascicoloPrevidenzialeCittadino">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPSV/Service"/>
+        <rdfs:comment xml:lang="it">Il Fascicolo previdenzile del cittadino èil portale di accesso ai principali servizi messi  disposizione dall&apos;INPS per l&apos;utente. Il servizio consente di gestire la posizione contributiva e previdenziale, le certificazioni sanitarie e reddituali. Nell&apos;ontologia la classe èdefinita come sottoclasse di Service dell&apos;ontologia Core public service vocabulary (CPSV-AP_IT)  al fine di connotare semanticamente in modo forte il Fasciciolo come un servizio reso da un ente pubblico alla sua utenza </rdfs:comment>
+        <rdfs:comment xml:lang="en">The Citizen&apos;s Pension File is the access portal to the main services provided by INPS for users. The service allows users to manage their contribution and pension status, as well as health and income certifications. In the ontology, the class is defined as a subclass of Service in the Core Public Service Vocabulary (CPSV-AP_IT) ontology, in order to strongly semantically characterize the File as a service provided by a public entity to its users</rdfs:comment>
+        <rdfs:label xml:lang="en">Citizen&apos;s social security file</rdfs:label>
+        <rdfs:label xml:lang="it">Fascicolo previdenziale del cittadino</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/ObisModel/TimeInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/TimeInterval">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/endTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/startTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/core/SedeINPS -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneLorda"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneNetta"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/chiavePensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
+        <rdfs:comment xml:lang="it">Il titolare di pensione èil beneficiario di una o piÃ¹ prestazioni previdenziali e assistenziali dell&apos;INPS</rdfs:comment>
+        <rdfs:comment xml:lang="en">The pension holder is the beneficiary of one or more INPS social security and welfare benefits</rdfs:comment>
+        <rdfs:label xml:lang="en">Pension holder</rdfs:label>
+        <rdfs:label xml:lang="it">Titolare di pensione</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#Record -->
+
+    <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Record"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-N-TRIPLES -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-N-TRIPLES">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="en">Obis Model INPS Ontology N-TRIPLES distribution</dct:description>
+        <dct:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell&apos;ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione N-TRIPLES dell&apos;ontologia INPS - Modello Obis</dct:title>
+        <dct:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - Obis Model</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/ObisModel/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/ObisModel/latest/ObisModel.n3"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-TURTLE -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-TURTLE">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="en">Obis Model INPS Ontology RDF/Turtle distribution</dct:description>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell&apos;ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione RDF/Turtle dell&apos;ontologia INPS - Modello Obis</dct:title>
+        <dct:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - Obis Model</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/ObisModel/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/ObisModel/latest/ObisModel.ttl"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-XML -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-XML">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="en">Obis Model INPS Ontology RDF/XML</dct:description>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell&apos;ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione RDF/XML dell&apos;ontologia INPS - Modello Obis</dct:title>
+        <dct:title xml:lang="en">RDF/XML distribution of the INPS ontology - Obis Model</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/ObisModel/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/ObisModel/latest/ObisModel.owl"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+        <dct:identifier>DirezioneCentraleTII</dct:identifier>
+        <vcard:fn>INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it"/>
+        <foaf:name xml:lang="en">INPS - Central Management of Information Technology and Innovations</foaf:name>
+        <foaf:name xml:lang="it">INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/inps -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+        <dct:identifier>inps</dct:identifier>
+        <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
+        <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/td -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/td">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <dct:identifier>TD</dct:identifier>
+        <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
+        <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        </owl:unionOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/certificaDatiPensione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione"/>
+        </owl:unionOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/ObisModel/presentaDatiRelativiA"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

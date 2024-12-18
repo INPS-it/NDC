@@ -1,0 +1,584 @@
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/1.0> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/CLV/> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/COV/> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/CPV/> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/l0/> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/RO/> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2000/01/rdf-schema#label> "Sole Trade Farmer Portal INPS Ontology"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia Cassetto Previdenziale lavoratore agricolo di INPS"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontologia INPS relativa alle entit\u00E0 e alle relazioni che descrivono il cassetto previdenziale del lavoratore agricolo secondi i criteri dell'istituto."@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2000/01/rdf-schema#comment> "This INPS ontology describes the main entities and proprieties of the Sole Trade Farmer Portal according to the INPS agency."@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0 - Modified on 29 October 2024"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0 - Modificata il 29 Ottobre 2024"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/acronym> "inps" .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasContributor> <https://w3id.org/italia/social-security/data/organization/td> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasFormalityLevel> <https://w3id.org/italia/onto/ADMS/Formal> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasKeyClass> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasKeyClass> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DelegaRilasciataLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasKeyClass> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DelegatoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasOntologyLanguage> <https://w3id.org/italia/onto/ADMS/OWL> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution> <https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution> <https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution> <https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasTask> <https://w3id.org/italia/onto/ADMS/AnnotationTask> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasTask> <https://w3id.org/italia/onto/ADMS/QueryFormulationTask> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/hasTask> <https://w3id.org/italia/onto/ADMS/SearchTask> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/last> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/1.0> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/officialURI> "https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/prefix> "INPSTFP" .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/semanticAssetInUse> <https://w3id.org/italia/data/project/NDC> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/status> "catalogued" .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/status> "published" .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/target> "Cittadini"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/target> "Imprese"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/target> "Pubbliche Amministrazioni"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <https://w3id.org/italia/onto/ADMS/type> <https://w3id.org/italia/onto/ADMS/ServiceOnytology> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/ns/dcat#contactPoint> <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/ns/dcat#keyword> "Sole Trade Farmer Portal"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/ns/dcat#keyword> "Cassetto Previdenziale lavoratore agricolo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://www.w3.org/ns/dcat#theme> <http://publications.europa.eu/resource/authority/data-theme/SOCI> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/accrualPeriodicity> <http://publications.europa.eu/resource/authority/frequency/IRREG> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/creator> <https://w3id.org/italia/social-security/data/organization/inps> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/description> "Ontologia INPS relativa alle entit\u00E0 e alle relazioni che descrivono il cassetto previdenziale del lavoratore agricolo secondi i criteri dell'istituto."@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/description> "This INPS ontology describes the main entities and proprieties of the Sole Trade Farmer Portal according to the INPS agency."@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/identifier> "https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal" .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/issued> "2024-10-29T00:00:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/language> <http://publications.europa.eu/resource/authority/language/ENG> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/language> <http://publications.europa.eu/resource/authority/language/ITA> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/modified> "2024-10-29T00:00:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/publisher> <https://w3id.org/italia/social-security/data/organization/inps> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/rightsHolder> <https://w3id.org/italia/social-security/data/organization/inps> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/title> "Sole Trade Farmer Portal INPS Ontology"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> <http://purl.org/dc/terms/title> "Ontologia Cassetto Previdenziale lavoratore agricolo di INPS "@it .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega le istanze della classe Posizione assicurativa del lavoratore agricolo autonomo con le istanze della classe Versamento contributivo, ad indicare che i dati relativi ai versament contributivi del lavoratore agricolo autonomo possono essere consultati tramite l'accesso alla funzione Posizione assicurativa del Cassetto Previcenziale"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property connects instances of the class 'Insurance Position of the Self-Employed Agricultural Worker' with instances of the class 'Contribution Payment"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#label> "consente la consultazione di"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#label> "enables the consultation of"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/social-safety-net/ContributoPrevidenziale> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property esprime la possibilit\u00C3\u00A0 di accesso alla visualizzazione del dettaglio dei contributi previdenziali tramite la funzione del cassetto previdenziale dedicata al versamento contributivo del lavoratore agricolo autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property esprime la possibilit\u00E0 di accesso alla visualizzazione del dettaglio dei contributi previdenziali tramite la funzione del cassetto previdenziale dedicata al versamento contributivo del lavoratore agricolo autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property expresses the possibility of accessing the details of social security contributions through the function of the social security service portal dedicated to the contribution payments of the self-employed agricultural worker"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi> <http://www.w3.org/2000/01/rdf-schema#label> "da accesso alla visualizzazione di"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi> <http://www.w3.org/2000/01/rdf-schema#label> "provides access to the viewing of"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega le istanze della classe azienda agricola alla propria categoria di riferimento"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property connects instances of the class 'Agricultural Business' to their respective category"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria> <http://www.w3.org/2000/01/rdf-schema#label> "ha categoria"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria> <http://www.w3.org/2000/01/rdf-schema#label> "has category"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria> <http://www.w3.org/2000/01/rdf-schema#label> "has category."@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property connects the contribution to its specific type"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "la object property connette il contributo alla propria tipologia specifica"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo> <http://www.w3.org/2000/01/rdf-schema#label> "ha tipologia di contributo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo> <http://www.w3.org/2000/01/rdf-schema#label> "has type of contribution"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attributo riporta il codice identificativo dell'azienda agricola"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "The attribute provides the identifying code of the agricultural business"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "codice azienda"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "company code"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attributo esprime in forma codificata la categora dell'azienda agricola"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "The attribute expresses the category of the agricultural business in coded form"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "category code for agricultural business."@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "codice categoria azienda agricola"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attributo registra il codice fiscale dell'azienda agricola "@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "The attribute records the tax code of the agricultural business"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "codice fiscale azienda agricola"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "tax code for agricultural business"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleDestinatario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleDestinatario> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attributo contiene il codice della sede INPS di riferimento per il versamento contributivo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS> <http://www.w3.org/2000/01/rdf-schema#comment> "The attribute contains the code of the relevant INPS office for contribution payments"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS> <http://www.w3.org/2000/01/rdf-schema#label> "INPS office code"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS> <http://www.w3.org/2000/01/rdf-schema#label> "codice sede INPS"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/cognomeDestinatario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/cognomeDestinatario> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attributo contiene il nome dell'azienda agricola"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "The attribute contains the name of the farm"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "denominazione azienda agricola"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "name of the farm"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attributo indica l'importo contributivo versato"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo> <http://www.w3.org/2000/01/rdf-schema#comment> "The attribute indicates the amount of contributions paid"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo> <http://www.w3.org/2000/01/rdf-schema#label> "amount paid"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo> <http://www.w3.org/2000/01/rdf-schema#label> "importo versato"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attributo indica l'importo del contributo corrente"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente> <http://www.w3.org/2000/01/rdf-schema#comment> "The attribute indicates the amount of the current contribution"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente> <http://www.w3.org/2000/01/rdf-schema#label> "current contribution amount"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente> <http://www.w3.org/2000/01/rdf-schema#label> "importo contributo corrente"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attributo indica l'importo del versamento contributivo pregresso"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso> <http://www.w3.org/2000/01/rdf-schema#comment> "The attribute indicates the amount of prior contribution payments"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso> <http://www.w3.org/2000/01/rdf-schema#label> "amount of prior contributions"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso> <http://www.w3.org/2000/01/rdf-schema#label> "importo contributo pregresso"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoTotaleSommeDovute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoTotaleSommeDovute> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/indirizzoDestinatario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/indirizzoDestinatario> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeDestinatario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeDestinatario> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attributo contiene l'espressione utile a identificare e descrivere la tipologia di contributo "@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo> <http://www.w3.org/2000/01/rdf-schema#comment> "The attribute contains the expression used to identify and describe the type of contribution"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo> <http://www.w3.org/2000/01/rdf-schema#label> "name of the type of contribution"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo> <http://www.w3.org/2000/01/rdf-schema#label> "nome della tipologia del contributo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroIdentificativoDellaCartella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroIdentificativoDellaCartella> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroIdentificativoDellaCartella> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attributo consente di indicare il numero della rata, tra le quattro previste annulamente per il versamento dei contributi tramite F24"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata> <http://www.w3.org/2000/01/rdf-schema#comment> "The attribute allows indicating the installment number among the four scheduled annually for contribution payments via F24 model"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata> <http://www.w3.org/2000/01/rdf-schema#label> "installment number"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata> <http://www.w3.org/2000/01/rdf-schema#label> "numero rata"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attributo indica il periodo fiscale di riferimento per il versamento contributivo descritto nella pagina informativa"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento> <http://www.w3.org/2000/01/rdf-schema#comment> "The attribute indicates the tax reference period for the contribution payment described on the information page"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento> <http://www.w3.org/2000/01/rdf-schema#label> "periodo di riferimento"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento> <http://www.w3.org/2000/01/rdf-schema#label> "reference period"@en .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Organization> .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Organization> .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://purl.org/dc/terms/identifier> "DirezioneCentraleTII" .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://xmlns.com/foaf/0.1/name> "INPS - Central Management of Information Technology and Innovations"@en .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://xmlns.com/foaf/0.1/name> "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/2006/vcard/ns#fn> "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/2006/vcard/ns#hasEmail> <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/PublicOrganization> .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Agent> .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://purl.org/dc/terms/identifier> "inps" .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://xmlns.com/foaf/0.1/name> "Istituto nazionale della previdenza sociale"@it .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://xmlns.com/foaf/0.1/name> "National institute for Social Security"@en .
+<https://w3id.org/italia/social-security/data/organization/td> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Agent> .
+<https://w3id.org/italia/social-security/data/organization/td> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/italia/social-security/data/organization/td> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/organization/td> <http://purl.org/dc/terms/identifier> "TD" .
+<https://w3id.org/italia/social-security/data/organization/td> <http://xmlns.com/foaf/0.1/name> "Digital Transformation Team"@en .
+<https://w3id.org/italia/social-security/data/organization/td> <http://xmlns.com/foaf/0.1/name> "Team per la Trasformazione Digitale"@it .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Distribution> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://www.w3.org/ns/dcat#accessURL> <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/soleTradeFarmerPortal/latest> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://www.w3.org/ns/dcat#downloadURL> <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/soleTradeFarmerPortal/latest/soleTradeFarmerPortal.n3> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://purl.org/dc/terms/description> "Questa \u00E8 la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entit\u00E0 e alle relazioni che descrivono il cassetto previdenziale del lavoratore agricolo secondi i criteri dell'istituto."@it .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://purl.org/dc/terms/description> "The Italian Sole Trade Farmer Portal INPS Ontology N-TRIPLES distribution"@en .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://purl.org/dc/terms/format> <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://purl.org/dc/terms/title> "Distribuzione N-TRIPLES dell'ontologia INPS - Cassetto Previdenziale lavoratore agricolo"@it .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> <http://purl.org/dc/terms/title> "N-TRIPLES distribution of the INPS ontology - Sole Trade Farmer Portal"@en .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Distribution> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://www.w3.org/ns/dcat#accessURL> <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/soleTradeFarmerPortal/latest> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://www.w3.org/ns/dcat#downloadURL> <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/soleTradeFarmerPortal/latest/soleTradeFarmerPortal.ttl> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://purl.org/dc/terms/description> "Questa \u00E8 la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entit\u00E0 e alle relazioni che descrivono il cassetto previdenziale del lavoratore agricolo secondi i criteri dell'istituto."@it .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://purl.org/dc/terms/description> "The Italian Sole Trade Farmer Portal INPS Ontology RDF/Turtle distribution"@en .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://purl.org/dc/terms/format> <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://purl.org/dc/terms/title> "Distribuzione RDF/Turtle dell'ontologia INPS - Cassetto Previdenziale lavoratore agricolo"@it .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> <http://purl.org/dc/terms/title> "RDF/Turtle distribution of the INPS ontology - Sole Trade Farmer Portal"@en .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Distribution> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://www.w3.org/ns/dcat#accessURL> <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/soleTradeFarmerPortal/latest> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://www.w3.org/ns/dcat#downloadURL> <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/soleTradeFarmerPortal/latest/soleTradeFarmerPortal.owl> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://purl.org/dc/terms/description> "Questa \u00E8 la distribuzione RDF/XML dell'ontologia INPS relativa alle entit\u00E0 e alle relazioni che descrivono il cassetto previdenziale del lavoratore agricolo secondi i criteri dell'istituto."@it .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://purl.org/dc/terms/description> "The Italian Sole Trade Farmer Portal INPS Ontology RDF/XML"@en .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://purl.org/dc/terms/format> <http://publications.europa.eu/resource/authority/file-type/RDF_XML> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://purl.org/dc/terms/title> "Distribuzione RDF/XML dell'ontologia INPS - Cassetto Previdenziale lavoratore agricolo"@it .
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> <http://purl.org/dc/terms/title> "RDF/XML distribution of the INPS ontology - Sole Trade Farmer Portal"@en .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid13 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/italia/social-security/onto/social-safety-net/ContributoPrevidenziale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/social-safety-net/ContributoPrevidenziale> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> _:genid15 .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid15 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario> <http://www.w3.org/2000/01/rdf-schema#comment> "L'avviso bonario \u00C3\u00A8' una comunicazione con la quale l' Agenzia delle Entrate informa il contribuente del controllo effettuato sulla sua dichiarazione dei redditi, evidenziando eventuali imposte e contributi che non risultano pagati. Nell'ontologia la classe descrive il servizio che consente di consultare la presenza di questa tipologia di avviso nel proprio cassetto previdenziale"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario> <http://www.w3.org/2000/01/rdf-schema#comment> "L'avviso bonario \u00E8' una comunicazione con la quale l' Agenzia delle Entrate informa il contribuente del controllo effettuato sulla sua dichiarazione dei redditi, evidenziando eventuali imposte e contributi che non risultano pagati. Nell'ontologia la classe descrive il servizio che consente di consultare la presenza di questa tipologia di avviso nel proprio cassetto previdenziale"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario> <http://www.w3.org/2000/01/rdf-schema#comment> "The payment reminder is a communication with which the Revenue Agency informs the taxpayer of the check carried out on his tax return, highlighting any taxes and contributions that have not been paid"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario> <http://www.w3.org/2000/01/rdf-schema#label> "Avviso bonario"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario> <http://www.w3.org/2000/01/rdf-schema#label> "Payment reminder"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid16 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid17 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta l'azienda agricola intesa come il complesso di beni organizzati dall'imprenditore agricolo per l'esercizio della sua attivit\u00C3\u00A0."@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta l'azienda agricola intesa come il complesso di beni organizzati dall'imprenditore agricolo per l'esercizio della sua attivit\u00E0."@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the agricultural business understood as the complex of assets organized by the agricultural entrepreneur for the exercise of their activity"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "Azienda agricola"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "Farm"@en .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria> .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola> .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid20 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid21 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid22 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid23 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid24 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid25 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la cartella esattoriale o cartella di pagamento. La cartella di pagamento \u00C3\u00A8 La cartella di pagamento \u00C3\u00A8 l\u00E2\u20AC\u2122atto che Agenzia delle entrate-Riscossione invia ai contribuenti al fine di recuperare i crediti vantati dagli enti impositori"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la cartella esattoriale o cartella di pagamento. La cartella di pagamento \u00E8 La cartella di pagamento \u00E8 l\u2019atto che Agenzia delle entrate-Riscossione invia ai contribuenti al fine di recuperare i crediti vantati dagli enti impositori"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the tax bill or payment notice"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/2000/01/rdf-schema#label> "Cartella esattoriale"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> <http://www.w3.org/2000/01/rdf-schema#label> "Tax bill"@en .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleDestinatario> .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/cognomeDestinatario> .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoTotaleSommeDovute> .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/indirizzoDestinatario> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeDestinatario> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroIdentificativoDellaCartella> .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid26 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid32 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "Il servizio consente di visualizzare e verificare la posizione dell'azienda e di gestire le comunicaizoni con INPS"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "The self-employed agricultural worker's social security drawer is a service that allows owners of agricultural businesses and their intermediaries to consult and verify the company's insurance position, access consultation and request submission services, and communicate with INPS"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Cassetto previdenziale lavoratori agricoli autonomi"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Service portale of the self-employed agricultural worker"@en .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid26 <http://www.w3.org/2002/07/owl#unionOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> _:genid33 .
+_:genid32 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid33 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid34 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid36 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta l'insieme dei termini controllati che descrivono le possibili tipologie di aziende agricole"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the set of controlled terms that describe the possible types of agricultural businesses"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "Agricultural business category"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola> <http://www.w3.org/2000/01/rdf-schema#label> "Categoria azienda agricola"@it .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid34 <http://www.w3.org/2002/07/owl#onProperty> _:genid35 .
+_:genid34 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid35 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid36 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola> .
+_:genid36 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attivit\u00C3\u00A0 del colono si caratterizza per l'apporto parziale del lavoro nella coltivazione del fondo. La posizione asicurativa dei coloni si differenzia in base al numero delle giornate annue richiesta come fabbisogno lavorativo dal fondo e dagli animali: se le giornate richieste sono inferiori a 120 i coloni sono equiparati ai lavoratori dipendenti, se superiori si considerano lavoratori autonomi. La legge 203 del 1982 ha disposto la conversione dei contratti di mezzadria e colonia in contratti di affitto."@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono> <http://www.w3.org/2000/01/rdf-schema#comment> "L'attivit\u00E0 del colono si caratterizza per l'apporto parziale del lavoro nella coltivazione del fondo. La posizione asicurativa dei coloni si differenzia in base al numero delle giornate annue richiesta come fabbisogno lavorativo dal fondo e dagli animali: se le giornate richieste sono inferiori a 120 i coloni sono equiparati ai lavoratori dipendenti, se superiori si considerano lavoratori autonomi. La legge 203 del 1982 ha disposto la conversione dei contratti di mezzadria e colonia in contratti di affitto."@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono> <http://www.w3.org/2000/01/rdf-schema#comment> "The tenant farmer's activity is characterized by a partial contribution of labor in the cultivation of the land"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono> <http://www.w3.org/2000/01/rdf-schema#label> "Colono"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono> <http://www.w3.org/2000/01/rdf-schema#label> "Tenant farmer"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto> <http://www.w3.org/2000/01/rdf-schema#comment> "Direct farmers are owners, usufructuaries, tenants, emphyteuts, shepherds, and assignors of land, as well as members of their respective families who are directly and regularly engaged in the cultivation of the land, livestock raising, and related activities"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto> <http://www.w3.org/2000/01/rdf-schema#comment> "I coltivatori diretti sono proprietari, usufruttuari, affittuari, enfiteuti, pastori e assegnatari di fondi, nonch\u00C3\u00A8 appartanenti ai rispettivi nuclei familiari che, direttamente e abitualmente si dedicano alla coltivazione dei fondi, all'allevamento del bestiame e allo svolgimento delle attivit\u00C3\u00A0 connesse. Per essere definito tale l'attivit\u00C3\u00A0 svolta dal lavoratore agricolo deve avere le seguenti caratteristiche: essere svolta in modo prevalente ed esclusivo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto> <http://www.w3.org/2000/01/rdf-schema#comment> "I coltivatori diretti sono proprietari, usufruttuari, affittuari, enfiteuti, pastori e assegnatari di fondi, nonch\u00E8 appartanenti ai rispettivi nuclei familiari che, direttamente e abitualmente si dedicano alla coltivazione dei fondi, all'allevamento del bestiame e allo svolgimento delle attivit\u00E0 connesse. Per essere definito tale l'attivit\u00E0 svolta dal lavoratore agricolo deve avere le seguenti caratteristiche: essere svolta in modo prevalente ed esclusivo; pu\u00F2 essere volta con parenti e affini entro il quarto grado; il fabbisogno aziendale non deve essere inferiore a 104 giornate all'anno e il terzo di tale fabbisogno deve essere garantito al nucleo familiare "@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto> <http://www.w3.org/2000/01/rdf-schema#label> "Coltivatore diretto"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto> <http://www.w3.org/2000/01/rdf-schema#label> "Direct farmer"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta lo spazio del casetto previdenziale dei lavoratori agricoli autonomi dedicato alla consultazione dei contributi dovuti dal lavoratore ai fini previdenziali e assistenziali"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the space of the social security service portal for self-employed agricultural workers dedicated to consulting the contributions owed by the worker for social security and welfare purposes"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Contributo dovuto lavoratore agricolo autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Required social security contribution"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid37 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid38 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid39 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta lo spazio del casetto previdenziale dei lavoratori agricoli autonomi dedicato alla consultazione dei contributi versati dal lavoratore"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the space of the social security service portal for self-employed agricultural workers dedicated to consulting the contributions paid by the worker"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Contributo versato lavoratore agricolo autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Social security contribution paid"@en .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid37 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo> .
+_:genid37 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid38 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente> .
+_:genid38 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid39 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso> .
+_:genid39 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di dilazione del pagamento del debito contributivo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the section of services available in the social security service portal dedicated to consulting requests for deferral of payment of the contribution debt"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda di dilazione"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione> <http://www.w3.org/2000/01/rdf-schema#label> "Request for payment extension"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di esonero dal pagamento del debito contributivo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the section of available services in the social security service portal dedicated to consulting requests for exemption from contribution debt payments"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda di esonero"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero> <http://www.w3.org/2000/01/rdf-schema#label> "Request for exemption from contribution payments"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di regolarizzazione spontanea"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the section of available services in the social security service portal dedicated to consulting requests for voluntary regularization"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda di regolarizzazione spontanea"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea> <http://www.w3.org/2000/01/rdf-schema#label> "Request for spontaneous regularisation"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di riemissione del modello F24"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the section of available services in the social security service portal dedicated to consulting requests for reissuance of the F24 form"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda di riemissione del modello F24"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24> <http://www.w3.org/2000/01/rdf-schema#label> "Request for reissuance of F24 model"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24> <http://www.w3.org/2000/01/rdf-schema#label> "Rrequest for reissuance of F24 model"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di sospensione del pagamento del debito contributivo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the section of available services in the social security box dedicated to consulting requests for suspension of contribution debt payments"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the section of available services in the social security servce portal dedicated to consulting requests for suspension of contribution debt payments"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda di sospensione lavoratore agricolo autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Request for suspension of self-employed agricultural worker"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di delle sanzioni civili a carico del lavoratore agricolo autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the section of available services in the social security portal dedicated to consulting requests regarding civil penalties imposed on self-employed agricultural workers"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda Riduzione Sanzione Civile Lavoratore Agricolo Autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Request for Reduction of Civil Penalty for Self-Employed Agricultural Worker"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di rimborso dei contributi non dovuti"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the section of available services in the social security portal dedicated to consulting requests for refunds of undue contributions"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda rimborso contributi non dovuti lavoratore agricolo autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Request for refund of undue contributions for self-employed agricultural worker"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale> <http://www.w3.org/2000/01/rdf-schema#comment> "L'imprenditore agricolo professionale (IAP) \u00C3\u00A8 colui il quale dedica alle attivit\u00C3\u00A0 agricole (definite allrticolo 3215 del Codice Civile), direttamente o in qualit\u00C3\u00A0 di socio di societ\u00C3\u00A0, almeno il 50 percento del prorpio tempo di lavoro complessivo e che ricavi dalle attivit\u00C3\u00A0 medesime almeno il 50 percento del proprio reddito globale da lavoro. Per l'imprenditore che opera nelle zone svantaggiate le percentulai sono ridotte al 25 percento. L'imprenditore agricolo professionale deve possedere le conoscenze  e le competenze professionali ai sensi dell'articolo 5 del Regolamento CE n. 1257/1999. La figura \u00C3\u00A8 introdotta e definita dal Decreto Legislativo 29 marzo 2004 n. 99. Nell'ontologia ache descrive il cassett previdenziale del lavoratore agricolo auotnomo la classe \u00C3\u00A8 modellata come sottoclasse di Agricoltore Autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale> <http://www.w3.org/2000/01/rdf-schema#comment> "L'imprenditore agricolo professionale (IAP) \u00E8 colui il quale dedica alle attivit\u00E0 agricole (definite allrticolo 3215 del Codice Civile), direttamente o in qualit\u00E0 di socio di societ\u00E0, almeno il 50 percento del prorpio tempo di lavoro complessivo e che ricavi dalle attivit\u00E0 medesime almeno il 50 percento del proprio reddito globale da lavoro. Per l'imprenditore che opera nelle zone svantaggiate le percentulai sono ridotte al 25 percento. L'imprenditore agricolo professionale deve possedere le conoscenze  e le competenze professionali ai sensi dell'articolo 5 del Regolamento CE n. 1257/1999. La figura \u00E8 introdotta e definita dal Decreto Legislativo 29 marzo 2004 n. 99. Nell'ontologia ache descrive il cassett previdenziale del lavoratore agricolo auotnomo la classe \u00E8 modellata come sottoclasse di Agricoltore Autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale> <http://www.w3.org/2000/01/rdf-schema#comment> "The professional agricultural entrepreneur (IAP) is someone who dedicates at least 50 percent of their total working time to agricultural activities, either directly or as a partner in a company."@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale> <http://www.w3.org/2000/01/rdf-schema#label> "Imprenditore agricolo professionale (IAP)"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale> <http://www.w3.org/2000/01/rdf-schema#label> "Professional agricultural entrepreneur"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid40 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "Il lavoratore agricolo autonomo \u00C3\u00A8 l'imprenditore \u00C3\u00A8 l'imprenditore agricolo che esercita un'attivit\u00C3\u00A0 diretta alla coltivazione del fondo, alla silvicoltura, all'allevamento degli animali e attivit\u00C3\u00A0 connesse, come indicato dall'articolo 1 del Decreto Legislativo n. 228/2001. Nel'ambito del lavoro autonomo di settore si distinguono le figure di Coltivatori diretti, Coloni, Mezzadri, Imprenditori agricoli professionali. Nell'ontologia descrittiva del cassetto previdenziale questa classe rappresenta l'insieme dei soggetti direttamente interessati dai servizi disponibili nel cassetto."@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "Il lavoratore agricolo autonomo \u00E8 l'imprenditore \u00E8 l'imprenditore agricolo che esercita un'attivit\u00E0 diretta alla coltivazione del fondo, alla silvicoltura, all'allevamento degli animali e attivit\u00E0 connesse, come indicato dall'articolo 1 del Decreto Legislativo n. 228/2001. Nel'ambito del lavoro autonomo di settore si distinguono le figure di Coltivatori diretti, Coloni, Mezzadri, Imprenditori agricoli professionali. Nell'ontologia descrittiva del cassetto previdenziale questa classe rappresenta l'insieme dei soggetti direttamente interessati dai servizi disponibili nel cassetto."@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "The self-employed agricultural worker is the agricultural entrepreneur who engages in activities related to land cultivation, forestry, livestock raising, and related activities"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Lavoratore agricolo autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Self-employed agricultural worker"@en .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid40 <http://www.w3.org/2002/07/owl#unionOf> _:genid41 .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono> .
+_:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid42 .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro> <http://www.w3.org/2000/01/rdf-schema#comment> "I mezzadri sono coloro che si associano al proprietario del fondo apportando all'impresa agricola soprattutto il lavoro personale e della famiglia. La famiglia deve stabilmente risiedere nel fondo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro> <http://www.w3.org/2000/01/rdf-schema#comment> "Sharecroppers are those who partner with the landowner by contributing mainly their personal and family labor to the agricultural enterprise. The family must reside permanently on the land."@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro> <http://www.w3.org/2000/01/rdf-schema#label> "Mezzadro"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro> <http://www.w3.org/2000/01/rdf-schema#label> "Sharecropper"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid45 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la sezione del cassetto previdenziale dei lavoratori agricoli autonomi che consente l'accesso ai servizi di consultazione della posizione debitoria del lavoratore"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the section of the social security box for self-employed agricultural workers that provides access to services for consulting the worker's debt position"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti> <http://www.w3.org/2000/01/rdf-schema#label> "Debt collection"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti> <http://www.w3.org/2000/01/rdf-schema#label> "Recupero crediti"@it .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid45 <http://www.w3.org/2002/07/owl#unionOf> _:genid46 .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria> <http://www.w3.org/2000/01/rdf-schema#comment> "La funzione consente di visualizzare la situazione debitoria del lavoratore agricolo autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria> <http://www.w3.org/2000/01/rdf-schema#comment> "The function allows viewing the debt situation of the self-employed agricultural worker"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria> <http://www.w3.org/2000/01/rdf-schema#label> "Debt status"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria> <http://www.w3.org/2000/01/rdf-schema#label> "Situazione debitoria"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid49 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid51 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta l'insieme delle voci controllate codificate per indicare il tipo di contributo previdenziale"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the set of controlled coded entries used to indicate the type of social security contribution"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Tipologia contributo lavoratore agricolo autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Type of contribution for self-employed agricultural worker"@en .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid49 <http://www.w3.org/2002/07/owl#onProperty> _:genid50 .
+_:genid49 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid50 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid51 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo> .
+_:genid51 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid52 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid53 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid55 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid56 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid57 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid58 .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il servizio del cassetto previdenziale adibito alla consultazione dei contributi versati dal lavoratore agricolo autonomo"@it .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the service of the social security portal dedicated to consulting the contributions paid by the self-employed agricultural worker"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Contribution payment"@en .
+<https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo> <http://www.w3.org/2000/01/rdf-schema#label> "Versamento contributivo lavoratore agricolo autonomo"@it .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi> .
+_:genid52 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid53 <http://www.w3.org/2002/07/owl#onProperty> _:genid54 .
+_:genid53 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid54 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid55 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS> .
+_:genid55 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid56 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo> .
+_:genid56 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata> .
+_:genid57 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid58 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento> .
+_:genid58 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid59 <http://www.w3.org/2002/07/owl#unionOf> _:genid60 .
+_:genid59 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/italia/social-security/onto/social-safety-net/ContributoPrevidenziale> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid62 <http://www.w3.org/2002/07/owl#members> _:genid63 .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid64 .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo> .
+_:genid64 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid65 .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid66 .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola> .
+_:genid66 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid67 .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid68 <http://www.w3.org/2002/07/owl#members> _:genid69 .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario> .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid70 .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale> .
+_:genid70 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid71 .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria> .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid72 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid72 <http://www.w3.org/2002/07/owl#members> _:genid73 .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid74 .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto> .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid75 .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid76 .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid77 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid77 <http://www.w3.org/2002/07/owl#members> _:genid78 .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid79 .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero> .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid80 .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid81 .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid82 .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid83 .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid84 .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo> .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .

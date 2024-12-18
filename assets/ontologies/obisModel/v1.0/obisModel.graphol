@@ -1,0 +1,1314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphol version="3">
+  <project version="1.0" name="Modello ObisM">
+    <ontology prefix="INPSObisM" addLabelFromUserInput="0" iri="https://w3id.org/italia/social-security/onto/ObisModel/" lang="en" addLabelFromSimpleName="0">
+      <imports/>
+      <prefixes>
+        <prefix>
+          <value>CPSV</value>
+          <namespace>https://w3id.org/italia/onto/CPSV/</namespace>
+        </prefix>
+        <prefix>
+          <value>DETPENS</value>
+          <namespace>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSCore</value>
+          <namespace>https://w3id.org/italia/social-security/onto/core/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSObisM</value>
+          <namespace>https://w3id.org/italia/social-security/onto/ObisModel/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSPensions</value>
+          <namespace>https://w3id.org/italia/social-security/onto/pensions/</namespace>
+        </prefix>
+        <prefix>
+          <value>TI</value>
+          <namespace>https://w3id.org/italia/onto/TI/</namespace>
+        </prefix>
+        <prefix>
+          <value>foaf</value>
+          <namespace>http://xmlns.com/foaf/0.1/</namespace>
+        </prefix>
+        <prefix>
+          <value>owl</value>
+          <namespace>http://www.w3.org/2002/07/owl#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdf</value>
+          <namespace>http://www.w3.org/1999/02/22-rdf-syntax-ns#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdfs</value>
+          <namespace>http://www.w3.org/2000/01/rdf-schema#</namespace>
+        </prefix>
+        <prefix>
+          <value>rico</value>
+          <namespace>https://www.ica.org/standards/RiC/ontology#</namespace>
+        </prefix>
+        <prefix>
+          <value>xml</value>
+          <namespace>http://www.w3.org/XML/1998/namespace</namespace>
+        </prefix>
+        <prefix>
+          <value>xsd</value>
+          <namespace>http://www.w3.org/2001/XMLSchema#</namespace>
+        </prefix>
+      </prefixes>
+      <datatypes>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral</datatype>
+        <datatype>http://www.w3.org/2000/01/rdf-schema#Literal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NCName</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NMTOKEN</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#Name</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#base64Binary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#boolean</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#byte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTimeStamp</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#decimal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#double</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#float</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#hexBinary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#int</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#integer</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#language</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#long</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#negativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonNegativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonPositiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#normalizedString</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#positiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#short</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#token</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedByte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedInt</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedLong</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedShort</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#rational</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#real</datatype>
+      </datatypes>
+      <languages>
+        <language>de</language>
+        <language>en</language>
+        <language>es</language>
+        <language>fr</language>
+        <language>it</language>
+      </languages>
+      <facets>
+        <facet>http://www.w3.org/2001/XMLSchema#langRange</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#length</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#pattern</facet>
+      </facets>
+      <annotationProperties>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#comment</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#isDefinedBy</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#label</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#deprecated</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#incompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#priorVersion</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#versionInfo</annotationProperty>
+      </annotationProperties>
+      <iris>
+        <iri>
+          <value>http://xmlns.com/foaf/0.1/Document</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/CPSV/Service</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/TI/atTime</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/TI/endTime</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/TI/startTime</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Certificato di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il certificato di pensione (Modello Obis) riassume le principali informazioni dele pensioni INPS in pagamento. Il certificato è disponibile per i pensionati di tutte le gestioni ed è pubblicato annualmente. Nell'ontologia la classe è definita come sottoclasse di Record dell'ontologia Record in context (RiCo-On) prodotta Dall'International Council on Archives (ICA), con l'obiettivo di connotare semanticamente le istanze di questa classe come documenti prodotti dall'INPS nel corso della sua attività istituzionale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Certificate of pension</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The pension certificate (Obis Model) summarizes the main information about INPS pensions in payment. The certificate is available for pensioners from all management sectors and is published annually. In the ontology, the class is defined as a subclass of the Record class in the Record in Context (RiCo-On) ontology produced by the International Council on Archives (ICA), with the aim of semantically characterizing the instances of this class as documents produced by INPS in the course of its institutional activities</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Dati fiscali</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe dati fiscali raggruppa l'insieme delle informazioni di tipo fiscale contenute nel modello Obis come ad esempio i versamenti eseguiti e le trattenute effettuate sull'importo della pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Tax Data</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The tax data class groups together the set of tax-related information contained in the Obis Model, such as payments made and deductions applied to the pension amount</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/FascicoloPrevidenzialeCittadino</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/FascicoloPrevidenzialeCittadino</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Fascicolo previdenziale del cittadino</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/FascicoloPrevidenzialeCittadino</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il Fascicolo previdenzile del cittadino è il portale di accesso ai principali servizi messi  disposizione dall'INPS per l'utente. Il servizio consente di gestire la posizione contributiva e previdenziale, le certificazioni sanitarie e reddituali. Nell'ontologia la classe è definita come sottoclasse di Service dell'ontologia Core public service vocabulary (CPSV-AP_IT)  al fine di connotare semanticamente in modo forte il Fasciciolo come un servizio reso da un ente pubblico alla sua utenza </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/FascicoloPrevidenzialeCittadino</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Citizen's social security file</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/FascicoloPrevidenzialeCittadino</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The Citizen's Pension File is the access portal to the main services provided by INPS for users. The service allows users to manage their contribution and pension status, as well as health and income certifications. In the ontology, the class is defined as a subclass of Service in the Core Public Service Vocabulary (CPSV-AP_IT) ontology, in order to strongly semantically characterize the File as a service provided by a public entity to its users</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/TimeInterval</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/accedeA</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/accedeA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>accede a</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/accedeA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega il Titolare della pensione con il Fascicolo previdenziale del cittadino, ossia il servizio INPS che consente la consultazione del modello Obis</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/accedeA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>access to</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/accedeA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the Pension Holder with the citizen's Social Security Record, that is the INPS service that allows the consultation of the Obis model</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleComunaleIRPEF</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleComunaleIRPEF</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>addizionale comunale IRPEF</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleComunaleIRPEF</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'addizionale comunale IRPEF è un'imposta locale che i comuni italiani possono applicare sui redditi dei cittadini residenti nel loro territorio</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleComunaleIRPEF</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>municipal IRPEF fee</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleComunaleIRPEF</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The IRPEF municipal surcharge is a local tax that Italian municipalities can apply on the income of citizens residing in their territory</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleRegionaleIRPEF</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleRegionaleIRPEF</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>addizionale regionale IRPEF</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleRegionaleIRPEF</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>regional IRPEF fee</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleRegionaleIRPEF</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L’addizionale regionale all’IRPEF è un’imposta che si applica al reddito complessivo determinato ai fini dell’IRPEF. Ogni Regione e Provincia autonoma può stabilirne l’aliquota entro i limiti fissati dalla legge statale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleRegionaleIRPEF</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The regional IRPEF surcharge is a tax that is applied to the overall income determined for IRPEF purposes. Each Region and Autonomous Province can establish the rate within the limits set by state law</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/certificaDatiPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/certificaDatiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>certifica dati di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/certificaDatiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object propety collega il Certificato di pensione con le classi rappresentative dei dati che il documento stesso è utile a certificare, ossia l'Importo della pensione erogato eil dettaglio dei dati fiscali</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/certificaDatiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Certify pension data</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/certificaDatiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the Pension Certificate with the representative classes of the data that the document itself is useful to certify, i.e. the amount of the pension paid and the details of the fiscal data</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/chiavePensione</value>
+          <functional/>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/daAccessoA</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/daAccessoA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>da accesso a</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/daAccessoA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega il Fascicolo previdenziale del cittadino al Certificato di pensione </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/daAccessoA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>gives access to</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/daAccessoA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property links the Citizen's social security file to the Pension Certificate</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerNucleoFamiliare</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerNucleoFamiliare</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>detrazione per nucleo familiare</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerReddito</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerReddito</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>detrazione per reddito</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneLorda</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneLorda</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>importo pensione lorda</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneLorda</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>importo totale della pensione espresso senza lo scorporo delle deduzioni</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneNetta</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneNetta</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>importo pensione netta</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneNetta</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>importo della pensione al netto delle trattenute</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/irpefLorda</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/irpefLorda</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>IRPEF lorda</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/perequazioneAutomatica</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/perequazioneAutomatica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>perequazione automatica</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/perequazioneAutomatica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La perequazione automatica è un meccanismo che consente di adeguare annualmente l'importo delle pensioni all'aumento del costo della vita, così da cercare di conservarne immutato il suo reale potere d'acquisto</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/perequazioneAutomatica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>automatic equalization</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/perequazioneAutomatica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Automatic equalization is a mechanism that allows the amount of pensions to be adjusted annually to the increase in the cost of living, so as to try to keep its real purchasing power unchanged</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/presentaDatiRelativiA</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/presentaDatiRelativiA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>presenta dati relativi a</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/presentaDatiRelativiA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega il Certificato di pensione al gruppo di dati presenti nel documento, ossia quelli relativi al titolare del trattamento pensionistico, alla sede INPS corrispondente al soggetto pagatore e quelli inerenti al prodotto pensionistico erogato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/presentaDatiRelativiA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>presents data relating to</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/presentaDatiRelativiA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property links the Pension Certificate to the group of data present in the document, i.e. those relating to the pension holder, the INPS office corresponding to the paying entity and those relating to the pension product provided</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/trattenutaIRPEF</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/trattenutaIRPEF</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>trattenute IRPEF</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/trattenutaIncumulabilità</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/trattenutaSindacale</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/ObisModel/trattenuteContributoExOnpi</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/ObisModel/trattenuteContributoExOnpi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>trattenute contributo ex Onpi</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/SedeINPS</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Titolare di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il titolare di pensione è il beneficiario di una o più prestazioni previdenziali e assistenziali dell'INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Pension holder</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The pension holder is the beneficiary of one or more INPS social security and welfare benefits</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione</value>
+        </iri>
+        <iri>
+          <value>https://www.ica.org/standards/RiC/ontology#Record</value>
+        </iri>
+      </iris>
+    </ontology>
+    <diagrams>
+      <diagram width="5000" name="Modello Obis" height="5000">
+        <node id="n12" color="#fcfcfc" type="concept">
+          <geometry width="110" y="-440" x="20" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensions/TitolareDiPensione</iri>
+          <label size="12" width="110" y="-440" customSize="0" x="20" height="22"/>
+        </node>
+        <node id="n13" color="#fcfcfc" type="role">
+          <geometry width="70" y="-440" x="-220" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/accedeA</iri>
+          <label size="12" width="54" y="-470" customSize="0" x="-220" height="22"/>
+        </node>
+        <node id="n14" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="-440" x="-110" height="20"/>
+          <label size="12" width="39" y="-462" customSize="0" x="-110" height="22">exists</label>
+        </node>
+        <node id="n15" color="#000000" type="range-restriction">
+          <geometry width="20" y="-440" x="-340" height="20"/>
+          <label size="12" width="39" y="-462" customSize="0" x="-340" height="22">exists</label>
+        </node>
+        <node id="n16" color="#fcfcfc" type="concept">
+          <geometry width="110" y="230" x="240" height="50"/>
+          <iri>https://www.ica.org/standards/RiC/ontology#Record</iri>
+          <label size="12" width="110" y="230" customSize="0" x="240" height="22"/>
+        </node>
+        <node id="n18" color="#fcfcfc" type="role">
+          <geometry width="70" y="30" x="570" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/certificaDatiPensione</iri>
+          <label size="12" width="123" y="0" customSize="0" x="570" height="22"/>
+        </node>
+        <node id="n19" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="30" x="470" height="20"/>
+          <label size="12" width="39" y="8" customSize="0" x="470" height="22">exists</label>
+        </node>
+        <node id="n2" color="#fcfcfc" type="concept">
+          <geometry width="110" y="30" x="330" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/CertificatoDiPensione</iri>
+          <label size="12" width="110" y="30" customSize="0" x="330" height="36"/>
+        </node>
+        <node id="n20" color="#000000" type="range-restriction">
+          <geometry width="20" y="30" x="670" height="20"/>
+          <label size="12" width="39" y="8" customSize="0" x="670" height="22">exists</label>
+        </node>
+        <node id="n24" color="#000000" type="disjoint-union">
+          <geometry width="50" y="30" x="770" height="30"/>
+        </node>
+        <node id="n26" color="#fcfcfc" type="concept">
+          <geometry width="110" y="-100" x="1120" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione</iri>
+          <label size="12" width="110" y="-100" customSize="0" x="1120" height="22"/>
+        </node>
+        <node id="n27" color="#fcfcfc" type="concept">
+          <geometry width="110" y="-100" x="1560" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/TimeInterval</iri>
+          <label size="12" width="110" y="-100" customSize="0" x="1560" height="22"/>
+        </node>
+        <node id="n28" color="#fcfcfc" type="role">
+          <geometry width="70" y="-100" x="1340" height="50"/>
+          <iri>https://w3id.org/italia/onto/TI/atTime</iri>
+          <label size="12" width="46" y="-130" customSize="0" x="1340" height="22"/>
+        </node>
+        <node id="n29" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="-100" x="1240" height="20"/>
+          <label size="12" width="39" y="-122" customSize="0" x="1240" height="22">exists</label>
+        </node>
+        <node id="n3" color="#fcfcfc" type="concept">
+          <geometry width="110" y="30" x="-170" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/FascicoloPrevidenzialeCittadino</iri>
+          <label size="12" width="110" y="30" customSize="0" x="-170" height="36"/>
+        </node>
+        <node id="n30" color="#000000" type="range-restriction">
+          <geometry width="20" y="-100" x="1440" height="20"/>
+          <label size="12" width="39" y="-122" customSize="0" x="1440" height="22">exists</label>
+        </node>
+        <node id="n31" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="-260" x="1520" height="20"/>
+          <iri>https://w3id.org/italia/onto/TI/endTime</iri>
+          <label size="12" width="55" y="-282" customSize="0" x="1520" height="22"/>
+        </node>
+        <node id="n32" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="-260" x="1600" height="20"/>
+          <iri>https://w3id.org/italia/onto/TI/startTime</iri>
+          <label size="12" width="60" y="-282" customSize="0" x="1600" height="22"/>
+        </node>
+        <node id="n33" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="-190" x="1520" height="20"/>
+          <label size="12" width="39" y="-212" customSize="0" x="1520" height="22">exists</label>
+        </node>
+        <node id="n34" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="-190" x="1600" height="20"/>
+          <label size="12" width="39" y="-212" customSize="0" x="1600" height="22">exists</label>
+        </node>
+        <node id="n35" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="-270" x="1000" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneLorda</iri>
+          <label size="12" width="132" y="-292" customSize="0" x="1000" height="22"/>
+        </node>
+        <node id="n36" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="-270" x="1240" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/importoPensioneNetta</iri>
+          <label size="12" width="131" y="-292" customSize="0" x="1240" height="22"/>
+        </node>
+        <node id="n37" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="-200" x="1000" height="20"/>
+          <label size="12" width="39" y="-222" customSize="0" x="1000" height="22">exists</label>
+        </node>
+        <node id="n38" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="-200" x="1240" height="20"/>
+          <label size="12" width="39" y="-222" customSize="0" x="1240" height="22">exists</label>
+        </node>
+        <node id="n39" color="#fcfcfc" type="concept">
+          <geometry width="110" y="190" x="1120" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/DatiFiscali</iri>
+          <label size="12" width="110" y="190" customSize="0" x="1120" height="22"/>
+        </node>
+        <node id="n4" color="#fcfcfc" type="role">
+          <geometry width="70" y="30" x="70" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/daAccessoA</iri>
+          <label size="12" width="75" y="0" customSize="0" x="70" height="22"/>
+        </node>
+        <node id="n40" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="100" x="1410" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/trattenuteContributoExOnpi</iri>
+          <label size="12" width="157" y="78" customSize="0" x="1410" height="22"/>
+        </node>
+        <node id="n41" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="170" x="1410" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/trattenutaIRPEF</iri>
+          <label size="12" width="94" y="148" customSize="0" x="1410" height="22"/>
+        </node>
+        <node id="n42" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="240" x="1410" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleRegionaleIRPEF</iri>
+          <label size="12" width="156" y="218" customSize="0" x="1410" height="22"/>
+        </node>
+        <node id="n43" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="310" x="1410" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/addizionaleComunaleIRPEF</iri>
+          <label size="12" width="159" y="288" customSize="0" x="1410" height="22"/>
+        </node>
+        <node id="n44" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="-410" x="1120" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/perequazioneAutomatica</iri>
+          <label size="12" width="145" y="-432" customSize="0" x="1120" height="22"/>
+        </node>
+        <node id="n45" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="-330" x="1120" height="20"/>
+          <label size="12" width="39" y="-352" customSize="0" x="1120" height="22">exists</label>
+        </node>
+        <node id="n46" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="100" x="1270" height="20"/>
+          <label size="12" width="39" y="78" customSize="0" x="1270" height="22">exists</label>
+        </node>
+        <node id="n47" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="170" x="1270" height="20"/>
+          <label size="12" width="39" y="148" customSize="0" x="1270" height="22">exists</label>
+        </node>
+        <node id="n48" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="240" x="1270" height="20"/>
+          <label size="12" width="39" y="218" customSize="0" x="1270" height="22">exists</label>
+        </node>
+        <node id="n49" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="310" x="1270" height="20"/>
+          <label size="12" width="39" y="288" customSize="0" x="1270" height="22">exists</label>
+        </node>
+        <node id="n5" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="30" x="-40" height="20"/>
+          <label size="12" width="39" y="8" customSize="0" x="-40" height="22">exists</label>
+        </node>
+        <node id="n50" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="370" x="1410" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/irpefLorda</iri>
+          <label size="12" width="63" y="348" customSize="0" x="1410" height="22"/>
+        </node>
+        <node id="n51" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="520" x="1410" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerReddito</iri>
+          <label size="12" width="124" y="498" customSize="0" x="1410" height="22"/>
+        </node>
+        <node id="n52" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="450" x="1410" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/detrazionePerNucleoFamiliare</iri>
+          <label size="12" width="172" y="428" customSize="0" x="1410" height="22"/>
+        </node>
+        <node id="n53" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="370" x="1270" height="20"/>
+          <label size="12" width="39" y="348" customSize="0" x="1270" height="22">exists</label>
+        </node>
+        <node id="n54" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="450" x="1270" height="20"/>
+          <label size="12" width="39" y="428" customSize="0" x="1270" height="22">exists</label>
+        </node>
+        <node id="n55" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="520" x="1270" height="20"/>
+          <label size="12" width="39" y="498" customSize="0" x="1270" height="22">exists</label>
+        </node>
+        <node id="n56" color="#fcfcfc" type="role">
+          <geometry width="70" y="-130" x="330" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/presentaDatiRelativiA</iri>
+          <label size="12" width="124" y="-160" customSize="0" x="330" height="22"/>
+        </node>
+        <node id="n58" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="-50" x="330" height="20"/>
+          <label size="12" width="39" y="-72" customSize="0" x="330" height="22">exists</label>
+        </node>
+        <node id="n59" color="#000000" type="range-restriction">
+          <geometry width="20" y="-210" x="330" height="20"/>
+          <label size="12" width="39" y="-232" customSize="0" x="330" height="22">exists</label>
+        </node>
+        <node id="n6" color="#000000" type="range-restriction">
+          <geometry width="20" y="30" x="170" height="20"/>
+          <label size="12" width="39" y="8" customSize="0" x="170" height="22">exists</label>
+        </node>
+        <node id="n60" color="#000000" type="disjoint-union">
+          <geometry width="50" y="-280" x="330" height="30"/>
+        </node>
+        <node id="n61" color="#fcfcfc" type="concept">
+          <geometry width="110" y="-440" x="330" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/SedeINPS</iri>
+          <label size="12" width="110" y="-440" customSize="0" x="330" height="22"/>
+        </node>
+        <node id="n62" color="#fcfcfc" type="concept">
+          <geometry width="110" y="-440" x="620" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico</iri>
+          <label size="12" width="110" y="-440" customSize="0" x="620" height="36"/>
+        </node>
+        <node id="n70" color="#fcfcfc" type="concept">
+          <geometry width="110" y="-790" x="620" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione</iri>
+          <label size="12" width="110" y="-790" customSize="0" x="620" height="22"/>
+        </node>
+        <node id="n72" color="#fcfcfc" type="role">
+          <geometry width="70" y="-590" x="620" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione</iri>
+          <label size="12" width="107" y="-620" customSize="0" x="620" height="22"/>
+        </node>
+        <node id="n73" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="-510" x="620" height="20"/>
+          <label size="12" width="39" y="-532" customSize="0" x="620" height="22">exists</label>
+        </node>
+        <node id="n74" color="#000000" type="range-restriction">
+          <geometry width="20" y="-680" x="620" height="20"/>
+          <label size="12" width="39" y="-702" customSize="0" x="620" height="22">exists</label>
+        </node>
+        <node id="n77" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="-440" x="860" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/chiavePensione</iri>
+          <label size="12" width="93" y="-462" customSize="0" x="860" height="22"/>
+        </node>
+        <node id="n79" color="#fcfcfc" type="attribute">
+          <geometry width="20" y="-150" x="870" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/trattenutaSindacale</iri>
+          <label size="12" width="115" y="-172" customSize="0" x="870" height="22"/>
+        </node>
+        <node id="n80" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="-150" x="990" height="20"/>
+          <label size="12" width="39" y="-172" customSize="0" x="990" height="22">exists</label>
+        </node>
+        <node id="n9" color="#fcfcfc" type="concept">
+          <geometry width="110" y="-110" x="-170" height="50"/>
+          <iri>https://w3id.org/italia/onto/CPSV/Service</iri>
+          <label size="12" width="110" y="-110" customSize="0" x="-170" height="22"/>
+        </node>
+        <node id="n91" color="#f29210" type="attribute">
+          <geometry width="20" y="120" x="570" height="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/ObisModel/trattenutaIncumulabilità</iri>
+          <label size="12" width="140" y="98" customSize="0" x="570" height="22"/>
+        </node>
+        <node id="n92" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="120" x="460" height="20"/>
+          <label size="12" width="39" y="98" customSize="0" x="460" height="22">exists</label>
+        </node>
+        <node id="n93" color="#fcfcfc" type="domain-restriction">
+          <geometry width="20" y="-440" x="760" height="20"/>
+          <label size="12" width="39" y="-462" customSize="0" x="760" height="22">exists</label>
+        </node>
+        <node id="n94" color="#fcfcfc" type="concept">
+          <geometry width="110" y="-630" x="20" height="50"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</iri>
+          <label size="12" width="110" y="-630" customSize="0" x="20" height="36"/>
+        </node>
+        <node id="n95" color="#fcfcfc" type="concept">
+          <geometry width="110" y="230" x="420" height="50"/>
+          <iri>http://xmlns.com/foaf/0.1/Document</iri>
+          <label size="12" width="110" y="230" customSize="0" x="420" height="22"/>
+        </node>
+        <edge id="e0" target="n5" source="n4" type="input">
+          <point y="30" x="70"/>
+          <point y="30" x="-40"/>
+        </edge>
+        <edge id="e1" target="n6" source="n4" type="input">
+          <point y="30" x="70"/>
+          <point y="30" x="170"/>
+        </edge>
+        <edge id="e10" target="n12" source="n14" type="inclusion">
+          <point y="-440" x="-110"/>
+          <point y="-440" x="20"/>
+        </edge>
+        <edge id="e100" target="n93" source="n62" type="equivalence">
+          <point y="-440" x="620"/>
+          <point y="-440" x="760"/>
+        </edge>
+        <edge id="e101" target="n93" source="n77" type="input">
+          <point y="-440" x="860"/>
+          <point y="-440" x="760"/>
+        </edge>
+        <edge id="e102" target="n94" source="n12" type="inclusion">
+          <point y="-440" x="20"/>
+          <point y="-630" x="20"/>
+        </edge>
+        <edge id="e103" target="n95" source="n2" type="inclusion">
+          <point y="30" x="330"/>
+          <point y="230" x="420"/>
+        </edge>
+        <edge id="e11" target="n3" source="n15" type="inclusion">
+          <point y="-440" x="-340"/>
+          <point y="-440" x="-400"/>
+          <point y="30" x="-400"/>
+          <point y="30" x="-170"/>
+        </edge>
+        <edge id="e12" target="n16" source="n2" type="inclusion">
+          <point y="30" x="330"/>
+          <point y="230" x="240"/>
+        </edge>
+        <edge id="e13" target="n19" source="n18" type="input">
+          <point y="30" x="570"/>
+          <point y="30" x="470"/>
+        </edge>
+        <edge id="e14" target="n20" source="n18" type="input">
+          <point y="30" x="570"/>
+          <point y="30" x="670"/>
+        </edge>
+        <edge id="e2" target="n3" source="n5" type="inclusion">
+          <point y="30" x="-40"/>
+          <point y="30" x="-170"/>
+        </edge>
+        <edge id="e23" target="n19" source="n2" type="equivalence">
+          <point y="30" x="330"/>
+          <point y="30" x="428"/>
+          <point y="30" x="470"/>
+        </edge>
+        <edge id="e24" target="n24" source="n20" type="equivalence">
+          <point y="30" x="670"/>
+          <point y="30" x="770"/>
+        </edge>
+        <edge id="e25" target="n29" source="n28" type="input">
+          <point y="-100" x="1340"/>
+          <point y="-100" x="1240"/>
+        </edge>
+        <edge id="e26" target="n30" source="n28" type="input">
+          <point y="-100" x="1340"/>
+          <point y="-100" x="1440"/>
+        </edge>
+        <edge id="e27" target="n29" source="n26" type="equivalence">
+          <point y="-100" x="1120"/>
+          <point y="-100" x="1240"/>
+        </edge>
+        <edge id="e28" target="n27" source="n30" type="equivalence">
+          <point y="-100" x="1440"/>
+          <point y="-100" x="1560"/>
+        </edge>
+        <edge id="e29" target="n33" source="n27" type="equivalence">
+          <point y="-100" x="1560"/>
+          <point y="-190" x="1560"/>
+          <point y="-190" x="1520"/>
+        </edge>
+        <edge id="e3" target="n2" source="n6" type="equivalence">
+          <point y="30" x="170"/>
+          <point y="30" x="330"/>
+        </edge>
+        <edge id="e30" target="n34" source="n27" type="equivalence">
+          <point y="-100" x="1560"/>
+          <point y="-190" x="1560"/>
+          <point y="-190" x="1600"/>
+        </edge>
+        <edge id="e31" target="n33" source="n31" type="input">
+          <point y="-260" x="1520"/>
+          <point y="-190" x="1520"/>
+        </edge>
+        <edge id="e32" target="n34" source="n32" type="input">
+          <point y="-260" x="1600"/>
+          <point y="-190" x="1600"/>
+        </edge>
+        <edge id="e33" target="n37" source="n35" type="input">
+          <point y="-270" x="1000"/>
+          <point y="-200" x="1000"/>
+        </edge>
+        <edge id="e34" target="n38" source="n36" type="input">
+          <point y="-270" x="1240"/>
+          <point y="-200" x="1240"/>
+        </edge>
+        <edge id="e35" target="n37" source="n26" type="equivalence">
+          <point y="-100" x="1120"/>
+          <point y="-200" x="1120"/>
+          <point y="-200" x="1000"/>
+        </edge>
+        <edge id="e36" target="n38" source="n26" type="equivalence">
+          <point y="-100" x="1120"/>
+          <point y="-200" x="1120"/>
+          <point y="-200" x="1240"/>
+        </edge>
+        <edge id="e37" target="n45" source="n44" type="input">
+          <point y="-410" x="1120"/>
+          <point y="-330" x="1120"/>
+        </edge>
+        <edge id="e39" target="n26" source="n45" type="inclusion">
+          <point y="-330" x="1120"/>
+          <point y="-100" x="1120"/>
+        </edge>
+        <edge id="e4" target="n9" source="n3" type="inclusion">
+          <point y="30" x="-170"/>
+          <point y="-110" x="-170"/>
+        </edge>
+        <edge id="e40" target="n46" source="n39" type="equivalence">
+          <point y="190" x="1120"/>
+          <point y="190" x="1220"/>
+          <point y="100" x="1220"/>
+          <point y="100" x="1270"/>
+        </edge>
+        <edge id="e41" target="n47" source="n39" type="equivalence">
+          <point y="190" x="1120"/>
+          <point y="190" x="1220"/>
+          <point y="170" x="1220"/>
+          <point y="170" x="1270"/>
+        </edge>
+        <edge id="e42" target="n48" source="n39" type="equivalence">
+          <point y="190" x="1120"/>
+          <point y="190" x="1220"/>
+          <point y="240" x="1220"/>
+          <point y="240" x="1270"/>
+        </edge>
+        <edge id="e43" target="n49" source="n39" type="equivalence">
+          <point y="190" x="1120"/>
+          <point y="190" x="1220"/>
+          <point y="310" x="1220"/>
+          <point y="310" x="1270"/>
+        </edge>
+        <edge id="e44" target="n46" source="n40" type="input">
+          <point y="100" x="1410"/>
+          <point y="100" x="1270"/>
+        </edge>
+        <edge id="e45" target="n47" source="n41" type="input">
+          <point y="170" x="1410"/>
+          <point y="170" x="1270"/>
+        </edge>
+        <edge id="e46" target="n48" source="n42" type="input">
+          <point y="240" x="1410"/>
+          <point y="240" x="1270"/>
+        </edge>
+        <edge id="e47" target="n49" source="n43" type="input">
+          <point y="310" x="1410"/>
+          <point y="310" x="1270"/>
+        </edge>
+        <edge id="e48" target="n53" source="n50" type="input">
+          <point y="370" x="1410"/>
+          <point y="370" x="1270"/>
+        </edge>
+        <edge id="e49" target="n54" source="n52" type="input">
+          <point y="450" x="1410"/>
+          <point y="450" x="1270"/>
+        </edge>
+        <edge id="e50" target="n55" source="n51" type="input">
+          <point y="520" x="1410"/>
+          <point y="520" x="1270"/>
+        </edge>
+        <edge id="e51" target="n39" source="n53" type="equivalence">
+          <point y="370" x="1270"/>
+          <point y="370" x="1220"/>
+          <point y="190" x="1220"/>
+          <point y="190" x="1120"/>
+        </edge>
+        <edge id="e52" target="n39" source="n54" type="equivalence">
+          <point y="450" x="1270"/>
+          <point y="450" x="1220"/>
+          <point y="190" x="1220"/>
+          <point y="190" x="1120"/>
+        </edge>
+        <edge id="e53" target="n39" source="n55" type="equivalence">
+          <point y="520" x="1270"/>
+          <point y="520" x="1220"/>
+          <point y="190" x="1220"/>
+          <point y="190" x="1120"/>
+        </edge>
+        <edge id="e55" target="n24" source="n26" type="input">
+          <point y="-100" x="1120"/>
+          <point y="-100" x="770"/>
+          <point y="30" x="770"/>
+        </edge>
+        <edge id="e56" target="n24" source="n39" type="input">
+          <point y="190" x="1120"/>
+          <point y="190" x="770"/>
+          <point y="30" x="770"/>
+        </edge>
+        <edge id="e59" target="n58" source="n56" type="input">
+          <point y="-130" x="330"/>
+          <point y="-50" x="330"/>
+        </edge>
+        <edge id="e6" target="n14" source="n13" type="input">
+          <point y="-440" x="-220"/>
+          <point y="-440" x="-110"/>
+        </edge>
+        <edge id="e60" target="n59" source="n56" type="input">
+          <point y="-130" x="330"/>
+          <point y="-210" x="330"/>
+        </edge>
+        <edge id="e61" target="n58" source="n2" type="equivalence">
+          <point y="30" x="330"/>
+          <point y="-50" x="330"/>
+        </edge>
+        <edge id="e62" target="n60" source="n59" type="equivalence">
+          <point y="-210" x="330"/>
+          <point y="-280" x="330"/>
+        </edge>
+        <edge id="e63" target="n60" source="n12" type="input">
+          <point y="-440" x="20"/>
+          <point y="-280" x="20"/>
+          <point y="-280" x="330"/>
+        </edge>
+        <edge id="e64" target="n60" source="n61" type="input">
+          <point y="-440" x="330"/>
+          <point y="-280" x="330"/>
+        </edge>
+        <edge id="e65" target="n60" source="n62" type="input">
+          <point y="-440" x="620"/>
+          <point y="-280" x="620"/>
+          <point y="-280" x="330"/>
+        </edge>
+        <edge id="e7" target="n15" source="n13" type="input">
+          <point y="-440" x="-220"/>
+          <point y="-440" x="-340"/>
+        </edge>
+        <edge id="e73" target="n73" source="n72" type="input">
+          <point y="-590" x="620"/>
+          <point y="-510" x="620"/>
+        </edge>
+        <edge id="e74" target="n74" source="n72" type="input">
+          <point y="-590" x="620"/>
+          <point y="-680" x="620"/>
+        </edge>
+        <edge id="e80" target="n73" source="n62" type="equivalence">
+          <point y="-440" x="620"/>
+          <point y="-510" x="620"/>
+        </edge>
+        <edge id="e82" target="n70" source="n74" type="equivalence">
+          <point y="-680" x="620"/>
+          <point y="-790" x="620"/>
+        </edge>
+        <edge id="e85" target="n26" source="n80" type="inclusion">
+          <point y="-150" x="990"/>
+          <point y="-150" x="1120"/>
+          <point y="-100" x="1120"/>
+        </edge>
+        <edge id="e86" target="n80" source="n79" type="input">
+          <point y="-150" x="870"/>
+          <point y="-150" x="990"/>
+        </edge>
+        <edge id="e98" target="n2" source="n92" type="inclusion">
+          <point y="120" x="460"/>
+          <point y="30" x="330"/>
+        </edge>
+        <edge id="e99" target="n92" source="n91" type="input">
+          <point y="120" x="570"/>
+          <point y="120" x="460"/>
+        </edge>
+      </diagram>
+    </diagrams>
+  </project>
+</graphol>

@@ -1,0 +1,220 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/RedditoEsente>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement exempt revenue codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici redditi esenti associati alla sezione dati previdenziali e assistenziale della Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato dei codici redditi esenti associati alla sezione dati previdenziali e assistenziale della Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the defined set of exemptions from general taxes in Italy with regards to the CU Statement"@en,
+        "Vocabolario controllato dei codici redditi esenti associati alla sezione dati previdenziali e assistenziale della Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/CRE_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CRE_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CRE_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "codici redditi esenti della certificazione unica"@it,
+        "CU statement exempt revenue codes"@en,
+        "inps"@en,
+        "inps"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement exempt revenue codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici redditi esenti associati alla sezione dati previdenziali e assistenziale della Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente" ;
+    dct:issued "2024-10-22"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-22"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:relation <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement exempt revenue codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici redditi esenti associati alla sezione dati previdenziali e assistenziale della Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "codici_redditi_esente" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/4>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/6>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/8>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/9>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/13>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/14>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/15>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/21>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/22>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/23>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/24>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/25>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/26> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/2> a skos:Concept ;
+    rdfs:label "nel caso di somme che non hanno concorso a formare il reddito imponibile (90% dell’ammontare erogato), relativo ai compensi percepiti dai docenti e dai ricercatori in base a quanto stabilito dall’art. 44 del D.L 31 maggio 2010, n. 78, convertito con modificazioni, dalla L. 30 luglio 2020, n. 122;"@it ;
+    skos:prefLabel "nel caso di somme che non hanno concorso a formare il reddito imponibile (90% dell’ammontare erogato), relativo ai compensi percepiti dai docenti e dai ricercatori in base a quanto stabilito dall’art. 44 del D.L 31 maggio 2010, n. 78, convertito con modificazioni, dalla L. 30 luglio 2020, n. 122;"@it ;
+    dct:identifier "2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/4> a skos:Concept ;
+    rdfs:label "nel caso di somme corrisposte che non hanno concorso a formare il reddito imponibile (50% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati che sono rientrati in Italia dall’estero in base a quanto stabilito dall’articolo 16 del D.lgs. n. 147 del 2015, modificato dalla legge n. 232 dell’11 dicembre 2016;"@it ;
+    skos:prefLabel "nel caso di somme corrisposte che non hanno concorso a formare il reddito imponibile (50% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati che sono rientrati in Italia dall’estero in base a quanto stabilito dall’articolo 16 del D.lgs. n. 147 del 2015, modificato dalla legge n. 232 dell’11 dicembre 2016;"@it ;
+    dct:identifier "4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "4"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/6> a skos:Concept ;
+    rdfs:label "nel caso di somme corrisposte che non hanno concorso a formare il reddito imponibile (70% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati in base a quanto stabilito dal comma1, dell’articolo 16 del D.lgs. n. 147 del 2015 modificato dal D.L. 30 aprile 2019, n. 34. Per i lavoratori rientrati in Italia dal 30 aprile 2019 al 2 luglio 2019, la fruizione di tale agevolazione è subordinata all’emanazione del decreto ministeriale di cui al comma 2, dell’art. 13-ter del decreto-legge 26 ottobre 2019, n. 124, convertito, con modificazioni, dalla legge 19 dicembre 2019, n. 157;"@it ;
+    skos:prefLabel "nel caso di somme corrisposte che non hanno concorso a formare il reddito imponibile (70% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati in base a quanto stabilito dal comma1, dell’articolo 16 del D.lgs. n. 147 del 2015 modificato dal D.L. 30 aprile 2019, n. 34. Per i lavoratori rientrati in Italia dal 30 aprile 2019 al 2 luglio 2019, la fruizione di tale agevolazione è subordinata all’emanazione del decreto ministeriale di cui al comma 2, dell’art. 13-ter del decreto-legge 26 ottobre 2019, n. 124, convertito, con modificazioni, dalla legge 19 dicembre 2019, n. 157;"@it ;
+    dct:identifier "6"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "6"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/8> a skos:Concept ;
+    rdfs:label "nel caso di somme corrisposte che non hanno concorso a formare il reddito imponibile (90% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati in base a quanto stabilito dal comma 5-bis, dell’articolo 16 del D.lgs. n. 147 del 2015 modificato dal D.L. 30 aprile 2019, n. 34. Per i lavoratori rientrati in Italia dal 30 aprile 2019 al 2 luglio 2019, la fruizione di tale agevolazione è subordinata all’emanazione del decreto ministeriale di cui al comma 2, dell’art. 13-ter del decreto-legge 26 ottobre 2019, n. 124, convertito, con modificazioni, dalla legge 19 dicembre 2019, n. 157;"@it ;
+    skos:prefLabel "nel caso di somme corrisposte che non hanno concorso a formare il reddito imponibile (90% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati in base a quanto stabilito dal comma 5-bis, dell’articolo 16 del D.lgs. n. 147 del 2015 modificato dal D.L. 30 aprile 2019, n. 34. Per i lavoratori rientrati in Italia dal 30 aprile 2019 al 2 luglio 2019, la fruizione di tale agevolazione è subordinata all’emanazione del decreto ministeriale di cui al comma 2, dell’art. 13-ter del decreto-legge 26 ottobre 2019, n. 124, convertito, con modificazioni, dalla legge 19 dicembre 2019, n. 157;"@it ;
+    dct:identifier "8"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "8"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/9> a skos:Concept ;
+    rdfs:label "nel caso di somme corrisposte che non hanno concorso a formare il reddito imponibile (50% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati che hanno trasferito la loro residenza in Italia a decorrere dal 30 aprile 2019, in base a quanto stabilito dal comma 5-quater, dell’articolo 16 del D.lgs. n. 147 del 2015 modificato dal D.L. 30 aprile 2019, n. 34. L’opzione per questo regime agevolato comporta il versamento di un contributo pari allo 0,5 per cento della base imponibile. Le modalità per l’effettuazione di tale versamento sono state stabilite con il decreto del Presidente del Consiglio dei Ministri del 26 gennaio 2021;"@it ;
+    skos:prefLabel "nel caso di somme corrisposte che non hanno concorso a formare il reddito imponibile (50% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati che hanno trasferito la loro residenza in Italia a decorrere dal 30 aprile 2019, in base a quanto stabilito dal comma 5-quater, dell’articolo 16 del D.lgs. n. 147 del 2015 modificato dal D.L. 30 aprile 2019, n. 34. L’opzione per questo regime agevolato comporta il versamento di un contributo pari allo 0,5 per cento della base imponibile. Le modalità per l’effettuazione di tale versamento sono state stabilite con il decreto del Presidente del Consiglio dei Ministri del 26 gennaio 2021;"@it ;
+    dct:identifier "9"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "9"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/13> a skos:Concept ;
+    rdfs:label "nel caso di somme che non hanno concorso a formare il reddito imponibile (50% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati rientrati prima del 30 aprile 2019 che hanno esercitato l’opzione di cui al provvedimento del Direttore dell’Agenzia delle entrate del 3 marzo 2021 (come rettificato con l’errata corrige del 24 giugno 2021);"@it ;
+    skos:prefLabel "nel caso di somme che non hanno concorso a formare il reddito imponibile (50% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati rientrati prima del 30 aprile 2019 che hanno esercitato l’opzione di cui al provvedimento del Direttore dell’Agenzia delle entrate del 3 marzo 2021 (come rettificato con l’errata corrige del 24 giugno 2021);"@it ;
+    dct:identifier "13"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "13"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/14> a skos:Concept ;
+    rdfs:label "nel caso di somme che non hanno concorso a formare il reddito imponibile (90% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati rientrati prima del 30 aprile 2019 che hanno esercitato l’opzione di cui al provvedimento del Direttore dell’Agenzia delle entrate del 3 marzo 2021 (come rettificato con l’errata corrige del 24 giugno 2021);"@it ;
+    skos:prefLabel "nel caso di somme che non hanno concorso a formare il reddito imponibile (90% dell’ammontare erogato), relative ai compensi percepiti dai lavoratori impatriati rientrati prima del 30 aprile 2019 che hanno esercitato l’opzione di cui al provvedimento del Direttore dell’Agenzia delle entrate del 3 marzo 2021 (come rettificato con l’errata corrige del 24 giugno 2021);"@it ;
+    dct:identifier "14"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "14"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/15> a skos:Concept ;
+    rdfs:label "nel caso di somme che non hanno concorso a formare il reddito imponibile (90% dell’ammontare erogato), relative ai compensi percepiti dai docenti e ricercatori rientrati in Italia prima del 2020 e che alla data del 31 dicembre 2019 risultano beneficiari del regime previsto dall’art. 44 del D.L 31 maggio 2010, n. 78 che hanno esercitato l’opzione di cui al provvedimento del Direttore dell’Agenzia delle entrate del 31 marzo 2022,"@it ;
+    skos:prefLabel "nel caso di somme che non hanno concorso a formare il reddito imponibile (90% dell’ammontare erogato), relative ai compensi percepiti dai docenti e ricercatori rientrati in Italia prima del 2020 e che alla data del 31 dicembre 2019 risultano beneficiari del regime previsto dall’art. 44 del D.L 31 maggio 2010, n. 78 che hanno esercitato l’opzione di cui al provvedimento del Direttore dell’Agenzia delle entrate del 31 marzo 2022,"@it ;
+    dct:identifier "15"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "15"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/21> a skos:Concept ;
+    rdfs:label "nel caso di redditi esentati in tutto o in parte da imposizione in Italia in quanto il percipiente risiede in uno Stato estero con cui è in vigore una convenzione per evitare le doppie imposizioni in materia di imposte dirette;"@it ;
+    skos:prefLabel "nel caso di redditi esentati in tutto o in parte da imposizione in Italia in quanto il percipiente risiede in uno Stato estero con cui è in vigore una convenzione per evitare le doppie imposizioni in materia di imposte dirette;"@it ;
+    dct:identifier "21"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "21"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/22> a skos:Concept ;
+    rdfs:label "nel caso di retribuzioni corrisposte a dipendenti residenti nel territorio dello Stato da Enti e Organismi internazionali nonché da rappresentanze diplomatiche e consolari e missioni;"@it ;
+    skos:prefLabel "nel caso di retribuzioni corrisposte a dipendenti residenti nel territorio dello Stato da Enti e Organismi internazionali nonché da rappresentanze diplomatiche e consolari e missioni;"@it ;
+    dct:identifier "22"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "22"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/23> a skos:Concept ;
+    rdfs:label "nel caso di somme corrisposte per borse e assegni di studio o per attività di ricerca esenti sulla base di specifiche disposizioni normative (ad esempio le borse di studio per dottorato di ricerca corrisposte dalle università e dagli istituti d’istruzione universitaria previste dalla legge 30 novembre 1989, n. 398; le borse di studio per attività di ricerca post-lauream, previsti dalla legge n. 210/1998; gli assegni di ricerca previsti dalla Legge n. 240/2010);"@it ;
+    skos:prefLabel "nel caso di somme corrisposte per borse e assegni di studio o per attività di ricerca esenti sulla base di specifiche disposizioni normative (ad esempio le borse di studio per dottorato di ricerca corrisposte dalle università e dagli istituti d’istruzione universitaria previste dalla legge 30 novembre 1989, n. 398; le borse di studio per attività di ricerca post-lauream, previsti dalla legge n. 210/1998; gli assegni di ricerca previsti dalla Legge n. 240/2010);"@it ;
+    dct:identifier "23"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "23"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/24> a skos:Concept ;
+    rdfs:label "nel caso di erogazione di somme esenti o che non hanno concorso a formare il reddito imponibile da parte dell’INAIL;"@it ;
+    skos:prefLabel "nel caso di erogazione di somme esenti o che non hanno concorso a formare il reddito imponibile da parte dell’INAIL;"@it ;
+    dct:identifier "24"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "24"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/25> a skos:Concept ;
+    rdfs:label "nel caso di erogazione di somme esenti o che non hanno concorso a formare il reddito imponibile da parte dell’INPS;"@it ;
+    skos:prefLabel "nel caso di erogazione di somme esenti o che non hanno concorso a formare il reddito imponibile da parte dell’INPS;"@it ;
+    dct:identifier "25"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "25"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente/26> a skos:Concept ;
+    rdfs:label "nel caso di somme percepite dal lavoratore con disturbi dello spettro autistico, assunto dalla start-up che in base all’art. 12-quinquies del D.L n. 146 del 2021, non concorrono alla formazione del reddito imponibile complessivo"@it ;
+    skos:prefLabel "nel caso di somme percepite dal lavoratore con disturbi dello spettro autistico, assunto dalla start-up che in base all’art. 12-quinquies del D.L n. 146 del 2021, non concorrono alla formazione del reddito imponibile complessivo"@it ;
+    dct:identifier "26"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_redditi_esente> ;
+    skos:notation "26"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CRE_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codici_redditi_esente/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codici_redditi_esente/latest/codici_redditi_esente.csv> ;
+    dct:description "CU statement exempt revenue codes controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici redditi esenti associati alla sezione dati previdenziali e assistenziale della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement exempt revenue codes controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato dei codici redditi esenti associati alla sezione dati previdenziali e assistenziale della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CRE_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codici_redditi_esente/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codici_redditi_esente/latest/codici_redditi_esente.json> ;
+    dct:description "CU statement exempt revenue codes controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici redditi esenti associati alla sezione dati previdenziali e assistenziale della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement exempt revenue codes controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato dei codici redditi esenti associati alla sezione dati previdenziali e assistenziale della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CRE_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codici_redditi_esente/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codici_redditi_esente/latest/codici_redditi_esente.ttl> ;
+    dct:description "CU statement exempt revenue codes controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato dei codici redditi esenti associati alla sezione dati previdenziali e assistenziale della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU Statement exempt revenue codes controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato dei codici redditi esenti associati alla sezione dati previdenziali e assistenziale della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

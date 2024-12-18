@@ -1,0 +1,1792 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphol version="3">
+  <project version="1.0" name="Procedura15_EstrattoContoContributivo">
+    <ontology addLabelFromSimpleName="1" iri="https://w3id.org/italia/social-security/onto/contributionAccounStatement/" addLabelFromUserInput="0" prefix="INPSContributionAccountStatement" lang="it">
+      <imports/>
+      <prefixes>
+        <prefix>
+          <value>CLV</value>
+          <namespace>https://w3id.org/italia/onto/CLV/</namespace>
+        </prefix>
+        <prefix>
+          <value>COV</value>
+          <namespace>https://w3id.org/italia/onto/COV/</namespace>
+        </prefix>
+        <prefix>
+          <value>CPSV</value>
+          <namespace>https://w3id.org/italia/onto/CPSV/</namespace>
+        </prefix>
+        <prefix>
+          <value>CPV</value>
+          <namespace>https://w3id.org/italia/onto/CPV/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSContributionAccountStatement</value>
+          <namespace>https://w3id.org/italia/social-security/onto/contributionAccounStatement/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSContributions</value>
+          <namespace>https://w3id.org/italia/social-security/onto/contributions/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSCore</value>
+          <namespace>https://w3id.org/italia/social-security/onto/core/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSDWS</value>
+          <namespace>https://w3id.org/italia/social-security/onto/domesticWorkServices/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSPensions</value>
+          <namespace>https://w3id.org/italia/social-security/onto/pensions/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSRL</value>
+          <namespace>https://w3id.org/italia/social-security/onto/relevantLegislation/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSSMR</value>
+          <namespace>https://w3id.org/italia/social-security/onto/separateManagementRegistration/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSSafety</value>
+          <namespace>https://w3id.org/italia/social-security/onto/socialSafetyNet/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSService</value>
+          <namespace>https://w3id.org/italia/social-security/onto/services/</namespace>
+        </prefix>
+        <prefix>
+          <value>L0</value>
+          <namespace>https://w3id.org/italia/onto/l0/</namespace>
+        </prefix>
+        <prefix>
+          <value>RO</value>
+          <namespace>https://w3id.org/italia/onto/RO/</namespace>
+        </prefix>
+        <prefix>
+          <value>SEP_IRA</value>
+          <namespace>https://w3id.org/italia/social-security/onto/SEP_IRA</namespace>
+        </prefix>
+        <prefix>
+          <value>SM</value>
+          <namespace>https://w3id.org/italia/onto/SM/</namespace>
+        </prefix>
+        <prefix>
+          <value>TI</value>
+          <namespace>https://w3id.org/italia/onto/TI/</namespace>
+        </prefix>
+        <prefix>
+          <value>aco</value>
+          <namespace>https://w3id.org/italia/onto/ACO/</namespace>
+        </prefix>
+        <prefix>
+          <value>ateco-2007</value>
+          <namespace>https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/ateco-2007/</namespace>
+        </prefix>
+        <prefix>
+          <value>countries</value>
+          <namespace>http://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/</namespace>
+        </prefix>
+        <prefix>
+          <value>foaf</value>
+          <namespace>http://xmlns.com/foaf/0.1/</namespace>
+        </prefix>
+        <prefix>
+          <value>l0</value>
+          <namespace>https://w3id.org/italia/onto/l0/</namespace>
+        </prefix>
+        <prefix>
+          <value>owl</value>
+          <namespace>http://www.w3.org/2002/07/owl#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdf</value>
+          <namespace>http://www.w3.org/1999/02/22-rdf-syntax-ns#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdfs</value>
+          <namespace>http://www.w3.org/2000/01/rdf-schema#</namespace>
+        </prefix>
+        <prefix>
+          <value>skos</value>
+          <namespace>http://www.w3.org/2004/02/skos/core#</namespace>
+        </prefix>
+        <prefix>
+          <value>smapit</value>
+          <namespace>https://w3id.org/italia/onto/SM/</namespace>
+        </prefix>
+        <prefix>
+          <value>swrl</value>
+          <namespace>http://www.w3.org/2003/11/swrl#</namespace>
+        </prefix>
+        <prefix>
+          <value>swrlb</value>
+          <namespace>http://www.w3.org/2003/11/swrlb#</namespace>
+        </prefix>
+        <prefix>
+          <value>time</value>
+          <namespace>http://www.w3.org/2006/time#</namespace>
+        </prefix>
+        <prefix>
+          <value>xml</value>
+          <namespace>http://www.w3.org/XML/1998/namespace</namespace>
+        </prefix>
+        <prefix>
+          <value>xsd</value>
+          <namespace>http://www.w3.org/2001/XMLSchema#</namespace>
+        </prefix>
+      </prefixes>
+      <datatypes>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral</datatype>
+        <datatype>http://www.w3.org/2000/01/rdf-schema#Literal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NCName</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NMTOKEN</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#Name</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#base64Binary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#boolean</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#byte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTimeStamp</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#decimal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#double</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#float</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#hexBinary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#int</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#integer</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#language</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#long</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#negativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonNegativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonPositiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#normalizedString</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#positiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#short</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#token</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedByte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedInt</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedLong</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedShort</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#rational</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#real</datatype>
+      </datatypes>
+      <languages>
+        <language>de</language>
+        <language>en</language>
+        <language>es</language>
+        <language>fr</language>
+        <language>it</language>
+      </languages>
+      <facets>
+        <facet>http://www.w3.org/2001/XMLSchema#langRange</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#length</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#pattern</facet>
+      </facets>
+      <annotationProperties>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#comment</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#isDefinedBy</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#label</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#deprecated</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#incompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#priorVersion</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#versionInfo</annotationProperty>
+      </annotationProperties>
+      <iris>
+        <iri>
+          <value>http://xmlns.com/foaf/0.1/Document</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/CPSV/Service</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/CPV/Alive</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/ContributoFacoltativo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/ContributoFacoltativo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Contributo Facoltativo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/ContributoFacoltativo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Optional contribution</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/ContributoFacoltativo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta i dati dei contributi figurativi che sono contributi previdenziali che vengono accreditati, a domanda o d’ufficio,  per i periodi di assenza dal lavoro o di retribuzione ridotta senza onere a carico dei lavoratori (privati/pubblici) </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/ContributoFacoltativo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the data of the notional contributions which are social security contributions that are credited, upon request or automatically, for periods of absence from work or reduced pay without charge to the workers (private/public)</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>EstrattoContoDipendentiPubblici</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Public Employees Account Statement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta l'estratto conto dei dipendenti pubblici</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the bank statement of public employees</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Account Statement Management of Entertainment Workers and Professional Athletes</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta l'estratto conto dei lavoratori dello spettacolo e dello sport</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the balance sheet of entertainment and sports workers</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>EstrattoContoGestioneSeparata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Separate Management Account Statement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta l'estratto conto degli Iscritti alla Gestione Separata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the account statement of the members of the Separate Account</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>EstrattoContoPrevidenzialeRegimeGenerale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>General Social Security Account Statement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta l'estratto conto previdenziale regime generale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the general regime social security account statement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoreIscrittoAGestioneSeparata</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoreIscrittoAGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>LavoratoreIscrittoAGestioneSeparata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoreIscrittoAGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Worker Registered in Separate Management</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoreIscrittoAGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta il lavoratore iscritto alla Gestione Separata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoreIscrittoAGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the worker registered with the Separate Management</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoriDelloSpettacoloESportiviProfessionisti</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>LavoratoriDelloSpettacoloESportiviProfessionisti</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Entertainment workers and professional athletes</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta i lavoratori dello spettacolo e dello sport</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents entertainment and sports workers</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/aziendaVersatrice</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/aziendaVersatrice</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>azienda versatrice</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/aziendaVersatrice</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>pouring company</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/aziendaVersatrice</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Indica l'azienda che versa i contributi al lavoratore</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/aziendaVersatrice</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Indicates the company that pays the contributions to the worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/consultaEstrattoContoContributivo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/consultaEstrattoContoContributivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>consultaEstrattoContoContributivo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/consultaEstrattoContoContributivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>consult Contribution Account Statement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/consultaEstrattoContoContributivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Definisce la relazione tra le classi Lavoratore, Delegato e la classe EstrattoContoContributivo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/consultaEstrattoContoContributivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Defines the relationship between the Worker, Delegate classes and the EstrattoContoContributivo class</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/contributoRiferitoAEstrattoContoContributivo</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/contributoRiferitoAEstrattoContoContributivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>contributoRiferitoAEstrattoContoContributivo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/contributoRiferitoAEstrattoContoContributivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Contribution Referring To Contribution Account Statement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/contributoRiferitoAEstrattoContoContributivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Definisce la relazione tra la classe Contributo Previdenziale e la classe Estratto Conto Contributivo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/contributoRiferitoAEstrattoContoContributivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Defines the relationship between the Social Security Contribution class and the Contribution Account Statement class</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto</value>
+          <inverseFunctional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>dàAccessoAEstrattoConto</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Gives Access to Account Statemen</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Definisce la relazione tra la classe EstrattoContoContributivo e le classi EstrattoContoGestioneSeparata, EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti, EstrattoContoDipendentiPubblici, EstrattoContoPrevidenzialeRegimeGenerale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Defines the relationship between the Contribution Account Statement class and the classes Separate Management Account Statement, Management Account Statement for Entertainment and Professional Sports Workers, Public Employees Account Statement, General Scheme Social Security Account Statement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoContributivoRegimeGenerale</value>
+          <functional/>
+          <inverseFunctional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoContributivoRegimeGenerale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>haAccessoAEstrattoContoPrevidenzialeRegimeGenerale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoContributivoRegimeGenerale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has access to the General Scheme Social Security Account Statement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoContributivoRegimeGenerale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Definisce la relazione tra la classe Lavoratore e la classe EstrattoContoPrevidenzialeRegimeGenerale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoContributivoRegimeGenerale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Defines the relationship between the Worker class and the General Scheme Social Security Account Statement class</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoDipendentiPubblici</value>
+          <functional/>
+          <inverseFunctional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoDipendentiPubblici</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>haAccessoAEstrattoContoDipendentiPubblici</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoDipendentiPubblici</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>hasAccessToPublicEmployeesAccountStatement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoDipendentiPubblici</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Definisce la relazione tra la classe DipendentePubblico e la classe EstrattoContoDipendentiPubblici</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoDipendentiPubblici</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Defines the relationship between the PublicEmployee class and the PublicEmployeeAccountStatement class</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</value>
+          <functional/>
+          <inverseFunctional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>hasAccessAccount StatementManagementWorkersEntertainmentSportspeopleProfessionals</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Definisce la relazione tra la classe LavoratoriDelloSpettacoloESportiviProfessionisti e la classe EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Defines the relationship between the LavoratoriDelloSpettacoloEsportiviProfessionalisti class and the EstrattoContoGestioneLavoratoriDelloSpettacoloEsportiviProfessionalisti class</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneSeparata</value>
+          <functional/>
+          <inverseFunctional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>haAccessoAEstrattoContoGestioneSeparata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>hasAccountStatementAccessSeparateManagement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Definisce la relazione tra la classe LavoratoreIscrittoAGestioneSeparata e la classe EstrattoContoGestioneSeparata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneSeparata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Defines the relationship between the WorkerEnrolledAGestioneSeparata class and the EstrattoContoGestioneSeparata class</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/note</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/note</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>note</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/note</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>notes</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/note</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Note</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/note</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>notes</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/contributionAccounStatement/periodoDiRiferimento</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/periodoDiRiferimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>periodo di riferimento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/periodoDiRiferimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>reference period</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/periodoDiRiferimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Indica il periodo di riferimento (da,a) della riga relativa all'estratto conto</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/contributionAccounStatement/periodoDiRiferimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Indicates the reference period (from, to) of the line relating to the bank statement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/separateManagementRegistration/LiberoProfessionistaIscrittoGestioneSeparata</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoDaRiscatto</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoFigurativo</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoPrevidenziale</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoVolontario</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/DipendentePubblico</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/EstrattoContoContributivo</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/Lavoratore</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomo</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomoOccasionale</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreParasubordinato</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/TipoDiContribuzione</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/haContributoPrevidenziale</value>
+          <inverseFunctional/>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/haEstrattoContoContributivo</value>
+          <functional/>
+          <inverseFunctional/>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/haTipoDiContribuzione</value>
+          <functional/>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/imponibileContributivo</value>
+          <functional/>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroUnitàTemporaliPerDiritto</value>
+          <functional/>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroUnitàTemporaliPerMisura</value>
+          <functional/>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/socialSafetyNet/unitàDiMisuraTemporale</value>
+          <functional/>
+        </iri>
+      </iris>
+    </ontology>
+    <diagrams>
+      <diagram height="5000" name="ConsultazioneEstrattoContoContributivo" width="5000">
+        <node color="#fcfcfc" type="concept" id="n10">
+          <geometry height="50" x="690" width="110" y="-720"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/EstrattoContoContributivo</iri>
+          <label height="50" x="690" customSize="0" width="110" y="-720" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n11">
+          <geometry height="50" x="240" width="110" y="-900"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/Lavoratore</iri>
+          <label height="36" x="240" customSize="0" width="110" y="-900" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n12">
+          <geometry height="50" x="440" width="110" y="-900"/>
+          <iri>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</iri>
+          <label height="22" x="440" customSize="0" width="110" y="-900" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="role" id="n13">
+          <geometry height="50" x="240" width="70" y="-690"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/haContributoPrevidenziale</iri>
+          <label height="22" x="240" customSize="0" width="216" y="-725" size="12"/>
+        </node>
+        <node color="#000000" type="range-restriction" id="n14">
+          <geometry height="20" x="350" width="20" y="-690"/>
+          <label height="22" x="380" customSize="0" width="39" y="-690" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n15">
+          <geometry height="20" x="240" width="20" y="-790"/>
+          <label height="22" x="210" customSize="0" width="39" y="-790" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n16">
+          <geometry height="50" x="350" width="110" y="-590"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoPrevidenziale</iri>
+          <label height="36" x="350" customSize="0" width="110" y="-590" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="role" id="n17">
+          <geometry height="50" x="590" width="70" y="-590"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/contributoRiferitoAEstrattoContoContributivo</iri>
+          <label height="22" x="590" customSize="0" width="253" y="-625" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n18">
+          <geometry height="20" x="490" width="20" y="-590"/>
+          <label height="22" x="490" customSize="0" width="39" y="-570" size="12">exists</label>
+        </node>
+        <node color="#000000" type="range-restriction" id="n19">
+          <geometry height="20" x="690" width="20" y="-590"/>
+          <label height="22" x="690" customSize="0" width="39" y="-570" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="role" id="n2">
+          <geometry height="50" x="450" width="70" y="-720"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/consultaEstrattoContoContributivo</iri>
+          <label height="22" x="450" customSize="0" width="198" y="-750" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="attribute" id="n20">
+          <geometry height="20" x="-320" width="20" y="-690"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/imponibileContributivo</iri>
+          <label height="22" x="-320" customSize="0" width="196" y="-710" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n21">
+          <geometry height="50" x="-10" width="110" y="-670"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoVolontario</iri>
+          <label height="36" x="-10" customSize="0" width="110" y="-670" size="12"/>
+        </node>
+        <node color="#000000" type="disjoint-union" id="n22">
+          <geometry height="30" x="210" width="50" y="-590"/>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n23">
+          <geometry height="20" x="-200" width="20" y="-590"/>
+          <label height="22" x="-200" customSize="0" width="39" y="-610" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n24">
+          <geometry height="20" x="-200" width="20" y="-640"/>
+          <label height="22" x="-200" customSize="0" width="39" y="-660" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n25">
+          <geometry height="50" x="-10" width="110" y="-750"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoDaRiscatto</iri>
+          <label height="36" x="-10" customSize="0" width="110" y="-750" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="attribute" id="n26">
+          <geometry height="20" x="-320" width="20" y="-540"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/unitàDiMisuraTemporale</iri>
+          <label height="22" x="-335" customSize="0" width="205" y="-560" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n27">
+          <geometry height="20" x="-200" width="20" y="-540"/>
+          <label height="22" x="-200" customSize="0" width="39" y="-560" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n28">
+          <geometry height="50" x="-10" width="110" y="-590"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio</iri>
+          <label height="36" x="-10" customSize="0" width="110" y="-590" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="attribute" id="n29">
+          <geometry height="20" x="-320" width="20" y="-640"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroUnitàTemporaliPerDiritto</iri>
+          <label height="22" x="-360" customSize="0" width="248" y="-660" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n3">
+          <geometry height="20" x="450" width="20" y="-810"/>
+          <label height="22" x="450" customSize="0" width="39" y="-830" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n30">
+          <geometry height="20" x="-200" width="20" y="-690"/>
+          <label height="22" x="-195" customSize="0" width="39" y="-710" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n31">
+          <geometry height="50" x="-10" width="110" y="-510"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoFigurativo</iri>
+          <label height="36" x="-10" customSize="0" width="110" y="-510" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="attribute" id="n32">
+          <geometry height="20" x="-320" width="20" y="-590"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroUnitàTemporaliPerMisura</iri>
+          <label height="22" x="-360" customSize="0" width="252" y="-610" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n33">
+          <geometry height="50" x="-10" width="110" y="-430"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/ContributoFacoltativo</iri>
+          <label height="36" x="-10" customSize="0" width="110" y="-430" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="attribute" id="n34">
+          <geometry height="20" x="-320" width="20" y="-740"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/periodoDiRiferimento</iri>
+          <label height="22" x="-320" customSize="0" width="124" y="-762" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n35">
+          <geometry height="20" x="-200" width="20" y="-740"/>
+          <label height="22" x="-200" customSize="0" width="39" y="-762" size="12">exists</label>
+        </node>
+        <node color="#000000" type="range-restriction" id="n36">
+          <geometry height="20" x="690" width="20" y="-510"/>
+          <label height="22" x="690" customSize="0" width="39" y="-490" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n37">
+          <geometry height="20" x="490" width="20" y="-510"/>
+          <label height="22" x="490" customSize="0" width="39" y="-490" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="role" id="n38">
+          <geometry height="50" x="590" width="70" y="-510"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/haTipoDiContribuzione</iri>
+          <label height="22" x="590" customSize="0" width="197" y="-545" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n39">
+          <geometry height="50" x="800" width="110" y="-510"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/TipoDiContribuzione</iri>
+          <label height="36" x="800" customSize="0" width="110" y="-510" size="12"/>
+        </node>
+        <node color="#000000" type="range-restriction" id="n4">
+          <geometry height="20" x="560" width="20" y="-720"/>
+          <label height="22" x="560" customSize="0" width="39" y="-700" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="attribute" id="n40">
+          <geometry height="20" x="-320" width="20" y="-490"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/aziendaVersatrice</iri>
+          <label height="22" x="-320" customSize="0" width="106" y="-512" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n41">
+          <geometry height="20" x="-200" width="20" y="-490"/>
+          <label height="22" x="-200" customSize="0" width="39" y="-512" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n42">
+          <geometry height="20" x="-200" width="20" y="-440"/>
+          <label height="22" x="-200" customSize="0" width="39" y="-462" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="attribute" id="n43">
+          <geometry height="20" x="-320" width="20" y="-440"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/note</iri>
+          <label height="22" x="-320" customSize="0" width="32" y="-462" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n45">
+          <geometry height="50" x="1330" width="110" y="-600"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale</iri>
+          <label height="50" x="1330" customSize="0" width="110" y="-600" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n46">
+          <geometry height="50" x="1330" width="110" y="-840"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata</iri>
+          <label height="36" x="1330" customSize="0" width="110" y="-840" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="role" id="n47">
+          <geometry height="50" x="970" width="70" y="-720"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto</iri>
+          <label height="22" x="965" customSize="0" width="151" y="-755" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n48">
+          <geometry height="20" x="830" width="20" y="-720"/>
+          <label height="22" x="830" customSize="0" width="39" y="-700" size="12">exists</label>
+        </node>
+        <node color="#000000" type="range-restriction" id="n49">
+          <geometry height="20" x="1190" width="20" y="-600"/>
+          <label height="22" x="1190" customSize="0" width="39" y="-620" size="12">exists</label>
+        </node>
+        <node color="#000000" type="disjoint-union" id="n5">
+          <geometry height="30" x="340" width="50" y="-810"/>
+        </node>
+        <node color="#000000" type="range-restriction" id="n50">
+          <geometry height="20" x="1190" width="20" y="-840"/>
+          <label height="22" x="1190" customSize="0" width="39" y="-860" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n51">
+          <geometry height="50" x="2180" width="110" y="-970"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreParasubordinato</iri>
+          <label height="50" x="2180" customSize="0" width="110" y="-970" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n54">
+          <geometry height="50" x="1760" width="110" y="-970"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomoOccasionale</iri>
+          <label height="50" x="1760" customSize="0" width="110" y="-970" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n55">
+          <geometry height="50" x="2040" width="110" y="-970"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomo</iri>
+          <label height="36" x="2040" customSize="0" width="110" y="-970" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="role" id="n56">
+          <geometry height="50" x="1570" width="70" y="-600"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoContributivoRegimeGenerale</iri>
+          <label height="22" x="1570" customSize="0" width="310" y="-635" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n57">
+          <geometry height="20" x="1670" width="20" y="-600"/>
+          <label height="22" x="1670" customSize="0" width="39" y="-615" size="12">exists</label>
+        </node>
+        <node color="#000000" type="range-restriction" id="n58">
+          <geometry height="20" x="1470" width="20" y="-600"/>
+          <label height="22" x="1470" customSize="0" width="39" y="-615" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="role" id="n59">
+          <geometry height="50" x="1570" width="70" y="-840"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneSeparata</iri>
+          <label height="22" x="1570" customSize="0" width="247" y="-870" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="role" id="n6">
+          <geometry height="50" x="690" width="70" y="-890"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/haEstrattoContoContributivo</iri>
+          <label height="22" x="700" customSize="0" width="229" y="-925" size="12"/>
+        </node>
+        <node color="#000000" type="range-restriction" id="n62">
+          <geometry height="20" x="1470" width="20" y="-840"/>
+          <label height="22" x="1470" customSize="0" width="39" y="-820" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n63">
+          <geometry height="20" x="1670" width="20" y="-840"/>
+          <label height="22" x="1670" customSize="0" width="39" y="-820" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n64">
+          <geometry height="50" x="1810" width="110" y="-840"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoreIscrittoAGestioneSeparata</iri>
+          <label height="50" x="1810" customSize="0" width="110" y="-840" size="12"/>
+        </node>
+        <node color="#000000" type="disjoint-union" id="n65">
+          <geometry height="30" x="1970" width="50" y="-840"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n66">
+          <geometry height="50" x="1900" width="110" y="-970"/>
+          <iri>https://w3id.org/italia/social-security/onto/separateManagementRegistration/LiberoProfessionistaIscrittoGestioneSeparata</iri>
+          <label height="64" x="1900" customSize="0" width="110" y="-970" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n67">
+          <geometry height="50" x="1330" width="110" y="-680"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici</iri>
+          <label height="36" x="1330" customSize="0" width="110" y="-680" size="12"/>
+        </node>
+        <node color="#000000" type="range-restriction" id="n68">
+          <geometry height="20" x="1190" width="20" y="-680"/>
+          <label height="22" x="1190" customSize="0" width="39" y="-702" size="12">exists</label>
+        </node>
+        <node color="#000000" type="range-restriction" id="n69">
+          <geometry height="20" x="1470" width="20" y="-680"/>
+          <label height="22" x="1470" customSize="0" width="39" y="-660" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n7">
+          <geometry height="50" x="690" width="110" y="-1050"/>
+          <iri>https://w3id.org/italia/onto/CPV/Alive</iri>
+          <label height="22" x="690" customSize="0" width="110" y="-1050" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n70">
+          <geometry height="20" x="1670" width="20" y="-680"/>
+          <label height="22" x="1670" customSize="0" width="39" y="-665" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="role" id="n71">
+          <geometry height="50" x="1570" width="70" y="-680"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoDipendentiPubblici</iri>
+          <label height="22" x="1570" customSize="0" width="253" y="-715" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n72">
+          <geometry height="50" x="1810" width="110" y="-680"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/DipendentePubblico</iri>
+          <label height="36" x="1810" customSize="0" width="110" y="-680" size="12"/>
+        </node>
+        <node color="#000000" type="range-restriction" id="n73">
+          <geometry height="20" x="1190" width="20" y="-760"/>
+          <label height="22" x="1190" customSize="0" width="39" y="-782" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n74">
+          <geometry height="50" x="1330" width="110" y="-760"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</iri>
+          <label height="50" x="1330" customSize="0" width="110" y="-760" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="role" id="n75">
+          <geometry height="50" x="1570" width="70" y="-760"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</iri>
+          <label height="22" x="1570" customSize="0" width="460" y="-795" size="12"/>
+        </node>
+        <node color="#000000" type="range-restriction" id="n78">
+          <geometry height="20" x="1470" width="20" y="-760"/>
+          <label height="22" x="1470" customSize="0" width="39" y="-740" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n79">
+          <geometry height="20" x="1670" width="20" y="-760"/>
+          <label height="22" x="1670" customSize="0" width="39" y="-740" size="12">exists</label>
+        </node>
+        <node color="#000000" type="range-restriction" id="n8">
+          <geometry height="20" x="690" width="20" y="-810"/>
+          <label height="22" x="720" customSize="0" width="39" y="-810" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n82">
+          <geometry height="50" x="1810" width="110" y="-600"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/Lavoratore</iri>
+          <label height="36" x="1810" customSize="0" width="110" y="-600" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="complement" id="n83">
+          <geometry height="30" x="1670" width="50" y="-520"/>
+          <label height="22" x="1670" customSize="0" width="26" y="-520" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n84">
+          <geometry height="50" x="1540" width="110" y="-320"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/DipendentePubblico</iri>
+          <label height="36" x="1540" customSize="0" width="110" y="-320" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="union" id="n85">
+          <geometry height="30" x="1670" width="50" y="-440"/>
+          <label height="22" x="1670" customSize="0" width="19" y="-440" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n86">
+          <geometry height="50" x="1670" width="110" y="-320"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoreIscrittoAGestioneSeparata</iri>
+          <label height="50" x="1670" customSize="0" width="110" y="-320" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n87">
+          <geometry height="50" x="1810" width="110" y="-760"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoriDelloSpettacoloESportiviProfessionisti</iri>
+          <label height="50" x="1810" customSize="0" width="110" y="-760" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n88">
+          <geometry height="50" x="1800" width="110" y="-320"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoriDelloSpettacoloESportiviProfessionisti</iri>
+          <label height="50" x="1800" customSize="0" width="110" y="-320" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="domain-restriction" id="n9">
+          <geometry height="20" x="690" width="20" y="-970"/>
+          <label height="22" x="720" customSize="0" width="39" y="-970" size="12">exists</label>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n90">
+          <geometry height="50" x="1990" width="110" y="-760"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/Lavoratore</iri>
+          <label height="36" x="1990" customSize="0" width="110" y="-760" size="12"/>
+        </node>
+        <edge type="input" id="e0" target="n3" source="n2">
+          <point x="450" y="-720"/>
+          <point x="450" y="-810"/>
+        </edge>
+        <edge type="input" id="e1" target="n4" source="n2">
+          <point x="450" y="-720"/>
+          <point x="560" y="-720"/>
+        </edge>
+        <edge type="input" id="e10" target="n5" source="n12">
+          <point x="440" y="-900"/>
+          <point x="340" y="-900"/>
+          <point x="340" y="-810"/>
+        </edge>
+        <edge type="input" id="e11" target="n15" source="n13">
+          <point x="240" y="-690"/>
+          <point x="240" y="-790"/>
+        </edge>
+        <edge type="input" id="e12" target="n14" source="n13">
+          <point x="240" y="-690"/>
+          <point x="350" y="-690"/>
+        </edge>
+        <edge type="inclusion" id="e15" target="n11" source="n15">
+          <point x="240" y="-790"/>
+          <point x="240" y="-900"/>
+        </edge>
+        <edge type="equivalence" id="e16" target="n16" source="n14">
+          <point x="350" y="-690"/>
+          <point x="350" y="-590"/>
+        </edge>
+        <edge type="input" id="e17" target="n18" source="n17">
+          <point x="590" y="-590"/>
+          <point x="490" y="-590"/>
+        </edge>
+        <edge type="input" id="e18" target="n19" source="n17">
+          <point x="590" y="-590"/>
+          <point x="690" y="-590"/>
+        </edge>
+        <edge type="equivalence" id="e19" target="n18" source="n16">
+          <point x="350" y="-590"/>
+          <point x="490" y="-590"/>
+        </edge>
+        <edge type="equivalence" id="e2" target="n5" source="n3">
+          <point x="450" y="-810"/>
+          <point x="340" y="-810"/>
+        </edge>
+        <edge type="equivalence" id="e20" target="n10" source="n19">
+          <point x="690" y="-590"/>
+          <point x="690" y="-720"/>
+        </edge>
+        <edge type="input" id="e21" target="n30" source="n20">
+          <point x="-320" y="-690"/>
+          <point x="-200" y="-690"/>
+        </edge>
+        <edge type="input" id="e22" target="n22" source="n21">
+          <point x="-10" y="-670"/>
+          <point x="110" y="-670"/>
+          <point x="110" y="-590"/>
+          <point x="210" y="-590"/>
+        </edge>
+        <edge type="input" id="e23" target="n22" source="n31">
+          <point x="-10" y="-510"/>
+          <point x="110" y="-510"/>
+          <point x="110" y="-590"/>
+          <point x="210" y="-590"/>
+        </edge>
+        <edge type="input" id="e24" target="n22" source="n28">
+          <point x="-10" y="-590"/>
+          <point x="210" y="-590"/>
+        </edge>
+        <edge type="input" id="e25" target="n22" source="n25">
+          <point x="-10" y="-750"/>
+          <point x="110" y="-750"/>
+          <point x="110" y="-590"/>
+          <point x="210" y="-590"/>
+        </edge>
+        <edge type="input" id="e26" target="n23" source="n32">
+          <point x="-320" y="-590"/>
+          <point x="-200" y="-590"/>
+        </edge>
+        <edge type="equivalence" id="e27" target="n28" source="n23">
+          <point x="-200" y="-590"/>
+          <point x="-120" y="-590"/>
+          <point x="-10" y="-590"/>
+        </edge>
+        <edge type="equivalence" id="e28" target="n28" source="n24">
+          <point x="-200" y="-640"/>
+          <point x="-120" y="-640"/>
+          <point x="-120" y="-590"/>
+          <point x="-10" y="-590"/>
+        </edge>
+        <edge type="input" id="e29" target="n24" source="n29">
+          <point x="-320" y="-640"/>
+          <point x="-200" y="-640"/>
+        </edge>
+        <edge type="input" id="e30" target="n27" source="n26">
+          <point x="-320" y="-540"/>
+          <point x="-200" y="-540"/>
+        </edge>
+        <edge type="equivalence" id="e31" target="n28" source="n27">
+          <point x="-200" y="-540"/>
+          <point x="-120" y="-540"/>
+          <point x="-120" y="-590"/>
+          <point x="-10" y="-590"/>
+        </edge>
+        <edge type="equivalence" id="e32" target="n28" source="n30">
+          <point x="-200" y="-690"/>
+          <point x="-120" y="-690"/>
+          <point x="-120" y="-590"/>
+          <point x="-10" y="-590"/>
+        </edge>
+        <edge type="inclusion" id="e33" target="n16" source="n22">
+          <point x="210" y="-590"/>
+          <point x="350" y="-590"/>
+        </edge>
+        <edge type="input" id="e34" target="n22" source="n33">
+          <point x="-10" y="-430"/>
+          <point x="110" y="-430"/>
+          <point x="110" y="-590"/>
+          <point x="210" y="-590"/>
+        </edge>
+        <edge type="input" id="e35" target="n35" source="n34">
+          <point x="-320" y="-740"/>
+          <point x="-200" y="-740"/>
+        </edge>
+        <edge type="input" id="e36" target="n36" source="n38">
+          <point x="590" y="-510"/>
+          <point x="690" y="-510"/>
+        </edge>
+        <edge type="inclusion" id="e37" target="n39" source="n36">
+          <point x="690" y="-510"/>
+          <point x="800" y="-510"/>
+        </edge>
+        <edge type="input" id="e38" target="n37" source="n38">
+          <point x="590" y="-510"/>
+          <point x="490" y="-510"/>
+        </edge>
+        <edge type="equivalence" id="e39" target="n37" source="n16">
+          <point x="350" y="-590"/>
+          <point x="440" y="-590"/>
+          <point x="440" y="-510"/>
+          <point x="490" y="-510"/>
+        </edge>
+        <edge type="input" id="e4" target="n9" source="n6">
+          <point x="690" y="-890"/>
+          <point x="690" y="-970"/>
+        </edge>
+        <edge type="input" id="e40" target="n41" source="n40">
+          <point x="-320" y="-490"/>
+          <point x="-200" y="-490"/>
+        </edge>
+        <edge type="input" id="e41" target="n42" source="n43">
+          <point x="-320" y="-440"/>
+          <point x="-200" y="-440"/>
+        </edge>
+        <edge type="equivalence" id="e42" target="n28" source="n35">
+          <point x="-200" y="-740"/>
+          <point x="-120" y="-740"/>
+          <point x="-120" y="-590"/>
+          <point x="-10" y="-590"/>
+        </edge>
+        <edge type="equivalence" id="e43" target="n28" source="n41">
+          <point x="-200" y="-490"/>
+          <point x="-120" y="-490"/>
+          <point x="-120" y="-590"/>
+          <point x="-10" y="-590"/>
+        </edge>
+        <edge type="equivalence" id="e44" target="n28" source="n42">
+          <point x="-200" y="-440"/>
+          <point x="-120" y="-440"/>
+          <point x="-120" y="-590"/>
+          <point x="-10" y="-590"/>
+        </edge>
+        <edge type="input" id="e46" target="n48" source="n47">
+          <point x="970" y="-720"/>
+          <point x="830" y="-720"/>
+        </edge>
+        <edge type="input" id="e47" target="n49" source="n47">
+          <point x="970" y="-720"/>
+          <point x="1120" y="-720"/>
+          <point x="1120" y="-600"/>
+          <point x="1190" y="-600"/>
+        </edge>
+        <edge type="equivalence" id="e48" target="n48" source="n10">
+          <point x="690" y="-720"/>
+          <point x="830" y="-720"/>
+        </edge>
+        <edge type="equivalence" id="e49" target="n45" source="n49">
+          <point x="1190" y="-600"/>
+          <point x="1330" y="-600"/>
+        </edge>
+        <edge type="input" id="e5" target="n8" source="n6">
+          <point x="690" y="-890"/>
+          <point x="690" y="-810"/>
+        </edge>
+        <edge type="input" id="e50" target="n50" source="n47">
+          <point x="970" y="-720"/>
+          <point x="1120" y="-720"/>
+          <point x="1120" y="-840"/>
+          <point x="1190" y="-840"/>
+        </edge>
+        <edge type="equivalence" id="e51" target="n46" source="n50">
+          <point x="1190" y="-840"/>
+          <point x="1330" y="-840"/>
+        </edge>
+        <edge type="input" id="e52" target="n57" source="n56">
+          <point x="1570" y="-600"/>
+          <point x="1670" y="-600"/>
+        </edge>
+        <edge type="input" id="e53" target="n58" source="n56">
+          <point x="1570" y="-600"/>
+          <point x="1470" y="-600"/>
+        </edge>
+        <edge type="equivalence" id="e55" target="n45" source="n58">
+          <point x="1470" y="-600"/>
+          <point x="1330" y="-600"/>
+        </edge>
+        <edge type="input" id="e56" target="n62" source="n59">
+          <point x="1570" y="-840"/>
+          <point x="1470" y="-840"/>
+        </edge>
+        <edge type="input" id="e57" target="n63" source="n59">
+          <point x="1570" y="-840"/>
+          <point x="1670" y="-840"/>
+        </edge>
+        <edge type="equivalence" id="e58" target="n62" source="n46">
+          <point x="1330" y="-840"/>
+          <point x="1470" y="-840"/>
+        </edge>
+        <edge type="equivalence" id="e59" target="n64" source="n63">
+          <point x="1670" y="-840"/>
+          <point x="1810" y="-840"/>
+        </edge>
+        <edge type="inclusion" id="e6" target="n7" source="n9">
+          <point x="690" y="-970"/>
+          <point x="690" y="-1050"/>
+        </edge>
+        <edge type="equivalence" id="e60" target="n64" source="n65">
+          <point x="1970" y="-840"/>
+          <point x="1810" y="-840"/>
+        </edge>
+        <edge type="input" id="e62" target="n65" source="n54">
+          <point x="1760" y="-970"/>
+          <point x="1760" y="-900"/>
+          <point x="1970" y="-900"/>
+          <point x="1970" y="-840"/>
+        </edge>
+        <edge type="input" id="e64" target="n65" source="n51">
+          <point x="2180" y="-970"/>
+          <point x="2180" y="-900"/>
+          <point x="1970" y="-900"/>
+          <point x="1970" y="-840"/>
+        </edge>
+        <edge type="input" id="e65" target="n65" source="n55">
+          <point x="2040" y="-970"/>
+          <point x="2040" y="-900"/>
+          <point x="1970" y="-900"/>
+          <point x="1970" y="-840"/>
+        </edge>
+        <edge type="input" id="e66" target="n65" source="n66">
+          <point x="1900" y="-970"/>
+          <point x="1900" y="-900"/>
+          <point x="1970" y="-900"/>
+          <point x="1970" y="-840"/>
+        </edge>
+        <edge type="input" id="e68" target="n68" source="n47">
+          <point x="970" y="-720"/>
+          <point x="1120" y="-720"/>
+          <point x="1120" y="-680"/>
+          <point x="1190" y="-680"/>
+        </edge>
+        <edge type="equivalence" id="e69" target="n67" source="n68">
+          <point x="1190" y="-680"/>
+          <point x="1330" y="-680"/>
+        </edge>
+        <edge type="equivalence" id="e7" target="n10" source="n8">
+          <point x="690" y="-810"/>
+          <point x="690" y="-720"/>
+        </edge>
+        <edge type="input" id="e70" target="n69" source="n71">
+          <point x="1570" y="-680"/>
+          <point x="1470" y="-680"/>
+        </edge>
+        <edge type="input" id="e71" target="n70" source="n71">
+          <point x="1570" y="-680"/>
+          <point x="1670" y="-680"/>
+        </edge>
+        <edge type="equivalence" id="e72" target="n69" source="n67">
+          <point x="1330" y="-680"/>
+          <point x="1470" y="-680"/>
+        </edge>
+        <edge type="equivalence" id="e73" target="n72" source="n70">
+          <point x="1670" y="-680"/>
+          <point x="1810" y="-680"/>
+        </edge>
+        <edge type="input" id="e74" target="n73" source="n47">
+          <point x="970" y="-720"/>
+          <point x="1120" y="-720"/>
+          <point x="1120" y="-760"/>
+          <point x="1190" y="-760"/>
+        </edge>
+        <edge type="equivalence" id="e75" target="n74" source="n73">
+          <point x="1190" y="-760"/>
+          <point x="1330" y="-760"/>
+        </edge>
+        <edge type="input" id="e76" target="n78" source="n75">
+          <point x="1570" y="-760"/>
+          <point x="1470" y="-760"/>
+        </edge>
+        <edge type="input" id="e77" target="n79" source="n75">
+          <point x="1570" y="-760"/>
+          <point x="1670" y="-760"/>
+        </edge>
+        <edge type="equivalence" id="e78" target="n78" source="n74">
+          <point x="1330" y="-760"/>
+          <point x="1470" y="-760"/>
+        </edge>
+        <edge type="equivalence" id="e79" target="n82" source="n57">
+          <point x="1670" y="-600"/>
+          <point x="1810" y="-600"/>
+        </edge>
+        <edge type="equivalence" id="e8" target="n10" source="n4">
+          <point x="560" y="-720"/>
+          <point x="690" y="-720"/>
+        </edge>
+        <edge type="input" id="e82" target="n57" source="n83">
+          <point x="1670" y="-520"/>
+          <point x="1670" y="-600"/>
+        </edge>
+        <edge type="input" id="e83" target="n83" source="n85">
+          <point x="1670" y="-440"/>
+          <point x="1670" y="-520"/>
+        </edge>
+        <edge type="input" id="e84" target="n85" source="n84">
+          <point x="1540" y="-320"/>
+          <point x="1540" y="-380"/>
+          <point x="1670" y="-380"/>
+          <point x="1670" y="-440"/>
+        </edge>
+        <edge type="input" id="e85" target="n85" source="n86">
+          <point x="1670" y="-320"/>
+          <point x="1670" y="-440"/>
+        </edge>
+        <edge type="input" id="e86" target="n85" source="n88">
+          <point x="1800" y="-320"/>
+          <point x="1800" y="-380"/>
+          <point x="1670" y="-380"/>
+          <point x="1670" y="-440"/>
+        </edge>
+        <edge type="equivalence" id="e87" target="n87" source="n79">
+          <point x="1670" y="-760"/>
+          <point x="1810" y="-760"/>
+        </edge>
+        <edge type="inclusion" id="e88" target="n90" source="n87">
+          <point x="1810" y="-760"/>
+          <point x="1990" y="-760"/>
+        </edge>
+        <edge type="input" id="e9" target="n5" source="n11">
+          <point x="240" y="-900"/>
+          <point x="340" y="-900"/>
+          <point x="340" y="-810"/>
+        </edge>
+      </diagram>
+      <diagram height="5000" name="Interfaccia" width="5000">
+        <node color="#fcfcfc" type="concept" id="n0">
+          <geometry height="50" x="690" width="110" y="-880"/>
+          <iri>https://w3id.org/italia/social-security/onto/socialSafetyNet/EstrattoContoContributivo</iri>
+          <label height="50" x="690" customSize="0" width="110" y="-880" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n1">
+          <geometry height="50" x="690" width="110" y="-990"/>
+          <iri>https://w3id.org/italia/onto/CPSV/Service</iri>
+          <label height="22" x="690" customSize="0" width="110" y="-990" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n2">
+          <geometry height="50" x="1020" width="110" y="-880"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</iri>
+          <label height="50" x="1020" customSize="0" width="110" y="-880" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n3">
+          <geometry height="50" x="1300" width="110" y="-880"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale</iri>
+          <label height="50" x="1300" customSize="0" width="110" y="-880" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n4">
+          <geometry height="50" x="880" width="110" y="-880"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata</iri>
+          <label height="36" x="880" customSize="0" width="110" y="-880" size="12"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n5">
+          <geometry height="50" x="1160" width="110" y="-880"/>
+          <iri>https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici</iri>
+          <label height="36" x="1160" customSize="0" width="110" y="-880" size="12"/>
+        </node>
+        <node color="#000000" type="disjoint-union" id="n6">
+          <geometry height="30" x="1090" width="50" y="-970"/>
+        </node>
+        <node color="#fcfcfc" type="concept" id="n7">
+          <geometry height="50" x="1090" width="110" y="-1080"/>
+          <iri>http://xmlns.com/foaf/0.1/Document</iri>
+          <label height="22" x="1090" customSize="0" width="110" y="-1080" size="12"/>
+        </node>
+        <edge type="inclusion" id="e0" target="n1" source="n0">
+          <point x="690" y="-880"/>
+          <point x="690" y="-990"/>
+        </edge>
+        <edge type="input" id="e1" target="n6" source="n4">
+          <point x="880" y="-880"/>
+          <point x="880" y="-970"/>
+          <point x="1090" y="-970"/>
+        </edge>
+        <edge type="input" id="e2" target="n6" source="n2">
+          <point x="1020" y="-880"/>
+          <point x="1020" y="-970"/>
+          <point x="1090" y="-970"/>
+        </edge>
+        <edge type="input" id="e3" target="n6" source="n5">
+          <point x="1160" y="-880"/>
+          <point x="1160" y="-970"/>
+          <point x="1090" y="-970"/>
+        </edge>
+        <edge type="input" id="e4" target="n6" source="n3">
+          <point x="1300" y="-880"/>
+          <point x="1300" y="-970"/>
+          <point x="1090" y="-970"/>
+        </edge>
+        <edge type="inclusion" id="e5" target="n7" source="n6">
+          <point x="1090" y="-970"/>
+          <point x="1090" y="-1080"/>
+        </edge>
+      </diagram>
+    </diagrams>
+  </project>
+</graphol>

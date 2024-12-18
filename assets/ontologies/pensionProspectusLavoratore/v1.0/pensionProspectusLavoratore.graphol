@@ -1,0 +1,3407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphol version="3">
+  <project name="determina di pensione" version="1.0">
+    <ontology addLabelFromUserInput="0" addLabelFromSimpleName="0" prefix="DETPENS" iri="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/" lang="en">
+      <imports/>
+      <prefixes>
+        <prefix>
+          <value>DETPENS</value>
+          <namespace>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSCore</value>
+          <namespace>https://w3id.org/italia/social-security/onto/core/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSPensions</value>
+          <namespace>https://w3id.org/italia/social-security/onto/pensions/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSRL</value>
+          <namespace>https://w3id.org/italia/social-security/onto/relevantLegislation/</namespace>
+        </prefix>
+        <prefix>
+          <value>TI</value>
+          <namespace>https://w3id.org/italia/onto/TI/</namespace>
+        </prefix>
+        <prefix>
+          <value>foaf</value>
+          <namespace>http://xmlns.com/foaf/0.1/</namespace>
+        </prefix>
+        <prefix>
+          <value>owl</value>
+          <namespace>http://www.w3.org/2002/07/owl#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdf</value>
+          <namespace>http://www.w3.org/1999/02/22-rdf-syntax-ns#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdfs</value>
+          <namespace>http://www.w3.org/2000/01/rdf-schema#</namespace>
+        </prefix>
+        <prefix>
+          <value>rico</value>
+          <namespace>https://www.ica.org/standards/RiC/ontology#</namespace>
+        </prefix>
+        <prefix>
+          <value>xml</value>
+          <namespace>http://www.w3.org/XML/1998/namespace</namespace>
+        </prefix>
+        <prefix>
+          <value>xsd</value>
+          <namespace>http://www.w3.org/2001/XMLSchema#</namespace>
+        </prefix>
+      </prefixes>
+      <datatypes>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral</datatype>
+        <datatype>http://www.w3.org/2000/01/rdf-schema#Literal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NCName</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NMTOKEN</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#Name</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#base64Binary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#boolean</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#byte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTimeStamp</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#decimal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#double</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#float</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#hexBinary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#int</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#integer</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#language</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#long</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#negativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonNegativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonPositiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#normalizedString</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#positiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#short</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#token</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedByte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedInt</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedLong</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedShort</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#rational</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#real</datatype>
+      </datatypes>
+      <languages>
+        <language></language>
+        <language>de</language>
+        <language>en</language>
+        <language>enn</language>
+        <language>es</language>
+        <language>fr</language>
+        <language>it</language>
+      </languages>
+      <facets>
+        <facet>http://www.w3.org/2001/XMLSchema#langRange</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#length</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#pattern</facet>
+      </facets>
+      <annotationProperties>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#comment</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#isDefinedBy</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#label</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#deprecated</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#incompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#priorVersion</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#versionInfo</annotationProperty>
+      </annotationProperties>
+      <iris>
+        <iri>
+          <value>http://xmlns.com/foaf/0.1/Document</value>
+        </iri>
+        <iri>
+          <value>http://xmlns.com/foaf/0.1/Person</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/TI/TimeInterval</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/TI/atTime</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/TI/endTime</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/onto/TI/startTime</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/core/SedeINPS</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Anzianità contributiva</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta il periodo di versamento dei contributi utile per la maturazione del trattamento di pensione per invalidità, vecchiaia e superstiti</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Contributory seniority</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the period of payment of contributions useful for the maturation of the pension treatment for disability, old age and survivors</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Autore</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe Autore rappresenta il soggetto che ha capacità e competenza  a produrre il documento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Author</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The Author class represents the subject who has the ability and competence to produce the document</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ConcessioneDiPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ConcessioneDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Concessione di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ConcessioneDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe Concessione di pensione è stata definita nell'ontologia per indicare la fase finale del procedimento con il quale l'INPS determina la concessione della pensione al soggetto che ne ha fatto richiesta. Nell'ontologia del Modello Obis la classe è modellata come sottoclasse della classe Activity dell'ontologia Record in Context (RiC-O) dell'international Council on Archives (ICA) </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ConcessioneDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Pension Granting</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ConcessioneDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The Pension Granting class has been defined in the ontology to indicate the final phase of the procedure with which INPS determines the granting of the pension to the person who requested it</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Destinatario</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il destinatario è la persona a cui è diretto il documento e, sebbene soprattutto in ambito pubblico il destinatario del documento possa non essere lo stesso soggetto destinatario dell'atto, in questa ontologia la classe esprime l'identità dei due soggetti </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Recipient</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The recipient is the person to whom the document is addressed</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Determina di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La determina o prospetto di pensione è la classe che rappresenta l'insieme dei documenti con i quali INPS attesta e comunica l'accettazione della domanda di pensione. Nell'ontologia la clesse è descritta come sottoclasse di Document dell'ontologia esterna foaf, per chiarirne la connotazione semantica</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Pension Prospectus</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The pension prospectus is the class that represents the set of documents with which INPS certifies and communicates the acceptance of the pension application</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Dispositivo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe Dispositivo rappresenta la parte del testo del documento che raccoglie i dati sostanziali dell'atto che, nel caso del documento di determina di pensione, sono rappresentati dai dati di liquidazione e dal dettaglio degli importi erogati. Nella modellazione la classe accoglie la semantica definita in ambito diplomatistico</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Disposition</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The Disposition class represents the part of the document text that collects the substantial data of the act which, in the case of the pension determination document, are represented by the liquidation data and the details of the amounts paid.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe raggruppa le domande di pensione presentate all'INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Pension application</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class groups the pension applications submitted to INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoArretrati</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoArretrati</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Importo arretrati pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoArretrati</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta il gruppo informativo legato agli importi arretrati della pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoArretrati</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Back payments</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoArretrati</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the information group related to the outstanding pension amounts</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Importo pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta uno dei due gruppi informativi principali presenti nel documento di determina di pensione, relativo al dettaglio degli importi della pensione erogata da INPS al Titolare della prestazione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Amount of pension</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents one of the two main information groups present in the pension determination document, relating to the details of the pension amounts paid by INPS to the Benefit Holder</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Instante</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta il soggetto che presenta la domanda di pensione e che sarà anche destinatario della decisione adottata dall'INPS, espressa nella determina di pensione, per questo motivo nell'ontologia le classi Destinatario e Instante sono dichiarate classi equivalenti</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Applicant</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the subject who submits the pension application and who will also be the recipient of the decision adopted by INPS, expressed in the pension determination</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Liquidazione Pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta e comprende i dati utilizzati per il calcolo della liquidazione della pensione, ossia la gestione pensionistica, l'anzianità contributiva e il relativo sistema di calcolo adottato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Pension Settlement</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents and includes the data used for the calculation of the pension payment, i.e. the pension management, the contributory seniority and the relative calculation system adopted</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Oggetto</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta l'elemento del documento che veicola una sintesi del contenuto. La modellazione lo definisce come elemento racchiuso nel protocollo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Object of the document</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the element of the document that conveys a summary of the content</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Premessa</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la partizione del testo del documento preposta a: contenere il preambolo, citare il contesto dal quale l'atto è generato, citare leggi o norme di riferimento o la descrizione dei fatti cui il documento si riferisce. Per la definzione della semantica della classe la modellazione si è orientata verso l'adozione del significato che tale elemento assume in ambito diplomatistico</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Preamble</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the partition of the document text intended to: contain the preamble, cite the context from which the act is generated, cite reference laws or standards or the description of the facts to which the document refers</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Protocollo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la partizione interna di un documento nella quale vengono presentati alcuni elementi del documento come l'autore, il destinatario, l'oggetto, la data cronica  e topica di formazione del documento. Per la definzione della semantica della classe la modellazione si è orientata verso l'adozione del significato che tali elementi assumono nella disciplina diplomatica </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Header</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the internal partition of a document in which some elements of the document are presented such as the author, the recipient, the subject, the chronic and topical date of formation of the document</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ResponsabileDelDocumento</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ResponsabileDelDocumento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Responsabile del documento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ResponsabileDelDocumento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la persona fisica responsabile del contenuto del documento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ResponsabileDelDocumento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Document Responsible</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ResponsabileDelDocumento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents an individual responsible for the content of the document</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Sottoscrizione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta l'insieme dei segni (nome e cognome) che indicano la persona fisica responsabile dell'articolazione del contenuto del documento e della corrispondenza del documento all'atto. Può comprendere la firma</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Signature</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the set of signs (name and surname) that indicate the physical person responsible for the articulation of the content of the document and the correspondence of the document to the act</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Testo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la partizione interna di un documento utile ad esprimere la decisione adottata dall'autore del documento. Per la definzione della semantica della classe la modellazione si è orientata verso l'adozione del significato che tale elemento assume nella disciplina diplomatica </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Text</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the internal partition of a record useful for expressing the decision adopted by the author of the document</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/TipologiaSistemaDiCalcolo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/TipologiaSistemaDiCalcolo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Tipologia sistema di calcolo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/TipologiaSistemaDiCalcolo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe esprime la lista di valori che descrive il sistema utilizzato per il calcolo degli importi spettanti della pensione: Il sistema di calcolo può essere di tipo retributivo, contributivo o misto</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/TipologiaSistemaDiCalcolo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Calculation system type</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/TipologiaSistemaDiCalcolo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class expresses the list of values ​​that describes the system used to calculate the pension amounts due: The calculation system can be of a retributive, contributory or mixed type</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/accoglieDomandaDiPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/accoglieDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>accoglie domanda di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/accoglieDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la Sede INPS incaricata di gestire la pratica relativa alla domanda di pensione e la Domanda di pensione, mettendo in evidenze la competenza della sede relativamente all'atto di accoglimento della domanda</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/accoglieDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>accepts pension application</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/accoglieDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property links the INPS office responsible for managing the pension application and the Pension Application</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/apponeSottoscrizione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/apponeSottoscrizione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>appone sottoscrizione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/apponeSottoscrizione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega il Responsabile del documento con la sottoscrizione, mettendo in evidenza la relazione semantica tra il soggetto abilitato ad apporre la firma con la sottoscrizione stessa</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/apponeSottoscrizione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>subscribes</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/apponeSottoscrizione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the Document Responsible with the signature</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>calcolata sulla base dei contributi versati</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la liquidazione di pensione con l'anzianità contributiva, evidenziando il nesso tra la liquidazione e l'anzianità contributiva in qualità di elemento fondamentale per per il calcolo degli importi da liquidare</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>calculated on the basis of the contributions paid</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property links the pension payment with the contributory seniority</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>certifica i dati relativi a</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la classe rappresentativa dell'elemento Dispositivo del documento con la classi che descrivono i gruppi informativi relativi agli importi e alla liquidazione di pensione. La relazione mette in evidenza il ruolo del documento di determina di pensione rispetto ai dati della pensione concessa al richiedente</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>certifies the data relating to</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property links the representative class of the document Device element with the classes that describe the information groups related to the pension amounts and liquidation</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>certifica il diritto alla pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la determina di pensione con il prodotto pensionistico dal quale certifica l'assegnazione al soggetto richiedente</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>certifies the right to a pension</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property links the pension determination with the pension product from which it certifies the assignment to the applicant</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>certificata da</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property mette in relazione la classe Concessione di pensione con la Determina di pensione, la relazione vuole definire la relazione semantica tra le due e il ruolo certificatore del documento di determina rispetto all'adozione dell'atto di concessione della pensione dal parte dell'INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>certified by</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property relates the Pension Grant class to the Pension Determination</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataDecorrenzePensione</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataDecorrenzePensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>data di decorrenza di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataDecorrenzePensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>data a partire dalla quale la pensione sarà erogata al titolare</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataDecorrenzePensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>pension effective date</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataDecorrenzePensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>date from which the pension will be paid to the holder</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDeterminaDiPensione</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>data emissione determina di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>data di emissione della determina di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>date of issue determines pension</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>date of issue of the pension determination</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDocumento</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDocumento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>data di emissione del documento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDocumento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>data indicata nel documento nella quale l'ente ha adottato il provvedimento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDocumento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>document issue date</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDocumento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>date indicated in the document in which the institution adopted the measure</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/descrizioneProvvedimento</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/descrizioneProvvedimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>descrizione del provvedimento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/descrizioneProvvedimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>l'attributo contiene un breve testo descrittivo con la sintesi dell'esito del provvedimento adottato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/descrizioneProvvedimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>description of the measure</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/descrizioneProvvedimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>the attribute contains a short descriptive text with a summary of the outcome of the measure adopted</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>determina gestita da sede INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la Determina di pensione con la sede INPS che ne ha in carico la gestione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>pension determination managed by INPS headquarters</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the Pension Determination with the INPS office that is responsible for its management</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>determina importo di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la classe Anzianità contributiva con la classe Importo pensione con lo scopo di esplicitare il nesso semantico  tra le due e in particolare il ruolo svolto dal dato dell'anzianità contributiva rispetto alla determinazione degli importi della pensione da erogare</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>determines pension amount</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the Seniority class with the Pension amount class</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/eArticolatoIn</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/eArticolatoIn</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>è articolato in</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/eArticolatoIn</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la classe descrittiva del testo del documento con le sue componenti costitutive</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/eArticolatoIn</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>It is divided into</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/eArticolatoIn</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the descriptive class of the document text with its constituent components</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>emette determina di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la sede INPS che ha competenza ad emettere ila determina con il documento di determina di pensione con lo scopo di esplicitare il tipo di relazione che le lega</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>issues pension determination</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property links the INPS office that is competent to issue the determination with the pension determination document</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>ha tipologia di sistema di calcolo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la Liquidazione di pensione con la tipologia di sistema di calcolo  utilizzato per la definizione degli importi da liquidare</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has a type of calculation system</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>enn</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property links the Pension Liquidation with the type of calculation system used to define the amounts to be liquidated</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoACalcolo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoACalcolo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>importo a calcolo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoMensileTotalePensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoMensileTotalePensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>importo mensile totale della pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoMensileTotalePensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Total monthly pension amount</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>invia domanda di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega i soggetti abilitati ad inviare la domadna di pensione, ossia il soggetto interessato o un suo delegato, con la sede INPS territorialmente competente a riceverla e gestirla</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>submit pension application</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the subjects authorised to send the pension application, i.e. the interested party or his delegate, with the INPS office territorially competent to receive and manage it</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/luogoEmissioneDelDocumento</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/luogoEmissioneDelDocumento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>luogo di emissione del documento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/luogoEmissioneDelDocumento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>data topica (luogo) di emissione del documento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/luogoEmissioneDelDocumento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>place of issue of the document</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/modalitaPagamento</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/modalitaPagamento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>modalità pagamento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/modalitaPagamento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>modalità di pagamento dell'importo della pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/modalitaPagamento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>payment methods</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/modalitaPagamento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>method of payment of the pension amount</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/nomeAutore</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/nomeAutore</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>nome dell'autore</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/nomeAutore</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>nome del soggetto che ha autorità ad emettere il documento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/nomeAutore</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>author's name</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/nomeAutore</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>name of the person who has the authority to issue the document</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>numero identificativo di protocollo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>codice numerico o alfanumerico che identifica in modo univoco il documento di determina di pensione all'interno dell'archivio dell'ente</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>protocol identification number</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>numeric or alphanumeric code that uniquely identifies the pension determination document within the institution's archive</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroPensione</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>numero pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>pension number</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroSettimane</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroSettimane</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>numero di settimane</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroSettimane</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>number of weeks</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>presenta domanda di pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega il soggetto che presenta la domanda di pensione e sarÃ  destinatario dell'atto adottato in merito dall'INPS con la domadna di pensione inviata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>apply for pension</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property links the person who submits the pension application and will be the recipient of the act adopted in this regard by INPS with the pension application sent</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>protocollo composto da</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega il protocollo, inteso come parte strutturale del documento di determina di pensione, con gli elementi che lo compongono</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>protocol composed of</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the protocol, intended as a structural part of the pension determination document, with the elements that compose it</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/quotaAssociativa</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/quotaAssociativa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>quota associativa</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/quotaAssociativa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>membership fee</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/quotaAssociativa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>quota associativa versata per la gestione del fondo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/quotaAssociativa</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>membership fee paid for the management of the fund</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/retribuzioneMedia</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/retribuzioneMedia</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>retribuzione media</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/retribuzioneMedia</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>average salary</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/retribuzioneMedia</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>retribuzione media dell'anzianità contributiva</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/retribuzioneMedia</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>average salary of contributory seniority</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>sintetizza dati relativi a pensione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la classe oggetto, che rappresenta l'elemento del documento che veicola una sintesi del contenuto, con la classe prodotto pensionistico</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>summarizes pension data</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the object class, which represents the element of the document that conveys a summary of the content, with the pension product class</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/strutturatoIn</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/strutturatoIn</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>strutturato in</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/strutturatoIn</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la classe rappresentativa del documento di determina di pensione con gli elementi strutturali di cui si compone</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/strutturatoIn</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>structured in</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/strutturatoIn</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the representative class of the pension determination document with the structural elements it is composed of</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattamentoDiFamiglia</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattamentoDiFamiglia</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>trattamento di famiglia</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattamentoDiFamiglia</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>family treatment</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattamentoDiFamiglia</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>assegno familiare erogato ai pensionati per il proprio nucleo familiare</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattamentoDiFamiglia</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>family allowance paid to pensioners for their family unit</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattenuteLavoroAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattenuteLavoroAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>trattenute lavoro autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattenuteLavoroAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>self-employed workers withholdings</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattenuteLavoroAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>trattenute sull'importo pensione in caso di lavoro autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattenuteLavoroAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>withholdings from the pension amount in the case of self-employment</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>ha gestione pensionistica di riferimento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega la Liquidazione di pensione con la Gestione pensionistica di riferimento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has reference pension management</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the Pension Settlement with the relevant Pension Management</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</value>
+        </iri>
+        <iri>
+          <value>https://www.ica.org/standards/RiC/ontology#Activity</value>
+        </iri>
+        <iri>
+          <value>https://www.ica.org/standards/RiC/ontology#Agent</value>
+        </iri>
+        <iri>
+          <value>https://www.ica.org/standards/RiC/ontology#Record</value>
+        </iri>
+      </iris>
+    </ontology>
+    <diagrams>
+      <diagram height="5000" name="determina di pensione_flow" width="5000">
+        <node color="#fcfcfc" id="n0" type="concept">
+          <geometry height="50" x="-690" y="300" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante</iri>
+          <label height="22" x="-690" y="300" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n1" type="concept">
+          <geometry height="50" x="-200" y="300" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione</iri>
+          <label height="36" x="-200" y="300" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n10" type="concept">
+          <geometry height="50" x="720" y="300" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione</iri>
+          <label height="36" x="720" y="300" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n11" type="role">
+          <geometry height="50" x="510" y="200" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione</iri>
+          <label height="22" x="510" y="170" customSize="0" size="12" width="168"/>
+        </node>
+        <node color="#fcfcfc" id="n12" type="domain-restriction">
+          <geometry height="20" x="410" y="200" width="20"/>
+          <label height="22" x="410" y="178" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n13" type="range-restriction">
+          <geometry height="20" x="600" y="200" width="20"/>
+          <label height="22" x="600" y="178" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n14" type="role">
+          <geometry height="50" x="500" y="410" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS</iri>
+          <label height="22" x="500" y="380" customSize="0" size="12" width="178"/>
+        </node>
+        <node color="#fcfcfc" id="n15" type="domain-restriction">
+          <geometry height="20" x="610" y="410" width="20"/>
+          <label height="22" x="610" y="388" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n16" type="range-restriction">
+          <geometry height="20" x="410" y="410" width="20"/>
+          <label height="22" x="410" y="388" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n2" type="role">
+          <geometry height="50" x="-430" y="300" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione</iri>
+          <label height="22" x="-430" y="270" customSize="0" size="12" width="176"/>
+        </node>
+        <node color="#fcfcfc" id="n3" type="domain-restriction">
+          <geometry height="20" x="-560" y="300" width="20"/>
+          <label height="22" x="-560" y="278" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n30" type="concept">
+          <geometry height="50" x="-690" y="80" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</iri>
+          <label height="22" x="-690" y="80" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#000000" id="n31" type="disjoint-union">
+          <geometry height="30" x="-690" y="180" width="50"/>
+        </node>
+        <node color="#fcfcfc" id="n32" type="role">
+          <geometry height="50" x="-430" y="180" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione</iri>
+          <label height="22" x="-430" y="150" customSize="0" size="12" width="155"/>
+        </node>
+        <node color="#fcfcfc" id="n33" type="domain-restriction">
+          <geometry height="20" x="-560" y="180" width="20"/>
+          <label height="22" x="-560" y="158" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n34" type="range-restriction">
+          <geometry height="20" x="-330" y="180" width="20"/>
+          <label height="22" x="-330" y="158" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n4" type="range-restriction">
+          <geometry height="20" x="-320" y="300" width="20"/>
+          <label height="22" x="-320" y="278" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n5" type="concept">
+          <geometry height="50" x="280" y="300" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/SedeINPS</iri>
+          <label height="36" x="280" y="300" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n6" type="role">
+          <geometry height="50" x="40" y="300" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/accoglieDomandaDiPensione</iri>
+          <label height="22" x="40" y="270" customSize="0" size="12" width="174"/>
+        </node>
+        <node color="#fcfcfc" id="n7" type="domain-restriction">
+          <geometry height="20" x="150" y="300" width="20"/>
+          <label height="22" x="150" y="278" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n8" type="range-restriction">
+          <geometry height="20" x="-90" y="300" width="20"/>
+          <label height="22" x="-90" y="278" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <edge source="n2" id="e0" target="n3" type="input">
+          <point x="-430" y="300"/>
+          <point x="-560" y="300"/>
+        </edge>
+        <edge source="n2" id="e1" target="n4" type="input">
+          <point x="-430" y="300"/>
+          <point x="-320" y="300"/>
+        </edge>
+        <edge source="n11" id="e10" target="n13" type="input">
+          <point x="510" y="200"/>
+          <point x="600" y="200"/>
+        </edge>
+        <edge source="n5" id="e11" target="n12" type="equivalence">
+          <point x="280" y="300"/>
+          <point x="280" y="200"/>
+          <point x="410" y="200"/>
+        </edge>
+        <edge source="n13" id="e12" target="n10" type="equivalence">
+          <point x="600" y="200"/>
+          <point x="720" y="200"/>
+          <point x="720" y="300"/>
+        </edge>
+        <edge source="n14" id="e13" target="n15" type="input">
+          <point x="500" y="410"/>
+          <point x="610" y="410"/>
+        </edge>
+        <edge source="n14" id="e14" target="n16" type="input">
+          <point x="500" y="410"/>
+          <point x="410" y="410"/>
+        </edge>
+        <edge source="n15" id="e15" target="n10" type="equivalence">
+          <point x="610" y="410"/>
+          <point x="720" y="410"/>
+          <point x="720" y="300"/>
+        </edge>
+        <edge source="n16" id="e16" target="n5" type="equivalence">
+          <point x="410" y="410"/>
+          <point x="280" y="410"/>
+          <point x="280" y="300"/>
+        </edge>
+        <edge source="n4" id="e3" target="n1" type="equivalence">
+          <point x="-320" y="300"/>
+          <point x="-200" y="300"/>
+        </edge>
+        <edge source="n30" id="e30" target="n31" type="input">
+          <point x="-690" y="80"/>
+          <point x="-690" y="180"/>
+        </edge>
+        <edge source="n0" id="e31" target="n31" type="input">
+          <point x="-690" y="300"/>
+          <point x="-690" y="180"/>
+        </edge>
+        <edge source="n32" id="e32" target="n33" type="input">
+          <point x="-430" y="180"/>
+          <point x="-560" y="180"/>
+        </edge>
+        <edge source="n32" id="e33" target="n34" type="input">
+          <point x="-430" y="180"/>
+          <point x="-330" y="180"/>
+        </edge>
+        <edge source="n31" id="e34" target="n33" type="equivalence">
+          <point x="-690" y="180"/>
+          <point x="-560" y="180"/>
+        </edge>
+        <edge source="n34" id="e35" target="n1" type="equivalence">
+          <point x="-330" y="180"/>
+          <point x="-200" y="180"/>
+          <point x="-200" y="300"/>
+        </edge>
+        <edge source="n0" id="e36" target="n3" type="equivalence">
+          <point x="-690" y="300"/>
+          <point x="-560" y="300"/>
+        </edge>
+        <edge source="n6" id="e4" target="n7" type="input">
+          <point x="40" y="300"/>
+          <point x="150" y="300"/>
+        </edge>
+        <edge source="n6" id="e5" target="n8" type="input">
+          <point x="40" y="300"/>
+          <point x="-90" y="300"/>
+        </edge>
+        <edge source="n8" id="e7" target="n1" type="inclusion">
+          <point x="-90" y="300"/>
+          <point x="-200" y="300"/>
+        </edge>
+        <edge source="n5" id="e8" target="n7" type="equivalence">
+          <point x="280" y="300"/>
+          <point x="150" y="300"/>
+        </edge>
+        <edge source="n11" id="e9" target="n12" type="input">
+          <point x="510" y="200"/>
+          <point x="410" y="200"/>
+        </edge>
+      </diagram>
+      <diagram height="5000" name="determina_di_pensione" width="5000">
+        <node color="#fcfcfc" id="n0" type="concept">
+          <geometry height="50" x="240" y="120" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione</iri>
+          <label height="36" x="240" y="120" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#000000" id="n10" type="disjoint-union">
+          <geometry height="30" x="240" y="440" width="50"/>
+        </node>
+        <node color="#fcfcfc" id="n100" type="concept">
+          <geometry height="50" x="-840" y="1370" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico</iri>
+          <label height="36" x="-840" y="1370" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n101" type="role">
+          <geometry height="50" x="-280" y="120" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione</iri>
+          <label height="22" x="-280" y="90" customSize="0" size="12" width="170"/>
+        </node>
+        <node color="#fcfcfc" id="n102" type="domain-restriction">
+          <geometry height="20" x="-100" y="120" width="20"/>
+          <label height="22" x="-100" y="98" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n103" type="range-restriction">
+          <geometry height="20" x="-1320" y="120" width="20"/>
+          <label height="22" x="-1320" y="98" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n105" type="role">
+          <geometry height="50" x="-680" y="1170" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione</iri>
+          <label height="22" x="-680" y="1140" customSize="0" size="12" width="185"/>
+        </node>
+        <node color="#fcfcfc" id="n106" type="domain-restriction">
+          <geometry height="20" x="-350" y="1020" width="20"/>
+          <label height="22" x="-350" y="998" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n107" type="range-restriction">
+          <geometry height="20" x="-840" y="1170" width="20"/>
+          <label height="22" x="-840" y="1148" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n11" type="concept">
+          <geometry height="50" x="-540" y="440" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo</iri>
+          <label height="22" x="-540" y="440" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n112" type="domain-restriction">
+          <geometry height="20" x="1490" y="2160" width="20"/>
+          <label height="22" x="1490" y="2138" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n116" type="attribute">
+          <geometry height="20" x="1790" y="1440" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoACalcolo</iri>
+          <label height="22" x="1790" y="1418" customSize="0" size="12" width="103"/>
+        </node>
+        <node color="#fcfcfc" id="n117" type="attribute">
+          <geometry height="20" x="1790" y="1510" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattamentoDiFamiglia</iri>
+          <label height="22" x="1790" y="1488" customSize="0" size="12" width="134"/>
+        </node>
+        <node color="#fcfcfc" id="n118" type="attribute">
+          <geometry height="20" x="1790" y="1580" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattenuteLavoroAutonomo</iri>
+          <label height="22" x="1790" y="1558" customSize="0" size="12" width="158"/>
+        </node>
+        <node color="#fcfcfc" id="n119" type="attribute">
+          <geometry height="20" x="1790" y="1640" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/quotaAssociativa</iri>
+          <label height="22" x="1790" y="1618" customSize="0" size="12" width="105"/>
+        </node>
+        <node color="#fcfcfc" id="n12" type="concept">
+          <geometry height="50" x="450" y="680" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo</iri>
+          <label height="22" x="450" y="680" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n120" type="domain-restriction">
+          <geometry height="20" x="1670" y="1440" width="20"/>
+          <label height="22" x="1670" y="1418" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n121" type="domain-restriction">
+          <geometry height="20" x="1670" y="1510" width="20"/>
+          <label height="22" x="1670" y="1488" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n122" type="domain-restriction">
+          <geometry height="20" x="1670" y="1580" width="20"/>
+          <label height="22" x="1670" y="1558" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n123" type="domain-restriction">
+          <geometry height="20" x="1670" y="1640" width="20"/>
+          <label height="22" x="1670" y="1618" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n128" type="concept">
+          <geometry height="50" x="1390" y="1680" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoArretrati</iri>
+          <label height="36" x="1390" y="1680" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n129" type="attribute">
+          <geometry height="20" x="1190" y="2370" width="20"/>
+          <iri>https://w3id.org/italia/onto/TI/startTime</iri>
+          <label height="22" x="1190" y="2348" customSize="0" size="12" width="73"/>
+        </node>
+        <node color="#fcfcfc" id="n130" type="domain-restriction">
+          <geometry height="20" x="1120" y="2370" width="20"/>
+          <label height="22" x="1120" y="2348" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n131" type="concept">
+          <geometry height="50" x="-230" y="1370" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione</iri>
+          <label height="36" x="-230" y="1370" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n132" type="role">
+          <geometry height="50" x="-490" y="1370" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione</iri>
+          <label height="22" x="-490" y="1340" customSize="0" size="12" width="187"/>
+        </node>
+        <node color="#fcfcfc" id="n133" type="domain-restriction">
+          <geometry height="20" x="-600" y="1370" width="20"/>
+          <label height="22" x="-600" y="1348" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n134" type="range-restriction">
+          <geometry height="20" x="-390" y="1370" width="20"/>
+          <label height="22" x="-390" y="1348" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n139" type="concept">
+          <geometry height="50" x="160" y="1440" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica</iri>
+          <label height="36" x="160" y="1440" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n14" type="concept">
+          <geometry height="50" x="1220" y="440" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione</iri>
+          <label height="22" x="1220" y="440" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n148" type="attribute">
+          <geometry height="20" x="1790" y="1290" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/modalitaPagamento</iri>
+          <label height="22" x="1790" y="1268" customSize="0" size="12" width="123"/>
+        </node>
+        <node color="#fcfcfc" id="n149" type="domain-restriction">
+          <geometry height="20" x="1670" y="1290" width="20"/>
+          <label height="22" x="1670" y="1268" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n15" type="role">
+          <geometry height="50" x="-540" y="650" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa</iri>
+          <label height="22" x="-540" y="620" customSize="0" size="12" width="138"/>
+        </node>
+        <node color="#fcfcfc" id="n150" type="attribute">
+          <geometry height="20" x="440" y="20" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDeterminaDiPensione</iri>
+          <label height="22" x="440" y="-2" customSize="0" size="12" width="214"/>
+        </node>
+        <node color="#fcfcfc" id="n151" type="domain-restriction">
+          <geometry height="20" x="290" y="20" width="20"/>
+          <label height="22" x="290" y="-2" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n16" type="domain-restriction">
+          <geometry height="20" x="-540" y="580" width="20"/>
+          <label height="22" x="-540" y="558" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n17" type="range-restriction">
+          <geometry height="20" x="-540" y="720" width="20"/>
+          <label height="22" x="-540" y="698" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n18" type="disjoint-union">
+          <geometry height="30" x="-540" y="810" width="50"/>
+        </node>
+        <node color="#fcfcfc" id="n19" type="concept">
+          <geometry height="50" x="-740" y="920" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore</iri>
+          <label height="22" x="-740" y="920" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n2" type="concept">
+          <geometry height="50" x="710" y="120" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ConcessioneDiPensione</iri>
+          <label height="36" x="710" y="120" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n20" type="concept">
+          <geometry height="50" x="-540" y="970" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario</iri>
+          <label height="22" x="-540" y="970" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n21" type="concept">
+          <geometry height="50" x="-350" y="920" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto</iri>
+          <label height="22" x="-350" y="920" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n23" type="attribute">
+          <geometry height="20" x="-680" y="210" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDocumento</iri>
+          <label height="22" x="-680" y="188" customSize="0" size="12" width="188"/>
+        </node>
+        <node color="#fcfcfc" id="n24" type="domain-restriction">
+          <geometry height="20" x="-680" y="280" width="20"/>
+          <label height="22" x="-680" y="258" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n26" type="attribute">
+          <geometry height="20" x="-980" y="920" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/nomeAutore</iri>
+          <label height="22" x="-980" y="898" customSize="0" size="12" width="98"/>
+        </node>
+        <node color="#fcfcfc" id="n27" type="domain-restriction">
+          <geometry height="20" x="-890" y="920" width="20"/>
+          <label height="22" x="-890" y="898" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n3" type="role">
+          <geometry height="50" x="480" y="120" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa</iri>
+          <label height="22" x="480" y="90" customSize="0" size="12" width="79"/>
+        </node>
+        <node color="#fcfcfc" id="n34" type="attribute">
+          <geometry height="20" x="-760" y="1570" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroPensione</iri>
+          <label height="22" x="-760" y="1548" customSize="0" size="12" width="102"/>
+        </node>
+        <node color="#fcfcfc" id="n35" type="domain-restriction">
+          <geometry height="20" x="-760" y="1490" width="20"/>
+          <label height="22" x="-760" y="1468" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n4" type="domain-restriction">
+          <geometry height="20" x="560" y="120" width="20"/>
+          <label height="22" x="560" y="98" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n40" type="attribute">
+          <geometry height="20" x="-940" y="1570" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataDecorrenzePensione</iri>
+          <label height="22" x="-940" y="1548" customSize="0" size="12" width="174"/>
+        </node>
+        <node color="#fcfcfc" id="n41" type="domain-restriction">
+          <geometry height="20" x="-940" y="1490" width="20"/>
+          <label height="22" x="-940" y="1468" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n43" type="concept">
+          <geometry height="50" x="180" y="960" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa</iri>
+          <label height="22" x="180" y="960" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n44" type="concept">
+          <geometry height="50" x="1140" y="960" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo</iri>
+          <label height="22" x="1140" y="960" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n45" type="role">
+          <geometry height="50" x="450" y="830" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/eArticolatoIn</iri>
+          <label height="22" x="450" y="800" customSize="0" size="12" width="82"/>
+        </node>
+        <node color="#fcfcfc" id="n46" type="domain-restriction">
+          <geometry height="20" x="450" y="760" width="20"/>
+          <label height="22" x="450" y="738" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n47" type="range-restriction">
+          <geometry height="20" x="450" y="900" width="20"/>
+          <label height="22" x="450" y="878" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n48" type="disjoint-union">
+          <geometry height="30" x="450" y="960" width="50"/>
+        </node>
+        <node color="#fcfcfc" id="n49" type="concept">
+          <geometry height="50" x="1220" y="120" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ResponsabileDelDocumento</iri>
+          <label height="36" x="1220" y="120" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#000000" id="n5" type="range-restriction">
+          <geometry height="20" x="400" y="120" width="20"/>
+          <label height="22" x="400" y="98" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n51" type="role">
+          <geometry height="50" x="1220" y="280" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/apponeSottoscrizione</iri>
+          <label height="22" x="1220" y="250" customSize="0" size="12" width="128"/>
+        </node>
+        <node color="#fcfcfc" id="n52" type="domain-restriction">
+          <geometry height="20" x="1220" y="210" width="20"/>
+          <label height="22" x="1220" y="188" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n53" type="range-restriction">
+          <geometry height="20" x="1220" y="350" width="20"/>
+          <label height="22" x="1220" y="328" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n57" type="attribute">
+          <geometry height="20" x="-410" y="210" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/luogoEmissioneDelDocumento</iri>
+          <label height="22" x="-410" y="188" customSize="0" size="12" width="194"/>
+        </node>
+        <node color="#fcfcfc" id="n58" type="domain-restriction">
+          <geometry height="20" x="-410" y="280" width="20"/>
+          <label height="22" x="-410" y="258" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n59" type="concept">
+          <geometry height="50" x="840" y="1510" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione</iri>
+          <label height="36" x="840" y="1510" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n60" type="concept">
+          <geometry height="50" x="1490" y="1510" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione</iri>
+          <label height="22" x="1490" y="1510" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n61" type="attribute">
+          <geometry height="20" x="440" y="-40" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo</iri>
+          <label height="22" x="440" y="-62" customSize="0" size="12" width="194"/>
+        </node>
+        <node color="#fcfcfc" id="n62" type="domain-restriction">
+          <geometry height="20" x="290" y="-40" width="20"/>
+          <label height="22" x="290" y="-62" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n63" type="attribute">
+          <geometry height="20" x="1140" y="820" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/descrizioneProvvedimento</iri>
+          <label height="22" x="1140" y="798" customSize="0" size="12" width="172"/>
+        </node>
+        <node color="#fcfcfc" id="n64" type="domain-restriction">
+          <geometry height="20" x="1140" y="890" width="20"/>
+          <label height="22" x="1140" y="868" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n66" type="role">
+          <geometry height="50" x="480" y="1440" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica</iri>
+          <label height="22" x="480" y="1410" customSize="0" size="12" width="221"/>
+        </node>
+        <node color="#fcfcfc" id="n67" type="domain-restriction">
+          <geometry height="20" x="590" y="1440" width="20"/>
+          <label height="22" x="590" y="1418" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n68" type="range-restriction">
+          <geometry height="20" x="330" y="1440" width="20"/>
+          <label height="22" x="330" y="1418" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n69" type="role">
+          <geometry height="50" x="1140" y="1110" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA</iri>
+          <label height="22" x="1140" y="1080" customSize="0" size="12" width="130"/>
+        </node>
+        <node color="#fcfcfc" id="n7" type="role">
+          <geometry height="50" x="240" y="280" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/strutturatoIn</iri>
+          <label height="22" x="240" y="250" customSize="0" size="12" width="79"/>
+        </node>
+        <node color="#fcfcfc" id="n70" type="domain-restriction">
+          <geometry height="20" x="1140" y="1040" width="20"/>
+          <label height="22" x="1140" y="1018" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n71" type="range-restriction">
+          <geometry height="20" x="1140" y="1180" width="20"/>
+          <label height="22" x="1140" y="1158" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n72" type="disjoint-union">
+          <geometry height="30" x="1140" y="1250" width="50"/>
+        </node>
+        <node color="#fcfcfc" id="n73" type="concept">
+          <geometry height="50" x="160" y="1580" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/TipologiaSistemaDiCalcolo</iri>
+          <label height="36" x="160" y="1580" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n74" type="role">
+          <geometry height="50" x="480" y="1580" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo</iri>
+          <label height="22" x="480" y="1550" customSize="0" size="12" width="187"/>
+        </node>
+        <node color="#fcfcfc" id="n75" type="domain-restriction">
+          <geometry height="20" x="590" y="1580" width="20"/>
+          <label height="22" x="590" y="1558" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n76" type="range-restriction">
+          <geometry height="20" x="330" y="1580" width="20"/>
+          <label height="22" x="330" y="1558" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n78" type="role">
+          <geometry height="50" x="840" y="1740" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati</iri>
+          <label height="22" x="840" y="1710" customSize="0" size="12" width="229"/>
+        </node>
+        <node color="#fcfcfc" id="n79" type="domain-restriction">
+          <geometry height="20" x="840" y="1600" width="20"/>
+          <label height="22" x="840" y="1578" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n8" type="domain-restriction">
+          <geometry height="20" x="240" y="210" width="20"/>
+          <label height="22" x="240" y="188" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n80" type="range-restriction">
+          <geometry height="20" x="1000" y="1860" width="20"/>
+          <label height="22" x="1000" y="1838" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n81" type="concept">
+          <geometry height="50" x="1000" y="1980" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva</iri>
+          <label height="36" x="1000" y="1980" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n82" type="attribute">
+          <geometry height="20" x="670" y="1950" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroSettimane</iri>
+          <label height="22" x="670" y="1928" customSize="0" size="12" width="120"/>
+        </node>
+        <node color="#fcfcfc" id="n83" type="domain-restriction">
+          <geometry height="20" x="780" y="1950" width="20"/>
+          <label height="22" x="780" y="1928" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n84" type="attribute">
+          <geometry height="20" x="670" y="2020" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/retribuzioneMedia</iri>
+          <label height="22" x="670" y="1998" customSize="0" size="12" width="109"/>
+        </node>
+        <node color="#fcfcfc" id="n85" type="domain-restriction">
+          <geometry height="20" x="780" y="2020" width="20"/>
+          <label height="22" x="780" y="1998" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n86" type="role">
+          <geometry height="50" x="1200" y="1980" width="70"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione</iri>
+          <label height="22" x="1200" y="1950" customSize="0" size="12" width="174"/>
+        </node>
+        <node color="#fcfcfc" id="n87" type="domain-restriction">
+          <geometry height="20" x="1110" y="1980" width="20"/>
+          <label height="22" x="1110" y="1958" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n88" type="range-restriction">
+          <geometry height="20" x="1200" y="1510" width="20"/>
+          <label height="22" x="1200" y="1488" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n89" type="concept">
+          <geometry height="50" x="1000" y="2370" width="110"/>
+          <iri>https://w3id.org/italia/onto/TI/TimeInterval</iri>
+          <label height="22" x="1000" y="2370" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#000000" id="n9" type="range-restriction">
+          <geometry height="20" x="240" y="350" width="20"/>
+          <label height="22" x="240" y="328" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n91" type="role">
+          <geometry height="50" x="1000" y="2160" width="70"/>
+          <iri>https://w3id.org/italia/onto/TI/atTime</iri>
+          <label height="22" x="1000" y="2130" customSize="0" size="12" width="59"/>
+        </node>
+        <node color="#fcfcfc" id="n92" type="domain-restriction">
+          <geometry height="20" x="1000" y="2060" width="20"/>
+          <label height="22" x="1000" y="2038" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#000000" id="n93" type="range-restriction">
+          <geometry height="20" x="1000" y="2270" width="20"/>
+          <label height="22" x="1000" y="2248" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n94" type="attribute">
+          <geometry height="20" x="800" y="2370" width="20"/>
+          <iri>https://w3id.org/italia/onto/TI/endTime</iri>
+          <label height="22" x="800" y="2348" customSize="0" size="12" width="68"/>
+        </node>
+        <node color="#fcfcfc" id="n95" type="domain-restriction">
+          <geometry height="20" x="880" y="2370" width="20"/>
+          <label height="22" x="880" y="2348" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n98" type="attribute">
+          <geometry height="20" x="1790" y="1370" width="20"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoMensileTotalePensione</iri>
+          <label height="22" x="1790" y="1348" customSize="0" size="12" width="211"/>
+        </node>
+        <node color="#fcfcfc" id="n99" type="domain-restriction">
+          <geometry height="20" x="1670" y="1370" width="20"/>
+          <label height="22" x="1670" y="1348" customSize="0" size="12" width="39">exists</label>
+        </node>
+        <edge source="n3" id="e1" target="n4" type="input">
+          <point x="480" y="120"/>
+          <point x="560" y="120"/>
+        </edge>
+        <edge source="n86" id="e100" target="n87" type="input">
+          <point x="1200" y="1980"/>
+          <point x="1110" y="1980"/>
+        </edge>
+        <edge source="n86" id="e101" target="n88" type="input">
+          <point x="1200" y="1980"/>
+          <point x="1200" y="1510"/>
+        </edge>
+        <edge source="n81" id="e102" target="n87" type="equivalence">
+          <point x="1000" y="1980"/>
+          <point x="1110" y="1980"/>
+        </edge>
+        <edge source="n88" id="e103" target="n60" type="equivalence">
+          <point x="1200" y="1510"/>
+          <point x="1490" y="1510"/>
+        </edge>
+        <edge source="n91" id="e104" target="n92" type="input">
+          <point x="1000" y="2160"/>
+          <point x="1000" y="2060"/>
+        </edge>
+        <edge source="n91" id="e105" target="n93" type="input">
+          <point x="1000" y="2160"/>
+          <point x="1000" y="2270"/>
+        </edge>
+        <edge source="n81" id="e106" target="n92" type="equivalence">
+          <point x="1000" y="1980"/>
+          <point x="1000" y="2060"/>
+        </edge>
+        <edge source="n89" id="e107" target="n93" type="equivalence">
+          <point x="1000" y="2370"/>
+          <point x="1000" y="2270"/>
+        </edge>
+        <edge source="n94" id="e108" target="n95" type="input">
+          <point x="800" y="2370"/>
+          <point x="880" y="2370"/>
+        </edge>
+        <edge source="n9" id="e11" target="n10" type="inclusion">
+          <point x="240" y="350"/>
+          <point x="240" y="440"/>
+        </edge>
+        <edge source="n98" id="e113" target="n99" type="input">
+          <point x="1790" y="1370"/>
+          <point x="1670" y="1370"/>
+        </edge>
+        <edge source="n60" id="e115" target="n99" type="equivalence">
+          <point x="1490" y="1510"/>
+          <point x="1590" y="1510"/>
+          <point x="1590" y="1440"/>
+          <point x="1590" y="1370"/>
+          <point x="1670" y="1370"/>
+        </edge>
+        <edge source="n101" id="e116" target="n102" type="input">
+          <point x="-280" y="120"/>
+          <point x="-100" y="120"/>
+        </edge>
+        <edge source="n101" id="e117" target="n103" type="input">
+          <point x="-280" y="120"/>
+          <point x="-1320" y="120"/>
+        </edge>
+        <edge source="n102" id="e118" target="n0" type="equivalence">
+          <point x="-100" y="120"/>
+          <point x="240" y="120"/>
+        </edge>
+        <edge source="n103" id="e119" target="n100" type="equivalence">
+          <point x="-1320" y="120"/>
+          <point x="-1320" y="1370"/>
+          <point x="-840" y="1370"/>
+        </edge>
+        <edge source="n11" id="e12" target="n10" type="input">
+          <point x="-540" y="440"/>
+          <point x="240" y="440"/>
+        </edge>
+        <edge source="n105" id="e122" target="n106" type="input">
+          <point x="-680" y="1170"/>
+          <point x="-680" y="1090"/>
+          <point x="-420" y="1090"/>
+          <point x="-420" y="1020"/>
+          <point x="-350" y="1020"/>
+        </edge>
+        <edge source="n105" id="e123" target="n107" type="input">
+          <point x="-680" y="1170"/>
+          <point x="-840" y="1170"/>
+        </edge>
+        <edge source="n35" id="e124" target="n100" type="equivalence">
+          <point x="-760" y="1490"/>
+          <point x="-760" y="1430"/>
+          <point x="-840" y="1430"/>
+          <point x="-840" y="1370"/>
+        </edge>
+        <edge source="n106" id="e125" target="n21" type="equivalence">
+          <point x="-350" y="1020"/>
+          <point x="-350" y="920"/>
+        </edge>
+        <edge source="n107" id="e126" target="n100" type="equivalence">
+          <point x="-840" y="1170"/>
+          <point x="-840" y="1370"/>
+        </edge>
+        <edge source="n12" id="e13" target="n10" type="input">
+          <point x="450" y="680"/>
+          <point x="240" y="440"/>
+        </edge>
+        <edge source="n91" id="e132" target="n112" type="input">
+          <point x="1000" y="2160"/>
+          <point x="1490" y="2160"/>
+        </edge>
+        <edge source="n112" id="e134" target="n60" type="equivalence">
+          <point x="1490" y="2160"/>
+          <point x="1490" y="1510"/>
+        </edge>
+        <edge source="n116" id="e137" target="n120" type="input">
+          <point x="1790" y="1440"/>
+          <point x="1670" y="1440"/>
+        </edge>
+        <edge source="n117" id="e138" target="n121" type="input">
+          <point x="1790" y="1510"/>
+          <point x="1670" y="1510"/>
+        </edge>
+        <edge source="n118" id="e139" target="n122" type="input">
+          <point x="1790" y="1580"/>
+          <point x="1670" y="1580"/>
+        </edge>
+        <edge source="n119" id="e140" target="n123" type="input">
+          <point x="1790" y="1640"/>
+          <point x="1670" y="1640"/>
+        </edge>
+        <edge source="n120" id="e142" target="n60" type="equivalence">
+          <point x="1670" y="1440"/>
+          <point x="1590" y="1440"/>
+          <point x="1590" y="1510"/>
+          <point x="1490" y="1510"/>
+        </edge>
+        <edge source="n121" id="e143" target="n60" type="inclusion">
+          <point x="1670" y="1510"/>
+          <point x="1490" y="1510"/>
+        </edge>
+        <edge source="n122" id="e144" target="n60" type="inclusion">
+          <point x="1670" y="1580"/>
+          <point x="1590" y="1580"/>
+          <point x="1590" y="1510"/>
+          <point x="1490" y="1510"/>
+        </edge>
+        <edge source="n123" id="e145" target="n60" type="inclusion">
+          <point x="1670" y="1640"/>
+          <point x="1590" y="1640"/>
+          <point x="1590" y="1510"/>
+          <point x="1490" y="1510"/>
+        </edge>
+        <edge source="n14" id="e15" target="n10" type="input">
+          <point x="1220" y="440"/>
+          <point x="240" y="440"/>
+        </edge>
+        <edge source="n128" id="e150" target="n60" type="inclusion">
+          <point x="1390" y="1680"/>
+          <point x="1490" y="1510"/>
+        </edge>
+        <edge source="n95" id="e151" target="n89" type="inclusion">
+          <point x="880" y="2370"/>
+          <point x="1000" y="2370"/>
+        </edge>
+        <edge source="n130" id="e152" target="n89" type="inclusion">
+          <point x="1120" y="2370"/>
+          <point x="1000" y="2370"/>
+        </edge>
+        <edge source="n129" id="e153" target="n130" type="input">
+          <point x="1190" y="2370"/>
+          <point x="1120" y="2370"/>
+        </edge>
+        <edge source="n132" id="e154" target="n133" type="input">
+          <point x="-490" y="1370"/>
+          <point x="-600" y="1370"/>
+        </edge>
+        <edge source="n132" id="e155" target="n134" type="input">
+          <point x="-490" y="1370"/>
+          <point x="-390" y="1370"/>
+        </edge>
+        <edge source="n100" id="e156" target="n133" type="equivalence">
+          <point x="-840" y="1370"/>
+          <point x="-600" y="1370"/>
+        </edge>
+        <edge source="n134" id="e157" target="n131" type="equivalence">
+          <point x="-390" y="1370"/>
+          <point x="-230" y="1370"/>
+        </edge>
+        <edge source="n15" id="e16" target="n16" type="input">
+          <point x="-540" y="650"/>
+          <point x="-540" y="580"/>
+        </edge>
+        <edge source="n41" id="e160" target="n100" type="equivalence">
+          <point x="-940" y="1490"/>
+          <point x="-940" y="1430"/>
+          <point x="-840" y="1430"/>
+          <point x="-840" y="1370"/>
+        </edge>
+        <edge source="n139" id="e163" target="n68" type="equivalence">
+          <point x="160" y="1440"/>
+          <point x="330" y="1440"/>
+        </edge>
+        <edge source="n15" id="e17" target="n17" type="input">
+          <point x="-540" y="650"/>
+          <point x="-540" y="720"/>
+        </edge>
+        <edge source="n60" id="e173" target="n149" type="equivalence">
+          <point x="1490" y="1510"/>
+          <point x="1590" y="1510"/>
+          <point x="1590" y="1290"/>
+          <point x="1670" y="1290"/>
+        </edge>
+        <edge source="n148" id="e174" target="n149" type="input">
+          <point x="1790" y="1290"/>
+          <point x="1670" y="1290"/>
+        </edge>
+        <edge source="n0" id="e175" target="n151" type="equivalence">
+          <point x="240" y="120"/>
+          <point x="240" y="20"/>
+          <point x="290" y="20"/>
+        </edge>
+        <edge source="n150" id="e176" target="n151" type="input">
+          <point x="440" y="20"/>
+          <point x="290" y="20"/>
+        </edge>
+        <edge source="n16" id="e18" target="n11" type="equivalence">
+          <point x="-540" y="580"/>
+          <point x="-540" y="440"/>
+        </edge>
+        <edge source="n11" id="e19" target="n24" type="equivalence">
+          <point x="-540" y="415"/>
+          <point x="-540" y="280"/>
+          <point x="-680" y="280"/>
+        </edge>
+        <edge source="n3" id="e2" target="n5" type="input">
+          <point x="480" y="120"/>
+          <point x="400" y="120"/>
+        </edge>
+        <edge source="n23" id="e20" target="n24" type="input">
+          <point x="-680" y="210"/>
+          <point x="-680" y="280"/>
+        </edge>
+        <edge source="n19" id="e21" target="n18" type="input">
+          <point x="-740" y="920"/>
+          <point x="-740" y="810"/>
+          <point x="-540" y="810"/>
+        </edge>
+        <edge source="n20" id="e22" target="n18" type="input">
+          <point x="-540" y="970"/>
+          <point x="-540" y="810"/>
+        </edge>
+        <edge source="n21" id="e23" target="n18" type="input">
+          <point x="-350" y="920"/>
+          <point x="-350" y="810"/>
+          <point x="-540" y="810"/>
+        </edge>
+        <edge source="n18" id="e25" target="n17" type="equivalence">
+          <point x="-540" y="810"/>
+          <point x="-540" y="720"/>
+        </edge>
+        <edge source="n19" id="e29" target="n27" type="equivalence">
+          <point x="-740" y="920"/>
+          <point x="-890" y="920"/>
+        </edge>
+        <edge source="n4" id="e3" target="n2" type="equivalence">
+          <point x="560" y="120"/>
+          <point x="710" y="120"/>
+        </edge>
+        <edge source="n26" id="e31" target="n27" type="input">
+          <point x="-980" y="920"/>
+          <point x="-890" y="920"/>
+        </edge>
+        <edge source="n0" id="e4" target="n5" type="equivalence">
+          <point x="240" y="120"/>
+          <point x="400" y="120"/>
+        </edge>
+        <edge source="n34" id="e42" target="n35" type="input">
+          <point x="-760" y="1570"/>
+          <point x="-760" y="1490"/>
+        </edge>
+        <edge source="n40" id="e49" target="n41" type="input">
+          <point x="-940" y="1570"/>
+          <point x="-940" y="1490"/>
+        </edge>
+        <edge source="n45" id="e53" target="n46" type="input">
+          <point x="450" y="830"/>
+          <point x="450" y="760"/>
+        </edge>
+        <edge source="n45" id="e54" target="n47" type="input">
+          <point x="450" y="830"/>
+          <point x="450" y="900"/>
+        </edge>
+        <edge source="n46" id="e55" target="n12" type="inclusion">
+          <point x="450" y="760"/>
+          <point x="450" y="680"/>
+        </edge>
+        <edge source="n47" id="e56" target="n48" type="inclusion">
+          <point x="450" y="900"/>
+          <point x="450" y="960"/>
+        </edge>
+        <edge source="n43" id="e57" target="n48" type="input">
+          <point x="180" y="960"/>
+          <point x="450" y="960"/>
+        </edge>
+        <edge source="n44" id="e58" target="n48" type="input">
+          <point x="1140" y="960"/>
+          <point x="450" y="960"/>
+        </edge>
+        <edge source="n51" id="e63" target="n52" type="input">
+          <point x="1220" y="280"/>
+          <point x="1220" y="210"/>
+        </edge>
+        <edge source="n51" id="e64" target="n53" type="input">
+          <point x="1220" y="280"/>
+          <point x="1220" y="350"/>
+        </edge>
+        <edge source="n52" id="e65" target="n49" type="inclusion">
+          <point x="1220" y="210"/>
+          <point x="1220" y="120"/>
+        </edge>
+        <edge source="n14" id="e66" target="n53" type="equivalence">
+          <point x="1220" y="440"/>
+          <point x="1220" y="350"/>
+        </edge>
+        <edge source="n58" id="e69" target="n11" type="equivalence">
+          <point x="-410" y="280"/>
+          <point x="-540" y="280"/>
+          <point x="-540" y="440"/>
+        </edge>
+        <edge source="n7" id="e7" target="n8" type="input">
+          <point x="240" y="280"/>
+          <point x="240" y="210"/>
+        </edge>
+        <edge source="n57" id="e70" target="n58" type="input">
+          <point x="-410" y="210"/>
+          <point x="-410" y="280"/>
+        </edge>
+        <edge source="n62" id="e71" target="n0" type="equivalence">
+          <point x="290" y="-40"/>
+          <point x="240" y="-40"/>
+          <point x="240" y="120"/>
+        </edge>
+        <edge source="n61" id="e72" target="n62" type="input">
+          <point x="440" y="-40"/>
+          <point x="290" y="-40"/>
+        </edge>
+        <edge source="n44" id="e73" target="n64" type="equivalence">
+          <point x="1140" y="960"/>
+          <point x="1140" y="890"/>
+        </edge>
+        <edge source="n63" id="e74" target="n64" type="input">
+          <point x="1140" y="820"/>
+          <point x="1140" y="890"/>
+        </edge>
+        <edge source="n66" id="e75" target="n67" type="input">
+          <point x="480" y="1440"/>
+          <point x="590" y="1440"/>
+        </edge>
+        <edge source="n66" id="e76" target="n68" type="input">
+          <point x="480" y="1440"/>
+          <point x="330" y="1440"/>
+        </edge>
+        <edge source="n7" id="e8" target="n9" type="input">
+          <point x="240" y="280"/>
+          <point x="240" y="350"/>
+        </edge>
+        <edge source="n69" id="e80" target="n70" type="input">
+          <point x="1140" y="1110"/>
+          <point x="1140" y="1040"/>
+        </edge>
+        <edge source="n69" id="e81" target="n71" type="input">
+          <point x="1140" y="1110"/>
+          <point x="1140" y="1180"/>
+        </edge>
+        <edge source="n70" id="e82" target="n44" type="equivalence">
+          <point x="1140" y="1040"/>
+          <point x="1140" y="960"/>
+        </edge>
+        <edge source="n59" id="e83" target="n72" type="input">
+          <point x="840" y="1510"/>
+          <point x="840" y="1250"/>
+          <point x="1140" y="1250"/>
+        </edge>
+        <edge source="n60" id="e84" target="n72" type="input">
+          <point x="1490" y="1510"/>
+          <point x="1490" y="1250"/>
+          <point x="1140" y="1250"/>
+        </edge>
+        <edge source="n72" id="e85" target="n71" type="equivalence">
+          <point x="1140" y="1250"/>
+          <point x="1140" y="1180"/>
+        </edge>
+        <edge source="n74" id="e86" target="n75" type="input">
+          <point x="480" y="1580"/>
+          <point x="590" y="1580"/>
+        </edge>
+        <edge source="n74" id="e87" target="n76" type="input">
+          <point x="480" y="1580"/>
+          <point x="330" y="1580"/>
+        </edge>
+        <edge source="n67" id="e88" target="n59" type="equivalence">
+          <point x="590" y="1440"/>
+          <point x="690" y="1440"/>
+          <point x="690" y="1510"/>
+          <point x="840" y="1510"/>
+        </edge>
+        <edge source="n8" id="e9" target="n0" type="equivalence">
+          <point x="240" y="210"/>
+          <point x="240" y="120"/>
+        </edge>
+        <edge source="n59" id="e90" target="n75" type="equivalence">
+          <point x="840" y="1510"/>
+          <point x="690" y="1510"/>
+          <point x="690" y="1580"/>
+          <point x="590" y="1580"/>
+        </edge>
+        <edge source="n76" id="e91" target="n73" type="equivalence">
+          <point x="330" y="1580"/>
+          <point x="160" y="1580"/>
+        </edge>
+        <edge source="n78" id="e92" target="n79" type="input">
+          <point x="840" y="1740"/>
+          <point x="840" y="1600"/>
+        </edge>
+        <edge source="n78" id="e93" target="n80" type="input">
+          <point x="840" y="1740"/>
+          <point x="840" y="1860"/>
+          <point x="1000" y="1860"/>
+        </edge>
+        <edge source="n79" id="e94" target="n59" type="equivalence">
+          <point x="840" y="1600"/>
+          <point x="840" y="1510"/>
+        </edge>
+        <edge source="n80" id="e95" target="n81" type="equivalence">
+          <point x="1000" y="1860"/>
+          <point x="1000" y="1980"/>
+        </edge>
+        <edge source="n83" id="e96" target="n81" type="equivalence">
+          <point x="780" y="1950"/>
+          <point x="900" y="1950"/>
+          <point x="900" y="1980"/>
+          <point x="1000" y="1980"/>
+        </edge>
+        <edge source="n85" id="e97" target="n81" type="equivalence">
+          <point x="780" y="2020"/>
+          <point x="900" y="2020"/>
+          <point x="900" y="1980"/>
+          <point x="1000" y="1980"/>
+        </edge>
+        <edge source="n82" id="e98" target="n83" type="input">
+          <point x="670" y="1950"/>
+          <point x="780" y="1950"/>
+        </edge>
+        <edge source="n84" id="e99" target="n85" type="input">
+          <point x="670" y="2020"/>
+          <point x="780" y="2020"/>
+        </edge>
+      </diagram>
+      <diagram height="5000" name="interfaccia" width="5000">
+        <node color="#fcfcfc" id="n10" type="concept">
+          <geometry height="50" x="1220" y="-530" width="110"/>
+          <iri>https://www.ica.org/standards/RiC/ontology#Activity</iri>
+          <label height="22" x="1220" y="-530" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n11" type="concept">
+          <geometry height="50" x="1220" y="-350" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ConcessioneDiPensione</iri>
+          <label height="36" x="1220" y="-350" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n12" type="concept">
+          <geometry height="50" x="660" y="-530" width="110"/>
+          <iri>http://xmlns.com/foaf/0.1/Document</iri>
+          <label height="22" x="660" y="-530" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n13" type="concept">
+          <geometry height="50" x="1510" y="-530" width="110"/>
+          <iri>https://www.ica.org/standards/RiC/ontology#Agent</iri>
+          <label height="22" x="1510" y="-530" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n14" type="concept">
+          <geometry height="50" x="1510" y="-340" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore</iri>
+          <label height="22" x="1510" y="-340" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n15" type="concept">
+          <geometry height="50" x="-330" y="-460" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ResponsabileDelDocumento</iri>
+          <label height="36" x="-330" y="-460" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n16" type="concept">
+          <geometry height="50" x="-560" y="-460" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante</iri>
+          <label height="22" x="-560" y="-460" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n17" type="concept">
+          <geometry height="50" x="-100" y="-460" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario</iri>
+          <label height="22" x="-100" y="-460" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n4" type="concept">
+          <geometry height="50" x="-330" y="-260" width="110"/>
+          <iri>http://xmlns.com/foaf/0.1/Person</iri>
+          <label height="22" x="-330" y="-260" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n7" type="concept">
+          <geometry height="50" x="-330" y="-660" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva</iri>
+          <label height="36" x="-330" y="-660" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n8" type="concept">
+          <geometry height="50" x="810" y="-350" width="110"/>
+          <iri>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione</iri>
+          <label height="36" x="810" y="-350" customSize="0" size="12" width="110"/>
+        </node>
+        <node color="#fcfcfc" id="n9" type="concept">
+          <geometry height="50" x="950" y="-530" width="110"/>
+          <iri>https://www.ica.org/standards/RiC/ontology#Record</iri>
+          <label height="22" x="950" y="-530" customSize="0" size="12" width="110"/>
+        </node>
+        <edge source="n14" id="e10" target="n13" type="inclusion">
+          <point x="1510" y="-340"/>
+          <point x="1510" y="-530"/>
+        </edge>
+        <edge source="n16" id="e15" target="n4" type="inclusion">
+          <point x="-560" y="-460"/>
+          <point x="-560" y="-260"/>
+          <point x="-330" y="-260"/>
+        </edge>
+        <edge source="n15" id="e16" target="n4" type="inclusion">
+          <point x="-330" y="-460"/>
+          <point x="-330" y="-260"/>
+        </edge>
+        <edge source="n17" id="e17" target="n4" type="inclusion">
+          <point x="-100" y="-460"/>
+          <point x="-100" y="-260"/>
+          <point x="-330" y="-260"/>
+        </edge>
+        <edge source="n15" id="e18" target="n7" type="inclusion">
+          <point x="-330" y="-460"/>
+          <point x="-330" y="-660"/>
+        </edge>
+        <edge source="n16" id="e19" target="n7" type="inclusion">
+          <point x="-560" y="-460"/>
+          <point x="-560" y="-660"/>
+          <point x="-330" y="-660"/>
+        </edge>
+        <edge source="n17" id="e20" target="n7" type="inclusion">
+          <point x="-100" y="-460"/>
+          <point x="-100" y="-660"/>
+          <point x="-330" y="-660"/>
+        </edge>
+        <edge source="n16" id="e22" target="n17" type="equivalence">
+          <point x="-560" y="-460"/>
+          <point x="-750" y="-460"/>
+          <point x="-750" y="-760"/>
+          <point x="90" y="-760"/>
+          <point x="90" y="-460"/>
+          <point x="-100" y="-460"/>
+        </edge>
+        <edge source="n11" id="e7" target="n10" type="inclusion">
+          <point x="1220" y="-350"/>
+          <point x="1220" y="-530"/>
+        </edge>
+        <edge source="n8" id="e8" target="n12" type="inclusion">
+          <point x="810" y="-350"/>
+          <point x="660" y="-350"/>
+          <point x="660" y="-530"/>
+        </edge>
+        <edge source="n8" id="e9" target="n9" type="inclusion">
+          <point x="810" y="-350"/>
+          <point x="950" y="-350"/>
+          <point x="950" y="-530"/>
+        </edge>
+      </diagram>
+    </diagrams>
+  </project>
+</graphol>

@@ -1,0 +1,3103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphol version="3">
+  <project name="cassetto previdenziale" version="1.0">
+    <ontology iri="https://w3id.org/italia/social-security/onto/INPSServicePortal/" addLabelFromSimpleName="0" addLabelFromUserInput="0" lang="en" prefix="INPSSP">
+      <imports/>
+      <prefixes>
+        <prefix>
+          <value>CPSV</value>
+          <namespace>https://w3id.org/italia/onto/CPSV/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSCore</value>
+          <namespace>https://w3id.org/italia/social-security/onto/core/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSRL</value>
+          <namespace>https://w3id.org/italia/social-security/onto/relevantLegislation/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSSEP</value>
+          <namespace>https://w3id.org/italia/social-security/onto/selfEmploymentPortal/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSSP</value>
+          <namespace>https://w3id.org/italia/social-security/onto/INPSServicePortal/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSSafety</value>
+          <namespace>https://w3id.org/italia/social-security/onto/social-safety-net/</namespace>
+        </prefix>
+        <prefix>
+          <value>INPSTFP</value>
+          <namespace>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/</namespace>
+        </prefix>
+        <prefix>
+          <value>Proc17</value>
+          <namespace>https://w3id.org/italia/social-security/onto/procedura17/</namespace>
+        </prefix>
+        <prefix>
+          <value>TI</value>
+          <namespace>https://w3id.org/italia/onto/TI/</namespace>
+        </prefix>
+        <prefix>
+          <value>dct</value>
+          <namespace>http://purl.org/dc/terms/</namespace>
+        </prefix>
+        <prefix>
+          <value>l0</value>
+          <namespace>https://w3id.org/italia/onto/l0/</namespace>
+        </prefix>
+        <prefix>
+          <value>owl</value>
+          <namespace>http://www.w3.org/2002/07/owl#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdf</value>
+          <namespace>http://www.w3.org/1999/02/22-rdf-syntax-ns#</namespace>
+        </prefix>
+        <prefix>
+          <value>rdfs</value>
+          <namespace>http://www.w3.org/2000/01/rdf-schema#</namespace>
+        </prefix>
+        <prefix>
+          <value>xml</value>
+          <namespace>http://www.w3.org/XML/1998/namespace</namespace>
+        </prefix>
+        <prefix>
+          <value>xsd</value>
+          <namespace>http://www.w3.org/2001/XMLSchema#</namespace>
+        </prefix>
+      </prefixes>
+      <datatypes>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+        <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral</datatype>
+        <datatype>http://www.w3.org/2000/01/rdf-schema#Literal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NCName</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#NMTOKEN</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#Name</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#anyURI</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#base64Binary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#boolean</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#byte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTime</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#dateTimeStamp</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#decimal</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#double</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#float</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#hexBinary</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#int</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#integer</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#language</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#long</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#negativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonNegativeInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#nonPositiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#normalizedString</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#positiveInteger</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#short</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#string</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#token</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedByte</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedInt</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedLong</datatype>
+        <datatype>http://www.w3.org/2001/XMLSchema#unsignedShort</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#rational</datatype>
+        <datatype>http://www.w3.org/2002/07/owl#real</datatype>
+      </datatypes>
+      <languages>
+        <language>de</language>
+        <language>en</language>
+        <language>es</language>
+        <language>fr</language>
+        <language>it</language>
+      </languages>
+      <facets>
+        <facet>http://www.w3.org/2001/XMLSchema#langRange</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#length</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#maxLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minExclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minInclusive</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#minLength</facet>
+        <facet>http://www.w3.org/2001/XMLSchema#pattern</facet>
+      </facets>
+      <annotationProperties>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#comment</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#isDefinedBy</annotationProperty>
+        <annotationProperty>http://www.w3.org/2000/01/rdf-schema#label</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#backwardCompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#deprecated</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#incompatibleWith</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#priorVersion</annotationProperty>
+        <annotationProperty>http://www.w3.org/2002/07/owl#versionInfo</annotationProperty>
+      </annotationProperties>
+      <iris>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionsta</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteDelServizio</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/social-safety-net/ContributoPrevidenziale</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Avviso bonario</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'avviso bonario è' una comunicazione con la quale l' Agenzia delle Entrate informa il contribuente del controllo effettuato sulla sua dichiarazione dei redditi, evidenziando eventuali imposte e contributi che non risultano pagati. Nell'ontologia la classe descrive il servizio che consente di consultare la presenza di questa tipologia di avviso nel proprio cassetto previdenziale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Payment reminder</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The payment reminder is a communication with which the Revenue Agency informs the taxpayer of the check carried out on his tax return, highlighting any taxes and contributions that have not been paid</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'avviso bonario Ã¨' una comunicazione con la quale l' Agenzia delle Entrate informa il contribuente del controllo effettuato sulla sua dichiarazione dei redditi, evidenziando eventuali imposte e contributi che non risultano pagati. Nell'ontologia la classe descrive il servizio che consente di consultare la presenza di questa tipologia di avviso nel proprio cassetto previdenziale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Azienda agricola</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta l'azienda agricola intesa come il complesso di beni organizzati dall'imprenditore agricolo per l'esercizio della sua attività.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Farm</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the agricultural business understood as the complex of assets organized by the agricultural entrepreneur for the exercise of their activity</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta l'azienda agricola intesa come il complesso di beni organizzati dall'imprenditore agricolo per l'esercizio della sua attivitÃ .</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Cartella esattoriale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la cartella esattoriale o cartella di pagamento. La cartella di pagamento è La cartella di pagamento è l’atto che Agenzia delle entrate-Riscossione invia ai contribuenti al fine di recuperare i crediti vantati dagli enti impositori</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Tax bill</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the tax bill or payment notice</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la cartella esattoriale o cartella di pagamento. La cartella di pagamento Ã¨ La cartella di pagamento Ã¨ lâ€™atto che Agenzia delle entrate-Riscossione invia ai contribuenti al fine di recuperare i crediti vantati dagli enti impositori</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Cassetto previdenziale lavoratori agricoli autonomi</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il servizio consente di visualizzare e verificare la posizione dell'azienda e di gestire le comunicaizoni con INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Service portale of the self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The self-employed agricultural worker's social security drawer is a service that allows owners of agricultural businesses and their intermediaries to consult and verify the company's insurance position, access consultation and request submission services, and communicate with INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Categoria azienda agricola</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta l'insieme dei termini controllati che descrivono le possibili tipologie di aziende agricole</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Agricultural business category</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the set of controlled terms that describe the possible types of agricultural businesses</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Colono</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attività del colono si caratterizza per l'apporto parziale del lavoro nella coltivazione del fondo. La posizione asicurativa dei coloni si differenzia in base al numero delle giornate annue richiesta come fabbisogno lavorativo dal fondo e dagli animali: se le giornate richieste sono inferiori a 120 i coloni sono equiparati ai lavoratori dipendenti, se superiori si considerano lavoratori autonomi. La legge 203 del 1982 ha disposto la conversione dei contratti di mezzadria e colonia in contratti di affitto.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Tenant farmer</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The tenant farmer's activity is characterized by a partial contribution of labor in the cultivation of the land</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attivitÃ  del colono si caratterizza per l'apporto parziale del lavoro nella coltivazione del fondo. La posizione asicurativa dei coloni si differenzia in base al numero delle giornate annue richiesta come fabbisogno lavorativo dal fondo e dagli animali: se le giornate richieste sono inferiori a 120 i coloni sono equiparati ai lavoratori dipendenti, se superiori si considerano lavoratori autonomi. La legge 203 del 1982 ha disposto la conversione dei contratti di mezzadria e colonia in contratti di affitto.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Coltivatore diretto</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>I coltivatori diretti sono proprietari, usufruttuari, affittuari, enfiteuti, pastori e assegnatari di fondi, nonchè appartanenti ai rispettivi nuclei familiari che, direttamente e abitualmente si dedicano alla coltivazione dei fondi, all'allevamento del bestiame e allo svolgimento delle attività connesse. Per essere definito tale l'attività svolta dal lavoratore agricolo deve avere le seguenti caratteristiche: essere svolta in modo prevalente ed esclusivo; può essere volta con parenti e affini entro il quarto grado; il fabbisogno aziendale non deve essere inferiore a 104 giornate all'anno e il terzo di tale fabbisogno deve essere garantito al nucleo familiare </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Direct farmer</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Direct farmers are owners, usufructuaries, tenants, emphyteuts, shepherds, and assignors of land, as well as members of their respective families who are directly and regularly engaged in the cultivation of the land, livestock raising, and related activities</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>I coltivatori diretti sono proprietari, usufruttuari, affittuari, enfiteuti, pastori e assegnatari di fondi, nonchÃ¨ appartanenti ai rispettivi nuclei familiari che, direttamente e abitualmente si dedicano alla coltivazione dei fondi, all'allevamento del bestiame e allo svolgimento delle attivitÃ  connesse. Per essere definito tale l'attivitÃ  svolta dal lavoratore agricolo deve avere le seguenti caratteristiche: essere svolta in modo prevalente ed esclusivo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Contributo dovuto lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta lo spazio del casetto previdenziale dei lavoratori agricoli autonomi dedicato alla consultazione dei contributi dovuti dal lavoratore ai fini previdenziali e assistenziali</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Required social security contribution</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the space of the social security service portal for self-employed agricultural workers dedicated to consulting the contributions owed by the worker for social security and welfare purposes</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Contributo versato lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta lo spazio del casetto previdenziale dei lavoratori agricoli autonomi dedicato alla consultazione dei contributi versati dal lavoratore</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Social security contribution paid</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the space of the social security service portal for self-employed agricultural workers dedicated to consulting the contributions paid by the worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda di dilazione</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di dilazione del pagamento del debito contributivo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Request for payment extension</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the section of services available in the social security service portal dedicated to consulting requests for deferral of payment of the contribution debt</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda di esonero</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di esonero dal pagamento del debito contributivo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Request for exemption from contribution payments</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the section of available services in the social security service portal dedicated to consulting requests for exemption from contribution debt payments</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda di regolarizzazione spontanea</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di regolarizzazione spontanea</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Request for spontaneous regularisation</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the section of available services in the social security service portal dedicated to consulting requests for voluntary regularization</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda di riemissione del modello F24</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di riemissione del modello F24</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Rrequest for reissuance of F24 model</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the section of available services in the social security service portal dedicated to consulting requests for reissuance of the F24 form</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Request for reissuance of F24 model</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda di sospensione lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di sospensione del pagamento del debito contributivo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Request for suspension of self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the section of available services in the social security box dedicated to consulting requests for suspension of contribution debt payments</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the section of available services in the social security servce portal dedicated to consulting requests for suspension of contribution debt payments</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda Riduzione Sanzione Civile Lavoratore Agricolo Autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di delle sanzioni civili a carico del lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Request for Reduction of Civil Penalty for Self-Employed Agricultural Worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the section of available services in the social security portal dedicated to consulting requests regarding civil penalties imposed on self-employed agricultural workers</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Domanda rimborso contributi non dovuti lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di rimborso dei contributi non dovuti</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Request for refund of undue contributions for self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the section of available services in the social security portal dedicated to consulting requests for refunds of undue contributions</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Imprenditore agricolo professionale (IAP)</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'imprenditore agricolo professionale (IAP) è colui il quale dedica alle attività agricole (definite allrticolo 3215 del Codice Civile), direttamente o in qualità di socio di società, almeno il 50 percento del prorpio tempo di lavoro complessivo e che ricavi dalle attività medesime almeno il 50 percento del proprio reddito globale da lavoro. Per l'imprenditore che opera nelle zone svantaggiate le percentulai sono ridotte al 25 percento. L'imprenditore agricolo professionale deve possedere le conoscenze  e le competenze professionali ai sensi dell'articolo 5 del Regolamento CE n. 1257/1999. La figura è introdotta e definita dal Decreto Legislativo 29 marzo 2004 n. 99. Nell'ontologia ache descrive il cassett previdenziale del lavoratore agricolo auotnomo la classe è modellata come sottoclasse di Agricoltore Autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Professional agricultural entrepreneur</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The professional agricultural entrepreneur (IAP) is someone who dedicates at least 50 percent of their total working time to agricultural activities, either directly or as a partner in a company.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'imprenditore agricolo professionale (IAP) Ã¨ colui il quale dedica alle attivitÃ  agricole (definite allrticolo 3215 del Codice Civile), direttamente o in qualitÃ  di socio di societÃ , almeno il 50 percento del prorpio tempo di lavoro complessivo e che ricavi dalle attivitÃ  medesime almeno il 50 percento del proprio reddito globale da lavoro. Per l'imprenditore che opera nelle zone svantaggiate le percentulai sono ridotte al 25 percento. L'imprenditore agricolo professionale deve possedere le conoscenze  e le competenze professionali ai sensi dell'articolo 5 del Regolamento CE n. 1257/1999. La figura Ã¨ introdotta e definita dal Decreto Legislativo 29 marzo 2004 n. 99. Nell'ontologia ache descrive il cassett previdenziale del lavoratore agricolo auotnomo la classe Ã¨ modellata come sottoclasse di Agricoltore Autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il lavoratore agricolo autonomo è l'imprenditore è l'imprenditore agricolo che esercita un'attività diretta alla coltivazione del fondo, alla silvicoltura, all'allevamento degli animali e attività connesse, come indicato dall'articolo 1 del Decreto Legislativo n. 228/2001. Nel'ambito del lavoro autonomo di settore si distinguono le figure di Coltivatori diretti, Coloni, Mezzadri, Imprenditori agricoli professionali. Nell'ontologia descrittiva del cassetto previdenziale questa classe rappresenta l'insieme dei soggetti direttamente interessati dai servizi disponibili nel cassetto.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The self-employed agricultural worker is the agricultural entrepreneur who engages in activities related to land cultivation, forestry, livestock raising, and related activities</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Il lavoratore agricolo autonomo Ã¨ l'imprenditore Ã¨ l'imprenditore agricolo che esercita un'attivitÃ  diretta alla coltivazione del fondo, alla silvicoltura, all'allevamento degli animali e attivitÃ  connesse, come indicato dall'articolo 1 del Decreto Legislativo n. 228/2001. Nel'ambito del lavoro autonomo di settore si distinguono le figure di Coltivatori diretti, Coloni, Mezzadri, Imprenditori agricoli professionali. Nell'ontologia descrittiva del cassetto previdenziale questa classe rappresenta l'insieme dei soggetti direttamente interessati dai servizi disponibili nel cassetto.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Mezzadro</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>I mezzadri sono coloro che si associano al proprietario del fondo apportando all'impresa agricola soprattutto il lavoro personale e della famiglia. La famiglia deve stabilmente risiedere nel fondo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Sharecropper</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>Sharecroppers are those who partner with the landowner by contributing mainly their personal and family labor to the agricultural enterprise. The family must reside permanently on the land.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Recupero crediti</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta la sezione del cassetto previdenziale dei lavoratori agricoli autonomi che consente l'accesso ai servizi di consultazione della posizione debitoria del lavoratore</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Debt collection</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the section of the social security box for self-employed agricultural workers that provides access to services for consulting the worker's debt position</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Situazione debitoria</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La funzione consente di visualizzare la situazione debitoria del lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Debt status</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The function allows viewing the debt situation of the self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Tipologia contributo lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta l'insieme delle voci controllate codificate per indicare il tipo di contributo previdenziale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Type of contribution for self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the set of controlled coded entries used to indicate the type of social security contribution</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Versamento contributivo lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La classe rappresenta il servizio del cassetto previdenziale adibito alla consultazione dei contributi versati dal lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>Contribution payment</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The class represents the service of the social security portal dedicated to consulting the contributions paid by the self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>codice azienda</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo riporta il codice identificativo dell'azienda agricola</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>company code</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The attribute provides the identifying code of the agricultural business</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>codice categoria azienda agricola</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo esprime in forma codificata la categora dell'azienda agricola</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>category code for agricultural business.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The attribute expresses the category of the agricultural business in coded form</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>codice fiscale azienda agricola</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo registra il codice fiscale dell'azienda agricola </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>tax code for agricultural business</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The attribute records the tax code of the agricultural business</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleDestinatario</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>codice sede INPS</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo contiene il codice della sede INPS di riferimento per il versamento contributivo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>INPS office code</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The attribute contains the code of the relevant INPS office for contribution payments</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/cognomeDestinatario</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>consente la consultazione di</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega le istanze della classe Posizione assicurativa del lavoratore agricolo autonomo con le istanze della classe Versamento contributivo, ad indicare che i dati relativi ai versament contributivi del lavoratore agricolo autonomo possono essere consultati tramite l'accesso alla funzione Posizione assicurativa del Cassetto Previcenziale</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>enables the consultation of</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects instances of the class 'Insurance Position of the Self-Employed Agricultural Worker' with instances of the class 'Contribution Payment</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>da accesso alla visualizzazione di</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property esprime la possibilità di accesso alla visualizzazione del dettaglio dei contributi previdenziali tramite la funzione del cassetto previdenziale dedicata al versamento contributivo del lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>provides access to the viewing of</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property expresses the possibility of accessing the details of social security contributions through the function of the social security service portal dedicated to the contribution payments of the self-employed agricultural worker</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property esprime la possibilitÃ  di accesso alla visualizzazione del dettaglio dei contributi previdenziali tramite la funzione del cassetto previdenziale dedicata al versamento contributivo del lavoratore agricolo autonomo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>denominazione azienda agricola</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo contiene il nome dell'azienda agricola</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>name of the farm</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The attribute contains the name of the farm</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>ha categoria</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>La object property collega le istanze della classe azienda agricola alla propria categoria di riferimento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has category.</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects instances of the class 'Agricultural Business' to their respective category</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has category</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>ha tipologia di contributo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#isDefinedBy</property>
+              <object>
+                <lexicalForm>la object property connette il contributo alla propria tipologia specifica</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>has type of contribution</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The object property connects the contribution to its specific type</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>importo versato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo indica l'importo contributivo versato</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>amount paid</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The attribute indicates the amount of contributions paid</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>importo contributo corrente</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo indica l'importo del contributo corrente</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>current contribution amount</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The attribute indicates the amount of the current contribution</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>importo contributo pregresso</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo indica l'importo del versamento contributivo pregresso</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>amount of prior contributions</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The attribute indicates the amount of prior contribution payments</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoTotaleSommeDovute</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/indirizzoDestinatario</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeDestinatario</value>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>nome della tipologia del contributo</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo contiene l'espressione utile a identificare e descrivere la tipologia di contributo </lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>name of the type of contribution</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The attribute contains the expression used to identify and describe the type of contribution</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroIdentificativoDellaCartella</value>
+          <functional/>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata</value>
+          <functional/>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>numero rata</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo consente di indicare il numero della rata, tra le quattro previste annulamente per il versamento dei contributi tramite F24</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>installment number</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The attribute allows indicating the installment number among the four scheduled annually for contribution payments via F24 model</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+        <iri>
+          <value>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento</value>
+          <annotations>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>periodo di riferimento</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>L'attributo indica il periodo fiscale di riferimento per il versamento contributivo descritto nella pagina informativa</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>it</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#label</property>
+              <object>
+                <lexicalForm>reference period</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+            <annotation>
+              <subject>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento</subject>
+              <property>http://www.w3.org/2000/01/rdf-schema#comment</property>
+              <object>
+                <lexicalForm>The attribute indicates the tax reference period for the contribution payment described on the information page</lexicalForm>
+                <datatype>http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral</datatype>
+                <language>en</language>
+              </object>
+            </annotation>
+          </annotations>
+        </iri>
+      </iris>
+    </ontology>
+    <diagrams>
+      <diagram name="cassetto previdenziale INPS" height="5000" width="5000">
+        <node color="#fcfcfc" id="n0" type="concept">
+          <geometry height="50" y="210" width="110" x="460"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale</iri>
+          <label height="36" y="210" size="12" width="110" x="460" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n44" type="concept">
+          <geometry height="50" y="-380" width="110" x="460"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteDelServizio</iri>
+          <label height="36" y="-380" size="12" width="110" x="460" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n48" type="role">
+          <geometry height="50" y="-190" width="70" x="460"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale</iri>
+          <label height="22" y="-220" size="12" width="220" x="460" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n49" type="domain-restriction">
+          <geometry height="20" y="-280" width="20" x="460"/>
+          <label height="22" y="-302" size="12" width="39" x="460" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n50" type="range-restriction">
+          <geometry height="20" y="-110" width="20" x="460"/>
+          <label height="22" y="-132" size="12" width="39" x="460" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n58" type="disjoint-union">
+          <geometry height="30" y="-20" width="50" x="460"/>
+        </node>
+        <node color="#fcfcfc" id="n59" type="concept">
+          <geometry height="50" y="210" width="110" x="10"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</iri>
+          <label height="50" y="210" size="12" width="110" x="10" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n60" type="concept">
+          <geometry height="50" y="210" width="110" x="860"/>
+          <iri>https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista</iri>
+          <label height="50" y="210" size="12" width="110" x="860" customSize="0"/>
+        </node>
+        <node color="#000000" id="n61" type="disjoint-union">
+          <geometry height="30" y="-480" width="50" x="460"/>
+        </node>
+        <node color="#fcfcfc" id="n62" type="concept">
+          <geometry height="50" y="-590" width="110" x="660"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista</iri>
+          <label height="50" y="-590" size="12" width="110" x="660" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n63" type="concept">
+          <geometry height="50" y="-590" width="110" x="260"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo</iri>
+          <label height="50" y="-590" size="12" width="110" x="260" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n65" type="role">
+          <geometry height="50" y="-190" width="70" x="-160"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo</iri>
+          <label height="22" y="-220" size="12" width="381" x="-160" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n66" type="domain-restriction">
+          <geometry height="20" y="-310" width="20" x="-160"/>
+          <label height="22" y="-332" size="12" width="39" x="-160" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n67" type="range-restriction">
+          <geometry height="20" y="-100" width="20" x="-160"/>
+          <label height="22" y="-122" size="12" width="39" x="-160" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n68" type="role">
+          <geometry height="50" y="-190" width="70" x="1020"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista</iri>
+          <label height="22" y="-220" size="12" width="331" x="1020" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n69" type="domain-restriction">
+          <geometry height="20" y="-280" width="20" x="1020"/>
+          <label height="22" y="-302" size="12" width="39" x="1020" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n70" type="range-restriction">
+          <geometry height="20" y="-90" width="20" x="1020"/>
+          <label height="22" y="-112" size="12" width="39" x="1020" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n71" type="role">
+          <geometry height="50" y="350" width="70" x="460"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa</iri>
+          <label height="22" y="320" size="12" width="239" x="460" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n72" type="concept">
+          <geometry height="50" y="560" width="110" x="10"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa</iri>
+          <label height="36" y="560" size="12" width="110" x="10" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n73" type="concept">
+          <geometry height="50" y="560" width="110" x="460"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata</iri>
+          <label height="36" y="560" size="12" width="110" x="460" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n74" type="concept">
+          <geometry height="50" y="560" width="110" x="860"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica</iri>
+          <label height="36" y="560" size="12" width="110" x="860" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n75" type="domain-restriction">
+          <geometry height="20" y="280" width="20" x="460"/>
+          <label height="22" y="258" size="12" width="39" x="460" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n76" type="range-restriction">
+          <geometry height="20" y="410" width="20" x="460"/>
+          <label height="22" y="388" size="12" width="39" x="460" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n77" type="disjoint-union">
+          <geometry height="30" y="480" width="50" x="460"/>
+        </node>
+        <node color="#000000" id="n79" type="disjoint-union">
+          <geometry height="30" y="640" width="50" x="10"/>
+        </node>
+        <node color="#fcfcfc" id="n80" type="concept">
+          <geometry height="50" y="780" width="110" x="-160"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo</iri>
+          <label height="64" y="780" size="12" width="110" x="-160" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n81" type="concept">
+          <geometry height="50" y="780" width="110" x="160"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista</iri>
+          <label height="50" y="780" size="12" width="110" x="160" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n82" type="concept">
+          <geometry height="50" y="1000" width="110" x="300"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo</iri>
+          <label height="50" y="1000" size="12" width="110" x="300" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n83" type="concept">
+          <geometry height="50" y="1000" width="110" x="610"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista</iri>
+          <label height="50" y="1000" size="12" width="110" x="610" customSize="0"/>
+        </node>
+        <node color="#000000" id="n84" type="disjoint-union">
+          <geometry height="30" y="830" width="50" x="460"/>
+        </node>
+        <node color="#fcfcfc" id="n85" type="concept">
+          <geometry height="50" y="780" width="110" x="700"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo</iri>
+          <label height="64" y="780" size="12" width="110" x="700" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n86" type="concept">
+          <geometry height="50" y="780" width="110" x="1020"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista</iri>
+          <label height="50" y="780" size="12" width="110" x="1020" customSize="0"/>
+        </node>
+        <node color="#000000" id="n87" type="disjoint-union">
+          <geometry height="30" y="650" width="50" x="860"/>
+        </node>
+        <node color="#fcfcfc" id="n88" type="role">
+          <geometry height="50" y="350" width="70" x="10"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa</iri>
+          <label height="22" y="320" size="12" width="400" x="10" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n89" type="domain-restriction">
+          <geometry height="20" y="290" width="20" x="10"/>
+          <label height="22" y="268" size="12" width="39" x="10" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n90" type="range-restriction">
+          <geometry height="20" y="350" width="20" x="-580"/>
+          <label height="22" y="328" size="12" width="39" x="-580" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n91" type="disjoint-union">
+          <geometry height="30" y="450" width="50" x="-580"/>
+        </node>
+        <node color="#fcfcfc" id="n92" type="role">
+          <geometry height="50" y="350" width="70" x="860"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa</iri>
+          <label height="22" y="320" size="12" width="350" x="860" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n93" type="domain-restriction">
+          <geometry height="20" y="290" width="20" x="860"/>
+          <label height="22" y="268" size="12" width="39" x="860" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n94" type="range-restriction">
+          <geometry height="20" y="350" width="20" x="1270"/>
+          <label height="22" y="328" size="12" width="39" x="1270" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n95" type="disjoint-union">
+          <geometry height="30" y="460" width="50" x="1270"/>
+        </node>
+        <node color="#fcfcfc" id="n96" type="concept">
+          <geometry height="50" y="-570" width="110" x="1600"/>
+          <iri>https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato</iri>
+          <label height="22" y="-570" size="12" width="110" x="1600" customSize="0"/>
+        </node>
+        <node color="#000000" id="n97" type="disjoint-union">
+          <geometry height="30" y="-470" width="50" x="1600"/>
+        </node>
+        <node color="#fcfcfc" id="n98" type="concept">
+          <geometry height="50" y="-370" width="110" x="1420"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionsta</iri>
+          <label height="36" y="-370" size="12" width="110" x="1420" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n99" type="concept">
+          <geometry height="50" y="-370" width="110" x="1740"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo</iri>
+          <label height="50" y="-370" size="12" width="110" x="1740" customSize="0"/>
+        </node>
+        <edge target="n91" source="n80" id="e100" type="input">
+          <point y="780" x="-160"/>
+          <point y="450" x="-160"/>
+          <point y="450" x="-580"/>
+        </edge>
+        <edge target="n84" source="n82" id="e101" type="input">
+          <point y="1000" x="300"/>
+          <point y="830" x="300"/>
+          <point y="830" x="460"/>
+        </edge>
+        <edge target="n84" source="n83" id="e102" type="input">
+          <point y="1000" x="610"/>
+          <point y="830" x="610"/>
+          <point y="830" x="460"/>
+        </edge>
+        <edge target="n91" source="n82" id="e103" type="input">
+          <point y="1000" x="300"/>
+          <point y="1000" x="-580"/>
+          <point y="450" x="-580"/>
+        </edge>
+        <edge target="n91" source="n85" id="e105" type="input">
+          <point y="780" x="700"/>
+          <point y="1170" x="700"/>
+          <point y="1170" x="-720"/>
+          <point y="450" x="-720"/>
+          <point y="450" x="-580"/>
+        </edge>
+        <edge target="n71" source="n92" id="e106" type="inclusion">
+          <point y="350" x="860"/>
+          <point y="350" x="460"/>
+        </edge>
+        <edge target="n93" source="n92" id="e107" type="input">
+          <point y="350" x="860"/>
+          <point y="290" x="860"/>
+        </edge>
+        <edge target="n94" source="n92" id="e108" type="input">
+          <point y="350" x="860"/>
+          <point y="350" x="1270"/>
+        </edge>
+        <edge target="n60" source="n93" id="e110" type="inclusion">
+          <point y="290" x="860"/>
+          <point y="210" x="860"/>
+        </edge>
+        <edge target="n59" source="n89" id="e111" type="inclusion">
+          <point y="290" x="10"/>
+          <point y="210" x="10"/>
+        </edge>
+        <edge target="n94" source="n95" id="e113" type="inclusion">
+          <point y="460" x="1270"/>
+          <point y="350" x="1270"/>
+        </edge>
+        <edge target="n95" source="n86" id="e114" type="input">
+          <point y="780" x="1020"/>
+          <point y="780" x="1150"/>
+          <point y="460" x="1150"/>
+          <point y="460" x="1270"/>
+        </edge>
+        <edge target="n95" source="n83" id="e115" type="input">
+          <point y="1000" x="610"/>
+          <point y="1000" x="1270"/>
+          <point y="460" x="1270"/>
+        </edge>
+        <edge target="n95" source="n81" id="e116" type="input">
+          <point y="780" x="160"/>
+          <point y="1270" x="160"/>
+          <point y="1260" x="1510"/>
+          <point y="460" x="1510"/>
+          <point y="460" x="1270"/>
+        </edge>
+        <edge target="n96" source="n97" id="e117" type="inclusion">
+          <point y="-470" x="1600"/>
+          <point y="-570" x="1600"/>
+        </edge>
+        <edge target="n97" source="n98" id="e118" type="input">
+          <point y="-370" x="1420"/>
+          <point y="-470" x="1420"/>
+          <point y="-470" x="1600"/>
+        </edge>
+        <edge target="n97" source="n99" id="e119" type="input">
+          <point y="-370" x="1740"/>
+          <point y="-470" x="1740"/>
+          <point y="-470" x="1600"/>
+        </edge>
+        <edge target="n49" source="n48" id="e48" type="input">
+          <point y="-190" x="460"/>
+          <point y="-280" x="460"/>
+        </edge>
+        <edge target="n50" source="n48" id="e49" type="input">
+          <point y="-190" x="460"/>
+          <point y="-110" x="460"/>
+        </edge>
+        <edge target="n0" source="n50" id="e51" type="inclusion">
+          <point y="-110" x="460"/>
+          <point y="210" x="460"/>
+        </edge>
+        <edge target="n0" source="n58" id="e56" type="inclusion">
+          <point y="-20" x="460"/>
+          <point y="210" x="460"/>
+        </edge>
+        <edge target="n58" source="n59" id="e60" type="input">
+          <point y="210" x="10"/>
+          <point y="-20" x="10"/>
+          <point y="-20" x="460"/>
+        </edge>
+        <edge target="n58" source="n60" id="e61" type="input">
+          <point y="210" x="860"/>
+          <point y="-20" x="860"/>
+          <point y="-20" x="460"/>
+        </edge>
+        <edge target="n61" source="n44" id="e62" type="inclusion">
+          <point y="-380" x="460"/>
+          <point y="-480" x="460"/>
+        </edge>
+        <edge target="n44" source="n49" id="e63" type="inclusion">
+          <point y="-280" x="460"/>
+          <point y="-380" x="460"/>
+        </edge>
+        <edge target="n61" source="n63" id="e65" type="input">
+          <point y="-590" x="260"/>
+          <point y="-480" x="260"/>
+          <point y="-480" x="460"/>
+        </edge>
+        <edge target="n61" source="n62" id="e66" type="input">
+          <point y="-590" x="660"/>
+          <point y="-480" x="660"/>
+          <point y="-480" x="460"/>
+        </edge>
+        <edge target="n48" source="n65" id="e67" type="inclusion">
+          <point y="-190" x="-160"/>
+          <point y="-190" x="460"/>
+        </edge>
+        <edge target="n66" source="n65" id="e68" type="input">
+          <point y="-190" x="-160"/>
+          <point y="-310" x="-160"/>
+        </edge>
+        <edge target="n67" source="n65" id="e69" type="input">
+          <point y="-190" x="-160"/>
+          <point y="-100" x="-160"/>
+        </edge>
+        <edge target="n63" source="n66" id="e70" type="inclusion">
+          <point y="-310" x="-160"/>
+          <point y="-590" x="-160"/>
+          <point y="-590" x="260"/>
+        </edge>
+        <edge target="n59" source="n67" id="e71" type="inclusion">
+          <point y="-100" x="-160"/>
+          <point y="210" x="-160"/>
+          <point y="210" x="10"/>
+        </edge>
+        <edge target="n48" source="n68" id="e72" type="inclusion">
+          <point y="-190" x="1020"/>
+          <point y="-190" x="460"/>
+        </edge>
+        <edge target="n69" source="n68" id="e73" type="input">
+          <point y="-190" x="1020"/>
+          <point y="-280" x="1020"/>
+        </edge>
+        <edge target="n70" source="n68" id="e74" type="input">
+          <point y="-190" x="1020"/>
+          <point y="-90" x="1020"/>
+        </edge>
+        <edge target="n62" source="n69" id="e75" type="inclusion">
+          <point y="-280" x="1020"/>
+          <point y="-590" x="1020"/>
+          <point y="-590" x="660"/>
+        </edge>
+        <edge target="n60" source="n70" id="e76" type="inclusion">
+          <point y="-90" x="1020"/>
+          <point y="210" x="1020"/>
+          <point y="210" x="860"/>
+        </edge>
+        <edge target="n75" source="n71" id="e79" type="input">
+          <point y="350" x="460"/>
+          <point y="280" x="460"/>
+        </edge>
+        <edge target="n76" source="n71" id="e80" type="input">
+          <point y="350" x="460"/>
+          <point y="410" x="460"/>
+        </edge>
+        <edge target="n0" source="n75" id="e81" type="inclusion">
+          <point y="280" x="460"/>
+          <point y="210" x="460"/>
+        </edge>
+        <edge target="n77" source="n76" id="e82" type="inclusion">
+          <point y="410" x="460"/>
+          <point y="480" x="460"/>
+        </edge>
+        <edge target="n77" source="n72" id="e83" type="input">
+          <point y="560" x="10"/>
+          <point y="480" x="10"/>
+          <point y="480" x="460"/>
+        </edge>
+        <edge target="n77" source="n73" id="e84" type="input">
+          <point y="560" x="460"/>
+          <point y="480" x="460"/>
+        </edge>
+        <edge target="n77" source="n74" id="e85" type="input">
+          <point y="560" x="860"/>
+          <point y="480" x="860"/>
+          <point y="480" x="460"/>
+        </edge>
+        <edge target="n72" source="n79" id="e86" type="inclusion">
+          <point y="640" x="10"/>
+          <point y="560" x="10"/>
+        </edge>
+        <edge target="n79" source="n80" id="e87" type="input">
+          <point y="780" x="-160"/>
+          <point y="640" x="-160"/>
+          <point y="640" x="10"/>
+        </edge>
+        <edge target="n79" source="n81" id="e88" type="input">
+          <point y="780" x="160"/>
+          <point y="640" x="160"/>
+          <point y="640" x="10"/>
+        </edge>
+        <edge target="n73" source="n84" id="e89" type="inclusion">
+          <point y="830" x="460"/>
+          <point y="560" x="460"/>
+        </edge>
+        <edge target="n74" source="n87" id="e92" type="inclusion">
+          <point y="650" x="860"/>
+          <point y="560" x="860"/>
+        </edge>
+        <edge target="n87" source="n85" id="e93" type="input">
+          <point y="780" x="700"/>
+          <point y="650" x="700"/>
+          <point y="650" x="860"/>
+        </edge>
+        <edge target="n87" source="n86" id="e94" type="input">
+          <point y="780" x="1020"/>
+          <point y="650" x="1020"/>
+          <point y="650" x="860"/>
+        </edge>
+        <edge target="n71" source="n88" id="e95" type="inclusion">
+          <point y="350" x="10"/>
+          <point y="350" x="460"/>
+        </edge>
+        <edge target="n89" source="n88" id="e96" type="input">
+          <point y="350" x="10"/>
+          <point y="290" x="10"/>
+        </edge>
+        <edge target="n90" source="n88" id="e97" type="input">
+          <point y="350" x="10"/>
+          <point y="350" x="-580"/>
+        </edge>
+        <edge target="n90" source="n91" id="e99" type="inclusion">
+          <point y="450" x="-580"/>
+          <point y="350" x="-580"/>
+        </edge>
+      </diagram>
+      <diagram name="cassetto_previdenziale_lavoratori_agricoli_autonomi" height="5000" width="5000">
+        <node color="#fcfcfc" id="n100" type="attribute">
+          <geometry height="20" y="1050" width="20" x="580"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroIdentificativoDellaCartella</iri>
+          <label height="22" y="1028" size="12" width="241" x="580" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n101" type="domain-restriction">
+          <geometry height="20" y="1050" width="20" x="730"/>
+          <label height="22" y="1028" size="12" width="39" x="730" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n102" type="attribute">
+          <geometry height="20" y="1000" width="20" x="1170"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeDestinatario</iri>
+          <label height="22" y="978" size="12" width="157" x="1170" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n103" type="attribute">
+          <geometry height="20" y="1050" width="20" x="1170"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/cognomeDestinatario</iri>
+          <label height="22" y="1028" size="12" width="177" x="1170" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n104" type="attribute">
+          <geometry height="20" y="1110" width="20" x="1170"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/indirizzoDestinatario</iri>
+          <label height="22" y="1088" size="12" width="172" x="1170" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n105" type="attribute">
+          <geometry height="20" y="1170" width="20" x="1170"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleDestinatario</iri>
+          <label height="22" y="1148" size="12" width="199" x="1170" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n106" type="attribute">
+          <geometry height="20" y="1220" width="20" x="1170"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoTotaleSommeDovute</iri>
+          <label height="22" y="1198" size="12" width="216" x="1170" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n107" type="domain-restriction">
+          <geometry height="20" y="1000" width="20" x="1030"/>
+          <label height="22" y="978" size="12" width="39" x="1030" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n108" type="domain-restriction">
+          <geometry height="20" y="1050" width="20" x="1040"/>
+          <label height="22" y="1028" size="12" width="39" x="1040" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n109" type="domain-restriction">
+          <geometry height="20" y="1110" width="20" x="1040"/>
+          <label height="22" y="1088" size="12" width="39" x="1040" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n11" type="concept">
+          <geometry height="50" y="290" width="110" x="-330"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo</iri>
+          <label height="50" y="290" size="12" width="110" x="-330" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n110" type="domain-restriction">
+          <geometry height="20" y="1170" width="20" x="1040"/>
+          <label height="22" y="1148" size="12" width="39" x="1040" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n111" type="domain-restriction">
+          <geometry height="20" y="1220" width="20" x="1040"/>
+          <label height="22" y="1198" size="12" width="39" x="1040" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n13" type="disjoint-union">
+          <geometry height="30" y="190" width="50" x="-330"/>
+        </node>
+        <node color="#fcfcfc" id="n17" type="concept">
+          <geometry height="50" y="540" width="110" x="-80"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo</iri>
+          <label height="64" y="540" size="12" width="110" x="-80" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n18" type="concept">
+          <geometry height="50" y="940" width="110" x="-80"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/VersamentoContributivoLavoratoreAgricoloAutonomo</iri>
+          <label height="50" y="940" size="12" width="110" x="-80" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n19" type="concept">
+          <geometry height="50" y="1630" width="110" x="100"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoVersatoLavoratoreAgricoloAutonomo</iri>
+          <label height="64" y="1630" size="12" width="110" x="100" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n2" type="concept">
+          <geometry height="50" y="290" width="110" x="620"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo</iri>
+          <label height="50" y="290" size="12" width="110" x="620" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n20" type="concept">
+          <geometry height="50" y="1630" width="110" x="-260"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ContributoDovutoLavoratoreAgricoloAutonomo</iri>
+          <label height="64" y="1630" size="12" width="110" x="-260" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n21" type="attribute">
+          <geometry height="20" y="880" width="20" x="220"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/numeroRata</iri>
+          <label height="22" y="858" size="12" width="127" x="220" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n22" type="domain-restriction">
+          <geometry height="20" y="880" width="20" x="110"/>
+          <label height="22" y="858" size="12" width="39" x="110" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n29" type="attribute">
+          <geometry height="20" y="940" width="20" x="220"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceINPS</iri>
+          <label height="22" y="918" size="12" width="122" x="220" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n3" type="concept">
+          <geometry height="50" y="90" width="110" x="-100"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/LavoratoreAgricoloAutonomo</iri>
+          <label height="50" y="90" size="12" width="110" x="-100" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n30" type="domain-restriction">
+          <geometry height="20" y="940" width="20" x="110"/>
+          <label height="22" y="918" size="12" width="39" x="110" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n31" type="attribute">
+          <geometry height="20" y="1010" width="20" x="220"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/periodoDiRiferimento</iri>
+          <label height="22" y="988" size="12" width="174" x="220" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n32" type="domain-restriction">
+          <geometry height="20" y="1010" width="20" x="110"/>
+          <label height="22" y="988" size="12" width="39" x="110" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n33" type="attribute">
+          <geometry height="20" y="1080" width="20" x="220"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importo</iri>
+          <label height="22" y="1058" size="12" width="103" x="220" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n34" type="domain-restriction">
+          <geometry height="20" y="1080" width="20" x="110"/>
+          <label height="22" y="1058" size="12" width="39" x="110" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n35" type="disjoint-union">
+          <geometry height="30" y="1550" width="50" x="-80"/>
+        </node>
+        <node color="#ff0090" id="n36" type="concept">
+          <geometry height="50" y="1960" width="110" x="100"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/TipologiaContributoLavoratoreAgricoloAutonomo</iri>
+          <label height="64" y="1960" size="12" width="110" x="100" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n37" type="role">
+          <geometry height="50" y="1800" width="70" x="100"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haTipologiaContributo</iri>
+          <label height="22" y="1770" size="12" width="183" x="100" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n38" type="domain-restriction">
+          <geometry height="20" y="1720" width="20" x="100"/>
+          <label height="22" y="1698" size="12" width="39" x="100" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n39" type="range-restriction">
+          <geometry height="20" y="1870" width="20" x="100"/>
+          <label height="22" y="1848" size="12" width="39" x="100" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n4" type="concept">
+          <geometry height="50" y="-160" width="110" x="-400"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ColtivatoreDiretto</iri>
+          <label height="36" y="-160" size="12" width="110" x="-400" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n40" type="attribute">
+          <geometry height="20" y="1580" width="20" x="370"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoCorrente</iri>
+          <label height="22" y="1558" size="12" width="207" x="370" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n41" type="attribute">
+          <geometry height="20" y="1680" width="20" x="370"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/importoContributoPregresso</iri>
+          <label height="22" y="1658" size="12" width="215" x="370" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n42" type="domain-restriction">
+          <geometry height="20" y="1580" width="20" x="240"/>
+          <label height="22" y="1558" size="12" width="39" x="240" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n43" type="domain-restriction">
+          <geometry height="20" y="1680" width="20" x="240"/>
+          <label height="22" y="1658" size="12" width="39" x="240" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n44" type="attribute">
+          <geometry height="20" y="1960" width="20" x="350"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/nomeTipologiaContributo</iri>
+          <label height="22" y="1938" size="12" width="200" x="350" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n45" type="domain-restriction">
+          <geometry height="20" y="1960" width="20" x="220"/>
+          <label height="22" y="1938" size="12" width="39" x="220" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n5" type="concept">
+          <geometry height="50" y="-160" width="110" x="-210"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Colono</iri>
+          <label height="22" y="-160" size="12" width="110" x="-210" customSize="0"/>
+        </node>
+        <node color="#000000" id="n52" type="disjoint-union">
+          <geometry height="30" y="400" width="50" x="620"/>
+        </node>
+        <node color="#fcfcfc" id="n53" type="role">
+          <geometry height="50" y="730" width="70" x="-80"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/consenteConsultazioneDi</iri>
+          <label height="22" y="700" size="12" width="198" x="-80" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n54" type="domain-restriction">
+          <geometry height="20" y="630" width="20" x="-80"/>
+          <label height="22" y="608" size="12" width="39" x="-80" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n55" type="range-restriction">
+          <geometry height="20" y="830" width="20" x="-80"/>
+          <label height="22" y="808" size="12" width="39" x="-80" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n56" type="role">
+          <geometry height="50" y="290" width="70" x="140"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo</iri>
+          <label height="22" y="260" size="12" width="381" x="140" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n57" type="domain-restriction">
+          <geometry height="20" y="290" width="20" x="40"/>
+          <label height="22" y="268" size="12" width="39" x="40" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n58" type="range-restriction">
+          <geometry height="20" y="290" width="20" x="240"/>
+          <label height="22" y="268" size="12" width="39" x="240" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n59" type="attribute">
+          <geometry height="20" y="480" width="20" x="160"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/denominazioneAziendaAgricola</iri>
+          <label height="22" y="458" size="12" width="233" x="160" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n6" type="concept">
+          <geometry height="50" y="-160" width="110" x="10"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/Mezzadro</iri>
+          <label height="36" y="-160" size="12" width="110" x="10" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n60" type="domain-restriction">
+          <geometry height="20" y="480" width="20" x="300"/>
+          <label height="22" y="458" size="12" width="39" x="300" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n61" type="attribute">
+          <geometry height="20" y="540" width="20" x="160"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceFiscaleAziendaAgricola</iri>
+          <label height="22" y="518" size="12" width="222" x="160" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n62" type="domain-restriction">
+          <geometry height="20" y="540" width="20" x="300"/>
+          <label height="22" y="518" size="12" width="39" x="300" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n63" type="attribute">
+          <geometry height="20" y="600" width="20" x="160"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola</iri>
+          <label height="22" y="578" size="12" width="184" x="160" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n64" type="domain-restriction">
+          <geometry height="20" y="600" width="20" x="300"/>
+          <label height="22" y="578" size="12" width="39" x="300" customSize="0">exists</label>
+        </node>
+        <node color="#ff0090" id="n65" type="concept">
+          <geometry height="50" y="800" width="110" x="480"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola</iri>
+          <label height="36" y="800" size="12" width="110" x="480" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n66" type="role">
+          <geometry height="50" y="670" width="70" x="480"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/haCategoria</iri>
+          <label height="22" y="640" size="12" width="127" x="480" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n67" type="domain-restriction">
+          <geometry height="20" y="610" width="20" x="480"/>
+          <label height="22" y="588" size="12" width="39" x="480" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n68" type="range-restriction">
+          <geometry height="20" y="730" width="20" x="480"/>
+          <label height="22" y="708" size="12" width="39" x="480" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n69" type="attribute">
+          <geometry height="20" y="940" width="20" x="480"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola</iri>
+          <label height="22" y="918" size="12" width="237" x="480" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n7" type="concept">
+          <geometry height="50" y="-160" width="110" x="230"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/ImprenditoreAgricoloProfessionale</iri>
+          <label height="50" y="-160" size="12" width="110" x="230" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n70" type="domain-restriction">
+          <geometry height="20" y="870" width="20" x="480"/>
+          <label height="22" y="848" size="12" width="39" x="480" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n76" type="concept">
+          <geometry height="50" y="540" width="110" x="860"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/RecuperoCrediti</iri>
+          <label height="36" y="540" size="12" width="110" x="860" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n77" type="concept">
+          <geometry height="50" y="680" width="110" x="710"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/SituazioneDebitoria</iri>
+          <label height="36" y="680" size="12" width="110" x="710" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n78" type="concept">
+          <geometry height="50" y="1050" width="110" x="860"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CartellaEsattoriale</iri>
+          <label height="36" y="1050" size="12" width="110" x="860" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n79" type="concept">
+          <geometry height="50" y="690" width="110" x="1020"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AvvisoBonario</iri>
+          <label height="36" y="690" size="12" width="110" x="1020" customSize="0"/>
+        </node>
+        <node color="#000000" id="n8" type="disjoint-union">
+          <geometry height="30" y="-60" width="50" x="-100"/>
+        </node>
+        <node color="#000000" id="n80" type="disjoint-union">
+          <geometry height="30" y="630" width="50" x="860"/>
+        </node>
+        <node color="#fcfcfc" id="n81" type="concept">
+          <geometry height="50" y="530" width="110" x="1120"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo</iri>
+          <label height="50" y="530" size="12" width="110" x="1120" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n82" type="concept">
+          <geometry height="50" y="520" width="110" x="1730"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo</iri>
+          <label height="64" y="520" size="12" width="110" x="1730" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n84" type="concept">
+          <geometry height="50" y="840" width="110" x="1230"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiEsonero</iri>
+          <label height="36" y="840" size="12" width="110" x="1230" customSize="0"/>
+        </node>
+        <node color="#000000" id="n85" type="disjoint-union">
+          <geometry height="30" y="670" width="50" x="1730"/>
+        </node>
+        <node color="#fcfcfc" id="n86" type="concept">
+          <geometry height="50" y="910" width="110" x="1370"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiSospensioneLavoratoreAgricoloAutonomo</iri>
+          <label height="50" y="910" size="12" width="110" x="1370" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n87" type="concept">
+          <geometry height="50" y="950" width="110" x="1530"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiDilazione</iri>
+          <label height="36" y="950" size="12" width="110" x="1530" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n88" type="concept">
+          <geometry height="50" y="952" width="110" x="1940"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo</iri>
+          <label height="64" y="952" size="12" width="110" x="1940" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n89" type="concept">
+          <geometry height="50" y="900" width="110" x="2120"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRegolarizzazioneSpontanea</iri>
+          <label height="50" y="900" size="12" width="110" x="2120" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n9" type="concept">
+          <geometry height="50" y="540" width="110" x="480"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola</iri>
+          <label height="36" y="540" size="12" width="110" x="480" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n90" type="concept">
+          <geometry height="50" y="820" width="110" x="2250"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaDiRiemissioneF24</iri>
+          <label height="50" y="820" size="12" width="110" x="2250" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n91" type="concept">
+          <geometry height="55" y="1000" width="110" x="1730"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo</iri>
+          <label height="50" y="1000" size="12" width="110" x="1730" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n92" type="role">
+          <geometry height="50" y="1230" width="70" x="-80"/>
+          <iri>https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/daAccessoAllaVisualizzazioneDi</iri>
+          <label height="22" y="1200" size="12" width="236" x="-80" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n94" type="domain-restriction">
+          <geometry height="20" y="1140" width="20" x="-80"/>
+          <label height="22" y="1118" size="12" width="39" x="-80" customSize="0">exists</label>
+        </node>
+        <node color="#000000" id="n95" type="range-restriction">
+          <geometry height="20" y="1320" width="20" x="-80"/>
+          <label height="22" y="1298" size="12" width="39" x="-80" customSize="0">exists</label>
+        </node>
+        <node color="#fcfcfc" id="n97" type="concept">
+          <geometry height="50" y="1440" width="110" x="-80"/>
+          <iri>https://w3id.org/italia/social-security/onto/social-safety-net/ContributoPrevidenziale</iri>
+          <label height="36" y="1440" size="12" width="110" x="-80" customSize="0"/>
+        </node>
+        <node color="#fcfcfc" id="n98" type="concept">
+          <geometry height="50" y="100" width="110" x="-610"/>
+          <iri>https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo</iri>
+          <label height="50" y="100" size="12" width="110" x="-610" customSize="0"/>
+        </node>
+        <edge target="n18" source="n94" id="e101" type="equivalence">
+          <point y="1140" x="-80"/>
+          <point y="940" x="-80"/>
+        </edge>
+        <edge target="n97" source="n35" id="e102" type="inclusion">
+          <point y="1550" x="-80"/>
+          <point y="1440" x="-80"/>
+        </edge>
+        <edge target="n13" source="n98" id="e104" type="input">
+          <point y="100" x="-610"/>
+          <point y="190" x="-610"/>
+          <point y="190" x="-330"/>
+        </edge>
+        <edge target="n78" source="n101" id="e105" type="equivalence">
+          <point y="1050" x="730"/>
+          <point y="1050" x="860"/>
+        </edge>
+        <edge target="n101" source="n100" id="e106" type="input">
+          <point y="1050" x="580"/>
+          <point y="1050" x="730"/>
+        </edge>
+        <edge target="n111" source="n106" id="e108" type="input">
+          <point y="1220" x="1170"/>
+          <point y="1220" x="1040"/>
+        </edge>
+        <edge target="n110" source="n105" id="e109" type="input">
+          <point y="1170" x="1170"/>
+          <point y="1170" x="1040"/>
+        </edge>
+        <edge target="n109" source="n104" id="e110" type="input">
+          <point y="1110" x="1170"/>
+          <point y="1110" x="1040"/>
+        </edge>
+        <edge target="n108" source="n103" id="e111" type="input">
+          <point y="1050" x="1170"/>
+          <point y="1050" x="1040"/>
+        </edge>
+        <edge target="n107" source="n102" id="e113" type="input">
+          <point y="1000" x="1170"/>
+          <point y="1000" x="1030"/>
+        </edge>
+        <edge target="n107" source="n78" id="e114" type="equivalence">
+          <point y="1050" x="860"/>
+          <point y="1050" x="980"/>
+          <point y="1000" x="980"/>
+          <point y="1000" x="1030"/>
+        </edge>
+        <edge target="n108" source="n78" id="e115" type="equivalence">
+          <point y="1050" x="860"/>
+          <point y="1050" x="1040"/>
+        </edge>
+        <edge target="n109" source="n78" id="e116" type="equivalence">
+          <point y="1050" x="860"/>
+          <point y="1050" x="980"/>
+          <point y="1110" x="980"/>
+          <point y="1110" x="1040"/>
+        </edge>
+        <edge target="n110" source="n78" id="e117" type="equivalence">
+          <point y="1050" x="860"/>
+          <point y="1050" x="980"/>
+          <point y="1170" x="980"/>
+          <point y="1170" x="1040"/>
+        </edge>
+        <edge target="n111" source="n78" id="e118" type="equivalence">
+          <point y="1050" x="860"/>
+          <point y="1050" x="980"/>
+          <point y="1220" x="980"/>
+          <point y="1220" x="1040"/>
+        </edge>
+        <edge target="n22" source="n18" id="e14" type="equivalence">
+          <point y="940" x="-80"/>
+          <point y="940" x="50"/>
+          <point y="880" x="50"/>
+          <point y="880" x="110"/>
+        </edge>
+        <edge target="n22" source="n21" id="e16" type="input">
+          <point y="880" x="220"/>
+          <point y="880" x="110"/>
+        </edge>
+        <edge target="n8" source="n4" id="e2" type="input">
+          <point y="-160" x="-400"/>
+          <point y="-60" x="-400"/>
+          <point y="-60" x="-100"/>
+        </edge>
+        <edge target="n30" source="n29" id="e23" type="input">
+          <point y="940" x="220"/>
+          <point y="940" x="110"/>
+        </edge>
+        <edge target="n30" source="n18" id="e24" type="equivalence">
+          <point y="940" x="-80"/>
+          <point y="940" x="50"/>
+          <point y="940" x="110"/>
+        </edge>
+        <edge target="n32" source="n31" id="e25" type="input">
+          <point y="1010" x="220"/>
+          <point y="1010" x="110"/>
+        </edge>
+        <edge target="n32" source="n18" id="e27" type="equivalence">
+          <point y="940" x="-80"/>
+          <point y="940" x="50"/>
+          <point y="1010" x="50"/>
+          <point y="1010" x="110"/>
+        </edge>
+        <edge target="n34" source="n33" id="e28" type="input">
+          <point y="1080" x="220"/>
+          <point y="1080" x="110"/>
+        </edge>
+        <edge target="n34" source="n18" id="e29" type="equivalence">
+          <point y="940" x="-80"/>
+          <point y="940" x="50"/>
+          <point y="1080" x="50"/>
+          <point y="1080" x="110"/>
+        </edge>
+        <edge target="n8" source="n5" id="e3" type="input">
+          <point y="-160" x="-210"/>
+          <point y="-160" x="-100"/>
+          <point y="-60" x="-100"/>
+        </edge>
+        <edge target="n35" source="n20" id="e31" type="input">
+          <point y="1630" x="-260"/>
+          <point y="1550" x="-260"/>
+          <point y="1550" x="-80"/>
+        </edge>
+        <edge target="n35" source="n19" id="e32" type="input">
+          <point y="1630" x="100"/>
+          <point y="1550" x="100"/>
+          <point y="1550" x="-80"/>
+        </edge>
+        <edge target="n38" source="n37" id="e33" type="input">
+          <point y="1800" x="100"/>
+          <point y="1720" x="100"/>
+        </edge>
+        <edge target="n39" source="n37" id="e34" type="input">
+          <point y="1800" x="100"/>
+          <point y="1870" x="100"/>
+        </edge>
+        <edge target="n19" source="n38" id="e35" type="equivalence">
+          <point y="1720" x="100"/>
+          <point y="1630" x="100"/>
+        </edge>
+        <edge target="n36" source="n39" id="e36" type="equivalence">
+          <point y="1870" x="100"/>
+          <point y="1960" x="100"/>
+        </edge>
+        <edge target="n42" source="n40" id="e37" type="input">
+          <point y="1580" x="370"/>
+          <point y="1580" x="240"/>
+        </edge>
+        <edge target="n43" source="n41" id="e38" type="input">
+          <point y="1680" x="370"/>
+          <point y="1680" x="240"/>
+        </edge>
+        <edge target="n42" source="n19" id="e39" type="equivalence">
+          <point y="1630" x="100"/>
+          <point y="1630" x="240"/>
+          <point y="1580" x="240"/>
+        </edge>
+        <edge target="n8" source="n6" id="e4" type="input">
+          <point y="-160" x="10"/>
+          <point y="-160" x="-100"/>
+          <point y="-60" x="-100"/>
+        </edge>
+        <edge target="n43" source="n19" id="e40" type="equivalence">
+          <point y="1630" x="100"/>
+          <point y="1630" x="240"/>
+          <point y="1680" x="240"/>
+        </edge>
+        <edge target="n45" source="n36" id="e41" type="equivalence">
+          <point y="1960" x="100"/>
+          <point y="1960" x="220"/>
+        </edge>
+        <edge target="n45" source="n44" id="e42" type="input">
+          <point y="1960" x="350"/>
+          <point y="1960" x="220"/>
+        </edge>
+        <edge target="n2" source="n52" id="e49" type="equivalence">
+          <point y="400" x="620"/>
+          <point y="290" x="620"/>
+        </edge>
+        <edge target="n8" source="n7" id="e5" type="input">
+          <point y="-160" x="230"/>
+          <point y="-60" x="230"/>
+          <point y="-60" x="-100"/>
+        </edge>
+        <edge target="n52" source="n17" id="e50" type="input">
+          <point y="540" x="-80"/>
+          <point y="400" x="-80"/>
+          <point y="400" x="440"/>
+          <point y="400" x="620"/>
+        </edge>
+        <edge target="n52" source="n9" id="e51" type="input">
+          <point y="540" x="480"/>
+          <point y="400" x="480"/>
+          <point y="400" x="620"/>
+        </edge>
+        <edge target="n54" source="n53" id="e52" type="input">
+          <point y="730" x="-80"/>
+          <point y="630" x="-80"/>
+        </edge>
+        <edge target="n55" source="n53" id="e53" type="input">
+          <point y="730" x="-80"/>
+          <point y="830" x="-80"/>
+        </edge>
+        <edge target="n54" source="n17" id="e55" type="equivalence">
+          <point y="540" x="-80"/>
+          <point y="630" x="-80"/>
+        </edge>
+        <edge target="n18" source="n55" id="e56" type="equivalence">
+          <point y="830" x="-80"/>
+          <point y="940" x="-80"/>
+        </edge>
+        <edge target="n57" source="n56" id="e57" type="input">
+          <point y="290" x="140"/>
+          <point y="290" x="40"/>
+        </edge>
+        <edge target="n58" source="n56" id="e58" type="input">
+          <point y="290" x="140"/>
+          <point y="290" x="240"/>
+        </edge>
+        <edge target="n57" source="n11" id="e59" type="equivalence">
+          <point y="290" x="-330"/>
+          <point y="290" x="40"/>
+        </edge>
+        <edge target="n8" source="n3" id="e6" type="equivalence">
+          <point y="90" x="-100"/>
+          <point y="-60" x="-100"/>
+        </edge>
+        <edge target="n2" source="n58" id="e60" type="equivalence">
+          <point y="290" x="240"/>
+          <point y="290" x="620"/>
+        </edge>
+        <edge target="n60" source="n59" id="e61" type="input">
+          <point y="480" x="160"/>
+          <point y="480" x="300"/>
+        </edge>
+        <edge target="n62" source="n61" id="e62" type="input">
+          <point y="540" x="160"/>
+          <point y="540" x="300"/>
+        </edge>
+        <edge target="n64" source="n63" id="e63" type="input">
+          <point y="600" x="160"/>
+          <point y="600" x="300"/>
+        </edge>
+        <edge target="n9" source="n60" id="e64" type="equivalence">
+          <point y="480" x="300"/>
+          <point y="480" x="380"/>
+          <point y="540" x="380"/>
+          <point y="540" x="480"/>
+        </edge>
+        <edge target="n9" source="n62" id="e65" type="equivalence">
+          <point y="540" x="300"/>
+          <point y="540" x="480"/>
+        </edge>
+        <edge target="n9" source="n64" id="e66" type="equivalence">
+          <point y="600" x="300"/>
+          <point y="600" x="380"/>
+          <point y="540" x="380"/>
+          <point y="540" x="480"/>
+        </edge>
+        <edge target="n67" source="n66" id="e67" type="input">
+          <point y="670" x="480"/>
+          <point y="610" x="480"/>
+        </edge>
+        <edge target="n68" source="n66" id="e68" type="input">
+          <point y="670" x="480"/>
+          <point y="730" x="480"/>
+        </edge>
+        <edge target="n9" source="n67" id="e69" type="equivalence">
+          <point y="610" x="480"/>
+          <point y="540" x="480"/>
+        </edge>
+        <edge target="n13" source="n11" id="e7" type="equivalence">
+          <point y="290" x="-330"/>
+          <point y="190" x="-330"/>
+        </edge>
+        <edge target="n65" source="n68" id="e70" type="equivalence">
+          <point y="730" x="480"/>
+          <point y="800" x="480"/>
+        </edge>
+        <edge target="n65" source="n70" id="e71" type="equivalence">
+          <point y="870" x="480"/>
+          <point y="800" x="480"/>
+        </edge>
+        <edge target="n70" source="n69" id="e73" type="input">
+          <point y="940" x="480"/>
+          <point y="870" x="480"/>
+        </edge>
+        <edge target="n52" source="n76" id="e80" type="input">
+          <point y="540" x="860"/>
+          <point y="400" x="860"/>
+          <point y="400" x="620"/>
+        </edge>
+        <edge target="n76" source="n80" id="e81" type="equivalence">
+          <point y="630" x="860"/>
+          <point y="540" x="860"/>
+        </edge>
+        <edge target="n80" source="n77" id="e82" type="input">
+          <point y="680" x="710"/>
+          <point y="630" x="710"/>
+          <point y="630" x="860"/>
+        </edge>
+        <edge target="n80" source="n79" id="e83" type="input">
+          <point y="690" x="1020"/>
+          <point y="630" x="1020"/>
+          <point y="630" x="860"/>
+        </edge>
+        <edge target="n80" source="n78" id="e84" type="input">
+          <point y="1050" x="860"/>
+          <point y="630" x="860"/>
+        </edge>
+        <edge target="n52" source="n81" id="e85" type="input">
+          <point y="530" x="1120"/>
+          <point y="400" x="1120"/>
+          <point y="400" x="620"/>
+        </edge>
+        <edge target="n82" source="n85" id="e86" type="equivalence">
+          <point y="670" x="1730"/>
+          <point y="520" x="1730"/>
+        </edge>
+        <edge target="n85" source="n84" id="e87" type="input">
+          <point y="840" x="1230"/>
+          <point y="670" x="1230"/>
+          <point y="670" x="1730"/>
+        </edge>
+        <edge target="n85" source="n86" id="e88" type="input">
+          <point y="910" x="1370"/>
+          <point y="670" x="1370"/>
+          <point y="670" x="1730"/>
+        </edge>
+        <edge target="n85" source="n87" id="e89" type="input">
+          <point y="950" x="1530"/>
+          <point y="670" x="1530"/>
+          <point y="670" x="1730"/>
+        </edge>
+        <edge target="n13" source="n3" id="e9" type="input">
+          <point y="90" x="-100"/>
+          <point y="190" x="-100"/>
+          <point y="190" x="-330"/>
+        </edge>
+        <edge target="n85" source="n91" id="e90" type="input">
+          <point y="1000" x="1730"/>
+          <point y="670" x="1730"/>
+        </edge>
+        <edge target="n85" source="n88" id="e91" type="input">
+          <point y="952" x="1940"/>
+          <point y="670" x="1940"/>
+          <point y="670" x="1730"/>
+        </edge>
+        <edge target="n85" source="n89" id="e92" type="input">
+          <point y="900" x="2120"/>
+          <point y="670" x="2120"/>
+          <point y="670" x="1730"/>
+        </edge>
+        <edge target="n85" source="n90" id="e93" type="input">
+          <point y="820" x="2250"/>
+          <point y="670" x="2250"/>
+          <point y="670" x="1730"/>
+        </edge>
+        <edge target="n52" source="n82" id="e94" type="input">
+          <point y="520" x="1730"/>
+          <point y="400" x="1730"/>
+          <point y="400" x="620"/>
+        </edge>
+        <edge target="n94" source="n92" id="e96" type="input">
+          <point y="1230" x="-80"/>
+          <point y="1140" x="-80"/>
+        </edge>
+        <edge target="n95" source="n92" id="e97" type="input">
+          <point y="1230" x="-80"/>
+          <point y="1320" x="-80"/>
+        </edge>
+        <edge target="n95" source="n97" id="e98" type="equivalence">
+          <point y="1440" x="-80"/>
+          <point y="1320" x="-80"/>
+        </edge>
+      </diagram>
+    </diagrams>
+  </project>
+</graphol>

@@ -1,0 +1,1436 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/CIP/"
+     xml:base="https://w3id.org/italia/social-security/onto/CIP/"
+     xmlns:L0="https://w3id.org/italia/onto/l0/"
+     xmlns:RO="https://w3id.org/italia/onto/RO/"
+     xmlns:TI="https://w3id.org/italia/onto/TI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:CIP="https://w3id.org/italia/social-security/onto/CIP/"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:COV="https://w3id.org/italia/onto/COV/"
+     xmlns:CPV="https://w3id.org/italia/onto/CPV/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:CPSV="https://w3id.org/italia/onto/CPSV/"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:INPSCore="https://w3id.org/italia/social-security/onto/core/"
+     xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
+     xmlns:INPSSafety="https://w3id.org/italia/social-security/onto/social-safety-net/"
+     xmlns:INPSPensions="https://w3id.org/italia/social-security/onto/pensions/">
+    <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/CIP/">
+        <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/CIP/1.0"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CPV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/RO/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/"/>
+        <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
+        <dct:creator rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:description xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono il servizio consultazione info previdenziali (CIP) secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:description xml:lang="en">This INPS ontology describes the entities and properties of the Italian online service CIP according to the criteria of the Institute.</dct:description>
+        <dct:identifier>https://w3id.org/italia/social-security/onto/CIP</dct:identifier>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dct:issued>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dct:modified>
+        <dct:publisher rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:rightsHolder rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:title xml:lang="it">Ontologia Consultazione Info Previdenziali (CIP)</dct:title>
+        <dct:title xml:lang="en">Social Security Record INPS Ontology</dct:title>
+        <rdfs:comment xml:lang="it">Ontologia INPS relativa al servizio Consultazione Info Previdenziali (CIP) per dipendenti privati</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Social Security Record Italian Online Service INPS Ontology</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/CIP/"/>
+        <rdfs:label xml:lang="it">Ontologia Consultazione Info Previdenziali (CIP) di INPS</rdfs:label>
+        <rdfs:label xml:lang="en">Social Security Record INPS Ontology</rdfs:label>
+        <owl:versionInfo xml:lang="it">1.0 - Modificata il 29 Ottobre 2024</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">1.0 - Modified on 29 October 2024</owl:versionInfo>
+        <dcat:contactPoint rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
+        <dcat:keyword xml:lang="it">Consultazione Info Previdenziali CIP</dcat:keyword>
+        <dcat:keyword xml:lang="it">Consultazione Integrazione Salariale</dcat:keyword>
+        <dcat:keyword xml:lang="it">Consultazione UNIEMENS</dcat:keyword>
+        <dcat:keyword xml:lang="en">Employment Integration Allowance Records</dcat:keyword>
+        <dcat:keyword xml:lang="en">Social Security Record</dcat:keyword>
+        <dcat:keyword xml:lang="en">UNIEMENS records</dcat:keyword>
+        <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+        <adms:acronym>inps</adms:acronym>
+        <adms:hasContributor rdf:resource="https://w3id.org/italia/social-security/data/organization/td"/>
+        <adms:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneInfoPrevidenzialiCIP"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS"/>
+        <adms:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/CIP/distribution/CIP-N-TRIPLES"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/CIP/distribution/CIP-RDF-TURTLE"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/CIP/distribution/CIP-RDF-XML"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
+        <adms:last rdf:resource="https://w3id.org/italia/social-security/onto/CIP/1.0"/>
+        <adms:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/CIP/</adms:officialURI>
+        <adms:prefix>CIP</adms:prefix>
+        <adms:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
+        <adms:status>catalogued</adms:status>
+        <adms:status>published</adms:status>
+        <adms:target xml:lang="it">Cittadini</adms:target>
+        <adms:target xml:lang="it">Imprese</adms:target>
+        <adms:target xml:lang="it">Pubbliche Amministrazioni</adms:target>
+        <adms:type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#dateTime -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#string -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/descriveRichiestaDiAnticipo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/descriveRichiestaDiAnticipo">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/CIP/AnticipoIntegrazioneSalarialeCausaleCovid"/>
+        <rdfs:comment xml:lang="it"> La sezione consultazione integrazione salariale fornisce la consultazione dell&apos; anticipo integrazione salariale causale covid.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Information about employment integration salary advance payment request can be accessed through the employment integration salary records.</rdfs:comment>
+        <rdfs:label xml:lang="it">descrive richiesta di anticipo</rdfs:label>
+        <rdfs:label xml:lang="en">gives information about advance payment request</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/descriveStatoDiAnticipoIntegrazioneSalariale -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/descriveStatoDiAnticipoIntegrazioneSalariale">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/CIP/StatoAnticipoIntegrazioneSalarialeCausaleCovid"/>
+        <rdfs:comment xml:lang="en">Information about the employment integration salary advance payment transaction lifecycle can be accessed through the Employment integration salary records. </rdfs:comment>
+        <rdfs:comment xml:lang="it">La sezione consultazione integrazione salariale fornisce la consultazione dello stato di anticipo integrazione salariale.</rdfs:comment>
+        <rdfs:label xml:lang="it">descrive stato di anticipo integrazione salariale</rdfs:label>
+        <rdfs:label xml:lang="en">gives information about employment integration salary advance payment status</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/descriveStatodellaDomandaIntegrazioneSalariale -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/descriveStatodellaDomandaIntegrazioneSalariale">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/CIP/StatoDomandaIntegrazioneSalariale"/>
+        <rdfs:comment xml:lang="en">Information about the status of your employment integration salary request can be accessed through the employment integration salary records.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La sezione consultazione integrazione salariale fornisce informazioni sullo stato della domanda integrazioni salariali.</rdfs:comment>
+        <rdfs:label xml:lang="it">descrive stato della domanda integrazione salariale</rdfs:label>
+        <rdfs:label xml:lang="en">gives information about the employment integration salaty request status</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/descriveTipologiaPrestazioneIntegrazioneSalariale -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/descriveTipologiaPrestazioneIntegrazioneSalariale">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/CIP/TipologiaPrestazionePagamentoDiretto"/>
+        <rdfs:comment xml:lang="it">Descrive le tipologie di prestazioni integrazioni salariali a pagamento diretto </rdfs:comment>
+        <rdfs:comment xml:lang="en">Information about the different types of integration salary compensation can be accessed through the employment integration salary records. </rdfs:comment>
+        <rdfs:label xml:lang="it">descrive tipologia prestazione integrazione salariale</rdfs:label>
+        <rdfs:label xml:lang="en">gives information about employment integration salary compensation</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/haConsultazioneContrattoDiLavoroSubordinato -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/haConsultazioneContrattoDiLavoroSubordinato">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/social-safety-net/ContrattoDiLavoroSubordinato"/>
+        <rdfs:comment xml:lang="en">Gives a brief statement of the contracts of employment.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La sezione di Consultazione UNIEMENS fornisce la consultazione da parte del lavoratore subordinato del contratto di lavoro subordinato</rdfs:comment>
+        <rdfs:label xml:lang="en">gives information about employment contract</rdfs:label>
+        <rdfs:label xml:lang="it">ha consultazione contratto di lavoro subordinato</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/haConsultazioneContributoFigurativo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/haConsultazioneContributoFigurativo">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/social-safety-net/ContributoFigurativo"/>
+        <rdfs:comment xml:lang="en">Gives a brief statement of the social welfare benefits an employee may qualify for.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La sezione di Consultazione UNIEMENS fornisce la consultazione da parte del lavoratore subordinato del contributo figurativo.</rdfs:comment>
+        <rdfs:label xml:lang="en">gives information about social welfare benefits</rdfs:label>
+        <rdfs:label xml:lang="it">ha consultazione contributo figurativo</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/haConsultazionePrestazioneANF -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/haConsultazionePrestazioneANF">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/social-safety-net/PrestazioneANF"/>
+        <rdfs:comment xml:lang="en">Gives a brief statement of the main points of the ANF allowance.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La sezione di Consultazione UNIEMENS fornisce la consultazione da parte del lavoratore subordinato delle prestazioni ANF.</rdfs:comment>
+        <rdfs:label xml:lang="en">gives information about ANF allowance</rdfs:label>
+        <rdfs:label xml:lang="it">ha consultazione prestazione ANF</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/haConsultazioneRapportoDiLavoroSospeso -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/haConsultazioneRapportoDiLavoroSospeso">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/CIP/RapportoDiLavoroSopeso"/>
+        <rdfs:comment xml:lang="en">Gives a brief statement of the main points of a temporary suspension of a contract.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La sezione di Consultazione UNIEMENS fornisce la consultazione da parte del lavoratore subordinato del rapporto di lavoro sospeso.</rdfs:comment>
+        <rdfs:label xml:lang="en">gives information about temporary contract suspension</rdfs:label>
+        <rdfs:label xml:lang="it">ha consultazione rapporto di lavoro sospeso</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/inviaDenunciaMensileUNIEMENS -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/inviaDenunciaMensileUNIEMENS">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/social-safety-net/DatoreDiLavoro"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/CIP/DenunciaMensileUNIEMENS"/>
+        <rdfs:comment xml:lang="it">Il datore di lavoro invia le denunce mensili UNIEMENS.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The UNIEMENS monthly report is sent it out by the employer.</rdfs:comment>
+        <rdfs:label xml:lang="it">invia denuncia mensile UNIEMENS</rdfs:label>
+        <rdfs:label xml:lang="en">sends out UNIEMENS monthly report </rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/inviaIntegrazioneSalarialeCovid19 -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/inviaIntegrazioneSalarialeCovid19">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/social-safety-net/DatoreDiLavoro"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeAPagamentoDirettoCovid-19"/>
+        <rdfs:comment xml:lang="it">Il datore di lavoro invia le integrazioni salariali covid-19</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Covid-19 Employment Integration Salary Report is sent it out by the employer.</rdfs:comment>
+        <rdfs:label xml:lang="it">invia integrazione salariale covid-19</rdfs:label>
+        <rdfs:label xml:lang="en">sends out covid-19 employment integration salary report</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/lavoratoreSubordinatoConsultaCIP -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/lavoratoreSubordinatoConsultaCIP">
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneInfoPrevidenzialiCIP"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/visualizzaDatiDenunciaUNIEMENS -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/visualizzaDatiDenunciaUNIEMENS">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/CIP/DenunciaMensileUNIEMENS"/>
+        <rdfs:comment xml:lang="it">Alcuni dati trasmessi dal datore di lavoro tramite le denunce mensili UNIEMENS possono essere consultati nella sezione di consultazione UNIEMENS all&apos;interno del servizio CIP.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Some of the information included in the UNIEMENS monthly report can be accessed through the UNIEMENS records via the CIP portal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has access to the UNIEMENS monthly report</rdfs:label>
+        <rdfs:label xml:lang="it">visualizza dati denuncia UNIEMENS</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/visualizzaDatiDomandaIntegrazioneSalariale -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/visualizzaDatiDomandaIntegrazioneSalariale">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeAPagamentoDirettoCovid-19"/>
+        <rdfs:comment xml:lang="it">Alcuni dati delle domande di integrazione salariale a pagamento diretto covid-19 possono essere consultati nella sezione di consultazione integrazione salariale all&apos;interno del servio CIP. </rdfs:comment>
+        <rdfs:comment xml:lang="en">Some of the information included in the Employment Integration Salary Report can be accessed through the Employment Integration Allowance Records via the CIP service portal.</rdfs:comment>
+        <rdfs:label xml:lang="en">has access to the Employment Integration Salary report</rdfs:label>
+        <rdfs:label xml:lang="de">visualizza dati domanda integrazione salariale</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/CFLavoratoreSubordinato -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/CFLavoratoreSubordinato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneInfoPrevidenzialiCIP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="it">Codice Fiscale lavoratore subordinato</rdfs:comment>
+        <rdfs:comment xml:lang="en">Employee Social Security Number</rdfs:comment>
+        <rdfs:label xml:lang="it">CF lavoratore subordinato</rdfs:label>
+        <rdfs:label xml:lang="en">social security number</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/consultazioneInfoPrevidenzialiPeriodoA -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/consultazioneInfoPrevidenzialiPeriodoA">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneInfoPrevidenzialiCIP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Data di fine periodo di competenza indicato</rdfs:comment>
+        <rdfs:comment xml:lang="en">You can specify a data range when you search. This is the finish date of the statement you wish to generate.</rdfs:comment>
+        <rdfs:label xml:lang="it">consultazione info previdenziali periodo a</rdfs:label>
+        <rdfs:label xml:lang="it">social service statement date to</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/consultazioneInfoPrevidenzialiPeriodoDa -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/consultazioneInfoPrevidenzialiPeriodoDa">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneInfoPrevidenzialiCIP"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Data di inizio periodo di competenza indicato</rdfs:comment>
+        <rdfs:comment xml:lang="en">You can specify a data range when you search. This is the start date of the statement you wish to generate.</rdfs:comment>
+        <rdfs:label xml:lang="it">consultazione info previdenziali periodo da</rdfs:label>
+        <rdfs:label xml:lang="en">social security statement date from</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/dataCompetenza -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/dataCompetenza">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Colonna che riporta il mese e l&apos;anno di competenza</rdfs:comment>
+        <rdfs:comment xml:lang="en">The defined point in time in which a specified event/information/record must be referred to.</rdfs:comment>
+        <rdfs:label xml:lang="it">data di competenza</rdfs:label>
+        <rdfs:label xml:lang="en">reference date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/dataFineRapportoDiLavoroSospeso -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/dataFineRapportoDiLavoroSospeso">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/RapportoDiLavoroSopeso"/>
+        <rdfs:comment xml:lang="it">La data di fine del rapporto di lavoro sospeso per aspettativa o distacco sindacale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The day on which a contract is no longer temporary suspended.</rdfs:comment>
+        <rdfs:label xml:lang="it">data fine rapporto di lavoro sospeso</rdfs:label>
+        <rdfs:label xml:lang="en">temporary contract suspension end date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/dataInizioRapportoDiLavoroSospeso -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/dataInizioRapportoDiLavoroSospeso">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/RapportoDiLavoroSopeso"/>
+        <rdfs:comment xml:lang="en">The day when an employment contract is temporary suspended due to extended leave or trade union leave.</rdfs:comment>
+        <rdfs:label xml:lang="it">La data di inzio di un rapporto di lavoro sospeso per aspettativa o distacco sindacale.</rdfs:label>
+        <rdfs:label xml:lang="it">data inizio rapporto di lavoro sospeso</rdfs:label>
+        <rdfs:label xml:lang="en">temporary contract suspension start date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/dataPagamentoAnticipoIntegrazioneSalariale -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/dataPagamentoAnticipoIntegrazioneSalariale">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/AnticipoIntegrazioneSalarialeLiquidato"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">La data effettiva dell&apos;anticipo pagamento integrazione salariale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The date on which the employment integration salary advance payment is paid.</rdfs:comment>
+        <rdfs:label xml:lang="it">data pagamento anticipo integrazione salariale</rdfs:label>
+        <rdfs:label xml:lang="en">employment integration salary advance payment date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/dataPresentazioneDomandaIntegrazioneSalariale -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/dataPresentazioneDomandaIntegrazioneSalariale">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Data in cui la domanda di integrazione salariale viene accolta. </rdfs:comment>
+        <rdfs:comment xml:lang="en">The date on which the employment integration allowance is contractually effective.</rdfs:comment>
+        <rdfs:label xml:lang="it">data presentazione domanda integrazione salariale</rdfs:label>
+        <rdfs:label xml:lang="en">employment integration allowance receipt date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/descrizionePrestazionePagamentoDiretto -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/descrizionePrestazionePagamentoDiretto">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/TipologiaPrestazionePagamentoDiretto"/>
+        <rdfs:comment xml:lang="it">Descrizione della prestazione integrazione salariale a pagamento diretto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Employment integration salary compesation description</rdfs:comment>
+        <rdfs:label xml:lang="it">descrizione prestazione pagamento diretto</rdfs:label>
+        <rdfs:label xml:lang="en">employment integration salary compesation description</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/numeroMensilitaAspettativa -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/numeroMensilitaAspettativa">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/SospensionePerAspettativa"/>
+        <rdfs:comment xml:lang="it">Indica il numero di mensilità retribuite per aspettativa </rdfs:comment>
+        <rdfs:comment xml:lang="en">The number of payments for extended leaves.</rdfs:comment>
+        <rdfs:label xml:lang="en">extended leave monthly payment</rdfs:label>
+        <rdfs:label xml:lang="it">numero mensilità aspettativa</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/numeroProtocolloDomandaIntegrazioneSalariale -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/numeroProtocolloDomandaIntegrazioneSalariale">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">A unique reference number that helps to identify your employment integration allowance.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Il numero di protocollo domanda integrazione salariale.</rdfs:comment>
+        <rdfs:label xml:lang="en">employment integration allowance ID number</rdfs:label>
+        <rdfs:label xml:lang="it">numero protocolla domanda integrazione salariale</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/periodoPrestazioneIntegrazioneSalarialeA -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/periodoPrestazioneIntegrazioneSalarialeA">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Data di fine prestazione integrazione salariale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The finish data of an employment integration allowance compensation.</rdfs:comment>
+        <rdfs:label xml:lang="en">employment integration allowance date to</rdfs:label>
+        <rdfs:label xml:lang="it">prestazione integrazione salariale a</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/periodoPrestazioneIntegrazioneSalarialeDa -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/periodoPrestazioneIntegrazioneSalarialeDa">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="it">Data di inzio di una prestazione relativa alle integrazioni salariali.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The start date of a an employment integration allowance compensation.</rdfs:comment>
+        <rdfs:label xml:lang="en">employment integration allowance date from</rdfs:label>
+        <rdfs:label xml:lang="it">periodo prestazione integrazione salariale da</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/quotaImponibileDistacco -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/quotaImponibileDistacco">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/SospensionePerDistaccoSindacale"/>
+        <rdfs:comment xml:lang="it">La quota imponibile per distacco sindacale</rdfs:comment>
+        <rdfs:comment xml:lang="en">The portion of a trade union leave gross income on which an employee is required to pay income taxes.</rdfs:comment>
+        <rdfs:label xml:lang="it">quota imponibile distacco</rdfs:label>
+        <rdfs:label xml:lang="en">trade union leave taxable income</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/retribuzioneTeoricaAspettativa -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/CIP/retribuzioneTeoricaAspettativa">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/SospensionePerAspettativa"/>
+        <rdfs:comment xml:lang="it">La retribuzione teorica durante il periodo di aspettativa.</rdfs:comment>
+        <rdfs:comment>The salary an employee received when there are no other types of </rdfs:comment>
+        <rdfs:label xml:lang="en">Extended leave salary</rdfs:label>
+        <rdfs:label xml:lang="it">retribuzione teorica aspettativa</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/social-safety-net/imponibileContributivo -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/imponibileContributivo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://dati.gov.it/onto/dcatapit#Distribution -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Distribution"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/CPSV/Service -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/CPSV/Service"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/TI/TimeIndexedEvent -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/AnticipoIntegrazioneSalarialeCausaleCovid -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/AnticipoIntegrazioneSalarialeCausaleCovid">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/descriveRichiestaDiAnticipo"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Covid-19 employment integration salary advance payment request.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Richiesta di anticipo integrazione salariale causale covid.</rdfs:comment>
+        <rdfs:label xml:lang="it">Anticipo Integrazione Salariale Causale Covid</rdfs:label>
+        <rdfs:label xml:lang="it">Covid-19 Employment Integration Salary Advance Request</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/AnticipoIntegrazioneSalarialeLiquidato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/AnticipoIntegrazioneSalarialeLiquidato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/dataPagamentoAnticipoIntegrazioneSalariale"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/StatoAnticipoIntegrazioneSalarialeCausaleCovid"/>
+        <rdfs:comment xml:lang="it">Anticipo integrazione salariale stato liquidato.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Employment integration salary advance payment delivered.</rdfs:comment>
+        <rdfs:label xml:lang="it">Anticipo Integrazione Salariale Liquidato</rdfs:label>
+        <rdfs:label xml:lang="en">Employment Integration Salary Advance Payment Status Delivered</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ConsultazioneInfoPrevidenzialiCIP -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneInfoPrevidenzialiCIP">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/lavoratoreSubordinatoConsultaCIP"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/CFLavoratoreSubordinato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/consultazioneInfoPrevidenzialiPeriodoA"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/consultazioneInfoPrevidenzialiPeriodoDa"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPSV/Service"/>
+        <rdfs:comment xml:lang="it">E&apos; un servizio di consultazione previdenziale che fornisce una panoramica più completa rispetto a quella fornita dall&apos;estratto conto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Social Security Record (ita:CIP) is an online service that presents social security and financial-related information in a more detailed form than a regular bank statement. </rdfs:comment>
+        <rdfs:label xml:lang="it">Consultazione Info Previdenziali CIP</rdfs:label>
+        <rdfs:label xml:lang="en">Social Security Record</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/descriveRichiestaDiAnticipo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/descriveStatoDiAnticipoIntegrazioneSalariale"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/descriveStatodellaDomandaIntegrazioneSalariale"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/descriveTipologiaPrestazioneIntegrazioneSalariale"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/visualizzaDatiDomandaIntegrazioneSalariale"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/dataPresentazioneDomandaIntegrazioneSalariale"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/numeroProtocolloDomandaIntegrazioneSalariale"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/periodoPrestazioneIntegrazioneSalarialeA"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/periodoPrestazioneIntegrazioneSalarialeDa"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS"/>
+        <rdfs:comment xml:lang="it">Sezione di consultazione dati relativa alle Integrazioni Salariali inviate dal datore di lavoro disponibile tramite il servizio di consultazione info previdenziali CIP. Il servizio consente, tramite un unico punto di accesso, di consultare lo stato, delle domande e dei pagamenti diretti di trattamenti di integrazione salariale.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Employment Integration Allowance records contains a history of any information with regards to the Employment Integration Allowance report, which is sent each month by the employer, the information presented in this report can be accessed through the Social Security record service (CIP).</rdfs:comment>
+        <rdfs:label xml:lang="it">Consultazione Integrazione Salariale</rdfs:label>
+        <rdfs:label xml:lang="en">Employment Integration Allowance Records</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/haConsultazioneContrattoDiLavoroSubordinato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/haConsultazioneContributoFigurativo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/haConsultazionePrestazioneANF"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/haConsultazioneRapportoDiLavoroSospeso"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/visualizzaDatiDenunciaUNIEMENS"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/dataCompetenza"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/social-safety-net/imponibileContributivo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Sezione di consultazione dati relativa alle denunce mensili UNIEMENS inviate dal datore di lavoro disponibile tramite il servizio di consultazione info previdenziali CIP. </rdfs:comment>
+        <rdfs:comment xml:lang="en">The UNIEMENS records contains a history of any information with regards to the UNIEMENS monthly report. The UNIEMENS monthly report is sent each month by the employer, the information presented in this report can be accessed through the Social Security record service (CIP).</rdfs:comment>
+        <rdfs:label xml:lang="it">Consultazione UNIEMENS</rdfs:label>
+        <rdfs:label xml:lang="en">UNIEMENS records</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAccreditatoDiUfficio -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAccreditatoDiUfficio">
+        <rdfs:comment xml:lang="it">I contributi figurativi sono accreditati d’ufficio nel momento dell’ interruzione o della sospensione del rapporto di lavoro in caso di disoccupazione, cassa integrazione o malattia/infortunio sul lavoro ma talvolta sono riconosciuti nel momento in cui si presenta domanda di pensione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This is a type of benefit that is paid to employees in automatic if there&apos;s a suspension of a temporary or permenant discarge of a worker due to shortgae of work, accidents in the workplace or when the state pension application form is sent out.</rdfs:comment>
+        <rdfs:label xml:lang="en">Automatic Benefit</rdfs:label>
+        <rdfs:label xml:lang="it">Contributo Figurativo Accreditato Di Ufficio</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAssegnoOrdinarioFIS -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAssegnoOrdinarioFIS">
+        <rdfs:comment xml:lang="en">A person who is supended from employment will be automatically enrolled on FIS benefit.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Assegno di integrazione salariale per lavoratori dipendenti in caso di sospensione o cessazione dell&apos;attività lavorativa.</rdfs:comment>
+        <rdfs:label xml:lang="en">FIS Automatic Benefit</rdfs:label>
+        <rdfs:label>Contributo Figurativo Assegno Ordinatio FIS</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAssistenzaAntitubercolare -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAssistenzaAntitubercolare">
+        <rdfs:comment xml:lang="it">Contributo figurativo a carico dell&apos;INPS per l&apos;assistenza antitubercolare.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Tuberculosis (TB) allowance is a payment to people by the Italian Department of Social Protection (INPS). </rdfs:comment>
+        <rdfs:label xml:lang="it">Contributo Figurativo Assistenza Antitubercolare</rdfs:label>
+        <rdfs:label xml:lang="en">TB Allowance</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoCassaIntegrazione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoCassaIntegrazione">
+        <rdfs:comment xml:lang="it">I lavoratori che sono posti in cassa integrazione, hanno diritto alla copertura contributiva dell’intero periodo.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Income Supports is paid to employees who have been put on an income support register.</rdfs:comment>
+        <rdfs:label xml:lang="it">Contributo Figurativo Cassa Integrazione</rdfs:label>
+        <rdfs:label xml:lang="en">Income Support Benefit</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoCongedoParentale -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoCongedoParentale">
+        <rdfs:comment xml:lang="it">I periodi di congedo parentale (astensione facoltativa) fruiti durante il rapporto di lavoro sono coperti da contribuzione figurativa (articolo 35, decreto legislativo 26 marzo 2001, n. 151).</rdfs:comment>
+        <rdfs:comment xml:lang="en">Parent&apos;s Benefit is a payment for people in employment to allow them to take time off work ( Italian Law: article 35. 26 March 2001, n. 151).</rdfs:comment>
+        <rdfs:label xml:lang="it">Contributo Figurativo Congedo Parentale</rdfs:label>
+        <rdfs:label xml:lang="en">Parent&apos;s Benefit</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoContrattoDiSolidarieta -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoContrattoDiSolidarieta">
+        <rdfs:comment xml:lang="it">Nell’ambito dei contratti di solidarietà, la parte di retribuzione persa a causa della contrazione lavorativa viene compensata con un contributo Inps, pari all’80% dello stipendio non corrisposto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Solidarity Contract Benefit is a payment to people who have a solidarity contract agreement, in other words, reduced work hours and income. It is paid by the Department of Social Protection (INPS) and cover up to 80% of the full income.</rdfs:comment>
+        <rdfs:label xml:lang="it">Contributo Figuartivo Contratto Di Solidarietà</rdfs:label>
+        <rdfs:label xml:lang="en">Solidarity Contract Benefit</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoDisoccupazione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoDisoccupazione">
+        <rdfs:comment xml:lang="it">I contributi figurativi per disoccupazione indennizzata sono dei versamenti previdenziali che vengono effettuati dall’INPS (Istituto Nazionale della Previdenza Sociale) a favore dei lavoratori che si trovano in stato di disoccupazione involontaria.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Unemployment Benefit is a payment from the INPS (Italian Department of Social Protection) to people who are out of work for involuntary reasons.  </rdfs:comment>
+        <rdfs:label xml:lang="it">Contributo Figurativo Disoccupazione</rdfs:label>
+        <rdfs:label xml:lang="en">Unemployment Benefit</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoInvalidita -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoInvalidita">
+        <rdfs:comment xml:lang="it">Contributo figurativo per lavoratori con invalidità.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Disability benefit is a payment that may be paid to people who cannot work because of a long-term disability.</rdfs:comment>
+        <rdfs:label xml:lang="it">Contributo Figurativo Invalidità</rdfs:label>
+        <rdfs:label xml:lang="en">Disability Benefit</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoLavoroSocialmenteUtile -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoLavoroSocialmenteUtile">
+        <rdfs:comment xml:lang="it">Contributo figurativo per coloro che hanno svolto periodi lavorativi come Lavoratori Socialmente Utili.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Social Work Benefit is a payment to people who have practice based profession that promotes social work.</rdfs:comment>
+        <rdfs:label xml:lang="it">Contributo Figurativo Lavoro Socialmente Utile</rdfs:label>
+        <rdfs:label xml:lang="en">Social Work Benefit</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoMalattiaEInfortunio -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoMalattiaEInfortunio">
+        <rdfs:comment xml:lang="en">Injury and Illness Benefit is a payment made to employees who are unfit to work for a minum period of 7 days as a result of an injury or because they have contracted a disease.</rdfs:comment>
+        <rdfs:comment xml:lang="it">È la contribuzione figurativa riconosciuta ai fini previdenziali per periodi di malattia o infortunio.La prestazione è rivolta a coloro che si siano trovati nella temporanea inabilità al lavoro per un periodo non inferiore a sette giorni per malattia.</rdfs:comment>
+        <rdfs:label xml:lang="it">Contributo Figurativo Malattia E Infortunio</rdfs:label>
+        <rdfs:label xml:lang="en">Illness and Injury Benefit</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoMobilità -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoMobilità">
+        <rdfs:comment xml:lang="en">Mobility Benefit is a payment to people who have limited mobility.</rdfs:comment>
+        <rdfs:comment xml:lang="it">il lavoratore ha diritto all’accredito della contribuzione figurativa per i periodi in cui riscuote l’indennità di mobilità.</rdfs:comment>
+        <rdfs:label xml:lang="it">Contributo Figurativo Mobilità</rdfs:label>
+        <rdfs:label xml:lang="it">Mobility Benefit</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/DenunciaMensileUNIEMENS -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/DenunciaMensileUNIEMENS">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/inviaDenunciaMensileUNIEMENS"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/visualizzaDatiDenunciaUNIEMENS"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeAPagamentoDirettoCovid-19"/>
+        <rdfs:comment xml:lang="en">The UNIEMENS monthly report is a monthly statement sent by the employer to the Italian Department of Social Protection (INPS).</rdfs:comment>
+        <rdfs:comment xml:lang="it">Una denuncia obbligatoria inviata mensilmente all’INPS dai datori di lavoro del settore privato che svolgono le funzioni di sostituti d’imposta.</rdfs:comment>
+        <rdfs:label xml:lang="it">Denuncia Mensile UNIEMENS</rdfs:label>
+        <rdfs:label xml:lang="en">UNIEMENS monthly report</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeAPagamentoDirettoCovid-19 -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeAPagamentoDirettoCovid-19">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/inviaIntegrazioneSalarialeCovid19"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/visualizzaDatiDomandaIntegrazioneSalariale"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Modello per invio dati della domanda integrazione salariale a pagamento diretto Covid-19.</rdfs:comment>
+        <rdfs:comment xml:lang="it">The Covid-19 employment integration salary report is a monthly statement that needs to be filled out by the employer and sent it out to the Italian Department of Social Protection (INPS). </rdfs:comment>
+        <rdfs:label xml:lang="en">Covid-19 Employment Integration Salary Report</rdfs:label>
+        <rdfs:label xml:lang="it">Domanda Integrazione Salariale A Pagamento Diretto Covid-19</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeAccolta -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeAccolta">
+        <rdfs:comment xml:lang="it">Domanda integrazione salariale con stato impostato su accolta.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Indicates that the employment integration salary request has been collected.</rdfs:comment>
+        <rdfs:label xml:lang="it">Domanda Integrazione Salariale Accolta</rdfs:label>
+        <rdfs:label xml:lang="en">Employment Integration Salary Request Gathered</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeParzialmenteAccolta -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeParzialmenteAccolta">
+        <rdfs:comment xml:lang="en">A request that is currently under review</rdfs:comment>
+        <rdfs:comment xml:lang="it">Una domanda integrazione salariale con stato impostato su parzialmente accolta.</rdfs:comment>
+        <rdfs:label xml:lang="it">Domanda Integrazione Salariale Parzialemente Accolta</rdfs:label>
+        <rdfs:label xml:lang="en">Employment Integration Salary Request Under Review</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialePervenuta -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialePervenuta">
+        <rdfs:comment xml:lang="it">Domanda integrazione salariale con stato pervenuta</rdfs:comment>
+        <rdfs:comment xml:lang="en">Employment integration salary request status received. </rdfs:comment>
+        <rdfs:label xml:lang="it">Domanda Integrazione Salariale Pervenuta</rdfs:label>
+        <rdfs:label xml:lang="en">Employment Integration Salary Request Received</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/RapportoDiLavoroSopeso -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/RapportoDiLavoroSopeso">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/haConsultazioneRapportoDiLavoroSospeso"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/dataFineRapportoDiLavoroSospeso"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/dataInizioRapportoDiLavoroSospeso"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Employees may be granted paid time off work for a period of time for both trade union duties (trade union leave) and/or extended time off (extended leave). Every month an employer send the UNIEMENS statement and fill in the required information in regards to the leave payment, reasons and conditions of a temporary suspension of a contract. This information is accessible to all employees starting from January 2020, however, it does not constitute a certificate.</rdfs:comment>
+        <rdfs:comment xml:lang="it">I dati dichiarati dal datore di lavoro per il periodo in cui il rapporto di lavoro risulti sospeso per aspettativa o distacco sindacale. Le informazioni riferite alla condizione di aspettativa o distacco sindacale e alla retribuzione teorica, trasmesse mensilmente dal datore di lavoro, sono disponibili a partire dalla competenza di gennaio 2020 e non hanno valore certificativo.</rdfs:comment>
+        <rdfs:label xml:lang="it">Rapporto di Lavoro Sospeso</rdfs:label>
+        <rdfs:label xml:lang="en">Temporary Contract Suspension</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/SospensionePerAspettativa -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/SospensionePerAspettativa">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/numeroMensilitaAspettativa"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/retribuzioneTeoricaAspettativa"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/RapportoDiLavoroSopeso"/>
+        <rdfs:comment xml:lang="en">An extended paid leave is a temporary suspension of a contract. it can be granted to an employee prior approval from their employer. If an employee is approved extended leave they may not be working however they are still employees of the company.</rdfs:comment>
+        <rdfs:comment xml:lang="it">L’ aspettativa rappresenta una sospensione temporanea dell’attività lavorativa subordinata, concessa al dipendente con il previo consenso del datore di lavoro. Durante questo periodo, il dipendente mantiene il proprio status di assunto presso l’azienda, seppur non svolga effettivamente le sue mansioni</rdfs:comment>
+        <rdfs:label xml:lang="en">Extended Paid Leave</rdfs:label>
+        <rdfs:label xml:lang="it">Sospensione per aspettativa</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/SospensionePerDistaccoSindacale -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/SospensionePerDistaccoSindacale">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/quotaImponibileDistacco"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/RapportoDiLavoroSopeso"/>
+        <rdfs:comment xml:lang="en">A trade unione leave is when an employee is granted paid time off work for trade union duties.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Con la nozione di “ distacco sindacale ” si fa riferimento al diritto, riconosciuto ai dipendenti pubblici, di svolgere, a tempo pieno o parziale, attività sindacale, con la conseguente sospensione dell’attività lavorativa, mantenendo tutte le altre prerogative del rapporto di lavoro (compresa la retribuzione).</rdfs:comment>
+        <rdfs:label xml:lang="it">Sospensione per distacco sindacale</rdfs:label>
+        <rdfs:label xml:lang="en">Trade Union Leave</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/StatoAnticipoIntegrazioneSalarialeCausaleCovid -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/StatoAnticipoIntegrazioneSalarialeCausaleCovid">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/descriveStatoDiAnticipoIntegrazioneSalariale"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Describes the transaction lifecycle of a Covid-19 employment integration salary advance payment request</rdfs:comment>
+        <rdfs:comment xml:lang="it">Stato pagamento anticipo integrazione salariale causale covid.</rdfs:comment>
+        <rdfs:label xml:lang="en">Covid-19 Employment Integration Salary Advance Payment Status</rdfs:label>
+        <rdfs:label xml:lang="it">Stato Anticipo Integrazione Salariale Causale Covid</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/StatoDomandaIntegrazioneSalariale -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/StatoDomandaIntegrazioneSalariale">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeAccolta"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeParzialmenteAccolta"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialePervenuta"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/descriveStatodellaDomandaIntegrazioneSalariale"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">An employment integration salary request can have different status such as: received, gathered, under review.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Una domanda integrazione salariale può avere diversi stati tra i quali: pervenuta, accolta, accolta parzialmente.</rdfs:comment>
+        <rdfs:label xml:lang="en">Employment Integration Salary Request Status</rdfs:label>
+        <rdfs:label xml:lang="it">Stato Domanda Integrazione Salariale</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/TipologiaPrestazionePagamentoDiretto -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/CIP/TipologiaPrestazionePagamentoDiretto">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ASO"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/CIGD"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/CIGO"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/descriveTipologiaPrestazioneIntegrazioneSalariale"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/descrizionePrestazionePagamentoDiretto"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Le tipologie di prestazione sono CIGO/CIGD/ASO </rdfs:comment>
+        <rdfs:comment xml:lang="en">There are three types of integration salary compensations: CIGO, ASO and CIGD.</rdfs:comment>
+        <rdfs:label xml:lang="en">Employment Integration Salary Compensation</rdfs:label>
+        <rdfs:label xml:lang="it">Tipologia Prestazione Pagamento Diretto</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/social-safety-net/ContrattoDiLavoroSubordinato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/ContrattoDiLavoroSubordinato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/haConsultazioneContrattoDiLavoroSubordinato"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/social-safety-net/ContributoFigurativo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/ContributoFigurativo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/haConsultazioneContributoFigurativo"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/social-safety-net/DatoreDiLavoro -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/DatoreDiLavoro">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/inviaDenunciaMensileUNIEMENS"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/inviaIntegrazioneSalarialeCovid19"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/social-safety-net/LavoratoreSubordinato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/LavoratoreSubordinato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/CIP/lavoratoreSubordinatoConsultaCIP"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="https://w3id.org/italia/social-security/onto/social-safety-net/LavoroSubordinatoAgricolo"/>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/social-safety-net/LavoroSubordinatoAgricolo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/LavoroSubordinatoAgricolo"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/social-safety-net/PrestazioneANF -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/PrestazioneANF">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/haConsultazionePrestazioneANF"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/CIP/distribution/CIP-N-TRIPLES -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/CIP/distribution/CIP-N-TRIPLES">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell&apos;ontologia INPS relativa al servizio Consultazione Info Previdenziali (CIP) per dipendenti privati secondo i criteri dell&apos;instituto</dct:description>
+        <dct:description xml:lang="en">The Social Security Record Italian Online Service INPS Ontology N-TRIPLES distribution</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione N-TRIPLES dell&apos;ontologia INPS - Consultazione Info Previdenziali (CIP)</dct:title>
+        <dct:title xml:lang="en">INPS Ontology N-TRIPLES distribution - Social Security Record</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/CIP/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/CIP/latest/CIP.n3"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/CIP/distribution/CIP-RDF-TURTLE -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/CIP/distribution/CIP-RDF-TURTLE">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell&apos;ontologia INPS relativa al servizio Consultazione Info Previdenziali (CIP) per dipendenti privati secondo i criteri dell&apos;instituto</dct:description>
+        <dct:description xml:lang="en">The Social Security Record Italian Online Service INPS Ontology RDF/Turtle distribution</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione RDF/Turtle dell&apos;ontologia INPS - Consultazione Info Previdenziali (CIP)</dct:title>
+        <dct:title xml:lang="en">INPS Ontology RDF/Turtle distribution - Social Security Record</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/CIP/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/CIP/latest/CIP.ttl"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/CIP/distribution/CIP-RDF-XML -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/CIP/distribution/CIP-RDF-XML">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell&apos;ontologia INPS relativa al servizio Consultazione Info Previdenziali (CIP) per dipendenti privati secondo i criteri dell&apos;instituto</dct:description>
+        <dct:description xml:lang="en">The Social Security Record Italian Online Service INPS OntologyRDF/XML distribution</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione RDF/XML dell&apos;ontologia INPS - Consultazione Info Previdenziali (CIP)</dct:title>
+        <dct:title xml:lang="en">INPS Ontology RDF/XML distribution - Social Security Record</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/CIP/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/CIP/latest/CIP.owl"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+        <dct:identifier>DirezioneCentraleTII</dct:identifier>
+        <vcard:fn>INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it"/>
+        <foaf:name xml:lang="en">INPS - Central Management of Information Technology and Innovations</foaf:name>
+        <foaf:name xml:lang="it">INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/inps -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+        <dct:identifier>inps</dct:identifier>
+        <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
+        <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/td -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/td">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <dct:identifier>TD</dct:identifier>
+        <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
+        <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/ASO -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/CIP/ASO">
+        <rdfs:comment xml:lang="en">ASO is a type of financial scheme available to businesses that have been impacted by Covid-19.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Trattamenti di assegno ordinario (ASO).</rdfs:comment>
+        <rdfs:label xml:lang="en">ASO</rdfs:label>
+        <rdfs:label xml:lang="it">ASO</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/CIGD -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/CIP/CIGD">
+        <rdfs:comment xml:lang="it">La Cassa Integrazione Guadagni in Deroga (CIGD) è un intervento di integrazione salariale a sostegno di imprese che non possono ricorrere agli strumenti ordinari perché esclusi all&apos;origine da questa tutela o perché hanno già esaurito il periodo di fruizione delle tutele ordinarie. </rdfs:comment>
+        <rdfs:comment xml:lang="en">The Italian CIGD is a type of Covid-19 assistance Scheme available to businesses in Italy. This type of financial support can only be accessed if no other funding scheme is available to a business.</rdfs:comment>
+        <rdfs:label xml:lang="en">CIGD</rdfs:label>
+        <rdfs:label xml:lang="it">CIGD</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/CIP/CIGO -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/onto/CIP/CIGO">
+        <rdfs:comment xml:lang="en">CIGO is a type of financial scheme available to those businesses that have been impacted by Covid-19 and need support to pay employees whose jobs had to be suspended due the pandemic.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La Cassa Integrazione Guadagni Ordinaria (CIGO) per l&apos;industria e l&apos;edilizia integra o sostituisce la retribuzione dei lavoratori a cui è stata sospesa o ridotta l&apos;attività lavorativa per situazioni aziendali dovute a eventi transitori e non imputabili all&apos;impresa o ai dipendenti, incluse le intemperie stagionali e per situazioni temporanee di mercato.</rdfs:comment>
+        <rdfs:label xml:lang="en">CIGO</rdfs:label>
+        <rdfs:label xml:lang="it">CIGO</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneIntegrazioneSalariale"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneUNIEMENS"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ConsultazioneInfoPrevidenzialiCIP"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAccreditatoDiUfficio"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoCongedoParentale"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoMalattiaEInfortunio"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/social-safety-net/ContributoFigurativo"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAssegnoOrdinarioFIS"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAssistenzaAntitubercolare"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoCassaIntegrazione"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoContrattoDiSolidarieta"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoDisoccupazione"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoInvalidita"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoLavoroSocialmenteUtile"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoMobilità"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAccreditatoDiUfficio"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/DenunciaMensileUNIEMENS"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeAPagamentoDirettoCovid-19"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/TI/TimeIndexedEvent"/>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAccreditatoDiUfficio"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoCongedoParentale"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoMalattiaEInfortunio"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAssegnoOrdinarioFIS"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoAssistenzaAntitubercolare"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoCassaIntegrazione"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoContrattoDiSolidarieta"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoDisoccupazione"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoInvalidita"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoLavoroSocialmenteUtile"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/ContributoFigurativoMobilità"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeAccolta"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialeParzialmenteAccolta"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/CIP/DomandaIntegrazioneSalarialePervenuta"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

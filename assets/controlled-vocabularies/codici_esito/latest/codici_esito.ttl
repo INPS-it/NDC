@@ -1,0 +1,155 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/Esito>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement Outcome Codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici esito come rappresentati dalla Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato dei codici esito come rappresentati dalla Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the defined set of outcome codes in a CU Statement"@en,
+        "Vocabolario controllato dei codici esito come rappresentati dalla Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/CES_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CES_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CES_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "codici esito della certificazione unica"@it,
+        "CU statement outcome codes"@en,
+        "inps"@en,
+        "inps"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement Outcome Codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici esito come rappresentati dalla Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito" ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-24"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:relation <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement Outcome Codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici esito come rappresentati dalla Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "codici_esito" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/A>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/B>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/C>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/D>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/E>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/F> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/A> a skos:Concept ;
+    rdfs:label "cessazione del rapporto di lavoro"@it ;
+    skos:prefLabel "cessazione del rapporto di lavoro"@it ;
+    dct:identifier "A"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito> ;
+    skos:notation "A"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/B> a skos:Concept ;
+    rdfs:label "aspettativa senza retribuzione"@it ;
+    skos:prefLabel "aspettativa senza retribuzione"@it ;
+    dct:identifier "B"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito> ;
+    skos:notation "B"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/C> a skos:Concept ;
+    rdfs:label "decesso"@it ;
+    skos:prefLabel "decesso"@it ;
+    dct:identifier "C"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito> ;
+    skos:notation "C"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/D> a skos:Concept ;
+    rdfs:label "retribuzione insufficiente"@it ;
+    skos:prefLabel "retribuzione insufficiente"@it ;
+    dct:identifier "D"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito> ;
+    skos:notation "D"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/E> a skos:Concept ;
+    rdfs:label "rimborso non effettuato in tutto o in parte per incapienza del monte ritenute"@it ;
+    skos:prefLabel "rimborso non effettuato in tutto o in parte per incapienza del monte ritenute"@it ;
+    dct:identifier "E"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito> ;
+    skos:notation "E"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito/F> a skos:Concept ;
+    rdfs:label "passaggio di dipendenti senza interruzione del rapporto di lavoro"@it ;
+    skos:prefLabel "passaggio di dipendenti senza interruzione del rapporto di lavoro"@it ;
+    dct:identifier "F"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codici_esito> ;
+    skos:notation "F"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CES_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codici_esito/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codici_esito/latest/codici_esito.csv> ;
+    dct:description "CU statement outcome codes controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato sui codici esito come rappresentati dalla certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement outcome codes controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato sui codici esito come rappresentati dalla certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CES_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codici_esito/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codici_esito/latest/codici_esito.json> ;
+    dct:description "CU statement outcome codes controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato sui codici esito come rappresentati dalla certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement outcome codes controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato sui codici esito come rappresentati dalla certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CES_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codici_esito/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codici_esito/latest/codici_esito.ttl> ;
+    dct:description "CU statement outcome codes controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato sui codici esito come rappresentati dalla certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU Statement outcome codes controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato sui codici esito come rappresentati dalla certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

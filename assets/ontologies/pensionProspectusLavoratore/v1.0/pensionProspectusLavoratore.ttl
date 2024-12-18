@@ -1,0 +1,746 @@
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
+@prefix CLV: <https://w3id.org/italia/onto/CLV/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPV: <https://w3id.org/italia/onto/CPV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix DETPENS: <https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
+@prefix INPSPensions: <https://w3id.org/italia/social-security/onto/pensions/> .
+@prefix INPSRL: <https://w3id.org/italia/social-security/onto/relevantLegislation/> .
+@prefix L0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rico: <https://www.ica.org/standards/RiC/ontology#> .
+@prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix TI: <https://w3id.org/italia/onto/TI/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+DETPENS: a owl:Ontology ;
+    owl:versionIRI DETPENS:1.0 ;
+    owl:imports CLV:,
+        COV:,
+        CPV:,
+        L0:,
+        RO: ;
+    rdfs:label "Ontologia Determina di Pensione di INPS"@it,
+        "Pension Prospectus INPS Ontology"@en ;
+    rdfs:comment "INPS ontology relating to the entities and relationships that describe the pension determination according to the institute's criteria."@en,
+        "Ontologia INPS relativa alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell'istituto. "@it ;
+    owl:versionInfo "1.0 - Modificata il 29 Ottobre 2024"@it,
+        "1.0 - Modified on 29 October 2024"@en ;
+    rdfs:isDefinedBy DETPENS: ;
+    adms:acronym "inps" ;
+    adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+    adms:hasFormalityLevel adms:Formal ;
+    adms:hasKeyClass DETPENS:AnzianitaContributiva,
+        DETPENS:ImportoPensione,
+        DETPENS:LiquidazionePensione ;
+    adms:hasOntologyLanguage adms:OWL ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-XML> ;
+    adms:hasTask adms:AnnotationTask,
+        adms:QueryFormulationTask,
+        adms:SearchTask ;
+    adms:last DETPENS:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/"^^xsd:anyURI ;
+    adms:prefix "DETPENS" ;
+    adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+    adms:status "catalogued",
+        "published" ;
+    adms:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    adms:type adms:ServiceOnytology ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:keyword "Determina di Pensione"@it,
+        "Liquidazione Pensione"@it,
+        "Pension Determination"@en,
+        "Pension Liquidation"@en,
+        "Pension Prospectus"@en,
+        "Prospetto di Pensione"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "INPS ontology relating to the entities and relationships that describe the pension determination according to the institute's criteria."@en,
+        "Ontologia INPS relativa alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell'istituto."@it ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore" ;
+    dct:issued "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "Ontologia Determina di Pensione di INPS "@it,
+        "Pension Prospectus INPS Ontology"@en .
+
+### Object Properties
+
+DETPENS:accoglieDomandaDiPensione a owl:ObjectProperty ;
+    rdfs:label "accepts pension application"@en,
+        "accoglie domanda di pensione"@it ;
+    rdfs:domain INPSCore:SedeINPS ;
+    rdfs:range DETPENS:DomandaDiPensione ;
+    rdfs:comment "La object property collega la Sede INPS incaricata di gestire la pratica relativa alla domanda di pensione e la Domanda di pensione, mettendo in evidenze la competenza della sede relativamente all'atto di accoglimento della domanda"@it,
+        "The object property links the INPS office responsible for managing the pension application and the Pension Application"@en .
+
+DETPENS:apponeSottoscrizione a owl:ObjectProperty ;
+    rdfs:label "appone sottoscrizione"@it,
+        "subscribes"@en ;
+    rdfs:domain DETPENS:ResponsabileDelDocumento ;
+    rdfs:range DETPENS:Sottoscrizione ;
+    rdfs:comment "La object property collega il Responsabile del documento con la sottoscrizione, mettendo in evidenza la relazione semantica tra il soggetto abilitato ad apporre la firma con la sottoscrizione stessa"@it,
+        "The object property connects the Document Responsible with the signature"@en .
+
+DETPENS:calcolataSullaBaseContributiVersati a owl:ObjectProperty ;
+    rdfs:label "calcolata sulla base dei contributi versati"@it,
+        "calculated on the basis of the contributions paid"@en ;
+    rdfs:domain DETPENS:LiquidazionePensione ;
+    rdfs:range DETPENS:AnzianitaContributiva ;
+    rdfs:comment "La object property collega la liquidazione di pensione con l'anzianità contributiva, evidenziando il nesso tra la liquidazione e l'anzianità contributiva in qualità di elemento fondamentale per per il calcolo degli importi da liquidare"@it,
+        "The object property links the pension payment with the contributory seniority"@en .
+
+DETPENS:certificaDatiRelativiA a owl:ObjectProperty ;
+    rdfs:label "certifica i dati relativi a"@it,
+        "certifies the data relating to"@en ;
+    rdfs:domain DETPENS:Dispositivo ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    DETPENS:ImportoPensione
+                    DETPENS:LiquidazionePensione ) ] ;
+    rdfs:comment "La object property collega la classe rappresentativa dell'elemento Dispositivo del documento con la classi che descrivono i gruppi informativi relativi agli importi e alla liquidazione di pensione. La relazione mette in evidenza il ruolo del documento di determina di pensione rispetto ai dati della pensione concessa al richiedente"@it,
+        "The object property links the representative class of the document Device element with the classes that describe the information groups related to the pension amounts and liquidation"@en .
+
+DETPENS:certificaDirittoAllaPensione a owl:ObjectProperty ;
+    rdfs:label "certifica il diritto alla pensione"@it,
+        "certifies the right to a pension"@en ;
+    rdfs:domain DETPENS:DeterminaDiPensione ;
+    rdfs:range INPSPensions:ProdottoPensionistico ;
+    rdfs:comment "La object property collega la determina di pensione con il prodotto pensionistico dal quale certifica l'assegnazione al soggetto richiedente"@it,
+        "The object property links the pension determination with the pension product from which it certifies the assignment to the applicant"@en .
+
+DETPENS:certificataDa a owl:ObjectProperty ;
+    rdfs:label "certificata da"@it,
+        "certified by"@en ;
+    rdfs:domain DETPENS:ConcessioneDiPensione ;
+    rdfs:range DETPENS:DeterminaDiPensione ;
+    rdfs:comment "La object property mette in relazione la classe Concessione di pensione con la Determina di pensione, la relazione vuole definire la relazione semantica tra le due e il ruolo certificatore del documento di determina rispetto all'adozione dell'atto di concessione della pensione dal parte dell'INPS"@it,
+        "The object property relates the Pension Grant class to the Pension Determination"@en .
+
+DETPENS:determinaGestitaDaSedeINPS a owl:ObjectProperty ;
+    rdfs:label "determina gestita da sede INPS"@it,
+        "pension determination managed by INPS headquarters"@en ;
+    rdfs:domain DETPENS:DeterminaDiPensione ;
+    rdfs:range INPSCore:SedeINPS ;
+    rdfs:comment "La object property collega la Determina di pensione con la sede INPS che ne ha in carico la gestione"@it,
+        "The object property connects the Pension Determination with the INPS office that is responsible for its management"@en .
+
+DETPENS:determinaImportoPensione a owl:ObjectProperty ;
+    rdfs:label "determina importo di pensione"@it,
+        "determines pension amount"@en ;
+    rdfs:domain DETPENS:AnzianitaContributiva ;
+    rdfs:range DETPENS:ImportoPensione ;
+    rdfs:comment "La object property collega la classe Anzianità contributiva con la classe Importo pensione con lo scopo di esplicitare il nesso semantico  tra le due e in particolare il ruolo svolto dal dato dell'anzianità contributiva rispetto alla determinazione degli importi della pensione da erogare"@it,
+        "The object property connects the Seniority class with the Pension amount class"@en .
+
+DETPENS:eArticolatoIn a owl:ObjectProperty ;
+    rdfs:label "It is divided into"@en,
+        "è articolato in"@it ;
+    rdfs:domain DETPENS:Testo ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    DETPENS:Dispositivo
+                    DETPENS:Premessa ) ] ;
+    rdfs:comment "La object property collega la classe descrittiva del testo del documento con le sue componenti costitutive"@it,
+        "The object property connects the descriptive class of the document text with its constituent components"@en .
+
+DETPENS:emetteDeterminaDiPensione a owl:ObjectProperty ;
+    rdfs:label "emette determina di pensione"@it,
+        "issues pension determination"@en ;
+    rdfs:domain INPSCore:SedeINPS ;
+    rdfs:range DETPENS:DeterminaDiPensione ;
+    rdfs:comment "La object property collega la sede INPS che ha competenza ad emettere ila determina con il documento di determina di pensione con lo scopo di esplicitare il tipo di relazione che le lega"@it,
+        "The object property links the INPS office that is competent to issue the determination with the pension determination document"@en .
+
+DETPENS:haTipologiaSistemaDiCalcolo a owl:ObjectProperty ;
+    rdfs:label "ha tipologia di sistema di calcolo"@it,
+        "has a type of calculation system"@enn ;
+    rdfs:domain DETPENS:LiquidazionePensione ;
+    rdfs:range DETPENS:TipologiaSistemaDiCalcolo ;
+    rdfs:comment "La object property collega la Liquidazione di pensione con la tipologia di sistema di calcolo  utilizzato per la definizione degli importi da liquidare"@it,
+        "The object property links the Pension Liquidation with the type of calculation system used to define the amounts to be liquidated"@en .
+
+DETPENS:inviaDomandaDiPensione a owl:ObjectProperty ;
+    rdfs:label "invia domanda di pensione"@it,
+        "submit pension application"@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    DETPENS:Instante
+                    INPSRL:Delegato ) ] ;
+    rdfs:range DETPENS:DomandaDiPensione ;
+    rdfs:comment "La object property collega i soggetti abilitati ad inviare la domadna di pensione, ossia il soggetto interessato o un suo delegato, con la sede INPS territorialmente competente a riceverla e gestirla"@it,
+        "The object property connects the subjects authorised to send the pension application, i.e. the interested party or his delegate, with the INPS office territorially competent to receive and manage it"@en .
+
+DETPENS:presentaDomandaDiPensione a owl:ObjectProperty ;
+    rdfs:label "apply for pension"@en,
+        "presenta domanda di pensione"@it ;
+    rdfs:domain DETPENS:Instante ;
+    rdfs:range DETPENS:DomandaDiPensione ;
+    rdfs:comment "La object property collega il soggetto che presenta la domanda di pensione e sarÃ  destinatario dell'atto adottato in merito dall'INPS con la domadna di pensione inviata"@it,
+        "The object property links the person who submits the pension application and will be the recipient of the act adopted in this regard by INPS with the pension application sent"@en .
+
+DETPENS:protocolloCompostoDa a owl:ObjectProperty ;
+    rdfs:label "protocol composed of"@en,
+        "protocollo composto da"@it ;
+    rdfs:domain DETPENS:Protocollo ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    DETPENS:Autore
+                    DETPENS:Destinatario
+                    DETPENS:Oggetto ) ] ;
+    rdfs:comment "La object property collega il protocollo, inteso come parte strutturale del documento di determina di pensione, con gli elementi che lo compongono"@it,
+        "The object property connects the protocol, intended as a structural part of the pension determination document, with the elements that compose it"@en .
+
+DETPENS:sintetizzaDatiRelativiAPensione a owl:ObjectProperty ;
+    rdfs:label "sintetizza dati relativi a pensione"@it,
+        "summarizes pension data"@en ;
+    rdfs:domain DETPENS:Oggetto ;
+    rdfs:range INPSPensions:ProdottoPensionistico ;
+    rdfs:comment "La object property collega la classe oggetto, che rappresenta l'elemento del documento che veicola una sintesi del contenuto, con la classe prodotto pensionistico"@it,
+        "The object property connects the object class, which represents the element of the document that conveys a summary of the content, with the pension product class"@en .
+
+DETPENS:strutturatoIn a owl:ObjectProperty ;
+    rdfs:label "structured in"@en,
+        "strutturato in"@it ;
+    rdfs:domain DETPENS:DeterminaDiPensione ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    DETPENS:Protocollo
+                    DETPENS:Sottoscrizione
+                    DETPENS:Testo ) ] ;
+    rdfs:comment "La object property collega la classe rappresentativa del documento di determina di pensione con gli elementi strutturali di cui si compone"@it,
+        "The object property connects the representative class of the pension determination document with the structural elements it is composed of"@en .
+
+INPSPensions:haGestionePensionistica a owl:ObjectProperty ;
+    rdfs:label "ha gestione pensionistica di riferimento"@it,
+        "has reference pension management"@en ;
+    rdfs:domain DETPENS:LiquidazionePensione ;
+    rdfs:range INPSPensions:GestionePensionistica ;
+    rdfs:comment "La object property collega la Liquidazione di pensione con la Gestione pensionistica di riferimento"@it,
+        "The object property connects the Pension Settlement with the relevant Pension Management"@en .
+
+INPSPensions:haTipoDiPensione a owl:ObjectProperty ;
+    rdfs:domain INPSPensions:ProdottoPensionistico ;
+    rdfs:range INPSPensions:TipoDiPensione .
+
+TI:atTime a owl:ObjectProperty ;
+    rdfs:domain DETPENS:AnzianitaContributiva,
+        DETPENS:ImportoPensione ;
+    rdfs:range TI:TimeInterval .
+
+### Data Properties
+
+DETPENS:dataDecorrenzePensione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data di decorrenza di pensione"@it,
+        "pension effective date"@en ;
+    rdfs:domain INPSPensions:ProdottoPensionistico ;
+    rdfs:comment "data a partire dalla quale la pensione sarà erogata al titolare"@it,
+        "date from which the pension will be paid to the holder"@en .
+
+DETPENS:dataEmissioneDeterminaDiPensione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data emissione determina di pensione"@it,
+        "date of issue determines pension"@en ;
+    rdfs:domain DETPENS:DeterminaDiPensione ;
+    rdfs:comment "data di emissione della determina di pensione"@it,
+        "date of issue of the pension determination"@en .
+
+DETPENS:dataEmissioneDocumento a owl:DatatypeProperty ;
+    rdfs:label "data di emissione del documento"@it,
+        "document issue date"@en ;
+    rdfs:domain DETPENS:Protocollo ;
+    rdfs:comment "data indicata nel documento nella quale l'ente ha adottato il provvedimento"@it,
+        "date indicated in the document in which the institution adopted the measure"@en .
+
+DETPENS:descrizioneProvvedimento a owl:DatatypeProperty ;
+    rdfs:label "description of the measure"@en,
+        "descrizione del provvedimento"@it ;
+    rdfs:domain DETPENS:Dispositivo ;
+    rdfs:comment "l'attributo contiene un breve testo descrittivo con la sintesi dell'esito del provvedimento adottato"@it,
+        "the attribute contains a short descriptive text with a summary of the outcome of the measure adopted"@en .
+
+DETPENS:importoACalcolo a owl:DatatypeProperty ;
+    rdfs:label "importo a calcolo"@it ;
+    rdfs:domain DETPENS:ImportoPensione .
+
+DETPENS:importoMensileTotalePensione a owl:DatatypeProperty ;
+    rdfs:label "importo mensile totale della pensione"@it,
+        "Total monthly pension amount"@en ;
+    rdfs:domain DETPENS:ImportoPensione .
+
+DETPENS:luogoEmissioneDelDocumento a owl:DatatypeProperty ;
+    rdfs:label "luogo di emissione del documento"@it,
+        "place of issue of the document"@en ;
+    rdfs:domain DETPENS:Protocollo ;
+    rdfs:comment "data topica (luogo) di emissione del documento"@it .
+
+DETPENS:modalitaPagamento a owl:DatatypeProperty ;
+    rdfs:label "modalità pagamento"@it,
+        "payment methods"@en ;
+    rdfs:domain DETPENS:ImportoPensione ;
+    rdfs:comment "method of payment of the pension amount"@en,
+        "modalità di pagamento dell'importo della pensione"@it .
+
+DETPENS:nomeAutore a owl:DatatypeProperty ;
+    rdfs:label "author's name"@en,
+        "nome dell'autore"@it ;
+    rdfs:domain DETPENS:Autore ;
+    rdfs:comment "name of the person who has the authority to issue the document"@en,
+        "nome del soggetto che ha autorità ad emettere il documento"@it .
+
+DETPENS:numeroIdentificativoDiProtocollo a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "numero identificativo di protocollo"@it,
+        "protocol identification number"@en ;
+    rdfs:domain DETPENS:DeterminaDiPensione ;
+    rdfs:comment "codice numerico o alfanumerico che identifica in modo univoco il documento di determina di pensione all'interno dell'archivio dell'ente"@it,
+        "numeric or alphanumeric code that uniquely identifies the pension determination document within the institution's archive"@en .
+
+DETPENS:numeroPensione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "numero pensione"@it,
+        "pension number"@en ;
+    rdfs:domain INPSPensions:ProdottoPensionistico .
+
+DETPENS:numeroSettimane a owl:DatatypeProperty ;
+    rdfs:label "number of weeks"@en,
+        "numero di settimane"@it ;
+    rdfs:domain DETPENS:AnzianitaContributiva .
+
+DETPENS:quotaAssociativa a owl:DatatypeProperty ;
+    rdfs:label "membership fee"@en,
+        "quota associativa"@it ;
+    rdfs:domain DETPENS:ImportoPensione ;
+    rdfs:comment "membership fee paid for the management of the fund"@en,
+        "quota associativa versata per la gestione del fondo"@it .
+
+DETPENS:retribuzioneMedia a owl:DatatypeProperty ;
+    rdfs:label "average salary"@en,
+        "retribuzione media"@it ;
+    rdfs:domain DETPENS:AnzianitaContributiva ;
+    rdfs:comment "average salary of contributory seniority"@en,
+        "retribuzione media dell'anzianità contributiva"@it .
+
+DETPENS:trattamentoDiFamiglia a owl:DatatypeProperty ;
+    rdfs:label "family treatment"@en,
+        "trattamento di famiglia"@it ;
+    rdfs:domain DETPENS:ImportoPensione ;
+    rdfs:comment "assegno familiare erogato ai pensionati per il proprio nucleo familiare"@it,
+        "family allowance paid to pensioners for their family unit"@en .
+
+DETPENS:trattenuteLavoroAutonomo a owl:DatatypeProperty ;
+    rdfs:label "self-employed workers withholdings"@en,
+        "trattenute lavoro autonomo"@it ;
+    rdfs:domain DETPENS:ImportoPensione ;
+    rdfs:comment "trattenute sull'importo pensione in caso di lavoro autonomo"@it,
+        "withholdings from the pension amount in the case of self-employment"@en .
+
+TI:endTime a owl:DatatypeProperty ;
+    rdfs:domain TI:TimeInterval .
+
+TI:startTime a owl:DatatypeProperty ;
+    rdfs:domain TI:TimeInterval .
+
+### Classes
+
+DETPENS:AnzianitaContributiva a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:determinaImportoPensione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:numeroSettimane ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:retribuzioneMedia ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty TI:atTime ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:calcolataSullaBaseContributiVersati ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Anzianità contributiva"@it,
+        "Contributory seniority"@en ;
+    rdfs:comment "La classe rappresenta il periodo di versamento dei contributi utile per la maturazione del trattamento di pensione per invalidità, vecchiaia e superstiti"@it,
+        "The class represents the period of payment of contributions useful for the maturation of the pension treatment for disability, old age and survivors"@en .
+
+DETPENS:Autore a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:nomeAutore ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Author"@en,
+        "Autore"@it ;
+    rdfs:subClassOf rico:Agent ;
+    rdfs:comment "La classe Autore rappresenta il soggetto che ha capacità e competenza  a produrre il documento"@it,
+        "The Author class represents the subject who has the ability and competence to produce the document"@en .
+
+DETPENS:ConcessioneDiPensione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:certificataDa ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Concessione di pensione"@it,
+        "Pension Granting"@en ;
+    rdfs:subClassOf rico:Activity ;
+    rdfs:comment "La classe Concessione di pensione è stata definita nell'ontologia per indicare la fase finale del procedimento con il quale l'INPS determina la concessione della pensione al soggetto che ne ha fatto richiesta. Nell'ontologia del Modello Obis la classe è modellata come sottoclasse della classe Activity dell'ontologia Record in Context (RiC-O) dell'international Council on Archives (ICA) "@it,
+        "The Pension Granting class has been defined in the ontology to indicate the final phase of the procedure with which INPS determines the granting of the pension to the person who requested it"@en .
+
+DETPENS:Destinatario a owl:Class ;
+    owl:equivalentClass DETPENS:Instante ;
+    rdfs:label "Destinatario"@it,
+        "Recipient"@en ;
+    rdfs:subClassOf foaf:Person,
+        INPSCore:RuoloDiPersonaViva ;
+    rdfs:comment "Il destinatario è la persona a cui è diretto il documento e, sebbene soprattutto in ambito pubblico il destinatario del documento possa non essere lo stesso soggetto destinatario dell'atto, in questa ontologia la classe esprime l'identità dei due soggetti "@it,
+        "The recipient is the person to whom the document is addressed"@en .
+
+DETPENS:DeterminaDiPensione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:certificaDirittoAllaPensione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:dataEmissioneDeterminaDiPensione ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:determinaGestitaDaSedeINPS ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:numeroIdentificativoDiProtocollo ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:strutturatoIn ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:certificataDa ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:emetteDeterminaDiPensione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Determina di pensione"@it,
+        "Pension Prospectus"@en ;
+    rdfs:subClassOf foaf:Document,
+        rico:Record ;
+    rdfs:comment "La determina o prospetto di pensione è la classe che rappresenta l'insieme dei documenti con i quali INPS attesta e comunica l'accettazione della domanda di pensione. Nell'ontologia la clesse è descritta come sottoclasse di Document dell'ontologia esterna foaf, per chiarirne la connotazione semantica"@it,
+        "The pension prospectus is the class that represents the set of documents with which INPS certifies and communicates the acceptance of the pension application"@en .
+
+DETPENS:Dispositivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:certificaDatiRelativiA ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:descrizioneProvvedimento ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Disposition"@en,
+        "Dispositivo"@it ;
+    owl:disjointWith DETPENS:Premessa ;
+    rdfs:comment "La classe Dispositivo rappresenta la parte del testo del documento che raccoglie i dati sostanziali dell'atto che, nel caso del documento di determina di pensione, sono rappresentati dai dati di liquidazione e dal dettaglio degli importi erogati. Nella modellazione la classe accoglie la semantica definita in ambito diplomatistico"@it,
+        "The Disposition class represents the part of the document text that collects the substantial data of the act which, in the case of the pension determination document, are represented by the liquidation data and the details of the amounts paid."@en .
+
+DETPENS:DomandaDiPensione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:inviaDomandaDiPensione ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:presentaDomandaDiPensione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Domanda di pensione"@it,
+        "Pension application"@en ;
+    rdfs:comment "La classe raggruppa le domande di pensione presentate all'INPS"@it,
+        "The class groups the pension applications submitted to INPS"@en .
+
+DETPENS:ImportoArretrati a owl:Class ;
+    rdfs:label "Back payments"@en,
+        "Importo arretrati pensione"@it ;
+    rdfs:subClassOf DETPENS:ImportoPensione ;
+    rdfs:comment "La classe rappresenta il gruppo informativo legato agli importi arretrati della pensione"@it,
+        "The class represents the information group related to the outstanding pension amounts"@en .
+
+DETPENS:ImportoPensione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:importoACalcolo ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:importoMensileTotalePensione ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:modalitaPagamento ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty TI:atTime ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:determinaImportoPensione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Amount of pension"@en,
+        "Importo pensione"@it ;
+    owl:disjointWith DETPENS:LiquidazionePensione ;
+    rdfs:comment "La classe rappresenta uno dei due gruppi informativi principali presenti nel documento di determina di pensione, relativo al dettaglio degli importi della pensione erogata da INPS al Titolare della prestazione"@it,
+        "The class represents one of the two main information groups present in the pension determination document, relating to the details of the pension amounts paid by INPS to the Benefit Holder"@en .
+
+DETPENS:Instante a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:presentaDomandaDiPensione ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Applicant"@en,
+        "Instante"@it ;
+    rdfs:subClassOf foaf:Person,
+        INPSCore:RuoloDiPersonaViva ;
+    owl:disjointWith INPSRL:Delegato ;
+    rdfs:comment "La classe rappresenta il soggetto che presenta la domanda di pensione e che sarà anche destinatario della decisione adottata dall'INPS, espressa nella determina di pensione, per questo motivo nell'ontologia le classi Destinatario e Instante sono dichiarate classi equivalenti"@it,
+        "The class represents the subject who submits the pension application and who will also be the recipient of the decision adopted by INPS, expressed in the pension determination"@en .
+
+DETPENS:LiquidazionePensione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:calcolataSullaBaseContributiVersati ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:haTipologiaSistemaDiCalcolo ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSPensions:haGestionePensionistica ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Liquidazione Pensione"@it,
+        "Pension Settlement"@en ;
+    rdfs:comment "La classe rappresenta e comprende i dati utilizzati per il calcolo della liquidazione della pensione, ossia la gestione pensionistica, l'anzianità contributiva e il relativo sistema di calcolo adottato"@it,
+        "The class represents and includes the data used for the calculation of the pension payment, i.e. the pension management, the contributory seniority and the relative calculation system adopted"@en .
+
+DETPENS:Oggetto a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:sintetizzaDatiRelativiAPensione ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Object of the document"@en,
+        "Oggetto"@it ;
+    rdfs:comment "La classe rappresenta l'elemento del documento che veicola una sintesi del contenuto. La modellazione lo definisce come elemento racchiuso nel protocollo"@it,
+        "The class represents the element of the document that conveys a summary of the content"@en .
+
+DETPENS:Premessa a owl:Class ;
+    rdfs:label "Preamble"@en,
+        "Premessa"@it ;
+    rdfs:comment "La classe rappresenta la partizione del testo del documento preposta a: contenere il preambolo, citare il contesto dal quale l'atto è generato, citare leggi o norme di riferimento o la descrizione dei fatti cui il documento si riferisce. Per la definzione della semantica della classe la modellazione si è orientata verso l'adozione del significato che tale elemento assume in ambito diplomatistico"@it,
+        "The class represents the partition of the document text intended to: contain the preamble, cite the context from which the act is generated, cite reference laws or standards or the description of the facts to which the document refers"@en .
+
+DETPENS:Protocollo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:dataEmissioneDocumento ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:luogoEmissioneDelDocumento ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:protocolloCompostoDa ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Header"@en,
+        "Protocollo"@it ;
+    rdfs:comment "La classe rappresenta la partizione interna di un documento nella quale vengono presentati alcuni elementi del documento come l'autore, il destinatario, l'oggetto, la data cronica  e topica di formazione del documento. Per la definzione della semantica della classe la modellazione si è orientata verso l'adozione del significato che tali elementi assumono nella disciplina diplomatica "@it,
+        "The class represents the internal partition of a document in which some elements of the document are presented such as the author, the recipient, the subject, the chronic and topical date of formation of the document"@en .
+
+DETPENS:ResponsabileDelDocumento a owl:Class ;
+    rdfs:label "Document Responsible"@en,
+        "Responsabile del documento"@it ;
+    rdfs:subClassOf foaf:Person,
+        INPSCore:RuoloDiPersonaViva ;
+    rdfs:comment "La classe rappresenta la persona fisica responsabile del contenuto del documento"@it,
+        "The class represents an individual responsible for the content of the document"@en .
+
+DETPENS:Sottoscrizione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:apponeSottoscrizione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Signature"@en,
+        "Sottoscrizione"@it ;
+    rdfs:comment "La classe rappresenta l'insieme dei segni (nome e cognome) che indicano la persona fisica responsabile dell'articolazione del contenuto del documento e della corrispondenza del documento all'atto. Può comprendere la firma"@it,
+        "The class represents the set of signs (name and surname) that indicate the physical person responsible for the articulation of the content of the document and the correspondence of the document to the act"@en .
+
+DETPENS:Testo a owl:Class ;
+    rdfs:label "Testo"@it,
+        "Text"@en ;
+    rdfs:comment "La classe rappresenta la partizione interna di un documento utile ad esprimere la decisione adottata dall'autore del documento. Per la definzione della semantica della classe la modellazione si è orientata verso l'adozione del significato che tale elemento assume nella disciplina diplomatica "@it,
+        "The class represents the internal partition of a record useful for expressing the decision adopted by the author of the document"@en .
+
+DETPENS:TipologiaSistemaDiCalcolo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:haTipologiaSistemaDiCalcolo ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Calculation system type"@en,
+        "Tipologia sistema di calcolo"@it ;
+    rdfs:comment "La classe esprime la lista di valori che descrive il sistema utilizzato per il calcolo degli importi spettanti della pensione: Il sistema di calcolo può essere di tipo retributivo, contributivo o misto"@it,
+        "The class expresses the list of values ​​that describes the system used to calculate the pension amounts due: The calculation system can be of a retributive, contributory or mixed type"@en .
+
+foaf:Document a owl:Class .
+
+foaf:Person a owl:Class .
+
+INPSCore:RuoloDiPersonaViva a owl:Class .
+
+INPSCore:SedeINPS a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:accoglieDomandaDiPensione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:emetteDeterminaDiPensione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:determinaGestitaDaSedeINPS ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSPensions:GestionePensionistica a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSPensions:haGestionePensionistica ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSPensions:ProdottoPensionistico a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:dataDecorrenzePensione ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty DETPENS:numeroPensione ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSPensions:haTipoDiPensione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:certificaDirittoAllaPensione ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:sintetizzaDatiRelativiAPensione ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSPensions:TipoDiPensione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSPensions:haTipoDiPensione ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSRL:Delegato a owl:Class .
+
+rico:Activity a owl:Class .
+
+rico:Agent a owl:Class .
+
+rico:Record a owl:Class .
+
+TI:TimeInterval a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf TI:atTime ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+[] a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty DETPENS:inviaDomandaDiPensione ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:unionOf (
+            DETPENS:Instante
+            INPSRL:Delegato ) .
+
+[] a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:certificaDatiRelativiA ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:unionOf (
+            DETPENS:ImportoPensione
+            DETPENS:LiquidazionePensione ) .
+
+[] a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf DETPENS:protocolloCompostoDa ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:unionOf (
+            DETPENS:Autore
+            DETPENS:Destinatario
+            DETPENS:Oggetto ) .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+<https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensionProspectusLavoratore/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensionProspectusLavoratore/latest/pensionProspectusLavoratore.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell'istituto."@it,
+        "This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the pension determination according to the institute's criteria."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - determina di pensione"@it,
+        "N-TRIPLES distribution of the INPS ontology - pension prospectus"@en .
+
+<https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensionProspectusLavoratore/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensionProspectusLavoratore/latest/pensionProspectusLavoratore.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell'istituto."@it,
+        "This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the pension determination according to the institute's criteria."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - determina di pensione"@it,
+        "RDF/Turtle distribution of the INPS ontology - pension prospectus"@en .
+
+<https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensionProspectusLavoratore/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensionProspectusLavoratore/latest/pensionProspectusLavoratore.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell'istituto."@it,
+        "This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the pension determination according to the institute's criteria."@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - determina di pensione"@it,
+        "RDF/XML distribution of the INPS ontology - pension prospectus"@en .
+
+### Axioms
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            DETPENS:Autore
+            DETPENS:Destinatario
+            DETPENS:Oggetto ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            DETPENS:Protocollo
+            DETPENS:Sottoscrizione
+            DETPENS:Testo ) .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

@@ -1,0 +1,179 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/CodiceCausaConguaglio>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement adjustment reason codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici causa della sezione redditi conguagliati della Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato dei codici causa della sezione redditi conguagliati alla Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the defined set of the adjustment reason codes with regards to the CU Statement"@en,
+        "Vocabolario controllato dei codici causa della sezione redditi conguagliati della Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/CCC_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CCC_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CCC_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "codice causa della certificazione unica"@it,
+        "CU statement adjustment reason codes"@en,
+        "inps"@en,
+        "inps"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement adjustment reason codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici causa della sezione redditi conguagliati della Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa" ;
+    dct:issued "2024-10-22"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-22"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement adjustment reason codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici causa della sezione redditi conguagliati della Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "codice_causa" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/4>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/5>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/6>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/8>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/9>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/11> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/1> a skos:Concept ;
+    rdfs:label "Operazioni straordinarie con passaggio di dipendenti senza interruzione del rapporto di lavoro con estinzione del precedente sostituto"@it ;
+    skos:prefLabel "Operazioni straordinarie con passaggio di dipendenti senza interruzione del rapporto di lavoro con estinzione del precedente sostituto"@it ;
+    dct:identifier "1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa> ;
+    skos:notation "1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/2> a skos:Concept ;
+    rdfs:label "Successioni con prosecuzione dell’attività da parte dell’erede"@it ;
+    skos:prefLabel "Successioni con prosecuzione dell’attività da parte dell’erede"@it ;
+    dct:identifier "2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa> ;
+    skos:notation "2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/3> a skos:Concept ;
+    rdfs:label "Indennità erogate dall’INAIL"@it ;
+    skos:prefLabel "Indennità erogate dall’INAIL"@it ;
+    dct:identifier "3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa> ;
+    skos:notation "3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/4> a skos:Concept ;
+    rdfs:label "Indennità erogate dall’INPS"@it ;
+    skos:prefLabel "Indennità erogate dall’INPS"@it ;
+    dct:identifier "4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa> ;
+    skos:notation "4"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/5> a skos:Concept ;
+    rdfs:label "Redditi corrisposti da altri soggetti e comunicati dall’erogante al sostituto d’imposta (ad esempio, compensi in natura)"@it ;
+    skos:prefLabel "Redditi corrisposti da altri soggetti e comunicati dall’erogante al sostituto d’imposta (ad esempio, compensi in natura)"@it ;
+    dct:identifier "5"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa> ;
+    skos:notation "5"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/6> a skos:Concept ;
+    rdfs:label "Redditi corrisposti da altri soggetti e dei quali il dipendente ha chiesto di tenere conto nelle operazioni di conguaglio"@it ;
+    skos:prefLabel "Redditi corrisposti da altri soggetti e dei quali il dipendente ha chiesto di tenere conto nelle operazioni di conguaglio"@it ;
+    dct:identifier "6"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa> ;
+    skos:notation "6"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/8> a skos:Concept ;
+    rdfs:label "Compensi non aventi carattere fisso e continuativo conguagliati a seguito di comunicazione affettuata in base a quanto stabilito dal comma 2 articolo 29 del D.P.R. n. 600/1973"@it ;
+    skos:prefLabel "Compensi non aventi carattere fisso e continuativo conguagliati a seguito di comunicazione affettuata in base a quanto stabilito dal comma 2 articolo 29 del D.P.R. n. 600/1973"@it ;
+    dct:identifier "8"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa> ;
+    skos:notation "8"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/9> a skos:Concept ;
+    rdfs:label "Operazioni straordinarie con passaggio di dipendenti senza interruzione del rapporto di lavoro senza estinzione del precedente sostituto"@it ;
+    skos:prefLabel "Operazioni straordinarie con passaggio di dipendenti senza interruzione del rapporto di lavoro senza estinzione del precedente sostituto"@it ;
+    dct:identifier "9"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa> ;
+    skos:notation "9"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa/11> a skos:Concept ;
+    rdfs:label "Altro"@it ;
+    skos:prefLabel "Altro"@it ;
+    dct:identifier "11"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_causa> ;
+    skos:notation "11"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CCC_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_causa/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_causa/latest/codice_causa.csv> ;
+    dct:description "CU statement adjustment reason codes controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici causa della sezione redditi conguagliati della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement adjustment reason codes controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato dei codici causa della sezione redditi conguagliati della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CCC_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_causa/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_causa/latest/codice_causa.json> ;
+    dct:description "CU statement adjustment reason codes controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici causa della sezione redditi conguagliati della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement adjustment reason codes controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato dei codici causa della sezione redditi conguagliati della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CCC_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_causa/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_causa/latest/codice_causa.ttl> ;
+    dct:description "CU statement adjustment reason codes controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato dei codici causa della sezione redditi conguagliati della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU Statement adjustment reason codes controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato dei codici causa della sezione redditi conguagliati della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

@@ -1,0 +1,61 @@
+openapi: 3.0.3
+info:
+  title: Schema della Determina di Pensione
+  version: 202410.28.00
+  x-summary: Schema della Determina di Pensione compatibile con l'Ontologia INPS relativa alla Determina di Pensione
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+    ProdottoPensionistico:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/prodotto-pensionistico/latest/prodotto-pensionistico.oas3.yaml#/components/schemas/ProdottoPensionistico"
+
+    IdDeterminaDiPensione:
+      type: string
+      description: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo
+      example: '0054866'
+      maxLength: 50
+      minLength: 1
+
+    DeterminaDiPensione:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/"
+        data_emissione_determina_di_pensione: dataEmissioneDeterminaDiPensione
+        certifica_diritto_alla_pensione:
+          "@id": certificaDirittoAllaPensione
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione
+      required:
+      - codice_determina_di_pensione
+      - data_emissione_determina_di_pensione
+      properties:
+        codice_determina_di_pensione:
+          $ref: "#/components/schemas/IdDeterminaDiPensione"
+        data_emissione_determina_di_pensione:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        certifica_diritto_alla_pensione:
+          type: object
+          items:
+            $ref: "#/components/schemas/ProdottoPensionistico"
+      example:
+        codice_determina_di_pensione:
+          $ref: "#/components/schemas/IdDeterminaDiPensione/example"
+        data_emissione_determina_di_pensione: "2024-05-12"
+        certifica_diritto_alla_pensione:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/prodotto-pensionistico/latest/prodotto-pensionistico.oas3.yaml#/components/schemas/ProdottoPensionistico/example"

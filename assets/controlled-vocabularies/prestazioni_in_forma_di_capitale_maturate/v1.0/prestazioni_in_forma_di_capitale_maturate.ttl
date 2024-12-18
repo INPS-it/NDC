@@ -1,0 +1,179 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/PrestazioniInFormaDiCapitaleMaturateErogateDaFormePensionistiche>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement alternative forms of credited pension contributions Controlled Vocabulary"@en,
+        "Vocabolario controllato delle prestazioni in forma di capitale maturate al 31/12/2020 erogate da forme pensionistiche della Certificazione Unica della Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato delle prestazioni in forma di capitale maturate al 31/12/2020 erogate da forme pensionistiche della Certificazione Unicad ella Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the given set of the alternative forms of credited pension contributions as listed in the CU Statement"@en,
+        "Vocabolario controllato delle prestazioni in forma di capitale maturate al 31/12/2020 erogate da forme pensionistiche della Certificazione Unica della Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/PIFDCMEDFP_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/PIFDCMEDFP_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/PIFDCMEDFP_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "CU statement alternative forms of credited pension contributions"@en,
+        "inps"@en,
+        "inps"@it,
+        "prestazioni in forma di capitale maturate erogate da forme pensionistiche della certificazione unica"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement alternative forms of credited pension contributions Controlled Vocabulary"@en,
+        "Vocabolario controllato delle prestazioni in forma di capitale maturate al 31/12/2020 erogate da forme pensionistiche della Certificazione Unica della Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche" ;
+    dct:issued "2024-10-22"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-22"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement alternative forms of credited pension contributions Controlled Vocabulary"@en,
+        "Vocabolario controllato delle prestazioni in forma di capitale maturate al 31/12/2020 erogate da forme pensionistiche della Certificazione Unica della Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/A>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/B>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/C>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/D>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/E>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/I>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/M> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/1> a skos:Concept ;
+    rdfs:label "in caso di erogazione definitiva di capitali a soggetti iscritti a forme pensionistiche complementari alla data del 28 aprile 1993 (c.d. “vecchi iscritti a vecchi fondi”) tassata con l’aliquota del TFR;"@it ;
+    skos:prefLabel "in caso di erogazione definitiva di capitali a soggetti iscritti a forme pensionistiche complementari alla data del 28 aprile 1993 (c.d. “vecchi iscritti a vecchi fondi”) tassata con l’aliquota del TFR;"@it ;
+    dct:identifier "1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche> ;
+    skos:notation "1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/2> a skos:Concept ;
+    rdfs:label "in caso di erogazioni di capitali a soggetti “nuovi iscritti”"@it ;
+    skos:prefLabel "in caso di erogazioni di capitali a soggetti “nuovi iscritti”"@it ;
+    dct:identifier "2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche> ;
+    skos:notation "2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/A> a skos:Concept ;
+    rdfs:label "in caso di erogazione definiva (comprese le tipologie di riscatto esercitate ai sensi dell’art. 14 del D. Lgs. 252 del 5 dicembre 2005, laddove la causa del riscatto sia riconducibile al pensionamento dell’iscritto o alla cessazione del rapporto di lavoro per mobilità o altre cause non dipendenti dalla volontà delle parti);"@it ;
+    skos:prefLabel "in caso di erogazione definiva (comprese le tipologie di riscatto esercitate ai sensi dell’art. 14 del D. Lgs. 252 del 5 dicembre 2005, laddove la causa del riscatto sia riconducibile al pensionamento dell’iscritto o alla cessazione del rapporto di lavoro per mobilità o altre cause non dipendenti dalla volontà delle parti);"@it ;
+    dct:identifier "A"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche> ;
+    skos:notation "A"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/B> a skos:Concept ;
+    rdfs:label "in caso di anticipazioni;"@it ;
+    skos:prefLabel "in caso di anticipazioni;"@it ;
+    dct:identifier "B"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche> ;
+    skos:notation "B"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/C> a skos:Concept ;
+    rdfs:label "in caso di riscatto esercitato ai sensi dell’art. 14 del D. Lgs. 252 del 5 dicembre 2005, che non dipenda dal pensionamento dell’iscritto o dalla cessazione del rapporto di lavoro per mobilità o altre cause non riconducibili alla volontà delle parti (c.d. riscatto volontario secondo la normativa previgente al D. Lgs. 252 del 5 dicembre 2005);"@it ;
+    skos:prefLabel "in caso di riscatto esercitato ai sensi dell’art. 14 del D. Lgs. 252 del 5 dicembre 2005, che non dipenda dal pensionamento dell’iscritto o dalla cessazione del rapporto di lavoro per mobilità o altre cause non riconducibili alla volontà delle parti (c.d. riscatto volontario secondo la normativa previgente al D. Lgs. 252 del 5 dicembre 2005);"@it ;
+    dct:identifier "C"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche> ;
+    skos:notation "C"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/D> a skos:Concept ;
+    rdfs:label "in caso di erogazione definitiva a vecchi iscritti a vecchi fondi in presenza di TFR interamente destinato al fondo pensione;"@it ;
+    skos:prefLabel "in caso di erogazione definitiva a vecchi iscritti a vecchi fondi in presenza di TFR interamente destinato al fondo pensione;"@it ;
+    dct:identifier "D"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche> ;
+    skos:notation "D"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/E> a skos:Concept ;
+    rdfs:label "in caso di erogazione parziale a vecchi iscritti a vecchi fondi in presenza di TFR interamente destinato al fondo pensione;"@it ;
+    skos:prefLabel "in caso di erogazione parziale a vecchi iscritti a vecchi fondi in presenza di TFR interamente destinato al fondo pensione;"@it ;
+    dct:identifier "E"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche> ;
+    skos:notation "E"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/I> a skos:Concept ;
+    rdfs:label "in caso di prestazioni integrative a “vecchi iscritti a vecchi fondi” erogate da aziende di credito in crisi (Circ. n. 78/2001). In tal caso la prestazione integrativa maturata dall’1/1/2001 sarà assoggettata al regime tributario vigente al 31/12/2000 con conseguente applicazione dell’aliquota del TFR;"@it ;
+    skos:prefLabel "in caso di prestazioni integrative a “vecchi iscritti a vecchi fondi” erogate da aziende di credito in crisi (Circ. n. 78/2001). In tal caso la prestazione integrativa maturata dall’1/1/2001 sarà assoggettata al regime tributario vigente al 31/12/2000 con conseguente applicazione dell’aliquota del TFR;"@it ;
+    dct:identifier "I"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche> ;
+    skos:notation "I"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/M> a skos:Concept ;
+    rdfs:label "in caso di capitalizzazione di pensioni erogate a “vecchi iscritti a vecchi fondi”, non connesse alla cessazione del rapporto di lavoro (Ris. n. 30/2002). In tal caso sulla prestazione maturata anteriormente al 2001 non si applica l’aliquota del TFR."@it ;
+    skos:prefLabel "in caso di capitalizzazione di pensioni erogate a “vecchi iscritti a vecchi fondi”, non connesse alla cessazione del rapporto di lavoro (Ris. n. 30/2002). In tal caso sulla prestazione maturata anteriormente al 2001 non si applica l’aliquota del TFR."@it ;
+    dct:identifier "M"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche> ;
+    skos:notation "M"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/PIFDCMEDFP_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/latest/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche.csv> ;
+    dct:description "CU statement alternative forms of credited pension contributions controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato delle prestazioni in forma di capitale maturate al 31/12/2020 erogate da forme pensionistiche della Certificazione Unica della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement alternative forms of credited pension contributions controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato delle prestazioni in forma di capitale maturate al 31/12/2020 erogate da forme pensionistiche della Certificazione Unica della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/PIFDCMEDFP_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/latest/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche.json> ;
+    dct:description "CU statement alternative forms of credited pension contributions controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato delle prestazioni in forma di capitale maturate al 31/12/2020 erogate da forme pensionistiche della Certificazione Unica della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement alternative forms of credited pension contributions controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato delle prestazioni in forma di capitale maturate al 31/12/2020 erogate da forme pensionistiche della Certificazione Unica della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/PIFDCMEDFP_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche/latest/prestazioni_in_forma_di_capitale_maturate_erogate_da_forme_pensionistiche.ttl> ;
+    dct:description "CU statement alternative forms of credited pension contributions controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato delle prestazioni in forma di capitale maturate al 31/12/2020 erogate da forme pensionistiche della Certificazione Unica della Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU Statement alternative forms of credited pension contributions controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato delle prestazioni in forma di capitale maturate al 31/12/2020 erogate da forme pensionistiche della Certificazione Unica della Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

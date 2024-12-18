@@ -1,0 +1,598 @@
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
+@prefix CLV: <https://w3id.org/italia/onto/CLV/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPV: <https://w3id.org/italia/onto/CPV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSSafety: <https://w3id.org/italia/social-security/onto/social-safety-net/> .
+@prefix INPSSP: <https://w3id.org/italia/social-security/onto/INPSServicePortal/> .
+@prefix INPSTFP: <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> .
+@prefix L0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+INPSTFP: a owl:Ontology ;
+    owl:versionIRI INPSTFP:1.0 ;
+    owl:imports CLV:,
+        COV:,
+        CPV:,
+        L0:,
+        RO: ;
+    rdfs:label "Ontologia Cassetto Previdenziale lavoratore agricolo di INPS"@it,
+        "Sole Trade Farmer Portal INPS Ontology"@en ;
+    rdfs:comment "Ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del lavoratore agricolo secondi i criteri dell'istituto."@it,
+        "This INPS ontology describes the main entities and proprieties of the Sole Trade Farmer Portal according to the INPS agency."@en ;
+    owl:versionInfo "1.0 - Modificata il 29 Ottobre 2024"@it,
+        "1.0 - Modified on 29 October 2024"@en ;
+    rdfs:isDefinedBy INPSTFP: ;
+    adms:acronym "inps" ;
+    adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+    adms:hasFormalityLevel adms:Formal ;
+    adms:hasKeyClass INPSTFP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo,
+        INPSTFP:DelegaRilasciataLavoratoreAgricoloAutonomo,
+        INPSTFP:DelegatoLavoratoreAgricoloAutonomo ;
+    adms:hasOntologyLanguage adms:OWL ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> ;
+    adms:hasTask adms:AnnotationTask,
+        adms:QueryFormulationTask,
+        adms:SearchTask ;
+    adms:last INPSTFP:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/"^^xsd:anyURI ;
+    adms:prefix "INPSTFP" ;
+    adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+    adms:status "catalogued",
+        "published" ;
+    adms:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    adms:type adms:ServiceOnytology ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:keyword "Cassetto Previdenziale lavoratore agricolo"@it,
+        "Sole Trade Farmer Portal"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del lavoratore agricolo secondi i criteri dell'istituto."@it,
+        "This INPS ontology describes the main entities and proprieties of the Sole Trade Farmer Portal according to the INPS agency."@en ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal" ;
+    dct:issued "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "Ontologia Cassetto Previdenziale lavoratore agricolo di INPS "@it,
+        "Sole Trade Farmer Portal INPS Ontology"@en .
+
+### Object Properties
+
+INPSSP:consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo a owl:ObjectProperty ;
+    rdfs:domain INPSSP:UtenteServizioAgricoltoreAutonomo ;
+    rdfs:range INPSTFP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo .
+
+INPSTFP:consenteConsultazioneDi a owl:ObjectProperty ;
+    rdfs:label "consente la consultazione di"@it,
+        "enables the consultation of"@en ;
+    rdfs:domain INPSSP:PosizioneAssicurativaLavoratoreAgricoloAutonomo ;
+    rdfs:range INPSTFP:VersamentoContributivoLavoratoreAgricoloAutonomo ;
+    rdfs:comment "La object property collega le istanze della classe Posizione assicurativa del lavoratore agricolo autonomo con le istanze della classe Versamento contributivo, ad indicare che i dati relativi ai versament contributivi del lavoratore agricolo autonomo possono essere consultati tramite l'accesso alla funzione Posizione assicurativa del Cassetto Previcenziale"@it,
+        "The object property connects instances of the class 'Insurance Position of the Self-Employed Agricultural Worker' with instances of the class 'Contribution Payment"@en .
+
+INPSTFP:daAccessoAllaVisualizzazioneDi a owl:ObjectProperty ;
+    rdfs:label "da accesso alla visualizzazione di"@it,
+        "provides access to the viewing of"@en ;
+    rdfs:domain INPSTFP:VersamentoContributivoLavoratoreAgricoloAutonomo ;
+    rdfs:range INPSSafety:ContributoPrevidenziale ;
+    rdfs:comment "La object property esprime la possibilità di accesso alla visualizzazione del dettaglio dei contributi previdenziali tramite la funzione del cassetto previdenziale dedicata al versamento contributivo del lavoratore agricolo autonomo"@it,
+        "La object property esprime la possibilitÃ  di accesso alla visualizzazione del dettaglio dei contributi previdenziali tramite la funzione del cassetto previdenziale dedicata al versamento contributivo del lavoratore agricolo autonomo"@it,
+        "The object property expresses the possibility of accessing the details of social security contributions through the function of the social security service portal dedicated to the contribution payments of the self-employed agricultural worker"@en .
+
+INPSTFP:haCategoria a owl:ObjectProperty ;
+    rdfs:label "ha categoria"@it,
+        "has category"@en,
+        "has category."@en ;
+    rdfs:domain INPSTFP:AziendaAgricola ;
+    rdfs:range INPSTFP:CategoriaAziendaAgricola ;
+    rdfs:comment "La object property collega le istanze della classe azienda agricola alla propria categoria di riferimento"@it,
+        "The object property connects instances of the class 'Agricultural Business' to their respective category"@en .
+
+INPSTFP:haTipologiaContributo a owl:ObjectProperty ;
+    rdfs:label "ha tipologia di contributo"@it,
+        "has type of contribution"@en ;
+    rdfs:domain INPSTFP:ContributoVersatoLavoratoreAgricoloAutonomo ;
+    rdfs:range INPSTFP:TipologiaContributoLavoratoreAgricoloAutonomo ;
+    rdfs:comment "The object property connects the contribution to its specific type"@en ;
+    rdfs:isDefinedBy "la object property connette il contributo alla propria tipologia specifica"@it .
+
+### Data Properties
+
+INPSTFP:codiceAziendaAgricola a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice azienda"@it,
+        "company code"@en ;
+    rdfs:domain INPSTFP:AziendaAgricola ;
+    rdfs:comment "L'attributo riporta il codice identificativo dell'azienda agricola"@it,
+        "The attribute provides the identifying code of the agricultural business"@en .
+
+INPSTFP:codiceCategoriaAziendaAgricola a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "category code for agricultural business."@en,
+        "codice categoria azienda agricola"@it ;
+    rdfs:domain INPSTFP:CategoriaAziendaAgricola ;
+    rdfs:comment "L'attributo esprime in forma codificata la categora dell'azienda agricola"@it,
+        "The attribute expresses the category of the agricultural business in coded form"@en .
+
+INPSTFP:codiceFiscaleAziendaAgricola a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice fiscale azienda agricola"@it,
+        "tax code for agricultural business"@en ;
+    rdfs:domain INPSTFP:AziendaAgricola ;
+    rdfs:comment "L'attributo registra il codice fiscale dell'azienda agricola "@it,
+        "The attribute records the tax code of the agricultural business"@en .
+
+INPSTFP:codiceFiscaleDestinatario a owl:DatatypeProperty ;
+    rdfs:domain INPSTFP:CartellaEsattoriale .
+
+INPSTFP:codiceINPS a owl:DatatypeProperty ;
+    rdfs:label "codice sede INPS"@it,
+        "INPS office code"@en ;
+    rdfs:domain INPSTFP:VersamentoContributivoLavoratoreAgricoloAutonomo ;
+    rdfs:comment "L'attributo contiene il codice della sede INPS di riferimento per il versamento contributivo"@it,
+        "The attribute contains the code of the relevant INPS office for contribution payments"@en .
+
+INPSTFP:cognomeDestinatario a owl:DatatypeProperty ;
+    rdfs:domain INPSTFP:CartellaEsattoriale .
+
+INPSTFP:denominazioneAziendaAgricola a owl:DatatypeProperty ;
+    rdfs:label "denominazione azienda agricola"@it,
+        "name of the farm"@en ;
+    rdfs:domain INPSTFP:AziendaAgricola ;
+    rdfs:comment "L'attributo contiene il nome dell'azienda agricola"@it,
+        "The attribute contains the name of the farm"@en .
+
+INPSTFP:importo a owl:DatatypeProperty ;
+    rdfs:label "amount paid"@en,
+        "importo versato"@it ;
+    rdfs:domain INPSTFP:VersamentoContributivoLavoratoreAgricoloAutonomo ;
+    rdfs:comment "L'attributo indica l'importo contributivo versato"@it,
+        "The attribute indicates the amount of contributions paid"@en .
+
+INPSTFP:importoContributoCorrente a owl:DatatypeProperty ;
+    rdfs:label "current contribution amount"@en,
+        "importo contributo corrente"@it ;
+    rdfs:domain INPSTFP:ContributoVersatoLavoratoreAgricoloAutonomo ;
+    rdfs:comment "L'attributo indica l'importo del contributo corrente"@it,
+        "The attribute indicates the amount of the current contribution"@en .
+
+INPSTFP:importoContributoPregresso a owl:DatatypeProperty ;
+    rdfs:label "amount of prior contributions"@en,
+        "importo contributo pregresso"@it ;
+    rdfs:domain INPSTFP:ContributoVersatoLavoratoreAgricoloAutonomo ;
+    rdfs:comment "L'attributo indica l'importo del versamento contributivo pregresso"@it,
+        "The attribute indicates the amount of prior contribution payments"@en .
+
+INPSTFP:importoTotaleSommeDovute a owl:DatatypeProperty ;
+    rdfs:domain INPSTFP:CartellaEsattoriale .
+
+INPSTFP:indirizzoDestinatario a owl:DatatypeProperty ;
+    rdfs:domain INPSTFP:CartellaEsattoriale .
+
+INPSTFP:nomeDestinatario a owl:DatatypeProperty ;
+    rdfs:domain INPSTFP:CartellaEsattoriale .
+
+INPSTFP:nomeTipologiaContributo a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "name of the type of contribution"@en,
+        "nome della tipologia del contributo"@it ;
+    rdfs:domain INPSTFP:TipologiaContributoLavoratoreAgricoloAutonomo ;
+    rdfs:comment "L'attributo contiene l'espressione utile a identificare e descrivere la tipologia di contributo "@it,
+        "The attribute contains the expression used to identify and describe the type of contribution"@en .
+
+INPSTFP:numeroIdentificativoDellaCartella a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain INPSTFP:CartellaEsattoriale .
+
+INPSTFP:numeroRata a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "installment number"@en,
+        "numero rata"@it ;
+    rdfs:domain INPSTFP:VersamentoContributivoLavoratoreAgricoloAutonomo ;
+    rdfs:comment "L'attributo consente di indicare il numero della rata, tra le quattro previste annulamente per il versamento dei contributi tramite F24"@it,
+        "The attribute allows indicating the installment number among the four scheduled annually for contribution payments via F24 model"@en .
+
+INPSTFP:periodoDiRiferimento a owl:DatatypeProperty ;
+    rdfs:label "periodo di riferimento"@it,
+        "reference period"@en ;
+    rdfs:domain INPSTFP:VersamentoContributivoLavoratoreAgricoloAutonomo ;
+    rdfs:comment "L'attributo indica il periodo fiscale di riferimento per il versamento contributivo descritto nella pagina informativa"@it,
+        "The attribute indicates the tax reference period for the contribution payment described on the information page"@en .
+
+### Classes
+
+INPSSafety:ContributoPrevidenziale a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSTFP:daAccessoAllaVisualizzazioneDi ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSSP:DelegaRilasciataLavoratoreAgricoloAutonomo a owl:Class .
+
+INPSSP:DelegatoLavoratoreAgricoloAutonomo a owl:Class ;
+    owl:disjointWith INPSTFP:LavoratoreAgricoloAutonomo .
+
+INPSSP:DomandaTelematicaLavoratoreAgricoloAutonomo a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSTFP:DomandaDiDilazione
+                    INPSTFP:DomandaDiEsonero
+                    INPSTFP:DomandaDiRegolarizzazioneSpontanea
+                    INPSTFP:DomandaDiRiemissioneF24
+                    INPSTFP:DomandaDiSospensioneLavoratoreAgricoloAutonomo
+                    INPSTFP:DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo
+                    INPSTFP:DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo ) ] .
+
+INPSSP:PosizioneAssicurativaLavoratoreAgricoloAutonomo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSTFP:consenteConsultazioneDi ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSSP:UtenteServizioAgricoltoreAutonomo a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSSP:DelegatoLavoratoreAgricoloAutonomo
+                    INPSTFP:LavoratoreAgricoloAutonomo ) ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSP:consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSTFP:AvvisoBonario a owl:Class ;
+    rdfs:label "Avviso bonario"@it,
+        "Payment reminder"@en ;
+    rdfs:comment "L'avviso bonario Ã¨' una comunicazione con la quale l' Agenzia delle Entrate informa il contribuente del controllo effettuato sulla sua dichiarazione dei redditi, evidenziando eventuali imposte e contributi che non risultano pagati. Nell'ontologia la classe descrive il servizio che consente di consultare la presenza di questa tipologia di avviso nel proprio cassetto previdenziale"@it,
+        "L'avviso bonario è' una comunicazione con la quale l' Agenzia delle Entrate informa il contribuente del controllo effettuato sulla sua dichiarazione dei redditi, evidenziando eventuali imposte e contributi che non risultano pagati. Nell'ontologia la classe descrive il servizio che consente di consultare la presenza di questa tipologia di avviso nel proprio cassetto previdenziale"@it,
+        "The payment reminder is a communication with which the Revenue Agency informs the taxpayer of the check carried out on his tax return, highlighting any taxes and contributions that have not been paid"@en .
+
+INPSTFP:AziendaAgricola a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSTFP:codiceAziendaAgricola ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:codiceFiscaleAziendaAgricola ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:denominazioneAziendaAgricola ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:haCategoria ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Azienda agricola"@it,
+        "Farm"@en ;
+    rdfs:comment "La classe rappresenta l'azienda agricola intesa come il complesso di beni organizzati dall'imprenditore agricolo per l'esercizio della sua attività."@it,
+        "La classe rappresenta l'azienda agricola intesa come il complesso di beni organizzati dall'imprenditore agricolo per l'esercizio della sua attivitÃ ."@it,
+        "The class represents the agricultural business understood as the complex of assets organized by the agricultural entrepreneur for the exercise of their activity"@en .
+
+INPSTFP:CartellaEsattoriale a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSTFP:codiceFiscaleDestinatario ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:cognomeDestinatario ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:importoTotaleSommeDovute ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:indirizzoDestinatario ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:nomeDestinatario ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:numeroIdentificativoDellaCartella ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Cartella esattoriale"@it,
+        "Tax bill"@en ;
+    rdfs:comment "La classe rappresenta la cartella esattoriale o cartella di pagamento. La cartella di pagamento Ã¨ La cartella di pagamento Ã¨ lâ€™atto che Agenzia delle entrate-Riscossione invia ai contribuenti al fine di recuperare i crediti vantati dagli enti impositori"@it,
+        "La classe rappresenta la cartella esattoriale o cartella di pagamento. La cartella di pagamento è La cartella di pagamento è l’atto che Agenzia delle entrate-Riscossione invia ai contribuenti al fine di recuperare i crediti vantati dagli enti impositori"@it,
+        "The class represents the tax bill or payment notice"@en .
+
+INPSTFP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSSP:DelegaRilasciataLavoratoreAgricoloAutonomo
+                    INPSSP:DomandaTelematicaLavoratoreAgricoloAutonomo
+                    INPSSP:PosizioneAssicurativaLavoratoreAgricoloAutonomo
+                    INPSTFP:AziendaAgricola
+                    INPSTFP:RecuperoCrediti ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSP:consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Cassetto previdenziale lavoratori agricoli autonomi"@it,
+        "Service portale of the self-employed agricultural worker"@en ;
+    rdfs:comment "Il servizio consente di visualizzare e verificare la posizione dell'azienda e di gestire le comunicaizoni con INPS"@it,
+        "The self-employed agricultural worker's social security drawer is a service that allows owners of agricultural businesses and their intermediaries to consult and verify the company's insurance position, access consultation and request submission services, and communicate with INPS"@en .
+
+INPSTFP:CategoriaAziendaAgricola a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSTFP:codiceCategoriaAziendaAgricola ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSTFP:haCategoria ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Agricultural business category"@en,
+        "Categoria azienda agricola"@it ;
+    rdfs:comment "La classe rappresenta l'insieme dei termini controllati che descrivono le possibili tipologie di aziende agricole"@it,
+        "The class represents the set of controlled terms that describe the possible types of agricultural businesses"@en .
+
+INPSTFP:Colono a owl:Class ;
+    rdfs:label "Colono"@it,
+        "Tenant farmer"@en ;
+    rdfs:comment "L'attività del colono si caratterizza per l'apporto parziale del lavoro nella coltivazione del fondo. La posizione asicurativa dei coloni si differenzia in base al numero delle giornate annue richiesta come fabbisogno lavorativo dal fondo e dagli animali: se le giornate richieste sono inferiori a 120 i coloni sono equiparati ai lavoratori dipendenti, se superiori si considerano lavoratori autonomi. La legge 203 del 1982 ha disposto la conversione dei contratti di mezzadria e colonia in contratti di affitto."@it,
+        "L'attivitÃ  del colono si caratterizza per l'apporto parziale del lavoro nella coltivazione del fondo. La posizione asicurativa dei coloni si differenzia in base al numero delle giornate annue richiesta come fabbisogno lavorativo dal fondo e dagli animali: se le giornate richieste sono inferiori a 120 i coloni sono equiparati ai lavoratori dipendenti, se superiori si considerano lavoratori autonomi. La legge 203 del 1982 ha disposto la conversione dei contratti di mezzadria e colonia in contratti di affitto."@it,
+        "The tenant farmer's activity is characterized by a partial contribution of labor in the cultivation of the land"@en .
+
+INPSTFP:ColtivatoreDiretto a owl:Class ;
+    rdfs:label "Coltivatore diretto"@it,
+        "Direct farmer"@en ;
+    rdfs:comment "Direct farmers are owners, usufructuaries, tenants, emphyteuts, shepherds, and assignors of land, as well as members of their respective families who are directly and regularly engaged in the cultivation of the land, livestock raising, and related activities"@en,
+        "I coltivatori diretti sono proprietari, usufruttuari, affittuari, enfiteuti, pastori e assegnatari di fondi, nonchÃ¨ appartanenti ai rispettivi nuclei familiari che, direttamente e abitualmente si dedicano alla coltivazione dei fondi, all'allevamento del bestiame e allo svolgimento delle attivitÃ  connesse. Per essere definito tale l'attivitÃ  svolta dal lavoratore agricolo deve avere le seguenti caratteristiche: essere svolta in modo prevalente ed esclusivo"@it,
+        "I coltivatori diretti sono proprietari, usufruttuari, affittuari, enfiteuti, pastori e assegnatari di fondi, nonchè appartanenti ai rispettivi nuclei familiari che, direttamente e abitualmente si dedicano alla coltivazione dei fondi, all'allevamento del bestiame e allo svolgimento delle attività connesse. Per essere definito tale l'attività svolta dal lavoratore agricolo deve avere le seguenti caratteristiche: essere svolta in modo prevalente ed esclusivo; può essere volta con parenti e affini entro il quarto grado; il fabbisogno aziendale non deve essere inferiore a 104 giornate all'anno e il terzo di tale fabbisogno deve essere garantito al nucleo familiare "@it .
+
+INPSTFP:ContributoDovutoLavoratoreAgricoloAutonomo a owl:Class ;
+    rdfs:label "Contributo dovuto lavoratore agricolo autonomo"@it,
+        "Required social security contribution"@en ;
+    owl:disjointWith INPSTFP:ContributoVersatoLavoratoreAgricoloAutonomo ;
+    rdfs:comment "La classe rappresenta lo spazio del casetto previdenziale dei lavoratori agricoli autonomi dedicato alla consultazione dei contributi dovuti dal lavoratore ai fini previdenziali e assistenziali"@it,
+        "The class represents the space of the social security service portal for self-employed agricultural workers dedicated to consulting the contributions owed by the worker for social security and welfare purposes"@en .
+
+INPSTFP:ContributoVersatoLavoratoreAgricoloAutonomo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSTFP:haTipologiaContributo ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:importoContributoCorrente ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:importoContributoPregresso ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Contributo versato lavoratore agricolo autonomo"@it,
+        "Social security contribution paid"@en ;
+    rdfs:comment "La classe rappresenta lo spazio del casetto previdenziale dei lavoratori agricoli autonomi dedicato alla consultazione dei contributi versati dal lavoratore"@it,
+        "The class represents the space of the social security service portal for self-employed agricultural workers dedicated to consulting the contributions paid by the worker"@en .
+
+INPSTFP:DomandaDiDilazione a owl:Class ;
+    rdfs:label "Domanda di dilazione"@it,
+        "Request for payment extension"@en ;
+    rdfs:comment "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di dilazione del pagamento del debito contributivo"@it,
+        "The class represents the section of services available in the social security service portal dedicated to consulting requests for deferral of payment of the contribution debt"@en .
+
+INPSTFP:DomandaDiEsonero a owl:Class ;
+    rdfs:label "Domanda di esonero"@it,
+        "Request for exemption from contribution payments"@en ;
+    rdfs:comment "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di esonero dal pagamento del debito contributivo"@it,
+        "The class represents the section of available services in the social security service portal dedicated to consulting requests for exemption from contribution debt payments"@en .
+
+INPSTFP:DomandaDiRegolarizzazioneSpontanea a owl:Class ;
+    rdfs:label "Domanda di regolarizzazione spontanea"@it,
+        "Request for spontaneous regularisation"@en ;
+    rdfs:comment "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di regolarizzazione spontanea"@it,
+        "The class represents the section of available services in the social security service portal dedicated to consulting requests for voluntary regularization"@en .
+
+INPSTFP:DomandaDiRiemissioneF24 a owl:Class ;
+    rdfs:label "Domanda di riemissione del modello F24"@it,
+        "Request for reissuance of F24 model"@en,
+        "Rrequest for reissuance of F24 model"@en ;
+    rdfs:comment "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di riemissione del modello F24"@it,
+        "The class represents the section of available services in the social security service portal dedicated to consulting requests for reissuance of the F24 form"@en .
+
+INPSTFP:DomandaDiSospensioneLavoratoreAgricoloAutonomo a owl:Class ;
+    rdfs:label "Domanda di sospensione lavoratore agricolo autonomo"@it,
+        "Request for suspension of self-employed agricultural worker"@en ;
+    rdfs:comment "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di sospensione del pagamento del debito contributivo"@it,
+        "The class represents the section of available services in the social security box dedicated to consulting requests for suspension of contribution debt payments"@en,
+        "The class represents the section of available services in the social security servce portal dedicated to consulting requests for suspension of contribution debt payments"@en .
+
+INPSTFP:DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo a owl:Class ;
+    rdfs:label "Domanda Riduzione Sanzione Civile Lavoratore Agricolo Autonomo"@it,
+        "Request for Reduction of Civil Penalty for Self-Employed Agricultural Worker"@en ;
+    rdfs:comment "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di delle sanzioni civili a carico del lavoratore agricolo autonomo"@it,
+        "The class represents the section of available services in the social security portal dedicated to consulting requests regarding civil penalties imposed on self-employed agricultural workers"@en .
+
+INPSTFP:DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo a owl:Class ;
+    rdfs:label "Domanda rimborso contributi non dovuti lavoratore agricolo autonomo"@it,
+        "Request for refund of undue contributions for self-employed agricultural worker"@en ;
+    rdfs:comment "La classe rappresenta la sezione dei servizi disponibili nel cassetto previdenziale dedicato alla consultazione delle domande di rimborso dei contributi non dovuti"@it,
+        "The class represents the section of available services in the social security portal dedicated to consulting requests for refunds of undue contributions"@en .
+
+INPSTFP:ImprenditoreAgricoloProfessionale a owl:Class ;
+    rdfs:label "Imprenditore agricolo professionale (IAP)"@it,
+        "Professional agricultural entrepreneur"@en ;
+    rdfs:comment "L'imprenditore agricolo professionale (IAP) Ã¨ colui il quale dedica alle attivitÃ  agricole (definite allrticolo 3215 del Codice Civile), direttamente o in qualitÃ  di socio di societÃ , almeno il 50 percento del prorpio tempo di lavoro complessivo e che ricavi dalle attivitÃ  medesime almeno il 50 percento del proprio reddito globale da lavoro. Per l'imprenditore che opera nelle zone svantaggiate le percentulai sono ridotte al 25 percento. L'imprenditore agricolo professionale deve possedere le conoscenze  e le competenze professionali ai sensi dell'articolo 5 del Regolamento CE n. 1257/1999. La figura Ã¨ introdotta e definita dal Decreto Legislativo 29 marzo 2004 n. 99. Nell'ontologia ache descrive il cassett previdenziale del lavoratore agricolo auotnomo la classe Ã¨ modellata come sottoclasse di Agricoltore Autonomo"@it,
+        "L'imprenditore agricolo professionale (IAP) è colui il quale dedica alle attività agricole (definite allrticolo 3215 del Codice Civile), direttamente o in qualità di socio di società, almeno il 50 percento del prorpio tempo di lavoro complessivo e che ricavi dalle attività medesime almeno il 50 percento del proprio reddito globale da lavoro. Per l'imprenditore che opera nelle zone svantaggiate le percentulai sono ridotte al 25 percento. L'imprenditore agricolo professionale deve possedere le conoscenze  e le competenze professionali ai sensi dell'articolo 5 del Regolamento CE n. 1257/1999. La figura è introdotta e definita dal Decreto Legislativo 29 marzo 2004 n. 99. Nell'ontologia ache descrive il cassett previdenziale del lavoratore agricolo auotnomo la classe è modellata come sottoclasse di Agricoltore Autonomo"@it,
+        "The professional agricultural entrepreneur (IAP) is someone who dedicates at least 50 percent of their total working time to agricultural activities, either directly or as a partner in a company."@en .
+
+INPSTFP:LavoratoreAgricoloAutonomo a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSTFP:Colono
+                    INPSTFP:ColtivatoreDiretto
+                    INPSTFP:ImprenditoreAgricoloProfessionale
+                    INPSTFP:Mezzadro ) ] ;
+    rdfs:label "Lavoratore agricolo autonomo"@it,
+        "Self-employed agricultural worker"@en ;
+    rdfs:comment "Il lavoratore agricolo autonomo Ã¨ l'imprenditore Ã¨ l'imprenditore agricolo che esercita un'attivitÃ  diretta alla coltivazione del fondo, alla silvicoltura, all'allevamento degli animali e attivitÃ  connesse, come indicato dall'articolo 1 del Decreto Legislativo n. 228/2001. Nel'ambito del lavoro autonomo di settore si distinguono le figure di Coltivatori diretti, Coloni, Mezzadri, Imprenditori agricoli professionali. Nell'ontologia descrittiva del cassetto previdenziale questa classe rappresenta l'insieme dei soggetti direttamente interessati dai servizi disponibili nel cassetto."@it,
+        "Il lavoratore agricolo autonomo è l'imprenditore è l'imprenditore agricolo che esercita un'attività diretta alla coltivazione del fondo, alla silvicoltura, all'allevamento degli animali e attività connesse, come indicato dall'articolo 1 del Decreto Legislativo n. 228/2001. Nel'ambito del lavoro autonomo di settore si distinguono le figure di Coltivatori diretti, Coloni, Mezzadri, Imprenditori agricoli professionali. Nell'ontologia descrittiva del cassetto previdenziale questa classe rappresenta l'insieme dei soggetti direttamente interessati dai servizi disponibili nel cassetto."@it,
+        "The self-employed agricultural worker is the agricultural entrepreneur who engages in activities related to land cultivation, forestry, livestock raising, and related activities"@en .
+
+INPSTFP:Mezzadro a owl:Class ;
+    rdfs:label "Mezzadro"@it,
+        "Sharecropper"@en ;
+    rdfs:comment "I mezzadri sono coloro che si associano al proprietario del fondo apportando all'impresa agricola soprattutto il lavoro personale e della famiglia. La famiglia deve stabilmente risiedere nel fondo"@it,
+        "Sharecroppers are those who partner with the landowner by contributing mainly their personal and family labor to the agricultural enterprise. The family must reside permanently on the land."@en .
+
+INPSTFP:RecuperoCrediti a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSTFP:AvvisoBonario
+                    INPSTFP:CartellaEsattoriale
+                    INPSTFP:SituazioneDebitoria ) ] ;
+    rdfs:label "Debt collection"@en,
+        "Recupero crediti"@it ;
+    rdfs:comment "La classe rappresenta la sezione del cassetto previdenziale dei lavoratori agricoli autonomi che consente l'accesso ai servizi di consultazione della posizione debitoria del lavoratore"@it,
+        "The class represents the section of the social security box for self-employed agricultural workers that provides access to services for consulting the worker's debt position"@en .
+
+INPSTFP:SituazioneDebitoria a owl:Class ;
+    rdfs:label "Debt status"@en,
+        "Situazione debitoria"@it ;
+    rdfs:comment "La funzione consente di visualizzare la situazione debitoria del lavoratore agricolo autonomo"@it,
+        "The function allows viewing the debt situation of the self-employed agricultural worker"@en .
+
+INPSTFP:TipologiaContributoLavoratoreAgricoloAutonomo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSTFP:nomeTipologiaContributo ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSTFP:haTipologiaContributo ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Tipologia contributo lavoratore agricolo autonomo"@it,
+        "Type of contribution for self-employed agricultural worker"@en ;
+    rdfs:comment "La classe rappresenta l'insieme delle voci controllate codificate per indicare il tipo di contributo previdenziale"@it,
+        "The class represents the set of controlled coded entries used to indicate the type of social security contribution"@en .
+
+INPSTFP:VersamentoContributivoLavoratoreAgricoloAutonomo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSTFP:codiceINPS ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:daAccessoAllaVisualizzazioneDi ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:importo ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:numeroRata ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSTFP:periodoDiRiferimento ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSTFP:consenteConsultazioneDi ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contribution payment"@en,
+        "Versamento contributivo lavoratore agricolo autonomo"@it ;
+    rdfs:comment "La classe rappresenta il servizio del cassetto previdenziale adibito alla consultazione dei contributi versati dal lavoratore agricolo autonomo"@it,
+        "The class represents the service of the social security portal dedicated to consulting the contributions paid by the self-employed agricultural worker"@en .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSSafety:ContributoPrevidenziale ;
+    owl:unionOf (
+            INPSTFP:ContributoDovutoLavoratoreAgricoloAutonomo
+            INPSTFP:ContributoVersatoLavoratoreAgricoloAutonomo ) .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/soleTradeFarmerPortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/soleTradeFarmerPortal/latest/soleTradeFarmerPortal.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del lavoratore agricolo secondi i criteri dell'istituto."@it,
+        "The Italian Sole Trade Farmer Portal INPS Ontology N-TRIPLES distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Cassetto Previdenziale lavoratore agricolo"@it,
+        "N-TRIPLES distribution of the INPS ontology - Sole Trade Farmer Portal"@en .
+
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/soleTradeFarmerPortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/soleTradeFarmerPortal/latest/soleTradeFarmerPortal.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del lavoratore agricolo secondi i criteri dell'istituto."@it,
+        "The Italian Sole Trade Farmer Portal INPS Ontology RDF/Turtle distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Cassetto Previdenziale lavoratore agricolo"@it,
+        "RDF/Turtle distribution of the INPS ontology - Sole Trade Farmer Portal"@en .
+
+<https://w3id.org/italia/social-security/data/soleTradeFarmerPortal/distribution/INPSTFP-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/soleTradeFarmerPortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/soleTradeFarmerPortal/latest/soleTradeFarmerPortal.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del lavoratore agricolo secondi i criteri dell'istituto."@it,
+        "The Italian Sole Trade Farmer Portal INPS Ontology RDF/XML"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Cassetto Previdenziale lavoratore agricolo"@it,
+        "RDF/XML distribution of the INPS ontology - Sole Trade Farmer Portal"@en .
+
+### Axioms
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSSP:DelegaRilasciataLavoratoreAgricoloAutonomo
+            INPSSP:DomandaTelematicaLavoratoreAgricoloAutonomo
+            INPSSP:PosizioneAssicurativaLavoratoreAgricoloAutonomo
+            INPSTFP:AziendaAgricola
+            INPSTFP:RecuperoCrediti ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSTFP:AvvisoBonario
+            INPSTFP:CartellaEsattoriale
+            INPSTFP:SituazioneDebitoria ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSTFP:Colono
+            INPSTFP:ColtivatoreDiretto
+            INPSTFP:ImprenditoreAgricoloProfessionale
+            INPSTFP:Mezzadro ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSTFP:DomandaDiDilazione
+            INPSTFP:DomandaDiEsonero
+            INPSTFP:DomandaDiRegolarizzazioneSpontanea
+            INPSTFP:DomandaDiRiemissioneF24
+            INPSTFP:DomandaDiSospensioneLavoratoreAgricoloAutonomo
+            INPSTFP:DomandaRiduzioneSanzioneCivileLavoratoreAgricoloAutonomo
+            INPSTFP:DomandaRimborsoContributiNonDovutiLavoratoreAgricoloAutonomo ) .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

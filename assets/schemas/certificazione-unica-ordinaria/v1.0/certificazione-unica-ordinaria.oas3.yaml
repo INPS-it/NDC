@@ -1,0 +1,213 @@
+openapi: 3.0.3
+info:
+  title: Schema della Certificazione Unica Ordinaria
+  version: 2024010.28.00
+  x-summary: Schema della Certificazione Unica Ordinaria compatibile con l'Ontologia INPS relativa alla Certificazione Unica.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+   https://w3id.org/italia/social-security/onto/uniqueCertification/CertificazioneUnicaOrdinaria
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdCertificazioneUnica:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/uniqueCertification/codiceIdentificativoCertificazioneUnica
+      description: https://w3id.org/italia/social-security/onto/uniqueCertification/codiceIdentificativoCertificazioneUnica
+      example: '74512369'
+      maxLength: 50
+      minLength: 1
+
+    CertificazioneUnicaOrdinaria:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/uniqueCertification/CertificazioneUnicaOrdinaria
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/uniqueCertification/"
+        data_di_presentazione_certificazione_unica: dataDiPresentazioneCertificazioneUnica
+        anno_di_riferimento_certificazione_unica: annoDiRiferimentoCertificazioneUnica
+        certificazione_unica_relativa_a_lavoratore:
+          "@id": certificazioneUnicaRelativaA
+        certificazione_unica_relativa_a_titolare_prestazione_inps:
+          "@id": certificazioneUnicaRelativaA
+        certificazione_unica_emessa_da_datore_di_lavoro:
+          "@id": certificazioneUnicaEmessaDa
+        certificazione_unica_emessa_da_sede_inps:
+          "@id": certificazioneUnicaEmessaDa
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/uniqueCertification/CertificazioneUnicaOrdinaria
+      required:
+      - codice_identificativo_certificazione_unica
+      - data_di_presentazione_certificazione_unica
+      - anno_di_riferimento_certificazione_unica
+      properties:
+        codice_identificativo_certificazione_unica:
+          $ref: "#/components/schemas/IdCertificazioneUnica"
+        data_di_presentazione_certificazione_unica:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        anno_di_riferimento_certificazione_unica:
+          type: number
+          format: double
+        certificazione_unica_relativa_a_lavoratore:
+          type: object
+          items:
+            $ref: "#/components/schemas/Lavoratore"
+        certificazione_unica_relativa_a_titolare_prestazione_inps:
+          type: object
+          items:
+            $ref: "#/components/schemas/TitolarePrestazioneINPS"
+        certificazione_unica_emessa_da_datore_di_lavoro:
+          type: object
+          items:
+            $ref: "#/components/schemas/DatoreDiLavoro"
+        certificazione_unica_emessa_da_sede_inps:
+          type: object
+          items:
+            $ref: "#/components/schemas/SedeINPS"
+      example:
+        codice_identificativo_certificazione_unica:
+           $ref: "#/components/schemas/IdCertificazioneUnica/example"
+        data_di_presentazione_certificazione_unica: '2024-06-25'
+        anno_di_riferimento_certificazione_unica: 2023
+        certificazione_unica_relativa_a_lavoratore:
+          $ref: "#/components/schemas/Lavoratore/example"
+        certificazione_unica_relativa_a_titolare_prestazione_inps:
+          $ref: "#/components/schemas/TitolarePrestazioneINPS/example"
+        certificazione_unica_emessa_da_datore_di_lavoro:
+          $ref: "#/components/schemas/DatoreDiLavoro/example"
+        certificazione_unica_emessa_da_sede_inps:
+          $ref: "#/components/schemas/SedeINPS/example"
+
+    Lavoratore:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/uniqueCertification/Lavoratore
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/uniqueCertification/"
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/uniqueCertification/Lavoratore
+      required:
+      - cf_lavoratore
+      - nome_lavoratore
+      - cognome_lavoratore
+      properties:
+        cf_lavoratore:
+          $ref: "#/components/schemas/Cf"
+        nome_lavoratore:
+          $ref: "#/components/schemas/Nome"
+        cognome_lavoratore:
+          $ref: "#/components/schemas/Cognome"
+      example:
+        cf_lavoratore:
+          $ref: "#/components/schemas/Cf/example"
+        nome_lavoratore:
+          $ref: "#/components/schemas/Nome/example"
+        cognome_lavoratore:
+          $ref: "#/components/schemas/Cognome/example"
+
+    TitolarePrestazioneINPS:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/uniqueCertification/TitolarePrestazioneINPS
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/uniqueCertification/"
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/uniqueCertification/TitolarePrestazioneINPS
+      required:
+      - cf_titolare_prestazione_inps
+      - nome_titolare_prestazione_inps
+      - cognome_titolare_prestazione_inps
+      properties:
+        cf_titolare_prestazione_inps:
+          $ref: "#/components/schemas/Cf"
+        nome_titolare_prestazione_inps:
+          $ref: "#/components/schemas/Nome"
+        cognome_titolare_prestazione_inps:
+          $ref: "#/components/schemas/Cognome"
+      example:
+        cf_titolare_prestazione_inps:
+          $ref: "#/components/schemas/Cf/example"
+        nome_titolare_prestazione_inps:
+          $ref: "#/components/schemas/Nome/example"
+        cognome_titolare_prestazione_inps:
+          $ref: "#/components/schemas/Cognome/example"
+
+    Cf:
+      type: string
+      maxLength: 20
+      x-refersTo: https://w3id.org/italia/onto/CPV/taxCode
+      example: 'RSSMRA65F63H501Y'
+
+    Nome:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/CPV/givenName
+      example: 'Mario'
+
+    Cognome:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/CPV/familyName
+      example: 'Rossi'
+
+    IdDatoreDiLavoro:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/social-security/onto/socialSafetyNet/matricolaINPS
+      example: '19237684'
+
+    DatoreDiLavoro:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/DatoreDiLavoro
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/pensions/DatoreDiLavoro
+      required:
+      - matricola_inps
+      properties:
+        matricola_inps:
+          $ref: "#/components/schemas/IdDatoreDiLavoro"
+      example:
+        matricola_inps:
+          $ref: "#/components/schemas/IdDatoreDiLavoro/example"
+
+    CodiceSedeINPS:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      description: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      example: '2548262'
+      maxLength: 50
+      minLength: 1
+
+    SedeINPS:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/core/"
+        denominazione_sede_inps: denominazioneSedeINPS
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      required:
+      - codice_sede_inps
+      - denominazione_sede_inps
+      properties:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS"
+        denominazione_sede_inps:
+          type: string
+          maxLength: 255
+      example:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS/example"
+        denominazione_sede_inps: "INPS Roma Montesacro"

@@ -1,0 +1,228 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/OnereDeducibile>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement deductible expenses Controlled Vocabulary"@en,
+        "Vocabolario controllato degli oneri deducibili associati alla Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato degli oneri deducibili associati alla Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the defined set of the deductible expenses in a CU Statement"@en,
+        "Vocabolario controllato degli oneri deducibili associati alla Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/OND_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/OND_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/OND_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "CU statement deductible expenses"@en,
+        "inps"@en,
+        "inps"@it,
+        "oneri deducibili della certificazione unica"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement deductible expenses Controlled Vocabulary"@en,
+        "Vocabolario controllato degli oneri deducibili associati alla Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili" ;
+    dct:issued "2024-10-24"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-24"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:relation <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_detraibili> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement deductible expenses Controlled Vocabulary"@en,
+        "Vocabolario controllato degli oneri deducibili associati alla Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "oneri_deducibili" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/4>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/5>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/6>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/7>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/9>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/10>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21.1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21.2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21.3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21.4>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21.5> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/1> a skos:Concept ;
+    rdfs:label "Contributi previdenziali e assistenziali versati in ottemperanza a disposizioni di legge, nonché i contributi volontari versati alla gestione della forma pensionistica obbligatoria di appartenenza"@it ;
+    skos:prefLabel "Contributi previdenziali e assistenziali versati in ottemperanza a disposizioni di legge, nonché i contributi volontari versati alla gestione della forma pensionistica obbligatoria di appartenenza"@it ;
+    dct:identifier "1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/2> a skos:Concept ;
+    rdfs:label "Assegni periodici corrisposti al coniuge"@it ;
+    skos:prefLabel "Assegni periodici corrisposti al coniuge"@it ;
+    dct:identifier "2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/3> a skos:Concept ;
+    rdfs:label "Contributi per gli addetti domestici e familiari"@it ;
+    skos:prefLabel "Contributi per gli addetti domestici e familiari"@it ;
+    dct:identifier "3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/4> a skos:Concept ;
+    rdfs:label "Erogazioni liberali a favore di istituzioni religiose"@it ;
+    skos:prefLabel "Erogazioni liberali a favore di istituzioni religiose"@it ;
+    dct:identifier "4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "4"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/5> a skos:Concept ;
+    rdfs:label "Spese mediche e di assistenza specifica per persone con disabilità"@it ;
+    skos:prefLabel "Spese mediche e di assistenza specifica per persone con disabilità"@it ;
+    dct:identifier "5"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "5"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/6> a skos:Concept ;
+    rdfs:label "Contributi versati ai fondi integrativi al Servizio sanitario nazionale"@it ;
+    skos:prefLabel "Contributi versati ai fondi integrativi al Servizio sanitario nazionale"@it ;
+    dct:identifier "6"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "6"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/7> a skos:Concept ;
+    rdfs:label "Contributi, donazioni e le oblazioni erogate alle organizzazioni non governative (ONG) riconosciute idonee, che operano nel campo della cooperazione con i Paesi in via di sviluppo; erogazioni liberali in denaro o in natura a favore di organizzazioni non lucrative di utilità sociale, di associazioni di promozione sociale e di alcune fondazioni e associazioni riconosciute"@it ;
+    skos:prefLabel "Contributi, donazioni e le oblazioni erogate alle organizzazioni non governative (ONG) riconosciute idonee, che operano nel campo della cooperazione con i Paesi in via di sviluppo; erogazioni liberali in denaro o in natura a favore di organizzazioni non lucrative di utilità sociale, di associazioni di promozione sociale e di alcune fondazioni e associazioni riconosciute"@it ;
+    dct:identifier "7"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "7"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/9> a skos:Concept ;
+    rdfs:label "Erogazioni liberali in denaro a favore di enti universitari, di ricerca pubblica e di quelli vigilati nonché degli enti parco regionali e nazionali"@it ;
+    skos:prefLabel "Erogazioni liberali in denaro a favore di enti universitari, di ricerca pubblica e di quelli vigilati nonché degli enti parco regionali e nazionali"@it ;
+    dct:identifier "9"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "9"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/10> a skos:Concept ;
+    rdfs:label "Somme che in precedenti periodi d’imposta sono state assoggettate a tassazione, anche separata, e che nel 2023 sono state restituite al soggetto erogatore"@it ;
+    skos:prefLabel "Somme che in precedenti periodi d’imposta sono state assoggettate a tassazione, anche separata, e che nel 2023 sono state restituite al soggetto erogatore"@it ;
+    dct:identifier "10"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "10"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21> a skos:Concept ;
+    rdfs:label "Assegni periodici corrisposti in forza di testamento o donazione modale e nella misura in cui risultano da provvedimenti dell’autorità giudiziaria, gli assegni alimentari corrisposti ai familiari indicati nell’art. 433 del c.c."@it ;
+    skos:prefLabel "Assegni periodici corrisposti in forza di testamento o donazione modale e nella misura in cui risultano da provvedimenti dell’autorità giudiziaria, gli assegni alimentari corrisposti ai familiari indicati nell’art. 433 del c.c."@it ;
+    dct:identifier "21"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "21"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21.1> a skos:Concept ;
+    rdfs:label "Canoni, livelli, censi e altri oneri gravanti sui redditi degli immobili che concorrono a formare il reddito complessivo, compresi i contributi ai consorzi obbligatori per legge o in dipendenza di provvedimenti della Pubblica Amministrazione"@it ;
+    skos:prefLabel "Canoni, livelli, censi e altri oneri gravanti sui redditi degli immobili che concorrono a formare il reddito complessivo, compresi i contributi ai consorzi obbligatori per legge o in dipendenza di provvedimenti della Pubblica Amministrazione"@it ;
+    dct:identifier "21.1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "21.1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21.2> a skos:Concept ;
+    rdfs:label "Indennità per perdita dell’avviamento corrisposte per disposizione di legge al conduttore in caso di cessazione della locazione di immobili urbani adibiti per usi diversi da quello di abitazione"@it ;
+    skos:prefLabel "Indennità per perdita dell’avviamento corrisposte per disposizione di legge al conduttore in caso di cessazione della locazione di immobili urbani adibiti per usi diversi da quello di abitazione"@it ;
+    dct:identifier "21.2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "21.2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21.3> a skos:Concept ;
+    rdfs:label "Erogazioni liberali per oneri difensivi dei soggetti che fruiscono del patrocinio a spese dello Stato"@it ;
+    skos:prefLabel "Erogazioni liberali per oneri difensivi dei soggetti che fruiscono del patrocinio a spese dello Stato"@it ;
+    dct:identifier "21.3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "21.3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21.4> a skos:Concept ;
+    rdfs:label "Somme corrisposte ai dipendenti chiamati ad adempiere funzioni presso gli uffici elettorali in ottemperanza alla legge"@it ;
+    skos:prefLabel "Somme corrisposte ai dipendenti chiamati ad adempiere funzioni presso gli uffici elettorali in ottemperanza alla legge"@it ;
+    dct:identifier "21.4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "21.4"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili/21.5> a skos:Concept ;
+    rdfs:label "Il 50% delle spese sostenute dai genitori adottivi per l’espletamento della procedure di adozione di minori stranieri"@it ;
+    skos:prefLabel "Il 50% delle spese sostenute dai genitori adottivi per l’espletamento della procedure di adozione di minori stranieri"@it ;
+    dct:identifier "21.5"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/oneri_deducibili> ;
+    skos:notation "21.5"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/OND_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/oneri_deducibili/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/oneri_deducibili/latest/oneri_deducibili.csv> ;
+    dct:description "CU statement deductible expenses controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato degli oneri deducibili associati alla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement deductible expenses controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato degli oneri deducibili associati alla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/OND_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/oneri_deducibili/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/oneri_deducibili/latest/oneri_deducibili.json> ;
+    dct:description "CU statement deductible expenses controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato degli oneri deducibili associati alla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement deductible expenses controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato degli oneri deducibili associati alla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/OND_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/oneri_deducibili/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/oneri_deducibili/latest/oneri_deducibili.ttl> ;
+    dct:description "CU statement deductible expenses controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato degli oneri deducibili associati alla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU Statement deductible expenses controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato degli oneri deducibili associati alla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

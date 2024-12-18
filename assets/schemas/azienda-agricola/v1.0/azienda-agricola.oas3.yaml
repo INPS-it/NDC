@@ -1,0 +1,96 @@
+openapi: 3.0.3
+info:
+  title: Schema dell' Azienda Agricola
+  version: 202410.28.00
+  x-summary: Schema dell' Azienda Agricola compatibile con l'Ontologia INPS relativa al Cassetto Previdenziale Lavoratori Agricoli Autonomi
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdAziendaAgricola:
+      type: string
+      description: https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceAziendaAgricola
+      example: '0044857956'
+      maxLength: 50
+      minLength: 1
+
+    AziendaAgricola:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/"
+        codice_fiscale_azienda_agricola: codiceFiscaleAziendaAgricola
+        denominazione_azienda_agricola: denominazioneAziendaAgricola
+        ha_categoria_azienda_agricola:
+          "@id": haCategoriaAziendaAgricola
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/AziendaAgricola
+      required:
+      - codice_identificativo_azienda_agricola
+      - codice_fiscale_azienda_agricola
+      - denominazione_azienda_agricola
+      properties:
+        codice_identificativo_azienda_agricola:
+          $ref: "#/components/schemas/IdAziendaAgricola"
+        codice_fiscale_azienda_agricola:
+          type: string
+          maxLength: 50
+        denominazione_azienda_agricola:
+          type: string
+          maxLength: 50
+        ha_categoria_azienda_agricola:
+          type: object
+          items:
+            $ref: "#/components/schemas/CategoriaAziendaAgricola"
+      example:
+        codice_identificativo_azienda_agricola:
+          $ref: "#/components/schemas/IdAziendaAgricola/example"
+        codice_fiscale_azienda_agricola: "CF09839FK9834JD"
+        denominazione_azienda_agricola: "Azienda Agricola Amici Dell'Ambiente"
+        ha_categoria_azienda_agricola:
+          $ref: "#/components/schemas/CategoriaAziendaAgricola/example"
+
+    IdCategoriaAziendaAgricola:
+      type: string
+      description: https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/codiceCategoriaAziendaAgricola
+      example: '1524'
+      maxLength: 50
+      minLength: 1
+
+    CategoriaAziendaAgricola:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/"
+        denominazione_categoria_azienda_agricola: descrizioneCategoriaAziendaAgricola
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CategoriaAziendaAgricola
+      required:
+      - codice_categoria_azienda_agricola
+      - denominazione_categoria_azienda_agricola
+      properties:
+        codice_categoria_azienda_agricola:
+          $ref: "#/components/schemas/IdCategoriaAziendaAgricola"
+        denominazione_categoria_azienda_agricola:
+          type: string
+          maxLength: 50
+      example:
+        codice_categoria_azienda_agricola:
+          $ref: "#/components/schemas/IdCategoriaAziendaAgricola/example"
+        denominazione_categoria_azienda_agricola: "Azienda Agricola Conduzione Familiare"

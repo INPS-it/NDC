@@ -1,0 +1,89 @@
+openapi: 3.0.3
+info:
+  title: Schema dell' Estratto Conto Contributivo Datore Di Lavoro Domestico
+  version: 202406.06.00
+  x-summary: Schema dell' Estratto Conto Contributivo Datore Di Lavoro Domestico compatibile con l'Ontologia INPS relativa ai servizi per la gestione del Lavoro Domestico.
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: |-
+    https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomesticoDatoreLavoro
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdEstrattoContoContributivoRapportoDiLavoroDelDatoreDiLavoroDomestico:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro
+      description: https://w3id.org/italia/social-security/onto/contributions/codiceRapportoDiLavoro
+      example: '256488112'
+      maxLength: 50
+      minLength: 1
+
+    EstrattoContoRapportoDiLavoroDelDatoreDiLavoroDomestico:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomesticoDatoreLavoro
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/domesticWorkServices/"
+        anno_di_riferimento_contributo_versato: annoDiRiferimentoContributoVersato
+        trimestre_contributo_versato: trimestreContributoVersato
+        data_versamento_contributo: dataVersamentoContributo
+        importo_pagamento_contributo: importoPagamentoContributo
+        ore_retribuite: oreRetribuite
+        retribuzione_oraria_effettiva: retribuzioneOrariaEffettiva
+        settimane_di_riferimento_al_contributo: settimaneDiRiferimentoAlContributo
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/domesticWorkServices/EstrattoContributivoRapportoDiLavoroDomesticoDatoreLavoro
+      required:
+      - codice_rapporto_lavoro_domestico_estratto_conto_datore_lavoro_domestico
+      - anno_di_riferimento_contributo_versato
+      - trimestre_contributo_versato
+      - data_versamento_contributo
+      - importo_pagamento_contributo
+      - ore_retribuite
+      - retribuzione_oraria_effettiva
+      - settimane_di_riferimento_al_contributo
+      properties:
+        codice_rapporto_lavoro_domestico_estratto_conto_datore_lavoro_domestico:
+          $ref: "#/components/schemas/IdEstrattoContoContributivoRapportoDiLavoroDelDatoreDiLavoroDomestico"
+        anno_di_riferimento_contributo_versato:
+          type: integer
+          format: int64
+        trimestre_contributo_versato:
+          type: integer
+          format: int64
+        data_versamento_contributo:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        importo_pagamento_contributo:
+          type: number
+          format: decimal32
+        ore_retribuite:
+          type: integer
+          format: int64
+        retribuzione_oraria_effettiva:
+          type: number
+          format: decimal32
+        settimane_di_riferimento_al_contributo:
+          type: number
+          format: decimal32
+      example:
+        codice_rapporto_lavoro_domestico_estratto_conto_datore_lavoro_domestico:
+          $ref: "#/components/schemas/IdEstrattoContoContributivoRapportoDiLavoroDelDatoreDiLavoroDomestico/example"
+        anno_di_riferimento_contributo_versato: 2023
+        trimestre_contributo_versato: 2
+        data_versamento_contributo: '2023-07-03'
+        importo_pagamento_contributo: 262.08
+        ore_retribuite: 156
+        retribuzione_oraria_effettiva: 9.75
+        settimane_di_riferimento_al_contributo: 13

@@ -1,0 +1,139 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/CausaleRedditoAssoggettatoARitenutaATitoloDiImposta>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement income taken from taxes Controlled Vocabulary"@en,
+        "Vocabolario controllato sulla causale reddito assoggettato a ritenuta a titolo di imposta descritti dalla Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato sulla causale reddito assoggettato a ritenuta a titolo di imposta descritti dalla Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the types of taken from taxes from an income with regards to the CU Statement"@en,
+        "Vocabolario controllato sulla causale reddito assoggettato a ritenuta a titolo di imposta descritti dalla Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/CRARTI_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CRARTI_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CRARTI_RDF_TURTLE> ;
+    dcat:keyword "causale reddito assoggettato a ritenuta a titolo di imposta della certificazione unica"@it,
+        "certificazione unica"@it,
+        "CU statement income taken from taxes"@en,
+        "inps"@en,
+        "inps"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement income taken from taxes Controlled Vocabulary"@en,
+        "Vocabolario controllato sulla causale reddito assoggettato a ritenuta a titolo di imposta descritti dalla Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato" ;
+    dct:issued "2024-10-22"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-22"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement income taken from taxes Controlled Vocabulary"@en,
+        "Vocabolario controllato sulla causale reddito assoggettato a ritenuta a titolo di imposta descritti dalla Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "causale_reddito_assoggettato" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato/2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato/3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato/4>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato/5> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato/2> a skos:Concept ;
+    rdfs:label "in caso di compensi percepiti da soggetti non residenti in relazione a rapporti di collaborazione coordinata e continuativa;"@it ;
+    skos:prefLabel "in caso di compensi percepiti da soggetti non residenti in relazione a rapporti di collaborazione coordinata e continuativa;"@it ;
+    dct:identifier "2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato> ;
+    skos:notation "2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato/3> a skos:Concept ;
+    rdfs:label "in caso di prestazioni di previdenza complementare erogate sotto forma di rendita comprese nel maturato dall’1/1/2007. Il medesimo codice va utilizzato anche nel caso di prestazioni pensionistiche (PEPP) erogate in forma di rendita al netto della parte corrispondente ai redditi già assoggettati ad imposta e a quelli di cui all’art. 44, comma1, lett. g) quinquies del Tuir, se determinabili."@it ;
+    skos:prefLabel "in caso di prestazioni di previdenza complementare erogate sotto forma di rendita comprese nel maturato dall’1/1/2007. Il medesimo codice va utilizzato anche nel caso di prestazioni pensionistiche (PEPP) erogate in forma di rendita al netto della parte corrispondente ai redditi già assoggettati ad imposta e a quelli di cui all’art. 44, comma1, lett. g) quinquies del Tuir, se determinabili."@it ;
+    dct:identifier "3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato> ;
+    skos:notation "3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato/4> a skos:Concept ;
+    rdfs:label "in caso di prestazioni di previdenza complementare erogate sotto forma di capitale comprese nel maturato dall’1/1/2007, al netto del risultato di gestione assoggettato ad imposta sostitutiva nella misura dell’11% e dei contributi e premi non dedotti, proporzionalmente riferibili. Il medesimo codice va utilizzato anche nel caso di prestazioni pensionistiche (PEPP) erogate in forma di capitale al netto della parte corrispondente ai redditi già assoggettati ad imposta."@it ;
+    skos:prefLabel "in caso di prestazioni di previdenza complementare erogate sotto forma di capitale comprese nel maturato dall’1/1/2007, al netto del risultato di gestione assoggettato ad imposta sostitutiva nella misura dell’11% e dei contributi e premi non dedotti, proporzionalmente riferibili. Il medesimo codice va utilizzato anche nel caso di prestazioni pensionistiche (PEPP) erogate in forma di capitale al netto della parte corrispondente ai redditi già assoggettati ad imposta."@it ;
+    dct:identifier "4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato> ;
+    skos:notation "4"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato/5> a skos:Concept ;
+    rdfs:label "in caso di rendite integrative temporanee anticipate, per le quali l’articolo 1, comma 168, della legge 27 dicembre 2017, n. 205 ha previsto la possibilità per il percettore di optare per la tassazione ordinaria in sede di dichiarazione dei redditi. Il medesimo codice va utilizzato anche nel caso di rendite integrative temporanee anticipate percepite dal titolare del sottoconto italiano (PEPP) per le quali l’art. 13, comma 6 del D.Lgs. 3 agosto 2022, n. 114 ha previsto la possibilità per il percettore di optare per la tassazione ordinaria in sede di dichiarazione dei redditi"@it ;
+    skos:prefLabel "in caso di rendite integrative temporanee anticipate, per le quali l’articolo 1, comma 168, della legge 27 dicembre 2017, n. 205 ha previsto la possibilità per il percettore di optare per la tassazione ordinaria in sede di dichiarazione dei redditi. Il medesimo codice va utilizzato anche nel caso di rendite integrative temporanee anticipate percepite dal titolare del sottoconto italiano (PEPP) per le quali l’art. 13, comma 6 del D.Lgs. 3 agosto 2022, n. 114 ha previsto la possibilità per il percettore di optare per la tassazione ordinaria in sede di dichiarazione dei redditi"@it ;
+    dct:identifier "5"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/causale_reddito_assoggettato> ;
+    skos:notation "5"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CRARTI_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/causale_reddito_assoggettato/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/causale_reddito_assoggettato/latest/causale_reddito_assoggettato.csv> ;
+    dct:description "CU statement income taken from taxes controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato sulla causale reddito assoggettato a ritenuta a titolo di imposta descritti dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement income taken from taxes controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato sulla causale reddito assoggettato a ritenuta a titolo di imposta descritti dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CRARTI_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/causale_reddito_assoggettato/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/causale_reddito_assoggettato/latest/causale_reddito_assoggettato.json> ;
+    dct:description "CU statement income taken from taxes controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato sulla causale reddito assoggettato a ritenuta a titolo di imposta descritti dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement income taken from taxes controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato sulla causale reddito assoggettato a ritenuta a titolo di imposta descritti dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CRARTI_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/causale_reddito_assoggettato/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/causale_reddito_assoggettato/latest/causale_reddito_assoggettato.ttl> ;
+    dct:description "CU statement income taken from taxes controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato sulla causale reddito assoggettato a ritenuta a titolo di imposta descritti dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU Statement income taken from taxes controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato sulla causale reddito assoggettato a ritenuta a titolo di imposta descritti dalla Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

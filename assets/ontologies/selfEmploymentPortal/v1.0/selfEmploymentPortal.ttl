@@ -1,0 +1,847 @@
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
+@prefix CLV: <https://w3id.org/italia/onto/CLV/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPV: <https://w3id.org/italia/onto/CPV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSSafety: <https://w3id.org/italia/social-security/onto/social-safety-net/> .
+@prefix INPSSEP: <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> .
+@prefix INPSSP: <https://w3id.org/italia/social-security/onto/INPSServicePortal/> .
+@prefix L0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix Proc17: <https://w3id.org/italia/social-security/onto/procedura17/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+INPSSEP: a owl:Ontology ;
+    owl:versionIRI INPSSEP:1.0 ;
+    owl:imports CLV:,
+        COV:,
+        CPV:,
+        L0:,
+        RO: ;
+    rdfs:label "Ontologia Cassetto Previdenziale Libero Professionista di INPS"@it,
+        "Self Employed Portal INPS Ontology"@en ;
+    rdfs:comment "Ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell'istituto."@it,
+        "This INPS ontology describes the main entities and proprieties of the Self employed Portal according to the INPS agency."@en ;
+    owl:versionInfo "1.0 - Modificata il 29 Ottobre 2024"@it,
+        "1.0 - Modified on 29 October 2024"@en ;
+    rdfs:isDefinedBy INPSSEP: ;
+    adms:acronym "inps" ;
+    adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+    adms:hasFormalityLevel adms:Formal ;
+    adms:hasKeyClass INPSSEP:CassettoPrevidenzialeLiberoProfessionista,
+        INPSSEP:DomandaDiSospensioneLiberoProfessionista,
+        INPSSEP:DomandaRimborsoContributiNonDovutiLiberoProfessionista ;
+    adms:hasOntologyLanguage adms:OWL ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> ;
+    adms:hasTask adms:AnnotationTask,
+        adms:QueryFormulationTask,
+        adms:SearchTask ;
+    adms:last INPSSEP:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/selfEmploymentPortal/"^^xsd:anyURI ;
+    adms:prefix "INPSSEP" ;
+    adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+    adms:status "catalogued",
+        "published" ;
+    adms:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    adms:type adms:ServiceOnytology ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:keyword "Avviso di debito"@it,
+        "Cancellation request"@en,
+        "Cassetto Previdenziale Libero Professionista"@it,
+        "Debit notice"@en,
+        "Domanda di annullamento"@it,
+        "Self Employed Portal"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell'istituto."@it,
+        "This INPS ontology describes the main entities and proprieties of the Self Employed Portal according to the INPS agency."@en ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/selfEmploymentPortal" ;
+    dct:issued "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "Ontologia Cassetto Previdenziale Libero Professionista di INPS "@it,
+        "Self Employed Portal INPS Ontology"@en .
+
+### Object Properties
+
+INPSSEP:compensazioneRichiestaTramiteInvioDomanda a owl:ObjectProperty ;
+    rdfs:label "compensation requested by sending an application"@en,
+        "compensazione richiesta tramite invio domanda"@it ;
+    rdfs:domain INPSSEP:Compensazione ;
+    rdfs:range INPSSEP:DomandaRimborsoContributiNonDovutiLiberoProfessionista ;
+    rdfs:comment "La object property collega la richiesta di compensazione con la domanda di rimborso dei contributi non dovuti "@it,
+        "The object property links the compensation with the request for reimbursement of undue contributions"@en .
+
+INPSSEP:consenteConsultazioneDi a owl:ObjectProperty ;
+    rdfs:label "allows consultation of"@en,
+        "consente consultazione di"@it ;
+    rdfs:domain INPSSEP:RendicontazioneGestioneSeparata ;
+    rdfs:range [ a owl:Class ;
+            owl:unionOf (
+                    INPSSEP:Compensazione
+                    INPSSEP:ContributoVersato
+                    INPSSEP:RimborsoContributoNonDovuto ) ] ;
+    rdfs:comment "La object property collega la sezione del cassetto previdenziale dedicata alla Rendicontaizone della gestione separata con il gruppo di oggetti dei quali rende disponibile la consultazione (Contributi versati, Compensazioni o Rimbordi rivÃ¬cevuti)"@it,
+        "La object property collega la sezione del cassetto previdenziale dedicata alla Rendicontaizone della gestione separata con il gruppo di oggetti dei quali rende disponibile la consultazione (Contributi versati, Compensazioni o Rimbordi rivìcevuti)"@it,
+        "The object property connects the section of the pension drawer dedicated to the Reporting of the separate management with the group of objects for which it makes consultation available (Contributions paid, Compensations or Refunds received)"@en .
+
+INPSSEP:consenteInvioDomandaDiAnnullamento a owl:ObjectProperty ;
+    rdfs:label "allows sending cancellation request"@en,
+        "consente invio domanda di annullamento"@it ;
+    rdfs:domain INPSSEP:AvvisoDiAddebito ;
+    rdfs:range INPSSEP:DomandaDiAnnullamento ;
+    rdfs:comment "La object property collega il servizio Avviso di addebito con l'istanza che consente di inviare, la Domanda di annullamento"@en,
+        "The object property connects the Charge Notice service with the instance that allows you to submit the Cancellation Request"@en .
+
+INPSSEP:consenteInvioDomandaSospensione a owl:ObjectProperty ;
+    rdfs:label "allows sending suspension request"@en,
+        "consente invio domanda sospensione"@it ;
+    rdfs:domain INPSSEP:AvvisoDiAddebito ;
+    rdfs:range INPSSEP:DomandaDiSospensioneLiberoProfessionista ;
+    rdfs:comment "La object property collega l'avviso di addebito con la domanda di sospensione"@it,
+        "The object property links the charge notice with the suspension request"@en .
+
+INPSSEP:consultabileTramiteNotifica a owl:ObjectProperty ;
+    rdfs:label "consultabile tramite notifica"@it,
+        "consultable via notification"@en ;
+    rdfs:domain INPSSEP:AvvisoDiAddebito ;
+    rdfs:range INPSSEP:NotificaAvvisoDiAddebito ;
+    rdfs:comment "La object property collega la classe Avviso di addebito con la classe NotificaAvviso di addebito, chiarendo che un avviso di addebito diventa consultabile al suo destinatario dopo aver ricevuto una notifica di ricezione dell'avviso di addebito"@it,
+        "The object property links the Charge Notice class with the Charge Notice Notification class, making it clear that a charge notice becomes viewable to its recipient after receiving a notification that the charge notice has been received"@en .
+
+INPSSEP:contributoVersatoTramite a owl:ObjectProperty ;
+    rdfs:label "contribution paid with"@en,
+        "contributo versato tramite"@it ;
+    rdfs:domain INPSSEP:ContributoVersato ;
+    rdfs:range INPSSP:ModelloF24 ;
+    rdfs:comment "La relazione esprime il collegamento tra i contributie la modalità di versamento richiesta per i liberi professionisti, ossia il modelloF24"@it,
+        "La relazione esprime il collegamento tra i contributie la modalitÃ  di versamento richiesta per i liberi professionisti, ossia il modelloF24"@it,
+        "The object property expresses the connection between the contributions and the payment method required for freelancers, i.e. the F24 form"@en .
+
+INPSSEP:haModalitaDiPagamento a owl:ObjectProperty ;
+    rdfs:label "ha modalita di pagamento"@it ;
+    rdfs:domain INPSSEP:DomandaRimborsoContributiNonDovutiLiberoProfessionista ;
+    rdfs:range INPSSEP:ContoBancario .
+
+INPSSEP:haMotivoRimborso a owl:ObjectProperty ;
+    rdfs:label "ha motivo di rimborso"@it,
+        "has reason for refund"@en ;
+    rdfs:domain INPSSEP:DomandaRimborsoContributiNonDovutiLiberoProfessionista ;
+    rdfs:range INPSSEP:MotivoRimborso ;
+    rdfs:comment "La object property collega una domanda di rimborso con la tipologia di domanda inoltrata"@it,
+        "The object property links a refund request with the type of request submitted"@en .
+
+INPSSEP:haTipoDelega a owl:ObjectProperty ;
+    rdfs:label "ha tipo delega"@it,
+        "has type of delegation"@en ;
+    rdfs:domain INPSSP:DelegaRilasciataLiberoProfessionista ;
+    rdfs:range INPSSEP:TipoDelega ;
+    rdfs:comment "La object property collega una delega con la sua tipologia"@it,
+        "The object property links a delegation with its type."@en .
+
+INPSSEP:partecipaAStudioAssociato a owl:ObjectProperty ;
+    rdfs:label "partecipa a studio associato"@it,
+        "participate in the associated studio"@en ;
+    rdfs:comment "La object property collega il Libero professionista allo studio associato, descrivendo cosÃ¬ la possibilitÃ  dell'associaizone di un professionista ad uno studio associato"@it,
+        "La object property collega il Libero professionista allo studio associato, descrivendo così la possibilità dell'associaizone di un professionista ad uno studio associato"@it,
+        "The object property links the freelancer to the associated studio"@en .
+
+INPSSEP:rimborsoRichiestoTramiteInvioDomanda a owl:ObjectProperty ;
+    rdfs:label "refund requested by submitting an application"@en,
+        "rimborso richiesto tramite invio domanda"@it ;
+    rdfs:domain INPSSEP:RimborsoContributoNonDovuto ;
+    rdfs:range INPSSEP:DomandaRimborsoContributiNonDovutiLiberoProfessionista ;
+    rdfs:comment "La object property collega la domanda di rimborso dei contributi non dovuti con il servizio con il quale Ã¨ possibile inviarla"@it,
+        "La object property collega la domanda di rimborso dei contributi non dovuti con il servizio con il quale è possibile inviarla"@it,
+        "The object property connects the request for reimbursement of undue contributions with the service with which it can be sent"@en .
+
+INPSSEP:servizioHaDestinatario a owl:ObjectProperty ;
+    rdfs:label "service has recipient"@en,
+        "servizio ha destinatario"@it ;
+    rdfs:domain INPSSEP:AvvisoDiAddebito ;
+    rdfs:range INPSSEP:DestinatarioDelServizio ;
+    rdfs:comment "La object property collega il servizio dedicato all'invio di un avviso di abedito con i soggetti individuati come destinatari del servizio stesso"@it,
+        "The object property connects the service dedicated to sending a debit notice with the subjects identified as recipients of the service itself"@en .
+
+INPSSEP:utilizzaServiziCassettoPrevidenzialeLiberoProfessionista a owl:ObjectProperty ;
+    rdfs:label "use self-employed pension account services"@en,
+        "utilizza servizi cassetto previdenziale libero professionista"@it ;
+    rdfs:domain INPSSafety:LiberoProfessionista,
+        [ a owl:Class ;
+            owl:complementOf Proc17:LiberoProfessionistaProtettoConCassa ] ;
+    rdfs:range INPSSEP:CassettoPrevidenzialeLiberoProfessionista ;
+    rdfs:comment "La object property definisce la relazione  tra il libero professionista e il suo cassetto previdenziale di riferimento. Sulla proprietà è stata imposta una dichiarazione per escludere dalla relazione il coinvolgimento delle istanze della clssse di Libero professionsita protetto con cassa, ossia dell'insieme dei liberi professionisti che non ha obbligo di versare i contributi alla Gestione separata INPS"@it,
+        "La object property definisce la relazione  tra il libero professionista e il suo cassetto previdenziale di riferimento. Sulla proprietÃ  Ã¨ stata imposta una dichiarazione per escludere dalla relazione il coinvolgimento delle istanze della clssse di Libero professionsita protetto con cassa, ossia dell'insieme dei liberi professionisti che non ha obbligo di versare i contributi alla Gestione separata INPS"@it,
+        "The object property defines the relationship between the freelancer and his reference pension account"@en,
+        "use self-employed pension account services"@en .
+
+INPSSEP:versaContributiPrevidenzialiTramite a owl:ObjectProperty ;
+    rdfs:label "pays social security contributions through"@en,
+        "use self-employed pension account services"@en,
+        "versa contributi previdenziali tramite"@it ;
+    rdfs:domain INPSSafety:LiberoProfessionista ;
+    rdfs:range INPSSP:ModelloF24 ;
+    rdfs:comment "La object property collega il libero professionista al modello F24, sterumento tramite il quale deve assolvere l'obbligo di pagamento dei contributi"@it,
+        "The object property connects the freelancer to the F24 form,"@en .
+
+INPSSP:consultaCassettoPrevidenzialeLiberoProfessionista a owl:ObjectProperty ;
+    rdfs:label "consulta cassetto previdenziale INPS"@it ;
+    rdfs:comment "La object property descrive il collegamento tra il cassetto previdenziale e la sua utenza di riferimento"@it .
+
+### Data Properties
+
+INPSSEP:annoCompetenzaRendicontazioneGS a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "anno di competenza rendicontazione gestione separata"@it,
+        "year of competence"@en ;
+    rdfs:domain INPSSEP:RendicontazioneGestioneSeparata ;
+    rdfs:comment "L'anno di competenza della rendicontazione nella gestione separata INPS si riferisce all'anno in cui i redditi sono stati effettivamente guadagnati"@it,
+        "The reporting year in the INPS separate management refers to the year in which the income was actually earned"@en .
+
+INPSSEP:annoDiRimborso a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "anno del rimborso"@it,
+        "repayment year"@en ;
+    rdfs:domain INPSSEP:DomandaRimborsoContributiNonDovutiLiberoProfessionista ;
+    rdfs:comment "anno per il quale viene richiesto il rimborso"@it,
+        "year for which the refund is requested"@en .
+
+INPSSEP:annoFiscaleDiRiferimento a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "anno fiscale di riferimento"@it,
+        "fiscal year of reference"@en ;
+    rdfs:domain INPSSEP:VersamentoContributivo ;
+    rdfs:comment "anno in cui i redditi sono stati percepiti e per il quale si calcolano i contributi previdenziali dovuti"@it,
+        "year in which the income was received and for which the social security contributions due are calculated"@en .
+
+INPSSEP:codiceFiscaleDelegato a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice fiscale del delegato"@it,
+        "delegate's tax code"@en ;
+    rdfs:domain INPSSP:DelegaRilasciataLiberoProfessionista .
+
+INPSSEP:codiceIBAN a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice IBAN"@it,
+        "IBAN code"@en ;
+    rdfs:domain INPSSEP:ContoBancario ;
+    rdfs:comment "Il codice IBAN (International Bank Account Number) Ã¨ un codice alfanumerico che identifica in modo univoco un conto bancario a livello internazionale"@it,
+        "Il codice IBAN (International Bank Account Number) è un codice alfanumerico che identifica in modo univoco un conto bancario a livello internazionale"@it,
+        "The IBAN (International Bank Account Number) code is an alphanumeric code that uniquely identifies a bank account internationally"@en .
+
+INPSSEP:codiceTributo a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "codice tributo"@it,
+        "tax code"@en ;
+    rdfs:domain INPSSEP:VersamentoContributivo ;
+    rdfs:comment "codice identificativo della tipologa di tributo versato"@it,
+        "identification code of the type of tax paid"@en .
+
+INPSSEP:cognomeDelegato a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "cognome del delegato"@it,
+        "delegate surname"@en ;
+    rdfs:domain INPSSP:DelegaRilasciataLiberoProfessionista .
+
+INPSSEP:dataDelVersamento a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data del versamento"@it,
+        "date of payment"@en ;
+    rdfs:domain INPSSEP:VersamentoContributivo ;
+    rdfs:comment "data del pagamento dei contributi"@it,
+        "date of payment of social security contributions"@en .
+
+INPSSEP:dataFineCollaborazione a owl:DatatypeProperty ;
+    rdfs:label "data fine collaborazione"@it,
+        "end date of collaboration"@en ;
+    rdfs:comment "data nella quale la collaborazione tra il libero professionista e lo studio associato Ã¨ terminata"@it,
+        "data nella quale la collaborazione tra il libero professionista e lo studio associato è terminata"@it,
+        "date on which the collaboration between the freelancer and the associated studio ended"@en .
+
+INPSSEP:dataFineDelega a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data fine delega"@it,
+        "end date of delegation"@en ;
+    rdfs:domain INPSSP:DelegaRilasciataLiberoProfessionista .
+
+INPSSEP:dataInizioCollaborazione a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data inizio collaborazione"@it,
+        "start date of collaboration"@en ;
+    rdfs:domain INPSSEP:PartecipazioneStudioAssociato ;
+    rdfs:comment "data di inizio della collaborazione del libero professionsita con lo studio associato"@it,
+        "start date of the freelancer's collaboration with the associated studio"@en .
+
+INPSSEP:dataInizioDelega a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "data inizio delega"@it,
+        "start date of delegation"@en ;
+    rdfs:domain INPSSP:DelegaRilasciataLiberoProfessionista .
+
+INPSSEP:dataRicevimentoNotifica a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "Data ricevimento notifica"@it ;
+    rdfs:domain INPSSEP:NotificaAvvisoDiAddebito .
+
+INPSSEP:imponibileRendicontazioneGS a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "imponibile rendicontazione gestione separata"@it ;
+    rdfs:domain INPSSEP:RendicontazioneGestioneSeparata .
+
+INPSSEP:importoContributoVersato a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "amount of contribution paid"@en,
+        "importo del contributo versato"@it ;
+    rdfs:domain INPSSEP:VersamentoContributivo ;
+    rdfs:comment "amount of the sum paid for the payment of contributions"@en,
+        "importo della cifra versata per il pagamento dell'onere contributivo"@it .
+
+INPSSEP:importoRimborso a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "importo del rimborso"@it,
+        "refund amount"@en ;
+    rdfs:domain INPSSEP:DomandaRimborsoContributiNonDovutiLiberoProfessionista ;
+    rdfs:comment "Ammontare del rimborso richiesto"@it,
+        "amount of the refund received"@en,
+        "Refund amount"@en .
+
+INPSSEP:mesiUtili a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "mesi utili"@it ;
+    rdfs:domain INPSSEP:RendicontazioneGestioneSeparata .
+
+INPSSEP:nomeDelegato a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "delegate name"@en,
+        "nome del delegato"@it ;
+    rdfs:domain INPSSP:DelegaRilasciataLiberoProfessionista .
+
+INPSSEP:numeroProtocollo a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "numero di protocollo"@it,
+        "protocol number"@en ;
+    rdfs:domain INPSSP:DomandaTelematicaLiberoProfessionista ;
+    rdfs:comment "identification number of the document containing the submitted electronic application"@en,
+        "numero identificativo del documento che contiene la domanda telematica inviata"@it .
+
+INPSSEP:partitaIVAStudioAssociato a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "partita IVA studio associato"@it,
+        "VAT number of the associated"@en ;
+    rdfs:domain INPSSEP:PartecipazioneStudioAssociato .
+
+INPSSEP:periodoNonAccreditato a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "periodo non accreditato"@it ;
+    rdfs:domain INPSSEP:RendicontazioneGestioneSeparata .
+
+### Classes
+
+INPSSafety:EstrattoContoContributivo a owl:Class .
+
+INPSSafety:LiberoProfessionista a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:versaContributiPrevidenzialiTramite ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSSEP:partecipaAStudioAssociato ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSSEP:AvvisoDiAddebito a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:consenteInvioDomandaDiAnnullamento ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:consenteInvioDomandaSospensione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:consultabileTramiteNotifica ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:servizioHaDestinatario ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Avviso di addebito"@it,
+        "Debit notice"@en ;
+    rdfs:comment "La classe descrive l'avviso di addebito ossia le somme da corrispondere ad INPS"@it,
+        "The class describes the debit notice, i.e. the sums to be paid to INPS"@en .
+
+INPSSEP:CassettoPrevidenzialeLiberoProfessionista a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSSEP:AvvisoDiAddebito
+                    INPSSEP:PartecipazioneStudioAssociato
+                    INPSSEP:PosizioneDebitoriaCreditoria
+                    INPSSEP:Ricorso
+                    INPSSP:DelegaRilasciataLiberoProfessionista
+                    INPSSP:DomandaTelematicaLiberoProfessionista
+                    INPSSP:PosizioneAssicurativaLiberoProfessionista ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:utilizzaServiziCassettoPrevidenzialeLiberoProfessionista ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSP:consultaCassettoPrevidenzialeLiberoProfessionista ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSSEP:Compensazione a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:compensazioneRichiestaTramiteInvioDomanda ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Compensation"@en,
+        "Compensazione"@it ;
+    rdfs:comment "Compensation Request. In the ontology, the class represents one of the possible types of requests presented by sending a request for reimbursement of undue contributions"@en,
+        "Domanda di Compensazione. Nell'ontologia la classe rappresenta una delle possibili tipologie di istanze presentate tramite l'invio di una domanda di rimborso dei contributi non dovuti"@it .
+
+INPSSEP:ContoBancario a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:codiceIBAN ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:haModalitaDiPagamento ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Bank account",
+        "Bank account"@none,
+        "Conto corrente bancario"@it ;
+    rdfs:comment "La classe rappresenta un conto corrente aperto da un soggetto presso un istituto bancario"@it,
+        "The class represents a current account opened by a person at a banking institution",
+        "The class represents a current account opened by a person at a banking institution"@none .
+
+INPSSEP:ContributoIVSVersato a owl:Class ;
+    rdfs:label "Contributo IVS versato"@it,
+        "IVS contribution paid"@en ;
+    rdfs:subClassOf INPSSEP:ContributoVersato ;
+    rdfs:comment "La classe rappresenta la quota di contribuzione previdenziale utile ad assicurare il lavoratore nei casi di Invalidità, Vecchiaia e decesso (Superstiti) (IVS) . Il contributo è versato all'INPS attraverso una trattenuta in busta paga (come ad esempio nel caso dei dipendenti del settore privato) o pagamento diretto nel caso dei liberi professionisti. I liberi professionisti iscritti alla Gestione separata devono versare la quota IVS attraverso il modello F24"@it,
+        "La classe rappresenta la quota di contribuzione previdenziale utile ad assicurare il lavoratore nei casi di InvaliditÃ , Vecchiaia e decesso (Superstiti) (IVS) . Il contributo Ã¨ versato all'INPS attraverso una trattenuta in busta paga (come ad esempio nel caso dei dipendenti del settore privato) o pagamento diretto nel caso dei liberi professionisti. I liberi professionisti iscritti alla Gestione separata devono versare la quota IVS attraverso il modello F24"@it,
+        "The class represents the portion of social security contributions useful for insuring the worker in cases of disability, old age and death (Survivors) (IVS)"@en .
+
+INPSSEP:ContributoVersato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:contributoVersatoTramite ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Contribution paid"@en,
+        "Contributo versato"@it ;
+    rdfs:comment "La classe rappresenta i contributi versati dal o per il lavoratore a fini previdenziali e assistenziali. La contribuzione previdenziale consiste in un premio assicurativo che si paga per assicurare il lavoratore per un determinato evento come ad esempio la maternità, al malattia, la disoccupazione o la pensione."@it,
+        "La classe rappresenta i contributi versati dal o per il lavoratore a fini previdenziali e assistenziali. La contribuzione previdenziale consiste in un premio assicurativo che si paga per assicurare il lavoratore per un determinato evento come ad esempio la maternitÃ , al malattia, la disoccupazione o la pensione."@it,
+        "The class represents the contributions paid by or for the worker for social security and welfare purposes."@en .
+
+INPSSEP:DestinatarioDelServizio a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSSEP:IntermediarioAutorizzato
+                    INPSSEP:ResponsabileAdempimentoContributivo ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:servizioHaDestinatario ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Destinatario del servizio"@it,
+        "Service recipient"@en ;
+    rdfs:comment "La classe rappresenta il gruppo di soggetti ai quali il servizio Ã¨ dedicato"@it,
+        "La classe rappresenta il gruppo di soggetti ai quali il servizio è dedicato"@it,
+        "The class represents the group of subjects to whom the service is dedicated"@en .
+
+INPSSEP:DomandaDiAnnullamento a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSSEP:DomandaDiAnnullamentoParziale
+                    INPSSEP:DomandaDiAnnullamentoTotale ) ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:consenteInvioDomandaDiAnnullamento ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Cancellation request"@en,
+        "Domanda di annullamento"@it ;
+    rdfs:comment "La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di annullamento dell'avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza"@it,
+        "The class represents the service that allows you to send the request for cancellation of the payment notice online to INPS"@en .
+
+INPSSEP:DomandaDiAnnullamentoParziale a owl:Class ;
+    rdfs:label "Domanda di annullamento parziale"@it,
+        "Request for partial cancellation"@en ;
+    owl:disjointWith INPSSEP:DomandaDiAnnullamentoTotale ;
+    rdfs:comment "La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di annullamento parziale dell'avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza"@it,
+        "The class represents the service that allows you to send the request for partial cancellation of the payment notice online to INPS"@en .
+
+INPSSEP:DomandaDiAnnullamentoTotale a owl:Class ;
+    rdfs:label "Domanda di annullamento totale"@it,
+        "Request for total cancellation"@en ;
+    rdfs:comment "La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di annullamento totale dell'avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza"@it,
+        "The class represents the service that allows you to send the request for total cancellation of the payment notice online to INPS"@en .
+
+INPSSEP:DomandaDiSospensioneLiberoProfessionista a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:consenteInvioDomandaSospensione ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Domanda di sospensione libero professionista"@it,
+        "Request for suspension of freelance professional"@en ;
+    rdfs:comment "La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di sospensione dell'avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza"@it,
+        "The class represents the service that allows you to send the request for suspension of the payment notice online to INPS"@en .
+
+INPSSEP:DomandaRiduzioneSanzioneCivileLiberoProfessionista a owl:Class ;
+    rdfs:label "Domanda riduzione sanzione civile libero professionista"@it,
+        "Request for reduction of civil penalty for self-employed professional"@en ;
+    rdfs:comment "La classe rappresent ail servizio dedicato all'invio di domande di riduzione delle sanzioni civili del libero professionista e l'insieme delle domande inviate"@it,
+        "The class represents the service dedicated to sending requests for reduction of civil sanctions of the freelancer"@en .
+
+INPSSEP:DomandaRimborsoContributiNonDovutiLiberoProfessionista a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:annoDiRimborso ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:haModalitaDiPagamento ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:haMotivoRimborso ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:importoRimborso ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:compensazioneRichiestaTramiteInvioDomanda ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:rimborsoRichiestoTramiteInvioDomanda ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Domanda di rimborso contributi non dovuti dal libero professionista"@it,
+        "Request for reimbursement of contributions not due by the freelancer"@en ;
+    rdfs:comment "La classe descrive il servizio dedicato all'invio telematico di istanze di rimborso per contributi non dovuti"@it,
+        "The class describes the service dedicated to the electronic submission of reimbursement requests for undue contributions"@en .
+
+INPSSEP:IntermediarioAutorizzato a owl:Class ;
+    rdfs:label "Authorized intermediary"@en,
+        "Intermediario autorizzato"@it ;
+    owl:disjointWith INPSSEP:ResponsabileAdempimentoContributivo ;
+    rdfs:comment "La classe rappresenta gli intermediari, ovvero coloro che su incarico degi interessati provvedono ad agire per loro conto, ad esempio con l'invio di istanze o la presentazione di domande"@it,
+        "The class represents intermediaries, or those who, on behalf of interested parties, act on their behalf"@en .
+
+INPSSEP:IstanzaRateizzazione a owl:Class ;
+    rdfs:label "Istanza di rateizzazione"@it,
+        "Request for installment payment"@en ;
+    rdfs:comment "La classe rappresenta la sezione del servizio di invio delle domande telematiche dedicata alla presentazion edi istanze di rateizzazione dei contributi e alla consultazione delle domande inviate"@it,
+        "The class represents the section of the telematic application submission service dedicated to the submission of requests for the payment by instalments of contributions and to the consultation of the applications sent"@en .
+
+INPSSEP:LegaleRappresentante a owl:Class ;
+    rdfs:label "Legal representative"@en,
+        "Legale rappresentante"@it ;
+    owl:disjointWith INPSSEP:TitolareDiAdempimentoContributivo ;
+    rdfs:comment "Soggetto al quale spetta l'obbligo della verifica dell'esecuzione del rispetto dell'obbligo contributivo"@it,
+        "Subject responsible for verifying compliance with the contribution obligation"@en .
+
+INPSSEP:MotivoRimborso a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:haMotivoRimborso ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Motivo del rimborso"@it,
+        "Reason for refund"@en ;
+    rdfs:comment "La classe rappresenta l'insieme di voci contrllate che indicano il motivo per il quale Ã¨ consentito chiedere un rimborso dei contributi"@it,
+        "La classe rappresenta l'insieme di voci controllate che indicano il motivo per il quale è consentito chiedere un rimborso dei contributi"@en,
+        "The class represents the set of controlled entries that indicate the reason for which a refund of contributions can be requested"@en,
+        "The class represents the set of controlled entries that indicate the reason for which a refund of contributions can be requested."@en .
+
+INPSSEP:NotificaAvvisoDiAddebito a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:dataRicevimentoNotifica ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:consultabileTramiteNotifica ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Debit Notice Notification"@en,
+        "Notifica di avviso di addebito"@it ;
+    rdfs:comment "La classe descrive il servizio di invio della notifica di addebito delle somme da corrispondere a INPS"@it,
+        "The class describes the service for sending the notification of debit of the sums to be paid to INPS"@en .
+
+INPSSEP:PartecipazioneStudioAssociato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:dataInizioCollaborazione ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:partitaIVAStudioAssociato ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Partecipazione a studio associato"@it,
+        "Participation in a associated studio"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSSEP:dataFineCollaborazione ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:partecipaAStudioAssociato ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "La classe reifica la partecipazione del libero professionista ad uno studio associato, rappresentando il caso in cui la partecipazione esista"@it,
+        "The class describes the participation of the freelancer in a partnership"@en .
+
+INPSSEP:PosizioneDebitoriaCreditoria a owl:Class ;
+    rdfs:label "Debt/Credit Position"@en,
+        "Posizione debitoria creditoria"@it ;
+    rdfs:comment "La classe rappresenta il servizio contenuto nel cassetto previdenziale del libero professionista dedicato alla consultazione della situazione creditoria o debitoria del lavoratore"@it,
+        "The class represents the service contained in the self-employed worker's social security drawer dedicated to consulting the worker's credit or debt situation"@en .
+
+INPSSEP:RendicontazioneGestioneSeparata a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:annoCompetenzaRendicontazioneGS ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:consenteConsultazioneDi ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:imponibileRendicontazioneGS ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:mesiUtili ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:periodoNonAccreditato ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Rendicontazione gestione separata"@it,
+        "Separate management reporting"@en ;
+    rdfs:comment "La classe rappresenta il servizio che consente la consultazione in formato tabellare della sintesi dello stato contributivo del lavoratore diviso per anno "@it,
+        "The class represents the service that allows the consultation in tabular format of the summary of the worker's contribution status divided by year"@en .
+
+INPSSEP:ResponsabileAdempimentoContributivo a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSSEP:LegaleRappresentante
+                    INPSSEP:TitolareDiAdempimentoContributivo ) ] ;
+    rdfs:label "Responsabile adempimento contributivo"@it,
+        "Responsible for compliance with contributions"@en ;
+    rdfs:comment "he class describes the Person Responsible for Contribution Compliance, i.e. the person who is responsible for ensuring the correct payment of social security contributions."@en,
+        "La classe descrive il Responsabile dell'adempimento contributivo, ossia il soggetto che ha la responsabilità di garantire il corretto versamento dei contributi previdenziali"@it,
+        "La classe descrive il Responsabile dell'adempimento contributivo, ossia il soggetto che ha la responsabilitÃ  di garantire il corretto versamento dei contributi previdenziali"@it .
+
+INPSSEP:Ricorso a owl:Class ;
+    rdfs:label "Appeal"@en,
+        "Ricorso"@it ;
+    rdfs:comment "La classe rappresenta il servizio del cassetto previdenziale che consente la consultazione dei ricorsi presentati"@it,
+        "The class represents the service of the social security drawer that allows the consultation of the appeals presented"@en .
+
+INPSSEP:RimborsoContributoNonDovuto a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:rimborsoRichiestoTramiteInvioDomanda ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Reimbursement of contribution not due"@en,
+        "Rimborso contributo non dovuto"@it ;
+    rdfs:comment "La classe rappresenta l'istanza di rimborso dei contributi non dovuti presentata tramite il servizio di invio di una domanda di contributo non dovuto, disponibile nel cassetto previdenziale del libero professionista nella sezion ededicata all'invio di domadna telematiche"@it,
+        "The class represents the request for reimbursement of undue contributions submitted through the service for sending an application for undue contributions, available in the self-employed professional's social security drawer."@en .
+
+INPSSEP:TipoDelega a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:haTipoDelega ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Such delegation"@en,
+        "Tipo di delega"@it ;
+    rdfs:comment "Tipologia di delega "@it,
+        "Type of delegation"@en .
+
+INPSSEP:TitolareDiAdempimentoContributivo a owl:Class ;
+    rdfs:label "Holder of contributory payment"@en,
+        "Titolare di adempimento contributivo"@it ;
+    rdfs:comment "Il titolare dell'adempimento contributivo Ã¨ il soggetto che deve garantire il rispetto di tutti gli adempimenti e delle scadenze contributive e lo stesso che risponde in caso di un mancato adempimento. Nel caso dei liberi professionisti il titolare Ã¨ il professionista stesso che deve effettuare direttamente il versamento dei contributi"@it,
+        "Il titolare dell'adempimento contributivo è il soggetto che deve garantire il rispetto di tutti gli adempimenti e delle scadenze contributive e lo stesso che risponde in caso di un mancato adempimento. Nel caso dei liberi professionisti il titolare è il professionista stesso che deve effettuare direttamente il versamento dei contributi"@it,
+        "The holder of the contribution fulfillment is the person who must guarantee compliance with all the contribution fulfillments and deadlines and the same person who is responsible in the event of a failure to fulfill them."@en .
+
+INPSSEP:VersamentoContributivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:annoFiscaleDiRiferimento ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:codiceTributo ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:dataDelVersamento ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:importoContributoVersato ;
+            owl:someValuesFrom rdfs:Literal ] ;
+    rdfs:label "Contribution payment"@en,
+        "Versamento contributivo"@it ;
+    rdfs:comment "La  classe rappresenta il servizio che consente la consultazione dei contributi versati"@it,
+        "The class represents the service that allows the consultation of the contributions paid"@en .
+
+INPSSP:DelegaRilasciataLiberoProfessionista a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSEP:codiceFiscaleDelegato ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:cognomeDelegato ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:dataFineDelega ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:dataInizioDelega ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:haTipoDelega ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:nomeDelegato ;
+            owl:someValuesFrom rdfs:Literal ] .
+
+INPSSP:DelegatoLiberoProfessionsta a owl:Class ;
+    owl:disjointWith INPSSafety:LiberoProfessionista .
+
+INPSSP:DomandaTelematicaLiberoProfessionista a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSSEP:DomandaDiAnnullamento
+                    INPSSEP:DomandaDiSospensioneLiberoProfessionista
+                    INPSSEP:DomandaRiduzioneSanzioneCivileLiberoProfessionista
+                    INPSSEP:DomandaRimborsoContributiNonDovutiLiberoProfessionista
+                    INPSSEP:IstanzaRateizzazione ) ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSEP:numeroProtocollo ;
+            owl:someValuesFrom rdfs:Literal ] .
+
+INPSSP:ModelloF24 a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:contributoVersatoTramite ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:versaContributiPrevidenzialiTramite ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label " F24 Model"@en,
+        "Modello F24"@it ;
+    rdfs:comment "La classe rappresenta il modello di versamento F24. L'F24 Ã¨ il modello che i contribuenti devono utilizzare per il pagamento di tributi, contributi e premi. I titolari di partita IVA sono tenuti ad adottare  odalitÃ  telematiche di pagamento "@it,
+        "La classe rappresenta il modello di versamento F24. L'F24 è il modello che i contribuenti devono utilizzare per il pagamento di tributi, contributi e premi. I titolari di partita IVA sono tenuti ad adottare  odalità telematiche di pagamento "@it,
+        "The class represents the F24 payment model"@en .
+
+INPSSP:PosizioneAssicurativaLiberoProfessionista a owl:Class ;
+    rdfs:label "Posizione assicurativa libero professionista"@it .
+
+INPSSP:UtenteServizioLiberoProfessionista a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSSafety:LiberoProfessionista
+                    INPSSP:DelegatoLiberoProfessionsta ) ] ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty INPSSP:consultaCassettoPrevidenzialeLiberoProfessionista ;
+            owl:someValuesFrom owl:Thing ] .
+
+Proc17:LiberoProfessionistaProtettoConCassa a owl:Class ;
+    owl:disjointWith [ a owl:Restriction ;
+            owl:onProperty INPSSEP:utilizzaServiziCassettoPrevidenzialeLiberoProfessionista ;
+            owl:someValuesFrom owl:Thing ] .
+
+[] a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSEP:consenteConsultazioneDi ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:unionOf (
+            INPSSEP:Compensazione
+            INPSSEP:ContributoVersato
+            INPSSEP:RimborsoContributoNonDovuto ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSSP:PosizioneAssicurativaLiberoProfessionista ;
+    owl:unionOf (
+            INPSSafety:EstrattoContoContributivo
+            INPSSEP:RendicontazioneGestioneSeparata
+            INPSSEP:VersamentoContributivo ) .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/selfEmploymentPortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/selfEmploymentPortal/latest/selfEmploymentPortal.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell'istituto."@it,
+        "The Italian Self Employed Portal INPS Ontology N-TRIPLES distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Cassetto Previdenziale Libero Professionista"@it,
+        "N-TRIPLES distribution of the INPS ontology - Self Employed Portal"@en .
+
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/selfEmploymentPortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/selfEmploymentPortal/latest/selfEmploymentPortal.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell'istituto."@it,
+        "The Italian Self Employed Portal INPS Ontology RDF/Turtle distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Cassetto Previdenziale Libero Professionista"@it,
+        "RDF/Turtle distribution of the INPS ontology - Self Employed Portal"@en .
+
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/selfEmploymentPortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/selfEmploymentPortal/latest/selfEmploymentPortal.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell'istituto."@it,
+        "The Italian Self Employed Portal INPS Ontology RDF/XML"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Cassetto Previdenziale Libero Professionista"@it,
+        "RDF/XML distribution of the INPS ontology - Self Employed Portal"@en .
+
+### Axioms
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSSafety:EstrattoContoContributivo
+            INPSSEP:RendicontazioneGestioneSeparata
+            INPSSEP:VersamentoContributivo ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSSEP:AvvisoDiAddebito
+            INPSSEP:PartecipazioneStudioAssociato
+            INPSSEP:PosizioneDebitoriaCreditoria
+            INPSSEP:Ricorso
+            INPSSP:DelegaRilasciataLiberoProfessionista
+            INPSSP:DomandaTelematicaLiberoProfessionista
+            INPSSP:PosizioneAssicurativaLiberoProfessionista ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSSEP:Compensazione
+            INPSSEP:ContributoVersato
+            INPSSEP:RimborsoContributoNonDovuto ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSSEP:DomandaDiAnnullamento
+            INPSSEP:DomandaDiSospensioneLiberoProfessionista
+            INPSSEP:DomandaRiduzioneSanzioneCivileLiberoProfessionista
+            INPSSEP:DomandaRimborsoContributiNonDovutiLiberoProfessionista
+            INPSSEP:IstanzaRateizzazione ) .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

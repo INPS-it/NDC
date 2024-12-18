@@ -1,0 +1,138 @@
+openapi: 3.0.3
+info:
+  title: Schema della Domanda Iscrizione Gestione Separata Libero Professionista
+  version: 202410.28.00
+  x-summary: Schema della Domanda Iscrizione Gestione Separata Libero Professionista compatibile con l'Ontologia INPS relativa all'Iscrizione alla Gestione Separata
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataLiberoProfessionista
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdDomandaIscrizioneGestioneSeparataLiberoProfessionista:
+      type: string
+      description: https://w3id.org/italia/social-security/onto/separateManagementRegistration/numeroProtocolloIscrizioneGestioneSeparata
+      example: '00512157854'
+      maxLength: 50
+      minLength: 1
+
+    DomandaIscrizioneGestioneSeparataLiberoProfessionista:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataLiberoProfessionista
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/separateManagementRegistration/"
+        data_presentazione_iscrizione_gestione_separata: dataPresentazioneIscrizioneGestioneSeparata
+        cellulare: cellulare
+        telefono: telefono
+        data_inizio_attivita: dataInizioAttivita
+        pec: PEC
+        email: email
+        codice_attivita_ateco: codiceAttivitaAteco
+        partita_iva: partitaIVA
+        socio_studio_associato: socioStudioAssociato
+        domanda_iscrizione_gestione_separata_inviata_a:
+          "@id": domandaIscrizioneGestioneSeparataInviataA
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/separateManagementRegistration/DomandaIscrizioneGestioneSeparataLiberoProfessionista
+      required:
+      - codice_domanda_iscrizione_gestione_separata_parasubordinato
+      - data_presentazione_iscrizione_gestione_separata
+      - cellulare
+      - telefono
+      - data_inizio_attivita
+      - pec
+      - email
+      - codice_attivita_ateco
+      - partita_iva
+      - socio_studio_associato
+      properties:
+        codice_domanda_iscrizione_gestione_separata_parasubordinato:
+          $ref: "#/components/schemas/IdDomandaIscrizioneGestioneSeparataLiberoProfessionista"
+        data_presentazione_iscrizione_gestione_separata:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        cellulare:
+          type: string
+          maxLength: 255
+        telefono:
+          type: string
+          maxLength: 255
+        data_inizio_attivita:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        pec:
+          type: string
+          maxLength: 255
+        email:
+          type: string
+          maxLength: 255
+        codice_attivita_ateco:
+          type: string
+          maxLength: 255
+        partita_iva:
+          type: string
+          maxLength: 255
+        socio_studio_associato:
+          type: string
+          format: boolean
+        domanda_iscrizione_gestione_separata_inviata_a:
+          type: object
+          items:
+            $ref: "#/components/schemas/SedeINPS"
+      example:
+        codice_domanda_iscrizione_gestione_separata_parasubordinato:
+          $ref: "#/components/schemas/IdDomandaIscrizioneGestioneSeparataLiberoProfessionista/example"
+        data_presentazione_iscrizione_gestione_separata: "2023-09-01"
+        cellulare: "3358846960"
+        telefono: "069583454"
+        data_inizio_attivita: "2023-08-12"
+        pec: "mariorossi@pec.it"
+        email: "mariorossi@gmail.com"
+        codice_attivita_ateco: "15269"
+        partita_iva: "001111251332512"
+        socio_studio_associato: 'false'
+        domanda_iscrizione_gestione_separata_inviata_a:
+          $ref: "#/components/schemas/SedeINPS/example"
+
+    CodiceSedeINPS:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      description: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      example: '152485'
+      maxLength: 50
+      minLength: 1
+
+    SedeINPS:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/core/"
+        denominazione_sede_inps: denominazioneSedeINPS
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      required:
+      - codice_sede_inps
+      - denominazione_sede_inps
+      properties:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS"
+        denominazione_sede_inps:
+          type: string
+          maxLength: 255
+      example:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS/example"
+        denominazione_sede_inps: "INPS Roma Montesacro"

@@ -1,0 +1,125 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/EventiEccezionali>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement Exceptional Circumstances Controlled Vocabulary"@en,
+        "Vocabolario controllato degli eventi eccezionali come riportati dalla Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato degli eventi eccezionali di una Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the defined set of exceptional circumstances in a CU Statement"@en,
+        "Vocabolario controllato degli eventi eccezionali come riportati dalla Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/ECC_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/ECC_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/ECC_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "CU statement exceptional circumstances"@en,
+        "eventi eccezionali della certificazione unica"@it,
+        "inps"@en,
+        "inps"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement Exceptional Circumstances Controlled Vocabulary"@en,
+        "Vocabolario controllato degli eventi eccezionali come riportati dalla Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali" ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-24"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:relation <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/motivi_permesso>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/tipo_contratto>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/tipo_retribuzione> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement Exceptional Circumstances Controlled Vocabulary"@en,
+        "Vocabolario controllato degli eventi eccezionali come riportati dalla Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "eventi_eccezionali" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali/1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali/99> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali/1> a skos:Concept ;
+    rdfs:label "per i soggetti vittime di richieste estorsive per i quali l’articolo 20, comma 2, della legge 23 febbraio 1999, n. 44, ha disposto la proroga di tre anni dei termini di scadenza degli adempimenti fiscali ricadenti entro un anno dalla data dell’evento lesivo"@it ;
+    skos:prefLabel "per i soggetti vittime di richieste estorsive per i quali l’articolo 20, comma 2, della legge 23 febbraio 1999, n. 44, ha disposto la proroga di tre anni dei termini di scadenza degli adempimenti fiscali ricadenti entro un anno dalla data dell’evento lesivo"@it ;
+    dct:identifier "1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali> ;
+    skos:notation "1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali/99> a skos:Concept ;
+    rdfs:label "per i contribuenti colpiti da altri eventi eccezionali"@it ;
+    skos:prefLabel "per i contribuenti colpiti da altri eventi eccezionali"@it ;
+    dct:identifier "99"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali> ;
+    skos:notation "99"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/ECC_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/eventi_eccezionali/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/eventi_eccezionali/latest/eventi_eccezionali.csv> ;
+    dct:description "CU statement exceptional circumstances controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato sugli eventi eccezzionali della certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement exceptional circumstances controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato sugli eventi eccezzionali della certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/ECC_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/eventi_eccezionali/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/eventi_eccezionali/latest/eventi_eccezionali.json> ;
+    dct:description "CU statement exceptional circumstances controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato sugli eventi eccezzionali della certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement exceptional circumstances controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato sugli eventi eccezzionali della certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/ECC_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/eventi_eccezionali/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/eventi_eccezionali/latest/eventi_eccezionali.ttl> ;
+    dct:description "CU statement exceptional circumstances controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato sugli eventi eccezzionali della certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement exceptional circumstances controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato sugli eventi eccezzionali della certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

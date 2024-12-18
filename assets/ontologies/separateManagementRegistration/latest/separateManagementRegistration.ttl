@@ -1,0 +1,459 @@
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
+@prefix CLV: <https://w3id.org/italia/onto/CLV/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPSV: <https://w3id.org/italia/onto/CPSV/> .
+@prefix CPV: <https://w3id.org/italia/onto/CPV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
+@prefix INPSSafety: <https://w3id.org/italia/social-security/onto/social-safety-net/> .
+@prefix INPSSMR: <https://w3id.org/italia/social-security/onto/separateManagementRegistration/> .
+@prefix L0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+INPSSMR: a owl:Ontology ;
+    owl:versionIRI INPSSMR:1.0 ;
+    owl:imports CLV:,
+        COV:,
+        CPV:,
+        L0:,
+        RO: ;
+    rdfs:label "Ontologia Iscrizione alla Gestione Separata di INPS"@it,
+        "Separate Management Registration INPS Ontology"@en ;
+    rdfs:comment "Ontologia INPS relativa alle entità e alle relazioni che descrivono l'iscrizione alla gestione separata secondi i criteri dell'istituto."@it,
+        "This INPS ontology describes the main entities and proprieties of the Separate Management registration according to the INPS agency."@en ;
+    owl:versionInfo "1.0 - Modificata il 29 Ottobre 2024"@it,
+        "1.0 - Modified on 29 October 2024"@en ;
+    rdfs:isDefinedBy INPSSMR: ;
+    adms:acronym "inps" ;
+    adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
+    adms:hasFormalityLevel adms:Formal ;
+    adms:hasKeyClass INPSSMR:BeneficiarioDomandaGestioneSeparata,
+        INPSSMR:DomandaIscrizioneGestioneSeparata,
+        INPSSMR:GestioneSeparata ;
+    adms:hasOntologyLanguage adms:OWL ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/separateManagementRegistration/distribution/INPSSMR-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/separateManagementRegistration/distribution/INPSSMR-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/separateManagementRegistration/distribution/INPSSMR-RDF-XML> ;
+    adms:hasTask adms:AnnotationTask,
+        adms:QueryFormulationTask,
+        adms:SearchTask ;
+    adms:last INPSSMR:1.0 ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/separateManagementRegistration/"^^xsd:anyURI ;
+    adms:prefix "INPSSMR" ;
+    adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
+    adms:status "catalogued",
+        "published" ;
+    adms:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    adms:type adms:ServiceOnytology ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:keyword "Dependent contractor spilt scheme application form"@en,
+        "Domanda iscrizione gestione separata libero professionista"@it,
+        "Domanda iscrizione gestione separata parasubordinato"@it,
+        "Iscrione Gestione Separata"@it,
+        "Self employed spilt scheme application form"@en,
+        "Spilt scheme registration"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Ontologia INPS relativa alle entità e alle relazioni che descrivono l'iscrizione alla gestione separata secondi i criteri dell'istituto."@it,
+        "This INPS ontology describes the main entities and proprieties of the Spilt Scheme registration according to the INPS agency."@en ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/separateManagementRegistration" ;
+    dct:issued "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
+        <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "Ontologia Iscrizione alla Gestione Separata di INPS "@it,
+        "Spilt Scheme Registration INPS Ontology"@en .
+
+### Object Properties
+
+INPSSMR:domandaIscrizioneGestioneSeparataInviataA a owl:ObjectProperty ;
+    rdfs:label "domandaIscrizioneGestioneSeparataInviataA"@it,
+        "spiltSchemeApplicationFormSentTo"@en ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparata ;
+    rdfs:range INPSCore:SedeINPS ;
+    rdfs:comment "La object property collega la domanda di iscrizione alla gestione separata alla sede INPS di riferimento competente per il suo accoglimento e per la successiva lavorazione."@it,
+        "This object property links together the Spilt Scheme Application Form class and the INPS Service class. In fact, the Spilt Scheme is a service processed and managed by INPS offices. "@en .
+
+INPSSMR:generaContributi a owl:ObjectProperty ;
+    rdfs:label "generaContributi"@it,
+        "hasContributions"@en ;
+    rdfs:domain INPSSMR:IscrizioneGestioneSeparata ;
+    rdfs:range INPSSafety:ContributoGestioneSeparata ;
+    rdfs:comment "La relazione connette tra loro le classi Iscrizione gestione separata e Contributo gestione separata per descrivere l'obbligo di versamento dei contributi conseguente all'iscrizione del lavoratore alla gestione previdenziale."@it,
+        "This object property links together the Spilt Scheme Registration class and the Spilt Scheme Contributions class. Once registered with the Spilt Scheme you must pay your credited contributions into the Scheme Account.  "@en .
+
+INPSSMR:generaIscrizioneGestioneSeparata a owl:ObjectProperty ;
+    rdfs:label "generaIscrizioneGestioneSeparata"@it,
+        "hasSpiltSchemeRegistration"@en ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparata ;
+    rdfs:range INPSSMR:IscrizioneGestioneSeparata ;
+    rdfs:comment "La proprietà mette in relazione la Domanda di iscrizione alla gestione separata con l'Iscrizione alla gestione separata per descrivere come la corretta compilazione  e l'invio della domanda abbiano come effetto l'iscrizione del lavoratore alla gestione separata"@it,
+        "This object property links together the Spilt Scheme Application Form and the Spilt Scheme Registration class. Those classes are essentional to show all the stages of the application process. "@en .
+
+INPSSMR:inviaDomandaGestioneSeparataLiberoProfessionista a owl:ObjectProperty ;
+    rdfs:label "hasSelfEmployedSpiltSchemeApplicationForm"@en,
+        "inviaDomandaGestioneSeparataLiberoProfessionista"@it ;
+    rdfs:subPropertyOf INPSSMR:inviaDomandaIscrizioneGestioneSeparata ;
+    rdfs:domain INPSSafety:LiberoProfessionista,
+        [ a owl:Class ;
+            owl:complementOf INPSSMR:LiberoProfessionistaProtettoConCassa ] ;
+    rdfs:range INPSSMR:DomandaIscrizioneGestioneSeparataLiberoProfessionista ;
+    rdfs:comment "La relazione collega il Libero professionista con obbligo di iscrizione alla gestione separata, nella veste di soggeto che invia la domadna di iscrizione, alla domanda di iscrizione alla gestione separata rivolta a questa tipologia di lavoratore"@it,
+        "This object property links together the Spilt Scheme Self Employed class and the Self Employed Spilt Scheme Application Form. "@en .
+
+INPSSMR:inviaDomandaGestioneSeparataParasubordinato a owl:ObjectProperty ;
+    rdfs:label "hasDependentContractorSpiltSchemeApplicationForm"@en,
+        "inviaDomandaGestioneSeparataParasubordinato"@it ;
+    rdfs:subPropertyOf INPSSMR:inviaDomandaIscrizioneGestioneSeparata ;
+    rdfs:domain INPSSafety:LavoratoreParasubordinato ;
+    rdfs:range INPSSMR:DomandaIscrizioneGestioneSeparataParasubordinato ;
+    rdfs:comment "La relazione collega il lavoratore parasubordinato, nella veste di soggeto che invia la domadna di iscrizione, alla domanda di iscrizione alla gestione separata rivolta a questa tipologia di lavoratore"@it,
+        "This object property links together the Dependent Contractor class and the Dependent Contractor Spilt Scheme Application Form."@en .
+
+INPSSMR:inviaDomandaIscrizioneGestioneSeparata a owl:ObjectProperty ;
+    rdfs:label "inviaDomandaIscrizioneGestioneSeparata"@en ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    INPSSMR:BeneficiarioDomandaGestioneSeparata
+                    L0:Agent ) ] ;
+    rdfs:range INPSSMR:DomandaIscrizioneGestioneSeparata .
+
+INPSSMR:iscriveLavoratoreInGestioneSeparata a owl:ObjectProperty ;
+    rdfs:label "enrolApplicantInSpiltScheme"@it,
+        "iscriveLavoratoreInGestioneSeparata"@it ;
+    rdfs:domain INPSSMR:IscrizioneGestioneSeparata ;
+    rdfs:range INPSSMR:GestioneSeparata ;
+    rdfs:comment "La relazione collega la classe Iscrizione gestione separata alla classe gestione separata per indicare come, nei fatti, sia l'azione di iscrizione alla gestione separata ad iscrivere il lavoratore a questa gestione previdenziale."@it,
+        "This object property links together the Spilt Scheme Registration class and the Spilt Scheme class. Once applied to the Scheme you become an effective Spilt Scheme member."@en .
+
+INPSSMR:versatiInGestioneSeparata a owl:ObjectProperty ;
+    rdfs:label "hasContributionsPaidIntoSpiltScheme"@en,
+        "versatiInGestioneSeparata"@it ;
+    rdfs:domain INPSSafety:ContributoGestioneSeparata ;
+    rdfs:range INPSSMR:GestioneSeparata ;
+    rdfs:comment "La proprietà esprime il collegamento tra la classe Contributi gestione separata e  la classe Gestione separata, con lo scopo di formalizzare il legame tra questa categoria di contributo previdenziale obbligatorio e il fondo pensionistico nel quale vengono versati"@it,
+        "This object property links together the Spilt Scheme Contributions class and the Spilt Scheme class. It refers to the fact that once registered a member pays their contributions into the Spilt Scheme. Contributions are used to fund social welfare benefits and pensions."@en .
+
+### Datatypes
+
+xsd:boolean a rdfs:Datatype .
+
+### Data Properties
+
+INPSSafety:partitaIVA a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparataLiberoProfessionista .
+
+INPSSMR:cellulare a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "cellulare"@it,
+        "mobileNumber"@en ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparata ;
+    rdfs:comment "Beneficiary of the Spilt Scheme's mobile number is required to complete the Application Form. "@en,
+        "Numero di telefonia mobile indicato nella domanda di iscrizione alla gestione separata come contatto utile a contattare il beneficiario della domanda di iscrizione alla gestione separata"@it .
+
+INPSSMR:codiceAttivitaAteco a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "ATECOCode"@en,
+        "codice attivita ATECO"@it ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparataLiberoProfessionista ;
+    rdfs:comment "ATECO code is used to identify  a self employed person's areas of work. "@en,
+        "Codice identificativo dell'attività svolta dal lavoratore secondo la classificazione ATECO"@it .
+
+INPSSMR:dataInizioAttivita a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataInizioAttività"@it,
+        "effectiveDate"@it ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparata ;
+    rdfs:comment "Data nella quale il lavoratore ha iniziato a svolgere l'attività per la quale si rende necessaria la sua iscrizione alla gestione separata."@it,
+        "Effective date refers to the date or time when a self employed person or a dependent contractor are legally required to register with the Spilt Scheme due to the fact that they have started their job. "@en .
+
+INPSSMR:dataPresentazioneIscrizioneGestioneSeparata a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "dataPresentazioneIscrizioneGestioneSeparata"@it,
+        "spiltSchemeApplicationFormDate"@en ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparata ;
+    rdfs:comment "Data nella quale la domanda di iscrizione alla gestione separata è stata presentata. La domadna di iscrizione deve essere presentata entro 30 giorni dall'inizio dell'attività lavorativa"@it,
+        "The printout of the Spilt Scheme application form must show the date and time that the application was sent. Apllicants must send their application form within 30 days of their effective date."@en .
+
+INPSSMR:email a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "email"@it,
+        "emailAddress"@en ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparata ;
+    rdfs:comment "Applicants are required to provide an email address.  Email is one of primary forms of communication used by INPS to get in touch with senders. "@en,
+        "Indirizzo di posta elettronica ordinaria dichiarato nella domanda di iscrizione alla gestione separata come contatto utile a raggiungere il beneficiario"@it .
+
+INPSSMR:numeroProtocolloIscrizioneGestioneSeparata a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "numeroProtocolloIscrizioneGestioneSeparata"@it,
+        "spiltSchemeRegistrationAssignedNumber"@en ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparata ;
+    rdfs:comment "A number that is issued to an end-user to indicate that the application form is officialy a piece of record retained as evidence by the INPS institute. "@en,
+        "Codice numerico o alfanumerico che indica l'ingresso del documento recante la domanda di iscrizione alla gestione separata negli archivi INPS, assegnandogli un numero identificativo, progressivo nell'anno solare di riferimento"@it .
+
+INPSSMR:PEC a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "certifiedEmail(PEC)"@en,
+        "PEC"@it ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparata ;
+    rdfs:comment "PEC is a type of certified email system. This is one of the compulsory requirements that a beneficiary of the Spilt Scheme would have to fill in to complete their Application Form. "@en,
+        "Posta Elettronica Certificata. Indirizzo indicato nella domanda di iscrizione alla gestione separata come domicilio digitale del beneficiario della domanda di iscrizione stessa"@it .
+
+INPSSMR:socioStudioAssociato a owl:DatatypeProperty ;
+    rdfs:label "associate Partner"@it,
+        "socio studio associato"@it ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparataLiberoProfessionista ;
+    rdfs:range xsd:boolean ;
+    rdfs:comment "A boolean data type. It refers to a self employed person who can  either be associate partner or not one. "@en,
+        "L'attributo, di tipo booleano, indica se il libero professionista è associato o meno ad uno studio professionale"@it .
+
+INPSSMR:telefono a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "phone Number"@en,
+        "telefono"@it ;
+    rdfs:domain INPSSMR:DomandaIscrizioneGestioneSeparata ;
+    rdfs:comment "Applicants are required to provide a phone number to complete the Spilt Scheme application form."@en,
+        "Numero di telefono indicato come contatto del beneficiario nella domanda di iscrizione alla gestione separata "@it .
+
+### Classes
+
+CPSV:Service a owl:Class .
+
+foaf:Document a owl:Class .
+
+INPSCore:SedeINPS a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSMR:domandaIscrizioneGestioneSeparataInviataA ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSSafety:ContributoGestioneSeparata a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSMR:versatiInGestioneSeparata ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSMR:generaContributi ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSSafety:LavoratoreParasubordinato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSMR:inviaDomandaGestioneSeparataParasubordinato ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "LavoratoreParasubordinato"@it ;
+    owl:disjointWith INPSSafety:LiberoProfessionista .
+
+INPSSafety:LiberoProfessionista a owl:Class .
+
+INPSSafety:LiberoProfessionistaProtetto a owl:Class ;
+    rdfs:label "LiberoProfessionistaProtetto"@en ;
+    rdfs:subClassOf INPSSafety:LiberoProfessionista .
+
+INPSSMR:BeneficiarioDomandaGestioneSeparata a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSSafety:LavoratoreParasubordinato
+                    INPSSafety:LiberoProfessionista ) ] ;
+    rdfs:label "Beneficiario domanda gestione separata"@it,
+        "Beneficiary of spilt scheme application form"@en ;
+    rdfs:comment "A spilt scheme beneficiary is someone, such as a self employed person or a dependet contractor, who is required by law to pay their contributions directly to the INPS spilt scheme."@en,
+        "Il beneficiario della domanda di iscrizione alla gestione separata è il lavoratore (libero professionista o parasubordinato) che versa i suoi contributi  alla Gestione separata a fini previdenziali e assistenziali."@it .
+
+INPSSMR:DomandaIscrizioneGestioneSeparata a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSSMR:DomandaIscrizioneGestioneSeparataLiberoProfessionista
+                    INPSSMR:DomandaIscrizioneGestioneSeparataParasubordinato ) ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSMR:dataInizioAttivita ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSMR:dataPresentazioneIscrizioneGestioneSeparata ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSMR:domandaIscrizioneGestioneSeparataInviataA ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSMR:email ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSMR:generaIscrizioneGestioneSeparata ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSMR:numeroProtocolloIscrizioneGestioneSeparata ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSMR:PEC ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSMR:telefono ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSMR:inviaDomandaIscrizioneGestioneSeparata ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Domanda iscrizione gestione separata"@it,
+        "Spilt scheme application form"@en ;
+    rdfs:subClassOf foaf:Document,
+        L0:Object ;
+    rdfs:comment "La domanda di iscrizione alla gestione separata è il documento che il beneficiario o un suo delegato invia all'INPS per richiedere l'iscrizione alla Gestione separata e recante le informazioni necessarie a tale scopo, come: dati anagrafici, tipologia di lavoratore, tipologia di attività, data di inizio dell'attività lavorativa. Nell'ontologia che descrive i procedimenti legati all'iscrizione dei lavoratori parasubordinati e dei liberi professionisti la classe è  modellata come superclasse di Domanda Iscrizione gestione Separata Libero Professionista e Domanda Iscrizione Gestione Separata Parasubordinato, che rappresentano sue specializzazioni. Inoltre nell'ontologia la domanda di iscrizione è interpretata e descritta come documento compilato e  inviato dal soggetto interessato e ricevuto da INPS entrando a far parte dei suoi archivi."@it,
+        "The Spilt Scheme Application Form is the official form that has to be sent to the INPS service in order to register for this contribution scheme and access an user details summary . Either a beneficiary or an authorised delagate can fill  in the application form. The required information that must be filled out are: person details, employment status, job title and employment start date. The Spilt scheme application form is a superclass of the Self employed spilt scheme application form and the dependent contractor spilt scheme application form. Those ones are in fact two different forms based on a employee status."@en .
+
+INPSSMR:DomandaIscrizioneGestioneSeparataLiberoProfessionista a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSafety:partitaIVA ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSMR:codiceAttivitaAteco ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSMR:inviaDomandaGestioneSeparataLiberoProfessionista ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Domanda iscrizione gestione separata libero professionista"@it,
+        "Self employed spilt scheme application form"@en ;
+    owl:disjointWith INPSSMR:DomandaIscrizioneGestioneSeparataParasubordinato ;
+    rdfs:comment "La classe descrive la domanda di iscrizione inviata a INPS per l'iscrizione alla gestione separata di un Libero professionista, recante quindi i dati significativi per questa categoria di lavoratore. Nell'ontologia è modellata per rappresentare una specializzazione della sua superclasse Domanda iscrizione gestione separata. "@it,
+        "The self employed spilt scheme application form must be used by all applicants who hold the self employed status. This class is sub class of the SpiltSchemeApplicationForm"@en .
+
+INPSSMR:DomandaIscrizioneGestioneSeparataParasubordinato a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSMR:inviaDomandaGestioneSeparataParasubordinato ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Dependent contractor spilt scheme application form"@en,
+        "Domanda iscrizione gestione separata parasubordinato"@it ;
+    rdfs:comment "La classe descrive la domanda di iscrizione inviata a INPS per l'iscrizione alla gestione separata di un lavoratore parasubordinato, recante quindi i dati significativi per questa categoria di lavoratore. Nell'ontologia è modellata per rappresentare una specializzazione della sua superclasse Domanda iscrizione gestione separata. "@it,
+        "The dependent contractor spilt scheme application form must be used by dependent contractors only. The info requested in this form is relevant to this type of application. This class is a sub-class of the Spilt Scheme Application Form class."@en .
+
+INPSSMR:GestioneSeparata a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSMR:iscriveLavoratoreInGestioneSeparata ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSMR:versatiInGestioneSeparata ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Gestione separata"@it,
+        "Spilt scheme"@en ;
+    rdfs:comment "La gestione separata è un fondo pensionistico finanziato con i contributi previdenziali obbligatori dei lavoratori assicurati. Nasce con la Legge n. 335 del 1995 di riforma del sistema pensionistico con lo scopo di estendere la tutela previdenziale a categorie di lavoratori per i quali fino ad allora non era prevista. La gestione separata. estendendo l'Assicurazione Generale Obbligatoria per i lavoratori subordinati garantisce dunque l'assicurazione di invalidità, vecchiaia e superstiti ai lavoratori autonomi che non svolgono nessuna delle atività rientranti nelle gestioni speciali INPS, nè una libera professione in riferimento alla quale è prevista una specifica cassa previdenziale. La legge individua le categorie di lavoratori che devono iscriversi alla gestione separata per assolvere l'obbligo contributivo e beneficiare conseguentemente delle prestazioni previdenziali e assistenziali, tra questi, hanno obbligo di iscrizione i lavoratori parasubordinati e i liberi professionisti per la cui categoria non è prevista una cassa di previdenza dedicata."@it,
+        "The Spilt Scheme is a type of pension scheme, where those who are required by law pay their contributions as well as social insurance. The Spilt Scheme was founded in 1995 legislation no. 355, its main goal is to be an asset for their members who up until that moment did not benefit from any pension scheme. In fact, in Italy some types of self employed people and dependent contractors do not have a relevant scheme like the others. Therefore, the Spilt Scheme is essential to them as it covers their members from: disability insurance, pension insurance, and survivors benefits as well. The legislation in place has determined who are those different types of workers who must enrol in the scheme in order to pay their credited contributions. "@en .
+
+INPSSMR:IscrizioneGestioneSeparata a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSMR:generaContributi ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSMR:iscriveLavoratoreInGestioneSeparata ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSMR:generaIscrizioneGestioneSeparata ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Iscrizione gestione separata"@it,
+        "Spilt scheme registration"@en ;
+    rdfs:subClassOf CPSV:Service,
+        L0:Activity ;
+    rdfs:comment "L'Iscrizione alla gestione separata è la classe che nell'ontologia rappresenta l'evento di iscrizione del lavoratore alla gestione previdenziale. Il concetto è inoltre definito come servizio reso disponibile dall'INPS per effettuare l'azione di iscrizione alla gestione separata, tramite inoltro della domanda di iscrizione."@it,
+        "The Spilt scheme registration class represents the process of enrolment of a member to the spilt scheme. Moreover, this is a service offered and handled by the INPS service. "@en .
+
+INPSSMR:LiberoProfessionistaProtettoConCassa a owl:Class ;
+    rdfs:label "LiberoProfessionistaProtettoConCassa"@en ;
+    rdfs:subClassOf INPSSafety:LiberoProfessionistaProtetto ;
+    owl:disjointWith [ a owl:Restriction ;
+            owl:onProperty INPSSMR:inviaDomandaGestioneSeparataLiberoProfessionista ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:comment "Il libero professionsita protetto con cassa è un libero professionista iscritto ad un albo prfessionale e che versa i contributi in una cassa previdenziale di riferimento per la sua professione ma che svolge contestualmente un'altra attività alvorativa che richiede il versamento dei contributi alla gestione separata INPS"@it .
+
+L0:Activity a owl:Class ;
+    rdfs:label "Activity"@en .
+
+L0:Agent a owl:Class ;
+    rdfs:label "Agent"@en ;
+    owl:disjointWith INPSSMR:BeneficiarioDomandaGestioneSeparata ;
+    rdfs:comment "un agente, sia fisico (ex. una persona, un robot, una quercia), o sociale (ex. una società, un'istituzione, una comunità)"@it .
+
+L0:Object a owl:Class .
+
+[] a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSSMR:inviaDomandaIscrizioneGestioneSeparata ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:unionOf (
+            INPSSMR:BeneficiarioDomandaGestioneSeparata
+            L0:Agent ) .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+<https://w3id.org/italia/social-security/data/separateManagementRegistration/distribution/INPSSMR-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/separateManagementRegistration/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/separateManagementRegistration/latest/separateManagementRegistration.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e alle relazioni che descrivono l'iscrizione alla gestione separata secondi i criteri dell'istituto."@it,
+        "The Italian Spilt Scheme Registration INPS Ontology N-TRIPLES distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Iscrizione alla Gestione Separata"@it,
+        "N-TRIPLES distribution of the INPS ontology - Spilt Scheme Registration"@en .
+
+<https://w3id.org/italia/social-security/data/separateManagementRegistration/distribution/INPSSMR-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/separateManagementRegistration/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/separateManagementRegistration/latest/separateManagementRegistration.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e alle relazioni che descrivono l'iscrizione alla gestione separata secondi i criteri dell'istituto."@it,
+        "The Italian Spilt Scheme Registration INPS Ontology RDF/Turtle distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Iscrizione alla Gestione Separata"@it,
+        "RDF/Turtle distribution of the INPS ontology - Spilt Scheme Registration"@en .
+
+<https://w3id.org/italia/social-security/data/separateManagementRegistration/distribution/INPSSMR-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/separateManagementRegistration/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/separateManagementRegistration/latest/separateManagementRegistration.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e alle relazioni che descrivono l'iscrizione alla gestione separata secondi i criteri dell'istituto."@it,
+        "The Italian Spilt Scheme Registration INPS Ontology RDF/XML"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Iscrizione alla Gestione Separata"@it,
+        "RDF/XML distribution of the INPS ontology - Spilt Scheme Registration"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

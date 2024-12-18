@@ -1,0 +1,886 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:dcat="http://www.w3.org/ns/dcat#"
+         xmlns:vcard="http://www.w3.org/2006/vcard/ns#">
+
+  <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/">
+    <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/1.0"/>
+    <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/"/>
+    <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/"/>
+    <owl:imports rdf:resource="https://w3id.org/italia/onto/CPV/"/>
+    <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/"/>
+    <owl:imports rdf:resource="https://w3id.org/italia/onto/RO/"/>
+    <rdfs:label xml:lang="en">Social Security  Contribution Account Statement INPS Ontology</rdfs:label>
+    <rdfs:label xml:lang="it">Ontologia Estratto Conto Contributivo Previdenziale di INPS</rdfs:label>
+    <rdfs:comment xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono l' Estratto Conto Contributivo Previdenziale secondo i criteri dell'istituto.</rdfs:comment>
+    <rdfs:comment xml:lang="en">This INPS ontology describes the main entities and proprieties of the Social Security  Contribution Account Statement according to the INPS agency.</rdfs:comment>
+    <owl:versionInfo xml:lang="en">1.0 - Modified on 29 October 2024</owl:versionInfo>
+    <owl:versionInfo xml:lang="it">1.0 - Modificata il 29 Ottobre 2024</owl:versionInfo>
+    <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/"/>
+    <adms:acronym>inps</adms:acronym>
+    <adms:hasContributor>
+      <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/td">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <dc:identifier>TD</dc:identifier>
+        <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
+        <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
+      </rdf:Description>
+    </adms:hasContributor>
+
+    <adms:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale"/>
+    <adms:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
+    <adms:hasSemanticAssetDistribution>
+      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/contributionAccounStatement/distribution/PCAS-N-TRIPLES">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/contributionAccounStatement/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/contributionAccounStatement/latest/contributionAccounStatement.n3"/>
+        <dc:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e alle relazioni che descrivono l' Estratto Conto Contributivo Previdenziale secondi i criteri dell'istituto.</dc:description>
+        <dc:description xml:lang="en">Social Security  Contribution Account Statement INPS Ontology N-TRIPLES distribution</dc:description>
+        <dc:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
+        <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dc:title xml:lang="it">Distribuzione N-TRIPLES dell'ontologia INPS - Estratto Conto Contributivo Previdenziale</dc:title>
+        <dc:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - Social Security  Contribution Account Statement</dc:title>
+      </adms:SemanticAssetDistribution>
+    </adms:hasSemanticAssetDistribution>
+
+    <adms:hasSemanticAssetDistribution>
+      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/contributionAccounStatement/distribution/PCAS-RDF-TURTLE">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/contributionAccounStatement/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/contributionAccounStatement/latest/contributionAccounStatement.ttl"/>
+        <dc:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e alle relazioni che descrivono l' Estratto Conto Contributivo Previdenziale secondi i criteri dell'istituto.</dc:description>
+        <dc:description xml:lang="en">Social Security  Contribution Account Statement INPS Ontology RDF/Turtle distribution</dc:description>
+        <dc:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+        <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dc:title xml:lang="it">Distribuzione RDF/Turtle dell'ontologia INPS - Estratto Conto Contributivo Previdenziale</dc:title>
+        <dc:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - Social Security  Contribution Account Statement</dc:title>
+      </adms:SemanticAssetDistribution>
+    </adms:hasSemanticAssetDistribution>
+
+    <adms:hasSemanticAssetDistribution>
+      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/contributionAccounStatement/distribution/PCAS-RDF-XML">
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/contributionAccounStatement/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/contributionAccounStatement/latest/contributionAccounStatement.owl"/>
+        <dc:description xml:lang="it">Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e alle relazioni che descrivono l' Estratto Conto Contributivo Previdenziale secondi i criteri dell'istituto.</dc:description>
+        <dc:description xml:lang="en">Social Security  Contribution Account Statement INPS Ontology RDF/XML</dc:description>
+        <dc:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+        <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dc:title xml:lang="it">Distribuzione RDF/XML dell'ontologia INPS - Estratto Conto Contributivo Previdenziale</dc:title>
+        <dc:title xml:lang="en">RDF/XML distribution of the INPS ontology - Social Security  Contribution Account Statement</dc:title>
+      </adms:SemanticAssetDistribution>
+    </adms:hasSemanticAssetDistribution>
+
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
+    <adms:last rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/1.0"/>
+    <adms:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/contributionAccounStatement/</adms:officialURI>
+    <adms:prefix>INPSContributionAccountStatement</adms:prefix>
+    <adms:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
+    <adms:status>catalogued</adms:status>
+    <adms:status>published</adms:status>
+    <adms:target xml:lang="it">Cittadini</adms:target>
+    <adms:target xml:lang="it">Imprese</adms:target>
+    <adms:target xml:lang="it">Pubbliche Amministrazioni</adms:target>
+    <adms:type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
+    <dcat:contactPoint>
+      <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+        <dc:identifier>DirezioneCentraleTII</dc:identifier>
+        <foaf:name xml:lang="en">INPS - Central Management of Information Technology and Innovations</foaf:name>
+        <foaf:name xml:lang="it">INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</foaf:name>
+        <vcard:fn>INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it"/>
+      </rdf:Description>
+    </dcat:contactPoint>
+
+    <dcat:keyword xml:lang="en">Contribution Account Statement</dcat:keyword>
+    <dcat:keyword xml:lang="it">Estratto Conto Contributivo</dcat:keyword>
+    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+    <dc:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
+    <dc:creator rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+    <dc:description xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono l' Estratto Conto Contributivo Previdenziale secondo i criteri dell'istituto.</dc:description>
+    <dc:description xml:lang="en">This INPS ontology describes the main entities and proprieties of the Social Security  Contribution Account Statement according to the INPS agency.</dc:description>
+    <dc:identifier>https://w3id.org/italia/social-security/onto/contributionAccounStatement</dc:identifier>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dc:issued>
+    <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+    <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dc:modified>
+    <dc:publisher rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+    <dc:rightsHolder rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+    <dc:title xml:lang="en">Social Security  Contribution Account Statement INPS Ontology</dc:title>
+    <dc:title xml:lang="it">Ontologia Estratto Conto Contributivo Previdenziale di INPS</dc:title>
+  </owl:Ontology>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/consultaEstrattoContoContributivo">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/Lavoratore"/>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/EstrattoContoContributivo"/>
+    <rdfs:comment xml:lang="en">Defines the relationship between the Worker, Delegate classes and the EstrattoContoContributivo class</rdfs:comment>
+    <rdfs:comment xml:lang="it">Definisce la relazione tra le classi Lavoratore, Delegato e la classe EstrattoContoContributivo</rdfs:comment>
+    <rdfs:label xml:lang="en">consult Contribution Account Statement</rdfs:label>
+    <rdfs:label xml:lang="it">consultaEstrattoContoContributivo</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/contributoRiferitoAEstrattoContoContributivo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoPrevidenziale"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/EstrattoContoContributivo"/>
+    <rdfs:comment xml:lang="en">Defines the relationship between the Social Security Contribution class and the Contribution Account Statement class</rdfs:comment>
+    <rdfs:comment xml:lang="it">Definisce la relazione tra la classe Contributo Previdenziale e la classe Estratto Conto Contributivo</rdfs:comment>
+    <rdfs:label xml:lang="en">Contribution Referring To Contribution Account Statement</rdfs:label>
+    <rdfs:label xml:lang="it">contributoRiferitoAEstrattoContoContributivo</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/EstrattoContoContributivo"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale"/>
+    <rdfs:comment xml:lang="en">Defines the relationship between the Contribution Account Statement class and the classes Separate Management Account Statement, Management Account Statement for Entertainment and Professional Sports Workers, Public Employees Account Statement, General Scheme Social Security Account Statement</rdfs:comment>
+    <rdfs:comment xml:lang="it">Definisce la relazione tra la classe EstrattoContoContributivo e le classi EstrattoContoGestioneSeparata, EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti, EstrattoContoDipendentiPubblici, EstrattoContoPrevidenzialeRegimeGenerale</rdfs:comment>
+    <rdfs:label xml:lang="en">Gives Access to Account Statemen</rdfs:label>
+    <rdfs:label xml:lang="it">dàAccessoAEstrattoConto</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoContributivoRegimeGenerale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale"/>
+    <rdfs:comment xml:lang="en">Defines the relationship between the Worker class and the General Scheme Social Security Account Statement class</rdfs:comment>
+    <rdfs:comment xml:lang="it">Definisce la relazione tra la classe Lavoratore e la classe EstrattoContoPrevidenzialeRegimeGenerale</rdfs:comment>
+    <rdfs:label xml:lang="it">haAccessoAEstrattoContoPrevidenzialeRegimeGenerale</rdfs:label>
+    <rdfs:label xml:lang="en">has access to the General Scheme Social Security Account Statement</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoDipendentiPubblici">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/DipendentePubblico"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici"/>
+    <rdfs:comment xml:lang="en">Defines the relationship between the PublicEmployee class and the PublicEmployeeAccountStatement class</rdfs:comment>
+    <rdfs:comment xml:lang="it">Definisce la relazione tra la classe DipendentePubblico e la classe EstrattoContoDipendentiPubblici</rdfs:comment>
+    <rdfs:label xml:lang="it">haAccessoAEstrattoContoDipendentiPubblici</rdfs:label>
+    <rdfs:label xml:lang="en">hasAccessToPublicEmployeesAccountStatement</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoriDelloSpettacoloESportiviProfessionisti"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"/>
+    <rdfs:comment xml:lang="en">Defines the relationship between the LavoratoriDelloSpettacoloEsportiviProfessionalisti class and the EstrattoContoGestioneLavoratoriDelloSpettacoloEsportiviProfessionalisti class</rdfs:comment>
+    <rdfs:comment xml:lang="it">Definisce la relazione tra la classe LavoratoriDelloSpettacoloESportiviProfessionisti e la classe EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</rdfs:comment>
+    <rdfs:label xml:lang="it">haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</rdfs:label>
+    <rdfs:label xml:lang="en">hasAccessAccount StatementManagementWorkersEntertainmentSportspeopleProfessionals</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneSeparata">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoreIscrittoAGestioneSeparata"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata"/>
+    <rdfs:comment xml:lang="en">Defines the relationship between the WorkerEnrolledAGestioneSeparata class and the EstrattoContoGestioneSeparata class</rdfs:comment>
+    <rdfs:comment xml:lang="it">Definisce la relazione tra la classe LavoratoreIscrittoAGestioneSeparata e la classe EstrattoContoGestioneSeparata</rdfs:comment>
+    <rdfs:label xml:lang="it">haAccessoAEstrattoContoGestioneSeparata</rdfs:label>
+    <rdfs:label xml:lang="en">hasAccountStatementAccessSeparateManagement</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/haContributoPrevidenziale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/Lavoratore"/>
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoPrevidenziale"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/haEstrattoContoContributivo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <rdfs:domain>
+      <owl:Class rdf:about="https://w3id.org/italia/onto/CPV/Alive">
+      </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/EstrattoContoContributivo"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/haTipoDiContribuzione">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoPrevidenziale"/>
+    <rdfs:range>
+      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/TipoDiContribuzione">
+      </owl:Class>
+    </rdfs:range>
+
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/aziendaVersatrice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio"/>
+    <rdfs:comment xml:lang="it">Indica l'azienda che versa i contributi al lavoratore</rdfs:comment>
+    <rdfs:comment xml:lang="en">Indicates the company that pays the contributions to the worker</rdfs:comment>
+    <rdfs:label xml:lang="it">azienda versatrice</rdfs:label>
+    <rdfs:label xml:lang="en">pouring company</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/note">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio"/>
+    <rdfs:comment xml:lang="it">Note</rdfs:comment>
+    <rdfs:comment xml:lang="en">notes</rdfs:comment>
+    <rdfs:label xml:lang="it">note</rdfs:label>
+    <rdfs:label xml:lang="en">notes</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/periodoDiRiferimento">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio"/>
+    <rdfs:comment xml:lang="it">Indica il periodo di riferimento (da,a) della riga relativa all'estratto conto</rdfs:comment>
+    <rdfs:comment xml:lang="en">Indicates the reference period (from, to) of the line relating to the bank statement</rdfs:comment>
+    <rdfs:label xml:lang="it">periodo di riferimento</rdfs:label>
+    <rdfs:label xml:lang="en">reference period</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/imponibileContributivo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroUnitàTemporaliPerDiritto">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroUnitàTemporaliPerMisura">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/unitàDiMisuraTemporale">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio"/>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/onto/CPSV/Service">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/ContributoFacoltativo">
+    <rdfs:comment xml:lang="it">La classe rappresenta i dati dei contributi figurativi che sono contributi previdenziali che vengono accreditati, a domanda o d’ufficio,  per i periodi di assenza dal lavoro o di retribuzione ridotta senza onere a carico dei lavoratori (privati/pubblici) </rdfs:comment>
+    <rdfs:comment xml:lang="en">The class represents the data of the notional contributions which are social security contributions that are credited, upon request or automatically, for periods of absence from work or reduced pay without charge to the workers (private/public)</rdfs:comment>
+    <rdfs:label xml:lang="it">Contributo Facoltativo</rdfs:label>
+    <rdfs:label xml:lang="en">Optional contribution</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoDipendentiPubblici"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <rdfs:comment xml:lang="it">La classe rappresenta l'estratto conto dei dipendenti pubblici</rdfs:comment>
+    <rdfs:comment xml:lang="en">The class represents the bank statement of public employees</rdfs:comment>
+    <rdfs:label xml:lang="it">EstrattoContoDipendentiPubblici</rdfs:label>
+    <rdfs:label xml:lang="en">Public Employees Account Statement</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <rdfs:comment xml:lang="it">La classe rappresenta l'estratto conto dei lavoratori dello spettacolo e dello sport</rdfs:comment>
+    <rdfs:comment xml:lang="en">The class represents the balance sheet of entertainment and sports workers</rdfs:comment>
+    <rdfs:label xml:lang="en">Account Statement Management of Entertainment Workers and Professional Athletes</rdfs:label>
+    <rdfs:label xml:lang="it">EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneSeparata"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <rdfs:comment xml:lang="it">La classe rappresenta l'estratto conto degli Iscritti alla Gestione Separata</rdfs:comment>
+    <rdfs:comment xml:lang="en">The class represents the account statement of the members of the Separate Account</rdfs:comment>
+    <rdfs:label xml:lang="it">EstrattoContoGestioneSeparata</rdfs:label>
+    <rdfs:label xml:lang="en">Separate Management Account Statement</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoContributivoRegimeGenerale"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <rdfs:comment xml:lang="it">La classe rappresenta l'estratto conto previdenziale regime generale</rdfs:comment>
+    <rdfs:comment xml:lang="en">The class represents the general regime social security account statement</rdfs:comment>
+    <rdfs:label xml:lang="it">EstrattoContoPrevidenzialeRegimeGenerale</rdfs:label>
+    <rdfs:label xml:lang="en">General Social Security Account Statement</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoreIscrittoAGestioneSeparata">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/separateManagementRegistration/LiberoProfessionistaIscrittoGestioneSeparata"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomo"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomoOccasionale"/>
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreParasubordinato"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneSeparata"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <rdfs:comment xml:lang="it">La classe rappresenta il lavoratore iscritto alla Gestione Separata</rdfs:comment>
+    <rdfs:comment xml:lang="en">The class represents the worker registered with the Separate Management</rdfs:comment>
+    <rdfs:label xml:lang="it">LavoratoreIscrittoAGestioneSeparata</rdfs:label>
+    <rdfs:label xml:lang="en">Worker Registered in Separate Management</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoriDelloSpettacoloESportiviProfessionisti">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/Lavoratore"/>
+    <rdfs:comment xml:lang="it">La classe rappresenta i lavoratori dello spettacolo e dello sport</rdfs:comment>
+    <rdfs:comment xml:lang="en">The class represents entertainment and sports workers</rdfs:comment>
+    <rdfs:label xml:lang="en">Entertainment workers and professional athletes</rdfs:label>
+    <rdfs:label xml:lang="it">LavoratoriDelloSpettacoloESportiviProfessionisti</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/separateManagementRegistration/LiberoProfessionistaIscrittoGestioneSeparata">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato">
+    <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/Lavoratore"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoDaRiscatto">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoFigurativo">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/aziendaVersatrice"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/note"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/periodoDiRiferimento"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/imponibileContributivo"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroUnitàTemporaliPerDiritto"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroUnitàTemporaliPerMisura"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/unitàDiMisuraTemporale"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoPrevidenziale">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/contributoRiferitoAEstrattoContoContributivo"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/haTipoDiContribuzione"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/haContributoPrevidenziale"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoVolontario">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/DipendentePubblico">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoDipendentiPubblici"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/EstrattoContoContributivo">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/consultaEstrattoContoContributivo"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/contributoRiferitoAEstrattoContoContributivo"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty>
+          <rdf:Description>
+            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/haEstrattoContoContributivo"/>
+          </rdf:Description>
+        </owl:onProperty>
+
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/onto/CPSV/Service"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/Lavoratore">
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoContributivoRegimeGenerale"/>
+        <owl:someValuesFrom>
+          <owl:Class>
+            <owl:complementOf>
+              <owl:Class>
+                <owl:unionOf>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoreIscrittoAGestioneSeparata"/>
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoriDelloSpettacoloESportiviProfessionisti"/>
+                        <rdf:rest>
+                          <rdf:Description>
+                            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/DipendentePubblico"/>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                          </rdf:Description>
+                        </rdf:rest>
+
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </owl:unionOf>
+
+              </owl:Class>
+            </owl:complementOf>
+
+          </owl:Class>
+        </owl:someValuesFrom>
+
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomo">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomoOccasionale">
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreParasubordinato">
+  </owl:Class>
+
+  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
+    <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <dc:identifier>inps</dc:identifier>
+    <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
+    <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
+  </rdf:Description>
+
+  <owl:Class rdf:nodeID="genid52">
+    <owl:unionOf>
+      <rdf:Description>
+        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/Lavoratore"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:Description>
+        </rdf:rest>
+
+      </rdf:Description>
+    </owl:unionOf>
+
+    <owl:equivalentClass>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/consultaEstrattoContoContributivo"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+      </owl:Restriction>
+    </owl:equivalentClass>
+
+  </owl:Class>
+
+  <owl:Class rdf:nodeID="genid56">
+    <owl:unionOf>
+      <rdf:Description>
+        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/ContributoFacoltativo"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoDaRiscatto"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoFigurativo"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio"/>
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoVolontario"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </rdf:rest>
+
+      </rdf:Description>
+    </owl:unionOf>
+
+    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoPrevidenziale"/>
+  </owl:Class>
+
+  <owl:Class rdf:nodeID="genid62">
+    <owl:unionOf>
+      <rdf:Description>
+        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </rdf:rest>
+
+      </rdf:Description>
+    </owl:unionOf>
+
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+  </owl:Class>
+
+  <owl:AllDisjointClasses rdf:nodeID="genid67">
+    <owl:members>
+      <rdf:Description>
+        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/ContributoFacoltativo"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoDaRiscatto"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoFigurativo"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio"/>
+                    <rdf:rest>
+                      <rdf:Description>
+                        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoVolontario"/>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                      </rdf:Description>
+                    </rdf:rest>
+
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </rdf:rest>
+
+      </rdf:Description>
+    </owl:members>
+
+  </owl:AllDisjointClasses>
+
+  <owl:AllDisjointClasses rdf:nodeID="genid73">
+    <owl:members>
+      <rdf:Description>
+        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </rdf:rest>
+
+      </rdf:Description>
+    </owl:members>
+
+  </owl:AllDisjointClasses>
+
+  <owl:AllDisjointClasses rdf:nodeID="genid78">
+    <owl:members>
+      <rdf:Description>
+        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/separateManagementRegistration/LiberoProfessionistaIscrittoGestioneSeparata"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomo"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomoOccasionale"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreParasubordinato"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </rdf:rest>
+
+      </rdf:Description>
+    </owl:members>
+
+  </owl:AllDisjointClasses>
+
+</rdf:RDF>

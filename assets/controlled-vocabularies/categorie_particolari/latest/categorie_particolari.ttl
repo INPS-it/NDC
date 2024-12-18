@@ -1,0 +1,339 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/CategorieParticolari>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement Specific Category Controlled Vocabulary"@en,
+        "Vocabolario controllato delle categorie particolari del percettore somme come riportati dalla Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato delle categorie particolari di una Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the defined set of special categories in a CU Statement"@en,
+        "Vocabolario controllato delle categorie particolari del percettore somme come riportate dalla Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/CP_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CP_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CP_RDF_TURTLE> ;
+    dcat:keyword "categorie particolari della certificazione unica"@it,
+        "certificazione unica"@it,
+        "CU statement special categories"@en,
+        "inps"@en,
+        "inps"@it,
+        "unique certification"@en ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement Specific Category Controlled Vocabulary"@en,
+        "Vocabolario controllato delle categorie particolari come riportate dalla Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari" ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-24"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:relation <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/eventi_eccezionali> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement Specific Category Controlled Vocabulary"@en,
+        "Vocabolario controllato delle categorie particolari come riportate dalla Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "categorie_particolari" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/A>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/B>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/C>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/D>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/E>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/F>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/G>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/H>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/K>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/L>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/M>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/N>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/P>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Q>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/R>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/S>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/T>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/T1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/T2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/T3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/T4>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/U>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/V>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/W>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Y>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Z>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Z2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Z3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Z4> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/A> a skos:Concept ;
+    rdfs:label "Pensionati"@it ;
+    skos:prefLabel "Pensionati"@it ;
+    dct:identifier "A"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "A"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/B> a skos:Concept ;
+    rdfs:label "Pensionati da casellario pensionistico"@it ;
+    skos:prefLabel "Pensionati da casellario pensionistico"@it ;
+    dct:identifier "B"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "B"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/C> a skos:Concept ;
+    rdfs:label "Insegnanti universitari, compresi docenti, incaricati, ricercatori e assimilati"@it ;
+    skos:prefLabel "Insegnanti universitari, compresi docenti, incaricati, ricercatori e assimilati"@it ;
+    dct:identifier "C"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "C"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/D> a skos:Concept ;
+    rdfs:label "Insegnanti e presidi di scuola media"@it ;
+    skos:prefLabel "Insegnanti e presidi di scuola media"@it ;
+    dct:identifier "D"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "D"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/E> a skos:Concept ;
+    rdfs:label "Insegnanti e direttori di scuola elementare e materna"@it ;
+    skos:prefLabel "Insegnanti e direttori di scuola elementare e materna"@it ;
+    dct:identifier "E"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "E"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/F> a skos:Concept ;
+    rdfs:label "Graduati e truppa"@it ;
+    skos:prefLabel "Graduati e truppa"@it ;
+    dct:identifier "F"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "F"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/G> a skos:Concept ;
+    rdfs:label "Sottufficiali"@it ;
+    skos:prefLabel "Sottufficiali"@it ;
+    dct:identifier "G"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "G"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/H> a skos:Concept ;
+    rdfs:label "Ufficiali"@it ;
+    skos:prefLabel "Ufficiali"@it ;
+    dct:identifier "H"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "H"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/K> a skos:Concept ;
+    rdfs:label "Magistrati"@it ;
+    skos:prefLabel "Magistrati"@it ;
+    dct:identifier "K"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "K"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/L> a skos:Concept ;
+    rdfs:label "Dipendenti all’estero"@it ;
+    skos:prefLabel "Dipendenti all’estero"@it ;
+    dct:identifier "L"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "L"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/M> a skos:Concept ;
+    rdfs:label "Soci delle cooperative di produzione e lavoro, delle cooperative di servizi, delle cooperative agricole e di prima trasformazione dei prodotti agricoli e delle cooperative della piccola pesca (art. 50, comma 1, lett. a), del Tuir)"@it ;
+    skos:prefLabel "Soci delle cooperative di produzione e lavoro, delle cooperative di servizi, delle cooperative agricole e di prima trasformazione dei prodotti agricoli e delle cooperative della piccola pesca (art. 50, comma 1, lett. a), del Tuir)"@it ;
+    dct:identifier "M"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "M"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/N> a skos:Concept ;
+    rdfs:label "Percipienti indennità e compensi erogati per incarichi svolti in qualità di dipendente (art. 50, comma 1, lett. b), del Tuir)"@it ;
+    skos:prefLabel "Percipienti indennità e compensi erogati per incarichi svolti in qualità di dipendente (art. 50, comma 1, lett. b), del Tuir)"@it ;
+    dct:identifier "N"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "N"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/P> a skos:Concept ;
+    rdfs:label "Beneficiari di borse di studio o di assegno, premio o sussidio per fini di studio o di addestramento professionale, non legati da rapporti di lavoro dipendente nei confronti del soggetto erogante (art. 50, comma 1, lett. c) del Tuir)"@it ;
+    skos:prefLabel "Beneficiari di borse di studio o di assegno, premio o sussidio per fini di studio o di addestramento professionale, non legati da rapporti di lavoro dipendente nei confronti del soggetto erogante (art. 50, comma 1, lett. c) del Tuir)"@it ;
+    dct:identifier "P"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "P"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Q> a skos:Concept ;
+    rdfs:label "Ministri del culto (art. 50, comma 1, lett. d), del Tuir)"@it ;
+    skos:prefLabel "Ministri del culto (art. 50, comma 1, lett. d), del Tuir)"@it ;
+    dct:identifier "Q"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "Q"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/R> a skos:Concept ;
+    rdfs:label "Medici che svolgono attività libero-professionale intramuraria (art. 50, comma 1, lett. e), del Tuir)"@it ;
+    skos:prefLabel "Medici che svolgono attività libero-professionale intramuraria (art. 50, comma 1, lett. e), del Tuir)"@it ;
+    dct:identifier "R"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "R"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/S> a skos:Concept ;
+    rdfs:label "Percipienti indennità, gettoni di presenza e altri compensi corrisposti dallo Stato, dalle Regioni, dalle Province e dai Comuni per l’esercizio di pubbliche funzioni, membri delle Commissioni tributarie, giudici di pace e esperti del Tribunale di sorveglianza (art. 50, comma 1, lett. f), del Tuir)"@it ;
+    skos:prefLabel "Percipienti indennità, gettoni di presenza e altri compensi corrisposti dallo Stato, dalle Regioni, dalle Province e dai Comuni per l’esercizio di pubbliche funzioni, membri delle Commissioni tributarie, giudici di pace e esperti del Tribunale di sorveglianza (art. 50, comma 1, lett. f), del Tuir)"@it ;
+    dct:identifier "S"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "S"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/T> a skos:Concept ;
+    rdfs:label "Percipienti indennità, comunque denominate, erogate per le cariche elettive di cui all’art. 114 della Costituzione (indennità per i consiglieri regionali, provinciali e comunali) e alla L. 27 dicembre 1985, n. 816 (indennità per gli amministratori locali, ad esempio sindaci, assessori comunali, presidente e assessori provinciali, ecc.) (art. 50, comma 1, lett. g), del Tuir)"@it ;
+    skos:prefLabel "Percipienti indennità, comunque denominate, erogate per le cariche elettive di cui all’art. 114 della Costituzione (indennità per i consiglieri regionali, provinciali e comunali) e alla L. 27 dicembre 1985, n. 816 (indennità per gli amministratori locali, ad esempio sindaci, assessori comunali, presidente e assessori provinciali, ecc.) (art. 50, comma 1, lett. g), del Tuir)"@it ;
+    dct:identifier "T"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "T"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/T1> a skos:Concept ;
+    rdfs:label "Indennità a parlamentare o a giudice costituzionale"@it ;
+    skos:prefLabel "Indennità a parlamentare o a giudice costituzionale"@it ;
+    dct:identifier "T1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "T1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/T2> a skos:Concept ;
+    rdfs:label "Assegno vitalizio diretto o di reversibilità a parlamentare o a giudice costituzionale"@it ;
+    skos:prefLabel "Assegno vitalizio diretto o di reversibilità a parlamentare o a giudice costituzionale"@it ;
+    dct:identifier "T2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "T2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/T3> a skos:Concept ;
+    rdfs:label "Indennità o assegno vitalizio a parlamentare cessato dal mandato in corso d’anno"@it ;
+    skos:prefLabel "Indennità o assegno vitalizio a parlamentare cessato dal mandato in corso d’anno"@it ;
+    dct:identifier "T3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "T3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/T4> a skos:Concept ;
+    rdfs:label "Corte Costituzionale categoria ad esaurimento"@it ;
+    skos:prefLabel "Corte Costituzionale categoria ad esaurimento"@it ;
+    dct:identifier "T4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "T4"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/U> a skos:Concept ;
+    rdfs:label "Percipienti rendite vitalizie e rendite a tempo determinato, costituite a titolo oneroso (art. 50, comma 1, lett. h), del Tuir)"@it ;
+    skos:prefLabel "Percipienti rendite vitalizie e rendite a tempo determinato, costituite a titolo oneroso (art. 50, comma 1, lett. h), del Tuir)"@it ;
+    dct:identifier "U"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "U"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/V> a skos:Concept ;
+    rdfs:label "Percipienti prestazioni comunque erogate in forma di trattamento periodico dalle forme pensionistiche complementari, ai sensi del D.Lgs. 21 aprile 1993, n. 124 (art. 50, comma 1, lett. h-bis), del Tuir)"@it ;
+    skos:prefLabel "Percipienti prestazioni comunque erogate in forma di trattamento periodico dalle forme pensionistiche complementari, ai sensi del D.Lgs. 21 aprile 1993, n. 124 (art. 50, comma 1, lett. h-bis), del Tuir)"@it ;
+    dct:identifier "V"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "V"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/W> a skos:Concept ;
+    rdfs:label "Percipienti assegni periodici, comunque denominati, alla cui produzione non concorrono né capitale né lavoro (art. 50, comma 1, lett. i), del Tuir)"@it ;
+    skos:prefLabel "Percipienti assegni periodici, comunque denominati, alla cui produzione non concorrono né capitale né lavoro (art. 50, comma 1, lett. i), del Tuir)"@it ;
+    dct:identifier "W"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "W"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Y> a skos:Concept ;
+    rdfs:label "Lavoratori impegnati in lavori socialmente utili (art. 50, comma 1, lett. l), del Tuir)"@it ;
+    skos:prefLabel "Lavoratori impegnati in lavori socialmente utili (art. 50, comma 1, lett. l), del Tuir)"@it ;
+    dct:identifier "Y"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "Y"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Z> a skos:Concept ;
+    rdfs:label "Eredi"@it ;
+    skos:prefLabel "Eredi"@it ;
+    dct:identifier "Z"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "Z"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Z2> a skos:Concept ;
+    rdfs:label "Ex coniuge (in caso di procedure di pignoramento presso terzi)"@it ;
+    skos:prefLabel "Ex coniuge (in caso di procedure di pignoramento presso terzi)"@it ;
+    dct:identifier "Z2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "Z2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Z3> a skos:Concept ;
+    rdfs:label "Soci di cooperative artigiane di cui legge n. 208 del 2005"@it ;
+    skos:prefLabel "Soci di cooperative artigiane di cui legge n. 208 del 2005"@it ;
+    dct:identifier "Z3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "Z3"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari/Z4> a skos:Concept ;
+    rdfs:label "Dipendenti di ditta appaltatrice inadempiente"@it ;
+    skos:prefLabel "Dipendenti di ditta appaltatrice inadempiente"@it ;
+    dct:identifier "Z4"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/categorie_particolari> ;
+    skos:notation "Z4"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CP_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/categorie_particolari/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/categorie_particolari/latest/categorie_particolari.csv> ;
+    dct:description "CU statement specific category controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato sulle categorie particolari del percettore somme nella certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement specific category controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato sulle categorie particolari del percettore somme nella certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CP_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/categorie_particolari/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/categorie_particolari/latest/categorie_particolari.json> ;
+    dct:description "CU statement specific category controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato sulle categorie particolari del percettore somme nella certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement specific category controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato sulle categorie particolari del percettore somme nella certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CP_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/categorie_particolari/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/categorie_particolari/latest/categorie_particolari.ttl> ;
+    dct:description "CU statement specific category controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato sulle categorie particolari del percettore somme nella certificazione unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU specific category controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato sulle categorie particolari del percettore somme nella certificazione unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

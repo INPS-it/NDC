@@ -1,0 +1,852 @@
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/1.0> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/CLV/> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/COV/> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/CPV/> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/l0/> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/RO/> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2000/01/rdf-schema#label> "Self Employed Portal INPS Ontology"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia Cassetto Previdenziale Libero Professionista di INPS"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontologia INPS relativa alle entit\u00E0 e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell'istituto."@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2000/01/rdf-schema#comment> "This INPS ontology describes the main entities and proprieties of the Self employed Portal according to the INPS agency."@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0 - Modified on 29 October 2024"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2002/07/owl#versionInfo> "1.0 - Modificata il 29 Ottobre 2024"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/acronym> "inps" .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasContributor> <https://w3id.org/italia/social-security/data/organization/td> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasFormalityLevel> <https://w3id.org/italia/onto/ADMS/Formal> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasKeyClass> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasKeyClass> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasKeyClass> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasOntologyLanguage> <https://w3id.org/italia/onto/ADMS/OWL> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution> <https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution> <https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution> <https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasTask> <https://w3id.org/italia/onto/ADMS/AnnotationTask> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasTask> <https://w3id.org/italia/onto/ADMS/QueryFormulationTask> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/hasTask> <https://w3id.org/italia/onto/ADMS/SearchTask> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/last> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/1.0> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/officialURI> "https://w3id.org/italia/social-security/onto/selfEmploymentPortal/"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/prefix> "INPSSEP" .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/semanticAssetInUse> <https://w3id.org/italia/data/project/NDC> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/status> "catalogued" .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/status> "published" .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/target> "Cittadini"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/target> "Imprese"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/target> "Pubbliche Amministrazioni"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <https://w3id.org/italia/onto/ADMS/type> <https://w3id.org/italia/onto/ADMS/ServiceOnytology> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/ns/dcat#contactPoint> <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/ns/dcat#keyword> "Self Employed Portal"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/ns/dcat#keyword> "Cassetto Previdenziale Libero Professionista"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/ns/dcat#keyword> "Debit notice"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/ns/dcat#keyword> "Avviso di debito"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/ns/dcat#keyword> "Cancellation request"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/ns/dcat#keyword> "Domanda di annullamento"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://www.w3.org/ns/dcat#theme> <http://publications.europa.eu/resource/authority/data-theme/SOCI> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/accrualPeriodicity> <http://publications.europa.eu/resource/authority/frequency/IRREG> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/creator> <https://w3id.org/italia/social-security/data/organization/inps> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/description> "Ontologia INPS relativa alle entit\u00E0 e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell'istituto."@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/description> "This INPS ontology describes the main entities and proprieties of the Self Employed Portal according to the INPS agency."@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/identifier> "https://w3id.org/italia/social-security/onto/selfEmploymentPortal" .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/issued> "2024-10-29T00:00:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/language> <http://publications.europa.eu/resource/authority/language/ENG> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/language> <http://publications.europa.eu/resource/authority/language/ITA> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/modified> "2024-10-29T00:00:00+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/publisher> <https://w3id.org/italia/social-security/data/organization/inps> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/rightsHolder> <https://w3id.org/italia/social-security/data/organization/inps> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/title> "Self Employed Portal INPS Ontology"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> <http://purl.org/dc/terms/title> "Ontologia Cassetto Previdenziale Libero Professionista di INPS "@it .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property descrive il collegamento tra il cassetto previdenziale e la sua utenza di riferimento"@it .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#label> "consulta cassetto previdenziale INPS"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega la richiesta di compensazione con la domanda di rimborso dei contributi non dovuti "@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property links the compensation with the request for reimbursement of undue contributions"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#label> "compensation requested by sending an application"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#label> "compensazione richiesta tramite invio domanda"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#range> _:genid1 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega la sezione del cassetto previdenziale dedicata alla Rendicontaizone della gestione separata con il gruppo di oggetti dei quali rende disponibile la consultazione (Contributi versati, Compensazioni o Rimbordi riv\u00C3\u00ACcevuti)"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega la sezione del cassetto previdenziale dedicata alla Rendicontaizone della gestione separata con il gruppo di oggetti dei quali rende disponibile la consultazione (Contributi versati, Compensazioni o Rimbordi riv\u00ECcevuti)"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property connects the section of the pension drawer dedicated to the Reporting of the separate management with the group of objects for which it makes consultation available (Contributions paid, Compensations or Refunds received)"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#label> "allows consultation of"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi> <http://www.w3.org/2000/01/rdf-schema#label> "consente consultazione di"@it .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#unionOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega il servizio Avviso di addebito con l'istanza che consente di inviare, la Domanda di annullamento"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property connects the Charge Notice service with the instance that allows you to submit the Cancellation Request"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento> <http://www.w3.org/2000/01/rdf-schema#label> "allows sending cancellation request"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento> <http://www.w3.org/2000/01/rdf-schema#label> "consente invio domanda di annullamento"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega l'avviso di addebito con la domanda di sospensione"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property links the charge notice with the suspension request"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione> <http://www.w3.org/2000/01/rdf-schema#label> "allows sending suspension request"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione> <http://www.w3.org/2000/01/rdf-schema#label> "consente invio domanda sospensione"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega la classe Avviso di addebito con la classe NotificaAvviso di addebito, chiarendo che un avviso di addebito diventa consultabile al suo destinatario dopo aver ricevuto una notifica di ricezione dell'avviso di addebito"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property links the Charge Notice class with the Charge Notice Notification class, making it clear that a charge notice becomes viewable to its recipient after receiving a notification that the charge notice has been received"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica> <http://www.w3.org/2000/01/rdf-schema#label> "consultabile tramite notifica"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica> <http://www.w3.org/2000/01/rdf-schema#label> "consultable via notification"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite> <http://www.w3.org/2000/01/rdf-schema#comment> "La relazione esprime il collegamento tra i contributie la modalit\u00C3\u00A0 di versamento richiesta per i liberi professionisti, ossia il modelloF24"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite> <http://www.w3.org/2000/01/rdf-schema#comment> "La relazione esprime il collegamento tra i contributie la modalit\u00E0 di versamento richiesta per i liberi professionisti, ossia il modelloF24"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property expresses the connection between the contributions and the payment method required for freelancers, i.e. the F24 form"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite> <http://www.w3.org/2000/01/rdf-schema#label> "contribution paid with"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite> <http://www.w3.org/2000/01/rdf-schema#label> "contributo versato tramite"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haModalitaDiPagamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haModalitaDiPagamento> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haModalitaDiPagamento> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haModalitaDiPagamento> <http://www.w3.org/2000/01/rdf-schema#label> "ha modalita di pagamento"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega una domanda di rimborso con la tipologia di domanda inoltrata"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property links a refund request with the type of request submitted"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#label> "ha motivo di rimborso"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#label> "has reason for refund"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TipoDelega> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega una delega con la sua tipologia"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property links a delegation with its type."@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega> <http://www.w3.org/2000/01/rdf-schema#label> "ha tipo delega"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega> <http://www.w3.org/2000/01/rdf-schema#label> "has type of delegation"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega il Libero professionista allo studio associato, descrivendo cos\u00C3\u00AC la possibilit\u00C3\u00A0 dell'associaizone di un professionista ad uno studio associato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega il Libero professionista allo studio associato, descrivendo cos\u00EC la possibilit\u00E0 dell'associaizone di un professionista ad uno studio associato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property links the freelancer to the associated studio"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#label> "partecipa a studio associato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#label> "participate in the associated studio"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega la domanda di rimborso dei contributi non dovuti con il servizio con il quale \u00C3\u00A8 possibile inviarla"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega la domanda di rimborso dei contributi non dovuti con il servizio con il quale \u00E8 possibile inviarla"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property connects the request for reimbursement of undue contributions with the service with which it can be sent"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#label> "refund requested by submitting an application"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda> <http://www.w3.org/2000/01/rdf-schema#label> "rimborso richiesto tramite invio domanda"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega il servizio dedicato all'invio di un avviso di abedito con i soggetti individuati come destinatari del servizio stesso"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property connects the service dedicated to sending a debit notice with the subjects identified as recipients of the service itself"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario> <http://www.w3.org/2000/01/rdf-schema#label> "service has recipient"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario> <http://www.w3.org/2000/01/rdf-schema#label> "servizio ha destinatario"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid5 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property definisce la relazione  tra il libero professionista e il suo cassetto previdenziale di riferimento. Sulla propriet\u00C3\u00A0 \u00C3\u00A8 stata imposta una dichiarazione per escludere dalla relazione il coinvolgimento delle istanze della clssse di Libero professionsita protetto con cassa, ossia dell'insieme dei liberi professionisti che non ha obbligo di versare i contributi alla Gestione separata INPS"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property definisce la relazione  tra il libero professionista e il suo cassetto previdenziale di riferimento. Sulla propriet\u00E0 \u00E8 stata imposta una dichiarazione per escludere dalla relazione il coinvolgimento delle istanze della clssse di Libero professionsita protetto con cassa, ossia dell'insieme dei liberi professionisti che non ha obbligo di versare i contributi alla Gestione separata INPS"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property defines the relationship between the freelancer and his reference pension account"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#comment> "use self-employed pension account services"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#label> "use self-employed pension account services"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#label> "utilizza servizi cassetto previdenziale libero professionista"@it .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid5 <http://www.w3.org/2002/07/owl#complementOf> <https://w3id.org/italia/social-security/onto/procedura17/LiberoProfessionistaProtettoConCassa> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite> <http://www.w3.org/2000/01/rdf-schema#comment> "La object property collega il libero professionista al modello F24, sterumento tramite il quale deve assolvere l'obbligo di pagamento dei contributi"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite> <http://www.w3.org/2000/01/rdf-schema#comment> "The object property connects the freelancer to the F24 form,"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite> <http://www.w3.org/2000/01/rdf-schema#label> "pays social security contributions through"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite> <http://www.w3.org/2000/01/rdf-schema#label> "use self-employed pension account services"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite> <http://www.w3.org/2000/01/rdf-schema#label> "versa contributi previdenziali tramite"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoCompetenzaRendicontazioneGS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoCompetenzaRendicontazioneGS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoCompetenzaRendicontazioneGS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoCompetenzaRendicontazioneGS> <http://www.w3.org/2000/01/rdf-schema#comment> "L'anno di competenza della rendicontazione nella gestione separata INPS si riferisce all'anno in cui i redditi sono stati effettivamente guadagnati"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoCompetenzaRendicontazioneGS> <http://www.w3.org/2000/01/rdf-schema#comment> "The reporting year in the INPS separate management refers to the year in which the income was actually earned"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoCompetenzaRendicontazioneGS> <http://www.w3.org/2000/01/rdf-schema#label> "anno di competenza rendicontazione gestione separata"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoCompetenzaRendicontazioneGS> <http://www.w3.org/2000/01/rdf-schema#label> "year of competence"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoDiRimborso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoDiRimborso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoDiRimborso> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoDiRimborso> <http://www.w3.org/2000/01/rdf-schema#comment> "anno per il quale viene richiesto il rimborso"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoDiRimborso> <http://www.w3.org/2000/01/rdf-schema#comment> "year for which the refund is requested"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoDiRimborso> <http://www.w3.org/2000/01/rdf-schema#label> "anno del rimborso"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoDiRimborso> <http://www.w3.org/2000/01/rdf-schema#label> "repayment year"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoFiscaleDiRiferimento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoFiscaleDiRiferimento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoFiscaleDiRiferimento> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoFiscaleDiRiferimento> <http://www.w3.org/2000/01/rdf-schema#comment> "anno in cui i redditi sono stati percepiti e per il quale si calcolano i contributi previdenziali dovuti"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoFiscaleDiRiferimento> <http://www.w3.org/2000/01/rdf-schema#comment> "year in which the income was received and for which the social security contributions due are calculated"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoFiscaleDiRiferimento> <http://www.w3.org/2000/01/rdf-schema#label> "anno fiscale di riferimento"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoFiscaleDiRiferimento> <http://www.w3.org/2000/01/rdf-schema#label> "fiscal year of reference"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceFiscaleDelegato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceFiscaleDelegato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceFiscaleDelegato> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceFiscaleDelegato> <http://www.w3.org/2000/01/rdf-schema#label> "codice fiscale del delegato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceFiscaleDelegato> <http://www.w3.org/2000/01/rdf-schema#label> "delegate's tax code"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN> <http://www.w3.org/2000/01/rdf-schema#comment> "Il codice IBAN (International Bank Account Number) \u00C3\u00A8 un codice alfanumerico che identifica in modo univoco un conto bancario a livello internazionale"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN> <http://www.w3.org/2000/01/rdf-schema#comment> "Il codice IBAN (International Bank Account Number) \u00E8 un codice alfanumerico che identifica in modo univoco un conto bancario a livello internazionale"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN> <http://www.w3.org/2000/01/rdf-schema#comment> "The IBAN (International Bank Account Number) code is an alphanumeric code that uniquely identifies a bank account internationally"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN> <http://www.w3.org/2000/01/rdf-schema#label> "IBAN code"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN> <http://www.w3.org/2000/01/rdf-schema#label> "codice IBAN"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceTributo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceTributo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceTributo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceTributo> <http://www.w3.org/2000/01/rdf-schema#comment> "codice identificativo della tipologa di tributo versato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceTributo> <http://www.w3.org/2000/01/rdf-schema#comment> "identification code of the type of tax paid"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceTributo> <http://www.w3.org/2000/01/rdf-schema#label> "codice tributo"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceTributo> <http://www.w3.org/2000/01/rdf-schema#label> "tax code"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/cognomeDelegato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/cognomeDelegato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/cognomeDelegato> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/cognomeDelegato> <http://www.w3.org/2000/01/rdf-schema#label> "cognome del delegato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/cognomeDelegato> <http://www.w3.org/2000/01/rdf-schema#label> "delegate surname"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataDelVersamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataDelVersamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataDelVersamento> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataDelVersamento> <http://www.w3.org/2000/01/rdf-schema#comment> "data del pagamento dei contributi"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataDelVersamento> <http://www.w3.org/2000/01/rdf-schema#comment> "date of payment of social security contributions"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataDelVersamento> <http://www.w3.org/2000/01/rdf-schema#label> "data del versamento"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataDelVersamento> <http://www.w3.org/2000/01/rdf-schema#label> "date of payment"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineCollaborazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineCollaborazione> <http://www.w3.org/2000/01/rdf-schema#comment> "data nella quale la collaborazione tra il libero professionista e lo studio associato \u00C3\u00A8 terminata"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineCollaborazione> <http://www.w3.org/2000/01/rdf-schema#comment> "data nella quale la collaborazione tra il libero professionista e lo studio associato \u00E8 terminata"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineCollaborazione> <http://www.w3.org/2000/01/rdf-schema#comment> "date on which the collaboration between the freelancer and the associated studio ended"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineCollaborazione> <http://www.w3.org/2000/01/rdf-schema#label> "data fine collaborazione"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineCollaborazione> <http://www.w3.org/2000/01/rdf-schema#label> "end date of collaboration"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineDelega> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineDelega> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineDelega> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineDelega> <http://www.w3.org/2000/01/rdf-schema#label> "data fine delega"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineDelega> <http://www.w3.org/2000/01/rdf-schema#label> "end date of delegation"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioCollaborazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioCollaborazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioCollaborazione> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioCollaborazione> <http://www.w3.org/2000/01/rdf-schema#comment> "data di inizio della collaborazione del libero professionsita con lo studio associato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioCollaborazione> <http://www.w3.org/2000/01/rdf-schema#comment> "start date of the freelancer's collaboration with the associated studio"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioCollaborazione> <http://www.w3.org/2000/01/rdf-schema#label> "data inizio collaborazione"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioCollaborazione> <http://www.w3.org/2000/01/rdf-schema#label> "start date of collaboration"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioDelega> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioDelega> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioDelega> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioDelega> <http://www.w3.org/2000/01/rdf-schema#label> "data inizio delega"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioDelega> <http://www.w3.org/2000/01/rdf-schema#label> "start date of delegation"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataRicevimentoNotifica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataRicevimentoNotifica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataRicevimentoNotifica> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataRicevimentoNotifica> <http://www.w3.org/2000/01/rdf-schema#label> "Data ricevimento notifica"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/imponibileRendicontazioneGS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/imponibileRendicontazioneGS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/imponibileRendicontazioneGS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/imponibileRendicontazioneGS> <http://www.w3.org/2000/01/rdf-schema#label> "imponibile rendicontazione gestione separata"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoContributoVersato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoContributoVersato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoContributoVersato> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoContributoVersato> <http://www.w3.org/2000/01/rdf-schema#comment> "amount of the sum paid for the payment of contributions"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoContributoVersato> <http://www.w3.org/2000/01/rdf-schema#comment> "importo della cifra versata per il pagamento dell'onere contributivo"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoContributoVersato> <http://www.w3.org/2000/01/rdf-schema#label> "amount of contribution paid"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoContributoVersato> <http://www.w3.org/2000/01/rdf-schema#label> "importo del contributo versato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso> <http://www.w3.org/2000/01/rdf-schema#comment> "Ammontare del rimborso richiesto"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso> <http://www.w3.org/2000/01/rdf-schema#comment> "Refund amount"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso> <http://www.w3.org/2000/01/rdf-schema#comment> "amount of the refund received"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso> <http://www.w3.org/2000/01/rdf-schema#label> "importo del rimborso"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso> <http://www.w3.org/2000/01/rdf-schema#label> "refund amount"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/mesiUtili> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/mesiUtili> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/mesiUtili> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/mesiUtili> <http://www.w3.org/2000/01/rdf-schema#label> "mesi utili"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/nomeDelegato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/nomeDelegato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/nomeDelegato> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/nomeDelegato> <http://www.w3.org/2000/01/rdf-schema#label> "delegate name"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/nomeDelegato> <http://www.w3.org/2000/01/rdf-schema#label> "nome del delegato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocollo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocollo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocollo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocollo> <http://www.w3.org/2000/01/rdf-schema#comment> "identification number of the document containing the submitted electronic application"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocollo> <http://www.w3.org/2000/01/rdf-schema#comment> "numero identificativo del documento che contiene la domanda telematica inviata"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocollo> <http://www.w3.org/2000/01/rdf-schema#label> "numero di protocollo"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocollo> <http://www.w3.org/2000/01/rdf-schema#label> "protocol number"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partitaIVAStudioAssociato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partitaIVAStudioAssociato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partitaIVAStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partitaIVAStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#label> "VAT number of the associated"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partitaIVAStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#label> "partita IVA studio associato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/periodoNonAccreditato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/periodoNonAccreditato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/periodoNonAccreditato> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/periodoNonAccreditato> <http://www.w3.org/2000/01/rdf-schema#label> "periodo non accreditato"@it .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Organization> .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Kind> .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2006/vcard/ns#Organization> .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://purl.org/dc/terms/identifier> "DirezioneCentraleTII" .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://xmlns.com/foaf/0.1/name> "INPS - Central Management of Information Technology and Innovations"@en .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://xmlns.com/foaf/0.1/name> "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/2006/vcard/ns#fn> "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" .
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> <http://www.w3.org/2006/vcard/ns#hasEmail> <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/COV/PublicOrganization> .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Agent> .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://purl.org/dc/terms/identifier> "inps" .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://xmlns.com/foaf/0.1/name> "Istituto nazionale della previdenza sociale"@it .
+<https://w3id.org/italia/social-security/data/organization/inps> <http://xmlns.com/foaf/0.1/name> "National institute for Social Security"@en .
+<https://w3id.org/italia/social-security/data/organization/td> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Agent> .
+<https://w3id.org/italia/social-security/data/organization/td> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Agent> .
+<https://w3id.org/italia/social-security/data/organization/td> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/organization/td> <http://purl.org/dc/terms/identifier> "TD" .
+<https://w3id.org/italia/social-security/data/organization/td> <http://xmlns.com/foaf/0.1/name> "Digital Transformation Team"@en .
+<https://w3id.org/italia/social-security/data/organization/td> <http://xmlns.com/foaf/0.1/name> "Team per la Trasformazione Digitale"@it .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Distribution> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://www.w3.org/ns/dcat#accessURL> <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/selfEmploymentPortal/latest> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://www.w3.org/ns/dcat#downloadURL> <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/selfEmploymentPortal/latest/selfEmploymentPortal.n3> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://purl.org/dc/terms/description> "Questa \u00E8 la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entit\u00E0 e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell'istituto."@it .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://purl.org/dc/terms/description> "The Italian Self Employed Portal INPS Ontology N-TRIPLES distribution"@en .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://purl.org/dc/terms/format> <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://purl.org/dc/terms/title> "Distribuzione N-TRIPLES dell'ontologia INPS - Cassetto Previdenziale Libero Professionista"@it .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES> <http://purl.org/dc/terms/title> "N-TRIPLES distribution of the INPS ontology - Self Employed Portal"@en .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Distribution> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://www.w3.org/ns/dcat#accessURL> <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/selfEmploymentPortal/latest> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://www.w3.org/ns/dcat#downloadURL> <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/selfEmploymentPortal/latest/selfEmploymentPortal.ttl> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://purl.org/dc/terms/description> "Questa \u00E8 la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entit\u00E0 e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell'istituto."@it .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://purl.org/dc/terms/description> "The Italian Self Employed Portal INPS Ontology RDF/Turtle distribution"@en .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://purl.org/dc/terms/format> <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://purl.org/dc/terms/title> "Distribuzione RDF/Turtle dell'ontologia INPS - Cassetto Previdenziale Libero Professionista"@it .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE> <http://purl.org/dc/terms/title> "RDF/Turtle distribution of the INPS ontology - Self Employed Portal"@en .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Distribution> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dati.gov.it/onto/dcatapit#Distribution> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://www.w3.org/ns/dcat#accessURL> <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/selfEmploymentPortal/latest> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://www.w3.org/ns/dcat#downloadURL> <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/selfEmploymentPortal/latest/selfEmploymentPortal.owl> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://purl.org/dc/terms/description> "Questa \u00E8 la distribuzione RDF/XML dell'ontologia INPS relativa alle entit\u00E0 e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell'istituto."@it .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://purl.org/dc/terms/description> "The Italian Self Employed Portal INPS Ontology RDF/XML"@en .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://purl.org/dc/terms/format> <http://publications.europa.eu/resource/authority/file-type/RDF_XML> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://purl.org/dc/terms/title> "Distribuzione RDF/XML dell'ontologia INPS - Cassetto Previdenziale Libero Professionista"@it .
+<https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML> <http://purl.org/dc/terms/title> "RDF/XML distribution of the INPS ontology - Self Employed Portal"@en .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid6 .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid8 .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid9 .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid11 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceFiscaleDelegato> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/cognomeDelegato> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineDelega> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioDelega> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/nomeDelegato> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionsta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionsta> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid12 .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRiduzioneSanzioneCivileLiberoProfessionista> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IstanzaRateizzazione> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocollo> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid19 .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid21 .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il modello di versamento F24. L'F24 \u00C3\u00A8 il modello che i contribuenti devono utilizzare per il pagamento di tributi, contributi e premi. I titolari di partita IVA sono tenuti ad adottare  odalit\u00C3\u00A0 telematiche di pagamento "@it .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il modello di versamento F24. L'F24 \u00E8 il modello che i contribuenti devono utilizzare per il pagamento di tributi, contributi e premi. I titolari di partita IVA sono tenuti ad adottare  odalit\u00E0 telematiche di pagamento "@it .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the F24 payment model"@en .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24> <http://www.w3.org/2000/01/rdf-schema#label> " F24 Model"@en .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24> <http://www.w3.org/2000/01/rdf-schema#label> "Modello F24"@it .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> _:genid20 .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid20 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> _:genid22 .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid22 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#label> "Posizione assicurativa libero professionista"@it .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid23 .
+<https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid23 <http://www.w3.org/2002/07/owl#unionOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionsta> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista> .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/italia/social-security/onto/procedura17/LiberoProfessionistaProtettoConCassa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/procedura17/LiberoProfessionistaProtettoConCassa> <http://www.w3.org/2002/07/owl#disjointWith> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid28 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid29 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid30 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid31 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe descrive l'avviso di addebito ossia le somme da corrispondere ad INPS"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> <http://www.w3.org/2000/01/rdf-schema#comment> "The class describes the debit notice, i.e. the sums to be paid to INPS"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> <http://www.w3.org/2000/01/rdf-schema#label> "Avviso di addebito"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> <http://www.w3.org/2000/01/rdf-schema#label> "Debit notice"@en .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento> .
+_:genid28 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione> .
+_:genid29 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica> .
+_:genid30 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario> .
+_:genid31 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid32 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid40 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid42 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid32 <http://www.w3.org/2002/07/owl#unionOf> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PosizioneDebitoriaCreditoria> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid39 .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Ricorso> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid40 <http://www.w3.org/2002/07/owl#onProperty> _:genid41 .
+_:genid40 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid41 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista> .
+_:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid42 <http://www.w3.org/2002/07/owl#onProperty> _:genid43 .
+_:genid42 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid43 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid44 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione> <http://www.w3.org/2000/01/rdf-schema#comment> "Compensation Request. In the ontology, the class represents one of the possible types of requests presented by sending a request for reimbursement of undue contributions"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione> <http://www.w3.org/2000/01/rdf-schema#comment> "Domanda di Compensazione. Nell'ontologia la classe rappresenta una delle possibili tipologie di istanze presentate tramite l'invio di una domanda di rimborso dei contributi non dovuti"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione> <http://www.w3.org/2000/01/rdf-schema#label> "Compensation"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione> <http://www.w3.org/2000/01/rdf-schema#label> "Compensazione"@it .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid44 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda> .
+_:genid44 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid45 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid47 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta un conto corrente aperto da un soggetto presso un istituto bancario"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents a current account opened by a person at a banking institution"@none .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents a current account opened by a person at a banking institution" .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario> <http://www.w3.org/2000/01/rdf-schema#label> "Bank account"@none .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario> <http://www.w3.org/2000/01/rdf-schema#label> "Conto corrente bancario"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario> <http://www.w3.org/2000/01/rdf-schema#label> "Bank account" .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid45 <http://www.w3.org/2002/07/owl#onProperty> _:genid46 .
+_:genid45 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid46 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haModalitaDiPagamento> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid47 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN> .
+_:genid47 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoIVSVersato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoIVSVersato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoIVSVersato> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la quota di contribuzione previdenziale utile ad assicurare il lavoratore nei casi di Invalidit\u00C3\u00A0, Vecchiaia e decesso (Superstiti) (IVS) . Il contributo \u00C3\u00A8 versato all'INPS attraverso una trattenuta in busta paga (come ad esempio nel caso dei dipendenti del settore privato) o pagamento diretto nel caso dei liberi professionisti. I liberi professionisti iscritti alla Gestione separata devono versare la quota IVS attraverso il modello F24"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoIVSVersato> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la quota di contribuzione previdenziale utile ad assicurare il lavoratore nei casi di Invalidit\u00E0, Vecchiaia e decesso (Superstiti) (IVS) . Il contributo \u00E8 versato all'INPS attraverso una trattenuta in busta paga (come ad esempio nel caso dei dipendenti del settore privato) o pagamento diretto nel caso dei liberi professionisti. I liberi professionisti iscritti alla Gestione separata devono versare la quota IVS attraverso il modello F24"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoIVSVersato> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the portion of social security contributions useful for insuring the worker in cases of disability, old age and death (Survivors) (IVS)"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoIVSVersato> <http://www.w3.org/2000/01/rdf-schema#label> "Contributo IVS versato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoIVSVersato> <http://www.w3.org/2000/01/rdf-schema#label> "IVS contribution paid"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid48 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta i contributi versati dal o per il lavoratore a fini previdenziali e assistenziali. La contribuzione previdenziale consiste in un premio assicurativo che si paga per assicurare il lavoratore per un determinato evento come ad esempio la maternit\u00C3\u00A0, al malattia, la disoccupazione o la pensione."@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta i contributi versati dal o per il lavoratore a fini previdenziali e assistenziali. La contribuzione previdenziale consiste in un premio assicurativo che si paga per assicurare il lavoratore per un determinato evento come ad esempio la maternit\u00E0, al malattia, la disoccupazione o la pensione."@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the contributions paid by or for the worker for social security and welfare purposes."@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> <http://www.w3.org/2000/01/rdf-schema#label> "Contribution paid"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> <http://www.w3.org/2000/01/rdf-schema#label> "Contributo versato"@it .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid48 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite> .
+_:genid48 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid49 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid52 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il gruppo di soggetti ai quali il servizio \u00C3\u00A8 dedicato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il gruppo di soggetti ai quali il servizio \u00E8 dedicato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the group of subjects to whom the service is dedicated"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio> <http://www.w3.org/2000/01/rdf-schema#label> "Destinatario del servizio"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio> <http://www.w3.org/2000/01/rdf-schema#label> "Service recipient"@en .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid49 <http://www.w3.org/2002/07/owl#unionOf> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IntermediarioAutorizzato> .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid51 .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid52 <http://www.w3.org/2002/07/owl#onProperty> _:genid53 .
+_:genid52 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid53 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid54 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid57 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di annullamento dell'avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the service that allows you to send the request for cancellation of the payment notice online to INPS"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento> <http://www.w3.org/2000/01/rdf-schema#label> "Cancellation request"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda di annullamento"@it .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid54 <http://www.w3.org/2002/07/owl#unionOf> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoParziale> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoTotale> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid57 <http://www.w3.org/2002/07/owl#onProperty> _:genid58 .
+_:genid57 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid58 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoParziale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoParziale> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoTotale> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoParziale> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di annullamento parziale dell'avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoParziale> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the service that allows you to send the request for partial cancellation of the payment notice online to INPS"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoParziale> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda di annullamento parziale"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoParziale> <http://www.w3.org/2000/01/rdf-schema#label> "Request for partial cancellation"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoTotale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoTotale> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di annullamento totale dell'avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoTotale> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the service that allows you to send the request for total cancellation of the payment notice online to INPS"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoTotale> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda di annullamento totale"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoTotale> <http://www.w3.org/2000/01/rdf-schema#label> "Request for total cancellation"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid59 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di sospensione dell'avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the service that allows you to send the request for suspension of the payment notice online to INPS"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda di sospensione libero professionista"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#label> "Request for suspension of freelance professional"@en .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid59 <http://www.w3.org/2002/07/owl#onProperty> _:genid60 .
+_:genid59 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid60 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRiduzioneSanzioneCivileLiberoProfessionista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRiduzioneSanzioneCivileLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresent ail servizio dedicato all'invio di domande di riduzione delle sanzioni civili del libero professionista e l'insieme delle domande inviate"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRiduzioneSanzioneCivileLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the service dedicated to sending requests for reduction of civil sanctions of the freelancer"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRiduzioneSanzioneCivileLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda riduzione sanzione civile libero professionista"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRiduzioneSanzioneCivileLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#label> "Request for reduction of civil penalty for self-employed professional"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid61 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid62 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid63 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid65 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid67 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid68 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe descrive il servizio dedicato all'invio telematico di istanze di rimborso per contributi non dovuti"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#comment> "The class describes the service dedicated to the electronic submission of reimbursement requests for undue contributions"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#label> "Domanda di rimborso contributi non dovuti dal libero professionista"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#label> "Request for reimbursement of contributions not due by the freelancer"@en .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid61 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haModalitaDiPagamento> .
+_:genid61 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid62 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid62 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso> .
+_:genid62 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid63 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid63 <http://www.w3.org/2002/07/owl#onProperty> _:genid64 .
+_:genid63 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid64 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda> .
+_:genid65 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid65 <http://www.w3.org/2002/07/owl#onProperty> _:genid66 .
+_:genid65 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid66 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda> .
+_:genid67 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid67 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoDiRimborso> .
+_:genid67 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid68 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid68 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso> .
+_:genid68 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IntermediarioAutorizzato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IntermediarioAutorizzato> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IntermediarioAutorizzato> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta gli intermediari, ovvero coloro che su incarico degi interessati provvedono ad agire per loro conto, ad esempio con l'invio di istanze o la presentazione di domande"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IntermediarioAutorizzato> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents intermediaries, or those who, on behalf of interested parties, act on their behalf"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IntermediarioAutorizzato> <http://www.w3.org/2000/01/rdf-schema#label> "Authorized intermediary"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IntermediarioAutorizzato> <http://www.w3.org/2000/01/rdf-schema#label> "Intermediario autorizzato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IstanzaRateizzazione> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IstanzaRateizzazione> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta la sezione del servizio di invio delle domande telematiche dedicata alla presentazion edi istanze di rateizzazione dei contributi e alla consultazione delle domande inviate"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IstanzaRateizzazione> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the section of the telematic application submission service dedicated to the submission of requests for the payment by instalments of contributions and to the consultation of the applications sent"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IstanzaRateizzazione> <http://www.w3.org/2000/01/rdf-schema#label> "Istanza di rateizzazione"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IstanzaRateizzazione> <http://www.w3.org/2000/01/rdf-schema#label> "Request for installment payment"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/LegaleRappresentante> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/LegaleRappresentante> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/LegaleRappresentante> <http://www.w3.org/2000/01/rdf-schema#comment> "Soggetto al quale spetta l'obbligo della verifica dell'esecuzione del rispetto dell'obbligo contributivo"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/LegaleRappresentante> <http://www.w3.org/2000/01/rdf-schema#comment> "Subject responsible for verifying compliance with the contribution obligation"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/LegaleRappresentante> <http://www.w3.org/2000/01/rdf-schema#label> "Legal representative"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/LegaleRappresentante> <http://www.w3.org/2000/01/rdf-schema#label> "Legale rappresentante"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid69 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta l'insieme di voci contrllate che indicano il motivo per il quale \u00C3\u00A8 consentito chiedere un rimborso dei contributi"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta l'insieme di voci controllate che indicano il motivo per il quale \u00E8 consentito chiedere un rimborso dei contributi"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the set of controlled entries that indicate the reason for which a refund of contributions can be requested"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the set of controlled entries that indicate the reason for which a refund of contributions can be requested."@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#label> "Motivo del rimborso"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso> <http://www.w3.org/2000/01/rdf-schema#label> "Reason for refund"@en .
+_:genid69 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid69 <http://www.w3.org/2002/07/owl#onProperty> _:genid70 .
+_:genid69 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid70 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid71 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid73 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe descrive il servizio di invio della notifica di addebito delle somme da corrispondere a INPS"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito> <http://www.w3.org/2000/01/rdf-schema#comment> "The class describes the service for sending the notification of debit of the sums to be paid to INPS"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito> <http://www.w3.org/2000/01/rdf-schema#label> "Debit Notice Notification"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito> <http://www.w3.org/2000/01/rdf-schema#label> "Notifica di avviso di addebito"@it .
+_:genid71 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid71 <http://www.w3.org/2002/07/owl#onProperty> _:genid72 .
+_:genid71 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid72 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica> .
+_:genid73 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid73 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataRicevimentoNotifica> .
+_:genid73 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid74 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid75 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid76 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid78 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe reifica la partecipazione del libero professionista ad uno studio associato, rappresentando il caso in cui la partecipazione esista"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#comment> "The class describes the participation of the freelancer in a partnership"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#label> "Partecipazione a studio associato"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> <http://www.w3.org/2000/01/rdf-schema#label> "Participation in a associated studio"@en .
+_:genid74 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid74 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioCollaborazione> .
+_:genid74 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid75 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid75 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partitaIVAStudioAssociato> .
+_:genid75 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid76 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid76 <http://www.w3.org/2002/07/owl#onProperty> _:genid77 .
+_:genid76 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid77 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato> .
+_:genid78 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid78 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineCollaborazione> .
+_:genid78 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PosizioneDebitoriaCreditoria> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PosizioneDebitoriaCreditoria> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il servizio contenuto nel cassetto previdenziale del libero professionista dedicato alla consultazione della situazione creditoria o debitoria del lavoratore"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PosizioneDebitoriaCreditoria> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the service contained in the self-employed worker's social security drawer dedicated to consulting the worker's credit or debt situation"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PosizioneDebitoriaCreditoria> <http://www.w3.org/2000/01/rdf-schema#label> "Debt/Credit Position"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PosizioneDebitoriaCreditoria> <http://www.w3.org/2000/01/rdf-schema#label> "Posizione debitoria creditoria"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid79 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid80 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid81 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid82 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid83 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il servizio che consente la consultazione in formato tabellare della sintesi dello stato contributivo del lavoratore diviso per anno "@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the service that allows the consultation in tabular format of the summary of the worker's contribution status divided by year"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> <http://www.w3.org/2000/01/rdf-schema#label> "Rendicontazione gestione separata"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> <http://www.w3.org/2000/01/rdf-schema#label> "Separate management reporting"@en .
+_:genid79 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid79 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi> .
+_:genid79 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid80 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid80 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoCompetenzaRendicontazioneGS> .
+_:genid80 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid81 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid81 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/imponibileRendicontazioneGS> .
+_:genid81 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid82 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid82 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/mesiUtili> .
+_:genid82 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid83 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid83 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/periodoNonAccreditato> .
+_:genid83 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid84 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe descrive il Responsabile dell'adempimento contributivo, ossia il soggetto che ha la responsabilit\u00C3\u00A0 di garantire il corretto versamento dei contributi previdenziali"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe descrive il Responsabile dell'adempimento contributivo, ossia il soggetto che ha la responsabilit\u00E0 di garantire il corretto versamento dei contributi previdenziali"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo> <http://www.w3.org/2000/01/rdf-schema#comment> "he class describes the Person Responsible for Contribution Compliance, i.e. the person who is responsible for ensuring the correct payment of social security contributions."@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo> <http://www.w3.org/2000/01/rdf-schema#label> "Responsabile adempimento contributivo"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo> <http://www.w3.org/2000/01/rdf-schema#label> "Responsible for compliance with contributions"@en .
+_:genid84 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid84 <http://www.w3.org/2002/07/owl#unionOf> _:genid85 .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/LegaleRappresentante> .
+_:genid85 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid86 .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo> .
+_:genid86 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Ricorso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Ricorso> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta il servizio del cassetto previdenziale che consente la consultazione dei ricorsi presentati"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Ricorso> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the service of the social security drawer that allows the consultation of the appeals presented"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Ricorso> <http://www.w3.org/2000/01/rdf-schema#label> "Appeal"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Ricorso> <http://www.w3.org/2000/01/rdf-schema#label> "Ricorso"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid87 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe rappresenta l'istanza di rimborso dei contributi non dovuti presentata tramite il servizio di invio di una domanda di contributo non dovuto, disponibile nel cassetto previdenziale del libero professionista nella sezion ededicata all'invio di domadna telematiche"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the request for reimbursement of undue contributions submitted through the service for sending an application for undue contributions, available in the self-employed professional's social security drawer."@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto> <http://www.w3.org/2000/01/rdf-schema#label> "Reimbursement of contribution not due"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto> <http://www.w3.org/2000/01/rdf-schema#label> "Rimborso contributo non dovuto"@it .
+_:genid87 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid87 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda> .
+_:genid87 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TipoDelega> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TipoDelega> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid88 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TipoDelega> <http://www.w3.org/2000/01/rdf-schema#comment> "Tipologia di delega "@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TipoDelega> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of delegation"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TipoDelega> <http://www.w3.org/2000/01/rdf-schema#label> "Such delegation"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TipoDelega> <http://www.w3.org/2000/01/rdf-schema#label> "Tipo di delega"@it .
+_:genid88 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid88 <http://www.w3.org/2002/07/owl#onProperty> _:genid89 .
+_:genid88 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid89 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo> <http://www.w3.org/2000/01/rdf-schema#comment> "Il titolare dell'adempimento contributivo \u00C3\u00A8 il soggetto che deve garantire il rispetto di tutti gli adempimenti e delle scadenze contributive e lo stesso che risponde in caso di un mancato adempimento. Nel caso dei liberi professionisti il titolare \u00C3\u00A8 il professionista stesso che deve effettuare direttamente il versamento dei contributi"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo> <http://www.w3.org/2000/01/rdf-schema#comment> "Il titolare dell'adempimento contributivo \u00E8 il soggetto che deve garantire il rispetto di tutti gli adempimenti e delle scadenze contributive e lo stesso che risponde in caso di un mancato adempimento. Nel caso dei liberi professionisti il titolare \u00E8 il professionista stesso che deve effettuare direttamente il versamento dei contributi"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo> <http://www.w3.org/2000/01/rdf-schema#comment> "The holder of the contribution fulfillment is the person who must guarantee compliance with all the contribution fulfillments and deadlines and the same person who is responsible in the event of a failure to fulfill them."@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo> <http://www.w3.org/2000/01/rdf-schema#label> "Holder of contributory payment"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo> <http://www.w3.org/2000/01/rdf-schema#label> "Titolare di adempimento contributivo"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid90 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid91 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid92 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid93 .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> <http://www.w3.org/2000/01/rdf-schema#comment> "La  classe rappresenta il servizio che consente la consultazione dei contributi versati"@it .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> <http://www.w3.org/2000/01/rdf-schema#comment> "The class represents the service that allows the consultation of the contributions paid"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> <http://www.w3.org/2000/01/rdf-schema#label> "Contribution payment"@en .
+<https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> <http://www.w3.org/2000/01/rdf-schema#label> "Versamento contributivo"@it .
+_:genid90 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid90 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoFiscaleDiRiferimento> .
+_:genid90 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid91 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid91 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceTributo> .
+_:genid91 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid92 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid92 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataDelVersamento> .
+_:genid92 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+_:genid93 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid93 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoContributoVersato> .
+_:genid93 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<https://w3id.org/italia/social-security/onto/social-safety-net/EstrattoContoContributivo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid94 .
+<https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid95 .
+_:genid94 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid94 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite> .
+_:genid94 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid95 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid95 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato> .
+_:genid95 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid96 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid96 <http://www.w3.org/2002/07/owl#unionOf> _:genid97 .
+_:genid96 <http://www.w3.org/2002/07/owl#equivalentClass> _:genid100 .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione> .
+_:genid97 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid98 .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> .
+_:genid98 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid99 .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto> .
+_:genid99 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid100 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid100 <http://www.w3.org/2002/07/owl#onProperty> _:genid101 .
+_:genid100 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2002/07/owl#Thing> .
+_:genid101 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi> .
+_:genid102 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid102 <http://www.w3.org/2002/07/owl#unionOf> _:genid103 .
+_:genid102 <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> .
+_:genid103 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid104 .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> .
+_:genid104 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid105 .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/social-safety-net/EstrattoContoContributivo> .
+_:genid105 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid106 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid106 <http://www.w3.org/2002/07/owl#members> _:genid107 .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista> .
+_:genid107 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid108 .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista> .
+_:genid108 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid109 .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista> .
+_:genid109 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid110 .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito> .
+_:genid110 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid111 .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato> .
+_:genid111 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid112 .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PosizioneDebitoriaCreditoria> .
+_:genid112 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid113 .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Ricorso> .
+_:genid113 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid114 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid114 <http://www.w3.org/2002/07/owl#members> _:genid115 .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione> .
+_:genid115 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid116 .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato> .
+_:genid116 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid117 .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto> .
+_:genid117 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid118 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid118 <http://www.w3.org/2002/07/owl#members> _:genid119 .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento> .
+_:genid119 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid120 .
+_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista> .
+_:genid120 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid121 .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRiduzioneSanzioneCivileLiberoProfessionista> .
+_:genid121 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid122 .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista> .
+_:genid122 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid123 .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IstanzaRateizzazione> .
+_:genid123 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid124 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid124 <http://www.w3.org/2002/07/owl#members> _:genid125 .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata> .
+_:genid125 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid126 .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo> .
+_:genid126 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid127 .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/italia/social-security/onto/social-safety-net/EstrattoContoContributivo> .
+_:genid127 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .

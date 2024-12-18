@@ -1,0 +1,2275 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix NDC: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> a adms:Asset,
+        dcatapit:Dataset,
+        <https://w3id.org/italia/social-security/onto/CUStatement/CodiceStatoEstero>,
+        skos:ConceptScheme ;
+    rdfs:label "CU Statement foreign country codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici dei territori e paesi esteri associati al percepiente estero nella Certificazione Unica"@it ;
+    skos:prefLabel "Vocabolario controllato dei territori e paesi esteri associati al percepiente estero nella Certificazione Unica"@it ;
+    rdfs:comment "Controlled vocabulary on the defined set of foreign country codes in a CU Statement"@en,
+        "Vocabolario controllato dei codici dei territori e paesi esteri associati al percepiente estero nella Certificazione Unica"@it ;
+    owl:versionInfo "0.1" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/CE_CSV>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CE_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/CUStatement/distribution/CE_RDF_TURTLE> ;
+    dcat:keyword "certificazione unica"@it,
+        "codici dei paesi e territori esteri della certificazione unica"@it,
+        "CU statement foreign country codes"@en,
+        "foreign country codes"@en,
+        "inps"@en,
+        "inps"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement foreign country codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici dei territori e paesi esteri associati al percepiente estero nella Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero" ;
+    dct:issued "2024-10-24"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-24"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement foreign country codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici dei territori e paesi esteri associati al percepiente estero nella Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    NDC:keyConcept "codice_estero" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/002>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/003>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/004>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/005>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/006>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/007>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/008>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/009>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/010>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/011>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/012>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/013>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/015>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/016>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/017>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/018>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/019>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/020>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/021>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/022>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/023>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/024>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/025>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/026>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/027>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/028>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/029>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/031>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/032>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/033>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/034>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/035>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/036>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/037>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/038>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/039>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/040>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/041>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/042>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/044>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/045>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/046>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/047>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/048>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/049>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/050>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/051>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/052>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/053>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/054>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/055>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/057>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/058>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/059>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/061>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/062>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/063>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/064>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/065>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/066>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/067>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/069>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/070>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/071>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/072>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/073>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/074>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/075>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/076>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/077>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/078>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/080>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/081>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/082>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/083>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/084>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/085>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/087>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/088>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/089>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/090>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/091>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/092>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/093>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/094>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/095>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/097>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/098>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/100>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/101>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/102>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/103>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/104>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/105>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/106>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/107>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/109>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/110>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/112>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/113>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/114>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/115>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/116>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/117>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/118>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/119>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/120>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/121>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/122>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/123>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/124>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/125>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/126>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/127>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/128>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/129>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/130>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/131>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/132>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/133>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/134>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/135>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/136>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/137>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/138>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/139>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/141>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/142>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/143>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/144>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/145>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/146>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/147>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/148>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/149>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/150>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/151>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/152>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/153>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/154>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/155>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/156>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/157>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/158>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/159>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/160>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/161>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/162>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/163>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/164>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/166>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/167>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/168>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/169>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/175>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/176>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/177>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/178>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/180>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/182>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/183>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/185>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/186>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/187>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/188>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/189>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/190>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/191>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/192>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/193>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/194>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/195>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/196>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/197>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/198>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/199>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/200>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/201>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/202>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/203>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/204>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/205>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/206>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/207>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/208>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/209>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/210>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/211>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/212>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/213>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/214>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/215>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/216>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/217>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/218>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/219>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/220>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/221>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/222>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/223>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/225>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/226>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/227>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/228>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/229>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/230>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/231>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/232>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/233>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/234>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/235>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/236>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/237>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/238>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/239>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/240>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/241>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/242>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/243>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/244>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/245>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/246>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/247>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/248>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/249>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/252>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/253>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/254>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/255>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/256>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/257>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/258>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/259>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/260>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/261>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/262>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/263>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/264>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/265>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/266>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/267>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/268>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/269>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/270>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/271>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/272>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/273>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/274>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/275>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/276>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/277>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/278>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/279>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/280>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/281>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/282>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/283>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/284>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/285>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/286>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/287>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/289>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/290>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/291>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/292>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/293>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/294>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/295>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/296>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/297> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/002> a skos:Concept ;
+    rdfs:label "AFGHANISTAN"@it ;
+    skos:prefLabel "AFGHANISTAN"@it ;
+    dct:identifier "002"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "002"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/003> a skos:Concept ;
+    rdfs:label "ALGERIA"@it ;
+    skos:prefLabel "ALGERIA"@it ;
+    dct:identifier "003"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "003"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/004> a skos:Concept ;
+    rdfs:label "ANDORRA"@it ;
+    skos:prefLabel "ANDORRA"@it ;
+    dct:identifier "004"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "004"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/005> a skos:Concept ;
+    rdfs:label "ARABIA SAUDITA"@it ;
+    skos:prefLabel "ARABIA SAUDITA"@it ;
+    dct:identifier "005"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "005"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/006> a skos:Concept ;
+    rdfs:label "ARGENTINA"@it ;
+    skos:prefLabel "ARGENTINA"@it ;
+    dct:identifier "006"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "006"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/007> a skos:Concept ;
+    rdfs:label "AUSTRALIA"@it ;
+    skos:prefLabel "AUSTRALIA"@it ;
+    dct:identifier "007"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "007"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/008> a skos:Concept ;
+    rdfs:label "AUSTRIA"@it ;
+    skos:prefLabel "AUSTRIA"@it ;
+    dct:identifier "008"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "008"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/009> a skos:Concept ;
+    rdfs:label "BELGIO"@it ;
+    skos:prefLabel "BELGIO"@it ;
+    dct:identifier "009"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "009"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/010> a skos:Concept ;
+    rdfs:label "BOLIVIA"@it ;
+    skos:prefLabel "BOLIVIA"@it ;
+    dct:identifier "010"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "010"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/011> a skos:Concept ;
+    rdfs:label "BRASILE"@it ;
+    skos:prefLabel "BRASILE"@it ;
+    dct:identifier "011"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "011"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/012> a skos:Concept ;
+    rdfs:label "BULGARIA"@it ;
+    skos:prefLabel "BULGARIA"@it ;
+    dct:identifier "012"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "012"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/013> a skos:Concept ;
+    rdfs:label "CANADA"@it ;
+    skos:prefLabel "CANADA"@it ;
+    dct:identifier "013"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "013"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/015> a skos:Concept ;
+    rdfs:label "CILE"@it ;
+    skos:prefLabel "CILE"@it ;
+    dct:identifier "015"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "015"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/016> a skos:Concept ;
+    rdfs:label "CINA"@it ;
+    skos:prefLabel "CINA"@it ;
+    dct:identifier "016"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "016"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/017> a skos:Concept ;
+    rdfs:label "COLOMBIA"@it ;
+    skos:prefLabel "COLOMBIA"@it ;
+    dct:identifier "017"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "017"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/018> a skos:Concept ;
+    rdfs:label "CONGO (REP. DEMOCRATICA DEL)"@it ;
+    skos:prefLabel "CONGO (REP. DEMOCRATICA DEL)"@it ;
+    dct:identifier "018"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "018"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/019> a skos:Concept ;
+    rdfs:label "COSTA RICA"@it ;
+    skos:prefLabel "COSTA RICA"@it ;
+    dct:identifier "019"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "019"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/020> a skos:Concept ;
+    rdfs:label "CUBA"@it ;
+    skos:prefLabel "CUBA"@it ;
+    dct:identifier "020"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "020"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/021> a skos:Concept ;
+    rdfs:label "DANIMARCA"@it ;
+    skos:prefLabel "DANIMARCA"@it ;
+    dct:identifier "021"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "021"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/022> a skos:Concept ;
+    rdfs:label "TAIWAN"@it ;
+    skos:prefLabel "TAIWAN"@it ;
+    dct:identifier "022"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "022"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/023> a skos:Concept ;
+    rdfs:label "EGITTO"@it ;
+    skos:prefLabel "EGITTO"@it ;
+    dct:identifier "023"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "023"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/024> a skos:Concept ;
+    rdfs:label "ECUADOR"@it ;
+    skos:prefLabel "ECUADOR"@it ;
+    dct:identifier "024"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "024"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/025> a skos:Concept ;
+    rdfs:label "BURUNDI"@it ;
+    skos:prefLabel "BURUNDI"@it ;
+    dct:identifier "025"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "025"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/026> a skos:Concept ;
+    rdfs:label "ETIOPIA"@it ;
+    skos:prefLabel "ETIOPIA"@it ;
+    dct:identifier "026"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "026"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/027> a skos:Concept ;
+    rdfs:label "FILIPPINE"@it ;
+    skos:prefLabel "FILIPPINE"@it ;
+    dct:identifier "027"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "027"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/028> a skos:Concept ;
+    rdfs:label "FINLANDIA"@it ;
+    skos:prefLabel "FINLANDIA"@it ;
+    dct:identifier "028"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "028"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/029> a skos:Concept ;
+    rdfs:label "FRANCIA"@it ;
+    skos:prefLabel "FRANCIA"@it ;
+    dct:identifier "029"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "029"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/031> a skos:Concept ;
+    rdfs:label "REGNO UNITO"@it ;
+    skos:prefLabel "REGNO UNITO"@it ;
+    dct:identifier "031"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "031"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/032> a skos:Concept ;
+    rdfs:label "GRECIA"@it ;
+    skos:prefLabel "GRECIA"@it ;
+    dct:identifier "032"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "032"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/033> a skos:Concept ;
+    rdfs:label "GUATEMALA"@it ;
+    skos:prefLabel "GUATEMALA"@it ;
+    dct:identifier "033"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "033"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/034> a skos:Concept ;
+    rdfs:label "HAITI"@it,
+        "HONDURAS"@it,
+        "PAKISTAN"@it ;
+    skos:prefLabel "HAITI"@it,
+        "HONDURAS"@it,
+        "PAKISTAN"@it ;
+    dct:identifier "034"@it,
+        "035"@it,
+        "036"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "034"@it,
+        "035"@it,
+        "036"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/037> a skos:Concept ;
+    rdfs:label "SAN MARINO"@it ;
+    skos:prefLabel "SAN MARINO"@it ;
+    dct:identifier "037"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "037"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/038> a skos:Concept ;
+    rdfs:label "IRAQ"@it ;
+    skos:prefLabel "IRAQ"@it ;
+    dct:identifier "038"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "038"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/039> a skos:Concept ;
+    rdfs:label "IRAN"@it ;
+    skos:prefLabel "IRAN"@it ;
+    dct:identifier "039"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "039"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/040> a skos:Concept ;
+    rdfs:label "IRLANDA"@it ;
+    skos:prefLabel "IRLANDA"@it ;
+    dct:identifier "040"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "040"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/041> a skos:Concept ;
+    rdfs:label "ISLANDA"@it ;
+    skos:prefLabel "ISLANDA"@it ;
+    dct:identifier "041"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "041"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/042> a skos:Concept ;
+    rdfs:label "YEMEN"@it ;
+    skos:prefLabel "YEMEN"@it ;
+    dct:identifier "042"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "042"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/044> a skos:Concept ;
+    rdfs:label "LIBERIA"@it ;
+    skos:prefLabel "LIBERIA"@it ;
+    dct:identifier "044"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "044"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/045> a skos:Concept ;
+    rdfs:label "LIBIA"@it ;
+    skos:prefLabel "LIBIA"@it ;
+    dct:identifier "045"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "045"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/046> a skos:Concept ;
+    rdfs:label "MESSICO"@it ;
+    skos:prefLabel "MESSICO"@it ;
+    dct:identifier "046"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "046"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/047> a skos:Concept ;
+    rdfs:label "NICARAGUA"@it ;
+    skos:prefLabel "NICARAGUA"@it ;
+    dct:identifier "047"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "047"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/048> a skos:Concept ;
+    rdfs:label "NORVEGIA"@it ;
+    skos:prefLabel "NORVEGIA"@it ;
+    dct:identifier "048"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "048"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/049> a skos:Concept ;
+    rdfs:label "NUOVA ZELANDA"@it ;
+    skos:prefLabel "NUOVA ZELANDA"@it ;
+    dct:identifier "049"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "049"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/050> a skos:Concept ;
+    rdfs:label "PAESI BASSI"@it ;
+    skos:prefLabel "PAESI BASSI"@it ;
+    dct:identifier "050"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "050"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/051> a skos:Concept ;
+    rdfs:label "PANAMA"@it ;
+    skos:prefLabel "PANAMA"@it ;
+    dct:identifier "051"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "051"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/052> a skos:Concept ;
+    rdfs:label "PARAGUAY"@it ;
+    skos:prefLabel "PARAGUAY"@it ;
+    dct:identifier "052"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "052"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/053> a skos:Concept ;
+    rdfs:label "PERÙ"@it ;
+    skos:prefLabel "PERÙ"@it ;
+    dct:identifier "053"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "053"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/054> a skos:Concept ;
+    rdfs:label "POLONIA"@it ;
+    skos:prefLabel "POLONIA"@it ;
+    dct:identifier "054"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "054"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/055> a skos:Concept ;
+    rdfs:label "PORTOGALLO"@it ;
+    skos:prefLabel "PORTOGALLO"@it ;
+    dct:identifier "055"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "055"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/056> a skos:Concept ;
+    rdfs:label "MALAWI"@it ;
+    skos:prefLabel "MALAWI"@it ;
+    dct:identifier "056"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "056"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/057> a skos:Concept ;
+    rdfs:label "TANZANIA"@it ;
+    skos:prefLabel "TANZANIA"@it ;
+    dct:identifier "057"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "057"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/058> a skos:Concept ;
+    rdfs:label "ZAMBIA"@it ;
+    skos:prefLabel "ZAMBIA"@it ;
+    dct:identifier "058"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "058"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/059> a skos:Concept ;
+    rdfs:label "MACAO"@it ;
+    skos:prefLabel "MACAO"@it ;
+    dct:identifier "059"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "059"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/061> a skos:Concept ;
+    rdfs:label "ROMANIA"@it ;
+    skos:prefLabel "ROMANIA"@it ;
+    dct:identifier "061"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "061"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/062> a skos:Concept ;
+    rdfs:label "VIETNAM"@it ;
+    skos:prefLabel "VIETNAM"@it ;
+    dct:identifier "062"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "062"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/063> a skos:Concept ;
+    rdfs:label "DOMINICANA (REPUBBLICA)"@it ;
+    skos:prefLabel "DOMINICANA (REPUBBLICA)"@it ;
+    dct:identifier "063"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "063"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/064> a skos:Concept ;
+    rdfs:label "SALVADOR"@it ;
+    skos:prefLabel "SALVADOR"@it ;
+    dct:identifier "064"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "064"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/065> a skos:Concept ;
+    rdfs:label "SIRIA"@it ;
+    skos:prefLabel "SIRIA"@it ;
+    dct:identifier "065"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "065"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/066> a skos:Concept ;
+    rdfs:label "SOMALIA"@it ;
+    skos:prefLabel "SOMALIA"@it ;
+    dct:identifier "066"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "066"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/067> a skos:Concept ;
+    rdfs:label "SPAGNA"@it ;
+    skos:prefLabel "SPAGNA"@it ;
+    dct:identifier "067"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "067"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/068> a skos:Concept ;
+    rdfs:label "SVEZIA"@it ;
+    skos:prefLabel "SVEZIA"@it ;
+    dct:identifier "068"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "068"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/069> a skos:Concept ;
+    rdfs:label "STATI UNITI D’AMERICA"@it ;
+    skos:prefLabel "STATI UNITI D’AMERICA"@it ;
+    dct:identifier "069"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "069"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/070> a skos:Concept ;
+    rdfs:label "SUDAN"@it ;
+    skos:prefLabel "SUDAN"@it ;
+    dct:identifier "070"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "070"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/071> a skos:Concept ;
+    rdfs:label "SVIZZERA"@it ;
+    skos:prefLabel "SVIZZERA"@it ;
+    dct:identifier "071"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "071"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/072> a skos:Concept ;
+    rdfs:label "THAILANDIA"@it ;
+    skos:prefLabel "THAILANDIA"@it ;
+    dct:identifier "072"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "072"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/073> a skos:Concept ;
+    rdfs:label "ZIMBABWE"@it ;
+    skos:prefLabel "ZIMBABWE"@it ;
+    dct:identifier "073"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "073"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/074> a skos:Concept ;
+    rdfs:label "COREA DEL NORD"@it ;
+    skos:prefLabel "COREA DEL NORD"@it ;
+    dct:identifier "074"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "074"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/075> a skos:Concept ;
+    rdfs:label "TUNISIA"@it ;
+    skos:prefLabel "TUNISIA"@it ;
+    dct:identifier "075"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "075"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/076> a skos:Concept ;
+    rdfs:label "TURCHIA"@it ;
+    skos:prefLabel "TURCHIA"@it ;
+    dct:identifier "076"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "076"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/077> a skos:Concept ;
+    rdfs:label "UNGHERIA"@it ;
+    skos:prefLabel "UNGHERIA"@it ;
+    dct:identifier "077"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "077"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/078> a skos:Concept ;
+    rdfs:label "SUDAFRICANA REPUBBLICA"@it ;
+    skos:prefLabel "SUDAFRICANA REPUBBLICA"@it ;
+    dct:identifier "078"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "078"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/080> a skos:Concept ;
+    rdfs:label "URUGUAY"@it ;
+    skos:prefLabel "URUGUAY"@it ;
+    dct:identifier "080"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "080"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/081> a skos:Concept ;
+    rdfs:label "VENEZUELA"@it ;
+    skos:prefLabel "VENEZUELA"@it ;
+    dct:identifier "081"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "081"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/082> a skos:Concept ;
+    rdfs:label "GIAMAICA"@it ;
+    skos:prefLabel "GIAMAICA"@it ;
+    dct:identifier "082"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "082"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/083> a skos:Concept ;
+    rdfs:label "MYANMAR"@it ;
+    skos:prefLabel "MYANMAR"@it ;
+    dct:identifier "083"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "083"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/084> a skos:Concept ;
+    rdfs:label "COREA DEL SUD"@it ;
+    skos:prefLabel "COREA DEL SUD"@it ;
+    dct:identifier "084"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "084"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/085> a skos:Concept ;
+    rdfs:label "SRI LANKA"@it ;
+    skos:prefLabel "SRI LANKA"@it ;
+    dct:identifier "085"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "085"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/087> a skos:Concept ;
+    rdfs:label "ALBANIA"@it ;
+    skos:prefLabel "ALBANIA"@it ;
+    dct:identifier "087"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "087"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/088> a skos:Concept ;
+    rdfs:label "GIAPPONE"@it ;
+    skos:prefLabel "GIAPPONE"@it ;
+    dct:identifier "088"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "088"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/089> a skos:Concept ;
+    rdfs:label "LESOTHO"@it ;
+    skos:prefLabel "LESOTHO"@it ;
+    dct:identifier "089"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "089"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/090> a skos:Concept ;
+    rdfs:label "LIECHTENSTEIN"@it ;
+    skos:prefLabel "LIECHTENSTEIN"@it ;
+    dct:identifier "090"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "090"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/091> a skos:Concept ;
+    rdfs:label "PRINCIPATO DI MONACO"@it ;
+    skos:prefLabel "PRINCIPATO DI MONACO"@it ;
+    dct:identifier "091"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "091"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/092> a skos:Concept ;
+    rdfs:label "LUSSEMBURGO"@it ;
+    skos:prefLabel "LUSSEMBURGO"@it ;
+    dct:identifier "092"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "092"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/093> a skos:Concept ;
+    rdfs:label "CITTÀ DEL VATICANO"@it ;
+    skos:prefLabel "CITTÀ DEL VATICANO"@it ;
+    dct:identifier "093"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "093"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/094> a skos:Concept ;
+    rdfs:label "GERMANIA"@it ;
+    skos:prefLabel "GERMANIA"@it ;
+    dct:identifier "094"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "094"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/095> a skos:Concept ;
+    rdfs:label "LIBANO"@it ;
+    skos:prefLabel "LIBANO"@it ;
+    dct:identifier "095"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "095"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/097> a skos:Concept ;
+    rdfs:label "BHUTAN"@it ;
+    skos:prefLabel "BHUTAN"@it ;
+    dct:identifier "097"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "097"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/098> a skos:Concept ;
+    rdfs:label "BOTSWANA"@it ;
+    skos:prefLabel "BOTSWANA"@it ;
+    dct:identifier "098"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "098"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/100> a skos:Concept ;
+    rdfs:label "CANARIE ISOLE"@it ;
+    skos:prefLabel "CANARIE ISOLE"@it ;
+    dct:identifier "100"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "100"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/101> a skos:Concept ;
+    rdfs:label "CIPRO"@it ;
+    skos:prefLabel "CIPRO"@it ;
+    dct:identifier "101"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "101"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/102> a skos:Concept ;
+    rdfs:label "GIBILTERRA"@it ;
+    skos:prefLabel "GIBILTERRA"@it ;
+    dct:identifier "102"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "102"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/103> a skos:Concept ;
+    rdfs:label "ALGERIA"@it ;
+    skos:prefLabel "ALGERIA"@it ;
+    dct:identifier "103"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "103"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/104> a skos:Concept ;
+    rdfs:label "MADAGASCAR"@it ;
+    skos:prefLabel "MADAGASCAR"@it ;
+    dct:identifier "104"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "104"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/105> a skos:Concept ;
+    rdfs:label "MALTA"@it ;
+    skos:prefLabel "MALTA"@it ;
+    dct:identifier "105"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "105"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/106> a skos:Concept ;
+    rdfs:label "MALAYSIA"@it ;
+    skos:prefLabel "MALAYSIA"@it ;
+    dct:identifier "106"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "106"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/107> a skos:Concept ;
+    rdfs:label "MAROCCO"@it ;
+    skos:prefLabel "MAROCCO"@it ;
+    dct:identifier "107"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "107"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/109> a skos:Concept ;
+    rdfs:label "NAURU"@it ;
+    skos:prefLabel "NAURU"@it ;
+    dct:identifier "109"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "109"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/110> a skos:Concept ;
+    rdfs:label "MONGOLIA"@it ;
+    skos:prefLabel "MONGOLIA"@it ;
+    dct:identifier "110"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "110"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/112> a skos:Concept ;
+    rdfs:label "GHANA"@it ;
+    skos:prefLabel "GHANA"@it ;
+    dct:identifier "112"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "112"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/113> a skos:Concept ;
+    rdfs:label "GIBUTI"@it ;
+    skos:prefLabel "GIBUTI"@it ;
+    dct:identifier "113"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "113"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/114> a skos:Concept ;
+    rdfs:label "INDIA"@it ;
+    skos:prefLabel "INDIA"@it ;
+    dct:identifier "114"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "114"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/115> a skos:Concept ;
+    rdfs:label "NEPAL"@it ;
+    skos:prefLabel "NEPAL"@it ;
+    dct:identifier "115"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "115"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/116> a skos:Concept ;
+    rdfs:label "KENYA"@it ;
+    skos:prefLabel "KENYA"@it ;
+    dct:identifier "116"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "116"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/117> a skos:Concept ;
+    rdfs:label "NIGERIA"@it ;
+    skos:prefLabel "NIGERIA"@it ;
+    dct:identifier "117"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "117"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/118> a skos:Concept ;
+    rdfs:label "BARBADOS"@it ;
+    skos:prefLabel "BARBADOS"@it ;
+    dct:identifier "118"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "118"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/119> a skos:Concept ;
+    rdfs:label "CAMERUN"@it ;
+    skos:prefLabel "CAMERUN"@it ;
+    dct:identifier "119"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "119"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/120> a skos:Concept ;
+    rdfs:label "TRINIDAD E TOBAGO"@it ;
+    skos:prefLabel "TRINIDAD E TOBAGO"@it ;
+    dct:identifier "120"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "120"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/121> a skos:Concept ;
+    rdfs:label "VANUATU"@it ;
+    skos:prefLabel "VANUATU"@it ;
+    dct:identifier "121"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "121"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/122> a skos:Concept ;
+    rdfs:label "GIORDANIA"@it ;
+    skos:prefLabel "GIORDANIA"@it ;
+    dct:identifier "122"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "122"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/123> a skos:Concept ;
+    rdfs:label "GUAYANA FRANCESE"@it ;
+    skos:prefLabel "GUAYANA FRANCESE"@it ;
+    dct:identifier "123"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "123"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/124> a skos:Concept ;
+    rdfs:label "SURINAM"@it ;
+    skos:prefLabel "SURINAM"@it ;
+    dct:identifier "124"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "124"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/125> a skos:Concept ;
+    rdfs:label "BRUNEI DARUSSALAM"@it ;
+    skos:prefLabel "BRUNEI DARUSSALAM"@it ;
+    dct:identifier "125"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "125"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/126> a skos:Concept ;
+    rdfs:label "KUWAIT"@it ;
+    skos:prefLabel "KUWAIT"@it ;
+    dct:identifier "126"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "126"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/127> a skos:Concept ;
+    rdfs:label "MALDIVE"@it ;
+    skos:prefLabel "MALDIVE"@it ;
+    dct:identifier "127"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "127"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/128> a skos:Concept ;
+    rdfs:label "MAURITIUS"@it ;
+    skos:prefLabel "MAURITIUS"@it ;
+    dct:identifier "128"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "128"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/129> a skos:Concept ;
+    rdfs:label "INDONESIA"@it ;
+    skos:prefLabel "INDONESIA"@it ;
+    dct:identifier "129"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "129"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/130> a skos:Concept ;
+    rdfs:label "BANGLADESH"@it ;
+    skos:prefLabel "BANGLADESH"@it ;
+    dct:identifier "130"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "130"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/131> a skos:Concept ;
+    rdfs:label "SAMOA"@it ;
+    skos:prefLabel "SAMOA"@it ;
+    dct:identifier "131"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "131"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/132> a skos:Concept ;
+    rdfs:label "UGANDA"@it ;
+    skos:prefLabel "UGANDA"@it ;
+    dct:identifier "132"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "132"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/133> a skos:Concept ;
+    rdfs:label "ANGOLA"@it ;
+    skos:prefLabel "ANGOLA"@it ;
+    dct:identifier "133"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "133"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/134> a skos:Concept ;
+    rdfs:label "MOZAMBICO"@it ;
+    skos:prefLabel "MOZAMBICO"@it ;
+    dct:identifier "134"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "134"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/135> a skos:Concept ;
+    rdfs:label "CAMBOGIA"@it ;
+    skos:prefLabel "CAMBOGIA"@it ;
+    dct:identifier "135"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "135"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/136> a skos:Concept ;
+    rdfs:label "LAOS"@it ;
+    skos:prefLabel "LAOS"@it ;
+    dct:identifier "136"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "136"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/137> a skos:Concept ;
+    rdfs:label "GUINEA"@it ;
+    skos:prefLabel "GUINEA"@it ;
+    dct:identifier "137"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "137"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/138> a skos:Concept ;
+    rdfs:label "SWAZILAND"@it ;
+    skos:prefLabel "SWAZILAND"@it ;
+    dct:identifier "138"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "138"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/139> a skos:Concept ;
+    rdfs:label "CAMPIONE D'ITALIA"@it ;
+    skos:prefLabel "CAMPIONE D'ITALIA"@it ;
+    dct:identifier "139"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "139"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/141> a skos:Concept ;
+    rdfs:label "MAURITANIA"@it ;
+    skos:prefLabel "MAURITANIA"@it ;
+    dct:identifier "141"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "141"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/142> a skos:Concept ;
+    rdfs:label "BURKINA FASO"@it ;
+    skos:prefLabel "BURKINA FASO"@it ;
+    dct:identifier "142"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "142"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/143> a skos:Concept ;
+    rdfs:label "CENTROAFRICANA (REPUBBLICA)"@it ;
+    skos:prefLabel "CENTROAFRICANA (REPUBBLICA)"@it ;
+    dct:identifier "143"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "143"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/144> a skos:Concept ;
+    rdfs:label "CIAD"@it ;
+    skos:prefLabel "CIAD"@it ;
+    dct:identifier "144"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "144"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/145> a skos:Concept ;
+    rdfs:label "CONGO"@it ;
+    skos:prefLabel "CONGO"@it ;
+    dct:identifier "145"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "145"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/146> a skos:Concept ;
+    rdfs:label "COSTA D'AVORIO"@it ;
+    skos:prefLabel "COSTA D'AVORIO"@it ;
+    dct:identifier "146"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "146"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/147> a skos:Concept ;
+    rdfs:label "SINGAPORE"@it ;
+    skos:prefLabel "SINGAPORE"@it ;
+    dct:identifier "147"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "147"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/148> a skos:Concept ;
+    rdfs:label "AMERICAN SAMOA"@it ;
+    skos:prefLabel "AMERICAN SAMOA"@it ;
+    dct:identifier "148"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "148"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/149> a skos:Concept ;
+    rdfs:label "MALI"@it ;
+    skos:prefLabel "MALI"@it ;
+    dct:identifier "149"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "149"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/150> a skos:Concept ;
+    rdfs:label "NIGER"@it ;
+    skos:prefLabel "NIGER"@it ;
+    dct:identifier "150"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "150"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/151> a skos:Concept ;
+    rdfs:label "RUANDA"@it ;
+    skos:prefLabel "RUANDA"@it ;
+    dct:identifier "151"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "151"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/152> a skos:Concept ;
+    rdfs:label "SENEGAL"@it ;
+    skos:prefLabel "SENEGAL"@it ;
+    dct:identifier "152"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "152"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/153> a skos:Concept ;
+    rdfs:label "SIERRA LEONE"@it ;
+    skos:prefLabel "SIERRA LEONE"@it ;
+    dct:identifier "153"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "153"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/154> a skos:Concept ;
+    rdfs:label "GUAM"@it ;
+    skos:prefLabel "GUAM"@it ;
+    dct:identifier "154"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "154"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/155> a skos:Concept ;
+    rdfs:label "TOGO"@it ;
+    skos:prefLabel "TOGO"@it ;
+    dct:identifier "155"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "155"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/156> a skos:Concept ;
+    rdfs:label "GRENADA"@it ;
+    skos:prefLabel "GRENADA"@it ;
+    dct:identifier "156"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "156"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/157> a skos:Concept ;
+    rdfs:label "GABON"@it ;
+    skos:prefLabel "GABON"@it ;
+    dct:identifier "157"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "157"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/158> a skos:Concept ;
+    rdfs:label "BENIN"@it ;
+    skos:prefLabel "BENIN"@it ;
+    dct:identifier "158"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "158"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/159> a skos:Concept ;
+    rdfs:label "GUYANA"@it ;
+    skos:prefLabel "GUYANA"@it ;
+    dct:identifier "159"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "159"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/160> a skos:Concept ;
+    rdfs:label "BAHAMAS"@it ;
+    skos:prefLabel "BAHAMAS"@it ;
+    dct:identifier "160"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "160"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/161> a skos:Concept ;
+    rdfs:label "FIJI, ISOLE"@it ;
+    skos:prefLabel "FIJI, ISOLE"@it ;
+    dct:identifier "161"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "161"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/162> a skos:Concept ;
+    rdfs:label "TONGA"@it ;
+    skos:prefLabel "TONGA"@it ;
+    dct:identifier "162"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "162"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/163> a skos:Concept ;
+    rdfs:label "OMAN"@it ;
+    skos:prefLabel "OMAN"@it ;
+    dct:identifier "163"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "163"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/164> a skos:Concept ;
+    rdfs:label "GAMBIA"@it ;
+    skos:prefLabel "GAMBIA"@it ;
+    dct:identifier "164"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "164"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/166> a skos:Concept ;
+    rdfs:label "SAHARA OCCIDENTALE"@it ;
+    skos:prefLabel "SAHARA OCCIDENTALE"@it ;
+    dct:identifier "166"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "166"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/167> a skos:Concept ;
+    rdfs:label "GUINEA EQUATORIALE"@it ;
+    skos:prefLabel "GUINEA EQUATORIALE"@it ;
+    dct:identifier "167"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "167"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/168> a skos:Concept ;
+    rdfs:label "QATAR"@it ;
+    skos:prefLabel "QATAR"@it ;
+    dct:identifier "168"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "168"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/169> a skos:Concept ;
+    rdfs:label "BAHRAIN"@it ;
+    skos:prefLabel "BAHRAIN"@it ;
+    dct:identifier "169"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "169"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/175> a skos:Concept ;
+    rdfs:label "PITCAIRN"@it ;
+    skos:prefLabel "PITCAIRN"@it ;
+    dct:identifier "175"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "175"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/176> a skos:Concept ;
+    rdfs:label "COMORE, ISOLE"@it ;
+    skos:prefLabel "COMORE, ISOLE"@it ;
+    dct:identifier "176"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "176"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/177> a skos:Concept ;
+    rdfs:label "MIDWAY ISOLE"@it ;
+    skos:prefLabel "MIDWAY ISOLE"@it ;
+    dct:identifier "177"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "177"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/178> a skos:Concept ;
+    rdfs:label "WAKE ISOLE"@it ;
+    skos:prefLabel "WAKE ISOLE"@it ;
+    dct:identifier "178"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "178"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/180> a skos:Concept ;
+    rdfs:label "ANTARTIDE"@it ;
+    skos:prefLabel "ANTARTIDE"@it ;
+    dct:identifier "180"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "180"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/182> a skos:Concept ;
+    rdfs:label "ISRAELE"@it ;
+    skos:prefLabel "ISRAELE"@it ;
+    dct:identifier "182"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "182"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/183> a skos:Concept ;
+    rdfs:label "TERRITORI FRANCESI DEL SUD"@it ;
+    skos:prefLabel "TERRITORI FRANCESI DEL SUD"@it ;
+    dct:identifier "183"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "183"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/185> a skos:Concept ;
+    rdfs:label "GUINEA BISSAU"@it ;
+    skos:prefLabel "GUINEA BISSAU"@it ;
+    dct:identifier "185"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "185"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/186> a skos:Concept ;
+    rdfs:label "PAPUA NUOVA GUINEA"@it ;
+    skos:prefLabel "PAPUA NUOVA GUINEA"@it ;
+    dct:identifier "186"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "186"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/187> a skos:Concept ;
+    rdfs:label "SAO TOME E PRINCIPE"@it ;
+    skos:prefLabel "SAO TOME E PRINCIPE"@it ;
+    dct:identifier "187"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "187"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/188> a skos:Concept ;
+    rdfs:label "CAPO VERDE"@it ;
+    skos:prefLabel "CAPO VERDE"@it ;
+    dct:identifier "188"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "188"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/189> a skos:Concept ;
+    rdfs:label "SEYCHELLES"@it ;
+    skos:prefLabel "SEYCHELLES"@it ;
+    dct:identifier "189"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "189"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/190> a skos:Concept ;
+    rdfs:label "FALKLAND (ISOLE)"@it ;
+    skos:prefLabel "FALKLAND (ISOLE)"@it ;
+    dct:identifier "190"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "190"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/191> a skos:Concept ;
+    rdfs:label "SALOMONE ISOLE"@it ;
+    skos:prefLabel "SALOMONE ISOLE"@it ;
+    dct:identifier "191"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "191"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/192> a skos:Concept ;
+    rdfs:label "DOMINICA"@it ;
+    skos:prefLabel "DOMINICA"@it ;
+    dct:identifier "192"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "192"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/193> a skos:Concept ;
+    rdfs:label "TUVALU"@it ;
+    skos:prefLabel "TUVALU"@it ;
+    dct:identifier "193"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "193"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/194> a skos:Concept ;
+    rdfs:label "KIRIBATI"@it ;
+    skos:prefLabel "KIRIBATI"@it ;
+    dct:identifier "194"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "194"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/195> a skos:Concept ;
+    rdfs:label "SAINT KITTS E NEVIS"@it ;
+    skos:prefLabel "SAINT KITTS E NEVISE"@it ;
+    dct:identifier "195"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "195"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/196> a skos:Concept ;
+    rdfs:label "ST. VINCENTE E LE GRENADINE"@it ;
+    skos:prefLabel "ST. VINCENTE E LE GRENADINE"@it ;
+    dct:identifier "196"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "196"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/197> a skos:Concept ;
+    rdfs:label "ANTIGUA E BARBUDA"@it ;
+    skos:prefLabel "ANTIGUA E BARBUDA"@it ;
+    dct:identifier "197"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "197"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/198> a skos:Concept ;
+    rdfs:label "BELIZE"@it ;
+    skos:prefLabel "BELIZE"@it ;
+    dct:identifier "198"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "198"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/199> a skos:Concept ;
+    rdfs:label "SAINT LUCIA"@it ;
+    skos:prefLabel "SAINT LUCIA"@it ;
+    dct:identifier "199"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "199"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/200> a skos:Concept ;
+    rdfs:label "GROENLANDIA"@it ;
+    skos:prefLabel "GROENLANDIA"@it ;
+    dct:identifier "200"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "200"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/201> a skos:Concept ;
+    rdfs:label "GUERNSEY"@it ;
+    skos:prefLabel "GUERNSEY"@it ;
+    dct:identifier "201"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "201"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/202> a skos:Concept ;
+    rdfs:label "JERSEY C.I"@it ;
+    skos:prefLabel "JERSEY C.I"@it ;
+    dct:identifier "202"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "202"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/203> a skos:Concept ;
+    rdfs:label "MAN ISOLA"@it ;
+    skos:prefLabel "MAN ISOLA"@it ;
+    dct:identifier "203"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "203"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/204> a skos:Concept ;
+    rdfs:label "FAEROER (ISOLE)"@it ;
+    skos:prefLabel "FAEROER (ISOLE)"@it ;
+    dct:identifier "204"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "204"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/205> a skos:Concept ;
+    rdfs:label "NIUE"@it ;
+    skos:prefLabel "NIUE"@it ;
+    dct:identifier "205"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "205"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/206> a skos:Concept ;
+    rdfs:label "NAMIBIA"@it ;
+    skos:prefLabel "NAMIBIA"@it ;
+    dct:identifier "206"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "206"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/207> a skos:Concept ;
+    rdfs:label "BERMUDA"@it ;
+    skos:prefLabel "BERMUDA"@it ;
+    dct:identifier "207"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "207"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/208> a skos:Concept ;
+    rdfs:label "MONTSERRAT"@it ;
+    skos:prefLabel "MONTSERRAT"@it ;
+    dct:identifier "208"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "208"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/209> a skos:Concept ;
+    rdfs:label "ANGUILLA"@it ;
+    skos:prefLabel "ANGUILLA"@it ;
+    dct:identifier "209"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "209"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/210> a skos:Concept ;
+    rdfs:label "TURKS E CAICOS (ISOLE)"@it ;
+    skos:prefLabel "TURKS E CAICOS (ISOLE)"@it ;
+    dct:identifier "210"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "210"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/211> a skos:Concept ;
+    rdfs:label "CAYMAN (ISOLE)"@it ;
+    skos:prefLabel "CAYMAN (ISOLE)"@it ;
+    dct:identifier "211"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "211"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/212> a skos:Concept ;
+    rdfs:label "ARUBA"@it ;
+    skos:prefLabel "ARUBA"@it ;
+    dct:identifier "212"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "212"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/213> a skos:Concept ;
+    rdfs:label "MARTINICA"@it ;
+    skos:prefLabel "MARTINICA"@it ;
+    dct:identifier "213"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "213"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/214> a skos:Concept ;
+    rdfs:label "GUADALUPA"@it ;
+    skos:prefLabel "GUADALUPA"@it ;
+    dct:identifier "214"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "214"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/215> a skos:Concept ;
+    rdfs:label "MICRONESIA (STATI FEDERATI DI)"@it ;
+    skos:prefLabel "MICRONESIA (STATI FEDERATI DI)"@it ;
+    dct:identifier "215"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "215"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/216> a skos:Concept ;
+    rdfs:label "PALAU"@it ;
+    skos:prefLabel "PALAU"@it ;
+    dct:identifier "216"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "216"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/217> a skos:Concept ;
+    rdfs:label "MARSHALL (ISOLE)"@it ;
+    skos:prefLabel "MARSHALL (ISOLE)"@it ;
+    dct:identifier "217"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "217"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/218> a skos:Concept ;
+    rdfs:label "WALLIS E FUTUNA"@it ;
+    skos:prefLabel "WALLIS E FUTUNA"@it ;
+    dct:identifier "218"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "218"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/219> a skos:Concept ;
+    rdfs:label "MARIANNE SETTENTRIONALI (ISOLE)"@it ;
+    skos:prefLabel "MARIANNE SETTENTRIONALI (ISOLE)"@it ;
+    dct:identifier "219"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "219"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/220> a skos:Concept ;
+    rdfs:label "PORTORICO"@it ;
+    skos:prefLabel "PORTORICO"@it ;
+    dct:identifier "220"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "220"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/221> a skos:Concept ;
+    rdfs:label "VERGINI AMERICANE (ISOLE)"@it ;
+    skos:prefLabel "VERGINI AMERICANE (ISOLE)"@it ;
+    dct:identifier "221"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "221"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/222> a skos:Concept ;
+    rdfs:label "SAINT MARTIN SETTENTRIONALE"@it ;
+    skos:prefLabel "SAINT MARTIN SETTENTRIONALE"@it ;
+    dct:identifier "222"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "222"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/223> a skos:Concept ;
+    rdfs:label "CLIPPERTON"@it ;
+    skos:prefLabel "CLIPPERTON"@it ;
+    dct:identifier "223"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "223"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/225> a skos:Concept ;
+    rdfs:label "POLINESIA FRANCESE"@it ;
+    skos:prefLabel "POLINESIA FRANCESE"@it ;
+    dct:identifier "225"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "225"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/226> a skos:Concept ;
+    rdfs:label "MAYOTTE"@it ;
+    skos:prefLabel "MAYOTTE"@it ;
+    dct:identifier "226"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "226"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/227> a skos:Concept ;
+    rdfs:label "ASCENSION"@it ;
+    skos:prefLabel "ASCENSION"@it ;
+    dct:identifier "227"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "227"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/228> a skos:Concept ;
+    rdfs:label "GOUGH"@it ;
+    skos:prefLabel "GOUGH"@it ;
+    dct:identifier "228"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "228"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/229> a skos:Concept ;
+    rdfs:label "TRISTAN DA CUNHA"@it ;
+    skos:prefLabel "TRISTAN DA CUNHA"@it ;
+    dct:identifier "229"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "229"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/230> a skos:Concept ;
+    rdfs:label "CHAFARINAS"@it ;
+    skos:prefLabel "CHAFARINAS"@it ;
+    dct:identifier "230"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "230"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/231> a skos:Concept ;
+    rdfs:label "MELILLA"@it ;
+    skos:prefLabel "MELILLA"@it ;
+    dct:identifier "231"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "231"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/232> a skos:Concept ;
+    rdfs:label "PENON DE ALHUCEMAS"@it ;
+    skos:prefLabel "PENON DE ALHUCEMAS"@it ;
+    dct:identifier "232"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "232"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/233> a skos:Concept ;
+    rdfs:label "PENON DE VELEZ DE LA GOMERA"@it ;
+    skos:prefLabel "PENON DE VELEZ DE LA GOMERA"@it ;
+    dct:identifier "233"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "233"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/234> a skos:Concept ;
+    rdfs:label "AZZORRE ISOLE"@it ;
+    skos:prefLabel "AZZORRE ISOLE"@it ;
+    dct:identifier "234"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "234"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/235> a skos:Concept ;
+    rdfs:label "MADEIRA"@it ;
+    skos:prefLabel "MADEIRA"@it ;
+    dct:identifier "235"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "235"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/236> a skos:Concept ;
+    rdfs:label "TOKELAU"@it ;
+    skos:prefLabel "TOKELAU"@it ;
+    dct:identifier "236"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "236"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/237> a skos:Concept ;
+    rdfs:label "COOK ISOLE"@it ;
+    skos:prefLabel "COOK ISOLE"@it ;
+    dct:identifier "237"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "237"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/238> a skos:Concept ;
+    rdfs:label "ABU DHABI"@it ;
+    skos:prefLabel "ABU DHABI"@it ;
+    dct:identifier "238"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "238"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/239> a skos:Concept ;
+    rdfs:label "AJMAN"@it ;
+    skos:prefLabel "AJMAN"@it ;
+    dct:identifier "239"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "239"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/240> a skos:Concept ;
+    rdfs:label "DUBAI"@it ;
+    skos:prefLabel "DUBAI"@it ;
+    dct:identifier "240"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "240"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/241> a skos:Concept ;
+    rdfs:label "FUIJAYRAH"@it ;
+    skos:prefLabel "FUIJAYRAH"@it ;
+    dct:identifier "241"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "241"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/242> a skos:Concept ;
+    rdfs:label "RAS EL KAIMAH"@it ;
+    skos:prefLabel "RAS EL KAIMAH"@it ;
+    dct:identifier "242"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "242"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/243> a skos:Concept ;
+    rdfs:label "SHARJAH"@it ;
+    skos:prefLabel "SHARJAH"@it ;
+    dct:identifier "243"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "243"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/244> a skos:Concept ;
+    rdfs:label "UMM AL QAIWAIN"@it ;
+    skos:prefLabel "UMM AL QAIWAIN"@it ;
+    dct:identifier "244"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "244"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/245> a skos:Concept ;
+    rdfs:label "TERRITORIO BRIT. OCEANO INDIANO"@it ;
+    skos:prefLabel "TERRITORIO BRIT. OCEANO INDIANO"@it ;
+    dct:identifier "245"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "245"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/246> a skos:Concept ;
+    rdfs:label "CEUTA"@it ;
+    skos:prefLabel "CEUTA"@it ;
+    dct:identifier "246"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "246"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/247> a skos:Concept ;
+    rdfs:label "REUNION"@it ;
+    skos:prefLabel "REUNION"@it ;
+    dct:identifier "247"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "247"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/248> a skos:Concept ;
+    rdfs:label "SAINT-PIERRE E MIQUELON"@it ;
+    skos:prefLabel "SAINT-PIERRE E MIQUELON"@it ;
+    dct:identifier "248"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "248"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/249> a skos:Concept ;
+    rdfs:label "VERGINI BRITANNICHE (ISOLE)"@it ;
+    skos:prefLabel "VERGINI BRITANNICHE (ISOLE)"@it ;
+    dct:identifier "249"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "249"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/252> a skos:Concept ;
+    rdfs:label "ISOLE AMERICANE DEL PACIFICO"@it ;
+    skos:prefLabel "ISOLE AMERICANE DEL PACIFICO"@it ;
+    dct:identifier "252"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "252"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/253> a skos:Concept ;
+    rdfs:label "NUOVA CALEDONIA"@it ;
+    skos:prefLabel "NUOVA CALEDONIA"@it ;
+    dct:identifier "253"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "253"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/254> a skos:Concept ;
+    rdfs:label "ST. HELENA"@it ;
+    skos:prefLabel "ST. HELENA"@it ;
+    dct:identifier "254"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "254"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/255> a skos:Concept ;
+    rdfs:label "CHAGOS ISOLE"@it ;
+    skos:prefLabel "CHAGOS ISOLE"@it ;
+    dct:identifier "255"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "255"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/256> a skos:Concept ;
+    rdfs:label "CAROLINE ISOLE"@it ;
+    skos:prefLabel "CAROLINE ISOLE"@it ;
+    dct:identifier "256"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "256"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/257> a skos:Concept ;
+    rdfs:label "ESTONIA"@it ;
+    skos:prefLabel "ESTONIA"@it ;
+    dct:identifier "257"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "257"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/258> a skos:Concept ;
+    rdfs:label "LETTONIA"@it ;
+    skos:prefLabel "LETTONIA"@it ;
+    dct:identifier "258"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "258"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/259> a skos:Concept ;
+    rdfs:label "LITUANIA"@it ;
+    skos:prefLabel "LITUANIA"@it ;
+    dct:identifier "259"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "259"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/260> a skos:Concept ;
+    rdfs:label "SLOVENIA"@it ;
+    skos:prefLabel "SLOVENIA"@it ;
+    dct:identifier "260"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "260"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/261> a skos:Concept ;
+    rdfs:label "CROAZIA"@it ;
+    skos:prefLabel "CROAZIA"@it ;
+    dct:identifier "261"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "261"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/262> a skos:Concept ;
+    rdfs:label "RUSSIA (FEDERAZIONE DI)"@it ;
+    skos:prefLabel "RUSSIA (FEDERAZIONE DI)"@it ;
+    dct:identifier "262"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "262"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/263> a skos:Concept ;
+    rdfs:label "UCRAINA"@it ;
+    skos:prefLabel "UCRAINA"@it ;
+    dct:identifier "263"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "263"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/264> a skos:Concept ;
+    rdfs:label "BIELORUSSIA"@it ;
+    skos:prefLabel "BIELORUSSIA"@it ;
+    dct:identifier "264"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "264"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/265> a skos:Concept ;
+    rdfs:label "MOLDOVIA"@it ;
+    skos:prefLabel "MOLDOVIA"@it ;
+    dct:identifier "265"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "265"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/266> a skos:Concept ;
+    rdfs:label "ARMENIA"@it ;
+    skos:prefLabel "ARMENIA"@it ;
+    dct:identifier "266"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "266"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/267> a skos:Concept ;
+    rdfs:label "GEORGIA"@it ;
+    skos:prefLabel "GEORGIA"@it ;
+    dct:identifier "267"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "267"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/268> a skos:Concept ;
+    rdfs:label "AZERBAIGIAN"@it ;
+    skos:prefLabel "AZERBAIGIAN"@it ;
+    dct:identifier "268"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "268"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/269> a skos:Concept ;
+    rdfs:label "KAZAKISTAN"@it ;
+    skos:prefLabel "KAZAKISTAN"@it ;
+    dct:identifier "269"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "269"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/270> a skos:Concept ;
+    rdfs:label "KIRGHIZISTAN"@it ;
+    skos:prefLabel "KIRGHIZISTAN"@it ;
+    dct:identifier "270"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "270"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/271> a skos:Concept ;
+    rdfs:label "UZBEKISTAN"@it ;
+    skos:prefLabel "UZBEKISTAN"@it ;
+    dct:identifier "271"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "271"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/272> a skos:Concept ;
+    rdfs:label "TAGIKISTAN"@it ;
+    skos:prefLabel "TAGIKISTAN"@it ;
+    dct:identifier "272"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "272"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/273> a skos:Concept ;
+    rdfs:label "TURKMENISTAN"@it ;
+    skos:prefLabel "TURKMENISTAN"@it ;
+    dct:identifier "273"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "273"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/274> a skos:Concept ;
+    rdfs:label "BOSNIA-ERZEGOVINA"@it ;
+    skos:prefLabel "BOSNIA-ERZEGOVINA"@it ;
+    dct:identifier "274"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "274"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/275> a skos:Concept ;
+    rdfs:label "CECA (REPUBBLICA)"@it ;
+    skos:prefLabel "CECA (REPUBBLICA)"@it ;
+    dct:identifier "275"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "275"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/276> a skos:Concept ;
+    rdfs:label "SLOVACCA REPUBBLICA"@it ;
+    skos:prefLabel "SLOVACCA REPUBBLICA"@it ;
+    dct:identifier "276"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "276"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/277> a skos:Concept ;
+    rdfs:label "ERITREA"@it ;
+    skos:prefLabel "ERITREA"@it ;
+    dct:identifier "277"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "277"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/278> a skos:Concept ;
+    rdfs:label "MACEDONIA"@it ;
+    skos:prefLabel "MACEDONIA"@it ;
+    dct:identifier "278"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "278"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/279> a skos:Concept ;
+    rdfs:label "PALESTINA (TERRITORI AUTONOMI DI)"@it ;
+    skos:prefLabel "PALESTINA (TERRITORI AUTONOMI DI)"@it ;
+    dct:identifier "279"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "279"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/280> a skos:Concept ;
+    rdfs:label "BOUVET ISLAND"@it ;
+    skos:prefLabel "BOUVET ISLAND"@it ;
+    dct:identifier "280"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "280"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/281> a skos:Concept ;
+    rdfs:label "COCOS (KEELING) ISLAND"@it ;
+    skos:prefLabel "COCOS (KEELING) ISLAND"@it ;
+    dct:identifier "281"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "281"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/282> a skos:Concept ;
+    rdfs:label "CHRISTMAS ISLAND"@it ;
+    skos:prefLabel "CHRISTMAS ISLAND"@it ;
+    dct:identifier "282"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "282"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/283> a skos:Concept ;
+    rdfs:label "SOUTH GEORGIA AND SOUTH SANDWICH"@it ;
+    skos:prefLabel "SOUTH GEORGIA AND SOUTH SANDWICH"@it ;
+    dct:identifier "283"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "283"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/284> a skos:Concept ;
+    rdfs:label "HEARD AND MCDONALD ISLAND"@it ;
+    skos:prefLabel "HEARD AND MCDONALD ISLAND"@it ;
+    dct:identifier "284"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "284"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/285> a skos:Concept ;
+    rdfs:label "NORFOLK ISLAND"@it ;
+    skos:prefLabel "NORFOLK ISLAND"@it ;
+    dct:identifier "285"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "285"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/286> a skos:Concept ;
+    rdfs:label "SVALBARD AND JAN MAYEN ISLANDS"@it ;
+    skos:prefLabel "SVALBARD AND JAN MAYEN ISLANDS"@it ;
+    dct:identifier "286"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "286"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/287> a skos:Concept ;
+    rdfs:label "TIMOR EST"@it ;
+    skos:prefLabel "TIMOR EST"@it ;
+    dct:identifier "287"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "287"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/289> a skos:Concept ;
+    rdfs:label "SERBIA"@it ;
+    skos:prefLabel "SERBIA"@it ;
+    dct:identifier "289"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "289"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/290> a skos:Concept ;
+    rdfs:label "MONTENEGRO"@it ;
+    skos:prefLabel "MONTENEGRO"@it ;
+    dct:identifier "290"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "290"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/291> a skos:Concept ;
+    rdfs:label "KOSOVO"@it ;
+    skos:prefLabel "KOSOVO"@it ;
+    dct:identifier "291"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "291"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/292> a skos:Concept ;
+    rdfs:label "ALAND ISOLE"@it ;
+    skos:prefLabel "ALAND ISOLE"@it ;
+    dct:identifier "292"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "292"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/293> a skos:Concept ;
+    rdfs:label "SAINT BARTHELEMY"@it ;
+    skos:prefLabel "SAINT BARTHELEMY"@it ;
+    dct:identifier "293"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "293"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/294> a skos:Concept ;
+    rdfs:label "SAINT MAARTEN (DUTHC PART)"@it ;
+    skos:prefLabel "SAINT MAARTEN (DUTHC PART)"@it ;
+    dct:identifier "294"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "294"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/295> a skos:Concept ;
+    rdfs:label "BONAIRE SAINT EUSTATIUS AND SABA"@it ;
+    skos:prefLabel "BONAIRE SAINT EUSTATIUS AND SABA"@it ;
+    dct:identifier "295"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "295"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/296> a skos:Concept ;
+    rdfs:label "CURACAO"@it ;
+    skos:prefLabel "CURACAO"@it ;
+    dct:identifier "296"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "296"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero/297> a skos:Concept ;
+    rdfs:label "SUD SUDAN"@it ;
+    skos:prefLabel "SUD SUDAN"@it ;
+    dct:identifier "297"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_estero> ;
+    skos:notation "297"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CE_CSV> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_estero/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_estero/latest/codice_estero.csv> ;
+    dct:description "CU statement foreign country codes controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici dei territori e paesi esteri associati al percepiente estero nella Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement foreign country codes controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato dei codici dei territori e paesi esteri associati al percepiente estero nella Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CE_JSON_LD> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_estero/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_estero/latest/codice_estero.json> ;
+    dct:description "CU statement foreign country codes controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici dei territori e paesi esteri associati al percepiente estero nella Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement foreign country codes controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato dei codici dei territori e paesi esteri associati al percepiente estero nella Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/CUStatement/distribution/CE_RDF_TURTLE> a dcat:Distribution,
+        dcatapit:Distribution ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_estero/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_estero/latest/codice_estero.ttl> ;
+    dct:description "CU statement foreign country codes controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato dei codici dei territori e paesi esteri associati al percepiente estero nella Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement foreign country codes controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato dei codici dei territori e paesi esteri associati al percepiente estero nella Certificazione Unica"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
+        foaf:Agent ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

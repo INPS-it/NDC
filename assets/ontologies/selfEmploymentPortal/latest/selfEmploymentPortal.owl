@@ -1,0 +1,1562 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/INPSServicePortal/"
+     xml:base="https://w3id.org/italia/social-security/onto/INPSServicePortal/"
+     xmlns:L0="https://w3id.org/italia/onto/l0/"
+     xmlns:RO="https://w3id.org/italia/onto/RO/"
+     xmlns:TI="https://w3id.org/italia/onto/TI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:COV="https://w3id.org/italia/onto/COV/"
+     xmlns:CPV="https://w3id.org/italia/onto/CPV/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:CPSV="https://w3id.org/italia/onto/CPSV/"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:INPSRL="https://w3id.org/italia/social-security/onto/relevantLegislation/"
+     xmlns:INPSSP="https://w3id.org/italia/social-security/onto/INPSServicePortal/"
+     xmlns:Proc17="https://w3id.org/italia/social-security/onto/procedura17/"
+     xmlns:INPSSEP="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/"
+     xmlns:INPSTFP="https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/"
+     xmlns:INPSCore="https://w3id.org/italia/social-security/onto/core/"
+     xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
+     xmlns:INPSSafety="https://w3id.org/italia/social-security/onto/social-safety-net/">
+    <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/">
+        <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/1.0"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CPV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/RO/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/"/>
+        <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
+        <dct:creator rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:description xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:description xml:lang="en">This INPS ontology describes the main entities and proprieties of the Self Employed Portal according to the INPS agency.</dct:description>
+        <dct:identifier>https://w3id.org/italia/social-security/onto/selfEmploymentPortal</dct:identifier>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dct:issued>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dct:modified>
+        <dct:publisher rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:rightsHolder rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:title xml:lang="it">Ontologia Cassetto Previdenziale Libero Professionista di INPS </dct:title>
+        <dct:title xml:lang="en">Self Employed Portal INPS Ontology</dct:title>
+        <rdfs:comment xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell&apos;istituto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">This INPS ontology describes the main entities and proprieties of the Self employed Portal according to the INPS agency.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/"/>
+        <rdfs:label xml:lang="it">Ontologia Cassetto Previdenziale Libero Professionista di INPS</rdfs:label>
+        <rdfs:label xml:lang="en">Self Employed Portal INPS Ontology</rdfs:label>
+        <owl:versionInfo xml:lang="it">1.0 - Modificata il 29 Ottobre 2024</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">1.0 - Modified on 29 October 2024</owl:versionInfo>
+        <dcat:contactPoint rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
+        <dcat:keyword xml:lang="it">Avviso di debito</dcat:keyword>
+        <dcat:keyword xml:lang="en">Cancellation request</dcat:keyword>
+        <dcat:keyword xml:lang="it">Cassetto Previdenziale Libero Professionista</dcat:keyword>
+        <dcat:keyword xml:lang="en">Debit notice</dcat:keyword>
+        <dcat:keyword xml:lang="it">Domanda di annullamento</dcat:keyword>
+        <dcat:keyword xml:lang="en">Self Employed Portal</dcat:keyword>
+        <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+        <adms:acronym>inps</adms:acronym>
+        <adms:hasContributor rdf:resource="https://w3id.org/italia/social-security/data/organization/td"/>
+        <adms:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista"/>
+        <adms:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
+        <adms:last rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/1.0"/>
+        <adms:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/selfEmploymentPortal/</adms:officialURI>
+        <adms:prefix>INPSSEP</adms:prefix>
+        <adms:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
+        <adms:status>catalogued</adms:status>
+        <adms:status>published</adms:status>
+        <adms:target xml:lang="it">Cittadini</adms:target>
+        <adms:target xml:lang="it">Imprese</adms:target>
+        <adms:target xml:lang="it">Pubbliche Amministrazioni</adms:target>
+        <adms:type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista">
+        <rdfs:comment xml:lang="it">La object property descrive il collegamento tra il cassetto previdenziale e la sua utenza di riferimento</rdfs:comment>
+        <rdfs:label xml:lang="it">consulta cassetto previdenziale INPS</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista"/>
+        <rdfs:comment xml:lang="it">La object property collega la richiesta di compensazione con la domanda di rimborso dei contributi non dovuti </rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the compensation with the request for reimbursement of undue contributions</rdfs:comment>
+        <rdfs:label xml:lang="en">compensation requested by sending an application</rdfs:label>
+        <rdfs:label xml:lang="it">compensazione richiesta tramite invio domanda</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="it">La object property collega la sezione del cassetto previdenziale dedicata alla Rendicontaizone della gestione separata con il gruppo di oggetti dei quali rende disponibile la consultazione (Contributi versati, Compensazioni o Rimbordi rivÃ¬cevuti)</rdfs:comment>
+        <rdfs:comment xml:lang="it">La object property collega la sezione del cassetto previdenziale dedicata alla Rendicontaizone della gestione separata con il gruppo di oggetti dei quali rende disponibile la consultazione (Contributi versati, Compensazioni o Rimbordi rivìcevuti)</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the section of the pension drawer dedicated to the Reporting of the separate management with the group of objects for which it makes consultation available (Contributions paid, Compensations or Refunds received)</rdfs:comment>
+        <rdfs:label xml:lang="en">allows consultation of</rdfs:label>
+        <rdfs:label xml:lang="it">consente consultazione di</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento"/>
+        <rdfs:comment xml:lang="en">La object property collega il servizio Avviso di addebito con l&apos;istanza che consente di inviare, la Domanda di annullamento</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the Charge Notice service with the instance that allows you to submit the Cancellation Request</rdfs:comment>
+        <rdfs:label xml:lang="en">allows sending cancellation request</rdfs:label>
+        <rdfs:label xml:lang="it">consente invio domanda di annullamento</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista"/>
+        <rdfs:comment xml:lang="it">La object property collega l&apos;avviso di addebito con la domanda di sospensione</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the charge notice with the suspension request</rdfs:comment>
+        <rdfs:label xml:lang="en">allows sending suspension request</rdfs:label>
+        <rdfs:label xml:lang="it">consente invio domanda sospensione</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito"/>
+        <rdfs:comment xml:lang="it">La object property collega la classe Avviso di addebito con la classe NotificaAvviso di addebito, chiarendo che un avviso di addebito diventa consultabile al suo destinatario dopo aver ricevuto una notifica di ricezione dell&apos;avviso di addebito</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the Charge Notice class with the Charge Notice Notification class, making it clear that a charge notice becomes viewable to its recipient after receiving a notification that the charge notice has been received</rdfs:comment>
+        <rdfs:label xml:lang="it">consultabile tramite notifica</rdfs:label>
+        <rdfs:label xml:lang="en">consultable via notification</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24"/>
+        <rdfs:comment xml:lang="it">La relazione esprime il collegamento tra i contributie la modalitÃ  di versamento richiesta per i liberi professionisti, ossia il modelloF24</rdfs:comment>
+        <rdfs:comment xml:lang="it">La relazione esprime il collegamento tra i contributie la modalità di versamento richiesta per i liberi professionisti, ossia il modelloF24</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property expresses the connection between the contributions and the payment method required for freelancers, i.e. the F24 form</rdfs:comment>
+        <rdfs:label xml:lang="en">contribution paid with</rdfs:label>
+        <rdfs:label xml:lang="it">contributo versato tramite</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haModalitaDiPagamento -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haModalitaDiPagamento">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario"/>
+        <rdfs:label xml:lang="it">ha modalita di pagamento</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso"/>
+        <rdfs:comment xml:lang="it">La object property collega una domanda di rimborso con la tipologia di domanda inoltrata</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links a refund request with the type of request submitted</rdfs:comment>
+        <rdfs:label xml:lang="it">ha motivo di rimborso</rdfs:label>
+        <rdfs:label xml:lang="en">has reason for refund</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TipoDelega"/>
+        <rdfs:comment xml:lang="it">La object property collega una delega con la sua tipologia</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links a delegation with its type.</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipo delega</rdfs:label>
+        <rdfs:label xml:lang="en">has type of delegation</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato">
+        <rdfs:comment xml:lang="it">La object property collega il Libero professionista allo studio associato, descrivendo cosÃ¬ la possibilitÃ  dell&apos;associaizone di un professionista ad uno studio associato</rdfs:comment>
+        <rdfs:comment xml:lang="it">La object property collega il Libero professionista allo studio associato, descrivendo così la possibilità dell&apos;associaizone di un professionista ad uno studio associato</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the freelancer to the associated studio</rdfs:comment>
+        <rdfs:label xml:lang="it">partecipa a studio associato</rdfs:label>
+        <rdfs:label xml:lang="en">participate in the associated studio</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista"/>
+        <rdfs:comment xml:lang="it">La object property collega la domanda di rimborso dei contributi non dovuti con il servizio con il quale Ã¨ possibile inviarla</rdfs:comment>
+        <rdfs:comment xml:lang="it">La object property collega la domanda di rimborso dei contributi non dovuti con il servizio con il quale è possibile inviarla</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the request for reimbursement of undue contributions with the service with which it can be sent</rdfs:comment>
+        <rdfs:label xml:lang="en">refund requested by submitting an application</rdfs:label>
+        <rdfs:label xml:lang="it">rimborso richiesto tramite invio domanda</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio"/>
+        <rdfs:comment xml:lang="it">La object property collega il servizio dedicato all&apos;invio di un avviso di abedito con i soggetti individuati come destinatari del servizio stesso</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the service dedicated to sending a debit notice with the subjects identified as recipients of the service itself</rdfs:comment>
+        <rdfs:label xml:lang="en">service has recipient</rdfs:label>
+        <rdfs:label xml:lang="it">servizio ha destinatario</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:complementOf rdf:resource="https://w3id.org/italia/social-security/onto/procedura17/LiberoProfessionistaProtettoConCassa"/>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista"/>
+        <rdfs:comment xml:lang="it">La object property definisce la relazione  tra il libero professionista e il suo cassetto previdenziale di riferimento. Sulla proprietÃ  Ã¨ stata imposta una dichiarazione per escludere dalla relazione il coinvolgimento delle istanze della clssse di Libero professionsita protetto con cassa, ossia dell&apos;insieme dei liberi professionisti che non ha obbligo di versare i contributi alla Gestione separata INPS</rdfs:comment>
+        <rdfs:comment xml:lang="it">La object property definisce la relazione  tra il libero professionista e il suo cassetto previdenziale di riferimento. Sulla proprietà è stata imposta una dichiarazione per escludere dalla relazione il coinvolgimento delle istanze della clssse di Libero professionsita protetto con cassa, ossia dell&apos;insieme dei liberi professionisti che non ha obbligo di versare i contributi alla Gestione separata INPS</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property defines the relationship between the freelancer and his reference pension account</rdfs:comment>
+        <rdfs:comment xml:lang="en">use self-employed pension account services</rdfs:comment>
+        <rdfs:label xml:lang="en">use self-employed pension account services</rdfs:label>
+        <rdfs:label xml:lang="it">utilizza servizi cassetto previdenziale libero professionista</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24"/>
+        <rdfs:comment xml:lang="it">La object property collega il libero professionista al modello F24, sterumento tramite il quale deve assolvere l&apos;obbligo di pagamento dei contributi</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the freelancer to the F24 form,</rdfs:comment>
+        <rdfs:label xml:lang="en">pays social security contributions through</rdfs:label>
+        <rdfs:label xml:lang="en">use self-employed pension account services</rdfs:label>
+        <rdfs:label xml:lang="it">versa contributi previdenziali tramite</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoCompetenzaRendicontazioneGS -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoCompetenzaRendicontazioneGS">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata"/>
+        <rdfs:comment xml:lang="it">L&apos;anno di competenza della rendicontazione nella gestione separata INPS si riferisce all&apos;anno in cui i redditi sono stati effettivamente guadagnati</rdfs:comment>
+        <rdfs:comment xml:lang="en">The reporting year in the INPS separate management refers to the year in which the income was actually earned</rdfs:comment>
+        <rdfs:label xml:lang="it">anno di competenza rendicontazione gestione separata</rdfs:label>
+        <rdfs:label xml:lang="en">year of competence</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoDiRimborso -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoDiRimborso">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista"/>
+        <rdfs:comment xml:lang="it">anno per il quale viene richiesto il rimborso</rdfs:comment>
+        <rdfs:comment xml:lang="en">year for which the refund is requested</rdfs:comment>
+        <rdfs:label xml:lang="it">anno del rimborso</rdfs:label>
+        <rdfs:label xml:lang="en">repayment year</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoFiscaleDiRiferimento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoFiscaleDiRiferimento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo"/>
+        <rdfs:comment xml:lang="it">anno in cui i redditi sono stati percepiti e per il quale si calcolano i contributi previdenziali dovuti</rdfs:comment>
+        <rdfs:comment xml:lang="en">year in which the income was received and for which the social security contributions due are calculated</rdfs:comment>
+        <rdfs:label xml:lang="it">anno fiscale di riferimento</rdfs:label>
+        <rdfs:label xml:lang="en">fiscal year of reference</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceFiscaleDelegato -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceFiscaleDelegato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
+        <rdfs:label xml:lang="it">codice fiscale del delegato</rdfs:label>
+        <rdfs:label xml:lang="en">delegate&apos;s tax code</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario"/>
+        <rdfs:comment xml:lang="it">Il codice IBAN (International Bank Account Number) Ã¨ un codice alfanumerico che identifica in modo univoco un conto bancario a livello internazionale</rdfs:comment>
+        <rdfs:comment xml:lang="it">Il codice IBAN (International Bank Account Number) è un codice alfanumerico che identifica in modo univoco un conto bancario a livello internazionale</rdfs:comment>
+        <rdfs:comment xml:lang="en">The IBAN (International Bank Account Number) code is an alphanumeric code that uniquely identifies a bank account internationally</rdfs:comment>
+        <rdfs:label xml:lang="en">IBAN code</rdfs:label>
+        <rdfs:label xml:lang="it">codice IBAN</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceTributo -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceTributo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo"/>
+        <rdfs:comment xml:lang="it">codice identificativo della tipologa di tributo versato</rdfs:comment>
+        <rdfs:comment xml:lang="en">identification code of the type of tax paid</rdfs:comment>
+        <rdfs:label xml:lang="it">codice tributo</rdfs:label>
+        <rdfs:label xml:lang="en">tax code</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/cognomeDelegato -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/cognomeDelegato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
+        <rdfs:label xml:lang="it">cognome del delegato</rdfs:label>
+        <rdfs:label xml:lang="en">delegate surname</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataDelVersamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataDelVersamento">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo"/>
+        <rdfs:comment xml:lang="it">data del pagamento dei contributi</rdfs:comment>
+        <rdfs:comment xml:lang="en">date of payment of social security contributions</rdfs:comment>
+        <rdfs:label xml:lang="it">data del versamento</rdfs:label>
+        <rdfs:label xml:lang="en">date of payment</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineCollaborazione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineCollaborazione">
+        <rdfs:comment xml:lang="it">data nella quale la collaborazione tra il libero professionista e lo studio associato Ã¨ terminata</rdfs:comment>
+        <rdfs:comment xml:lang="it">data nella quale la collaborazione tra il libero professionista e lo studio associato è terminata</rdfs:comment>
+        <rdfs:comment xml:lang="en">date on which the collaboration between the freelancer and the associated studio ended</rdfs:comment>
+        <rdfs:label xml:lang="it">data fine collaborazione</rdfs:label>
+        <rdfs:label xml:lang="en">end date of collaboration</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineDelega -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineDelega">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
+        <rdfs:label xml:lang="it">data fine delega</rdfs:label>
+        <rdfs:label xml:lang="en">end date of delegation</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioCollaborazione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioCollaborazione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato"/>
+        <rdfs:comment xml:lang="it">data di inizio della collaborazione del libero professionsita con lo studio associato</rdfs:comment>
+        <rdfs:comment xml:lang="en">start date of the freelancer&apos;s collaboration with the associated studio</rdfs:comment>
+        <rdfs:label xml:lang="it">data inizio collaborazione</rdfs:label>
+        <rdfs:label xml:lang="en">start date of collaboration</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioDelega -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioDelega">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
+        <rdfs:label xml:lang="it">data inizio delega</rdfs:label>
+        <rdfs:label xml:lang="en">start date of delegation</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataRicevimentoNotifica -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataRicevimentoNotifica">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito"/>
+        <rdfs:label xml:lang="it">Data ricevimento notifica</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/imponibileRendicontazioneGS -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/imponibileRendicontazioneGS">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata"/>
+        <rdfs:label xml:lang="it">imponibile rendicontazione gestione separata</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoContributoVersato -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoContributoVersato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo"/>
+        <rdfs:comment xml:lang="en">amount of the sum paid for the payment of contributions</rdfs:comment>
+        <rdfs:comment xml:lang="it">importo della cifra versata per il pagamento dell&apos;onere contributivo</rdfs:comment>
+        <rdfs:label xml:lang="en">amount of contribution paid</rdfs:label>
+        <rdfs:label xml:lang="it">importo del contributo versato</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista"/>
+        <rdfs:comment xml:lang="it">Ammontare del rimborso richiesto</rdfs:comment>
+        <rdfs:comment xml:lang="en">Refund amount</rdfs:comment>
+        <rdfs:comment xml:lang="en">amount of the refund received</rdfs:comment>
+        <rdfs:label xml:lang="it">importo del rimborso</rdfs:label>
+        <rdfs:label xml:lang="en">refund amount</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/mesiUtili -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/mesiUtili">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata"/>
+        <rdfs:label xml:lang="it">mesi utili</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/nomeDelegato -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/nomeDelegato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
+        <rdfs:label xml:lang="en">delegate name</rdfs:label>
+        <rdfs:label xml:lang="it">nome del delegato</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocollo -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocollo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista"/>
+        <rdfs:comment xml:lang="en">identification number of the document containing the submitted electronic application</rdfs:comment>
+        <rdfs:comment xml:lang="it">numero identificativo del documento che contiene la domanda telematica inviata</rdfs:comment>
+        <rdfs:label xml:lang="it">numero di protocollo</rdfs:label>
+        <rdfs:label xml:lang="en">protocol number</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partitaIVAStudioAssociato -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partitaIVAStudioAssociato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato"/>
+        <rdfs:label xml:lang="en">VAT number of the associated</rdfs:label>
+        <rdfs:label xml:lang="it">partita IVA studio associato</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/periodoNonAccreditato -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/periodoNonAccreditato">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata"/>
+        <rdfs:label xml:lang="it">periodo non accreditato</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://dati.gov.it/onto/dcatapit#Distribution -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Distribution"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceFiscaleDelegato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/cognomeDelegato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineDelega"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioDelega"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/nomeDelegato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionsta -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionsta">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista"/>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRiduzioneSanzioneCivileLiberoProfessionista"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IstanzaRateizzazione"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/numeroProtocollo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24 -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/ModelloF24">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta il modello di versamento F24. L&apos;F24 Ã¨ il modello che i contribuenti devono utilizzare per il pagamento di tributi, contributi e premi. I titolari di partita IVA sono tenuti ad adottare  odalitÃ  telematiche di pagamento </rdfs:comment>
+        <rdfs:comment xml:lang="it">La classe rappresenta il modello di versamento F24. L&apos;F24 è il modello che i contribuenti devono utilizzare per il pagamento di tributi, contributi e premi. I titolari di partita IVA sono tenuti ad adottare  odalità telematiche di pagamento </rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the F24 payment model</rdfs:comment>
+        <rdfs:label xml:lang="en"> F24 Model</rdfs:label>
+        <rdfs:label xml:lang="it">Modello F24</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista">
+        <rdfs:label xml:lang="it">Posizione assicurativa libero professionista</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionsta"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/procedura17/LiberoProfessionistaProtettoConCassa -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/procedura17/LiberoProfessionistaProtettoConCassa">
+        <owl:disjointWith>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:disjointWith>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe descrive l&apos;avviso di addebito ossia le somme da corrispondere ad INPS</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class describes the debit notice, i.e. the sums to be paid to INPS</rdfs:comment>
+        <rdfs:label xml:lang="it">Avviso di addebito</rdfs:label>
+        <rdfs:label xml:lang="en">Debit notice</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PosizioneDebitoriaCreditoria"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Ricorso"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/utilizzaServiziCassettoPrevidenzialeLiberoProfessionista"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="en">Compensation Request. In the ontology, the class represents one of the possible types of requests presented by sending a request for reimbursement of undue contributions</rdfs:comment>
+        <rdfs:comment xml:lang="it">Domanda di Compensazione. Nell&apos;ontologia la classe rappresenta una delle possibili tipologie di istanze presentate tramite l&apos;invio di una domanda di rimborso dei contributi non dovuti</rdfs:comment>
+        <rdfs:label xml:lang="en">Compensation</rdfs:label>
+        <rdfs:label xml:lang="it">Compensazione</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContoBancario">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haModalitaDiPagamento"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceIBAN"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta un conto corrente aperto da un soggetto presso un istituto bancario</rdfs:comment>
+        <rdfs:comment xml:lang="none">The class represents a current account opened by a person at a banking institution</rdfs:comment>
+        <rdfs:comment>The class represents a current account opened by a person at a banking institution</rdfs:comment>
+        <rdfs:label xml:lang="none">Bank account</rdfs:label>
+        <rdfs:label xml:lang="it">Conto corrente bancario</rdfs:label>
+        <rdfs:label>Bank account</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoIVSVersato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoIVSVersato">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato"/>
+        <rdfs:comment xml:lang="it">La classe rappresenta la quota di contribuzione previdenziale utile ad assicurare il lavoratore nei casi di InvaliditÃ , Vecchiaia e decesso (Superstiti) (IVS) . Il contributo Ã¨ versato all&apos;INPS attraverso una trattenuta in busta paga (come ad esempio nel caso dei dipendenti del settore privato) o pagamento diretto nel caso dei liberi professionisti. I liberi professionisti iscritti alla Gestione separata devono versare la quota IVS attraverso il modello F24</rdfs:comment>
+        <rdfs:comment xml:lang="it">La classe rappresenta la quota di contribuzione previdenziale utile ad assicurare il lavoratore nei casi di Invalidità, Vecchiaia e decesso (Superstiti) (IVS) . Il contributo è versato all&apos;INPS attraverso una trattenuta in busta paga (come ad esempio nel caso dei dipendenti del settore privato) o pagamento diretto nel caso dei liberi professionisti. I liberi professionisti iscritti alla Gestione separata devono versare la quota IVS attraverso il modello F24</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the portion of social security contributions useful for insuring the worker in cases of disability, old age and death (Survivors) (IVS)</rdfs:comment>
+        <rdfs:label xml:lang="it">Contributo IVS versato</rdfs:label>
+        <rdfs:label xml:lang="en">IVS contribution paid</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/contributoVersatoTramite"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta i contributi versati dal o per il lavoratore a fini previdenziali e assistenziali. La contribuzione previdenziale consiste in un premio assicurativo che si paga per assicurare il lavoratore per un determinato evento come ad esempio la maternitÃ , al malattia, la disoccupazione o la pensione.</rdfs:comment>
+        <rdfs:comment xml:lang="it">La classe rappresenta i contributi versati dal o per il lavoratore a fini previdenziali e assistenziali. La contribuzione previdenziale consiste in un premio assicurativo che si paga per assicurare il lavoratore per un determinato evento come ad esempio la maternità, al malattia, la disoccupazione o la pensione.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the contributions paid by or for the worker for social security and welfare purposes.</rdfs:comment>
+        <rdfs:label xml:lang="en">Contribution paid</rdfs:label>
+        <rdfs:label xml:lang="it">Contributo versato</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DestinatarioDelServizio">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IntermediarioAutorizzato"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/servizioHaDestinatario"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta il gruppo di soggetti ai quali il servizio Ã¨ dedicato</rdfs:comment>
+        <rdfs:comment xml:lang="it">La classe rappresenta il gruppo di soggetti ai quali il servizio è dedicato</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the group of subjects to whom the service is dedicated</rdfs:comment>
+        <rdfs:label xml:lang="it">Destinatario del servizio</rdfs:label>
+        <rdfs:label xml:lang="en">Service recipient</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoParziale"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoTotale"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaDiAnnullamento"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di annullamento dell&apos;avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the service that allows you to send the request for cancellation of the payment notice online to INPS</rdfs:comment>
+        <rdfs:label xml:lang="en">Cancellation request</rdfs:label>
+        <rdfs:label xml:lang="it">Domanda di annullamento</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoParziale -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoParziale">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoTotale"/>
+        <rdfs:comment xml:lang="it">La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di annullamento parziale dell&apos;avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the service that allows you to send the request for partial cancellation of the payment notice online to INPS</rdfs:comment>
+        <rdfs:label xml:lang="it">Domanda di annullamento parziale</rdfs:label>
+        <rdfs:label xml:lang="en">Request for partial cancellation</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoTotale -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamentoTotale">
+        <rdfs:comment xml:lang="it">La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di annullamento totale dell&apos;avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the service that allows you to send the request for total cancellation of the payment notice online to INPS</rdfs:comment>
+        <rdfs:label xml:lang="it">Domanda di annullamento totale</rdfs:label>
+        <rdfs:label xml:lang="en">Request for total cancellation</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteInvioDomandaSospensione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta il servizio, compreso nel cassetto previdenziale del libero professionista, che consente di trasmettere on line ad INPS la domanda di sospensione dell&apos;avviso di abbebito. Il servizio consente anche la visualizzazione dello stato della domanda e delle eventuali comunicazioni inserite dalla sede INPS di competenza</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the service that allows you to send the request for suspension of the payment notice online to INPS</rdfs:comment>
+        <rdfs:label xml:lang="it">Domanda di sospensione libero professionista</rdfs:label>
+        <rdfs:label xml:lang="en">Request for suspension of freelance professional</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRiduzioneSanzioneCivileLiberoProfessionista -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRiduzioneSanzioneCivileLiberoProfessionista">
+        <rdfs:comment xml:lang="it">La classe rappresent ail servizio dedicato all&apos;invio di domande di riduzione delle sanzioni civili del libero professionista e l&apos;insieme delle domande inviate</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the service dedicated to sending requests for reduction of civil sanctions of the freelancer</rdfs:comment>
+        <rdfs:label xml:lang="it">Domanda riduzione sanzione civile libero professionista</rdfs:label>
+        <rdfs:label xml:lang="en">Request for reduction of civil penalty for self-employed professional</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haModalitaDiPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/compensazioneRichiestaTramiteInvioDomanda"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoDiRimborso"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoRimborso"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe descrive il servizio dedicato all&apos;invio telematico di istanze di rimborso per contributi non dovuti</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class describes the service dedicated to the electronic submission of reimbursement requests for undue contributions</rdfs:comment>
+        <rdfs:label xml:lang="it">Domanda di rimborso contributi non dovuti dal libero professionista</rdfs:label>
+        <rdfs:label xml:lang="en">Request for reimbursement of contributions not due by the freelancer</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IntermediarioAutorizzato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IntermediarioAutorizzato">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo"/>
+        <rdfs:comment xml:lang="it">La classe rappresenta gli intermediari, ovvero coloro che su incarico degi interessati provvedono ad agire per loro conto, ad esempio con l&apos;invio di istanze o la presentazione di domande</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents intermediaries, or those who, on behalf of interested parties, act on their behalf</rdfs:comment>
+        <rdfs:label xml:lang="en">Authorized intermediary</rdfs:label>
+        <rdfs:label xml:lang="it">Intermediario autorizzato</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IstanzaRateizzazione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IstanzaRateizzazione">
+        <rdfs:comment xml:lang="it">La classe rappresenta la sezione del servizio di invio delle domande telematiche dedicata alla presentazion edi istanze di rateizzazione dei contributi e alla consultazione delle domande inviate</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the section of the telematic application submission service dedicated to the submission of requests for the payment by instalments of contributions and to the consultation of the applications sent</rdfs:comment>
+        <rdfs:label xml:lang="it">Istanza di rateizzazione</rdfs:label>
+        <rdfs:label xml:lang="en">Request for installment payment</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/LegaleRappresentante -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/LegaleRappresentante">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo"/>
+        <rdfs:comment xml:lang="it">Soggetto al quale spetta l&apos;obbligo della verifica dell&apos;esecuzione del rispetto dell&apos;obbligo contributivo</rdfs:comment>
+        <rdfs:comment xml:lang="en">Subject responsible for verifying compliance with the contribution obligation</rdfs:comment>
+        <rdfs:label xml:lang="en">Legal representative</rdfs:label>
+        <rdfs:label xml:lang="it">Legale rappresentante</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/MotivoRimborso">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haMotivoRimborso"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta l&apos;insieme di voci contrllate che indicano il motivo per il quale Ã¨ consentito chiedere un rimborso dei contributi</rdfs:comment>
+        <rdfs:comment xml:lang="en">La classe rappresenta l&apos;insieme di voci controllate che indicano il motivo per il quale è consentito chiedere un rimborso dei contributi</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the set of controlled entries that indicate the reason for which a refund of contributions can be requested</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the set of controlled entries that indicate the reason for which a refund of contributions can be requested.</rdfs:comment>
+        <rdfs:label xml:lang="it">Motivo del rimborso</rdfs:label>
+        <rdfs:label xml:lang="en">Reason for refund</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/NotificaAvvisoDiAddebito">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consultabileTramiteNotifica"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataRicevimentoNotifica"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe descrive il servizio di invio della notifica di addebito delle somme da corrispondere a INPS</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class describes the service for sending the notification of debit of the sums to be paid to INPS</rdfs:comment>
+        <rdfs:label xml:lang="en">Debit Notice Notification</rdfs:label>
+        <rdfs:label xml:lang="it">Notifica di avviso di addebito</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataInizioCollaborazione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partitaIVAStudioAssociato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataFineCollaborazione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="it">La classe reifica la partecipazione del libero professionista ad uno studio associato, rappresentando il caso in cui la partecipazione esista</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class describes the participation of the freelancer in a partnership</rdfs:comment>
+        <rdfs:label xml:lang="it">Partecipazione a studio associato</rdfs:label>
+        <rdfs:label xml:lang="en">Participation in a associated studio</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PosizioneDebitoriaCreditoria -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PosizioneDebitoriaCreditoria">
+        <rdfs:comment xml:lang="it">La classe rappresenta il servizio contenuto nel cassetto previdenziale del libero professionista dedicato alla consultazione della situazione creditoria o debitoria del lavoratore</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the service contained in the self-employed worker&apos;s social security drawer dedicated to consulting the worker&apos;s credit or debt situation</rdfs:comment>
+        <rdfs:label xml:lang="en">Debt/Credit Position</rdfs:label>
+        <rdfs:label xml:lang="it">Posizione debitoria creditoria</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoCompetenzaRendicontazioneGS"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/imponibileRendicontazioneGS"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/mesiUtili"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/periodoNonAccreditato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta il servizio che consente la consultazione in formato tabellare della sintesi dello stato contributivo del lavoratore diviso per anno </rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the service that allows the consultation in tabular format of the summary of the worker&apos;s contribution status divided by year</rdfs:comment>
+        <rdfs:label xml:lang="it">Rendicontazione gestione separata</rdfs:label>
+        <rdfs:label xml:lang="en">Separate management reporting</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ResponsabileAdempimentoContributivo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/LegaleRappresentante"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe descrive il Responsabile dell&apos;adempimento contributivo, ossia il soggetto che ha la responsabilitÃ  di garantire il corretto versamento dei contributi previdenziali</rdfs:comment>
+        <rdfs:comment xml:lang="it">La classe descrive il Responsabile dell&apos;adempimento contributivo, ossia il soggetto che ha la responsabilità di garantire il corretto versamento dei contributi previdenziali</rdfs:comment>
+        <rdfs:comment xml:lang="en">he class describes the Person Responsible for Contribution Compliance, i.e. the person who is responsible for ensuring the correct payment of social security contributions.</rdfs:comment>
+        <rdfs:label xml:lang="it">Responsabile adempimento contributivo</rdfs:label>
+        <rdfs:label xml:lang="en">Responsible for compliance with contributions</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Ricorso -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Ricorso">
+        <rdfs:comment xml:lang="it">La classe rappresenta il servizio del cassetto previdenziale che consente la consultazione dei ricorsi presentati</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the service of the social security drawer that allows the consultation of the appeals presented</rdfs:comment>
+        <rdfs:label xml:lang="en">Appeal</rdfs:label>
+        <rdfs:label xml:lang="it">Ricorso</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/rimborsoRichiestoTramiteInvioDomanda"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta l&apos;istanza di rimborso dei contributi non dovuti presentata tramite il servizio di invio di una domanda di contributo non dovuto, disponibile nel cassetto previdenziale del libero professionista nella sezion ededicata all&apos;invio di domadna telematiche</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the request for reimbursement of undue contributions submitted through the service for sending an application for undue contributions, available in the self-employed professional&apos;s social security drawer.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reimbursement of contribution not due</rdfs:label>
+        <rdfs:label xml:lang="it">Rimborso contributo non dovuto</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TipoDelega -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TipoDelega">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/haTipoDelega"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">Tipologia di delega </rdfs:comment>
+        <rdfs:comment xml:lang="en">Type of delegation</rdfs:comment>
+        <rdfs:label xml:lang="en">Such delegation</rdfs:label>
+        <rdfs:label xml:lang="it">Tipo di delega</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/TitolareDiAdempimentoContributivo">
+        <rdfs:comment xml:lang="it">Il titolare dell&apos;adempimento contributivo Ã¨ il soggetto che deve garantire il rispetto di tutti gli adempimenti e delle scadenze contributive e lo stesso che risponde in caso di un mancato adempimento. Nel caso dei liberi professionisti il titolare Ã¨ il professionista stesso che deve effettuare direttamente il versamento dei contributi</rdfs:comment>
+        <rdfs:comment xml:lang="it">Il titolare dell&apos;adempimento contributivo è il soggetto che deve garantire il rispetto di tutti gli adempimenti e delle scadenze contributive e lo stesso che risponde in caso di un mancato adempimento. Nel caso dei liberi professionisti il titolare è il professionista stesso che deve effettuare direttamente il versamento dei contributi</rdfs:comment>
+        <rdfs:comment xml:lang="en">The holder of the contribution fulfillment is the person who must guarantee compliance with all the contribution fulfillments and deadlines and the same person who is responsible in the event of a failure to fulfill them.</rdfs:comment>
+        <rdfs:label xml:lang="en">Holder of contributory payment</rdfs:label>
+        <rdfs:label xml:lang="it">Titolare di adempimento contributivo</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/annoFiscaleDiRiferimento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/codiceTributo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/dataDelVersamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/importoContributoVersato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La  classe rappresenta il servizio che consente la consultazione dei contributi versati</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the service that allows the consultation of the contributions paid</rdfs:comment>
+        <rdfs:label xml:lang="en">Contribution payment</rdfs:label>
+        <rdfs:label xml:lang="it">Versamento contributivo</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/social-safety-net/EstrattoContoContributivo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/EstrattoContoContributivo"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/LiberoProfessionista">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/versaContributiPrevidenzialiTramite"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/partecipaAStudioAssociato"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+        <dct:identifier>DirezioneCentraleTII</dct:identifier>
+        <vcard:fn>INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it"/>
+        <foaf:name xml:lang="en">INPS - Central Management of Information Technology and Innovations</foaf:name>
+        <foaf:name xml:lang="it">INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/inps -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+        <dct:identifier>inps</dct:identifier>
+        <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
+        <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/td -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/td">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <dct:identifier>TD</dct:identifier>
+        <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
+        <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-N-TRIPLES">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell&apos;ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:description xml:lang="en">The Italian Self Employed Portal INPS Ontology N-TRIPLES distribution</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione N-TRIPLES dell&apos;ontologia INPS - Cassetto Previdenziale Libero Professionista</dct:title>
+        <dct:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - Self Employed Portal</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/selfEmploymentPortal/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/selfEmploymentPortal/latest/selfEmploymentPortal.n3"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-TURTLE">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell&apos;ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:description xml:lang="en">The Italian Self Employed Portal INPS Ontology RDF/Turtle distribution</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione RDF/Turtle dell&apos;ontologia INPS - Cassetto Previdenziale Libero Professionista</dct:title>
+        <dct:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - Self Employed Portal</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/selfEmploymentPortal/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/selfEmploymentPortal/latest/selfEmploymentPortal.ttl"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/selfEmploymentPortal/distribution/INPSSEP-RDF-XML">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell&apos;ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale del libero professionista secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:description xml:lang="en">The Italian Self Employed Portal INPS Ontology RDF/XML</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione RDF/XML dell&apos;ontologia INPS - Cassetto Previdenziale Libero Professionista</dct:title>
+        <dct:title xml:lang="en">RDF/XML distribution of the INPS ontology - Self Employed Portal</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/selfEmploymentPortal/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/selfEmploymentPortal/latest/selfEmploymentPortal.owl"/>
+    </owl:NamedIndividual>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto"/>
+        </owl:unionOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/consenteConsultazioneDi"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/EstrattoContoContributivo"/>
+        </owl:unionOf>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista"/>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/AvvisoDiAddebito"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PartecipazioneStudioAssociato"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/PosizioneDebitoriaCreditoria"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Ricorso"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/Compensazione"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/ContributoVersato"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RimborsoContributoNonDovuto"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiAnnullamento"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaDiSospensioneLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRiduzioneSanzioneCivileLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/DomandaRimborsoContributiNonDovutiLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/IstanzaRateizzazione"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/RendicontazioneGestioneSeparata"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/VersamentoContributivo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/social-safety-net/EstrattoContoContributivo"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

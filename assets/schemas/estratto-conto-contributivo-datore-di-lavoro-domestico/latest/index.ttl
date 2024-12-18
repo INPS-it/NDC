@@ -1,0 +1,80 @@
+@prefix admsapit: <https://w3id.org/italia/onto/ADMS/> .
+@prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix INPSDWS: <https://w3id.org/italia/social-security/onto/domesticWorkServices/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/italia/social-security/onto/domesticWorkServices> a owl:Ontology ;
+    foaf:name "Ontologia INPS relativa alle entità e alle relazioni che descrivono i servizi erogati dall'istituto pertinenti al rapporto di lavoro domestico. Tra di essi troviamo, ad esempio, i vari stati in cui si puo trovare un rapporto di lavoro domestico o la consultazione del'estratto contributivo" .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+### Annotations
+
+<https://w3id.org/italia/schemas/estratto-conto-contributivo-datore-di-lavoro-domestico/latest/estratto-conto-contributivo-datore-di-lavoro-domestico.oas3.yaml> a dcatapit:Dataset,
+        dcatapit:Distribution ;
+    rdfs:label "Consultazione Estratto Conto Contributivo Datore Di Lavoro Domestico API"@it ;
+    rdfs:comment "Servizio di notifica"@it ;
+    owl:versionInfo "1.0"@it ;
+    admsapit:acronym "inps" ;
+    admsapit:hasKeyClass INPSDWS:EstrattoContributivoRapportoDiLavoroDomesticoDatoreLavoro ;
+    admsapit:prefix "INPSDWS"^^xsd:string ;
+    admsapit:target "Cittadini"@it,
+        "Imprese"@it,
+        "Pubbliche Amministrazioni"@it ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/schemas/estratto-conto-contributivo-datore-di-lavoro-domestico/latest> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/schemas/estratto-conto-contributivo-datore-di-lavoro-domestico/latest/estratto-conto-contributivo-datore-di-lavoro-domestico.oas3.yaml> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/estratto-conto-contributivo-datore-di-lavoro-domestico/latest/estratto-conto-contributivo-datore-di-lavoro-domestico.oas3.yaml> ;
+    dcat:keyword "Comunicazione Obbligatoria"@it,
+        "Domestic Employment Relationship"@en,
+        "Domestic Worker"@en,
+        "Lavoratore Domestico"@it,
+        "Mandatory Communication"@en,
+        "Rapporto Lavoro Domestico"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/social-security/onto/domesticWorkServices> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Il servizio viene invocato per ottenere le informazioni sull'estratto conto contributivo per il datore di lavoro domestico. L'Estratto conto contributivo per il datore di lavoro domestico può essere consultato dal datore di lavoro domestico per visualizzare i contributi versati o da versare al lavoratore domestico nell'ambito di ciascun rapporto di lavoro attivo e caratterizzata pertanto come servizio" ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+    dct:identifier <https://w3id.org/italia/schemas/estratto-conto-contributivo-datore-di-lavoro-domestico> ;
+    dct:issued "2024-09-18"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-09-18"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "Consultazione Estratto Conto Contributivo Datore Di Lavoro Domestico API"@it .
+
+### Serialized using the ttlser deterministic serializer v1.2.0
