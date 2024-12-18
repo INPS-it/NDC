@@ -1,64 +1,45 @@
-@prefix : <https://w3id.org/italia/social-security/onto/contributionAccounStatement/> .
-@prefix L0: <https://w3id.org/italia/onto/l0/> .
-@prefix RO: <https://w3id.org/italia/onto/RO/> .
-@prefix SM: <https://w3id.org/italia/onto/SM/> .
-@prefix TI: <https://w3id.org/italia/onto/TI/> .
-@prefix l0: <https://w3id.org/italia/onto/l0/> .
+@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
 @prefix CLV: <https://w3id.org/italia/onto/CLV/> .
 @prefix COV: <https://w3id.org/italia/onto/COV/> .
+@prefix CPSV: <https://w3id.org/italia/onto/CPSV/> .
 @prefix CPV: <https://w3id.org/italia/onto/CPV/> .
-@prefix aco: <https://w3id.org/italia/onto/ACO/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix adms: <https://w3id.org/italia/onto/ADMS/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix CPSV: <https://w3id.org/italia/onto/CPSV/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
-@prefix INPSRL: <https://w3id.org/italia/social-security/onto/relevantLegislation/> .
-@prefix smapit: <https://w3id.org/italia/onto/SM/> .
-@prefix INPSDWS: <https://w3id.org/italia/social-security/onto/domesticWorkServices/> .
-@prefix SEP_IRA: <https://w3id.org/italia/social-security/onto/SEP_IRA> .
-@prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
-@prefix countries: <http://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/> .
-@prefix INPSSafety: <https://w3id.org/italia/social-security/onto/socialSafetyNet/> .
-@prefix ateco-2007: <https://w3id.org/italia/controlled-vocabulary/classifications-for-organizations/ateco-2007/> .
-@prefix INPSService: <https://w3id.org/italia/social-security/onto/services/> .
-@prefix INPSPensions: <https://w3id.org/italia/social-security/onto/pensions/> .
-@prefix INPSContributions: <https://w3id.org/italia/social-security/onto/contributions/> .
 @prefix INPSContributionAccountStatement: <https://w3id.org/italia/social-security/onto/contributionAccounStatement/> .
-@base <https://w3id.org/italia/social-security/onto/contributionAccounStatement/> .
+@prefix INPSRL: <https://w3id.org/italia/social-security/onto/relevantLegislation/> .
+@prefix INPSSafety: <https://w3id.org/italia/social-security/onto/socialSafetyNet/> .
+@prefix INPSSMR: <https://w3id.org/italia/social-security/onto/separateManagementRegistration/> .
+@prefix l0: <https://w3id.org/italia/onto/l0/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix RO: <https://w3id.org/italia/onto/RO/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 INPSContributionAccountStatement: a owl:Ontology ;
-    owl:versionIRI <https://w3id.org/italia/social-security/onto/contributionAccounStatement/1.0> ;
+    owl:versionIRI INPSContributionAccountStatement:1.0 ;
     owl:imports CLV:,
         COV:,
         CPV:,
-        L0:,
+        l0:,
         RO: ;
-    rdfs:label "Social Security  Contribution Account Statement INPS Ontology"@en,
-        "Ontologia Estratto Conto Contributivo Previdenziale di INPS"@it ;
+    rdfs:label "Ontologia Estratto Conto Contributivo Previdenziale di INPS"@it,
+        "Social Security  Contribution Account Statement INPS Ontology"@en ;
     rdfs:comment "Ontologia INPS relativa alle entità e alle relazioni che descrivono l' Estratto Conto Contributivo Previdenziale secondo i criteri dell'istituto."@it,
         "This INPS ontology describes the main entities and proprieties of the Social Security  Contribution Account Statement according to the INPS agency."@en ;
-    owl:versionInfo "1.0 - Modified on 29 October 2024"@en,
-        "1.0 - Modificata il 29 Ottobre 2024"@it ;
+    owl:versionInfo "1.0 - Modificata il 29 Ottobre 2024"@it,
+        "1.0 - Modified on 29 October 2024"@en ;
     rdfs:isDefinedBy INPSContributionAccountStatement: ;
     adms:acronym "inps" ;
     adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
     adms:hasFormalityLevel adms:Formal ;
-    adms:hasKeyClass INPSContributionAccountStatement:EstrattoContoGestioneSeparata,
+    adms:hasKeyClass INPSContributionAccountStatement:EstrattoContoDipendentiPubblici,
         INPSContributionAccountStatement:EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti,
-        INPSContributionAccountStatement:EstrattoContoDipendentiPubblici,
-		INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale;
+        INPSContributionAccountStatement:EstrattoContoGestioneSeparata,
+        INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale ;
     adms:hasOntologyLanguage adms:OWL ;
     adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/contributionAccounStatement/distribution/PCAS-N-TRIPLES>,
         <https://w3id.org/italia/social-security/data/contributionAccounStatement/distribution/PCAS-RDF-TURTLE>,
@@ -66,7 +47,7 @@ INPSContributionAccountStatement: a owl:Ontology ;
     adms:hasTask adms:AnnotationTask,
         adms:QueryFormulationTask,
         adms:SearchTask ;
-    adms:last <https://w3id.org/italia/social-security/onto/contributionAccounStatement/1.0> ;
+    adms:last INPSContributionAccountStatement:1.0 ;
     adms:officialURI "https://w3id.org/italia/social-security/onto/contributionAccounStatement/"^^xsd:anyURI ;
     adms:prefix "INPSContributionAccountStatement" ;
     adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
@@ -91,530 +72,336 @@ INPSContributionAccountStatement: a owl:Ontology ;
     dct:modified "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
     dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
     dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
-    dct:title "Social Security  Contribution Account Statement INPS Ontology"@en,
-        "Ontologia Estratto Conto Contributivo Previdenziale di INPS"@it .
-
-#################################################################
-#    Object Properties
-#################################################################
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/consultaEstrattoContoContributivo
-INPSContributionAccountStatement:consultaEstrattoContoContributivo rdf:type owl:ObjectProperty ;
-                                                                   rdfs:domain [ rdf:type owl:Class ;
-                                                                                 owl:unionOf ( INPSRL:Delegato
-                                                                                               INPSSafety:Lavoratore
-                                                                                             )
-                                                                               ] ;
-                                                                   rdfs:range INPSSafety:EstrattoContoContributivo ;
-                                                                   rdfs:comment "Defines the relationship between the Worker, Delegate classes and the EstrattoContoContributivo class"@en ,
-                                                                                "Definisce la relazione tra le classi Lavoratore, Delegato e la classe EstrattoContoContributivo"@it ;
-                                                                   rdfs:label "consult Contribution Account Statement"@en ,
-                                                                              "consultaEstrattoContoContributivo"@it .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/contributoRiferitoAEstrattoContoContributivo
-INPSContributionAccountStatement:contributoRiferitoAEstrattoContoContributivo rdf:type owl:ObjectProperty ,
-                                                                                       owl:FunctionalProperty ;
-                                                                              rdfs:domain INPSSafety:ContributoPrevidenziale ;
-                                                                              rdfs:range INPSSafety:EstrattoContoContributivo ;
-                                                                              rdfs:comment "Defines the relationship between the Social Security Contribution class and the Contribution Account Statement class"@en ,
-                                                                                           "Definisce la relazione tra la classe Contributo Previdenziale e la classe Estratto Conto Contributivo"@it ;
-                                                                              rdfs:label "Contribution Referring To Contribution Account Statement"@en ,
-                                                                                         "contributoRiferitoAEstrattoContoContributivo"@it .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/daAccessoAEstrattoConto
-INPSContributionAccountStatement:daAccessoAEstrattoConto rdf:type owl:ObjectProperty ,
-                                                                  owl:InverseFunctionalProperty ;
-                                                         rdfs:domain INPSSafety:EstrattoContoContributivo ;
-                                                         rdfs:range INPSContributionAccountStatement:EstrattoContoDipendentiPubblici ,
-                                                                    INPSContributionAccountStatement:EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti ,
-                                                                    INPSContributionAccountStatement:EstrattoContoGestioneSeparata ,
-                                                                    INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale ;
-                                                         rdfs:comment "Defines the relationship between the Contribution Account Statement class and the classes Separate Management Account Statement, Management Account Statement for Entertainment and Professional Sports Workers, Public Employees Account Statement, General Scheme Social Security Account Statement"@en ,
-                                                                      "Definisce la relazione tra la classe EstrattoContoContributivo e le classi EstrattoContoGestioneSeparata, EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti, EstrattoContoDipendentiPubblici, EstrattoContoPrevidenzialeRegimeGenerale"@it ;
-                                                         rdfs:label "Gives Access to Account Statemen"@en ,
-                                                                    "dàAccessoAEstrattoConto"@it .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoContributivoRegimeGenerale
-INPSContributionAccountStatement:haAccessoAEstrattoContoContributivoRegimeGenerale rdf:type owl:ObjectProperty ,
-                                                                                            owl:FunctionalProperty ,
-                                                                                            owl:InverseFunctionalProperty ;
-                                                                                   rdfs:range INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale ;
-                                                                                   rdfs:comment "Defines the relationship between the Worker class and the General Scheme Social Security Account Statement class"@en ,
-                                                                                                "Definisce la relazione tra la classe Lavoratore e la classe EstrattoContoPrevidenzialeRegimeGenerale"@it ;
-                                                                                   rdfs:label "haAccessoAEstrattoContoPrevidenzialeRegimeGenerale"@it ,
-                                                                                              "has access to the General Scheme Social Security Account Statement"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoDipendentiPubblici
-INPSContributionAccountStatement:haAccessoAEstrattoContoDipendentiPubblici rdf:type owl:ObjectProperty ,
-                                                                                    owl:FunctionalProperty ,
-                                                                                    owl:InverseFunctionalProperty ;
-                                                                           rdfs:domain INPSSafety:DipendentePubblico ;
-                                                                           rdfs:range INPSContributionAccountStatement:EstrattoContoDipendentiPubblici ;
-                                                                           rdfs:comment "Defines the relationship between the PublicEmployee class and the PublicEmployeeAccountStatement class"@en ,
-                                                                                        "Definisce la relazione tra la classe DipendentePubblico e la classe EstrattoContoDipendentiPubblici"@it ;
-                                                                           rdfs:label "haAccessoAEstrattoContoDipendentiPubblici"@it ,
-                                                                                      "hasAccessToPublicEmployeesAccountStatement"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti
-INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti rdf:type owl:ObjectProperty ,
-                                                                                                                          owl:FunctionalProperty ,
-                                                                                                                          owl:InverseFunctionalProperty ;
-                                                                                                                 rdfs:domain INPSContributionAccountStatement:LavoratoriDelloSpettacoloESportiviProfessionisti ;
-                                                                                                                 rdfs:range INPSContributionAccountStatement:EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti ;
-                                                                                                                 rdfs:comment "Defines the relationship between the LavoratoriDelloSpettacoloEsportiviProfessionalisti class and the EstrattoContoGestioneLavoratoriDelloSpettacoloEsportiviProfessionalisti class"@en ,
-                                                                                                                              "Definisce la relazione tra la classe LavoratoriDelloSpettacoloESportiviProfessionisti e la classe EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"@it ;
-                                                                                                                 rdfs:label "haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"@it ,
-                                                                                                                            "hasAccessAccount StatementManagementWorkersEntertainmentSportspeopleProfessionals"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/haAccessoAEstrattoContoGestioneSeparata
-INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneSeparata rdf:type owl:ObjectProperty ,
-                                                                                  owl:FunctionalProperty ,
-                                                                                  owl:InverseFunctionalProperty ;
-                                                                         rdfs:domain INPSContributionAccountStatement:LavoratoreIscrittoAGestioneSeparata ;
-                                                                         rdfs:range INPSContributionAccountStatement:EstrattoContoGestioneSeparata ;
-                                                                         rdfs:comment "Defines the relationship between the WorkerEnrolledAGestioneSeparata class and the EstrattoContoGestioneSeparata class"@en ,
-                                                                                      "Definisce la relazione tra la classe LavoratoreIscrittoAGestioneSeparata e la classe EstrattoContoGestioneSeparata"@it ;
-                                                                         rdfs:label "haAccessoAEstrattoContoGestioneSeparata"@it ,
-                                                                                    "hasAccountStatementAccessSeparateManagement"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/haContributoPrevidenziale
-INPSSafety:haContributoPrevidenziale rdf:type owl:ObjectProperty ,
-                                              owl:InverseFunctionalProperty ;
-                                     rdfs:domain INPSSafety:Lavoratore ;
-                                     rdfs:range INPSSafety:ContributoPrevidenziale .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/haEstrattoContoContributivo
-INPSSafety:haEstrattoContoContributivo rdf:type owl:ObjectProperty ,
-                                                owl:FunctionalProperty ,
-                                                owl:InverseFunctionalProperty ;
-                                       rdfs:domain CPV:Alive ;
-                                       rdfs:range INPSSafety:EstrattoContoContributivo .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/haTipoDiContribuzione
-INPSSafety:haTipoDiContribuzione rdf:type owl:ObjectProperty ,
-                                          owl:FunctionalProperty ;
-                                 rdfs:domain INPSSafety:ContributoPrevidenziale ;
-                                 rdfs:range INPSSafety:TipoDiContribuzione .
-
-
-#################################################################
-#    Data properties
-#################################################################
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/aziendaVersatrice
-INPSContributionAccountStatement:aziendaVersatrice rdf:type owl:DatatypeProperty ,
-                                                            owl:FunctionalProperty ;
-                                                   rdfs:domain INPSSafety:ContributoObbligatorio ;
-                                                   rdfs:comment "Indica l'azienda che versa i contributi al lavoratore"@it ,
-                                                                "Indicates the company that pays the contributions to the worker"@en ;
-                                                   rdfs:label "azienda versatrice"@it ,
-                                                              "pouring company"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/note
-INPSContributionAccountStatement:note rdf:type owl:DatatypeProperty ,
-                                               owl:FunctionalProperty ;
-                                      rdfs:domain INPSSafety:ContributoObbligatorio ;
-                                      rdfs:comment "Note"@it ,
-                                                   "notes"@en ;
-                                      rdfs:label "note"@it ,
-                                                 "notes"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/periodoDiRiferimento
-INPSContributionAccountStatement:periodoDiRiferimento rdf:type owl:DatatypeProperty ,
-                                                               owl:FunctionalProperty ;
-                                                      rdfs:domain INPSSafety:ContributoObbligatorio ;
-                                                      rdfs:comment "Indica il periodo di riferimento (da,a) della riga relativa all'estratto conto"@it ,
-                                                                   "Indicates the reference period (from, to) of the line relating to the bank statement"@en ;
-                                                      rdfs:label "periodo di riferimento"@it ,
-                                                                 "reference period"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/imponibileContributivo
-INPSSafety:imponibileContributivo rdf:type owl:DatatypeProperty ,
-                                           owl:FunctionalProperty ;
-                                  rdfs:domain INPSSafety:ContributoObbligatorio .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroUnitàTemporaliPerDiritto
-INPSSafety:numeroUnitàTemporaliPerDiritto rdf:type owl:DatatypeProperty ,
-                                                   owl:FunctionalProperty ;
-                                          rdfs:domain INPSSafety:ContributoObbligatorio .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/numeroUnitàTemporaliPerMisura
-INPSSafety:numeroUnitàTemporaliPerMisura rdf:type owl:DatatypeProperty ,
-                                                  owl:FunctionalProperty ;
-                                         rdfs:domain INPSSafety:ContributoObbligatorio .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/unitàDiMisuraTemporale
-INPSSafety:unitàDiMisuraTemporale rdf:type owl:DatatypeProperty ,
-                                           owl:FunctionalProperty ;
-                                  rdfs:domain INPSSafety:ContributoObbligatorio .
-
-
-#################################################################
-#    Classes
-#################################################################
-
-###  http://xmlns.com/foaf/0.1/Document
-foaf:Document rdf:type owl:Class .
-
-
-###  https://w3id.org/italia/onto/CPSV/Service
-CPSV:Service rdf:type owl:Class .
-
-
-###  https://w3id.org/italia/onto/CPV/Alive
-CPV:Alive rdf:type owl:Class .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/ContributoFacoltativo
-INPSContributionAccountStatement:ContributoFacoltativo rdf:type owl:Class ;
-                                                       rdfs:comment "La classe rappresenta i dati dei contributi figurativi che sono contributi previdenziali che vengono accreditati, a domanda o d’ufficio,  per i periodi di assenza dal lavoro o di retribuzione ridotta senza onere a carico dei lavoratori (privati/pubblici) "@it ,
-                                                                    "The class represents the data of the notional contributions which are social security contributions that are credited, upon request or automatically, for periods of absence from work or reduced pay without charge to the workers (private/public)"@en ;
-                                                       rdfs:label "Contributo Facoltativo"@it ,
-                                                                  "Optional contribution"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoDipendentiPubblici
-INPSContributionAccountStatement:EstrattoContoDipendentiPubblici rdf:type owl:Class ;
-                                                                 owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                       owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:daAccessoAEstrattoConto
-                                                                                                      ] ;
-                                                                                       owl:someValuesFrom owl:Thing
-                                                                                     ] ,
-                                                                                     [ rdf:type owl:Restriction ;
-                                                                                       owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:haAccessoAEstrattoContoDipendentiPubblici
-                                                                                                      ] ;
-                                                                                       owl:someValuesFrom owl:Thing
-                                                                                     ] ;
-                                                                 rdfs:comment "La classe rappresenta l'estratto conto dei dipendenti pubblici"@it ,
-                                                                              "The class represents the bank statement of public employees"@en ;
-                                                                 rdfs:label "EstrattoContoDipendentiPubblici"@it ,
-                                                                            "Public Employees Account Statement"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti
-INPSContributionAccountStatement:EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti rdf:type owl:Class ;
-                                                                                                       owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                                                             owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:daAccessoAEstrattoConto
-                                                                                                                                            ] ;
-                                                                                                                             owl:someValuesFrom owl:Thing
-                                                                                                                           ] ,
-                                                                                                                           [ rdf:type owl:Restriction ;
-                                                                                                                             owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti
-                                                                                                                                            ] ;
-                                                                                                                             owl:someValuesFrom owl:Thing
-                                                                                                                           ] ;
-                                                                                                       rdfs:comment "La classe rappresenta l'estratto conto dei lavoratori dello spettacolo e dello sport"@it ,
-                                                                                                                    "The class represents the balance sheet of entertainment and sports workers"@en ;
-                                                                                                       rdfs:label "Account Statement Management of Entertainment Workers and Professional Athletes"@en ,
-                                                                                                                  "EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"@it .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoGestioneSeparata
-INPSContributionAccountStatement:EstrattoContoGestioneSeparata rdf:type owl:Class ;
-                                                               owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:daAccessoAEstrattoConto
-                                                                                                    ] ;
-                                                                                     owl:someValuesFrom owl:Thing
-                                                                                   ] ,
-                                                                                   [ rdf:type owl:Restriction ;
-                                                                                     owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneSeparata
-                                                                                                    ] ;
-                                                                                     owl:someValuesFrom owl:Thing
-                                                                                   ] ;
-                                                               rdfs:comment "La classe rappresenta l'estratto conto degli Iscritti alla Gestione Separata"@it ,
-                                                                            "The class represents the account statement of the members of the Separate Account"@en ;
-                                                               rdfs:label "EstrattoContoGestioneSeparata"@it ,
-                                                                          "Separate Management Account Statement"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/EstrattoContoPrevidenzialeRegimeGenerale
-INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale rdf:type owl:Class ;
-                                                                          owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                                owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:daAccessoAEstrattoConto
-                                                                                                               ] ;
-                                                                                                owl:someValuesFrom owl:Thing
-                                                                                              ] ,
-                                                                                              [ rdf:type owl:Restriction ;
-                                                                                                owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:haAccessoAEstrattoContoContributivoRegimeGenerale
-                                                                                                               ] ;
-                                                                                                owl:someValuesFrom owl:Thing
-                                                                                              ] ;
-                                                                          rdfs:comment "La classe rappresenta l'estratto conto previdenziale regime generale"@it ,
-                                                                                       "The class represents the general regime social security account statement"@en ;
-                                                                          rdfs:label "EstrattoContoPrevidenzialeRegimeGenerale"@it ,
-                                                                                     "General Social Security Account Statement"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoreIscrittoAGestioneSeparata
-INPSContributionAccountStatement:LavoratoreIscrittoAGestioneSeparata rdf:type owl:Class ;
-                                                                     owl:equivalentClass [ rdf:type owl:Class ;
-                                                                                           owl:unionOf ( Proc17:LiberoProfessionistaIscrittoGestioneSeparata
-                                                                                                         INPSSafety:LavoratoreAutonomo
-                                                                                                         INPSSafety:LavoratoreAutonomoOccasionale
-                                                                                                         INPSSafety:LavoratoreParasubordinato
-                                                                                                       )
-                                                                                         ] ,
-                                                                                         [ rdf:type owl:Restriction ;
-                                                                                           owl:onProperty INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneSeparata ;
-                                                                                           owl:someValuesFrom owl:Thing
-                                                                                         ] ;
-                                                                     rdfs:comment "La classe rappresenta il lavoratore iscritto alla Gestione Separata"@it ,
-                                                                                  "The class represents the worker registered with the Separate Management"@en ;
-                                                                     rdfs:label "LavoratoreIscrittoAGestioneSeparata"@it ,
-                                                                                "Worker Registered in Separate Management"@en .
-
-
-###  https://w3id.org/italia/social-security/onto/contributionAccounStatement/LavoratoriDelloSpettacoloESportiviProfessionisti
-INPSContributionAccountStatement:LavoratoriDelloSpettacoloESportiviProfessionisti rdf:type owl:Class ;
-                                                                                  owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                                                                        owl:onProperty INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti ;
-                                                                                                        owl:someValuesFrom owl:Thing
-                                                                                                      ] ;
-                                                                                  rdfs:subClassOf INPSSafety:Lavoratore ;
-                                                                                  rdfs:comment "La classe rappresenta i lavoratori dello spettacolo e dello sport"@it ,
-                                                                                               "The class represents entertainment and sports workers"@en ;
-                                                                                  rdfs:label "Entertainment workers and professional athletes"@en ,
-                                                                                             "LavoratoriDelloSpettacoloESportiviProfessionisti"@it .
-
-
-###  https://w3id.org/italia/social-security/onto/separateManagementRegistration/LiberoProfessionistaIscrittoGestioneSeparata
-Proc17:LiberoProfessionistaIscrittoGestioneSeparata rdf:type owl:Class .
-
-
-###  https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato
-INPSRL:Delegato rdf:type owl:Class ;
-                owl:disjointWith INPSSafety:Lavoratore .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoDaRiscatto
-INPSSafety:ContributoDaRiscatto rdf:type owl:Class .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoFigurativo
-INPSSafety:ContributoFigurativo rdf:type owl:Class .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoObbligatorio
-INPSSafety:ContributoObbligatorio rdf:type owl:Class ;
-                                  owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                        owl:onProperty INPSContributionAccountStatement:aziendaVersatrice ;
-                                                        owl:someValuesFrom rdfs:Literal
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty INPSContributionAccountStatement:note ;
-                                                        owl:someValuesFrom rdfs:Literal
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty INPSContributionAccountStatement:periodoDiRiferimento ;
-                                                        owl:someValuesFrom rdfs:Literal
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty INPSSafety:imponibileContributivo ;
-                                                        owl:someValuesFrom rdfs:Literal
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty INPSSafety:numeroUnitàTemporaliPerDiritto ;
-                                                        owl:someValuesFrom rdfs:Literal
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty INPSSafety:numeroUnitàTemporaliPerMisura ;
-                                                        owl:someValuesFrom rdfs:Literal
-                                                      ] ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty INPSSafety:unitàDiMisuraTemporale ;
-                                                        owl:someValuesFrom rdfs:Literal
-                                                      ] .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoPrevidenziale
-INPSSafety:ContributoPrevidenziale rdf:type owl:Class ;
-                                   owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                         owl:onProperty INPSContributionAccountStatement:contributoRiferitoAEstrattoContoContributivo ;
-                                                         owl:someValuesFrom owl:Thing
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty INPSSafety:haTipoDiContribuzione ;
-                                                         owl:someValuesFrom owl:Thing
-                                                       ] ,
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty [ owl:inverseOf INPSSafety:haContributoPrevidenziale
-                                                                        ] ;
-                                                         owl:someValuesFrom owl:Thing
-                                                       ] .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/ContributoVolontario
-INPSSafety:ContributoVolontario rdf:type owl:Class .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/DipendentePubblico
-INPSSafety:DipendentePubblico rdf:type owl:Class ;
-                              owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                    owl:onProperty INPSContributionAccountStatement:haAccessoAEstrattoContoDipendentiPubblici ;
-                                                    owl:someValuesFrom owl:Thing
-                                                  ] .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/EstrattoContoContributivo
-INPSSafety:EstrattoContoContributivo rdf:type owl:Class ;
-                                     owl:equivalentClass [ rdf:type owl:Restriction ;
-                                                           owl:onProperty INPSContributionAccountStatement:daAccessoAEstrattoConto ;
-                                                           owl:someValuesFrom owl:Thing
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:consultaEstrattoContoContributivo
-                                                                          ] ;
-                                                           owl:someValuesFrom owl:Thing
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:contributoRiferitoAEstrattoContoContributivo
-                                                                          ] ;
-                                                           owl:someValuesFrom owl:Thing
-                                                         ] ,
-                                                         [ rdf:type owl:Restriction ;
-                                                           owl:onProperty [ owl:inverseOf INPSSafety:haEstrattoContoContributivo
-                                                                          ] ;
-                                                           owl:someValuesFrom owl:Thing
-                                                         ] ;
-                                     rdfs:subClassOf CPSV:Service .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/Lavoratore
-INPSSafety:Lavoratore rdf:type owl:Class ;
-                      owl:equivalentClass [ rdf:type owl:Restriction ;
-                                            owl:onProperty INPSContributionAccountStatement:haAccessoAEstrattoContoContributivoRegimeGenerale ;
-                                            owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                 owl:complementOf [ rdf:type owl:Class ;
-                                                                                    owl:unionOf ( INPSContributionAccountStatement:LavoratoreIscrittoAGestioneSeparata
-                                                                                                  INPSContributionAccountStatement:LavoratoriDelloSpettacoloESportiviProfessionisti
-                                                                                                  INPSSafety:DipendentePubblico
-                                                                                                )
-                                                                                  ]
-                                                               ]
-                                          ] .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomo
-INPSSafety:LavoratoreAutonomo rdf:type owl:Class .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreAutonomoOccasionale
-INPSSafety:LavoratoreAutonomoOccasionale rdf:type owl:Class .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/LavoratoreParasubordinato
-INPSSafety:LavoratoreParasubordinato rdf:type owl:Class .
-
-
-###  https://w3id.org/italia/social-security/onto/socialSafetyNet/TipoDiContribuzione
-INPSSafety:TipoDiContribuzione rdf:type owl:Class .
-
-
-#################################################################
-#    General axioms
-#################################################################
-
-[ rdf:type owl:Class ;
-  owl:unionOf ( INPSRL:Delegato
-                INPSSafety:Lavoratore
-              ) ;
-  owl:equivalentClass [ rdf:type owl:Restriction ;
-                        owl:onProperty INPSContributionAccountStatement:consultaEstrattoContoContributivo ;
-                        owl:someValuesFrom owl:Thing
-                      ]
-] .
-
-
-[ rdf:type owl:Class ;
-  owl:unionOf ( INPSContributionAccountStatement:ContributoFacoltativo
-                INPSSafety:ContributoDaRiscatto
-                INPSSafety:ContributoFigurativo
-                INPSSafety:ContributoObbligatorio
-                INPSSafety:ContributoVolontario
-              ) ;
-  rdfs:subClassOf INPSSafety:ContributoPrevidenziale
-] .
-
-
-[ rdf:type owl:Class ;
-  owl:unionOf ( INPSContributionAccountStatement:EstrattoContoDipendentiPubblici
-                INPSContributionAccountStatement:EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti
-                INPSContributionAccountStatement:EstrattoContoGestioneSeparata
-                INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale
-              ) ;
-  rdfs:subClassOf foaf:Document
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( INPSContributionAccountStatement:ContributoFacoltativo
-                INPSSafety:ContributoDaRiscatto
-                INPSSafety:ContributoFigurativo
-                INPSSafety:ContributoObbligatorio
-                INPSSafety:ContributoVolontario
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( INPSContributionAccountStatement:EstrattoContoDipendentiPubblici
-                INPSContributionAccountStatement:EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti
-                INPSContributionAccountStatement:EstrattoContoGestioneSeparata
-                INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale
-              )
-] .
-
-
-[ rdf:type owl:AllDisjointClasses ;
-  owl:members ( Proc17:LiberoProfessionistaIscrittoGestioneSeparata
-                INPSSafety:LavoratoreAutonomo
-                INPSSafety:LavoratoreAutonomoOccasionale
-                INPSSafety:LavoratoreParasubordinato
-              )
-] .
-
-
-#### INDIVIDUALS ####
-
-<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
-        owl:NamedIndividual,
-        vcard:Kind,
-        vcard:Organization ;
-		dct:identifier "DirezioneCentraleTII" ;
-    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
-        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
-    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
-    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
-
-<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
-        dcatapit:Agent,
-        foaf:Agent,
-        owl:NamedIndividual ;
-    dct:identifier "inps" ;
-    foaf:name "Istituto nazionale della previdenza sociale"@it,
-        "National institute for Social Security"@en .
-
-<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
-        foaf:Agent,
-        owl:NamedIndividual ;
-    dct:identifier "TD" ;
-    foaf:name "Digital Transformation Team"@en,
-        "Team per la Trasformazione Digitale"@it .
+    dct:title "Ontologia Estratto Conto Contributivo Previdenziale di INPS"@it,
+        "Social Security  Contribution Account Statement INPS Ontology"@en .
+
+### Object Properties
+
+INPSContributionAccountStatement:consultaEstrattoContoContributivo a owl:ObjectProperty ;
+    rdfs:label "consult Contribution Account Statement"@en,
+        "consultaEstrattoContoContributivo"@it ;
+    rdfs:domain [ a owl:Class ;
+            owl:unionOf (
+                    INPSRL:Delegato
+                    INPSSafety:Lavoratore ) ] ;
+    rdfs:range INPSSafety:EstrattoContoContributivo ;
+    rdfs:comment "Defines the relationship between the Worker, Delegate classes and the EstrattoContoContributivo class"@en,
+        "Definisce la relazione tra le classi Lavoratore, Delegato e la classe EstrattoContoContributivo"@it .
+
+INPSContributionAccountStatement:contributoRiferitoAEstrattoContoContributivo a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "Contribution Referring To Contribution Account Statement"@en,
+        "contributoRiferitoAEstrattoContoContributivo"@it ;
+    rdfs:domain INPSSafety:ContributoPrevidenziale ;
+    rdfs:range INPSSafety:EstrattoContoContributivo ;
+    rdfs:comment "Defines the relationship between the Social Security Contribution class and the Contribution Account Statement class"@en,
+        "Definisce la relazione tra la classe Contributo Previdenziale e la classe Estratto Conto Contributivo"@it .
+
+INPSContributionAccountStatement:daAccessoAEstrattoConto a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "dàAccessoAEstrattoConto"@it,
+        "Gives Access to Account Statemen"@en ;
+    rdfs:domain INPSSafety:EstrattoContoContributivo ;
+    rdfs:range INPSContributionAccountStatement:EstrattoContoDipendentiPubblici,
+        INPSContributionAccountStatement:EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti,
+        INPSContributionAccountStatement:EstrattoContoGestioneSeparata,
+        INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale ;
+    rdfs:comment "Defines the relationship between the Contribution Account Statement class and the classes Separate Management Account Statement, Management Account Statement for Entertainment and Professional Sports Workers, Public Employees Account Statement, General Scheme Social Security Account Statement"@en,
+        "Definisce la relazione tra la classe EstrattoContoContributivo e le classi EstrattoContoGestioneSeparata, EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti, EstrattoContoDipendentiPubblici, EstrattoContoPrevidenzialeRegimeGenerale"@it .
+
+INPSContributionAccountStatement:haAccessoAEstrattoContoContributivoRegimeGenerale a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "haAccessoAEstrattoContoPrevidenzialeRegimeGenerale"@it,
+        "has access to the General Scheme Social Security Account Statement"@en ;
+    rdfs:range INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale ;
+    rdfs:comment "Defines the relationship between the Worker class and the General Scheme Social Security Account Statement class"@en,
+        "Definisce la relazione tra la classe Lavoratore e la classe EstrattoContoPrevidenzialeRegimeGenerale"@it .
+
+INPSContributionAccountStatement:haAccessoAEstrattoContoDipendentiPubblici a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "haAccessoAEstrattoContoDipendentiPubblici"@it,
+        "hasAccessToPublicEmployeesAccountStatement"@en ;
+    rdfs:domain INPSSafety:DipendentePubblico ;
+    rdfs:range INPSContributionAccountStatement:EstrattoContoDipendentiPubblici ;
+    rdfs:comment "Defines the relationship between the PublicEmployee class and the PublicEmployeeAccountStatement class"@en,
+        "Definisce la relazione tra la classe DipendentePubblico e la classe EstrattoContoDipendentiPubblici"@it .
+
+INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"@it,
+        "hasAccessAccount StatementManagementWorkersEntertainmentSportspeopleProfessionals"@en ;
+    rdfs:domain INPSContributionAccountStatement:LavoratoriDelloSpettacoloESportiviProfessionisti ;
+    rdfs:range INPSContributionAccountStatement:EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti ;
+    rdfs:comment "Defines the relationship between the LavoratoriDelloSpettacoloEsportiviProfessionalisti class and the EstrattoContoGestioneLavoratoriDelloSpettacoloEsportiviProfessionalisti class"@en,
+        "Definisce la relazione tra la classe LavoratoriDelloSpettacoloESportiviProfessionisti e la classe EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"@it .
+
+INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneSeparata a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:label "haAccessoAEstrattoContoGestioneSeparata"@it,
+        "hasAccountStatementAccessSeparateManagement"@en ;
+    rdfs:domain INPSContributionAccountStatement:LavoratoreIscrittoAGestioneSeparata ;
+    rdfs:range INPSContributionAccountStatement:EstrattoContoGestioneSeparata ;
+    rdfs:comment "Defines the relationship between the WorkerEnrolledAGestioneSeparata class and the EstrattoContoGestioneSeparata class"@en,
+        "Definisce la relazione tra la classe LavoratoreIscrittoAGestioneSeparata e la classe EstrattoContoGestioneSeparata"@it .
+
+INPSSafety:haContributoPrevidenziale a owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain INPSSafety:Lavoratore ;
+    rdfs:range INPSSafety:ContributoPrevidenziale .
+
+INPSSafety:haEstrattoContoContributivo a owl:FunctionalProperty,
+        owl:InverseFunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain CPV:Alive ;
+    rdfs:range INPSSafety:EstrattoContoContributivo .
+
+INPSSafety:haTipoDiContribuzione a owl:FunctionalProperty,
+        owl:ObjectProperty ;
+    rdfs:domain INPSSafety:ContributoPrevidenziale ;
+    rdfs:range INPSSafety:TipoDiContribuzione .
+
+### Data Properties
+
+INPSContributionAccountStatement:aziendaVersatrice a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "azienda versatrice"@it,
+        "pouring company"@en ;
+    rdfs:domain INPSSafety:ContributoObbligatorio ;
+    rdfs:comment "Indica l'azienda che versa i contributi al lavoratore"@it,
+        "Indicates the company that pays the contributions to the worker"@en .
+
+INPSContributionAccountStatement:note a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "note"@it,
+        "notes"@en ;
+    rdfs:domain INPSSafety:ContributoObbligatorio ;
+    rdfs:comment "Note"@it,
+        "notes"@en .
+
+INPSContributionAccountStatement:periodoDiRiferimento a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:label "periodo di riferimento"@it,
+        "reference period"@en ;
+    rdfs:domain INPSSafety:ContributoObbligatorio ;
+    rdfs:comment "Indica il periodo di riferimento (da,a) della riga relativa all'estratto conto"@it,
+        "Indicates the reference period (from, to) of the line relating to the bank statement"@en .
+
+INPSSafety:imponibileContributivo a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain INPSSafety:ContributoObbligatorio .
+
+INPSSafety:numeroUnitàTemporaliPerDiritto a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain INPSSafety:ContributoObbligatorio .
+
+INPSSafety:numeroUnitàTemporaliPerMisura a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain INPSSafety:ContributoObbligatorio .
+
+INPSSafety:unitàDiMisuraTemporale a owl:DatatypeProperty,
+        owl:FunctionalProperty ;
+    rdfs:domain INPSSafety:ContributoObbligatorio .
+
+### Classes
+
+CPSV:Service a owl:Class .
+
+CPV:Alive a owl:Class .
+
+foaf:Document a owl:Class .
+
+INPSContributionAccountStatement:ContributoFacoltativo a owl:Class ;
+    rdfs:label "Contributo Facoltativo"@it,
+        "Optional contribution"@en ;
+    rdfs:comment "La classe rappresenta i dati dei contributi figurativi che sono contributi previdenziali che vengono accreditati, a domanda o d’ufficio,  per i periodi di assenza dal lavoro o di retribuzione ridotta senza onere a carico dei lavoratori (privati/pubblici) "@it,
+        "The class represents the data of the notional contributions which are social security contributions that are credited, upon request or automatically, for periods of absence from work or reduced pay without charge to the workers (private/public)"@en .
+
+INPSContributionAccountStatement:EstrattoContoDipendentiPubblici a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:daAccessoAEstrattoConto ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:haAccessoAEstrattoContoDipendentiPubblici ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "EstrattoContoDipendentiPubblici"@it,
+        "Public Employees Account Statement"@en ;
+    rdfs:comment "La classe rappresenta l'estratto conto dei dipendenti pubblici"@it,
+        "The class represents the bank statement of public employees"@en .
+
+INPSContributionAccountStatement:EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:daAccessoAEstrattoConto ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Account Statement Management of Entertainment Workers and Professional Athletes"@en,
+        "EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti"@it ;
+    rdfs:comment "La classe rappresenta l'estratto conto dei lavoratori dello spettacolo e dello sport"@it,
+        "The class represents the balance sheet of entertainment and sports workers"@en .
+
+INPSContributionAccountStatement:EstrattoContoGestioneSeparata a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:daAccessoAEstrattoConto ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneSeparata ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "EstrattoContoGestioneSeparata"@it,
+        "Separate Management Account Statement"@en ;
+    rdfs:comment "La classe rappresenta l'estratto conto degli Iscritti alla Gestione Separata"@it,
+        "The class represents the account statement of the members of the Separate Account"@en .
+
+INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:daAccessoAEstrattoConto ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:haAccessoAEstrattoContoContributivoRegimeGenerale ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "EstrattoContoPrevidenzialeRegimeGenerale"@it,
+        "General Social Security Account Statement"@en ;
+    rdfs:comment "La classe rappresenta l'estratto conto previdenziale regime generale"@it,
+        "The class represents the general regime social security account statement"@en .
+
+INPSContributionAccountStatement:LavoratoreIscrittoAGestioneSeparata a owl:Class ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:unionOf (
+                    INPSSafety:LavoratoreAutonomo
+                    INPSSafety:LavoratoreAutonomoOccasionale
+                    INPSSafety:LavoratoreParasubordinato
+                    INPSSMR:LiberoProfessionistaIscrittoGestioneSeparata ) ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneSeparata ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "LavoratoreIscrittoAGestioneSeparata"@it,
+        "Worker Registered in Separate Management"@en ;
+    rdfs:comment "La classe rappresenta il lavoratore iscritto alla Gestione Separata"@it,
+        "The class represents the worker registered with the Separate Management"@en .
+
+INPSContributionAccountStatement:LavoratoriDelloSpettacoloESportiviProfessionisti a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributionAccountStatement:haAccessoAEstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:label "Entertainment workers and professional athletes"@en,
+        "LavoratoriDelloSpettacoloESportiviProfessionisti"@it ;
+    rdfs:subClassOf INPSSafety:Lavoratore ;
+    rdfs:comment "La classe rappresenta i lavoratori dello spettacolo e dello sport"@it,
+        "The class represents entertainment and sports workers"@en .
+
+INPSRL:Delegato a owl:Class ;
+    owl:disjointWith INPSSafety:Lavoratore .
+
+INPSSafety:ContributoDaRiscatto a owl:Class .
+
+INPSSafety:ContributoFigurativo a owl:Class .
+
+INPSSafety:ContributoObbligatorio a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributionAccountStatement:aziendaVersatrice ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributionAccountStatement:note ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSContributionAccountStatement:periodoDiRiferimento ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSafety:imponibileContributivo ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSafety:numeroUnitàTemporaliPerDiritto ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSafety:numeroUnitàTemporaliPerMisura ;
+            owl:someValuesFrom rdfs:Literal ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSafety:unitàDiMisuraTemporale ;
+            owl:someValuesFrom rdfs:Literal ] .
+
+INPSSafety:ContributoPrevidenziale a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributionAccountStatement:contributoRiferitoAEstrattoContoContributivo ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty INPSSafety:haTipoDiContribuzione ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSafety:haContributoPrevidenziale ] ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSSafety:ContributoVolontario a owl:Class .
+
+INPSSafety:DipendentePubblico a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributionAccountStatement:haAccessoAEstrattoContoDipendentiPubblici ;
+            owl:someValuesFrom owl:Thing ] .
+
+INPSSafety:EstrattoContoContributivo a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributionAccountStatement:daAccessoAEstrattoConto ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:consultaEstrattoContoContributivo ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSContributionAccountStatement:contributoRiferitoAEstrattoContoContributivo ] ;
+            owl:someValuesFrom owl:Thing ],
+        [ a owl:Restriction ;
+            owl:onProperty [ owl:inverseOf INPSSafety:haEstrattoContoContributivo ] ;
+            owl:someValuesFrom owl:Thing ] ;
+    rdfs:subClassOf CPSV:Service .
+
+INPSSafety:Lavoratore a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributionAccountStatement:haAccessoAEstrattoContoContributivoRegimeGenerale ;
+            owl:someValuesFrom [ a owl:Class ;
+                    owl:complementOf [ a owl:Class ;
+                            owl:unionOf (
+                                    INPSContributionAccountStatement:LavoratoreIscrittoAGestioneSeparata
+                                    INPSContributionAccountStatement:LavoratoriDelloSpettacoloESportiviProfessionisti
+                                    INPSSafety:DipendentePubblico ) ] ] ] .
+
+INPSSafety:LavoratoreAutonomo a owl:Class .
+
+INPSSafety:LavoratoreAutonomoOccasionale a owl:Class .
+
+INPSSafety:LavoratoreParasubordinato a owl:Class .
+
+INPSSafety:TipoDiContribuzione a owl:Class .
+
+INPSSMR:LiberoProfessionistaIscrittoGestioneSeparata a owl:Class .
+
+[] a owl:Class ;
+    owl:equivalentClass [ a owl:Restriction ;
+            owl:onProperty INPSContributionAccountStatement:consultaEstrattoContoContributivo ;
+            owl:someValuesFrom owl:Thing ] ;
+    owl:unionOf (
+            INPSRL:Delegato
+            INPSSafety:Lavoratore ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf foaf:Document ;
+    owl:unionOf (
+            INPSContributionAccountStatement:EstrattoContoDipendentiPubblici
+            INPSContributionAccountStatement:EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti
+            INPSContributionAccountStatement:EstrattoContoGestioneSeparata
+            INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale ) .
+
+[] a owl:Class ;
+    rdfs:subClassOf INPSSafety:ContributoPrevidenziale ;
+    owl:unionOf (
+            INPSContributionAccountStatement:ContributoFacoltativo
+            INPSSafety:ContributoDaRiscatto
+            INPSSafety:ContributoFigurativo
+            INPSSafety:ContributoObbligatorio
+            INPSSafety:ContributoVolontario ) .
+
+### Individuals
 
 <https://w3id.org/italia/social-security/data/contributionAccounStatement/distribution/PCAS-N-TRIPLES> a adms:SemanticAssetDistribution,
         dcat:Distribution,
@@ -654,4 +441,54 @@ INPSSafety:TipoDiContribuzione rdf:type owl:Class .
     dct:license <http://creativecommons.org/licenses/by/4.0/> ;
     dct:title "Distribuzione RDF/XML dell'ontologia INPS - Estratto Conto Contributivo Previdenziale"@it,
         "RDF/XML distribution of the INPS ontology - Social Security  Contribution Account Statement"@en .
-###  Generated by the OWL API (version 2.4) https://github.com/owlcs/owlapi
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
+        owl:NamedIndividual,
+        vcard:Kind,
+        vcard:Organization ;
+    dct:identifier "DirezioneCentraleTII" ;
+    foaf:name "INPS - Central Management of Information Technology and Innovations"@en,
+        "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione"@it ;
+    vcard:fn "INPS - Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a COV:PublicOrganization,
+        dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto nazionale della previdenza sociale"@it,
+        "National institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/organization/td> a dcatapit:Agent,
+        foaf:Agent,
+        owl:NamedIndividual ;
+    dct:identifier "TD" ;
+    foaf:name "Digital Transformation Team"@en,
+        "Team per la Trasformazione Digitale"@it .
+
+### Axioms
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSContributionAccountStatement:ContributoFacoltativo
+            INPSSafety:ContributoDaRiscatto
+            INPSSafety:ContributoFigurativo
+            INPSSafety:ContributoObbligatorio
+            INPSSafety:ContributoVolontario ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSContributionAccountStatement:EstrattoContoDipendentiPubblici
+            INPSContributionAccountStatement:EstrattoContoGestioneLavoratoriDelloSpettacoloESportiviProfessionisti
+            INPSContributionAccountStatement:EstrattoContoGestioneSeparata
+            INPSContributionAccountStatement:EstrattoContoPrevidenzialeRegimeGenerale ) .
+
+[] a owl:AllDisjointClasses ;
+    owl:members (
+            INPSSafety:LavoratoreAutonomo
+            INPSSafety:LavoratoreAutonomoOccasionale
+            INPSSafety:LavoratoreParasubordinato
+            INPSSMR:LiberoProfessionistaIscrittoGestioneSeparata ) .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

@@ -1,11 +1,10 @@
 @prefix adms: <http://www.w3.org/ns/adms#> .
-@prefix dc: <http://purl.org/dc/terms/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix dct: <http://purl.org/dc/terms/> .
 @prefix dcatapit: <http://dati.gov.it/onto/dcatapit#> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix NDC: <https://w3id.org/italia/onto/NDC/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .f
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
@@ -14,11 +13,11 @@
 
 ### Annotations
 
-<https://w3id.org/italia/data/standard/SKOS> a dc:Standard,
-        dcatapit:Standard ;
-    dc:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
-    dc:identifier "SKOS" ;
-    dc:title "Simple Knowledge Organization System - SKOS" .
+<https://w3id.org/italia/data/standard/SKOS> a dcatapit:Standard,
+        dct:Standard ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_caso_particolare_formazione_reddito> a adms:Asset,
         dcatapit:Dataset,
@@ -32,84 +31,82 @@
     owl:versionInfo "0.1" ;
     rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_caso_particolare_formazione_reddito> ;
     adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
-    dc:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
-    dc:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
-    dc:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
-    dc:description "CU Statement other exceptional revenue codes Controlled Vocabulary"@en,
-        "Vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it ;
-    dc:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_caso_particolare_formazione_reddito" ;
-	dct:issued "2024-10-22"^^xsd:date ;
-    dc:language <http://publications.europa.eu/resource/authority/language/ITA> ;
-	dct:modified "2024-10-22"^^xsd:date ;
-    dc:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
-    dc:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
-    dc:title "CU Statement other exceptional revenue codes Controlled Vocabulary"@en,
-        "Vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it ;
-    dc:type <http://purl.org/adms/assettype/CodeList> ;
     dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     dcat:distribution <https://w3id.org/italia/social-security/data/CUStatement/distribution/CCPFR_CSV>,
         <https://w3id.org/italia/social-security/data/CUStatement/distribution/CCPFR_JSON_LD>,
         <https://w3id.org/italia/social-security/data/CUStatement/distribution/CCPFR_RDF_TURTLE> ;
-    dcat:keyword "unique certification"@en,
-        "inps"@en,
-        "inps"@it,
+    dcat:keyword "certificazione unica"@it,
         "codici caso particolare formazione reddito della certificazione unica"@it,
         "CU statement other exceptional revenue codes"@en,
-        "certificazione unica"@it ;
+        "inps"@en,
+        "inps"@it,
+        "unique certification"@en ;
     dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "CU Statement other exceptional revenue codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_caso_particolare_formazione_reddito" ;
+    dct:issued "2024-10-22"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2024-10-22"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "CU Statement other exceptional revenue codes Controlled Vocabulary"@en,
+        "Vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
     NDC:keyConcept "codice_caso_particolare_formazione_reddito" ;
     skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_caso_particolare_formazione_reddito/A>,
-		<https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_caso_particolare_formazione_reddito/B> ;
-
+        <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_caso_particolare_formazione_reddito/B> ;
     xkos:numberOfLevels "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_caso_particolare_formazione_reddito/A> a skos:Concept ;
     rdfs:label "in caso di applicazione delle disposizioni di cui all’art. 11 comma 2 del TUIR, alla formazione del reddito complessivo concorrano solo:1) redditi di pensione inferiori o uguali a euro 7.500,00 goduti per l’intero anno;2) redditi di terreni imponibili ai fini IRPEF per un importo non superiore ad euro 185,92;3) reddito dell’unità immobiliare adibita ad abitazione principale e sue pertinenze;"@it ;
     skos:prefLabel "in caso di applicazione delle disposizioni di cui all’art. 11 comma 2 del TUIR, alla formazione del reddito complessivo concorrano solo:1) redditi di pensione inferiori o uguali a euro 7.500,00 goduti per l’intero anno;2) redditi di terreni imponibili ai fini IRPEF per un importo non superiore ad euro 185,92;3) reddito dell’unità immobiliare adibita ad abitazione principale e sue pertinenze;"@it ;
-    dc:identifier "A"@it ;
+    dct:identifier "A"@it ;
     skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_caso_particolare_formazione_reddito> ;
     skos:notation "A"@it .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_caso_particolare_formazione_reddito/B> a skos:Concept ;
     rdfs:label "nel caso di riconoscimento della detrazione minima di euro 1.380 prevista per i rapporti di lavoro a tempo determinato dall’art. 13, comma 1, lett. a) del TUIR"@it ;
     skos:prefLabel "nel caso di riconoscimento della detrazione minima di euro 1.380 prevista per i rapporti di lavoro a tempo determinato dall’art. 13, comma 1, lett. a) del TUIR"@it ;
-    dc:identifier "B"@it ;
+    dct:identifier "B"@it ;
     skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/CUStatement/codice_caso_particolare_formazione_reddito> ;
     skos:notation "B"@it .
 
-
 <https://w3id.org/italia/social-security/data/CUStatement/distribution/CCPFR_CSV> a dcat:Distribution,
         dcatapit:Distribution ;
-    dc:description "Questa è la distribuzione CSV del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it,
-        "CU statement other exceptional revenue codes controlled vocabulary CSV distribution"@en ;
-    dc:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
-    dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    dc:title "CU statement other exceptional revenue codes controlled vocabulary CSV distribution"@en,
-        "Distribuzione CSV del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it ;
     dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_caso_particolare_formazione_reddito/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_caso_particolare_formazione_reddito/latest/codice_caso_particolare_formazione_reddito.csv> .
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_caso_particolare_formazione_reddito/latest/codice_caso_particolare_formazione_reddito.csv> ;
+    dct:description "CU statement other exceptional revenue codes controlled vocabulary CSV distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement other exceptional revenue codes controlled vocabulary CSV distribution"@en,
+        "Distribuzione CSV del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it .
 
 <https://w3id.org/italia/social-security/data/CUStatement/distribution/CCPFR_JSON_LD> a dcat:Distribution,
         dcatapit:Distribution ;
-    dc:description "Questa è la distribuzione CSV del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it,
-        "CU statement other exceptional revenue codes controlled vocabulary JSON_LD distribution"@en ;
-    dc:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
-    dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    dc:title "Distribuzione JSON_LD del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it,
-        "CU statement other exceptional revenue codes controlled vocabulary JSON_LD distribution"@en ;
     dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_caso_particolare_formazione_reddito/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_caso_particolare_formazione_reddito/latest/codice_caso_particolare_formazione_reddito.json> .
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_caso_particolare_formazione_reddito/latest/codice_caso_particolare_formazione_reddito.json> ;
+    dct:description "CU statement other exceptional revenue codes controlled vocabulary JSON_LD distribution"@en,
+        "Questa è la distribuzione CSV del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU statement other exceptional revenue codes controlled vocabulary JSON_LD distribution"@en,
+        "Distribuzione JSON_LD del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it .
 
 <https://w3id.org/italia/social-security/data/CUStatement/distribution/CCPFR_RDF_TURTLE> a dcat:Distribution,
         dcatapit:Distribution ;
-    dc:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it,
-        "CU statement other exceptional revenue codes controlled vocabulary RDF/turtle distribution"@en ;
-    dc:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
-    dc:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
-    dc:title "Distribuzione RDF/Turtle del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it,
-        "CU Statement other exceptional revenue codes controlled vocabulary RDF/turtle distribution"@en ;
     dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/codice_caso_particolare_formazione_reddito/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_caso_particolare_formazione_reddito/latest/codice_caso_particolare_formazione_reddito.ttl> .
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/codice_caso_particolare_formazione_reddito/latest/codice_caso_particolare_formazione_reddito.ttl> ;
+    dct:description "CU statement other exceptional revenue codes controlled vocabulary RDF/turtle distribution"@en,
+        "Questa è la distribuzione RDF/Turtle del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CU Statement other exceptional revenue codes controlled vocabulary RDF/turtle distribution"@en,
+        "Distribuzione RDF/Turtle del vocabolario controllato dei codici caso particolare formazione reddito certificati dalla Certificazione Unica descritti dalla Certificazione Unica"@it .
 
 <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
         vcard:Kind,
@@ -119,7 +116,7 @@
 
 <https://w3id.org/italia/social-security/data/organization/inps> a dcatapit:Agent,
         foaf:Agent ;
-    dc:identifier "inps" ;
+    dct:identifier "inps" ;
     foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
         "National Institute for Social Security"@en .
 
