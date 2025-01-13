@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/servicePortal/"
-     xml:base="https://w3id.org/italia/social-security/onto/servicePortal/"
+<rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/INPSServicePortal/"
+     xml:base="https://w3id.org/italia/social-security/onto/INPSServicePortal/"
      xmlns:L0="https://w3id.org/italia/onto/l0/"
      xmlns:RO="https://w3id.org/italia/onto/RO/"
      xmlns:TI="https://w3id.org/italia/onto/TI/"
@@ -21,15 +21,15 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
      xmlns:INPSRL="https://w3id.org/italia/social-security/onto/relevantLegislation/"
-     xmlns:INPSSP="https://w3id.org/italia/social-security/onto/servicePortal/"
+     xmlns:INPSSP="https://w3id.org/italia/social-security/onto/INPSServicePortal/"
      xmlns:Proc17="https://w3id.org/italia/social-security/onto/procedura17/"
      xmlns:INPSSEP="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/"
      xmlns:INPSTFP="https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/"
      xmlns:INPSCore="https://w3id.org/italia/social-security/onto/core/"
      xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
      xmlns:INPSSafety="https://w3id.org/italia/social-security/onto/social-safety-net/">
-    <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/">
-        <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/1.0"/>
+    <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/">
+        <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/1.0"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/CPV/"/>
@@ -39,7 +39,7 @@
         <dct:creator rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
         <dct:description xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell&apos;istituto.</dct:description>
         <dct:description xml:lang="en">This INPS ontology describes the main entities and proprieties of the Service Portal according to the INPS agency.</dct:description>
-        <dct:identifier>https://w3id.org/italia/social-security/onto/servicePortal</dct:identifier>
+        <dct:identifier>https://w3id.org/italia/social-security/onto/INPSServicePortal</dct:identifier>
         <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dct:issued>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
         <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
@@ -50,7 +50,7 @@
         <dct:title xml:lang="en">Service Portal INPS Ontology</dct:title>
         <rdfs:comment xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondo i criteri dell&apos;istituto.</rdfs:comment>
         <rdfs:comment xml:lang="en">This INPS ontology describes the main entities and proprieties of the Service Portal according to the INPS agency.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/"/>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/"/>
         <rdfs:label xml:lang="it">Ontologia Cassetto previdenziale di INPS</rdfs:label>
         <rdfs:label xml:lang="en">Service Portal INPS Ontology</rdfs:label>
         <owl:versionInfo xml:lang="it">1.0 - Modificata il 29 Ottobre 2024</owl:versionInfo>
@@ -62,18 +62,18 @@
         <adms:acronym>inps</adms:acronym>
         <adms:hasContributor rdf:resource="https://w3id.org/italia/social-security/data/organization/td"/>
         <adms:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
-        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/CassettoPrevidenziale"/>
-        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo"/>
-        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciata"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata"/>
         <adms:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
-        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-N-TRIPLES"/>
-        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-RDF-TURTLE"/>
-        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-RDF-XML"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-N-TRIPLES"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-TURTLE"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-XML"/>
         <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
         <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
         <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
-        <adms:last rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/1.0"/>
-        <adms:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/servicePortal/</adms:officialURI>
+        <adms:last rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/1.0"/>
+        <adms:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/INPSServicePortal/</adms:officialURI>
         <adms:prefix>INPSSP</adms:prefix>
         <adms:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
         <adms:status>catalogued</adms:status>
@@ -97,16 +97,16 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/cassettoPrevidenzialeCostituitoDa -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/cassettoPrevidenzialeCostituitoDa">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/CassettoPrevidenziale"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciata"/>
-                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematica"/>
-                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativa"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -118,10 +118,10 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/cassettoPrevidenzialeCostituitoDa"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo"/>
         <rdfs:comment xml:lang="it">La object property mette in relazione il cassetto previdenziale dei lavoratori agricoli autonomi con il gruppo di classi che rappresentano i servizi di cui il cassetto si compone</rdfs:comment>
         <rdfs:comment xml:lang="en">This object property relates the social security service portal of self-employed agricultural workers to the group of classes representing the services that the service is made up of</rdfs:comment>
@@ -131,10 +131,10 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/cassettoPrevidenzialeCostituitoDa"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeCostituitoDa"/>
         <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista"/>
         <rdfs:comment xml:lang="it">La object property mette in relazione il cassetto previdenziale dei liberi professionsiti con il gruppo di classi che rappresentano i servizi di cui il cassetto si compone</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property relates the self-employed workers&apos; service portal to the group of classes that represent the services that the drawer is made up of.</rdfs:comment>
@@ -144,11 +144,11 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/consultaCassettoPrevidenziale -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/consultaCassettoPrevidenziale">
-        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/UtenteDelServizio"/>
-        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/CassettoPrevidenziale"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteDelServizio"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale"/>
         <rdfs:comment xml:lang="it">La object property mette in relazione la classe degli utenti del servizio con il cassetto previdenziale</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property connects the users of the service with the service portal</rdfs:comment>
         <rdfs:label xml:lang="en">consult the service portal</rdfs:label>
@@ -157,11 +157,11 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/consultaCassettoPrevidenziale"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/UtenteServizioAgricoltoreAutonomo"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLavoratoreAgricoloAutonomo">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo"/>
         <rdfs:comment xml:lang="it">La object property mette in relazione le istanze della classe degli utenti dei servizi disponibili nel cassetto previdenziale dei lavoratori agricoli autonomi con il cassetto previdenziale del lavoratore agricolo autonomo</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property connects the users of the services available in the self-employed agricultural workers&apos;service portal with the self-employed agricultural worker&apos;s service portal</rdfs:comment>
@@ -171,11 +171,11 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/consultaCassettoPrevidenzialeLiberoProfessionista -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/consultaCassettoPrevidenzialeLiberoProfessionista">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/consultaCassettoPrevidenziale"/>
-        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/UtenteServizioLiberoProfessionista"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenzialeLiberoProfessionista">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/consultaCassettoPrevidenziale"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista"/>
         <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista"/>
         <rdfs:comment xml:lang="it">La object property mette in relazione le istanze della classe degli utenti dei servizi disponibili nel cassetto previdenziale dei liberi professionisti con il cassetto previdenziale del libero professionista</rdfs:comment>
         <rdfs:comment xml:lang="en">The object property connects the users of the services available in the self-employed workers&apos; service portal with the self-employed workers&apos; service portal</rdfs:comment>
@@ -208,9 +208,9 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/CassettoPrevidenziale -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/CassettoPrevidenziale">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale">
         <rdfs:comment xml:lang="it">Il cassetto previdenziale è un servizio reso disponibile sul portale on line dell&apos;Istituto Nazionale della Previdenza Sociale che consente di consultare le informazioni relative alla situazione contributiva del cittadino contribuente.Nel set di ontologie dedicate alla descrizione del cassetto previdenziale, questa classe è modellata come classe sovraordinata al cassetto previdenziale dei liberi professionisti e al cassetto previdenziale per i lavoratori agricoli autonomi.</rdfs:comment>
         <rdfs:comment xml:lang="en">The social security drawer is a service made available on the online portal of the National Social Security Institute that allows you to consult information relating to the contributory situation of the citizen contributor</rdfs:comment>
         <rdfs:label xml:lang="it">Cassetto previdenziale</rdfs:label>
@@ -219,9 +219,9 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciata -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciata">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata">
         <rdfs:comment xml:lang="it">Delega rilasciata da un soggetto delegante ad un delegato per lo svolgimento di attività o esercizio di poteri/diritti in sua vece</rdfs:comment>
         <rdfs:comment xml:lang="en">Delegation granted by a delegating party to a delegate for the performance of activities or the exercise of powers/rights on their behalf</rdfs:comment>
         <rdfs:label xml:lang="it">Delega</rdfs:label>
@@ -230,10 +230,10 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo">
-        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciataLiberoProfessionista"/>
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
         <rdfs:comment xml:lang="it">La classe rappresenta la delega rilasciata dal lavoratore agricolo autonomo ad un altro soggetto per autorizzarlo ad accedere al cassetto previdenziale del lavoratore agricolo autonomo e utilizzare i servizi disponibili in suo vece. Nell&apos;ontologia descrittiva del cassetto previdenziale, la classe rappresenta anche il servizio che consente l&apos;accesso alla consultaizone delle deleghe rilasciate dal lavoratore agricolo autonomo o ricevute dal soggetto da questi delegato</rdfs:comment>
         <rdfs:comment xml:lang="en">The class represents the delegation issued by the self-employed agricultural worker to another person to authorize him to access the self-employed agricultural worker&apos;s social security drawer and use the available services on his behalf</rdfs:comment>
         <rdfs:label xml:lang="it">Delega rilasciata da un lavoratore agricolo autonomo</rdfs:label>
@@ -242,9 +242,9 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciataLiberoProfessionista -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciataLiberoProfessionista">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista">
         <rdfs:comment xml:lang="it">La classe rappresenta la delega rilasciata dal libero profesionsita ad un altro soggetto per autorizzarlo ad accedere al cassetto previdenziale del lavoratore agricolo autonomo e utilizzare i servizi disponibili in suo vece. Nell&apos;ontologia descrittiva del cassetto previdenziale, la classe rappresenta anche il servizio che consente l&apos;accesso alla consultaizone delle deleghe rilasciate dal libero professionsita o ricevute dal soggetto da questi delegato</rdfs:comment>
         <rdfs:comment xml:lang="en">The class represents the delegation granted by the self-employed professional to another party, authorizing them to access the pension account of the self-employed agricultural worker and to use the available services on their behalf</rdfs:comment>
         <rdfs:label xml:lang="it">Delega rilasciata dal libero professionista</rdfs:label>
@@ -253,10 +253,10 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/DelegatoLavoratoreAgricoloAutonomo -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegatoLavoratoreAgricoloAutonomo">
-        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/DelegatoLiberoProfessionista"/>
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionista"/>
         <rdfs:comment xml:lang="it">Il soggetto delegato dal lavoratore agricolo autonomo ad agire al suo posto per l&apos;accesso al cassetto previdenziale, alla consultazione delle informaizoni rese disponibili e all&apos;inoltro di domande e/o istanze</rdfs:comment>
         <rdfs:comment xml:lang="en">The party delegated by the self-employed agricultural worker to act on their behalf for accessing the pension account, consulting the available information, and submitting requests and/or applications.</rdfs:comment>
         <rdfs:label xml:lang="en">Delegate of the self-employed agricultural worker</rdfs:label>
@@ -265,9 +265,9 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/DelegatoLiberoProfessionista -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionista -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegatoLiberoProfessionista">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionista">
         <rdfs:comment xml:lang="it">Il soggetto delegato dal libero professionista ad agire al suo posto per l&apos;accesso al cassetto previdenziale del libero professionista, alla consultazione delle informaizoni rese disponibili e all&apos;inoltro di domande e/o istanze</rdfs:comment>
         <rdfs:comment xml:lang="en">The party delegated by the self-employed professional to act on their behalf for accessing the professional&apos;s pension account, consulting the available information, and submitting requests and/or application</rdfs:comment>
         <rdfs:label xml:lang="en">Delegate of the self-employed professional</rdfs:label>
@@ -276,9 +276,9 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematica -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematica">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica">
         <rdfs:comment xml:lang="en">An electronic application is a request submitted by a subject to INPS and sent via an electronic channel</rdfs:comment>
         <rdfs:comment xml:lang="it">Una domanda telematica è un&apos;istanza presentata da un soggetto all&apos;INPS e inviata tramite un canale telematico. Nell&apos;ontologia del Cassetto previdenziale INPS la classe raggruppa i servizi per l&apos;invio telematico di specifiche istanze</rdfs:comment>
         <rdfs:label xml:lang="it">Domanda telematica</rdfs:label>
@@ -287,10 +287,10 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo">
-        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematicaLiberoProfessionista"/>
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista"/>
         <rdfs:comment xml:lang="en">A telematic application submitted by a self-employed agricultural worker</rdfs:comment>
         <rdfs:comment xml:lang="it">Una domanda telematica presentata da un lavoratore agricolo autonomo</rdfs:comment>
         <rdfs:label xml:lang="it">Domanda telematica del lavoratore agricolo autonomo</rdfs:label>
@@ -299,9 +299,9 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematicaLiberoProfessionista -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematicaLiberoProfessionista">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista">
         <rdfs:comment xml:lang="it">Domanda telematica presentata da un libero professionista. La classe rappresenta il servizio di invio e di consultazione delle domande telematiche, disponibile nel cassetto previdenziale del libero professionista</rdfs:comment>
         <rdfs:comment xml:lang="en">On line application submitted by a self-employed professional</rdfs:comment>
         <rdfs:label xml:lang="it">Domanda telematica di un libero professionista</rdfs:label>
@@ -310,9 +310,9 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativa -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativa">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa">
         <rdfs:comment xml:lang="it">La posizione assicurativa consente al contribuente di consultare lo stato dei versamenti contributivi utili all&apos;accesso alle prestazioni previdenziali e assitenziali dell&apos;INPS,  e al calcolo dell&apos;ammontare dei loro importi. Nell&apos;ontologia descrittiva del cassetto previdenziale INPS la classe è indicata come superclasse della Posizione assicurativa del lavoratore agricolo autonomo e Posizione assicurativa del libero professionsita che ne rappresentano sue specializzazioni.</rdfs:comment>
         <rdfs:comment xml:lang="en">The insurance record allows the contributor to check the status of contribution payments necessary for accessing INPS social security and welfare benefits</rdfs:comment>
         <rdfs:label xml:lang="en">Insurance position</rdfs:label>
@@ -321,10 +321,10 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo">
-        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativaLiberoProfessionista"/>
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista"/>
         <rdfs:comment xml:lang="en">La posizione assicurativa del lavoratore agricolo autonomo consente a questa tipologia di lavoratore di consultare le informazioni sullo stato dei versamenti contributivi</rdfs:comment>
         <rdfs:comment xml:lang="it">La posizione assicurativa del lavoratore agricolo autonomo consente a questa tipologia di lavoratore di consultare le informazioni sullo stato dei versamenti contributivi</rdfs:comment>
         <rdfs:label xml:lang="en">Insurance record of the self-employed agricultural worker</rdfs:label>
@@ -333,9 +333,9 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativaLiberoProfessionista -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativaLiberoProfessionista">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista">
         <rdfs:comment xml:lang="it">La posizione assicurativa consente al libero professionista di accedere alle informazioni relative alla propria situaizone contributiva</rdfs:comment>
         <rdfs:comment xml:lang="en">The insurance record allows the self-employed professional to access information regarding their contribution status</rdfs:comment>
         <rdfs:label xml:lang="en">Insurance record of the self-employed professional</rdfs:label>
@@ -344,14 +344,14 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/UtenteDelServizio -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteDelServizio -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/UtenteDelServizio">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteDelServizio">
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/UtenteServizioAgricoltoreAutonomo"/>
-                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/UtenteServizioLiberoProfessionista"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:subClassOf>
@@ -363,10 +363,10 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/UtenteServizioAgricoltoreAutonomo -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/UtenteServizioAgricoltoreAutonomo">
-        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/UtenteServizioLiberoProfessionista"/>
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioAgricoltoreAutonomo">
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista"/>
         <rdfs:comment xml:lang="it">L&apos;utente dei servizi per il lavoratore agricolo autonomo è è un soggetto, che può accedere ai servizi per questa categoria di lavoratore disponibile nel relativo cassetto previdenziale. Può trattarsi direttamente del lavoratore oppure di un soggetto doverso autrizzato dalla delega ricevuta dal lavoratore stesso</rdfs:comment>
         <rdfs:comment xml:lang="en">The user of services for the self-employed agricultural worker is an individual who can access the services available for this category of worker in their respective pension account</rdfs:comment>
         <rdfs:label xml:lang="en">User of services for the self-employed agricultural worker</rdfs:label>
@@ -375,9 +375,9 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/onto/servicePortal/UtenteServizioLiberoProfessionista -->
+    <!-- https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista -->
 
-    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/UtenteServizioLiberoProfessionista">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/UtenteServizioLiberoProfessionista">
         <rdfs:comment xml:lang="it">L&apos;Utente dei servizi per il libero professionsita è un soggetto, che può accedere ai servizi per questa categoria di lavoratore disponibile nel relativo cassetto previdenziale. Può trattarsi direttamente del professionista, diretto interessato oppure di un soggetto diverso autorizzato tramite delega dal libero professionista</rdfs:comment>
         <rdfs:comment xml:lang="en">The User of services for the freelancer is a person who can access the services for this category of worker available in the relevant social security drawer</rdfs:comment>
         <rdfs:label xml:lang="en">User of services for the freelancer</rdfs:label>
@@ -431,9 +431,9 @@
 
 
 
-    <!-- https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-N-TRIPLES -->
+    <!-- https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-N-TRIPLES -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-N-TRIPLES">
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-N-TRIPLES">
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
@@ -443,15 +443,15 @@
         <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <dct:title xml:lang="it">Distribuzione N-TRIPLES dell&apos;ontologia INPS - Cassetto previdenziale</dct:title>
         <dct:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - Service Portal</dct:title>
-        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/servicePortal/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/servicePortal/latest/servicePortal.n3"/>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/INPSServicePortal/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/INPSServicePortal/latest/INPSServicePortal.n3"/>
     </owl:NamedIndividual>
 
 
 
-    <!-- https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-RDF-TURTLE -->
+    <!-- https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-TURTLE -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-RDF-TURTLE">
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-TURTLE">
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
@@ -461,15 +461,15 @@
         <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <dct:title xml:lang="it">Distribuzione RDF/Turtle dell&apos;ontologia INPS - Cassetto previdenziale</dct:title>
         <dct:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - Service Portal</dct:title>
-        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/servicePortal/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/servicePortal/latest/servicePortal.ttl"/>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/INPSServicePortal/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/INPSServicePortal/latest/INPSServicePortal.ttl"/>
     </owl:NamedIndividual>
 
 
 
-    <!-- https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-RDF-XML -->
+    <!-- https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-XML -->
 
-    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-RDF-XML">
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-XML">
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
@@ -479,8 +479,8 @@
         <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <dct:title xml:lang="it">Distribuzione RDF/XML dell&apos;ontologia INPS - Cassetto previdenziale</dct:title>
         <dct:title xml:lang="en">RDF/XML distribution of the INPS ontology - Service Portal</dct:title>
-        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/servicePortal/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/servicePortal/latest/servicePortal.owl"/>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/INPSServicePortal/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/INPSServicePortal/latest/INPSServicePortal.owl"/>
     </owl:NamedIndividual>
 
 
@@ -535,22 +535,22 @@
 
     <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciataLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
         </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciata"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata"/>
     </owl:Class>
     <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo"/>
         </owl:unionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa"/>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLavoratoreAgricoloAutonomoCostituitoDa"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -559,15 +559,15 @@
     </owl:Class>
     <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciataLiberoProfessionista"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematicaLiberoProfessionista"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativaLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista"/>
         </owl:unionOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty>
                     <rdf:Description>
-                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa"/>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/cassettoPrevidenzialeLiberoProfessionistaCostituitoDa"/>
                     </rdf:Description>
                 </owl:onProperty>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -576,54 +576,54 @@
     </owl:Class>
     <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegatoLavoratoreAgricoloAutonomo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegatoLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLavoratoreAgricoloAutonomo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegatoLiberoProfessionista"/>
         </owl:unionOf>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
     </owl:Class>
     <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematicaLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista"/>
         </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematica"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica"/>
     </owl:Class>
     <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativaLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista"/>
         </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativa"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa"/>
     </owl:Class>
     <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
             <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/selfEmploymentPortal/CassettoPrevidenzialeLiberoProfessionista"/>
             <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/CassettoPrevidenzialeLavoratoreAgricoloAutonomo"/>
         </owl:unionOf>
-        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/servicePortal/CassettoPrevidenziale"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/INPSServicePortal/CassettoPrevidenziale"/>
     </owl:Class>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciata"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematica"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativa"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciata"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematica"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativa"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLavoratoreAgricoloAutonomo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLavoratoreAgricoloAutonomo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLavoratoreAgricoloAutonomo"/>
         </owl:members>
     </rdf:Description>
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DelegaRilasciataLiberoProfessionista"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/DomandaTelematicaLiberoProfessionista"/>
-            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/servicePortal/PosizioneAssicurativaLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DelegaRilasciataLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/DomandaTelematicaLiberoProfessionista"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/INPSServicePortal/PosizioneAssicurativaLiberoProfessionista"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

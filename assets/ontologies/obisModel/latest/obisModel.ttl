@@ -9,7 +9,7 @@
 @prefix DETPENS: <https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix INPSCore: <https://w3id.org/italia/social-security/onto/core/> .
-@prefix INPSObisM: <https://w3id.org/italia/social-security/onto/obisModel/> .
+@prefix INPSObisM: <https://w3id.org/italia/social-security/onto/ObisModel/> .
 @prefix INPSPensions: <https://w3id.org/italia/social-security/onto/pensions/> .
 @prefix L0: <https://w3id.org/italia/onto/l0/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -42,14 +42,14 @@ INPSObisM: a owl:Ontology ;
         INPSObisM:DatiFiscali,
         INPSObisM:FascicoloPrevidenzialeCittadino ;
     adms:hasOntologyLanguage adms:OWL ;
-    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/obisModel/distribution/INPSObisM-N-TRIPLES>,
-        <https://w3id.org/italia/social-security/data/obisModel/distribution/INPSObisM-RDF-TURTLE>,
-        <https://w3id.org/italia/social-security/data/obisModel/distribution/INPSObisM-RDF-XML> ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-XML> ;
     adms:hasTask adms:AnnotationTask,
         adms:QueryFormulationTask,
         adms:SearchTask ;
     adms:last INPSObisM:1.0 ;
-    adms:officialURI "https://w3id.org/italia/social-security/onto/obisModel/"^^xsd:anyURI ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/ObisModel/"^^xsd:anyURI ;
     adms:prefix "INPSObisM" ;
     adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
     adms:status "catalogued",
@@ -66,7 +66,7 @@ INPSObisM: a owl:Ontology ;
     dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
     dct:description "Ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell'istituto."@it,
         "This INPS ontology describes the main entities and proprieties of the Obis Model according to the INPS agency."@en ;
-    dct:identifier "https://w3id.org/italia/social-security/onto/obisModel" ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/ObisModel" ;
     dct:issued "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
@@ -319,12 +319,12 @@ rico:Record a owl:Class .
 
 ### Individuals
 
-<https://w3id.org/italia/social-security/data/obisModel/distribution/INPSObisM-N-TRIPLES> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-N-TRIPLES> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/obisModel/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/obisModel/latest/obisModel.n3> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/ObisModel/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/ObisModel/latest/ObisModel.n3> ;
     dct:description "Obis Model INPS Ontology N-TRIPLES distribution"@en,
         "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell'istituto."@it ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
@@ -332,12 +332,12 @@ rico:Record a owl:Class .
     dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Modello Obis"@it,
         "N-TRIPLES distribution of the INPS ontology - Obis Model"@en .
 
-<https://w3id.org/italia/social-security/data/obisModel/distribution/INPSObisM-RDF-TURTLE> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-TURTLE> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/obisModel/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/obisModel/latest/obisModel.ttl> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/ObisModel/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/ObisModel/latest/ObisModel.ttl> ;
     dct:description "Obis Model INPS Ontology RDF/Turtle distribution"@en,
         "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell'istituto."@it ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
@@ -345,12 +345,12 @@ rico:Record a owl:Class .
     dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Modello Obis"@it,
         "RDF/Turtle distribution of the INPS ontology - Obis Model"@en .
 
-<https://w3id.org/italia/social-security/data/obisModel/distribution/INPSObisM-RDF-XML> a adms:SemanticAssetDistribution,
+<https://w3id.org/italia/social-security/data/ObisModel/distribution/INPSObisM-RDF-XML> a adms:SemanticAssetDistribution,
         dcat:Distribution,
         dcatapit:Distribution,
         owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/obisModel/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/obisModel/latest/obisModel.owl> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/ObisModel/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/ObisModel/latest/ObisModel.owl> ;
     dct:description "Obis Model INPS Ontology RDF/XML"@en,
         "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il modello Obis secondi i criteri dell'istituto."@it ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
