@@ -2,7 +2,7 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:adms:="https://w3id.org/italia/onto/ADMS/"
+         xmlns:adms="https://w3id.org/italia/onto/ADMS/"
          xmlns:dc="http://purl.org/dc/terms/"
          xmlns:foaf="http://xmlns.com/foaf/0.1/"
          xmlns:dcat="http://www.w3.org/ns/dcat#"
@@ -22,8 +22,8 @@
     <owl:versionInfo xml:lang="en">1.0 - Modified on 29 October 2024</owl:versionInfo>
     <owl:versionInfo xml:lang="it">1.0 - Modificata il 29 Ottobre 2024</owl:versionInfo>
     <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/CUStatement/"/>
-    <adms::acronym>inps</adms::acronym>
-    <adms::hasContributor>
+    <adms:acronym>inps</adms:acronym>
+    <adms:hasContributor>
       <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/td">
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
@@ -32,15 +32,15 @@
         <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
         <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
       </rdf:Description>
-    </adms::hasContributor>
+    </adms:hasContributor>
 
-    <adms::hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
-    <adms::hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/CUStatement/CertificazioneLavoroAutonomoProviggioniERedditiDiversi"/>
-    <adms::hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/CUStatement/TFR"/>
-    <adms::hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/CUStatement/CertificazioneLavoroDipendenteAssimilatoEAssistenzaFiscale"/>
-    <adms::hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
-    <adms::hasSemanticAssetDistribution>
-      <adms::SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/CUStatement/distribution/CUStatement-N-TRIPLES">
+    <adms:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/CUStatement/CertificazioneLavoroAutonomoProviggioniERedditiDiversi"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/CUStatement/TFR"/>
+    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/CUStatement/CertificazioneLavoroDipendenteAssimilatoEAssistenzaFiscale"/>
+    <adms:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
+    <adms:hasSemanticAssetDistribution>
+      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/CUStatement/distribution/CUStatement-N-TRIPLES">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -52,11 +52,11 @@
         <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <dc:title xml:lang="it">Distribuzione N-TRIPLES dell'ontologia INPS - Certificazione Unica</dc:title>
         <dc:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - CU Statement</dc:title>
-      </adms::SemanticAssetDistribution>
-    </adms::hasSemanticAssetDistribution>
+      </adms:SemanticAssetDistribution>
+    </adms:hasSemanticAssetDistribution>
 
-    <adms::hasSemanticAssetDistribution>
-      <adms::SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/CUStatement/distribution/CUStatement-RDF-TURTLE">
+    <adms:hasSemanticAssetDistribution>
+      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/CUStatement/distribution/CUStatement-RDF-TURTLE">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -68,11 +68,11 @@
         <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <dc:title xml:lang="it">Distribuzione RDF/Turtle dell'ontologia INPS - Certificazione Unica</dc:title>
         <dc:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - CU Statement</dc:title>
-      </adms::SemanticAssetDistribution>
-    </adms::hasSemanticAssetDistribution>
+      </adms:SemanticAssetDistribution>
+    </adms:hasSemanticAssetDistribution>
 
-    <adms::hasSemanticAssetDistribution>
-      <adms::SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/CUStatement/distribution/CUStatement-RDF-XML">
+    <adms:hasSemanticAssetDistribution>
+      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/CUStatement/distribution/CUStatement-RDF-XML">
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -84,22 +84,22 @@
         <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
         <dc:title xml:lang="it">Distribuzione RDF/XML dell'ontologia INPS - Certificazione Unica</dc:title>
         <dc:title xml:lang="en">RDF/XML distribution of the INPS ontology - CU Statement</dc:title>
-      </adms::SemanticAssetDistribution>
-    </adms::hasSemanticAssetDistribution>
+      </adms:SemanticAssetDistribution>
+    </adms:hasSemanticAssetDistribution>
 
-    <adms::hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
-    <adms::hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
-    <adms::hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
-    <adms::last rdf:resource="https://w3id.org/italia/social-security/onto/CUStatement/1.0"/>
-    <adms::officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/CUStatement/</adms::officialURI>
-    <adms::prefix>CUStatement</adms::prefix>
-    <adms::semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
-    <adms::status>catalogued</adms::status>
-    <adms::status>published</adms::status>
-    <adms::target xml:lang="it">Cittadini</adms::target>
-    <adms::target xml:lang="it">Imprese</adms::target>
-    <adms::target xml:lang="it">Pubbliche Amministrazioni</adms::target>
-    <adms::type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
+    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
+    <adms:last rdf:resource="https://w3id.org/italia/social-security/onto/CUStatement/1.0"/>
+    <adms:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/CUStatement/</adms:officialURI>
+    <adms:prefix>CUStatement</adms:prefix>
+    <adms:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
+    <adms:status>catalogued</adms:status>
+    <adms:status>published</adms:status>
+    <adms:target xml:lang="it">Cittadini</adms:target>
+    <adms:target xml:lang="it">Imprese</adms:target>
+    <adms:target xml:lang="it">Pubbliche Amministrazioni</adms:target>
+    <adms:type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
     <dcat:contactPoint>
       <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII">
         <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>

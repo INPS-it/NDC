@@ -1,1232 +1,1658 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-         xmlns:owl="http://www.w3.org/2002/07/owl#"
-         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:adms="https://w3id.org/italia/onto/ADMS/"
-         xmlns:dc="http://purl.org/dc/terms/"
-         xmlns:foaf="http://xmlns.com/foaf/0.1/"
-         xmlns:dcat="http://www.w3.org/ns/dcat#"
-         xmlns:vcard="http://www.w3.org/2006/vcard/ns#">
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/"
+     xml:base="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/"
+     xmlns:L0="https://w3id.org/italia/onto/l0/"
+     xmlns:RO="https://w3id.org/italia/onto/RO/"
+     xmlns:TI="https://w3id.org/italia/onto/TI/"
+     xmlns:CLV="https://w3id.org/italia/onto/CLV/"
+     xmlns:COV="https://w3id.org/italia/onto/COV/"
+     xmlns:CPV="https://w3id.org/italia/onto/CPV/"
+     xmlns:dct="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:adms="https://w3id.org/italia/onto/ADMS/"
+     xmlns:dcat="http://www.w3.org/ns/dcat#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rico="https://www.ica.org/standards/RiC/ontology#"
+     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+     xmlns:INPSRL="https://w3id.org/italia/social-security/onto/relevantLegislation/"
+     xmlns:DETPENS="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/"
+     xmlns:INPSCore="https://w3id.org/italia/social-security/onto/core/"
+     xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
+     xmlns:INPSPensions="https://w3id.org/italia/social-security/onto/pensions/">
+    <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/">
+        <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/1.0"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/CPV/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/RO/"/>
+        <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/"/>
+        <dct:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
+        <dct:creator rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:description xml:lang="en">INPS ontology relating to the entities and relationships that describe the pension determination according to the institute&apos;s criteria.</dct:description>
+        <dct:description xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:identifier>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore</dct:identifier>
+        <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dct:issued>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
+        <dct:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dct:modified>
+        <dct:publisher rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:rightsHolder rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
+        <dct:title xml:lang="it">Ontologia Determina di Pensione di INPS </dct:title>
+        <dct:title xml:lang="en">Pension Prospectus INPS Ontology</dct:title>
+        <rdfs:comment xml:lang="en">INPS ontology relating to the entities and relationships that describe the pension determination according to the institute&apos;s criteria.</rdfs:comment>
+        <rdfs:comment xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell&apos;istituto. </rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/"/>
+        <rdfs:label xml:lang="it">Ontologia Determina di Pensione di INPS</rdfs:label>
+        <rdfs:label xml:lang="en">Pension Prospectus INPS Ontology</rdfs:label>
+        <owl:versionInfo xml:lang="it">1.0 - Modificata il 29 Ottobre 2024</owl:versionInfo>
+        <owl:versionInfo xml:lang="en">1.0 - Modified on 29 October 2024</owl:versionInfo>
+        <dcat:contactPoint rdf:resource="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII"/>
+        <dcat:keyword xml:lang="it">Determina di Pensione</dcat:keyword>
+        <dcat:keyword xml:lang="it">Liquidazione Pensione</dcat:keyword>
+        <dcat:keyword xml:lang="en">Pension Determination</dcat:keyword>
+        <dcat:keyword xml:lang="en">Pension Liquidation</dcat:keyword>
+        <dcat:keyword xml:lang="en">Pension Prospectus</dcat:keyword>
+        <dcat:keyword xml:lang="it">Prospetto di Pensione</dcat:keyword>
+        <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
+        <adms:acronym>inps</adms:acronym>
+        <adms:hasContributor rdf:resource="https://w3id.org/italia/social-security/data/organization/td"/>
+        <adms:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
+        <adms:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-N-TRIPLES"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-TURTLE"/>
+        <adms:hasSemanticAssetDistribution rdf:resource="https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-XML"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
+        <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
+        <adms:last rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/1.0"/>
+        <adms:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/</adms:officialURI>
+        <adms:prefix>DETPENS</adms:prefix>
+        <adms:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
+        <adms:status>catalogued</adms:status>
+        <adms:status>published</adms:status>
+        <adms:target xml:lang="it">Cittadini</adms:target>
+        <adms:target xml:lang="it">Imprese</adms:target>
+        <adms:target xml:lang="it">Pubbliche Amministrazioni</adms:target>
+        <adms:type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
+    </owl:Ontology>
 
-  <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/">
-    <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/1.0"/>
-    <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/"/>
-    <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/"/>
-    <owl:imports rdf:resource="https://w3id.org/italia/onto/CPV/"/>
-    <owl:imports rdf:resource="https://w3id.org/italia/onto/l0/"/>
-    <owl:imports rdf:resource="https://w3id.org/italia/onto/RO/"/>
-    <rdfs:label xml:lang="en">Pension Prospectus INPS Ontology</rdfs:label>
-    <rdfs:label xml:lang="it">Ontologia Determina di Pensione di INPS</rdfs:label>
-    <rdfs:comment xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell'istituto. </rdfs:comment>
-    <rdfs:comment xml:lang="en">INPS ontology relating to the entities and relationships that describe the pension determination according to the institute's criteria.</rdfs:comment>
-    <owl:versionInfo xml:lang="en">1.0 - Modified on 29 October 2024</owl:versionInfo>
-    <owl:versionInfo xml:lang="it">1.0 - Modificata il 29 Ottobre 2024</owl:versionInfo>
-    <rdfs:isDefinedBy rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/"/>
-    <adms:acronym>inps</adms:acronym>
-    <adms:hasContributor>
-      <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/td">
-        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
-        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <dc:identifier>TD</dc:identifier>
-        <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
-        <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
-      </rdf:Description>
-    </adms:hasContributor>
 
-    <adms:hasFormalityLevel rdf:resource="https://w3id.org/italia/onto/ADMS/Formal"/>
-    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
-    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
-    <adms:hasKeyClass rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-    <adms:hasOntologyLanguage rdf:resource="https://w3id.org/italia/onto/ADMS/OWL"/>
-    <adms:hasSemanticAssetDistribution>
-      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-N-TRIPLES">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensionProspectusLavoratore/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensionProspectusLavoratore/latest/pensionProspectusLavoratore.n3"/>
-        <dc:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell'ontologia INPS alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell'istituto.</dc:description>
-        <dc:description xml:lang="en">This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the pension determination according to the institute's criteria.</dc:description>
-        <dc:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
-        <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dc:title xml:lang="it">Distribuzione N-TRIPLES dell'ontologia INPS - determina di pensione</dc:title>
-        <dc:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - pension prospectus</dc:title>
-      </adms:SemanticAssetDistribution>
-    </adms:hasSemanticAssetDistribution>
 
-    <adms:hasSemanticAssetDistribution>
-      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-TURTLE">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensionProspectusLavoratore/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensionProspectusLavoratore/latest/pensionProspectusLavoratore.ttl"/>
-        <dc:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell'ontologia INPS alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell'istituto.</dc:description>
-        <dc:description xml:lang="en">This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the pension determination according to the institute's criteria.</dc:description>
-        <dc:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
-        <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dc:title xml:lang="it">Distribuzione RDF/Turtle dell'ontologia INPS - determina di pensione</dc:title>
-        <dc:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - pension prospectus</dc:title>
-      </adms:SemanticAssetDistribution>
-    </adms:hasSemanticAssetDistribution>
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
 
-    <adms:hasSemanticAssetDistribution>
-      <adms:SemanticAssetDistribution rdf:about="https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-XML">
-        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
-        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensionProspectusLavoratore/latest"/>
-        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensionProspectusLavoratore/latest/pensionProspectusLavoratore.owl"/>
-        <dc:description xml:lang="it">Questa è la distribuzione RDF/XML dell'ontologia INPS alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell'istituto.</dc:description>
-        <dc:description xml:lang="en">This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the pension determination according to the institute's criteria.</dc:description>
-        <dc:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
-        <dc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
-        <dc:title xml:lang="it">Distribuzione RDF/XML dell'ontologia INPS - determina di pensione</dc:title>
-        <dc:title xml:lang="en">RDF/XML distribution of the INPS ontology - pension prospectus</dc:title>
-      </adms:SemanticAssetDistribution>
-    </adms:hasSemanticAssetDistribution>
 
-    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/AnnotationTask"/>
-    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/QueryFormulationTask"/>
-    <adms:hasTask rdf:resource="https://w3id.org/italia/onto/ADMS/SearchTask"/>
-    <adms:last rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/1.0"/>
-    <adms:officialURI rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/</adms:officialURI>
-    <adms:prefix>DETPENS</adms:prefix>
-    <adms:semanticAssetInUse rdf:resource="https://w3id.org/italia/data/project/NDC"/>
-    <adms:status>catalogued</adms:status>
-    <adms:status>published</adms:status>
-    <adms:target xml:lang="it">Cittadini</adms:target>
-    <adms:target xml:lang="it">Imprese</adms:target>
-    <adms:target xml:lang="it">Pubbliche Amministrazioni</adms:target>
-    <adms:type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
-    <dcat:contactPoint>
-      <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII">
-        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
-        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
-        <dc:identifier>DirezioneCentraleTII</dc:identifier>
-        <foaf:name xml:lang="en">INPS - Central Management of Information Technology and Innovations</foaf:name>
-        <foaf:name xml:lang="it">INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</foaf:name>
-        <vcard:fn>INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</vcard:fn>
-        <vcard:hasEmail rdf:resource="mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it"/>
-      </rdf:Description>
-    </dcat:contactPoint>
 
-    <dcat:keyword xml:lang="en">Pension Prospectus</dcat:keyword>
-    <dcat:keyword xml:lang="it">Prospetto di Pensione</dcat:keyword>
-    <dcat:keyword xml:lang="en">Pension Determination</dcat:keyword>
-    <dcat:keyword xml:lang="it">Determina di Pensione</dcat:keyword>
-    <dcat:keyword xml:lang="en">Pension Liquidation</dcat:keyword>
-    <dcat:keyword xml:lang="it">Liquidazione Pensione</dcat:keyword>
-    <dcat:theme rdf:resource="http://publications.europa.eu/resource/authority/data-theme/SOCI"/>
-    <dc:accrualPeriodicity rdf:resource="http://publications.europa.eu/resource/authority/frequency/IRREG"/>
-    <dc:creator rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
-    <dc:description xml:lang="it">Ontologia INPS relativa alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell'istituto.</dc:description>
-    <dc:description xml:lang="en">INPS ontology relating to the entities and relationships that describe the pension determination according to the institute's criteria.</dc:description>
-    <dc:identifier>https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore</dc:identifier>
-    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dc:issued>
-    <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ENG"/>
-    <dc:language rdf:resource="http://publications.europa.eu/resource/authority/language/ITA"/>
-    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2024-10-29T00:00:00+00:00</dc:modified>
-    <dc:publisher rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
-    <dc:rightsHolder rdf:resource="https://w3id.org/italia/social-security/data/organization/inps"/>
-    <dc:title xml:lang="en">Pension Prospectus INPS Ontology</dc:title>
-    <dc:title xml:lang="it">Ontologia Determina di Pensione di INPS </dc:title>
-  </owl:Ontology>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/atTime">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
-  </owl:ObjectProperty>
+    <!-- http://purl.org/dc/terms/accrualPeriodicity -->
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/accoglieDomandaDiPensione">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione"/>
-    <rdfs:comment xml:lang="it">La object property collega la Sede INPS incaricata di gestire la pratica relativa alla domanda di pensione e la Domanda di pensione, mettendo in evidenze la competenza della sede relativamente all'atto di accoglimento della domanda</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property links the INPS office responsible for managing the pension application and the Pension Application</rdfs:comment>
-    <rdfs:label xml:lang="en">accepts pension application</rdfs:label>
-    <rdfs:label xml:lang="it">accoglie domanda di pensione</rdfs:label>
-  </owl:ObjectProperty>
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/accrualPeriodicity"/>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/apponeSottoscrizione">
-    <rdfs:domain>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ResponsabileDelDocumento">
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format"/>
+
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
+
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+
+
+
+    <!-- http://purl.org/dc/terms/rightsHolder -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rightsHolder"/>
+
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#fn -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#fn"/>
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#hasEmail -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#accessURL"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#contactPoint -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#contactPoint"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#downloadURL -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#downloadURL"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#keyword -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#keyword"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#theme -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#theme"/>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/acronym -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/acronym"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasContributor -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasContributor"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasFormalityLevel -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasFormalityLevel"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasKeyClass -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasKeyClass"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasOntologyLanguage -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasOntologyLanguage"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasTask -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasTask"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/last -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/last"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/officialURI -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/officialURI"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/prefix -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/prefix"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/semanticAssetInUse -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/semanticAssetInUse"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/status -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/status"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/target -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/target"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/type -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/type"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/onto/TI/atTime -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/onto/TI/atTime">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/accoglieDomandaDiPensione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/accoglieDomandaDiPensione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione"/>
+        <rdfs:comment xml:lang="it">La object property collega la Sede INPS incaricata di gestire la pratica relativa alla domanda di pensione e la Domanda di pensione, mettendo in evidenze la competenza della sede relativamente all&apos;atto di accoglimento della domanda</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the INPS office responsible for managing the pension application and the Pension Application</rdfs:comment>
+        <rdfs:label xml:lang="en">accepts pension application</rdfs:label>
+        <rdfs:label xml:lang="it">accoglie domanda di pensione</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/apponeSottoscrizione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/apponeSottoscrizione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ResponsabileDelDocumento"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione"/>
+        <rdfs:comment xml:lang="it">La object property collega il Responsabile del documento con la sottoscrizione, mettendo in evidenza la relazione semantica tra il soggetto abilitato ad apporre la firma con la sottoscrizione stessa</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the Document Responsible with the signature</rdfs:comment>
+        <rdfs:label xml:lang="it">appone sottoscrizione</rdfs:label>
+        <rdfs:label xml:lang="en">subscribes</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
+        <rdfs:comment xml:lang="it">La object property collega la liquidazione di pensione con l&apos;anzianità contributiva, evidenziando il nesso tra la liquidazione e l&apos;anzianità contributiva in qualità di elemento fondamentale per per il calcolo degli importi da liquidare</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the pension payment with the contributory seniority</rdfs:comment>
+        <rdfs:label xml:lang="it">calcolata sulla base dei contributi versati</rdfs:label>
+        <rdfs:label xml:lang="en">calculated on the basis of the contributions paid</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="it">La object property collega la classe rappresentativa dell&apos;elemento Dispositivo del documento con la classi che descrivono i gruppi informativi relativi agli importi e alla liquidazione di pensione. La relazione mette in evidenza il ruolo del documento di determina di pensione rispetto ai dati della pensione concessa al richiedente</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the representative class of the document Device element with the classes that describe the information groups related to the pension amounts and liquidation</rdfs:comment>
+        <rdfs:label xml:lang="it">certifica i dati relativi a</rdfs:label>
+        <rdfs:label xml:lang="en">certifies the data relating to</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
+        <rdfs:comment xml:lang="it">La object property collega la determina di pensione con il prodotto pensionistico dal quale certifica l&apos;assegnazione al soggetto richiedente</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the pension determination with the pension product from which it certifies the assignment to the applicant</rdfs:comment>
+        <rdfs:label xml:lang="it">certifica il diritto alla pensione</rdfs:label>
+        <rdfs:label xml:lang="en">certifies the right to a pension</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ConcessioneDiPensione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
+        <rdfs:comment xml:lang="it">La object property mette in relazione la classe Concessione di pensione con la Determina di pensione, la relazione vuole definire la relazione semantica tra le due e il ruolo certificatore del documento di determina rispetto all&apos;adozione dell&apos;atto di concessione della pensione dal parte dell&apos;INPS</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property relates the Pension Grant class to the Pension Determination</rdfs:comment>
+        <rdfs:label xml:lang="it">certificata da</rdfs:label>
+        <rdfs:label xml:lang="en">certified by</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
+        <rdfs:comment xml:lang="it">La object property collega la Determina di pensione con la sede INPS che ne ha in carico la gestione</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the Pension Determination with the INPS office that is responsible for its management</rdfs:comment>
+        <rdfs:label xml:lang="it">determina gestita da sede INPS</rdfs:label>
+        <rdfs:label xml:lang="en">pension determination managed by INPS headquarters</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:comment xml:lang="it">La object property collega la classe Anzianità contributiva con la classe Importo pensione con lo scopo di esplicitare il nesso semantico  tra le due e in particolare il ruolo svolto dal dato dell&apos;anzianità contributiva rispetto alla determinazione degli importi della pensione da erogare</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the Seniority class with the Pension amount class</rdfs:comment>
+        <rdfs:label xml:lang="it">determina importo di pensione</rdfs:label>
+        <rdfs:label xml:lang="en">determines pension amount</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/eArticolatoIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/eArticolatoIn">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="it">La object property collega la classe descrittiva del testo del documento con le sue componenti costitutive</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the descriptive class of the document text with its constituent components</rdfs:comment>
+        <rdfs:label xml:lang="en">It is divided into</rdfs:label>
+        <rdfs:label xml:lang="it">è articolato in</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
+        <rdfs:comment xml:lang="it">La object property collega la sede INPS che ha competenza ad emettere ila determina con il documento di determina di pensione con lo scopo di esplicitare il tipo di relazione che le lega</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the INPS office that is competent to issue the determination with the pension determination document</rdfs:comment>
+        <rdfs:label xml:lang="it">emette determina di pensione</rdfs:label>
+        <rdfs:label xml:lang="en">issues pension determination</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/TipologiaSistemaDiCalcolo"/>
+        <rdfs:comment xml:lang="it">La object property collega la Liquidazione di pensione con la tipologia di sistema di calcolo  utilizzato per la definizione degli importi da liquidare</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the Pension Liquidation with the type of calculation system used to define the amounts to be liquidated</rdfs:comment>
+        <rdfs:label xml:lang="it">ha tipologia di sistema di calcolo</rdfs:label>
+        <rdfs:label xml:lang="enn">has a type of calculation system</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione"/>
+        <rdfs:comment xml:lang="it">La object property collega i soggetti abilitati ad inviare la domadna di pensione, ossia il soggetto interessato o un suo delegato, con la sede INPS territorialmente competente a riceverla e gestirla</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the subjects authorised to send the pension application, i.e. the interested party or his delegate, with the INPS office territorially competent to receive and manage it</rdfs:comment>
+        <rdfs:label xml:lang="it">invia domanda di pensione</rdfs:label>
+        <rdfs:label xml:lang="en">submit pension application</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione"/>
+        <rdfs:comment xml:lang="it">La object property collega il soggetto che presenta la domanda di pensione e sarÃ  destinatario dell&apos;atto adottato in merito dall&apos;INPS con la domadna di pensione inviata</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property links the person who submits the pension application and will be the recipient of the act adopted in this regard by INPS with the pension application sent</rdfs:comment>
+        <rdfs:label xml:lang="en">apply for pension</rdfs:label>
+        <rdfs:label xml:lang="it">presenta domanda di pensione</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="it">La object property collega il protocollo, inteso come parte strutturale del documento di determina di pensione, con gli elementi che lo compongono</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the protocol, intended as a structural part of the pension determination document, with the elements that compose it</rdfs:comment>
+        <rdfs:label xml:lang="en">protocol composed of</rdfs:label>
+        <rdfs:label xml:lang="it">protocollo composto da</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
+        <rdfs:comment xml:lang="it">La object property collega la classe oggetto, che rappresenta l&apos;elemento del documento che veicola una sintesi del contenuto, con la classe prodotto pensionistico</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the object class, which represents the element of the document that conveys a summary of the content, with the pension product class</rdfs:comment>
+        <rdfs:label xml:lang="it">sintetizza dati relativi a pensione</rdfs:label>
+        <rdfs:label xml:lang="en">summarizes pension data</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/strutturatoIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/strutturatoIn">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione"/>
+                    <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="it">La object property collega la classe rappresentativa del documento di determina di pensione con gli elementi strutturali di cui si compone</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the representative class of the pension determination document with the structural elements it is composed of</rdfs:comment>
+        <rdfs:label xml:lang="en">structured in</rdfs:label>
+        <rdfs:label xml:lang="it">strutturato in</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica"/>
+        <rdfs:comment xml:lang="it">La object property collega la Liquidazione di pensione con la Gestione pensionistica di riferimento</rdfs:comment>
+        <rdfs:comment xml:lang="en">The object property connects the Pension Settlement with the relevant Pension Management</rdfs:comment>
+        <rdfs:label xml:lang="it">ha gestione pensionistica di riferimento</rdfs:label>
+        <rdfs:label xml:lang="en">has reference pension management</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
+        <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione"/>
+    </owl:ObjectProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/onto/TI/endTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/endTime">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/onto/TI/startTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/startTime">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataDecorrenzePensione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataDecorrenzePensione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
+        <rdfs:comment xml:lang="it">data a partire dalla quale la pensione sarà erogata al titolare</rdfs:comment>
+        <rdfs:comment xml:lang="en">date from which the pension will be paid to the holder</rdfs:comment>
+        <rdfs:label xml:lang="it">data di decorrenza di pensione</rdfs:label>
+        <rdfs:label xml:lang="en">pension effective date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDeterminaDiPensione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDeterminaDiPensione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
+        <rdfs:comment xml:lang="it">data di emissione della determina di pensione</rdfs:comment>
+        <rdfs:comment xml:lang="en">date of issue of the pension determination</rdfs:comment>
+        <rdfs:label xml:lang="it">data emissione determina di pensione</rdfs:label>
+        <rdfs:label xml:lang="en">date of issue determines pension</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDocumento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDocumento">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo"/>
+        <rdfs:comment xml:lang="it">data indicata nel documento nella quale l&apos;ente ha adottato il provvedimento</rdfs:comment>
+        <rdfs:comment xml:lang="en">date indicated in the document in which the institution adopted the measure</rdfs:comment>
+        <rdfs:label xml:lang="it">data di emissione del documento</rdfs:label>
+        <rdfs:label xml:lang="en">document issue date</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/descrizioneProvvedimento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/descrizioneProvvedimento">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo"/>
+        <rdfs:comment xml:lang="it">l&apos;attributo contiene un breve testo descrittivo con la sintesi dell&apos;esito del provvedimento adottato</rdfs:comment>
+        <rdfs:comment xml:lang="en">the attribute contains a short descriptive text with a summary of the outcome of the measure adopted</rdfs:comment>
+        <rdfs:label xml:lang="en">description of the measure</rdfs:label>
+        <rdfs:label xml:lang="it">descrizione del provvedimento</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoACalcolo -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoACalcolo">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:label xml:lang="it">importo a calcolo</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoMensileTotalePensione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoMensileTotalePensione">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:label xml:lang="en">Total monthly pension amount</rdfs:label>
+        <rdfs:label xml:lang="it">importo mensile totale della pensione</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/luogoEmissioneDelDocumento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/luogoEmissioneDelDocumento">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo"/>
+        <rdfs:comment xml:lang="it">data topica (luogo) di emissione del documento</rdfs:comment>
+        <rdfs:label xml:lang="it">luogo di emissione del documento</rdfs:label>
+        <rdfs:label xml:lang="en">place of issue of the document</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/modalitaPagamento -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/modalitaPagamento">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:comment xml:lang="en">method of payment of the pension amount</rdfs:comment>
+        <rdfs:comment xml:lang="it">modalità di pagamento dell&apos;importo della pensione</rdfs:comment>
+        <rdfs:label xml:lang="it">modalità pagamento</rdfs:label>
+        <rdfs:label xml:lang="en">payment methods</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/nomeAutore -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/nomeAutore">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore"/>
+        <rdfs:comment xml:lang="en">name of the person who has the authority to issue the document</rdfs:comment>
+        <rdfs:comment xml:lang="it">nome del soggetto che ha autorità ad emettere il documento</rdfs:comment>
+        <rdfs:label xml:lang="en">author&apos;s name</rdfs:label>
+        <rdfs:label xml:lang="it">nome dell&apos;autore</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
+        <rdfs:comment xml:lang="it">codice numerico o alfanumerico che identifica in modo univoco il documento di determina di pensione all&apos;interno dell&apos;archivio dell&apos;ente</rdfs:comment>
+        <rdfs:comment xml:lang="en">numeric or alphanumeric code that uniquely identifies the pension determination document within the institution&apos;s archive</rdfs:comment>
+        <rdfs:label xml:lang="it">numero identificativo di protocollo</rdfs:label>
+        <rdfs:label xml:lang="en">protocol identification number</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroPensione -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroPensione">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
+        <rdfs:label xml:lang="it">numero pensione</rdfs:label>
+        <rdfs:label xml:lang="en">pension number</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroSettimane -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroSettimane">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
+        <rdfs:label xml:lang="en">number of weeks</rdfs:label>
+        <rdfs:label xml:lang="it">numero di settimane</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/quotaAssociativa -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/quotaAssociativa">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:comment xml:lang="en">membership fee paid for the management of the fund</rdfs:comment>
+        <rdfs:comment xml:lang="it">quota associativa versata per la gestione del fondo</rdfs:comment>
+        <rdfs:label xml:lang="en">membership fee</rdfs:label>
+        <rdfs:label xml:lang="it">quota associativa</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/retribuzioneMedia -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/retribuzioneMedia">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
+        <rdfs:comment xml:lang="en">average salary of contributory seniority</rdfs:comment>
+        <rdfs:comment xml:lang="it">retribuzione media dell&apos;anzianità contributiva</rdfs:comment>
+        <rdfs:label xml:lang="en">average salary</rdfs:label>
+        <rdfs:label xml:lang="it">retribuzione media</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattamentoDiFamiglia -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattamentoDiFamiglia">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:comment xml:lang="it">assegno familiare erogato ai pensionati per il proprio nucleo familiare</rdfs:comment>
+        <rdfs:comment xml:lang="en">family allowance paid to pensioners for their family unit</rdfs:comment>
+        <rdfs:label xml:lang="en">family treatment</rdfs:label>
+        <rdfs:label xml:lang="it">trattamento di famiglia</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattenuteLavoroAutonomo -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattenuteLavoroAutonomo">
+        <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:comment xml:lang="it">trattenute sull&apos;importo pensione in caso di lavoro autonomo</rdfs:comment>
+        <rdfs:comment xml:lang="en">withholdings from the pension amount in the case of self-employment</rdfs:comment>
+        <rdfs:label xml:lang="en">self-employed workers withholdings</rdfs:label>
+        <rdfs:label xml:lang="it">trattenute lavoro autonomo</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://dati.gov.it/onto/dcatapit#Agent -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Agent"/>
+
+
+
+    <!-- http://dati.gov.it/onto/dcatapit#Distribution -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Distribution"/>
+
+
+
+    <!-- http://dati.gov.it/onto/dcatapit#Organization -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Organization"/>
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Kind -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Kind"/>
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Organization -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Organization"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#Distribution -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/dcat#Distribution"/>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/Document -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/COV/PublicOrganization -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/TI/TimeInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TimeInterval">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/core/SedeINPS -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/SedeINPS">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/accoglieDomandaDiPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroSettimane"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/retribuzioneMedia"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta il periodo di versamento dei contributi utile per la maturazione del trattamento di pensione per invalidità, vecchiaia e superstiti</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the period of payment of contributions useful for the maturation of the pension treatment for disability, old age and survivors</rdfs:comment>
+        <rdfs:label xml:lang="it">Anzianità contributiva</rdfs:label>
+        <rdfs:label xml:lang="en">Contributory seniority</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/nomeAutore"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Agent"/>
+        <rdfs:comment xml:lang="it">La classe Autore rappresenta il soggetto che ha capacità e competenza  a produrre il documento</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Author class represents the subject who has the ability and competence to produce the document</rdfs:comment>
+        <rdfs:label xml:lang="en">Author</rdfs:label>
+        <rdfs:label xml:lang="it">Autore</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ConcessioneDiPensione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ConcessioneDiPensione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Activity"/>
+        <rdfs:comment xml:lang="it">La classe Concessione di pensione è stata definita nell&apos;ontologia per indicare la fase finale del procedimento con il quale l&apos;INPS determina la concessione della pensione al soggetto che ne ha fatto richiesta. Nell&apos;ontologia del Modello Obis la classe è modellata come sottoclasse della classe Activity dell&apos;ontologia Record in Context (RiC-O) dell&apos;international Council on Archives (ICA) </rdfs:comment>
+        <rdfs:comment xml:lang="en">The Pension Granting class has been defined in the ontology to indicate the final phase of the procedure with which INPS determines the granting of the pension to the person who requested it</rdfs:comment>
+        <rdfs:label xml:lang="it">Concessione di pensione</rdfs:label>
+        <rdfs:label xml:lang="en">Pension Granting</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario">
+        <owl:equivalentClass rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante"/>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
+        <rdfs:comment xml:lang="it">Il destinatario è la persona a cui è diretto il documento e, sebbene soprattutto in ambito pubblico il destinatario del documento possa non essere lo stesso soggetto destinatario dell&apos;atto, in questa ontologia la classe esprime l&apos;identità dei due soggetti </rdfs:comment>
+        <rdfs:comment xml:lang="en">The recipient is the person to whom the document is addressed</rdfs:comment>
+        <rdfs:label xml:lang="it">Destinatario</rdfs:label>
+        <rdfs:label xml:lang="en">Recipient</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/strutturatoIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDeterminaDiPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <rdfs:subClassOf rdf:resource="https://www.ica.org/standards/RiC/ontology#Record"/>
+        <rdfs:comment xml:lang="it">La determina o prospetto di pensione è la classe che rappresenta l&apos;insieme dei documenti con i quali INPS attesta e comunica l&apos;accettazione della domanda di pensione. Nell&apos;ontologia la clesse è descritta come sottoclasse di Document dell&apos;ontologia esterna foaf, per chiarirne la connotazione semantica</rdfs:comment>
+        <rdfs:comment xml:lang="en">The pension prospectus is the class that represents the set of documents with which INPS certifies and communicates the acceptance of the pension application</rdfs:comment>
+        <rdfs:label xml:lang="it">Determina di pensione</rdfs:label>
+        <rdfs:label xml:lang="en">Pension Prospectus</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/descrizioneProvvedimento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa"/>
+        <rdfs:comment xml:lang="it">La classe Dispositivo rappresenta la parte del testo del documento che raccoglie i dati sostanziali dell&apos;atto che, nel caso del documento di determina di pensione, sono rappresentati dai dati di liquidazione e dal dettaglio degli importi erogati. Nella modellazione la classe accoglie la semantica definita in ambito diplomatistico</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Disposition class represents the part of the document text that collects the substantial data of the act which, in the case of the pension determination document, are represented by the liquidation data and the details of the amounts paid.</rdfs:comment>
+        <rdfs:label xml:lang="en">Disposition</rdfs:label>
+        <rdfs:label xml:lang="it">Dispositivo</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe raggruppa le domande di pensione presentate all&apos;INPS</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class groups the pension applications submitted to INPS</rdfs:comment>
+        <rdfs:label xml:lang="it">Domanda di pensione</rdfs:label>
+        <rdfs:label xml:lang="en">Pension application</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoArretrati -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoArretrati">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+        <rdfs:comment xml:lang="it">La classe rappresenta il gruppo informativo legato agli importi arretrati della pensione</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the information group related to the outstanding pension amounts</rdfs:comment>
+        <rdfs:label xml:lang="en">Back payments</rdfs:label>
+        <rdfs:label xml:lang="it">Importo arretrati pensione</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoACalcolo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoMensileTotalePensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/modalitaPagamento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
+        <rdfs:comment xml:lang="it">La classe rappresenta uno dei due gruppi informativi principali presenti nel documento di determina di pensione, relativo al dettaglio degli importi della pensione erogata da INPS al Titolare della prestazione</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents one of the two main information groups present in the pension determination document, relating to the details of the pension amounts paid by INPS to the Benefit Holder</rdfs:comment>
+        <rdfs:label xml:lang="en">Amount of pension</rdfs:label>
+        <rdfs:label xml:lang="it">Importo pensione</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
+        <rdfs:comment xml:lang="it">La classe rappresenta il soggetto che presenta la domanda di pensione e che sarà anche destinatario della decisione adottata dall&apos;INPS, espressa nella determina di pensione, per questo motivo nell&apos;ontologia le classi Destinatario e Instante sono dichiarate classi equivalenti</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the subject who submits the pension application and who will also be the recipient of the decision adopted by INPS, expressed in the pension determination</rdfs:comment>
+        <rdfs:label xml:lang="en">Applicant</rdfs:label>
+        <rdfs:label xml:lang="it">Instante</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta e comprende i dati utilizzati per il calcolo della liquidazione della pensione, ossia la gestione pensionistica, l&apos;anzianità contributiva e il relativo sistema di calcolo adottato</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents and includes the data used for the calculation of the pension payment, i.e. the pension management, the contributory seniority and the relative calculation system adopted</rdfs:comment>
+        <rdfs:label xml:lang="it">Liquidazione Pensione</rdfs:label>
+        <rdfs:label xml:lang="en">Pension Settlement</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta l&apos;elemento del documento che veicola una sintesi del contenuto. La modellazione lo definisce come elemento racchiuso nel protocollo</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the element of the document that conveys a summary of the content</rdfs:comment>
+        <rdfs:label xml:lang="en">Object of the document</rdfs:label>
+        <rdfs:label xml:lang="it">Oggetto</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa">
+        <rdfs:comment xml:lang="it">La classe rappresenta la partizione del testo del documento preposta a: contenere il preambolo, citare il contesto dal quale l&apos;atto è generato, citare leggi o norme di riferimento o la descrizione dei fatti cui il documento si riferisce. Per la definzione della semantica della classe la modellazione si è orientata verso l&apos;adozione del significato che tale elemento assume in ambito diplomatistico</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the partition of the document text intended to: contain the preamble, cite the context from which the act is generated, cite reference laws or standards or the description of the facts to which the document refers</rdfs:comment>
+        <rdfs:label xml:lang="en">Preamble</rdfs:label>
+        <rdfs:label xml:lang="it">Premessa</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDocumento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/luogoEmissioneDelDocumento"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta la partizione interna di un documento nella quale vengono presentati alcuni elementi del documento come l&apos;autore, il destinatario, l&apos;oggetto, la data cronica  e topica di formazione del documento. Per la definzione della semantica della classe la modellazione si è orientata verso l&apos;adozione del significato che tali elementi assumono nella disciplina diplomatica </rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the internal partition of a document in which some elements of the document are presented such as the author, the recipient, the subject, the chronic and topical date of formation of the document</rdfs:comment>
+        <rdfs:label xml:lang="en">Header</rdfs:label>
+        <rdfs:label xml:lang="it">Protocollo</rdfs:label>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ResponsabileDelDocumento -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ResponsabileDelDocumento">
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
         <rdfs:comment xml:lang="it">La classe rappresenta la persona fisica responsabile del contenuto del documento</rdfs:comment>
         <rdfs:comment xml:lang="en">The class represents an individual responsible for the content of the document</rdfs:comment>
         <rdfs:label xml:lang="en">Document Responsible</rdfs:label>
         <rdfs:label xml:lang="it">Responsabile del documento</rdfs:label>
-      </owl:Class>
-    </rdfs:domain>
+    </owl:Class>
 
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione"/>
-    <rdfs:comment xml:lang="it">La object property collega il Responsabile del documento con la sottoscrizione, mettendo in evidenza la relazione semantica tra il soggetto abilitato ad apporre la firma con la sottoscrizione stessa</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property connects the Document Responsible with the signature</rdfs:comment>
-    <rdfs:label xml:lang="it">appone sottoscrizione</rdfs:label>
-    <rdfs:label xml:lang="en">subscribes</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
-    <rdfs:comment xml:lang="it">La object property collega la liquidazione di pensione con l'anzianità contributiva, evidenziando il nesso tra la liquidazione e l'anzianità contributiva in qualità di elemento fondamentale per per il calcolo degli importi da liquidare</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property links the pension payment with the contributory seniority</rdfs:comment>
-    <rdfs:label xml:lang="it">calcolata sulla base dei contributi versati</rdfs:label>
-    <rdfs:label xml:lang="en">calculated on the basis of the contributions paid</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo"/>
-    <rdfs:range>
-      <owl:Class>
-        <owl:unionOf>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-            <rdf:rest>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-              </rdf:Description>
-            </rdf:rest>
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione -->
 
-          </rdf:Description>
-        </owl:unionOf>
-
-      </owl:Class>
-    </rdfs:range>
-
-    <rdfs:comment xml:lang="it">La object property collega la classe rappresentativa dell'elemento Dispositivo del documento con la classi che descrivono i gruppi informativi relativi agli importi e alla liquidazione di pensione. La relazione mette in evidenza il ruolo del documento di determina di pensione rispetto ai dati della pensione concessa al richiedente</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property links the representative class of the document Device element with the classes that describe the information groups related to the pension amounts and liquidation</rdfs:comment>
-    <rdfs:label xml:lang="it">certifica i dati relativi a</rdfs:label>
-    <rdfs:label xml:lang="en">certifies the data relating to</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
-    <rdfs:comment xml:lang="it">La object property collega la determina di pensione con il prodotto pensionistico dal quale certifica l'assegnazione al soggetto richiedente</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property links the pension determination with the pension product from which it certifies the assignment to the applicant</rdfs:comment>
-    <rdfs:label xml:lang="it">certifica il diritto alla pensione</rdfs:label>
-    <rdfs:label xml:lang="en">certifies the right to a pension</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa">
-    <rdfs:domain>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ConcessioneDiPensione">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione">
         <owl:equivalentClass>
-          <owl:Restriction>
-            <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa"/>
-            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/apponeSottoscrizione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <rdfs:comment xml:lang="it">La classe rappresenta l&apos;insieme dei segni (nome e cognome) che indicano la persona fisica responsabile dell&apos;articolazione del contenuto del documento e della corrispondenza del documento all&apos;atto. Può comprendere la firma</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the set of signs (name and surname) that indicate the physical person responsible for the articulation of the content of the document and the correspondence of the document to the act</rdfs:comment>
+        <rdfs:label xml:lang="en">Signature</rdfs:label>
+        <rdfs:label xml:lang="it">Sottoscrizione</rdfs:label>
+    </owl:Class>
 
-        <rdfs:subClassOf>
-          <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Activity">
-          </owl:Class>
-        </rdfs:subClassOf>
 
-        <rdfs:comment xml:lang="it">La classe Concessione di pensione è stata definita nell'ontologia per indicare la fase finale del procedimento con il quale l'INPS determina la concessione della pensione al soggetto che ne ha fatto richiesta. Nell'ontologia del Modello Obis la classe è modellata come sottoclasse della classe Activity dell'ontologia Record in Context (RiC-O) dell'international Council on Archives (ICA) </rdfs:comment>
-        <rdfs:comment xml:lang="en">The Pension Granting class has been defined in the ontology to indicate the final phase of the procedure with which INPS determines the granting of the pension to the person who requested it</rdfs:comment>
-        <rdfs:label xml:lang="it">Concessione di pensione</rdfs:label>
-        <rdfs:label xml:lang="en">Pension Granting</rdfs:label>
-      </owl:Class>
-    </rdfs:domain>
 
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
-    <rdfs:comment xml:lang="it">La object property mette in relazione la classe Concessione di pensione con la Determina di pensione, la relazione vuole definire la relazione semantica tra le due e il ruolo certificatore del documento di determina rispetto all'adozione dell'atto di concessione della pensione dal parte dell'INPS</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property relates the Pension Grant class to the Pension Determination</rdfs:comment>
-    <rdfs:label xml:lang="it">certificata da</rdfs:label>
-    <rdfs:label xml:lang="en">certified by</rdfs:label>
-  </owl:ObjectProperty>
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo -->
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
-    <rdfs:comment xml:lang="it">La object property collega la Determina di pensione con la sede INPS che ne ha in carico la gestione</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property connects the Pension Determination with the INPS office that is responsible for its management</rdfs:comment>
-    <rdfs:label xml:lang="it">determina gestita da sede INPS</rdfs:label>
-    <rdfs:label xml:lang="en">pension determination managed by INPS headquarters</rdfs:label>
-  </owl:ObjectProperty>
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo">
+        <rdfs:comment xml:lang="it">La classe rappresenta la partizione interna di un documento utile ad esprimere la decisione adottata dall&apos;autore del documento. Per la definzione della semantica della classe la modellazione si è orientata verso l&apos;adozione del significato che tale elemento assume nella disciplina diplomatica </rdfs:comment>
+        <rdfs:comment xml:lang="en">The class represents the internal partition of a record useful for expressing the decision adopted by the author of the document</rdfs:comment>
+        <rdfs:label xml:lang="it">Testo</rdfs:label>
+        <rdfs:label xml:lang="en">Text</rdfs:label>
+    </owl:Class>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-    <rdfs:comment xml:lang="it">La object property collega la classe Anzianità contributiva con la classe Importo pensione con lo scopo di esplicitare il nesso semantico  tra le due e in particolare il ruolo svolto dal dato dell'anzianità contributiva rispetto alla determinazione degli importi della pensione da erogare</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property connects the Seniority class with the Pension amount class</rdfs:comment>
-    <rdfs:label xml:lang="it">determina importo di pensione</rdfs:label>
-    <rdfs:label xml:lang="en">determines pension amount</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/eArticolatoIn">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo"/>
-    <rdfs:range>
-      <owl:Class>
-        <owl:unionOf>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo"/>
-            <rdf:rest>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-              </rdf:Description>
-            </rdf:rest>
 
-          </rdf:Description>
-        </owl:unionOf>
+    <!-- https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/TipologiaSistemaDiCalcolo -->
 
-      </owl:Class>
-    </rdfs:range>
-
-    <rdfs:comment xml:lang="it">La object property collega la classe descrittiva del testo del documento con le sue componenti costitutive</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property connects the descriptive class of the document text with its constituent components</rdfs:comment>
-    <rdfs:label xml:lang="en">It is divided into</rdfs:label>
-    <rdfs:label xml:lang="it">è articolato in</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/core/SedeINPS"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
-    <rdfs:comment xml:lang="it">La object property collega la sede INPS che ha competenza ad emettere ila determina con il documento di determina di pensione con lo scopo di esplicitare il tipo di relazione che le lega</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property links the INPS office that is competent to issue the determination with the pension determination document</rdfs:comment>
-    <rdfs:label xml:lang="it">emette determina di pensione</rdfs:label>
-    <rdfs:label xml:lang="en">issues pension determination</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
-    <rdfs:range>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/TipologiaSistemaDiCalcolo">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/TipologiaSistemaDiCalcolo">
         <owl:equivalentClass>
-          <owl:Restriction>
-            <owl:onProperty>
-              <rdf:Description>
-                <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo"/>
-              </rdf:Description>
-            </owl:onProperty>
-
-            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
         </owl:equivalentClass>
-
         <rdfs:comment xml:lang="it">La classe esprime la lista di valori che descrive il sistema utilizzato per il calcolo degli importi spettanti della pensione: Il sistema di calcolo può essere di tipo retributivo, contributivo o misto</rdfs:comment>
         <rdfs:comment xml:lang="en">The class expresses the list of values ​​that describes the system used to calculate the pension amounts due: The calculation system can be of a retributive, contributory or mixed type</rdfs:comment>
         <rdfs:label xml:lang="en">Calculation system type</rdfs:label>
         <rdfs:label xml:lang="it">Tipologia sistema di calcolo</rdfs:label>
-      </owl:Class>
-    </rdfs:range>
+    </owl:Class>
 
-    <rdfs:comment xml:lang="it">La object property collega la Liquidazione di pensione con la tipologia di sistema di calcolo  utilizzato per la definizione degli importi da liquidare</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property links the Pension Liquidation with the type of calculation system used to define the amounts to be liquidated</rdfs:comment>
-    <rdfs:label xml:lang="it">ha tipologia di sistema di calcolo</rdfs:label>
-    <rdfs:label xml:lang="enn">has a type of calculation system</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione">
-    <rdfs:domain>
-      <owl:Class>
-        <owl:unionOf>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante"/>
-            <rdf:rest>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-              </rdf:Description>
-            </rdf:rest>
 
-          </rdf:Description>
-        </owl:unionOf>
+    <!-- https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica -->
 
-      </owl:Class>
-    </rdfs:domain>
-
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione"/>
-    <rdfs:comment xml:lang="it">La object property collega i soggetti abilitati ad inviare la domadna di pensione, ossia il soggetto interessato o un suo delegato, con la sede INPS territorialmente competente a riceverla e gestirla</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property connects the subjects authorised to send the pension application, i.e. the interested party or his delegate, with the INPS office territorially competent to receive and manage it</rdfs:comment>
-    <rdfs:label xml:lang="it">invia domanda di pensione</rdfs:label>
-    <rdfs:label xml:lang="en">submit pension application</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione"/>
-    <rdfs:comment xml:lang="it">La object property collega il soggetto che presenta la domanda di pensione e sarÃ  destinatario dell'atto adottato in merito dall'INPS con la domadna di pensione inviata</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property links the person who submits the pension application and will be the recipient of the act adopted in this regard by INPS with the pension application sent</rdfs:comment>
-    <rdfs:label xml:lang="en">apply for pension</rdfs:label>
-    <rdfs:label xml:lang="it">presenta domanda di pensione</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo"/>
-    <rdfs:range>
-      <owl:Class>
-        <owl:unionOf>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore"/>
-            <rdf:rest>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario"/>
-                <rdf:rest>
-                  <rdf:Description>
-                    <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto"/>
-                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                  </rdf:Description>
-                </rdf:rest>
-
-              </rdf:Description>
-            </rdf:rest>
-
-          </rdf:Description>
-        </owl:unionOf>
-
-      </owl:Class>
-    </rdfs:range>
-
-    <rdfs:comment xml:lang="it">La object property collega il protocollo, inteso come parte strutturale del documento di determina di pensione, con gli elementi che lo compongono</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property connects the protocol, intended as a structural part of the pension determination document, with the elements that compose it</rdfs:comment>
-    <rdfs:label xml:lang="en">protocol composed of</rdfs:label>
-    <rdfs:label xml:lang="it">protocollo composto da</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto"/>
-    <rdfs:range rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
-    <rdfs:comment xml:lang="it">La object property collega la classe oggetto, che rappresenta l'elemento del documento che veicola una sintesi del contenuto, con la classe prodotto pensionistico</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property connects the object class, which represents the element of the document that conveys a summary of the content, with the pension product class</rdfs:comment>
-    <rdfs:label xml:lang="it">sintetizza dati relativi a pensione</rdfs:label>
-    <rdfs:label xml:lang="en">summarizes pension data</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/strutturatoIn">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
-    <rdfs:range>
-      <owl:Class>
-        <owl:unionOf>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo"/>
-            <rdf:rest>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione"/>
-                <rdf:rest>
-                  <rdf:Description>
-                    <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo"/>
-                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                  </rdf:Description>
-                </rdf:rest>
-
-              </rdf:Description>
-            </rdf:rest>
-
-          </rdf:Description>
-        </owl:unionOf>
-
-      </owl:Class>
-    </rdfs:range>
-
-    <rdfs:comment xml:lang="it">La object property collega la classe rappresentativa del documento di determina di pensione con gli elementi strutturali di cui si compone</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property connects the representative class of the pension determination document with the structural elements it is composed of</rdfs:comment>
-    <rdfs:label xml:lang="en">structured in</rdfs:label>
-    <rdfs:label xml:lang="it">strutturato in</rdfs:label>
-  </owl:ObjectProperty>
-
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
-    <rdfs:range>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica">
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/GestionePensionistica">
         <owl:equivalentClass>
-          <owl:Restriction>
-            <owl:onProperty>
-              <rdf:Description>
-                <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica"/>
-              </rdf:Description>
-            </owl:onProperty>
-
-            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+    </owl:Class>
 
-      </owl:Class>
-    </rdfs:range>
 
-    <rdfs:comment xml:lang="it">La object property collega la Liquidazione di pensione con la Gestione pensionistica di riferimento</rdfs:comment>
-    <rdfs:comment xml:lang="en">The object property connects the Pension Settlement with the relevant Pension Management</rdfs:comment>
-    <rdfs:label xml:lang="it">ha gestione pensionistica di riferimento</rdfs:label>
-    <rdfs:label xml:lang="en">has reference pension management</rdfs:label>
-  </owl:ObjectProperty>
 
-  <owl:ObjectProperty rdf:about="https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
-    <rdfs:range>
-      <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione">
+    <!-- https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico">
         <owl:equivalentClass>
-          <owl:Restriction>
-            <owl:onProperty>
-              <rdf:Description>
-                <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione"/>
-              </rdf:Description>
-            </owl:onProperty>
-
-            <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-          </owl:Restriction>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
         </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataDecorrenzePensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
 
-      </owl:Class>
-    </rdfs:range>
-
-  </owl:ObjectProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/endTime">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/onto/TI/startTime">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/onto/TI/TimeInterval"/>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataDecorrenzePensione">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
-    <rdfs:comment xml:lang="it">data a partire dalla quale la pensione sarà erogata al titolare</rdfs:comment>
-    <rdfs:comment xml:lang="en">date from which the pension will be paid to the holder</rdfs:comment>
-    <rdfs:label xml:lang="it">data di decorrenza di pensione</rdfs:label>
-    <rdfs:label xml:lang="en">pension effective date</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDeterminaDiPensione">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
-    <rdfs:comment xml:lang="it">data di emissione della determina di pensione</rdfs:comment>
-    <rdfs:comment xml:lang="en">date of issue of the pension determination</rdfs:comment>
-    <rdfs:label xml:lang="it">data emissione determina di pensione</rdfs:label>
-    <rdfs:label xml:lang="en">date of issue determines pension</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDocumento">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo"/>
-    <rdfs:comment xml:lang="it">data indicata nel documento nella quale l'ente ha adottato il provvedimento</rdfs:comment>
-    <rdfs:comment xml:lang="en">date indicated in the document in which the institution adopted the measure</rdfs:comment>
-    <rdfs:label xml:lang="it">data di emissione del documento</rdfs:label>
-    <rdfs:label xml:lang="en">document issue date</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/descrizioneProvvedimento">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo"/>
-    <rdfs:comment xml:lang="it">l'attributo contiene un breve testo descrittivo con la sintesi dell'esito del provvedimento adottato</rdfs:comment>
-    <rdfs:comment xml:lang="en">the attribute contains a short descriptive text with a summary of the outcome of the measure adopted</rdfs:comment>
-    <rdfs:label xml:lang="en">description of the measure</rdfs:label>
-    <rdfs:label xml:lang="it">descrizione del provvedimento</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoACalcolo">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-    <rdfs:label xml:lang="it">importo a calcolo</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoMensileTotalePensione">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-    <rdfs:label xml:lang="en">Total monthly pension amount</rdfs:label>
-    <rdfs:label xml:lang="it">importo mensile totale della pensione</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/luogoEmissioneDelDocumento">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo"/>
-    <rdfs:comment xml:lang="it">data topica (luogo) di emissione del documento</rdfs:comment>
-    <rdfs:label xml:lang="it">luogo di emissione del documento</rdfs:label>
-    <rdfs:label xml:lang="en">place of issue of the document</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/modalitaPagamento">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-    <rdfs:comment xml:lang="en">method of payment of the pension amount</rdfs:comment>
-    <rdfs:comment xml:lang="it">modalità di pagamento dell'importo della pensione</rdfs:comment>
-    <rdfs:label xml:lang="it">modalità pagamento</rdfs:label>
-    <rdfs:label xml:lang="en">payment methods</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/nomeAutore">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore"/>
-    <rdfs:comment xml:lang="en">name of the person who has the authority to issue the document</rdfs:comment>
-    <rdfs:comment xml:lang="it">nome del soggetto che ha autorità ad emettere il documento</rdfs:comment>
-    <rdfs:label xml:lang="en">author's name</rdfs:label>
-    <rdfs:label xml:lang="it">nome dell'autore</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione"/>
-    <rdfs:comment xml:lang="it">codice numerico o alfanumerico che identifica in modo univoco il documento di determina di pensione all'interno dell'archivio dell'ente</rdfs:comment>
-    <rdfs:comment xml:lang="en">numeric or alphanumeric code that uniquely identifies the pension determination document within the institution's archive</rdfs:comment>
-    <rdfs:label xml:lang="it">numero identificativo di protocollo</rdfs:label>
-    <rdfs:label xml:lang="en">protocol identification number</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroPensione">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico"/>
-    <rdfs:label xml:lang="it">numero pensione</rdfs:label>
-    <rdfs:label xml:lang="en">pension number</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroSettimane">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
-    <rdfs:label xml:lang="en">number of weeks</rdfs:label>
-    <rdfs:label xml:lang="it">numero di settimane</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/quotaAssociativa">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-    <rdfs:comment xml:lang="en">membership fee paid for the management of the fund</rdfs:comment>
-    <rdfs:comment xml:lang="it">quota associativa versata per la gestione del fondo</rdfs:comment>
-    <rdfs:label xml:lang="en">membership fee</rdfs:label>
-    <rdfs:label xml:lang="it">quota associativa</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/retribuzioneMedia">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva"/>
-    <rdfs:comment xml:lang="en">average salary of contributory seniority</rdfs:comment>
-    <rdfs:comment xml:lang="it">retribuzione media dell'anzianità contributiva</rdfs:comment>
-    <rdfs:label xml:lang="en">average salary</rdfs:label>
-    <rdfs:label xml:lang="it">retribuzione media</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattamentoDiFamiglia">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-    <rdfs:comment xml:lang="it">assegno familiare erogato ai pensionati per il proprio nucleo familiare</rdfs:comment>
-    <rdfs:comment xml:lang="en">family allowance paid to pensioners for their family unit</rdfs:comment>
-    <rdfs:label xml:lang="en">family treatment</rdfs:label>
-    <rdfs:label xml:lang="it">trattamento di famiglia</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <owl:DatatypeProperty rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/trattenuteLavoroAutonomo">
-    <rdfs:domain rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-    <rdfs:comment xml:lang="it">trattenute sull'importo pensione in caso di lavoro autonomo</rdfs:comment>
-    <rdfs:comment xml:lang="en">withholdings from the pension amount in the case of self-employment</rdfs:comment>
-    <rdfs:label xml:lang="en">self-employed workers withholdings</rdfs:label>
-    <rdfs:label xml:lang="it">trattenute lavoro autonomo</rdfs:label>
-  </owl:DatatypeProperty>
-
-  <rdf:Description rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
-    <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
-    <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
-    <dc:identifier>inps</dc:identifier>
-    <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
-    <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
-  </rdf:Description>
-
-  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document">
-  </owl:Class>
-
-  <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/onto/TI/TimeInterval">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva">
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/core/SedeINPS">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/accoglieDomandaDiPensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/AnzianitaContributiva">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroSettimane"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/retribuzioneMedia"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="it">La classe rappresenta il periodo di versamento dei contributi utile per la maturazione del trattamento di pensione per invalidità, vecchiaia e superstiti</rdfs:comment>
-    <rdfs:comment xml:lang="en">The class represents the period of payment of contributions useful for the maturation of the pension treatment for disability, old age and survivors</rdfs:comment>
-    <rdfs:label xml:lang="it">Anzianità contributiva</rdfs:label>
-    <rdfs:label xml:lang="en">Contributory seniority</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/nomeAutore"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Agent">
-      </owl:Class>
-    </rdfs:subClassOf>
-
-    <rdfs:comment xml:lang="it">La classe Autore rappresenta il soggetto che ha capacità e competenza  a produrre il documento</rdfs:comment>
-    <rdfs:comment xml:lang="en">The Author class represents the subject who has the ability and competence to produce the document</rdfs:comment>
-    <rdfs:label xml:lang="en">Author</rdfs:label>
-    <rdfs:label xml:lang="it">Autore</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario">
-    <owl:equivalentClass rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante"/>
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
-    <rdfs:comment xml:lang="it">Il destinatario è la persona a cui è diretto il documento e, sebbene soprattutto in ambito pubblico il destinatario del documento possa non essere lo stesso soggetto destinatario dell'atto, in questa ontologia la classe esprime l'identità dei due soggetti </rdfs:comment>
-    <rdfs:comment xml:lang="en">The recipient is the person to whom the document is addressed</rdfs:comment>
-    <rdfs:label xml:lang="it">Destinatario</rdfs:label>
-    <rdfs:label xml:lang="en">Recipient</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DeterminaDiPensione">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaGestitaDaSedeINPS"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/strutturatoIn"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificataDa"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/emetteDeterminaDiPensione"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDeterminaDiPensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroIdentificativoDiProtocollo"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
-    <rdfs:subClassOf>
-      <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Record">
-      </owl:Class>
-    </rdfs:subClassOf>
-
-    <rdfs:comment xml:lang="it">La determina o prospetto di pensione è la classe che rappresenta l'insieme dei documenti con i quali INPS attesta e comunica l'accettazione della domanda di pensione. Nell'ontologia la clesse è descritta come sottoclasse di Document dell'ontologia esterna foaf, per chiarirne la connotazione semantica</rdfs:comment>
-    <rdfs:comment xml:lang="en">The pension prospectus is the class that represents the set of documents with which INPS certifies and communicates the acceptance of the pension application</rdfs:comment>
-    <rdfs:label xml:lang="it">Determina di pensione</rdfs:label>
-    <rdfs:label xml:lang="en">Pension Prospectus</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Dispositivo">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/descrizioneProvvedimento"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa"/>
-    <rdfs:comment xml:lang="it">La classe Dispositivo rappresenta la parte del testo del documento che raccoglie i dati sostanziali dell'atto che, nel caso del documento di determina di pensione, sono rappresentati dai dati di liquidazione e dal dettaglio degli importi erogati. Nella modellazione la classe accoglie la semantica definita in ambito diplomatistico</rdfs:comment>
-    <rdfs:comment xml:lang="en">The Disposition class represents the part of the document text that collects the substantial data of the act which, in the case of the pension determination document, are represented by the liquidation data and the details of the amounts paid.</rdfs:comment>
-    <rdfs:label xml:lang="en">Disposition</rdfs:label>
-    <rdfs:label xml:lang="it">Dispositivo</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="it">La classe raggruppa le domande di pensione presentate all'INPS</rdfs:comment>
-    <rdfs:comment xml:lang="en">The class groups the pension applications submitted to INPS</rdfs:comment>
-    <rdfs:label xml:lang="it">Domanda di pensione</rdfs:label>
-    <rdfs:label xml:lang="en">Pension application</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoArretrati">
-    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-    <rdfs:comment xml:lang="it">La classe rappresenta il gruppo informativo legato agli importi arretrati della pensione</rdfs:comment>
-    <rdfs:comment xml:lang="en">The class represents the information group related to the outstanding pension amounts</rdfs:comment>
-    <rdfs:label xml:lang="en">Back payments</rdfs:label>
-    <rdfs:label xml:lang="it">Importo arretrati pensione</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/onto/TI/atTime"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/determinaImportoPensione"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoACalcolo"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/importoMensileTotalePensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/modalitaPagamento"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
-    <rdfs:comment xml:lang="it">La classe rappresenta uno dei due gruppi informativi principali presenti nel documento di determina di pensione, relativo al dettaglio degli importi della pensione erogata da INPS al Titolare della prestazione</rdfs:comment>
-    <rdfs:comment xml:lang="en">The class represents one of the two main information groups present in the pension determination document, relating to the details of the pension amounts paid by INPS to the Benefit Holder</rdfs:comment>
-    <rdfs:label xml:lang="en">Amount of pension</rdfs:label>
-    <rdfs:label xml:lang="it">Importo pensione</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/presentaDomandaDiPensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdfs:subClassOf rdf:resource="https://w3id.org/italia/social-security/onto/core/RuoloDiPersonaViva"/>
-    <owl:disjointWith rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
-    <rdfs:comment xml:lang="it">La classe rappresenta il soggetto che presenta la domanda di pensione e che sarà anche destinatario della decisione adottata dall'INPS, espressa nella determina di pensione, per questo motivo nell'ontologia le classi Destinatario e Instante sono dichiarate classi equivalenti</rdfs:comment>
-    <rdfs:comment xml:lang="en">The class represents the subject who submits the pension application and who will also be the recipient of the decision adopted by INPS, expressed in the pension determination</rdfs:comment>
-    <rdfs:label xml:lang="en">Applicant</rdfs:label>
-    <rdfs:label xml:lang="it">Instante</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/calcolataSullaBaseContributiVersati"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/haTipologiaSistemaDiCalcolo"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haGestionePensionistica"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="it">La classe rappresenta e comprende i dati utilizzati per il calcolo della liquidazione della pensione, ossia la gestione pensionistica, l'anzianità contributiva e il relativo sistema di calcolo adottato</rdfs:comment>
-    <rdfs:comment xml:lang="en">The class represents and includes the data used for the calculation of the pension payment, i.e. the pension management, the contributory seniority and the relative calculation system adopted</rdfs:comment>
-    <rdfs:label xml:lang="it">Liquidazione Pensione</rdfs:label>
-    <rdfs:label xml:lang="en">Pension Settlement</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="it">La classe rappresenta l'elemento del documento che veicola una sintesi del contenuto. La modellazione lo definisce come elemento racchiuso nel protocollo</rdfs:comment>
-    <rdfs:comment xml:lang="en">The class represents the element of the document that conveys a summary of the content</rdfs:comment>
-    <rdfs:label xml:lang="en">Object of the document</rdfs:label>
-    <rdfs:label xml:lang="it">Oggetto</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Premessa">
-    <rdfs:comment xml:lang="it">La classe rappresenta la partizione del testo del documento preposta a: contenere il preambolo, citare il contesto dal quale l'atto è generato, citare leggi o norme di riferimento o la descrizione dei fatti cui il documento si riferisce. Per la definzione della semantica della classe la modellazione si è orientata verso l'adozione del significato che tale elemento assume in ambito diplomatistico</rdfs:comment>
-    <rdfs:comment xml:lang="en">The class represents the partition of the document text intended to: contain the preamble, cite the context from which the act is generated, cite reference laws or standards or the description of the facts to which the document refers</rdfs:comment>
-    <rdfs:label xml:lang="en">Preamble</rdfs:label>
-    <rdfs:label xml:lang="it">Premessa</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataEmissioneDocumento"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/luogoEmissioneDelDocumento"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="it">La classe rappresenta la partizione interna di un documento nella quale vengono presentati alcuni elementi del documento come l'autore, il destinatario, l'oggetto, la data cronica  e topica di formazione del documento. Per la definzione della semantica della classe la modellazione si è orientata verso l'adozione del significato che tali elementi assumono nella disciplina diplomatica </rdfs:comment>
-    <rdfs:comment xml:lang="en">The class represents the internal partition of a document in which some elements of the document are presented such as the author, the recipient, the subject, the chronic and topical date of formation of the document</rdfs:comment>
-    <rdfs:label xml:lang="en">Header</rdfs:label>
-    <rdfs:label xml:lang="it">Protocollo</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/apponeSottoscrizione"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <rdfs:comment xml:lang="it">La classe rappresenta l'insieme dei segni (nome e cognome) che indicano la persona fisica responsabile dell'articolazione del contenuto del documento e della corrispondenza del documento all'atto. Può comprendere la firma</rdfs:comment>
-    <rdfs:comment xml:lang="en">The class represents the set of signs (name and surname) that indicate the physical person responsible for the articulation of the content of the document and the correspondence of the document to the act</rdfs:comment>
-    <rdfs:label xml:lang="en">Signature</rdfs:label>
-    <rdfs:label xml:lang="it">Sottoscrizione</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo">
-    <rdfs:comment xml:lang="it">La classe rappresenta la partizione interna di un documento utile ad esprimere la decisione adottata dall'autore del documento. Per la definzione della semantica della classe la modellazione si è orientata verso l'adozione del significato che tale elemento assume nella disciplina diplomatica </rdfs:comment>
-    <rdfs:comment xml:lang="en">The class represents the internal partition of a record useful for expressing the decision adopted by the author of the document</rdfs:comment>
-    <rdfs:label xml:lang="it">Testo</rdfs:label>
-    <rdfs:label xml:lang="en">Text</rdfs:label>
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/ProdottoPensionistico">
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDirittoAllaPensione"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/sintetizzaDatiRelativiAPensione"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/dataDecorrenzePensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroPensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-  </owl:Class>
-
-  <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato">
-  </owl:Class>
-
-  <owl:Class rdf:nodeID="genid76">
-    <owl:unionOf>
-      <rdf:Description>
-        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore"/>
-        <rdf:rest>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario"/>
-            <rdf:rest>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-              </rdf:Description>
-            </rdf:rest>
-
-          </rdf:Description>
-        </rdf:rest>
-
-      </rdf:Description>
-    </owl:unionOf>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-  </owl:Class>
-
-  <owl:Class rdf:nodeID="genid82">
-    <owl:unionOf>
-      <rdf:Description>
-        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
-        <rdf:rest>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-          </rdf:Description>
-        </rdf:rest>
-
-      </rdf:Description>
-    </owl:unionOf>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty>
-          <rdf:Description>
-            <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA"/>
-          </rdf:Description>
-        </owl:onProperty>
-
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-  </owl:Class>
-
-  <owl:Class rdf:nodeID="genid87">
-    <owl:unionOf>
-      <rdf:Description>
-        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante"/>
-        <rdf:rest>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-          </rdf:Description>
-        </rdf:rest>
-
-      </rdf:Description>
-    </owl:unionOf>
-
-    <owl:equivalentClass>
-      <owl:Restriction>
-        <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione"/>
-        <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-      </owl:Restriction>
-    </owl:equivalentClass>
-
-  </owl:Class>
-
-  <owl:AllDisjointClasses rdf:nodeID="genid91">
-    <owl:members>
-      <rdf:Description>
-        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore"/>
-        <rdf:rest>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario"/>
-            <rdf:rest>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-              </rdf:Description>
-            </rdf:rest>
-
-          </rdf:Description>
-        </rdf:rest>
-
-      </rdf:Description>
-    </owl:members>
-
-  </owl:AllDisjointClasses>
-
-  <owl:AllDisjointClasses rdf:nodeID="genid95">
-    <owl:members>
-      <rdf:Description>
-        <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo"/>
-        <rdf:rest>
-          <rdf:Description>
-            <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione"/>
-            <rdf:rest>
-              <rdf:Description>
-                <rdf:first rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo"/>
-                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-              </rdf:Description>
-            </rdf:rest>
-
-          </rdf:Description>
-        </rdf:rest>
-
-      </rdf:Description>
-    </owl:members>
-
-  </owl:AllDisjointClasses>
 
+
+    <!-- https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/pensions/TipoDiPensione">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensions/haTipoDiPensione"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+
+
+
+    <!-- https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
+
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#Activity -->
+
+    <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Activity"/>
+
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#Agent -->
+
+    <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Agent"/>
+
+
+
+    <!-- https://www.ica.org/standards/RiC/ontology#Record -->
+
+    <owl:Class rdf:about="https://www.ica.org/standards/RiC/ontology#Record"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Organization"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+        <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Organization"/>
+        <dct:identifier>DirezioneCentraleTII</dct:identifier>
+        <vcard:fn>INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</vcard:fn>
+        <vcard:hasEmail rdf:resource="mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it"/>
+        <foaf:name xml:lang="en">INPS - Central Management of Information Technology and Innovations</foaf:name>
+        <foaf:name xml:lang="it">INPS - Direzione Centrale Tecnologia, Informatica e Innovazione</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/inps -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/inps">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/COV/PublicOrganization"/>
+        <dct:identifier>inps</dct:identifier>
+        <foaf:name xml:lang="it">Istituto nazionale della previdenza sociale</foaf:name>
+        <foaf:name xml:lang="en">National institute for Social Security</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/organization/td -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/organization/td">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Agent"/>
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <dct:identifier>TD</dct:identifier>
+        <foaf:name xml:lang="en">Digital Transformation Team</foaf:name>
+        <foaf:name xml:lang="it">Team per la Trasformazione Digitale</foaf:name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-N-TRIPLES -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-N-TRIPLES">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="it">Questa è la distribuzione N-TRIPLES dell&apos;ontologia INPS alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:description xml:lang="en">This is the distribution in N-TRIPLES of the INPS Ontology about entities and relationships that describe the pension determination according to the institute&apos;s criteria.</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione N-TRIPLES dell&apos;ontologia INPS - determina di pensione</dct:title>
+        <dct:title xml:lang="en">N-TRIPLES distribution of the INPS ontology - pension prospectus</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensionProspectusLavoratore/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensionProspectusLavoratore/latest/pensionProspectusLavoratore.n3"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-TURTLE -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-TURTLE">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/Turtle dell&apos;ontologia INPS alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:description xml:lang="en">This is the distribution in RDF/Turtle of the INPS Ontology about entities and relationships that describe the pension determination according to the institute&apos;s criteria.</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione RDF/Turtle dell&apos;ontologia INPS - determina di pensione</dct:title>
+        <dct:title xml:lang="en">RDF/Turtle distribution of the INPS ontology - pension prospectus</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensionProspectusLavoratore/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensionProspectusLavoratore/latest/pensionProspectusLavoratore.ttl"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-XML -->
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/italia/social-security/data/pensionProspectusLavoratore/distribution/DETPENS-RDF-XML">
+        <rdf:type rdf:resource="http://dati.gov.it/onto/dcatapit#Distribution"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <rdf:type rdf:resource="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+        <dct:description xml:lang="it">Questa è la distribuzione RDF/XML dell&apos;ontologia INPS alle entità e alle relazioni che descrivono la determina di pensione secondi i criteri dell&apos;istituto.</dct:description>
+        <dct:description xml:lang="en">This is the distribution in RDF/XML of the INPS Ontology about entities and relationships that describe the pension determination according to the institute&apos;s criteria.</dct:description>
+        <dct:format rdf:resource="http://publications.europa.eu/resource/authority/file-type/RDF_XML"/>
+        <dct:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/>
+        <dct:title xml:lang="it">Distribuzione RDF/XML dell&apos;ontologia INPS - determina di pensione</dct:title>
+        <dct:title xml:lang="en">RDF/XML distribution of the INPS ontology - pension prospectus</dct:title>
+        <dcat:accessURL rdf:resource="https://github.com/INPS-it/NDC/tree/main/assets/ontologies/pensionProspectusLavoratore/latest"/>
+        <dcat:downloadURL rdf:resource="https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/pensionProspectusLavoratore/latest/pensionProspectusLavoratore.owl"/>
+    </owl:NamedIndividual>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto"/>
+        </owl:unionOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/protocolloCompostoDa"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/ImportoPensione"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/LiquidazionePensione"/>
+        </owl:unionOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty>
+                    <rdf:Description>
+                        <owl:inverseOf rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/certificaDatiRelativiA"/>
+                    </rdf:Description>
+                </owl:onProperty>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/relevantLegislation/Delegato"/>
+        </owl:unionOf>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/inviaDomandaDiPensione"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Autore"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Destinatario"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Oggetto"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Protocollo"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Sottoscrizione"/>
+            <rdf:Description rdf:about="https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Testo"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

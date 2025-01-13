@@ -8,7 +8,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix INPSRL: <https://w3id.org/italia/social-security/onto/relevantLegislation/> .
 @prefix INPSSEP: <https://w3id.org/italia/social-security/onto/selfEmploymentPortal/> .
-@prefix INPSSP: <https://w3id.org/italia/social-security/onto/INPSServicePortal/> .
+@prefix INPSSP: <https://w3id.org/italia/social-security/onto/servicePortal/> .
 @prefix INPSTFP: <https://w3id.org/italia/social-security/onto/soleTradeFarmerPortal/> .
 @prefix L0: <https://w3id.org/italia/onto/l0/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -39,14 +39,14 @@ INPSSP: a owl:Ontology ;
         INPSSP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo,
         INPSSP:DelegaRilasciata ;
     adms:hasOntologyLanguage adms:OWL ;
-    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-N-TRIPLES>,
-        <https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-TURTLE>,
-        <https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-XML> ;
+    adms:hasSemanticAssetDistribution <https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-N-TRIPLES>,
+        <https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-RDF-TURTLE>,
+        <https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-RDF-XML> ;
     adms:hasTask adms:AnnotationTask,
         adms:QueryFormulationTask,
         adms:SearchTask ;
     adms:last INPSSP:1.0 ;
-    adms:officialURI "https://w3id.org/italia/social-security/onto/INPSServicePortal/"^^xsd:anyURI ;
+    adms:officialURI "https://w3id.org/italia/social-security/onto/servicePortal/"^^xsd:anyURI ;
     adms:prefix "INPSSP" ;
     adms:semanticAssetInUse <https://w3id.org/italia/data/project/NDC> ;
     adms:status "catalogued",
@@ -63,7 +63,7 @@ INPSSP: a owl:Ontology ;
     dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
     dct:description "Ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell'istituto."@it,
         "This INPS ontology describes the main entities and proprieties of the Service Portal according to the INPS agency."@en ;
-    dct:identifier "https://w3id.org/italia/social-security/onto/INPSServicePortal" ;
+    dct:identifier "https://w3id.org/italia/social-security/onto/servicePortal" ;
     dct:issued "2024-10-29T00:00:00+00:00"^^xsd:dateTime ;
     dct:language <http://publications.europa.eu/resource/authority/language/ENG>,
         <http://publications.europa.eu/resource/authority/language/ITA> ;
@@ -299,45 +299,6 @@ INPSTFP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo a owl:Class ;
 
 ### Individuals
 
-<https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-N-TRIPLES> a adms:SemanticAssetDistribution,
-        dcat:Distribution,
-        dcatapit:Distribution,
-        owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/INPSServicePortal/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/INPSServicePortal/latest/INPSServicePortal.n3> ;
-    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell'istituto."@it,
-        "Service Portal INPS Ontology N-TRIPLES distribution"@en ;
-    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
-    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
-    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Cassetto previdenziale"@it,
-        "N-TRIPLES distribution of the INPS ontology - Service Portal"@en .
-
-<https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-TURTLE> a adms:SemanticAssetDistribution,
-        dcat:Distribution,
-        dcatapit:Distribution,
-        owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/INPSServicePortal/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/INPSServicePortal/latest/INPSServicePortal.ttl> ;
-    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell'istituto."@it,
-        "Service Portal INPS Ontology RDF/Turtle distribution"@en ;
-    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
-    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
-    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Cassetto previdenziale"@it,
-        "RDF/Turtle distribution of the INPS ontology - Service Portal"@en .
-
-<https://w3id.org/italia/social-security/data/INPSServicePortal/distribution/INPSSP-RDF-XML> a adms:SemanticAssetDistribution,
-        dcat:Distribution,
-        dcatapit:Distribution,
-        owl:NamedIndividual ;
-    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/INPSServicePortal/latest> ;
-    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/INPSServicePortal/latest/INPSServicePortal.owl> ;
-    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell'istituto."@it,
-        "Service Portal INPS Ontology RDF/XML"@en ;
-    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
-    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
-    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Cassetto previdenziale"@it,
-        "RDF/XML distribution of the INPS ontology - Service Portal"@en .
-
 <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a dcatapit:Organization,
         owl:NamedIndividual,
         vcard:Kind,
@@ -362,6 +323,45 @@ INPSTFP:CassettoPrevidenzialeLavoratoreAgricoloAutonomo a owl:Class ;
     dct:identifier "TD" ;
     foaf:name "Digital Transformation Team"@en,
         "Team per la Trasformazione Digitale"@it .
+
+<https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-N-TRIPLES> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/servicePortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/servicePortal/latest/servicePortal.n3> ;
+    dct:description "Questa è la distribuzione N-TRIPLES dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell'istituto."@it,
+        "Service Portal INPS Ontology N-TRIPLES distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_N_TRIPLES> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione N-TRIPLES dell'ontologia INPS - Cassetto previdenziale"@it,
+        "N-TRIPLES distribution of the INPS ontology - Service Portal"@en .
+
+<https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-RDF-TURTLE> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/servicePortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/servicePortal/latest/servicePortal.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell'istituto."@it,
+        "Service Portal INPS Ontology RDF/Turtle distribution"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/Turtle dell'ontologia INPS - Cassetto previdenziale"@it,
+        "RDF/Turtle distribution of the INPS ontology - Service Portal"@en .
+
+<https://w3id.org/italia/social-security/data/servicePortal/distribution/INPSSP-RDF-XML> a adms:SemanticAssetDistribution,
+        dcat:Distribution,
+        dcatapit:Distribution,
+        owl:NamedIndividual ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/ontologies/servicePortal/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/ontologies/servicePortal/latest/servicePortal.owl> ;
+    dct:description "Questa è la distribuzione RDF/XML dell'ontologia INPS relativa alle entità e alle relazioni che descrivono il cassetto previdenziale secondi i criteri dell'istituto."@it,
+        "Service Portal INPS Ontology RDF/XML"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_XML> ;
+    dct:license <http://creativecommons.org/licenses/by/4.0/> ;
+    dct:title "Distribuzione RDF/XML dell'ontologia INPS - Cassetto previdenziale"@it,
+        "RDF/XML distribution of the INPS ontology - Service Portal"@en .
 
 ### Axioms
 
