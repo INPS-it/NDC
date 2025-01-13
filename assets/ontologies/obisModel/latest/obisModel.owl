@@ -4,7 +4,6 @@
      xmlns:L0="https://w3id.org/italia/onto/l0/"
      xmlns:RO="https://w3id.org/italia/onto/RO/"
      xmlns:TI="https://w3id.org/italia/onto/TI/"
-     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:CLV="https://w3id.org/italia/onto/CLV/"
      xmlns:COV="https://w3id.org/italia/onto/COV/"
      xmlns:CPV="https://w3id.org/italia/onto/CPV/"
@@ -17,7 +16,6 @@
      xmlns:adms="https://w3id.org/italia/onto/ADMS/"
      xmlns:dcat="http://www.w3.org/ns/dcat#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
-     xmlns:prov="http://www.w3.org/ns/prov#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:rico="https://www.ica.org/standards/RiC/ontology#"
      xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
@@ -81,6 +79,221 @@
         <adms:target xml:lang="it">Pubbliche Amministrazioni</adms:target>
         <adms:type rdf:resource="https://w3id.org/italia/onto/ADMS/ServiceOnytology"/>
     </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://purl.org/dc/terms/accrualPeriodicity -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/accrualPeriodicity"/>
+
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+
+
+
+    <!-- http://purl.org/dc/terms/format -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/format"/>
+
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
+
+
+
+    <!-- http://purl.org/dc/terms/issued -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/issued"/>
+
+
+
+    <!-- http://purl.org/dc/terms/language -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/language"/>
+
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+
+
+
+    <!-- http://purl.org/dc/terms/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/publisher"/>
+
+
+
+    <!-- http://purl.org/dc/terms/rightsHolder -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/rightsHolder"/>
+
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#fn -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#fn"/>
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#hasEmail -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2006/vcard/ns#hasEmail"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#accessURL -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#accessURL"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#contactPoint -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#contactPoint"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#downloadURL -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#downloadURL"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#keyword -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#keyword"/>
+
+
+
+    <!-- http://www.w3.org/ns/dcat#theme -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/dcat#theme"/>
+
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/acronym -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/acronym"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasContributor -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasContributor"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasFormalityLevel -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasFormalityLevel"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasKeyClass -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasKeyClass"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasOntologyLanguage -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasOntologyLanguage"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasSemanticAssetDistribution"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/hasTask -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/hasTask"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/last -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/last"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/officialURI -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/officialURI"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/prefix -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/prefix"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/semanticAssetInUse -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/semanticAssetInUse"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/status -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/status"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/target -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/target"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/type -->
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/italia/onto/ADMS/type"/>
 
 
 
@@ -344,9 +557,33 @@
 
 
 
+    <!-- http://dati.gov.it/onto/dcatapit#Agent -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Agent"/>
+
+
+
     <!-- http://dati.gov.it/onto/dcatapit#Distribution -->
 
     <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Distribution"/>
+
+
+
+    <!-- http://dati.gov.it/onto/dcatapit#Organization -->
+
+    <owl:Class rdf:about="http://dati.gov.it/onto/dcatapit#Organization"/>
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Kind -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Kind"/>
+
+
+
+    <!-- http://www.w3.org/2006/vcard/ns#Organization -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/vcard/ns#Organization"/>
 
 
 
@@ -356,9 +593,27 @@
 
 
 
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent"/>
+
+
+
     <!-- http://xmlns.com/foaf/0.1/Document -->
 
     <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Document"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/ADMS/SemanticAssetDistribution"/>
+
+
+
+    <!-- https://w3id.org/italia/onto/COV/PublicOrganization -->
+
+    <owl:Class rdf:about="https://w3id.org/italia/onto/COV/PublicOrganization"/>
 
 
 
@@ -747,5 +1002,5 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
 
