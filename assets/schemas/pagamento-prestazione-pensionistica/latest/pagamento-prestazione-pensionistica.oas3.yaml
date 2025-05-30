@@ -1,0 +1,397 @@
+openapi: 3.0.3
+info:
+  title: Schema del Pagamento della Prestazione Pensionistica
+  version: 202505.05.00
+  x-summary: Schema del Pagamento della Prestazione Pensionistica compatibile con l'Ontologia INPS relativa alle Pensioni
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: https://w3id.org/italia/social-security/onto/pensions/PagamentoPrestazionePensionistica
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+    PrestazionePensionistica:
+      $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/prestazione-pensionistica/latest/prestazione-pensionistica.oas3.yaml#/components/schemas/PrestazionePensionistica"
+
+    IdPagamentoPrestazionePensionistica:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/pensions/codiceIdentificativoPagamentoPrestazionePensionistica
+      description: https://w3id.org/italia/social-security/onto/pensions/codiceIdentificativoPagamentoPrestazionePensionistica
+      example: '23654895'
+      maxLength: 50
+      minLength: 1
+
+    PagamentoPrestazionePensionistica:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/PagamentoPrestazionePensionistica
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+        codice_pagamento_prestazione_pensionistica: codiceIdentificativoPagamentoPrestazionePensionistica
+        importo_base_lordo: importoPagamentoPrestazionePensionistica
+        totale_pensioni: importoTotaleErogato
+        data_inizio_prestazione: dataInizioPrestazione
+        data_fine_prestazione: dataFinePrestazione
+        data_evento_erogazione: dataEventoErogazione
+        data_erogazione_occasionale: dataErogazioneOccasionale
+        importo_erogazione: importoPagamentoPrestazionePensionistica
+        importo_mensile_erogazione: importoPagamentoPrestazionePensionistica
+        periodo_erogazione_erogazione: periodoErogazione
+        importo_totale_erogato: importoTotaleErogato
+        data_valuta_pagamento_prestazione_pensionistica: dataValutaPagamentoPrestazionePensionistica
+        causale_pagamento_prestazione_pensionistica: causalePagamentoPrestazionePensionistica
+        pagamento_prestazione_pensionistica_relativa_a:
+          "@id": pagamentoPrestazionePensionisticaRelativaA
+        pagamento_prestazione_pensionistica_viene_erogato_a:
+          "@id": pagamentoPrestazionePensionisticaVieneErogatoA
+        pagamento_prestazione_pensionistica_gestita_da:
+          "@id": pagamentoPrestazionePensionisticaGestitaDa
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/pensions/PagamentoPrestazionePensionistica
+      required:
+      - codice_pagamento_prestazione_pensionistica
+      - importo_base_lordo
+      - totale_pensioni
+      - data_inizio_prestazione
+      - data_fine_prestazione
+      - data_evento_erogazione
+      - data_erogazione_occasionale
+      - importo_erogazione
+      - importo_mensile_erogazione
+      - periodo_erogazione_erogazione
+      - importo_totale_erogato
+      - data_valuta_pagamento_prestazione_pensionistica
+      - causale_pagamento_prestazione_pensionistica
+      properties:
+        codice_pagamento_prestazione_pensionistica:
+          $ref: "#/components/schemas/IdPagamentoPrestazionePensionistica"
+        importo_base_lordo:
+          type: number
+          format: double
+        totale_pensioni:
+          type: number
+          format: double
+        data_inizio_prestazione:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        data_fine_prestazione:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        data_evento_erogazione:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        data_erogazione_occasionale:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        importo_erogazione:
+          type: number
+          format: double
+        importo_mensile_erogazione:
+          type: number
+          format: double
+        periodo_erogazione_erogazione:
+          type: integer
+          format: int64
+        importo_totale_erogato:
+          type: number
+          format: double
+        data_valuta_pagamento_prestazione_pensionistica:
+          type: string
+          format: date
+          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+        causale_pagamento_prestazione_pensionistica:
+          type: string
+          maxLength: 100
+        pagamento_prestazione_pensionistica_relativa_a:
+          type: object
+          items:
+            $ref: "#/components/schemas/PrestazionePensionistica"
+        pagamento_prestazione_pensionistica_viene_erogato_a:
+          type: object
+          items:
+            $ref: "#/components/schemas/TitolarePrestazionePensionistica"
+        pagamento_prestazione_pensionistica_gestita_da:
+          type: object
+          items:
+            $ref: "#/components/schemas/SedeINPS"
+      example:
+        codice_pagamento_prestazione_pensionistica:
+          $ref: "#/components/schemas/IdPagamentoPrestazionePensionistica/example"
+        importo_base_lordo: 629.50
+        totale_pensioni:  1888.50
+        data_inizio_prestazione: '2021-07-01'
+        data_fine_prestazione: '2021-10-01'
+        data_evento_erogazione: '2021-06-01'
+        data_erogazione_occasionale: '2021-06-15'
+        importo_erogazione: 145.80
+        importo_mensile_erogazione: 215.45
+        periodo_erogazione_erogazione: 3
+        importo_totale_erogato: 855.70
+        data_valuta_pagamento_prestazione_pensionistica: '2021-06-18'
+        causale_pagamento_prestazione_pensionistica: "Pensione Sociale"
+        pagamento_prestazione_pensionistica_relativa_a:
+          $ref: "https://raw.githubusercontent.com/INPS-it/NDC/main/assets/schemas/prestazione-pensionistica/latest/prestazione-pensionistica.oas3.yaml#/components/schemas/PrestazionePensionistica/example"
+        pagamento_prestazione_pensionistica_viene_erogato_a:
+          $ref: "#/components/schemas/TitolarePrestazionePensionistica/example"
+        pagamento_prestazione_pensionistica_gestita_da:
+          $ref: "#/components/schemas/SedeINPS/example"
+
+    SedeINPS:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/core/"
+        denominazione_sede_inps: denominazioneSedeINPS
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/core/SedeINPS
+      required:
+      - codice_sede_inps
+      - denominazione_sede_inps
+      properties:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS"
+        denominazione_sede_inps:
+          type: string
+          maxLength: 255
+      example:
+        codice_sede_inps:
+          $ref: "#/components/schemas/CodiceSedeINPS/example"
+        denominazione_sede_inps: "INPS Roma Eur"
+
+    CodiceSedeINPS:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      description: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+      example: '786463'
+      maxLength: 50
+      minLength: 1
+
+    TitolarePrestazionePensionistica:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/TitolarePP
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensions/"
+        luogo_nascita:
+          '@id': https://w3id.org/italia/onto/CPV/hasBirthPlace
+          '@type': '@id'
+          '@context':
+              label: http://www.w3.org/2000/01/rdf-schema#label
+        codice_comune_residenza:
+          '@id': https://w3id.org/italia/onto/CPV/residentIn
+          '@type': '@id'
+          '@context':
+              "@base": https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/
+        codice_comune_nascita:
+          '@id': https://w3id.org/italia/onto/CLV/hasCity
+          '@type': '@id'
+          '@context':
+              "@base": https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/
+        presenza_indirizzo_estero: presenzaIndirizzoEstero
+        tipo_indirizzo: tipoIndirizzo
+        codice_comune_indirizzo:
+          '@id': https://w3id.org/italia/onto/CLV/hasCity
+          '@type': '@id'
+          '@context':
+              "@base": https://w3id.org/italia/controlled-vocabulary/territorial-classifications/cities/
+        codice_regione_indirizzo:
+          '@id': https://w3id.org/italia/onto/CLV/hasRegion
+          '@type': '@id'
+          '@context':
+              "@base": https://w3id.org/italia/controlled-vocabulary/territorial-classifications/regions/
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/pensions/TitolarePP
+      required:
+      - cf_titolare_pp
+      - nome_titolare_pp
+      - cognome_titolare_pp
+      - data_di_nascita
+      - luogo_nascita
+      - provincia_residenza
+      - codice_comune_residenza
+      - cap_residenza
+      - codice_comune_nascita
+      - codice_cittadinanza
+      - descrizione_cittadinanza
+      - tipo_indirizzo
+      - presenza_indirizzo_estero
+      - descrizione_indirizzo
+      - numero_civico
+      - cap_indirizzo
+      - codice_comune_indirizzo
+      - provincia_indirizzo
+      - codice_postale_estero
+      - anno_di_nascita
+      - codice_seconda_cittadinanza
+      - codice_regione_indirizzo
+      properties:
+        cf_titolare_pp:
+          $ref: "#/components/schemas/Cf"
+        nome_titolare_pp:
+          $ref: "#/components/schemas/Nome"
+        cognome_superstite:
+          $ref: "#/components/schemas/Cognome"
+        data_di_nascita:
+          $ref: "#/components/schemas/DataDiNascita"
+        luogo_nascita:
+          type: string
+          maxLength: 50
+        provincia_residenza:
+          $ref: "#/components/schemas/SiglaProvincia"
+        codice_comune_residenza:
+          type: string
+          maxLength: 50
+        cap_residenza:
+          $ref: "#/components/schemas/CodicePostale"
+        codice_comune_nascita:
+          type: string
+          maxLength: 50
+        codice_cittadinanza:
+          $ref: "#/components/schemas/CodiceCittadinanza"
+        descrizione_cittadinanza:
+          $ref: "#/components/schemas/DescrizioneCittadinanza"
+        tipo_indirizzo:
+          type: string
+          maxLength: 50
+        presenza_indirizzo_estero:
+          type: string
+          format: boolean
+        descrizione_indirizzo:
+          $ref: "#/components/schemas/DescrizioneIndirizzo"
+        numero_civico:
+          $ref: "#/components/schemas/NumeroCivico"
+        cap_indirizzo:
+          $ref: "#/components/schemas/CodicePostale"
+        codice_comune_indirizzo:
+          type: string
+          maxLength: 50
+        provincia_indirizzo:
+          $ref: "#/components/schemas/SiglaProvincia"
+        codice_postale_estero:
+          $ref: "#/components/schemas/CodicePostale"
+        anno_di_nascita:
+          $ref: "#/components/schemas/AnnoDiNascita"
+        codice_seconda_cittadinanza:
+          $ref: "#/components/schemas/CodiceCittadinanza"
+        codice_regione_indirizzo:
+          type: string
+          maxLength: 50
+      example:
+        cf_titolare_pp:
+          $ref: "#/components/schemas/Cf/example"
+        nome_titolare_pp:
+          $ref: "#/components/schemas/Nome/example"
+        cognome_titolare_pp:
+          $ref: "#/components/schemas/Cognome/example"
+        data_di_nascita:
+          $ref: "#/components/schemas/DataDiNascita/example"
+        luogo_nascita:
+          label: "Genova"
+        provincia_residenza:
+          $ref: "#/components/schemas/SiglaProvincia/example"
+        codice_comune_residenza: "B603"
+        cap_residenza:
+          $ref: "#/components/schemas/CodicePostale/example"
+        codice_comune_nascita: "B603"
+        codice_cittadinanza:
+          $ref: "#/components/schemas/CodiceCittadinanza/example"
+        descrizione_cittadinanza:
+          $ref: "#/components/schemas/DescrizioneCittadinanza/example"
+        tipo_indirizzo: "residenza"
+        presenza_indirizzo_estero: "false"
+        descrizione_indirizzo:
+          $ref: "#/components/schemas/DescrizioneIndirizzo/example"
+        numero_civico:
+          $ref: "#/components/schemas/NumeroCivico/example"
+        cap_indirizzo:
+          $ref: "#/components/schemas/CodicePostale/example"
+        codice_comune_indirizzo: "B603"
+        provincia_indirizzo:
+          $ref: "#/components/schemas/SiglaProvincia/example"
+        codice_postale_estero:
+          $ref: "#/components/schemas/CodicePostale/example"
+        anno_di_nascita:
+          $ref: "#/components/schemas/AnnoDiNascita/example"
+        codice_seconda_cittadinanza:
+          $ref: "#/components/schemas/CodiceCittadinanza/example"
+        codice_regione_indirizzo: "01"
+
+    Cf:
+      type: string
+      maxLength: 20
+      x-refersTo: https://w3id.org/italia/onto/CPV/taxCode
+      example: 'VRDCLD65F63H501Y'
+
+    Nome:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/CPV/givenName
+      example: 'Claudio'
+
+    Cognome:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/CPV/familyName
+      example: 'Verdi'
+
+    DataDiNascita:
+      type: string
+      format: date
+      pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      x-refersTo: https://w3id.org/italia/onto/CPV/dateOfBirth
+      example: '1958-03-12'
+
+    AnnoDiNascita:
+      type: string
+      pattern: ([0-9]{4})
+      x-refersTo: https://w3id.org/italia/onto/CPV/dateOfBirth
+      example: '1958'
+
+    SiglaProvincia:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/CLV/acronym
+      example: 'SR'
+
+    CodiceCittadinanza:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/RPO/citizenshipCode
+      example: '002'
+
+    DescrizioneCittadinanza:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/RPO/citizenshipDenomination
+      example: 'Italiana'
+
+    DescrizioneIndirizzo:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/CLV/fullAddress
+      example: 'VIA CAVOUR'
+
+    NumeroCivico:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/CLV/streetNumber
+      example: '82'
+
+    CodicePostale:
+      type: string
+      x-refersTo: https://w3id.org/italia/onto/CLV/postCode
+      description: https://w3id.org/italia/onto/CLV/postCode
+      example: '00048'
+      maxLength: 50
+      minLength: 1

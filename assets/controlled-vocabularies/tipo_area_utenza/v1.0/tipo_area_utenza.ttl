@@ -1,0 +1,129 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ndc: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dct:Standard,
+        <http://dati.gov.it/onto/dcatapit#Standard> ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza> a adms:Asset,
+        <http://dati.gov.it/onto/dcatapit#Dataset>,
+        <https://w3id.org/italia/social-security/onto/pensions/AreaUtenza>,
+        skos:ConceptScheme ;
+    rdfs:label "This is the controlled vocabulary of the user area type adopted by INPS classification"@en,
+        "Vocabolario Controllato sul tipo di area utenza adottato dall'INPS"@it ;
+    skos:prefLabel "Vocabolario Controllato sul tipo di area utenza adottato dall'INPS"@it ;
+    rdfs:comment "Classification of the user area type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di area utenza adottato dall'INPS"@it ;
+    owl:versionInfo "1.0" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/pensions/distribution/TAU_CSV>,
+        <https://w3id.org/italia/social-security/data/pensions/distribution/TAU_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/pensions/distribution/TAU_RDF_TURTLE> ;
+    dcat:keyword "inps"@en,
+        "inps"@it,
+        "pension",
+        "pensioni"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Classification of the user area type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di area utenza adottato dall'INPS"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza" ;
+    dct:issued "2025-05-05"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:relation <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "Classification of the user area type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di area utenza adottato dall'INPS"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    ndc:keyConcept "tipo_area_utenza" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza/1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza/2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza/3> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza/1> a skos:Concept ;
+    rdfs:label "Famiglia e minori"@it ;
+    skos:prefLabel "Famiglia e minori"@it ;
+    dct:identifier "1"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza> ;
+    skos:notation "1"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza/2> a skos:Concept ;
+    rdfs:label "Disabilità e Non autosufficienza"@it ;
+    skos:prefLabel "Disabilità e Non autosufficienza"@it ;
+    dct:identifier "2"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza> ;
+    skos:notation "2"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza/3> a skos:Concept ;
+    rdfs:label "Povertà ed esclusione sociale"@it ;
+    skos:prefLabel "Povertà ed esclusione sociale"@it ;
+    dct:identifier "3"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza> ;
+    skos:notation "3"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a <http://dati.gov.it/onto/dcatapit#Organization>,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a foaf:Agent,
+        <http://dati.gov.it/onto/dcatapit#Agent> ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/pensions/distribution/TAU_CSV> a dcat:Distribution,
+        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_area_utenza/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_area_utenza/latest/tipo_area_utenza.csv> ;
+    dct:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di area utenza adottato dall'INPS"@it,
+        "This is the distribution in CSV of the user area type adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CSV distribution of the user area type adopted by INPS controlled vocabulary"@en,
+        "Distribuzione CSV del vocabolario controllato sul tipo di area utenza adottato dall'INPS"@it .
+
+<https://w3id.org/italia/social-security/data/pensions/distribution/TAU_JSON_LD> a dcat:Distribution,
+        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_area_utenza/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_area_utenza/latest/tipo_area_utenza.json> ;
+    dct:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di area utenza adottato dall'INPS"@it,
+        "This is the distribution in JSON_LD of the user area type adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di area utenza adottato dall'INPS"@it,
+        "JSON_LD distribution of the user area type adopted by INPS controlled vocabulary"@en .
+
+<https://w3id.org/italia/social-security/data/pensions/distribution/TAU_RDF_TURTLE> a dcat:Distribution,
+        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_area_utenza/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_area_utenza/latest/tipo_area_utenza.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di area utenza adottato dall'INPS"@it,
+        "This is the distribution in RDF/turtle of the user area type adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di area utenza adottato dall'INPS"@it,
+        "RDF/Turtle distribution of the user area type adopted by INPS controlled vocabulary"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

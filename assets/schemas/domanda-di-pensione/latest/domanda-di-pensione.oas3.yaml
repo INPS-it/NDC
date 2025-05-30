@@ -1,0 +1,109 @@
+openapi: 3.0.3
+info:
+  title: Schema della Domanda Di Pensione
+  version: 202505.05.00
+  x-summary: Schema della Domanda Di Pensione compatibile con l'Ontologia INPS relativa alla Determina di Pensione
+  license:
+    name: CC BY 4.0
+    url: https://creativecommons.org/licenses/by/4.0/
+  termsOfService: https://creativecommons.org/licenses/by/4.0/
+  contact:
+    name: Andrea Cigliano
+    email: andrea.cigliano@inps.it
+  description: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione
+paths: {}
+servers: []
+tags: []
+components:
+  schemas:
+
+    IdDomandaDiPensione:
+      type: string
+      x-refersTo: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroDomandaPensione
+      description: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroDomandaPensione
+      example: '0014586'
+      maxLength: 50
+      minLength: 1
+
+    DomandaDiPensione:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione
+      # This custom property defines the associated json-ld
+      #   context that can be used to semantically describe
+      #   the instances.
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/"
+        domanda_di_pensione_viene_presentata_da:
+          "@id": domandaDiPensioneVienePresentataDa
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione
+      required:
+      - numero_domanda_di_pensione
+      properties:
+        numero_domanda_di_pensione:
+          $ref: "#/components/schemas/IdDomandaDiPensione"
+        domanda_di_pensione_viene_presentata_da:
+          type: object
+          items:
+            $ref: "#/components/schemas/Instante"
+      example:
+        numero_domanda_di_pensione:
+          $ref: "#/components/schemas/IdDomandaDiPensione/example"
+        domanda_di_pensione_viene_presentata_da:
+          $ref: "#/components/schemas/Instante/example"
+
+    Instante:
+      type: object
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante
+      x-jsonld-context:
+        "@vocab": "https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/"
+      additionalProperties: true
+      description: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/Instante
+      required:
+      - cf_instante
+      - nome_instante
+      - cognome_instante
+      - data_di_nascita_instante
+      properties:
+        cf_instante:
+          $ref: "#/components/schemas/Cf"
+        nome_instante:
+          $ref: "#/components/schemas/Nome"
+        cognome_coniuge_titolare_pp:
+          $ref: "#/components/schemas/Cognome"
+        data_di_nascita_coniuge_titolare_pp:
+          $ref: "#/components/schemas/DataDiNascita"
+      example:
+        cf_instante:
+          $ref: "#/components/schemas/Cf/example"
+        nome_instante:
+          $ref: "#/components/schemas/Nome/example"
+        cognome_instante:
+          $ref: "#/components/schemas/Cognome/example"
+        data_di_nascita_instante:
+          $ref: "#/components/schemas/DataDiNascita/example"
+
+    Cf:
+      type: string
+      maxLength: 20
+      x-refersTo: https://w3id.org/italia/onto/CPV/taxCode
+      example: 'VRDCLD65F63H501Y'
+
+    Nome:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/CPV/givenName
+      example: 'Claudio'
+
+    Cognome:
+      type: string
+      maxLength: 50
+      x-refersTo: https://w3id.org/italia/onto/CPV/familyName
+      example: 'Verdi'
+
+    DataDiNascita:
+      type: string
+      format: date
+      pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+      x-refersTo: https://w3id.org/italia/onto/CPV/dateOfBirth
+      example: '1958-03-12'

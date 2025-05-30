@@ -1,0 +1,1050 @@
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ndc: <https://w3id.org/italia/onto/NDC/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix xkos: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Annotations
+
+<https://w3id.org/italia/data/standard/SKOS> a dct:Standard,
+        <http://dati.gov.it/onto/dcatapit#Standard> ;
+    dct:description "The Simple Knowledge Organization System (SKOS) is a common data model for sharing and linking knowledge organization systems via the Web" ;
+    dct:identifier "SKOS" ;
+    dct:title "Simple Knowledge Organization System - SKOS" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> a adms:Asset,
+        <http://dati.gov.it/onto/dcatapit#Dataset>,
+        <https://w3id.org/italia/social-security/onto/pensions/CategoriaSIUSSPensione>,
+        skos:ConceptScheme ;
+    rdfs:label "This is the controlled vocabulary of the siuss pension benefit category type adopted by INPS classification"@en,
+        "Vocabolario Controllato sul tipo di categoria prestazione siuss adottato dall'INPS"@it ;
+    skos:prefLabel "Vocabolario Controllato sul tipo di categoria prestazione siuss adottato dall'INPS"@it ;
+    rdfs:comment "Classification of the siuss pension benefit category type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di categoria prestazione siuss adottato dall'INPS"@it ;
+    owl:versionInfo "1.0" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    adms:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    dcat:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    dcat:distribution <https://w3id.org/italia/social-security/data/pensions/distribution/TCPS_CSV>,
+        <https://w3id.org/italia/social-security/data/pensions/distribution/TCPS_JSON_LD>,
+        <https://w3id.org/italia/social-security/data/pensions/distribution/TCPS_RDF_TURTLE> ;
+    dcat:keyword "inps"@en,
+        "inps"@it,
+        "pension",
+        "pensioni"@it ;
+    dcat:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    dct:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    dct:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    dct:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:description "Classification of the siuss pension benefit category type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di categoria prestazione siuss adottato dall'INPS"@it ;
+    dct:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss" ;
+    dct:issued "2025-05-05"^^xsd:date ;
+    dct:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    dct:modified "2025-05-05"^^xsd:date ;
+    dct:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:relation <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza> ;
+    dct:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    dct:title "Classification of the siuss pension benefit category type adopted by INPS controlled vocabulary"@en,
+        "Vocabolario Controllato sul tipo di categoria prestazione siuss adottato dall'INPS"@it ;
+    dct:type <http://purl.org/adms/assettype/CodeList> ;
+    ndc:keyConcept "tipo_categoria_prestazione_siuss" ;
+    skos:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.02>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.03>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.04>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.04.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.04.02>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.04.03>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.05>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.05.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.06>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.06.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.07>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.08>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.09>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.10>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.11>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.12>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.13>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.14>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.15>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.16>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.17>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.18>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.19>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.20>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.21>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.22>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.23>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.24>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.02>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.03>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.04>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.05>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.06>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.07>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.08>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.09>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.10>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.11>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.12>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.13>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.14>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.15>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.16>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.17>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.18>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.19>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.20>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.21>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.22>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.23>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.24>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.25>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.26>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.27>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.28>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.29>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.30>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.02>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.03>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.04>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.05>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.06>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.02>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.03>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.04>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.05>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.06>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.07>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.08>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.09>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.10>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.11>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.12>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.13>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.14>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.15>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.16>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.17>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.18>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.19>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.20>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.21>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.22>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A6.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A7.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A7.02>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.01.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.01.02>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.01.03>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.02.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.02.02>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.02.03>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.02.04>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.03.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.01>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.02>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.03>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.04>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.05>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.06>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.07> ;
+    xkos:numberOfLevels "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.01> a skos:Concept ;
+    rdfs:label "Assegno per il nucleo familiare erogato dai comuni"@it ;
+    skos:prefLabel "Assegno per il nucleo familiare erogato dai comuni"@it ;
+    dct:description "Prestazione richiesta al Comune, rivalutata annualmente, ed  erogata dall'INPS a favore di cittadini italiani o comunitari residenti nel territorio dello Stato, a nuclei familiari con almeno 3 figli minori e nuclei familiari con risorse reddituali e patrimoniali non superiori a quelle previste dall'ISE"@it ;
+    dct:identifier "A1.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.02> a skos:Concept ;
+    rdfs:label "Assegno Maternità erogato dai Comuni"@it ;
+    skos:prefLabel "Assegno Maternità erogato dai Comuni"@it ;
+    dct:description "Assegno destinato alle nuove mamme che non hanno ricevuto altre prestazioni di maternità dall'INPS o dal datore di lavoro e in possesso di determinate situazioni reddituali"@it ;
+    dct:identifier "A1.02"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.02"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.03> a skos:Concept ;
+    rdfs:label "Carta acquisti"@it ;
+    skos:prefLabel "Carta acquisti"@it ;
+    dct:description "Sostegno economico a favore di anziani sopra i 65 anni con basso reddito per l'acquisto di generi alimentari e il pagamento delle bollette oppure a favore di bambini sotto i 3 anni per l'acquisto di latte artificiale e pannolini"@it ;
+    dct:identifier "A1.03"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.03"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.04> a skos:Concept ;
+    rdfs:label "Contributi economici a integrazione del reddito Familiare"@it ;
+    skos:prefLabel "Contributi economici a integrazione del reddito Familiare"@it ;
+    dct:description "Sussidi economici, anche una tantum, ad integrazione del reddito di persone bisognose."@it ;
+    dct:identifier "A1.04"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.04"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.04.01> a skos:Concept ;
+    rdfs:label "Reddito di Inclusione"@it ;
+    skos:prefLabel "Reddito di Inclusione"@it ;
+    dct:description "Reddito di Inclusione"@it ;
+    dct:identifier "A1.04.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.04.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.04.02> a skos:Concept ;
+    rdfs:label "Reddito di Emergenza"@it ;
+    skos:prefLabel "Reddito di Emergenza"@it ;
+    dct:description "Reddito di Emergenza"@it ;
+    dct:identifier "A1.04.02"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.04.02"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.04.03> a skos:Concept ;
+    rdfs:label "Misure delle Provincie autonome con finalità analoghe al Reddito di cittadinanza"@it ;
+    skos:prefLabel "Misure delle Provincie autonome con finalità analoghe al Reddito di cittadinanza"@it ;
+    dct:description "Misure delle Provincie autonome con finalità analoghe al Reddito di cittadinanza (art. 13, co. 2, D.L. 4/2019)"@it ;
+    dct:identifier "A1.04.03"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.04.03"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.05> a skos:Concept ;
+    rdfs:label "Contributi economici per alloggio"@it ;
+    skos:prefLabel "Contributi economici per alloggio"@it ;
+    dct:description "Sussidi economici ad integrazione del reddito individuale o familiare per sostenere le spese per l'alloggio e per l'affitto e per le utenze"@it ;
+    dct:identifier "A1.05"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.05"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.05.01> a skos:Concept ;
+    rdfs:label "Contributi economici per affitti erogati dai Comuni"@it ;
+    skos:prefLabel "Contributi economici per affitti erogati dai Comuni"@it ;
+    dct:description "Contributi economici per affitti erogati dai Comuni a valere sulle risorse del Fondo nazionale a sostegno delle locazioni (L.431/98) non cumulabili con la quota b del RdC"@it ;
+    dct:identifier "A1.05.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.05.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.06> a skos:Concept ;
+    rdfs:label "Buoni spesa o buoni pasto"@it ;
+    skos:prefLabel "Buoni spesa o buoni pasto"@it ;
+    dct:description "Sostegni economici che consentono di acquistare generi alimentari o consumare pasti negli esercizi in convenzione"@it ;
+    dct:identifier "A1.06"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.06"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.06.01> a skos:Concept ;
+    rdfs:label "Buoni spesa Covid-19 dei comuni"@it ;
+    skos:prefLabel "Buoni spesa Covid-19 dei comuni"@it ;
+    dct:description "Buoni spesa Covid-19 dei comuni"@it ;
+    dct:identifier "A1.06.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.06.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.07> a skos:Concept ;
+    rdfs:label "Contributi e integrazioni a rette per asili nido"@it ;
+    skos:prefLabel "Contributi e integrazioni a rette per asili nido"@it ;
+    dct:description "Interventi per garantire all'utente in difficoltà economica la copertura della retta per asili nido."@it ;
+    dct:identifier "A1.07"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.07"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.08> a skos:Concept ;
+    rdfs:label "Contributi e integrazioni a rette per servizi integrativi o innovativi per la prima infanzia"@it ;
+    skos:prefLabel "Contributi e integrazioni a rette per servizi integrativi o innovativi per la prima infanzia"@it ;
+    dct:description "Interventi per garantire all'utente in difficoltà economica la copertura della retta per i servizi integrativi."@it ;
+    dct:identifier "A1.08"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.08"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.09> a skos:Concept ;
+    rdfs:label "Contributi economici per i servizi scolastici"@it ;
+    skos:prefLabel "Contributi economici per i servizi scolastici"@it ;
+    dct:description "Sostegno economici per garantire all'utente in difficoltà economica il diritto allo studio dell'infanzia e nell'adolescenza; comprese le agevolazioni su trasporto riconosciute alle famiglie bisognose"@it ;
+    dct:identifier "A1.09"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.09"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.10> a skos:Concept ;
+    rdfs:label "Contributi economici per cure o prestazioni sociali a rilevanza sanitaria"@it ;
+    skos:prefLabel "Contributi economici per cure o prestazioni sociali a rilevanza sanitaria"@it ;
+    dct:description "Sostegno economico alle persone in difficoltà per spese mediche o, più in generale, per prestazioni sociali a rilevanza sanitaria. In questa categoria rientra l'esenzione ticket sanitari, qualora sia a carico del Comune/Comuni, e il contributo per l'acquisto di protesi e ausili (anziani e disabili)."@it ;
+    dct:identifier "A1.10"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.10"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.11> a skos:Concept ;
+    rdfs:label "Assegnazioni economiche per il sostegno della domiciliarità e dell'autonomia personale"@it ;
+    skos:prefLabel "Assegnazioni economiche per il sostegno della domiciliarità e dell'autonomia personale"@it ;
+    dct:description "Tra gli altri sono individuabili: VOUCHER = provvidenza economica a favore di anziani non autosufficienti e disabili, versata solo nel caso in cui le prestazioni siano erogate da care giver professionali. ASSEGNO DI CURA = incentivazione economica finalizzata a garantire a soggetti anziani non autosufficienti e a disabili gravi o gravissimi, la permanenza nel nucleo familiare o nell'ambiente di appartenenza, evitando il ricovero in strutture residenziali. BUONO SOCIO-SANITARIO = sostegno economico a favore di persone in difficoltà erogato nel caso in cui l'assistenza sia prestata da un \"care giver\" familiare. ASSEGNAZIONI PER PROGETTI finalizzati alla vita indipendente o alla promozione dell'autonomia personale"@it ;
+    dct:identifier "A1.11"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.11"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.12> a skos:Concept ;
+    rdfs:label "Contributi e integrazioni a rette per accesso a centri Diurni"@it ;
+    skos:prefLabel "Contributi e integrazioni a rette per accesso a centri Diurni"@it ;
+    dct:description "Interventi per garantire all'utente in difficoltà economica la copertura della retta per centri diurni"@it ;
+    dct:identifier "A1.12"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.12"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.13> a skos:Concept ;
+    rdfs:label "Contributi e integrazioni a rette per accesso ai servizi semi-residenziali"@it ;
+    skos:prefLabel "Contributi e integrazioni a rette per accesso ai servizi semi-residenziali"@it ;
+    dct:description "Interventi per garantire all'utente in difficoltà economica la copertura della retta per l'accoglienza in strutture semiresidenziali"@it ;
+    dct:identifier "A1.13"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.13"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.14> a skos:Concept ;
+    rdfs:label "Contributi e integrazioni a rette per accesso a servizi Residenziali"@it ;
+    skos:prefLabel "Contributi e integrazioni a rette per accesso a servizi Residenziali"@it ;
+    dct:description "Interventi per garantire all'utente bisognoso la copertura della retta per l'accoglienza in strutture residenziali e, per l'area Famiglia e minori, l'integrazione delle rette per minori ospitati in centri residenziali"@it ;
+    dct:identifier "A1.14"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.14"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.15> a skos:Concept ;
+    rdfs:label "Contributi per servizi alla persona"@it ;
+    skos:prefLabel "Contributi per servizi alla persona"@it ;
+    dct:description "Sostegno economico rivolto a persone parzialmente non autosufficienti o a rischio di emarginazione, che richiedono interventi di cura e di igiene della persona"@it ;
+    dct:identifier "A1.15"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.15"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.16> a skos:Concept ;
+    rdfs:label "Contributi economici per servizio trasporto e mobilità"@it ;
+    skos:prefLabel "Contributi economici per servizio trasporto e mobilità"@it ;
+    dct:description "Sostegno economici erogati a persone a ridotta mobilità (disabili, anziani), inclusi i contributi per i cani guida"@it ;
+    dct:identifier "A1.16"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.16"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.17> a skos:Concept ;
+    rdfs:label "Contributi economici erogati a titolo di prestito/prestiti d'onore"@it ;
+    skos:prefLabel "Contributi economici erogati a titolo di prestito/prestiti d'onore"@it ;
+    dct:description "Prestiti destinati a fronteggiare situazioni transitorie di lieve difficoltà economica, concessi da istituti di credito convenzionati con gli enti pubblici, a tasso zero per il beneficiario, basati sull'impegno dello stesso alla restituzione"@it ;
+    dct:identifier "A1.17"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.17"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.18> a skos:Concept ;
+    rdfs:label "Contributi economici per l'inserimento lavorativo"@it ;
+    skos:prefLabel "Contributi economici per l'inserimento lavorativo"@it ;
+    dct:description "Interventi economici a sostegno di percorsi di transizione al lavoro o di servizi dell'inserimento lavorativo. In questa categoria rientrano borse lavoro, tutoraggio e altre forme di sostegno"@it ;
+    dct:identifier "A1.18"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.18"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.19> a skos:Concept ;
+    rdfs:label "Borse di studio"@it ;
+    skos:prefLabel "Borse di studio"@it ;
+    dct:description "" ;
+    dct:identifier "A1.19"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.19"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.20> a skos:Concept ;
+    rdfs:label "Buono vacanze"@it ;
+    skos:prefLabel "Buono vacanze"@it ;
+    dct:description "Contributo a nuclei familiari, in percentuale sull'importo dei buoni richiesti a seconda del numero dei componenti e di requisiti reddituali"@it ;
+    dct:identifier "A1.20"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.20"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.21> a skos:Concept ;
+    rdfs:label "Altro (prestazione soggetta a ISEE)"@it ;
+    skos:prefLabel "Altro (prestazione soggetta a ISEE)"@it ;
+    dct:description "" ;
+    dct:identifier "A1.21"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.21"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.22> a skos:Concept ;
+    rdfs:label "Contributi economici per l'affidamento familiare di minori"@it ;
+    skos:prefLabel "Contributi economici per l'affidamento familiare di minori"@it ;
+    dct:description "Contributi in denaro alle famiglie che accolgono temporaneamente minori con problemi familiari"@it ;
+    dct:identifier "A1.22"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.22"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.23> a skos:Concept ;
+    rdfs:label "Contributi economici per l'accoglienza di adulti e anziani"@it ;
+    skos:prefLabel "Contributi economici per l'accoglienza di adulti e anziani"@it ;
+    dct:description "Contributi in denaro alle famiglie che accolgono temporaneamente disabili, adulti in difficoltà e anziani"@it ;
+    dct:identifier "A1.23"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.23"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A1.24> a skos:Concept ;
+    rdfs:label "Altro (prestazione non soggetta a ISEE)"@it ;
+    skos:prefLabel "Altro (prestazione non soggetta a ISEE)"@it ;
+    dct:description "Specificare"@it ;
+    dct:identifier "A1.24"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A1.24"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.01> a skos:Concept ;
+    rdfs:label "Mensa sociale"@it ;
+    skos:prefLabel "Mensa sociale"@it ;
+    dct:description "Erogazione di pasti caldi a soggetti con un reddito inferiore al minimo vitale e che si trovano in condizioni disagiate"@it ;
+    dct:identifier "A2.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.02> a skos:Concept ;
+    rdfs:label "Sostegno socio-educativo territoriale o domiciliare"@it ;
+    skos:prefLabel "Sostegno socio-educativo territoriale o domiciliare"@it ;
+    dct:description "Interventi di sostegno destinati ai soggetti a rischio di emarginazione e alle relative famiglie, erogati a domicilio, in strutture o in luoghi di aggregazione spontanea, per il raggiungimento della massima autonomia personale e sociale"@it ;
+    dct:identifier "A2.02"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.02"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.03> a skos:Concept ;
+    rdfs:label "Prestazioni del diritto allo studio universitario"@it ;
+    skos:prefLabel "Prestazioni del diritto allo studio universitario"@it ;
+    dct:description "Sono incluse mense e alloggi per studenti"@it ;
+    dct:identifier "A2.03"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.03"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.04> a skos:Concept ;
+    rdfs:label "Agevolazioni per tasse universitarie"@it ;
+    skos:prefLabel "Agevolazioni per tasse universitarie"@it ;
+    dct:description "" ;
+    dct:identifier "A2.04"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.04"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.05> a skos:Concept ;
+    rdfs:label "Agevolazioni per i servizi di pubblica utilità (telefono, luce, gas)"@it ;
+    skos:prefLabel "Agevolazioni per i servizi di pubblica utilità (telefono, luce, gas)"@it ;
+    dct:description "" ;
+    dct:identifier "A2.05"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.05"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.06> a skos:Concept ;
+    rdfs:label "Agevolazioni tributarie comunali (nettezza urbana, ecc.)"@it ;
+    skos:prefLabel "Agevolazioni tributarie comunali (nettezza urbana, ecc.)"@it ;
+    dct:description "" ;
+    dct:identifier "A2.06"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.06"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.07> a skos:Concept ;
+    rdfs:label "Assistenza domiciliare socio-assistenziale"@it ;
+    skos:prefLabel "Assistenza domiciliare socio-assistenziale"@it ;
+    dct:description "Servizio rivolto a persone con ridotta autonomia, o a rischio di emarginazione, che richiedono interventi di cura e di igiene della persona, di aiuto nella gestione della propria abitazione, di sostegno psicologico, di assistenza sociale e/o educativa a domicilio"@it ;
+    dct:identifier "A2.07"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.07"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.08> a skos:Concept ;
+    rdfs:label "A.D.I.-  Assistenza domiciliare integrata con servizi Sanitari"@it ;
+    skos:prefLabel "A.D.I.-  Assistenza domiciliare integrata con servizi Sanitari"@it ;
+    dct:description "Prestazioni socio-assistenziali e sanitarie (cure mediche o specialistiche, infermieristiche, riabilitative)  erogate a domicilio a persone non autosufficienti o di recente dimissione ospedaliera, per evitare abitazione ricoveri impropri e mantenere il paziente nel suo ambiente di vita"@it ;
+    dct:identifier "A2.08"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.08"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.09> a skos:Concept ;
+    rdfs:label "Supporto all'inserimento lavorativo"@it ;
+    skos:prefLabel "Supporto all'inserimento lavorativo"@it ;
+    dct:description "Interventi mirati a incentivare l'inserimento e il reinserimento lavorativo di soggetti disabili o a rischio di emarginazione"@it ;
+    dct:identifier "A2.09"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.09"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.10> a skos:Concept ;
+    rdfs:label "Servizi integrativi per la prima infanzia"@it ;
+    skos:prefLabel "Servizi integrativi per la prima infanzia"@it ;
+    dct:description "In questa categoria rientrano i servizi previsti dall'art. 5 della legge 285/97 e i servizi educativi realizzati in contesto familiare. In particolare: spazi gioco per bambini dai 18 ai 36 mesi (per max 5 ore) ; centri per bambini e famiglie; servizi e interventi educativi in contesto domiciliare"@it ;
+    dct:identifier "A2.10"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.10"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.11> a skos:Concept ;
+    rdfs:label "Sostegno socio-educativo scolastico"@it ;
+    skos:prefLabel "Sostegno socio-educativo scolastico"@it ;
+    dct:description "Interventi mirati a favorire il processo di integrazione nelle strutture educative e scolastiche dei minori con problemi sociali (in particolare dei ragazzi disabili e dei minori stranieri)"@it ;
+    dct:identifier "A2.11"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.11"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.12> a skos:Concept ;
+    rdfs:label "Mensa scolastica"@it ;
+    skos:prefLabel "Mensa scolastica"@it ;
+    dct:description "" ;
+    dct:identifier "A2.12"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.12"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.13> a skos:Concept ;
+    rdfs:label "Distribuzione pasti e/o lavanderia a domicilio"@it ;
+    skos:prefLabel "Distribuzione pasti e/o lavanderia a domicilio"@it ;
+    dct:description "Interventi rivolti a persone parzialmente non autosufficienti o a rischio di emarginazione."@it ;
+    dct:identifier "A2.13"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.13"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.14> a skos:Concept ;
+    rdfs:label "Trasporto sociale"@it ;
+    skos:prefLabel "Trasporto sociale"@it ;
+    dct:description "Mezzi di trasporto (pubblici o privati) volti a garantire lo spostamento di persone a ridotta mobilità"@it ;
+    dct:identifier "A2.14"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.14"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.15> a skos:Concept ;
+    rdfs:label "Altro (prestazione soggetta a ISEE)"@it ;
+    skos:prefLabel "Altro (prestazione soggetta a ISEE)"@it ;
+    dct:description "Specificare"@it ;
+    dct:identifier "A2.15"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.15"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.16> a skos:Concept ;
+    rdfs:label "Interventi di supporto per reperimento alloggi"@it ;
+    skos:prefLabel "Interventi di supporto per reperimento alloggi"@it ;
+    dct:description "Interventi finalizzati a garantire a persone singole o a nuclei familiari in stato di bisogno l'accesso ad una abitazione. In questa categoria rientrano le attività del settore sociale per l'assegnazione di case di edilizia residenziale pubblica e i servizi di intermediazione per il reperimento alloggi."@it ;
+    dct:identifier "A2.16"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.16"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.17> a skos:Concept ;
+    rdfs:label "Interventi per l'integrazione sociale dei soggetti deboli o a rischio"@it ;
+    skos:prefLabel "Interventi per l'integrazione sociale dei soggetti deboli o a rischio"@it ;
+    dct:description "Interventi finalizzati alla piena integrazione sociale dei soggetti deboli o a rischio di emarginazione. Sono incluse per esempio le borse lavoro pensionati e le attività per l'attivazione del servizio di nonno vigile se considerato nell'ambito sociale, i corsi di lingua italiana per gli immigrati."@it ;
+    dct:identifier "A2.17"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.17"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.18> a skos:Concept ;
+    rdfs:label "Servizio di accoglienza di adulti e anziani"@it ;
+    skos:prefLabel "Servizio di accoglienza di adulti e anziani"@it ;
+    dct:description "Attività di intermediazione e supporto per favorire l'accoglienza, alternativa al ricovero in strutture residenziali, per coloro che non possono essere adeguatamente assistiti nell'ambito della propria famiglia"@it ;
+    dct:identifier "A2.18"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.18"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.19> a skos:Concept ;
+    rdfs:label "Servizi di mediazione culturale"@it ;
+    skos:prefLabel "Servizi di mediazione culturale"@it ;
+    dct:description "Interventi atti a garantire l'accesso paritario in ambito scolastico, sociale e lavorativo delle persone straniere e nomadi."@it ;
+    dct:identifier "A2.19"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.19"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.20> a skos:Concept ;
+    rdfs:label "Servizi di prossimità/buon vicinato/gruppi di auto-aiuto"@it ;
+    skos:prefLabel "Servizi di prossimità/buon vicinato/gruppi di auto-aiuto"@it ;
+    dct:description "Forme di solidarietà (anche associative)  fra persone fragili (anziani soli, coppie di anziani, disabili adulti, migranti), appartenenti allo stesso contesto (condominio, strada, quartiere), finalizzate al reciproco nella risposta ai disagi e problemi quotidiani."@it ;
+    dct:identifier "A2.20"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.20"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.21> a skos:Concept ;
+    rdfs:label "Telesoccorso e teleassistenza"@it ;
+    skos:prefLabel "Telesoccorso e teleassistenza"@it ;
+    dct:description "Interventi tempestivi 24 ore su 24 rivolti a utenti in situazione di emergenza o di improvvisa difficoltà "@it ;
+    dct:identifier "A2.21"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.21"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.22> a skos:Concept ;
+    rdfs:label "Distribuzione beni di prima necessità (pasti, medicinali, vestiario ecc.)"@it ;
+    skos:prefLabel "Distribuzione beni di prima necessità (pasti, medicinali, vestiario ecc.)"@it ;
+    dct:description "Sono interventi organizzati abitualmente in luoghi prefissati (es, stazione, ecc) dove avviene la distribuzione, da non confondersi con gli interventi per l'emergenza. (Possono essere effettuati anche con una unità mobile)"@it ;
+    dct:identifier "A2.22"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.22"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.23> a skos:Concept ;
+    rdfs:label "Servizi per l'igiene personale"@it ;
+    skos:prefLabel "Servizi per l'igiene personale"@it ;
+    dct:description "Disponibilità di docce o locali per provvedere a l'igiene personale di soggetti senza fissa dimora o che si trovano in condizioni particolarmente disagiate."@it ;
+    dct:identifier "A2.23"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.23"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.24> a skos:Concept ;
+    rdfs:label "Servizio per l'affidamento dei minori"@it ;
+    skos:prefLabel "Servizio per l'affidamento dei minori"@it ;
+    dct:description "Attività di supporto per favorire l'accoglienza (a tempo pieno o parziale) di un minore in un nucleo familiare qualora la famiglia di origine sia momentaneamente impossibilitata a provvedervi in modo adeguato, anche in esecuzione di provvedimenti dell'Autorità Giudiziaria"@it ;
+    dct:identifier "A2.24"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.24"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.25> a skos:Concept ;
+    rdfs:label "Servizio per l'adozione nazionale di minori"@it ;
+    skos:prefLabel "Servizio per l'adozione nazionale di minori"@it ;
+    dct:description "Attività volta a proteggere e tutelare la crescita del minore in stato di abbandono attraverso l'accoglienza definitiva in un nuovo nucleo familiare"@it ;
+    dct:identifier "A2.25"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.25"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.26> a skos:Concept ;
+    rdfs:label "Servizio per l'adozione internazionale di minori"@it ;
+    skos:prefLabel "Servizio per l'adozione internazionale di minori"@it ;
+    dct:description "Attività volta a proteggere e tutelare la crescita del minore in stato di abbandono attraverso l'accoglienza definitiva in un nuovo nucleo familiare"@it ;
+    dct:identifier "A2.26"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.26"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.27> a skos:Concept ;
+    rdfs:label "Servizio di mediazione familiare"@it ;
+    skos:prefLabel "Servizio di mediazione familiare"@it ;
+    dct:description "Servizio di sostegno alla coppia in fase di separazione o già separata, con figli minori."@it ;
+    dct:identifier "A2.27"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.27"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.28> a skos:Concept ;
+    rdfs:label "Interventi di sostegno alla genitorialità"@it ;
+    skos:prefLabel "Interventi di sostegno alla genitorialità"@it ;
+    dct:description "Servizio di sostegno alle funzioni genitoriali (anche attraverso colloqui, incontri, titoli sociali)"@it ;
+    dct:identifier "A2.28"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.28"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.29> a skos:Concept ;
+    rdfs:label "Attività ricreative di socializzazione"@it ;
+    skos:prefLabel "Attività ricreative di socializzazione"@it ;
+    dct:description "Interventi di utilizzo del tempo libero organizzati per rispondere a bisogni di socializzazione e comunicazione delle persone in stato di disagio e per promuovere occasioni di incontro e conoscenza tra italiani e stranieri. Vi è compresa l'organizzazione di soggiorni climatici o termali rivolte in particolare ai soggetti fragili."@it ;
+    dct:identifier "A2.29"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.29"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A2.30> a skos:Concept ;
+    rdfs:label "Altro (prestazione non soggetta a ISEE)"@it ;
+    skos:prefLabel "Altro (prestazione non soggetta a ISEE)"@it ;
+    dct:description "Specificare"@it ;
+    dct:identifier "A2.30"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A2.30"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.01> a skos:Concept ;
+    rdfs:label "Strutture semiresidenziali"@it ;
+    skos:prefLabel "Strutture semiresidenziali"@it ;
+    dct:description "Centri organizzati per attività ricreative, sportive, educative che si svolgono nel periodo estivo; Centri diurni per anziani non autosufficienti; Centri diurni per persone con disabilità; Centri diurni per persone con disagio mentale; Centri diurni per persone senza dimora; Centri diurni per le altre categorie di disagio adulti"@it ;
+    dct:identifier "A3.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A3.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.02> a skos:Concept ;
+    rdfs:label "Strutture residenziali"@it ;
+    skos:prefLabel "Strutture residenziali"@it ;
+    dct:description "Struttura familiare: di piccole dimensioni, caratterizzata dalla organizzazione di tipo familiare, che riproduce le caratteristiche della vita in famiglia. In caso di strutture per minori vi è la presenza di una coppia o di uno o due adulti che svolgono funzioni genitoriali. Struttura comunitaria: di dimensioni variabili a secondo dell'area di utenza (di norma superiore a 6-10 posti) è caratterizzata dalla presenza di operatori assistenziali, socio-sanitari o educatori e da una organizzazione di tipo comunitario. Centri estivi o invernali con pernottamento: strutture comunitarie comprendenti le colonie, i campeggi, i centri ricreativi a carattere stagionale, i soggiorni climatici o Termali"@it ;
+    dct:identifier "A3.02"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A3.02"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.03> a skos:Concept ;
+    rdfs:label "Asilo Nido"@it ;
+    skos:prefLabel "Asilo Nido"@it ;
+    dct:description "Servizio rivolto alla prima infanzia (0-3  anni)  per promuovere lo sviluppo psico-fisico, cognitivo, affettivo e sociale del bambino e offrire sostegno alle famiglie nel loro compito educativo, aperto per almeno 5 giorni e almeno 6 ore al giorno per un periodo di almeno 10 mesi all'anno. Rientrano sotto questa tipologia gli asili nido pubblici, gli asili nido aziendali e i micro-nidi e le sezioni 24-36 mesi aggregate alle scuole dell'infanzia"@it ;
+    dct:identifier "A3.03"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A3.03"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.04> a skos:Concept ;
+    rdfs:label "Edilizia residenziale pubblica"@it ;
+    skos:prefLabel "Edilizia residenziale pubblica"@it ;
+    dct:description "" ;
+    dct:identifier "A3.04"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A3.04"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.05> a skos:Concept ;
+    rdfs:label "Altro (prestazione soggetta a ISEE)"@it ;
+    skos:prefLabel "Altro (prestazione soggetta a ISEE)"@it ;
+    dct:description "Specificare"@it ;
+    dct:identifier "A3.05"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A3.05"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A3.06> a skos:Concept ;
+    rdfs:label "Altro (prestazione non soggetta a ISEE)"@it ;
+    skos:prefLabel "Altro (prestazione non soggetta a ISEE)"@it ;
+    dct:description "Specificare"@it ;
+    dct:identifier "A3.06"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A3.06"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.01> a skos:Concept ;
+    rdfs:label "Pensione di invalidità civile"@it ;
+    skos:prefLabel "Pensione di invalidità civile"@it ;
+    dct:description "Prestazione concessa ai mutilati e invalidi civili di età compresa tra i diciotto e i sessantacinque anni, a cui l'apposita Commissione sanitaria abbia riconosciuto una inabilità lavorativa totale (100%) e permanente (invalidi totali) e si trovino, inoltre, in stato di bisogno economico, siano cittadini italiani e abbiano la residenza in Italia"@it ;
+    dct:identifier "A4.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.02> a skos:Concept ;
+    rdfs:label "Pensione ai non vedenti (assoluti, parziali e decimisti)"@it ;
+    skos:prefLabel "Pensione ai non vedenti (assoluti, parziali e decimisti)"@it ;
+    dct:description "Prestazione concessa a coloro che siano riconosciuti ciechi civili"@it ;
+    dct:identifier "A4.02"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.02"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.03> a skos:Concept ;
+    rdfs:label "Pensione ai non udenti"@it ;
+    skos:prefLabel "Pensione ai non udenti"@it ;
+    dct:description "Prestazione concessa ai minorati sensoriali dell'udito affetti da sordità congenita o acquisita durante l'età evolutiva (fino a 12  anni)  che abbia impedito il normale apprendimento del linguaggio parlato, purchè la sordità non sia di natura esclusivamente psichica o dipendente da cause di guerra, di lavoro o di servizio."@it ;
+    dct:identifier "A4.03"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.03"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.04> a skos:Concept ;
+    rdfs:label "Assegno mensile"@it ;
+    skos:prefLabel "Assegno mensile"@it ;
+    dct:description "Prestazione concessa ai mutilati e invalidi civili di età compresa tra i diciotto e i sessantacinque anni, nei cui confronti, in sede di visita medica presso la competente commissione sanitaria, sia stata riconosciuta una riduzione della capacità lavorativa in misura non inferiore al 74% (invalidi parziali), che siano incollocati al lavoro, si trovino in stato di bisogno economico, siano cittadini italiani e abbiano la residenza in Italia."@it ;
+    dct:identifier "A4.04"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.04"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.05> a skos:Concept ;
+    rdfs:label "Indennità di accompagnamento"@it ;
+    skos:prefLabel "Indennità di accompagnamento"@it ;
+    dct:description "Prestazione concessa agli invalidi civili totali che per affezioni fisiche o psichiche si trovino anche nella impossibilità di deambulare senza l'aiuto permanente di un accompagnatore o, non essendo in grado di compiere gli atti quotidiani della vita, abbisognino di una assistenza continua."@it ;
+    dct:identifier "A4.05"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.05"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.06> a skos:Concept ;
+    rdfs:label "Indennità accompagnamento minori"@it ;
+    skos:prefLabel "Indennità accompagnamento minori"@it ;
+    dct:description "Prestazione concessa ai minori invalidi civili totali che per affezioni fisiche o psichiche si trovino anche nella impossibilità   di deambulare senza l'aiuto permanente di un accompagnatore o, non essendo in grado di compiere gli atti quotidiani della vita, abbisognino di una assistenza continua"@it ;
+    dct:identifier "A4.06"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.06"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.07> a skos:Concept ;
+    rdfs:label "Indennità di frequenza"@it ;
+    skos:prefLabel "Indennità di frequenza"@it ;
+    dct:description "Prestazione concessa a invalidi civili minori, per aiutare l'inserimento nelle scuole, nei centri di formazione o di addestramento professionale e nelle strutture educative, riabilitative e terapeutiche accreditate"@it ;
+    dct:identifier "A4.07"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.07"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.08> a skos:Concept ;
+    rdfs:label "Indennità di comunicazione"@it ;
+    skos:prefLabel "Indennità di comunicazione"@it ;
+    dct:description "Prestazione concessa ai sordi al solo titolo della minorazione, cioè indipendentemente dallo stato di bisogno economico, dall'età o dall'eventuale ricovero in istituto"@it ;
+    dct:identifier "A4.08"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.08"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.09> a skos:Concept ;
+    rdfs:label "Pensione sociale"@it ;
+    skos:prefLabel "Pensione sociale"@it ;
+    dct:description "Prestazione assistenziale riconosciuta, agli ultrasessantaquattrenni, cittadini italiani e membri UE residenti abitualmente in Italia, sprovvisti di reddito o con reddito inferiore ai limiti stabiliti dalla legge"@it ;
+    dct:identifier "A4.09"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.09"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.10> a skos:Concept ;
+    rdfs:label "Assegno sociale"@it ;
+    skos:prefLabel "Assegno sociale"@it ;
+    dct:description "Idem pensione sociale (con effetto dal 1° gennaio 1996)"@it ;
+    dct:identifier "A4.10"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.10"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.11> a skos:Concept ;
+    rdfs:label "Pensione/assegno sociale ex   pensione invalidità civile"@it ;
+    skos:prefLabel "Pensione/assegno sociale ex   pensione invalidità civile"@it ;
+    dct:description "Pensione di invalidità civile o pensione ai non udenti erogata a soggetti con 65 anni e più. In questi casi l'importo della pensione di inabilità  viene adeguato a quello della pensione o assegno sociale"@it ;
+    dct:identifier "A4.11"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.11"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.12> a skos:Concept ;
+    rdfs:label "14° mensilità"@it ;
+    skos:prefLabel "14° mensilità"@it ;
+    dct:description "Somma aggiuntiva a favore di titolari di uno o più trattamenti pensionistici a carico dell'AGO e delle forme sostitutive, esclusive ed   esonerative della medesima, in presenza di determinate condizioni di reddito ed età"@it ;
+    dct:identifier "A4.12"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.12"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.13> a skos:Concept ;
+    rdfs:label "Importo aggiuntivo"@it ;
+    skos:prefLabel "Importo aggiuntivo"@it ;
+    dct:description "Importo aggiuntivo corrisposto con la tredicesima mensilità in presenza di particolari condizioni reddituali, ai titolari di una o più pensioni il cui importo complessivo non supera l'importo annuo del trattamento minimo del FPLA1.3  maggiorato dell'importo aggiuntivo stesso"@it ;
+    dct:identifier "A4.13"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.13"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.14> a skos:Concept ;
+    rdfs:label "Maggiorazione mensile pensione"@it ;
+    skos:prefLabel "Maggiorazione mensile pensione"@it ;
+    dct:description "Assegno ai titolari di invalidità civile di età inferiore ai 65anni che non superano determinati limiti di reddito annuo"@it ;
+    dct:identifier "A4.14"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.14"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.15> a skos:Concept ;
+    rdfs:label "Maggiorazione sociale"@it ;
+    skos:prefLabel "Maggiorazione sociale"@it ;
+    dct:description "Prestazione assistenziale erogata dall'INPS dietro domanda del pensionato con trattamento minimo che rientra nei limiti di reddito previsti"@it ;
+    dct:identifier "A4.15"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.15"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.16> a skos:Concept ;
+    rdfs:label "Integrazione al minimo"@it ;
+    skos:prefLabel "Integrazione al minimo"@it ;
+    dct:description "Integrazione fino al raggiungimento del trattamento minimo della pensione (esclusa la pensione di vecchiaia liquidata col sistema contributivo) secondo criteri reddituali."@it ;
+    dct:identifier "A4.16"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.16"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.17> a skos:Concept ;
+    rdfs:label "Assegno familiare"@it ;
+    skos:prefLabel "Assegno familiare"@it ;
+    dct:description "Prestazione a sostegno delle famiglie di alcune categorie di lavoratori, il cui nucleo familiare abbia un reddito complessivo al di sotto dei limiti stabiliti annualmente dalla legge"@it ;
+    dct:identifier "A4.17"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.17"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.18> a skos:Concept ;
+    rdfs:label "Assegno maternità"@it ;
+    skos:prefLabel "Assegno maternità"@it ;
+    dct:description "Indennità corrisposta alle lavoratrici madri e in casi particolari ai lavoratori padri a seguito della nascita, dell'affidamento o dell'adozione di un minore."@it ;
+    dct:identifier "A4.18"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.18"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.19> a skos:Concept ;
+    rdfs:label "Assegno al nucleo familiare"@it ;
+    skos:prefLabel "Assegno al nucleo familiare"@it ;
+    dct:description "Prestazione a sostegno delle famiglie dei lavoratori (dipendenti, parasubordinati, pensionati, ecc.) che hanno un reddito complessivo al di sotto delle fasce stabilite ogni anno per legge)"@it ;
+    dct:identifier "A4.19"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.19"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.20> a skos:Concept ;
+    rdfs:label "Permessi retribuiti Legge 104/92"@it ;
+    skos:prefLabel "Permessi retribuiti Legge 104/92"@it ;
+    dct:description "Permessi retribuiti, aventi come scopo la cura e l'assistenza del portatore di handicap, che spettano ai cittadini lavoratori, portatori di handicap grave riconosciuto ai sensi dell'art. 3, comma 3 della legge 104/92 e ai loro familiari entro il terzo grado di parentela e affinità"@it ;
+    dct:identifier "A4.20"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.20"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.21> a skos:Concept ;
+    rdfs:label "Congedo straordinario L. 388/2000"@it ;
+    skos:prefLabel "Congedo straordinario L. 388/2000"@it ;
+    dct:description "Congedo straordinario, retribuito con indennizzo (e contribuzione figurativa) avente come scopo la cura e l'assistenza del portatore di handicap, che spetta ai cittadini lavoratori, portatori di handicap grave riconosciuto e ai loro familiari, secondo le modalità previste dalla norma"@it ;
+    dct:identifier "A4.21"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.21"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A4.22> a skos:Concept ;
+    rdfs:label "Altro"@it ;
+    skos:prefLabel "Altro"@it ;
+    dct:description "Specificare"@it ;
+    dct:identifier "A4.22"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A4.22"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A6.01> a skos:Concept ;
+    rdfs:label "Misure Regionali ad   Integrazione del SIA/REI (redditi non rilevanti ai fini IRPEF)"@it ;
+    skos:prefLabel "Misure Regionali ad   Integrazione del SIA/REI (redditi non rilevanti ai fini IRPEF)"@it ;
+    dct:description "Misure Regionali ad Integrazione del SIA/REI (redditi non rilevanti ai fini IRPEF)"@it ;
+    dct:identifier "A6.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A6.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A7.01> a skos:Concept ;
+    rdfs:label "Reddito di cittadinanza"@it ;
+    skos:prefLabel "Reddito di cittadinanza"@it ;
+    dct:description "Reddito di cittadinanza"@it ;
+    dct:identifier "A7.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A7.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A7.02> a skos:Concept ;
+    rdfs:label "Pensione di cittadinanza"@it ;
+    skos:prefLabel "Pensione di cittadinanza"@it ;
+    dct:description "Pensione di cittadinanza"@it ;
+    dct:identifier "A7.02"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A7.02"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.01.01> a skos:Concept ;
+    rdfs:label "FNA-Disabilità gravissime: assistenza domiciliare"@it ;
+    skos:prefLabel "FNA-Disabilità gravissime: assistenza domiciliare"@it ;
+    dct:description "Articolo 2, comma 1, lettera a), del D.M. 26 settembre 2016, di riparto del FNA 2016"@it ;
+    dct:identifier "A9.01.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.01.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.01.02> a skos:Concept ;
+    rdfs:label "FNA-Disabilità gravissime: assistenza domiciliare indiretta"@it ;
+    skos:prefLabel "FNA-Disabilità gravissime: assistenza domiciliare indiretta"@it ;
+    dct:description "Articolo 2, comma 1, lettera b), del D.M. 26 settembre 2016, di riparto del FNA 2016"@it ;
+    dct:identifier "A9.01.02"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.01.02"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.01.03> a skos:Concept ;
+    rdfs:label "FNA-Disabilità gravissime: interventi complementari all'assistenza domiciliare"@it ;
+    skos:prefLabel "FNA-Disabilità gravissime: interventi complementari all'assistenza domiciliare"@it ;
+    dct:description "Articolo 2, comma 1, lettera c), del D.M. 26 settembre 2016, di riparto del FNA 2016"@it ;
+    dct:identifier "A9.01.03"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.01.03"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.02.01> a skos:Concept ;
+    rdfs:label "FONDO PCD prive del sostegno familiare: percorsi di accompagnamento"@it ;
+    skos:prefLabel "FONDO PCD prive del sostegno familiare: percorsi di accompagnamento"@it ;
+    dct:description "Articolo 5, comma 4, lettera a), del D.M. 23 novembre 2016"@it ;
+    dct:identifier "A9.02.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.02.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.02.02> a skos:Concept ;
+    rdfs:label "FONDO PCD prive del sostegno familiare: supporto alla domiciliarità"@it ;
+    skos:prefLabel "FONDO PCD prive del sostegno familiare: supporto alla domiciliarità"@it ;
+    dct:description "Articolo 5, comma 4, lettera b), del D.M. 23 novembre 2016"@it ;
+    dct:identifier "A9.02.02"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.02.02"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.02.03> a skos:Concept ;
+    rdfs:label "FONDO PCD prive del sostegno familiare: sviluppo competenze"@it ;
+    skos:prefLabel "FONDO PCD prive del sostegno familiare: sviluppo competenze"@it ;
+    dct:description "Articolo 5, comma 4, lettera c), del D.M. 23 novembre 2016"@it ;
+    dct:identifier "A9.02.03"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.02.03"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.02.04> a skos:Concept ;
+    rdfs:label "FONDO PCD prive del sostegno familiare: permanenza temporanea extra-familiare"@it ;
+    skos:prefLabel "FONDO PCD prive del sostegno familiare: permanenza temporanea extra-familiare"@it ;
+    dct:description "Articolo 5, comma 4, lettera e), del D.M. 23 novembre 2016"@it ;
+    dct:identifier "A9.02.04"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.02.04"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.03.01> a skos:Concept ;
+    rdfs:label "Contributi economici e integrazioni del reddito familiare stabiliti nell'ambito dei progetti personalizzati SIA/REI"@it ;
+    skos:prefLabel "Contributi economici e integrazioni del reddito familiare stabiliti nell'ambito dei progetti personalizzati SIA/REI"@it ;
+    dct:description "Misure di sostegno al reddito aggiuntive al beneficio economico del SIA o del REI individuate nell'ambito del progetto personalizzato ai sensi dell'art. 4, comma 3, lettera c), del decreto legislativo 15  settembre 2017, n. 147  e dell'art. 4, comma 4, lettera e), del decreto interministeriale 26 maggio 2016."@it ;
+    dct:identifier "A9.03.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.03.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.01> a skos:Concept ;
+    rdfs:label "Sostegno socio-educativo territoriale o domiciliare, finanziato dal PON Inclusione"@it ;
+    skos:prefLabel "Sostegno socio-educativo territoriale o domiciliare, finanziato dal PON Inclusione"@it ;
+    dct:description "Interventi di sostegno destinati ai beneficiari del SIA o del REi a rischio di emarginazione, erogati a domicilio, in strutture o in luoghi di aggregazione spontanea, per il raggiungimento della massima autonomia personale e sociale, a valere sulle risorse del PON inclusione"@it ;
+    dct:identifier "A9.04.01"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.04.01"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.02> a skos:Concept ;
+    rdfs:label "Supporto all'inserimento lavorativo, finanziato dal PON Inclusione"@it ;
+    skos:prefLabel "Supporto all'inserimento lavorativo, finanziato dal PON Inclusione"@it ;
+    dct:description "Interventi mirati a incentivare l'inserimento e il reinserimento lavorativo di soggetti disabili o a rischio di emarginazione, ad esempio i tirocini per l'inclusione lavorativa, appartenenti ai nuclei beneficiari del SIA o del REI a valere sulle risorse del PON Inclusione."@it ;
+    dct:identifier "A9.04.02"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.04.02"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.03> a skos:Concept ;
+    rdfs:label "Interventi per l'integrazione sociale dei soggetti deboli o a rischio, finanziati dal PON Inclusione"@it ;
+    skos:prefLabel "Interventi per l'integrazione sociale dei soggetti deboli o a rischio, finanziati dal PON Inclusione"@it ;
+    dct:description "Interventi finalizzati alla piena integrazione sociale dei beneficiari del SIA o del REI, a valere sulle risorse del PON Inclusione. Sono incluse ad esempio le borse lavoro pensionati e ele attività per l'attivazione del servizio di nonno vigile se considerato nell'ambito sociale, i corsi di lingua italiana per gli immigrati."@it ;
+    dct:identifier "A9.04.03"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.04.03"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.04> a skos:Concept ;
+    rdfs:label "Servizi di mediazione culturale, finanziati dal PON Inclusione"@it ;
+    skos:prefLabel "Servizi di mediazione culturale, finanziati dal PON Inclusione"@it ;
+    dct:description "Interventi atti a garantire l'accesso paritario in ambito scolastico, sociale o lavorativo delle persone straniere e nomadi ai beneficiari del SIA o del REI, a valere sulle risorse del PON Inclusione."@it ;
+    dct:identifier "A9.04.04"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.04.04"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.05> a skos:Concept ;
+    rdfs:label "Servizio di mediazione familiare, finanziato dal PON Inclusione"@it ;
+    skos:prefLabel "Servizio di mediazione familiare, finanziato dal PON Inclusione"@it ;
+    dct:description "Servizio di sostegno alle funzioni genitoriali (anche attraverso colloqui, incontri, titoli sociali) destinati ai beneficiari del SIA o del REI, a valere sulle risorse del PON Inclusione."@it ;
+    dct:identifier "A9.04.05"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.04.05"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.06> a skos:Concept ;
+    rdfs:label "Interventi di sostegno alla genitorialità, finanziati dal PON Inclusione."@it ;
+    skos:prefLabel "Interventi di sostegno alla genitorialità, finanziati dal PON Inclusione."@it ;
+    dct:description "Interventi di sostegno alla genitorialità, finanziati dal PON Inclusione"@it ;
+    dct:identifier "A9.04.06"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.04.06"@it .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/A9.04.07> a skos:Concept ;
+    rdfs:label "Altri interventi e servizi, finanziati dal PON Inclusione"@it ;
+    skos:prefLabel "Altri interventi e servizi, finanziati dal PON Inclusione"@it ;
+    dct:description "Altri interventi e servizi, finanziati dal PON Inclusione"@it ;
+    dct:identifier "A9.04.07"@it ;
+    skos:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> ;
+    skos:notation "A9.04.07"@it .
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a <http://dati.gov.it/onto/dcatapit#Organization>,
+        vcard:Kind,
+        vcard:Organization ;
+    vcard:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    vcard:hasEmail <mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it> .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a foaf:Agent,
+        <http://dati.gov.it/onto/dcatapit#Agent> ;
+    dct:identifier "inps" ;
+    foaf:name "Istituto Nazionale della Previdenza Sociale"@it,
+        "National Institute for Social Security"@en .
+
+<https://w3id.org/italia/social-security/data/pensions/distribution/TCPS_CSV> a dcat:Distribution,
+        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_categoria_prestazione_siuss/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_categoria_prestazione_siuss/latest/tipo_categoria_prestazione_siuss.csv> ;
+    dct:description "Questa è la distribuzione CSV del vocabolario controllato sul tipo di categoria prestazione siuss adottato dall'INPS"@it,
+        "This is the distribution in CSV of the siuss pension benefit category type adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "CSV distribution of the siuss pension benefit category type adopted by INPS controlled vocabulary"@en,
+        "Distribuzione CSV del vocabolario controllato sul tipo di categoria prestazione siuss adottato dall'INPS"@it .
+
+<https://w3id.org/italia/social-security/data/pensions/distribution/TCPS_JSON_LD> a dcat:Distribution,
+        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_categoria_prestazione_siuss/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_categoria_prestazione_siuss/latest/tipo_categoria_prestazione_siuss.json> ;
+    dct:description "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di categoria prestazione siuss adottato dall'INPS"@it,
+        "This is the distribution in JSON_LD of the siuss pension benefit category type adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "Distribuzione JSON_LD del vocabolario controllato sul tipo di categoria prestazione siuss adottato dall'INPS"@it,
+        "JSON_LD distribution of the siuss pension benefit category type adopted by INPS controlled vocabulary"@en .
+
+<https://w3id.org/italia/social-security/data/pensions/distribution/TCPS_RDF_TURTLE> a dcat:Distribution,
+        <http://dati.gov.it/onto/dcatapit#Distribution> ;
+    dcat:accessURL <https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipo_categoria_prestazione_siuss/latest> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/INPS-it/NDC/main/assets/controlled-vocabularies/tipo_categoria_prestazione_siuss/latest/tipo_categoria_prestazione_siuss.ttl> ;
+    dct:description "Questa è la distribuzione RDF/Turtle del vocabolario controllato sul tipo di categoria prestazione siuss adottato dall'INPS"@it,
+        "This is the distribution in RDF/turtle of the siuss pension benefit category type adopted by INPS controlled vocabulary"@en ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> ;
+    dct:license <https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40> ;
+    dct:title "Distribuzione RDF/Turtle del vocabolario controllato sul tipo di categoria prestazione siuss adottato dall'INPS"@it,
+        "RDF/Turtle distribution of the siuss pension benefit category type adopted by INPS controlled vocabulary"@en .
+
+### Serialized using the ttlser deterministic serializer v1.2.0
