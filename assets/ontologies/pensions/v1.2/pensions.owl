@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://w3id.org/italia/social-security/onto/pensions/"
-     xml:base="https://w3id.org/italia/social-security/onto/pensions/"
+<rdf:RDF xmlns="https://w3id.org/italia/onto/RO/"
+     xml:base="https://w3id.org/italia/onto/RO/"
      xmlns:L0="https://w3id.org/italia/onto/l0/"
      xmlns:RO="https://w3id.org/italia/onto/RO/"
      xmlns:TI="https://w3id.org/italia/onto/TI/"
@@ -21,7 +21,7 @@
      xmlns:INPSCore="https://w3id.org/italia/social-security/onto/core/"
      xmlns:dcatapit="http://dati.gov.it/onto/dcatapit#"
      xmlns:INPSPensions="https://w3id.org/italia/social-security/onto/pensions/">
-    <owl:Ontology rdf:about="https://w3id.org/italia/social-security/onto/pensions/">
+    <owl:Ontology rdf:about="https://w3id.org/italia/onto/RO/">
         <owl:versionIRI rdf:resource="https://w3id.org/italia/social-security/onto/pensions/1.2"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/CLV/"/>
         <owl:imports rdf:resource="https://w3id.org/italia/onto/COV/"/>
@@ -3885,6 +3885,9 @@
         <rdfs:comment xml:lang="it">Istanziazione delle prestazioni pensionistiche erogate dall&apos;ente INPS. La prestazione pensionistica rientra tra le diverse forme di tutela ed assistenza dei lavoratori che si traducono nell’erogazione di prestazioni di somme di denaro o altre utilità, e predisposte in relazione a situazioni di bisogno in cui i lavoratori stessi o i loro famigliari possono venire a trovarsi in seguito al verificarsi di determinati eventi riconducibili o meno allo svolgimento dell’attività lavorativa e finalizzate sostanzialmente a garantire la continuità del reddito. Nel caso della pensione viene tutelata l&apos;impossibilità del percipiente di assicurare un reddito per se e per i famigliari a proprio carico per sopraggiunti motivi ostativi, in particolare per il superamento di una certa età o anzianita di servizio o per malattia o per decesso. Per sostenere finanziariamente tali tutele è prevista una imposizione contributiva obbligatoria, ossia il pagamento di specifici oneri (contributi), sulla retribuzione corrisposta a ciascun lavoratore. Le prestazioni pensionistiche non vengono erogate “d’ufficio” dall’Ente, ma soltanto se l’interessato/assicurato ha presentato un’apposita domanda. In generale una prestazione pensionistica può abbracciare più domande presentate da uno stesso richiedente e identifica il rapporto previdenziale in essere tra detto richiedente e l&apos;ente INPS, a partire dall&apos;invio della prima domanda di pensione fino alla terminazione per decesso del titolare della prestazione (gli eventuali superstiti daranno luogo a una nuova prestazione pensionistica). In tal senso la classe è sottoclasse di L0:Collection consentendo di raccogliere tramite la proprietà L0:hasMember l&apos;insieme degli eventi (definiti tramite la classe TI:TimeIndexedEvent) inerenti la prestazione succedutesi nel tempo. In questa ontologia i soggetti, gli eventi e, in generale, gli elementi definti in relazione alla Prestazione Pensionistica presentano, per brevità, l&apos;acronimo PP.</rdfs:comment>
         <rdfs:label xml:lang="en">Pension benefit</rdfs:label>
         <rdfs:label xml:lang="it">Prestazione pensionistica</rdfs:label>
+        <L0:controlledVocabulary rdf:resource="https://w3id.org/italia/social-security/onto/pensions/AreaUtenza"/>
+        <L0:controlledVocabulary rdf:resource="https://w3id.org/italia/social-security/onto/pensions/CategoriaPP"/>
+        <L0:controlledVocabulary rdf:resource="https://w3id.org/italia/social-security/onto/pensions/CategoriaSIUSSPensione"/>
     </owl:Class>
 
 
@@ -4634,6 +4637,7 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
 
 
 
