@@ -1,5 +1,5 @@
 <https://w3id.org/italia/social-security/onto/pensions/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/italia/social-security/onto/pensions/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/italia/social-security/onto/pensions/1.2> .
+<https://w3id.org/italia/social-security/onto/pensions/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/italia/social-security/onto/pensions/12> .
 <https://w3id.org/italia/social-security/onto/pensions/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/CLV/> .
 <https://w3id.org/italia/social-security/onto/pensions/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/COV/> .
 <https://w3id.org/italia/social-security/onto/pensions/> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/italia/onto/CPV/> .
@@ -25,7 +25,7 @@
 <https://w3id.org/italia/social-security/onto/pensions/> <https://w3id.org/italia/onto/ADMS/hasTask> <https://w3id.org/italia/onto/ADMS/AnnotationTask> .
 <https://w3id.org/italia/social-security/onto/pensions/> <https://w3id.org/italia/onto/ADMS/hasTask> <https://w3id.org/italia/onto/ADMS/QueryFormulationTask> .
 <https://w3id.org/italia/social-security/onto/pensions/> <https://w3id.org/italia/onto/ADMS/hasTask> <https://w3id.org/italia/onto/ADMS/SearchTask> .
-<https://w3id.org/italia/social-security/onto/pensions/> <https://w3id.org/italia/onto/ADMS/last> <https://w3id.org/italia/social-security/onto/pensions/1.2> .
+<https://w3id.org/italia/social-security/onto/pensions/> <https://w3id.org/italia/onto/ADMS/last> <https://w3id.org/italia/social-security/onto/pensions/12> .
 <https://w3id.org/italia/social-security/onto/pensions/> <https://w3id.org/italia/onto/ADMS/officialURI> "https://w3id.org/italia/social-security/onto/pensions"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/italia/social-security/onto/pensions/> <https://w3id.org/italia/onto/ADMS/prefix> "INPSPensions" .
 <https://w3id.org/italia/social-security/onto/pensions/> <https://w3id.org/italia/onto/ADMS/semanticAssetInUse> <https://w3id.org/italia/data/project/NDC> .
@@ -1400,7 +1400,7 @@ _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1
 <https://w3id.org/italia/social-security/onto/pensions/AreaUtenza> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid47 .
 <https://w3id.org/italia/social-security/onto/pensions/AreaUtenza> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid48 .
 <https://w3id.org/italia/social-security/onto/pensions/AreaUtenza> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid49 .
-<https://w3id.org/italia/social-security/onto/pensions/AreaUtenza> <https://w3id.org/italia/onto/l0/controlledVocabulary> "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza" .
+<https://w3id.org/italia/social-security/onto/pensions/AreaUtenza> <https://w3id.org/italia/onto/l0/controlledVocabulary> <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza> .
 <https://w3id.org/italia/social-security/onto/pensions/AreaUtenza> <http://www.w3.org/2000/01/rdf-schema#label> "Area Utenza"@it .
 <https://w3id.org/italia/social-security/onto/pensions/AreaUtenza> <http://www.w3.org/2000/01/rdf-schema#label> "User Area"@en .
 <https://w3id.org/italia/social-security/onto/pensions/AreaUtenza> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica le 3 aree per il quale il beneficiario \u00E8 stato preso in carico dai servizi sociali (famiglia e minori, disabilit\u00E0/nonautosufficienza e povert\u00E0 ed esclusione sociale) da indicare obbligatoriamente nel caso in cui sia comunicata a sistema lapresa in carico."@it .
@@ -1453,7 +1453,7 @@ _:genid55 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/soc
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaPP> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaPP> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid56 .
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaPP> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid57 .
-<https://w3id.org/italia/social-security/onto/pensions/CategoriaPP> <https://w3id.org/italia/onto/l0/controlledVocabulary> "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_pensione" .
+<https://w3id.org/italia/social-security/onto/pensions/CategoriaPP> <https://w3id.org/italia/onto/l0/controlledVocabulary> <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_pensione> .
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaPP> <http://www.w3.org/2000/01/rdf-schema#label> "Categoria PP"@it .
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaPP> <http://www.w3.org/2000/01/rdf-schema#label> "PB Category"@en .
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaPP> <http://www.w3.org/2000/01/rdf-schema#comment> "Classifica la prestazione pensionistica erogata dall'INPS. Permette di risalire al tipo di trattamento che viene erogato. Ciascun trattamento \u00E8, infatti, individuato tramite un apposito acronimo che esprime il fondo erogante e/o la tipologia di trattamento."@it .
@@ -1469,7 +1469,7 @@ _:genid58 <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/italia/soc
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaSIUSSPensione> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid59 .
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaSIUSSPensione> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid60 .
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaSIUSSPensione> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid61 .
-<https://w3id.org/italia/social-security/onto/pensions/CategoriaSIUSSPensione> <https://w3id.org/italia/onto/l0/controlledVocabulary> "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss" .
+<https://w3id.org/italia/social-security/onto/pensions/CategoriaSIUSSPensione> <https://w3id.org/italia/onto/l0/controlledVocabulary> <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> .
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaSIUSSPensione> <http://www.w3.org/2000/01/rdf-schema#label> "Categoria SIUSS Pensione"@it .
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaSIUSSPensione> <http://www.w3.org/2000/01/rdf-schema#label> "Pension SIUSS Category"@en .
 <https://w3id.org/italia/social-security/onto/pensions/CategoriaSIUSSPensione> <http://www.w3.org/2000/01/rdf-schema#comment> "Class identifying the SIUSS performance category. Only social and non-contributory pension benefits have an associated SIUSS code"@en .

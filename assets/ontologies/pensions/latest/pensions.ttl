@@ -19,7 +19,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 INPSPensions: a owl:Ontology ;
-    owl:versionIRI INPSPensions:12 ;
+    owl:versionIRI INPSPensions:1.2 ;
     owl:imports CLV:,
         COV:,
         CPV:,
@@ -1582,7 +1582,7 @@ INPSPensions:AreaUtenza a owl:Class ;
         "User Area"@en ;
     rdfs:comment "Indica le 3 aree per il quale il beneficiario è stato preso in carico dai servizi sociali (famiglia e minori, disabilità/nonautosufficienza e povertà ed esclusione sociale) da indicare obbligatoriamente nel caso in cui sia comunicata a sistema lapresa in carico."@it,
         "Indicates the 3 areas for which the beneficiary has been taken in charge by social services (family and minors, disability/non-self-sufficiency and poverty and social exclusion) to be indicated mandatorily in the event that the taking in charge is communicated to the system."@en ;
-    L0:controlledVocabulary "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza" .
+    L0:controlledVocabulary <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza> .
 
 INPSPensions:AssociazioneSindacale a owl:Class ;
     rdfs:label "Associazione sindacale"@it,
@@ -1629,7 +1629,7 @@ INPSPensions:CategoriaPP a owl:Class ;
         "PB Category"@en ;
     rdfs:comment "Classifica la prestazione pensionistica erogata dall'INPS. Permette di risalire al tipo di trattamento che viene erogato. Ciascun trattamento è, infatti, individuato tramite un apposito acronimo che esprime il fondo erogante e/o la tipologia di trattamento."@it,
         "Classifies the pension benefit provided by INPS. It allows you to trace the type of treatment that is paid. In fact, each treatment is identified through a acronym that expresses the fund and/or the pension profile."@en ;
-    L0:controlledVocabulary "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_pensione" .
+    L0:controlledVocabulary <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_pensione> .
 
 INPSPensions:CategoriaSIUSSPensione a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
@@ -1645,7 +1645,7 @@ INPSPensions:CategoriaSIUSSPensione a owl:Class ;
         "Pension SIUSS Category"@en ;
     rdfs:comment "Class identifying the SIUSS performance category. Only social and non-contributory pension benefits have an associated SIUSS code"@en,
         "Classe che identifica la categoria prestazione SIUSS. Solo prestazioni pensionistiche assistenziali e non contributive possiedono un codice SIUSS associato"@it ;
-    L0:controlledVocabulary "https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss" .
+    L0:controlledVocabulary <https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss> .
 
 INPSPensions:CittadinoItalianoPerNaturalizzazione a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
