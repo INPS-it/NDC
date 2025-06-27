@@ -1,0 +1,815 @@
+openapi: 3.0.3
+info:
+  title: Schema API del WaaS Consultazione Prestazione Pensionistica
+  description: "Schema API del WaaS Consultazione Prestazione Pensionistica. Lo schema API preso in esempio è relativo all'e-service pubblicato sulla PDND al seguente link https://api.inps.it/pdnd/rest/waas-consultazione-pensione-sociale/v1 ed è utilizzato anche per la costruzione delle API di altri e-services pubblicati sulla PDND: https://api.inps.it/pdnd/rest/waas-consultazione-assegno-sociale/v1, https://api.inps.it/pdnd/rest/waas-consultazione-invalidita-civile/v1, https://api.inps.it/pdnd/rest/waas-consultazione-pensione-non-udenti/v1 e https://api.inps.it/pdnd/rest/waas-consultazione-pensione-non-vedenti/v1."
+  x-summary: "Servizio rivolto alla consultazione della prestazione Pensione sociale. Codice SIUSS=A4.09"
+  version: '1.0.0'
+paths: {}
+components:
+  responses:
+    PuntualeResponse:
+      description: Richiesta elaborata
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PuntualeResponse'
+          example:
+            beneficiario:
+              codice_fiscale: 'AAAAAA00A00A000A'
+              cognome: 'Rossi'
+              nome: 'Andrea'
+              anno_nascita: '1980'
+              luogo_nascita: 'Genova'
+              codice_cittadinanza: '002'
+              codice_seconda_cittadinanza: '004'
+              indirizzo:
+                codice_regione: '01'
+                codice_comune: 'A562'
+                codice_nazione: 'ITA'
+            prestazione:
+              denominazione_prestazione: 'Nome descrittivo della prestazione'
+              erogazioni:
+                - data_inizio: '2021-11-22'
+                  data_fine: '2022-11-22'
+                  importo_mensile: 150.00
+                  periodo: 12
+              codice_prestazione_siuss: 'AA.AA'
+    PuntualePeriodicoResponse:
+      description: Richiesta elaborata
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PuntualeResponse'
+          example:
+            beneficiario:
+              codice_fiscale: 'AAAAAA00A00A000A'
+              cognome: 'Rossi'
+              nome: 'Andrea'
+              anno_nascita: '1980'
+              luogo_nascita: 'Genova'
+              codice_cittadinanza: '002'
+              codice_seconda_cittadinanza: '004'
+              indirizzo:
+                codice_regione: '01'
+                codice_comune: 'A562'
+                codice_nazione: 'ITA'
+            prestazione:
+              denominazione_prestazione: 'Nome descrittivo della prestazione'
+              erogazioni:
+                - data_inizio: '2021-11-22'
+                  data_fine: '2022-11-22'
+                  importo_mensile: 150.00
+                  periodo: 12
+              codice_prestazione_siuss: 'AA.AA'
+    PuntualeUnaTantumResponse:
+      description: Richiesta elaborata
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PuntualeResponse'
+          example:
+            beneficiario:
+              codice_fiscale: 'AAAAAA00A00A000A'
+              cognome: 'Rossi'
+              nome: 'Andrea'
+              anno_nascita: '1980'
+              luogo_nascita: 'Genova'
+              codice_cittadinanza: '002'
+              codice_seconda_cittadinanza: '004'
+              indirizzo:
+                codice_regione: '01'
+                codice_comune: 'A562'
+                codice_nazione: 'ITA'
+            prestazione:
+              denominazione_prestazione: 'Nome descrittivo della prestazione'
+              erogazioni:
+                - data_inizio: '2020-11-22'
+                  data_fine: '2021-11-22'
+                  data_erogazione: '2020-11-22'
+                  importo: 550.00
+              codice_prestazione_siuss: 'AA.AA'
+    ErogazioniResponse:
+      description: Richiesta elaborata
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErogazioniResponse'
+          example:
+            - data_inizio: '2020-11-22'
+              data_fine: '2021-11-22'
+              data_erogazione: '2020-11-22'
+              importo: 550.00
+            - data_inizio: '2021-11-22'
+              data_fine: '2022-11-22'
+              importo_mensile: 150.00
+              periodo_erogazione: 12
+    UltimaErogazioneUnaTantumResponse:
+      description: Richiesta elaborata
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UltimaErogazione'
+          example:
+            data_inizio: '2020-11-22'
+            data_fine: '2021-11-22'
+            data_erogazione: '2020-11-22'
+            importo: 550.00
+            beneficiario:
+              codice_fiscale: 'AAAAAA00A00A000A'
+              cognome: 'Rossi'
+              nome: 'Andrea'
+              anno_nascita: '1980'
+              luogo_nascita: 'Genova'
+              codice_cittadinanza: '002'
+              codice_seconda_cittadinanza: '004'
+              indirizzo:
+                codice_regione: '01'
+                codice_comune: 'A562'
+                codice_nazione: 'ITA'
+    UltimaErogazionePeriodicaResponse:
+      description: Richiesta elaborata
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/UltimaErogazione'
+          example:
+            data_inizio: '2021-11-22'
+            data_fine: '2022-11-22'
+            importo_mensile: 150.00
+            periodo_erogazione: 12
+            beneficiario:
+              codice_fiscale: 'AAAAAA00A00A000A'
+              cognome: 'Rossi'
+              nome: 'Andrea'
+              anno_nascita: '1980'
+              luogo_nascita: 'Genova'
+              codice_cittadinanza: '002'
+              codice_seconda_cittadinanza: '004'
+              indirizzo:
+                codice_regione: '01'
+                codice_comune: 'A562'
+                codice_nazione: 'ITA'
+    TotaleErogatoResponse:
+      description: Richiesta elaborata
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/TotaleErogatoResponse'
+    BadGateway:
+      description: Servizi terzi non disponibili
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+          example:
+            status: 502
+            title: Bad Gateway
+            type: https://www.rfc-editor.org/rfc/rfc9110.html#name-502-bad-gateway
+            detail: 'Servizi al momento non disponibili'
+    BadRequest:
+      description: Richiesta malformata
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+          example:
+            status: 400
+            title: Bad Request
+            type: https://www.rfc-editor.org/rfc/rfc9110.html#name-400-bad-request
+            detail: >-
+              Field error in object 'puntualeRequest' on field
+              'ente.codiceEnte': rejected value [null]; cannot be null
+    NotFound:
+      description: Informazione richiesta non trovata
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+          example:
+            status: 404
+            title: Not Found
+            type: https://www.rfc-editor.org/rfc/rfc9110.html#name-404-not-found
+            detail: The required resource cannot be found
+    UnprocessableContent:
+      description: Richiesta non elaborabile
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+          example:
+            status: 422
+            title: Unprocessable Content
+            type: >-
+              https://www.rfc-editor.org/rfc/rfc9110.html#name-422-unprocessable-content
+            detail: "Dati non trovati o non autorizzato"
+    InternalServerError:
+      description: Errore interno del server
+      content:
+        application/problem+json:
+          schema:
+            $ref: '#/components/schemas/Problem'
+          example:
+            status: 500
+            title: Internal Server Error
+            type: >-
+              https://www.rfc-editor.org/rfc/rfc9110.html#name-500-internal-server-error
+  headers:
+    Location:
+      description: URL dove verificare lo stato
+      schema:
+        type: string
+        format: uri
+    X-RateLimit-Limit:
+      $ref: 'https://teamdigitale.github.io/openapi/0.0.7/definitions.yaml#/headers/X-RateLimit-Limit'
+    X-RateLimit-Remaining:
+      $ref: 'https://teamdigitale.github.io/openapi/0.0.7/definitions.yaml#/headers/X-RateLimit-Remaining'
+    X-RateLimit-Reset:
+      $ref: 'https://teamdigitale.github.io/openapi/0.0.7/definitions.yaml#/headers/X-RateLimit-Reset'
+    Retry-After:
+      $ref: 'https://teamdigitale.github.io/openapi/0.0.7/definitions.yaml#/headers/Retry-After'
+    Cache-Control:
+      description: "Informazioni di gestione della cache: no-cache"
+      schema:
+        type: string
+  schemas:
+    PuntualeResponse:
+      type: object
+      required:
+        - beneficiario
+        - prestazione
+      properties:
+        beneficiario:
+          $ref: '#/components/schemas/Beneficiario'
+        prestazione:
+          $ref: '#/components/schemas/Prestazione'
+    MassivaRequest:
+      type: object
+      required:
+        - ente
+        - beneficiari
+      properties:
+        ente:
+          $ref: '#/components/schemas/EnteInput'
+        beneficiari:
+          type: array
+          items:
+            $ref: '#/components/schemas/CodiceFiscale'
+    MassivaResponse:
+      type: array
+      items:
+        oneOf:
+          - $ref: '#/components/schemas/MassivaResponseItemPrestazione'
+          - $ref: '#/components/schemas/MassivaResponseItemProblem'
+      example:
+        - beneficiario:
+            codice_fiscale: 'AAAAAA00A00A000A'
+            cognome: 'Rossi'
+            nome: 'Andrea'
+            anno_nascita: '1980'
+            luogo_nascita: 'Genova'
+            codice_cittadinanza: '002'
+            codice_seconda_cittadinanza: '004'
+            indirizzo:
+              codice_regione: '01'
+              codice_comune: 'A562'
+              codice_nazione: 'ITA'
+          prestazione:
+            denominazione_prestazione: 'Nome descrittivo della prestazione'
+            erogazioni:
+              - data_inizio: '2020-11-22'
+                data_fine: '2021-11-22'
+                data_erogazione: '2020-11-22'
+                importo: 550.00
+            codice_prestazione_siuss: 'AA.AA'
+        - beneficiario:
+            codice_fiscale: 'BBBBBB00A00A000A'
+          problem:
+            status: 502
+            title: Bad Gateway
+            type: https://www.rfc-editor.org/rfc/rfc9110.html#name-502-bad-gateway
+            detail: 'Servizi al momento non disponibili'
+
+    MassivaResponseItemPrestazione:
+      type: object
+      required:
+        - beneficiario
+        - prestazione
+      properties:
+        beneficiario:
+          $ref: '#/components/schemas/Beneficiario'
+        prestazione:
+          $ref: '#/components/schemas/Prestazione'
+
+    MassivaResponseItemProblem:
+      type: object
+      required:
+        - beneficiario
+        - problem
+      properties:
+        beneficiario:
+          $ref: '#/components/schemas/BeneficiarioCFInput'
+        problem:
+          $ref: '#/components/schemas/Problem'
+
+    MassivaStatus:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        data_richiesta:
+          type: string
+          format: date-time
+        stato:
+          type: string
+          enum:
+            - IN_CARICO
+            - IN_ELABORAZIONE
+            - COMPLETATA
+    Prestazione:
+      type: object
+      required:
+        - denominazione_prestazione
+        - erogazioni
+      properties:
+        codice_prestazione_siuss:
+          type: string
+          minLength: 5
+          maxLength: 10
+          example: XXXXX
+        denominazione_prestazione:
+          type: string
+          description: Denominazione della Prestazione
+          minLength: 1
+          maxLength: 200
+          example: Denominazione Prestazione
+        erogazioni:
+          type: array
+          items:
+            $ref: '#/components/schemas/Erogazione'
+          description: Elenco delle prestazioni erogate
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+        codice_prestazione_siuss:
+          '@id' : haCategoriaSIUSSPensione
+          '@type': '@id'
+          '@context':
+            '@base': 'https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_categoria_prestazione_siuss/'
+        denominazione_prestazione: descrizionePensioneSIUSS
+      example:
+          codice_prestazione_siuss: 'AA.AA'
+          denominazione_prestazione: 'Pensione sociale'
+    ErogazioniResponse:
+      type: array
+      items:
+        $ref: '#/components/schemas/Erogazione'
+      description: Elenco delle prestazioni erogate
+    UltimaErogazione:
+      allOf:
+        - type: object
+          required:
+            - beneficiario
+          properties:
+            beneficiario:
+              $ref: '#/components/schemas/Beneficiario'
+        - $ref: '#/components/schemas/Erogazione'
+    TotaleErogatoResponse:
+      type: object
+      required:
+        - importo_totale_erogato
+        - beneficiario
+      properties:
+        importo_totale_erogato:
+          type: number
+          format: double
+        beneficiario:
+          $ref: '#/components/schemas/Beneficiario'
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/PagamentoPrestazionePensionistica
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+        importo_totale_erogato: importoTotaleErogato
+      example:
+          importo_totale_erogato: 550.00
+    Erogazione:
+      allOf:
+        - type: object
+          required:
+            - data_inizio
+            - data_fine
+          properties:
+            data_inizio:
+              type: string
+              description: Data Inizio della Prestazione
+              format: date
+              example: '2020-11-22'
+            data_fine:
+              type: string
+              description: Data Fine della Prestazione
+              format: date
+              example: '2021-11-22'
+            data_erogazione:
+              type: string
+              description: Data Erogazione della Prestazione
+              format: date
+              example: '2020-11-22'
+            data_evento:
+              type: string
+              format: date
+            importo:
+              type: number
+              description: Importo della Prestazione
+              format: double
+              example: 550.00
+            importo_quota_ente:
+              type: number
+              format: double
+            importo_quota_utente:
+              type: number
+              format: double
+            importo_quota_ssn:
+              type: number
+              format: double
+            importo_quota_richiesta:
+              type: number
+              format: double
+            importo_soglia_isee:
+              type: number
+              format: double
+            importo_mensile:
+              type: number
+              description: Importo della Prestazione se erogato mensilmente
+              format: double
+              example: 550.00
+            ore_servizio_mensile:
+              type: number
+              format: double
+            periodo_erogazione:
+              type: integer
+              format: int32
+              minimum: 1
+              maximum: 12
+              example: 1
+            area_utenza:
+              $ref: '#/components/schemas/AreaUtenza'
+            presenza_prova_mezzi:
+              $ref: '#/components/schemas/PresenzaProvaMezzi'
+            carattere_prestazione:
+              $ref: '#/components/schemas/CaratterePrestazione'
+          x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/PagamentoPrestazionePensionistica
+          x-jsonld-context:
+            id: '@id'
+            "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+            data_inizio: dataInizioPrestazione
+            data_fine: dataFinePrestazione
+            data_erogazione: dataErogazioneOccasionale
+            data_evento: dataEventoErogazione
+            importo: importoPagamentoPrestazionePensionistica
+            importo_mensile: importoPagamentoPrestazionePensionistica
+            periodo_erogazione: periodoErogazione
+          example:
+            data_inizio: '2020-11-22'
+            data_fine: '2021-11-22'
+            data_erogazione: '2020-11-22'
+            data_evento: '2020-11-22'
+            importo: 550.00
+            importo_mensile: 550.00
+            periodo_erogazione: 1
+    CaratterePrestazione:
+      type: object
+      properties:
+        codice:
+          type: string
+          enum:
+            - '1'
+            - '2'
+          description: 1 - Periodico 2 - Occasionale (unica soluzione)
+          example: '1'
+        descrizione:
+          type: string
+          enum:
+            - Periodico
+            - Occasionale (unica soluzione)
+          example: Periodico
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica
+      x-jsonld-context:
+          id: '@id'
+          "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+          codice: codiceCaratterePrestazione
+          descrizione: descrizioneCaratterePrestazione
+      example:
+          codice: '1'
+          descrizione: 'Periodico'
+    AreaUtenza:
+      type: object
+      properties:
+        codice:
+          type: string
+          enum:
+            - '1'
+            - '2'
+            - '3'
+          description: >-
+            1 - Famiglia e minori 2 - Disabilità e Non autosufficienza 3
+            - Povertà ed esclusione sociale
+          example: '1'
+        descrizione:
+          type: string
+          enum:
+            - Famiglia e minori
+            - Disabilità e Non autosufficienza
+            - Povertà ed esclusione sociale
+          example: Famiglia e minori
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/AreaUtenza
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+        codice:
+          '@id' : haAreaUtenza
+          '@type': '@id'
+          '@context':
+            '@base': 'https://w3id.org/italia/social-security/controlled-vocabulary/pensions/tipo_area_utenza/'
+        descrizione: descrizioneAreaUtenza
+      example:
+          codice: '1'
+          descrizione: 'Famiglia e minori'
+    PresenzaProvaMezzi:
+      type: object
+      properties:
+        codice:
+          type: string
+          enum:
+            - '1'
+            - '2'
+            - '3'
+            - '4'
+          description: >-
+            1 - Prestazione soggetta a ISEE 2 - Prestazione soggetta a
+            prova dei mezzi, ma non attraverso ISEE (es. prestaz. inps,
+            agevolaz. tribut.) 3 - Prestazione in generale soggetta a
+            ISEE, ma sottratta alla prova dei mezzi per lo specifico
+            beneficiario in virtù di altri criteri di bisogno (es. asilo
+            nido per bambino con disabilità o in famiglie numerose,
+            ecc.) 4 - Prestazione non soggetta a prova dei mezzi
+            (assenza di criteri economici nella disciplina
+            dell'erogazione
+          example: '1'
+        descrizione:
+          type: string
+          enum:
+            - Prestazione soggetta a ISEE
+            - >-
+              Prestazione soggetta a prova dei mezzi, ma non attraverso
+              ISEE (es. prestaz. inps, agevolaz. tribut.)
+            - >-
+              Prestazione in generale soggetta a ISEE, ma sottratta alla
+              prova dei mezzi per lo specifico beneficiario in virtù di
+              altri criteri di bisogno (es. Asilo nido per bambino con
+              disabilità o in famiglie numerose, ecc.)
+            - >-
+              Prestazione non soggetta a prova dei mezzi (assenza di
+              criteri economici nella disciplina dell'erogazione
+          example: Prestazione soggetta a ISEE
+    PuntualeRequest:
+      type: object
+      required:
+        - ente
+        - beneficiario
+      properties:
+        ente:
+          $ref: '#/components/schemas/EnteInput'
+        beneficiario:
+          $ref: '#/components/schemas/BeneficiarioCFInput'
+    EnteInput:
+      type: object
+      required:
+        - codice_ente
+        - codice_comune
+        - codice_ufficio
+        - codice_fiscale_operatore_ente
+      properties:
+        codice_ente:
+          type: string
+          description: Si intende l’ente chiamante il servizio
+          minLength: 1
+          maxLength: 32
+          example: '123456'
+        denominazione_ente:
+          type: string
+          description: Denominazione dell'Ente chiamante
+          minLength: 1
+          maxLength: 128
+          example: EnteTest
+        codice_comune:
+          type: string
+          description: Codice comune sede legale dell’Ente in codifica Ministero Finanze
+          minLength: 4
+          maxLength: 4
+          example: A562
+        codice_ufficio:
+          type: string
+          description: Codice Ufficio
+          minLength: 1
+          maxLength: 16
+          example: H501
+        codice_fiscale_operatore_ente:
+          $ref: '#/components/schemas/CodiceFiscale'
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/Ente
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+        codice_ente: https://w3id.org/italia/onto/COV/IPAcode
+        denominazione_ente: https://w3id.org/italia/onto/COV/legalName
+        codice_comune:
+          '@id': https://w3id.org/italia/onto/CLV/hasCity
+          '@context':
+              label: http://www.w3.org/2000/01/rdf-schema#label
+        codice_ufficio: codiceUfficioEnte
+        codice_fiscale_operatore_ente: codiceFiscaleOperatoreEnte
+      example:
+          codice_ente: '123456'
+          denominazione_ente: 'EnteTest'
+          codice_comune:
+            label: 'A562'
+          codice_ufficio: 'H501'
+          codice_fiscale_operatore_ente: 'AAAAAA00A00A000A'
+    BeneficiarioCFInput:
+      type: object
+      required:
+        - codice_fiscale
+      properties:
+        codice_fiscale:
+          $ref: '#/components/schemas/CodiceFiscale'
+    Beneficiario:
+      type: object
+      required:
+        - codice_fiscale
+        - cognome
+        - nome
+        - anno_nascita
+        - luogo_nascita
+        - codice_cittadinanza
+      properties:
+        codice_fiscale:
+          $ref: '#/components/schemas/CodiceFiscale'
+        cognome:
+          type: string
+          description: Cognome del beneficiario della prestazione
+          minLength: 1
+          maxLength: 36
+          example: Rossi
+        nome:
+          type: string
+          description: Nome del beneficiario della prestazione
+          minLength: 1
+          maxLength: 36
+          example: Mario
+        anno_nascita:
+          type: string
+          description: Anno di nascita del beneficiario della prestazione
+          format: integer
+          example: '1980'
+        luogo_nascita:
+          type: string
+          description: Codice del luogo di nascita del beneficiario della prestazione
+          minLength: 1
+          maxLength: 100
+          example: Genova
+        codice_cittadinanza:
+          type: string
+          description: >-
+            Codice ISO 3166 della cittadinanza del beneficiario della
+            prestazione
+          minLength: 3
+          maxLength: 3
+          example: '002'
+        codice_seconda_cittadinanza:
+          type: string
+          description: >-
+            Codice ISO 3166 della eventuale seconda cittadinanza del
+            beneficiario della prestazione
+          minLength: 3
+          maxLength: 3
+          example: '004'
+        indirizzo:
+          $ref: '#/components/schemas/Indirizzo'
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/TitolarePP
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+        codice_fiscale: https://w3id.org/italia/onto/CPV/taxCode
+        cognome: https://w3id.org/italia/onto/CPV/familyName
+        nome: https://w3id.org/italia/onto/CPV/givenName
+        anno_nascita: https://w3id.org/italia/onto/CPV/dateOfBirth
+        luogo_nascita:
+          '@id': https://w3id.org/italia/onto/CPV/hasBirthPlace
+          '@context':
+              label: http://www.w3.org/2000/01/rdf-schema#label
+        codice_cittadinanza:
+          '@id': https://w3id.org/italia/onto/RPO/isCurrentlyPredominantlyCitizen
+          '@context':
+              citizenship_code: https://w3id.org/italia/onto/RPO/citizenshipCode
+        codice_seconda_cittadinanza:
+          '@id': https://w3id.org/italia/onto/RPO/isCurrentlyCitizen
+          '@context':
+              second_citizenship_code: https://w3id.org/italia/onto/RPO/citizenshipCode
+      example:
+        codice_fiscale: 'AAAAAA00A00A000A'
+        cognome: 'Rossi'
+        nome: 'Andrea'
+        anno_nascita: '1980'
+        luogo_nascita:
+          label: 'Genova'
+        codice_cittadinanza:
+          citizenship_code: '002'
+        codice_seconda_cittadinanza:
+          second_citizenship_code: '004'
+    Indirizzo:
+      type: object
+      required:
+        - codice_regione
+        - codice_comune
+        - codice_nazione
+      properties:
+        codice_regione:
+          type: string
+          description: codice regione
+          minLength: 2
+          maxLength: 2
+          example: '01'
+        codice_comune:
+          type: string
+          description: codice comune (codifica Ministero Finanze)
+          minLength: 4
+          maxLength: 4
+          example: A562
+        codice_nazione:
+          type: string
+          description: Codice ISO 3166 della nazione
+          minLength: 3
+          maxLength: 3
+          example: ITA
+      x-jsonld-type: https://w3id.org/italia/onto/CLV/Address
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/onto/CLV/
+        codice_regione:
+          '@id': hasRegion
+          '@context':
+              label: http://www.w3.org/2000/01/rdf-schema#label
+        codice_comune:
+          '@id': hasCity
+          '@context':
+              label: http://www.w3.org/2000/01/rdf-schema#label
+        codice_nazione:
+          '@id': hasCountry
+          '@type': '@id'
+          '@context':
+              "@base": 'https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/foreign-countries/'
+              id: '@id'
+              label: http://www.w3.org/2000/01/rdf-schema#label
+      example:
+        codice_regione:
+          label: '01'
+        codice_comune:
+          label: 'A562'
+        codice_nazione:
+          id: ITA
+          label: ITALIA
+    CodiceFiscale:
+      type: string
+      pattern: >-
+        ^([A-Za-z]{6}\d{2}[A-Za-z]\d{2}[A-Za-z][A-Za-z0-9]{3}[A-Za-z])|(\d{11}
+        {0,5})$
+      example: AAAAAA00A00A000A
+    Problem:
+      type: object
+      additionalProperties: false
+      properties:
+        detail:
+          type: string
+          description: Un testo di descrizione comprensibile del problema occorso
+          example: Connection to database timed out
+          maxLength: 4096
+        instance:
+          type: string
+          description: >-
+            Collegamento ad una specifica occorrenza dove si è verificato il
+            problema
+          format: uri
+          maxLength: 4096
+        status:
+          maximum: 599
+          minimum: 100
+          type: integer
+          description: Codice http restituito
+          format: int32
+          example: 503
+        title:
+          type: string
+          description: Descrizione breve ed esplicativa del problema occorso
+          maxLength: 4096
+        type:
+          type: string
+          description: URI assoluta per la descrizione del problema occorso
+          format: uri
+          example: https://tools.ietf.org/html/rfc7231#section-6.6.4
+          default: about:blank
+          maxLength: 4096
+

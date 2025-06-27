@@ -1,0 +1,83 @@
+openapi: 3.0.1
+info:
+  title: Schema API del Dettaglio Domande delle Pensioni
+  description: Schema API del Dettaglio Domande delle Pensioni relativo all'e-service pubblicato sulla PDND al seguente link https://api.inps.it/pdnd/rest/DettaglioDomande/v1
+  version: v1
+paths: {}
+components:
+  schemas:
+    DettaglioDomandeRequest:
+      type: object
+      properties:
+        codiceFiscale:
+          type: string
+          nullable: true
+        numeroDomanda:
+          type: string
+          nullable: true
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/
+        codiceFiscale: https://w3id.org/italia/onto/CPV/taxCode
+        numeroDomanda: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/numeroDomandaPensione
+      example:
+        codiceFiscale: 'AAAAAA00A00A000A'
+        numeroDomanda: '6026849300000'
+    DettaglioDomandeResponse:
+      type: object
+      properties:
+        messaggio:
+          type: string
+          nullable: true
+        esecuzione:
+          type: boolean
+        codiceFiscale:
+          type: string
+          nullable: true
+        descrizioneIstanza:
+          type: string
+          nullable: true
+        statoDomanda:
+          type: string
+          nullable: true
+        dataPresentazioneDomanda:
+          type: string
+          nullable: true
+        dataUltimoAggiornamento:
+          type: string
+          nullable: true
+        dataDecorrenza:
+          type: string
+          nullable: true
+        fonteDomanda:
+          type: string
+          nullable: true
+        chiavePensione:
+          type: string
+          nullable: true
+        chiavePensioneGenerata:
+          type: string
+          nullable: true
+      additionalProperties: false
+    ElencoDomandeRequest:
+      type: object
+      properties:
+        codiceFiscale:
+          type: string
+          nullable: true
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/
+        codiceFiscale: https://w3id.org/italia/onto/CPV/taxCode
+      example:
+        codiceFiscale: 'AAAAAA00A00A000A'
+      additionalProperties: false
+    ElencoDomandeResponse:
+      type: object
+      properties:
+        messaggio:
+          type: string
+          nullable: true
+        esecuzione:
+          type: boolean
+      additionalProperties: false

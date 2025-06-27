@@ -1,0 +1,727 @@
+openapi: 3.0.0
+info:
+  title: Schema API del WaaS Consultazione Pensioni
+  description: Schema API del WaaS Consultazione Pensioni relativo all'e-service pubblicato sulla PDND al seguente link https://api.inps.it/pdnd/rest/waas-consultazione-pensioni/v1
+  version: "1.0.0"
+  termsOfService: https://example.com/terms/
+  x-summary: "Servizio rivolto alla consultazione delle pensioni"
+  x-api-id: "waas-pensioni-consultazione"
+paths: {}
+components:
+  responses:
+    BadRequest:
+      description: |
+        Il payload della richiesta non rispetta la sintassi prevista dalla risorsa
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+          example:
+              status: 400
+              title: BAD_REQUEST
+              type: https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.1
+              detail: Il payload della richiesta non rispetta la sintassi prevista dalla risorsa
+    NotFound:
+      description: |
+        La URL o l'azione richiesta non individuano alcuna risorsa
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+          example:
+              status: 404
+              title: NOT_FOUND
+              type: https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.4
+              detail: La URL o l'azione richiesta non individuano alcuna risorsa
+    UnprocessableContent:
+      description: |
+        La richiesta e' sintatticamente corretta, ma i valori forniti non consentono di elaborarla
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+          example:
+              status: 422
+              title: UNPROCESSABLE_CONTENT
+              type: https://datatracker.ietf.org/doc/html/rfc7231#section-6.5.11
+              detail: La richiesta e' sintatticamente corretta, ma i valori forniti non consentono di elaborarla
+    InternalServerError:
+      description: |
+        Il server non e' stato in grado di elaborare la richiesta per un problema interno
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+          example:
+              status: 500
+              title: INTERNAL_SERVER_ERROR
+              type: https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.1
+              detail: Il server non e' stato in grado di elaborare la richiesta per un problema interno
+    BadGateway:
+      description: |
+        Il server non e' stato in grado di elaborare la richiesta per un malfunzionamento di un servizio terzo
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+          example:
+              status: 502
+              title: BAD_GATEWAY
+              type: https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.3
+              detail: Il server non e' stato in grado di elaborare la richiesta per un malfunzionamento di un servizio terzo
+    Connectivity:
+      description: |
+        Errore Servizio non accessibile.
+      content:
+        application/problem+json:
+          schema:
+            $ref: "#/components/schemas/Problem"
+          example:
+              status: 503
+              title: CONNECTIVITY
+              type: https://datatracker.ietf.org/doc/html/rfc7231#section-6.6.5
+              detail: Errore Servizio non accessibile
+  headers:
+    Location:
+      description: URL dove verificare lo stato
+      schema:
+        type: string
+        format: uri
+    X-RateLimit-Limit:
+      $ref: 'https://teamdigitale.github.io/openapi/0.0.7/definitions.yaml#/headers/X-RateLimit-Limit'
+    X-RateLimit-Remaining:
+      $ref: 'https://teamdigitale.github.io/openapi/0.0.7/definitions.yaml#/headers/X-RateLimit-Remaining'
+    X-RateLimit-Reset:
+      $ref: 'https://teamdigitale.github.io/openapi/0.0.7/definitions.yaml#/headers/X-RateLimit-Reset'
+    Retry-After:
+      $ref: 'https://teamdigitale.github.io/openapi/0.0.7/definitions.yaml#/headers/Retry-After'
+    Cache-Control:
+      description: "Informazioni di gestione della cache: no-cache"
+      schema:
+        type: string
+  schemas:
+    PuntualeRequest:
+      description: Struttura di input
+      type: object
+      required:
+        - ente
+        - beneficiario
+      properties:
+        ente:
+          type: object
+          required:
+            - codice_ente
+            - codice_comune_ente
+            - codice_fiscale_operatore_ente
+          properties:
+            codice_ente:
+              description: Si intende l’ente chiamante il servizio
+              type: string
+              minLength: 1
+              maxLength: 32
+              example: '123456'
+            denominazione_ente:
+              description: Denominazione dell'Ente chiamante
+              type: string
+              minLength: 1
+              maxLength: 128
+              example: EnteTest
+            codice_comune_ente:
+              description: Codice comune sede legale dell’Ente in codifica Ministero Finanze
+              type: string
+              minLength: 4
+              maxLength: 4
+              example: A562
+            codice_fiscale_operatore_ente:
+              type: string
+              minLength: 1
+              maxLength: 16
+              description: "Codice Fiscale dell\u2019operatore dell\u2019ente autorizzato richiamare il servizio "
+              example: AAAAAA00A00A000A
+          x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/Ente
+          x-jsonld-context:
+            "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+            codice_ente: https://w3id.org/italia/onto/COV/IPAcode
+            denominazione_ente: https://w3id.org/italia/onto/COV/legalName
+            codice_comune_ente:
+              '@id': https://w3id.org/italia/onto/CLV/hasCity
+              '@context':
+                  label: http://www.w3.org/2000/01/rdf-schema#label
+            codice_fiscale_operatore_ente: codiceFiscaleOperatoreEnte
+          example:
+              codice_ente: '123456'
+              denominazione_ente: 'EnteTest'
+              codice_comune_ente:
+                label: 'A562'
+              codice_fiscale_operatore_ente: 'AAAAAA00A00A000A'
+        beneficiario:
+          type: object
+          required:
+            - codice_fiscale
+            - cognome
+            - nome
+            - codice_comune_residenza
+            - cap_residenza
+          properties:
+            codice_fiscale:
+              description: Codice fiscale del beneficiario della prestazione
+              type: string
+              minLength: 16
+              maxLength: 16
+              example: AAAAAA00A00A000A
+            cognome:
+              description: "Cognome del beneficiario della prestazione "
+              type: string
+              minLength: 1
+              maxLength: 36
+              example: Rossi
+            nome:
+              description: Nome del beneficiario della prestazione
+              type: string
+              minLength: 1
+              maxLength: 36
+              example: Mario
+            provincia_residenza:
+              description: Sigla della provincia di residenza del beneficiario della prestazione
+              type: string
+              minLength: 2
+              maxLength: 2
+            codice_comune_residenza:
+              description: "Codice comune di residenza del beneficiario della prestazione "
+              type: string
+              minLength: 4
+              maxLength: 4
+            cap_residenza:
+              description: Codice di avviamento postale di residenza del beneficiario della prestazione
+              type: string
+              minLength: 5
+              maxLength: 5
+          x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/TitolarePP
+          x-jsonld-context:
+            "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+            codice_fiscale: https://w3id.org/italia/onto/CPV/taxCode
+            cognome: https://w3id.org/italia/onto/CPV/familyName
+            nome: https://w3id.org/italia/onto/CPV/givenName
+            provincia_residenza:
+              '@id': https://w3id.org/italia/onto/CLV/hasProvince
+              '@context':
+                  sigla_provincia: https://w3id.org/italia/onto/CLV/acronym
+            codice_comune_residenza:
+              '@id': https://w3id.org/italia/onto/CPV/residentIn
+              '@context':
+                  label: http://www.w3.org/2000/01/rdf-schema#label
+            cap_residenza: https://w3id.org/italia/onto/CLV/postCode
+          example:
+            codice_fiscale: 'AAAAAA00A00A000A'
+            cognome: 'Rossi'
+            nome: 'Andrea'
+            provincia_residenza:
+              sigla_provincia: "SR"
+            codice_comune_residenza:
+              label: 'B603'
+            cap_residenza: '00000'
+    PuntualeResponse:
+      description: Struttura di output
+      type: object
+      required:
+        - beneficiario
+      properties:
+        beneficiario:
+          $ref: '#/components/schemas/Beneficiario'
+        pensioni:
+          type: array
+          items:
+            $ref: '#/components/schemas/Pensione'
+    UltimaErogazioneResponse:
+      description: Struttura di output
+      type: object
+      required:
+        - beneficiario
+      properties:
+        beneficiario:
+          $ref: '#/components/schemas/Beneficiario'
+        pensioni:
+          $ref: '#/components/schemas/Pensione'
+    TotaleErogazioneResponse:
+      description: Struttura di output
+      type: object
+      required:
+        - beneficiario
+      properties:
+        beneficiario:
+          $ref: '#/components/schemas/Beneficiario'
+        totale_pensioni:
+          description: Totale Importo Base lordo della pensione
+          type: number
+          format: double
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/PagamentoPrestazionePensionistica
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+        totale_pensioni: importoTotaleErogato
+      example:
+          totale_pensioni: 550.00
+    Pensione:
+      type: object
+      properties:
+        descrizione:
+          description: Descrizione della pensione
+          type: string
+        sigla_pensione:
+          description: Sigla della pensione
+          type: string
+        identificativo:
+          description: Codice identificativo della pensione
+          type: string
+        sede:
+          description: Sede INPS di gestione della pensione
+          type: string
+        data_decorrenza:
+          description: "Data della decorrenza originaria della pensione "
+          type: string
+        importo_base_lordo:
+          description: Importo Base lordo della pensione
+          type: number
+          format: double
+        vigente:
+          description: True indica che la pensione è in essere, false che la pensione è eliminata
+          type: boolean
+        decorrenza_eliminazione:
+          description: decorrenza dell’eliminazione qualora la pensione risulti NON vigente
+          type: string
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+        descrizione: descrizioneCategoriaPensione
+        sigla_pensione: siglaPensione
+        identificativo: https://w3id.org/italia/social-security/onto/ObisModel/chiavePensione
+        sede: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+        data_decorrenza: dataDecorrenzaPrestazionePensionistica
+        importo_base_lordo: importoPagamentoPrestazionePensionistica
+        vigente: prestazioneVigente
+        decorrenza_eliminazione: dataDecorrenzaEliminazionePrestazionePensionistica
+      example:
+          descrizione: 'PENSIONE DI INVALIDITA'
+          sigla_pensione: ' IO - PENSIONE DI INVALIDITA E DI INABILITA E ASSEGNO DI INVALIDITA LIQUIDATO, A CARICO DEL FONDO PENSIONI LAVORATORI DIPENDENTI'
+          identificativo: '002760060015168'
+          sede: 'SIRACUSA'
+          data_decorrenza: "2020-11-22"
+          importo_base_lordo: 570.35
+          vigente: false
+          decorrenza_eliminazione: '200009'
+    Beneficiario:
+      type: object
+      required:
+        - codice_fiscale
+      properties:
+        codice_fiscale:
+          description: "Codice fiscale del beneficiario della prestazione "
+          type: string
+          example: AAAAAA00A00A000A
+          minLength: 16
+          maxLength: 16
+        cognome:
+          description: "Cognome del beneficiario della prestazione "
+          type: string
+          example: Rossi
+          minLength: 1
+          maxLength: 36
+        nome:
+          description: Nome del beneficiario della prestazione
+          type: string
+          example: Mario
+          minLength: 1
+          maxLength: 36
+        data_nascita:
+          description: Data di nascita del beneficiario della prestazione
+          type: string
+          format: date
+          minLength: 10
+          maxLength: 10
+        codice_comune_nascita:
+          description: Codice comune del luogo di nascita del beneficiario della prestazione
+          type: string
+          minLength: 4
+          maxLength: 4
+        luogo_nascita:
+          description: Denominazione del luogo di nascita del beneficiario della prestazione
+          type: string
+          example: Genova
+          minLength: 1
+          maxLength: 100
+        codice_stato_nascita:
+          description: Codice ISO 3166 della nazione di nascita del beneficiario della prestazione
+          type: string
+          minLength: 1
+        codice_cittadinanza:
+          description: "Codice ISO 3166 della cittadinanza del beneficiario della prestazione "
+          type: string
+          minLength: 3
+          maxLength: 3
+        descrizione_cittadinanza:
+          description: Descrizione della cittadinanza del beneficiario della prestazione
+          type: string
+          minLength: 1
+          maxLength: 100
+        indirizzo:
+          type: object
+          required:
+            - tipo_indirizzo
+            - indirizzo_estero
+            - descrizione_indirizzo
+            - descrizione_nazione
+          properties:
+            tipo_indirizzo:
+              description: "Tipo indirizzo Residenza / Domicilio "
+              type: string
+              minLength: 1
+              maxLength: 1
+            indirizzo_estero:
+              description: "Indicatore per gli indirizzi esteri "
+              type: boolean
+            descrizione_indirizzo:
+              description: Indirizzo comprensivo di toponimo
+              type: string
+              minLength: 1
+              maxLength: 250
+            numero_civico:
+              description: Numero civico
+              type: string
+            cap:
+              description: Codice di avviamento postale
+              type: string
+              minLength: 5
+              maxLength: 5
+            codice_comune:
+              description: Codice comune (codifica Ministero Finanze)
+              type: string
+              minLength: 4
+              maxLength: 4
+            provincia:
+              description: Sigla della provincia
+              type: string
+              minLength: 2
+              maxLength: 2
+            codice_stato:
+              description: Codice ISO 3166 della nazione
+              type: string
+              minLength: 1
+            descrizione_nazione:
+              description: Descrizione della nazione
+              type: string
+              minLength: 1
+              maxLength: 60
+            descrizione_citta_estera:
+              description: Descrizione della città estera
+              type: string
+              minLength: 1
+              maxLength: 60
+            postal_code:
+              description: Codice Postale estero
+              type: string
+              minLength: 1
+              maxLength: 10
+          x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/Indirizzo
+          x-jsonld-context:
+            "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+            tipo_indirizzo: tipoIndirizzo
+            indirizzo_estero: presenzaIndirizzoEstero
+            descrizione_indirizzo: https://w3id.org/italia/onto/CLV/fullAddress
+            numero_civico:
+              '@id': https://w3id.org/italia/onto/CLV/hasNumber
+              '@context':
+                  street_number: https://w3id.org/italia/onto/CLV/streetNumber
+            cap: https://w3id.org/italia/onto/CLV/postCode
+            codice_comune:
+              '@id': https://w3id.org/italia/onto/CLV/hasCity
+              '@context':
+                  label: http://www.w3.org/2000/01/rdf-schema#label
+            provincia:
+              '@id': https://w3id.org/italia/onto/CLV/hasProvince
+              '@context':
+                  sigla_provincia: https://w3id.org/italia/onto/CLV/acronym
+            codice_stato:
+              '@id': https://w3id.org/italia/onto/CLV/hasCountry
+              '@context':
+                  label: http://www.w3.org/2000/01/rdf-schema#label
+            descrizione_nazione:
+              '@id': https://w3id.org/italia/onto/CLV/hasCountry
+              '@type': '@id'
+              '@context':
+                  "@base": 'https://w3id.org/italia/controlled-vocabulary/territorial-classifications/countries/foreign-countries/'
+                  id: '@id'
+                  label: http://www.w3.org/2000/01/rdf-schema#label
+            descrizione_citta_estera:
+              '@id': https://w3id.org/italia/onto/CLV/hasCity
+              '@context':
+                  label: http://www.w3.org/2000/01/rdf-schema#label
+            postal_code: https://w3id.org/italia/onto/CLV/postCode
+          example:
+            tipo_indirizzo: 'R'
+            indirizzo_estero: false
+            descrizione_indirizzo: 'VIA CAVOUR'
+            numero_civico:
+              street_number: '82'
+            cap: '96010'
+            codice_comune:
+              label:  'B603'
+            provincia:
+              sigla_provincia: 'SR'
+            codice_stato:
+              label: 'I'
+            descrizione_nazione:
+              id: ITA
+              label: 'ITALIA'
+            descrizione_citta_estera:
+              label: 'Londra'
+            postal_code: '0000000000'
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/TitolarePP
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+        codice_fiscale: https://w3id.org/italia/onto/CPV/taxCode
+        cognome: https://w3id.org/italia/onto/CPV/familyName
+        nome: https://w3id.org/italia/onto/CPV/givenName
+        data_nascita: https://w3id.org/italia/onto/CPV/dateOfBirth
+        codice_comune_nascita:
+              '@id': https://w3id.org/italia/onto/CLV/hasCity
+              '@context':
+                  label: http://www.w3.org/2000/01/rdf-schema#label
+        luogo_nascita:
+              '@id': https://w3id.org/italia/onto/CPV/hasBirthPlace
+              '@context':
+                  label: http://www.w3.org/2000/01/rdf-schema#label
+        codice_stato_nascita:
+              '@id': https://w3id.org/italia/onto/CLV/hasCountry
+              '@context':
+                  label: http://www.w3.org/2000/01/rdf-schema#label
+        codice_cittadinanza:
+          '@id': https://w3id.org/italia/onto/RPO/isCurrentlyPredominantlyCitizen
+          '@context':
+              citizenship_code: https://w3id.org/italia/onto/RPO/citizenshipCode
+        descrizione_cittadinanza:
+          '@id': https://w3id.org/italia/onto/RPO/isCurrentlyCitizen
+          '@context':
+              citizenship_denomination: https://w3id.org/italia/onto/RPO/citizenshipDenomination
+      example:
+        codice_fiscale: "AAAAAA00A00A000A"
+        cognome: "Rossi"
+        nome: "Mario"
+        data_nascita: "1974-11-22"
+        codice_comune_nascita:
+          label: "B603"
+        luogo_nascita:
+          label: "CANICATTINI BAGNI"
+        codice_stato_nascita:
+          label: "I"
+        codice_cittadinanza:
+          citizenship_code: "002"
+        descrizione_cittadinanza:
+          citizenship_denomination: "Italiana"
+
+    MassivaStatus:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+        data_richiesta:
+          type: string
+          format: date-time
+        stato:
+          type: string
+          enum:
+            - IN_CARICO
+            - IN_ELABORAZIONE
+            - COMPLETATA
+    PensioniMassivaRequest:
+      description: Struttura di input
+      type: object
+      required:
+        - ente
+        - beneficiari
+      properties:
+        ente:
+          type: object
+          required:
+            - codice_ente
+            - codice_comune_ente
+            - codice_fiscale_operatore_ente
+          properties:
+            codice_ente:
+              description: Si intende l’ente chiamante il servizio
+              type: string
+              minLength: 1
+              maxLength: 32
+              example: '123456'
+            denominazione_ente:
+              description: Denominazione dell'Ente chiamante
+              type: string
+              minLength: 1
+              maxLength: 128
+              example: EnteTest
+            codice_comune_ente:
+              description: Codice comune sede legale dell’Ente in codifica Ministero Finanze
+              type: string
+              minLength: 4
+              maxLength: 4
+              example: A562
+            codice_fiscale_operatore_ente:
+              type: string
+              minLength: 1
+              maxLength: 16
+              description: "Codice Fiscale dell\u2019operatore dell\u2019ente autorizzato richiamare il servizio "
+              example: AAAAAA00A00A000A
+          x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/Ente
+          x-jsonld-context:
+            "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+            codice_ente: https://w3id.org/italia/onto/COV/IPAcode
+            denominazione_ente: https://w3id.org/italia/onto/COV/legalName
+            codice_comune_ente:
+              '@id': https://w3id.org/italia/onto/CLV/hasCity
+              '@context':
+                  label: http://www.w3.org/2000/01/rdf-schema#label
+            codice_fiscale_operatore_ente: codiceFiscaleOperatoreEnte
+          example:
+              codice_ente: '123456'
+              denominazione_ente: 'EnteTest'
+              codice_comune_ente:
+                label: 'A562'
+              codice_fiscale_operatore_ente: 'AAAAAA00A00A000A'
+        beneficiari:
+          type: array
+          items:
+            type: object
+            required:
+              - codice_fiscale
+              - cognome
+              - nome
+              - codice_comune_residenza
+              - cap_residenza
+            properties:
+              codice_fiscale:
+                description: Codice fiscale del beneficiario della prestazione
+                type: string
+                minLength: 16
+                maxLength: 16
+                example: AAAAAA00A00A000A
+              cognome:
+                description: "Cognome del beneficiario della prestazione "
+                type: string
+                minLength: 1
+                maxLength: 36
+                example: Rossi
+              nome:
+                description: Nome del beneficiario della prestazione
+                type: string
+                minLength: 1
+                maxLength: 36
+                example: Mario
+              provincia_residenza:
+                description: Sigla della provincia di residenza del beneficiario della prestazione
+                type: string
+                minLength: 2
+                maxLength: 2
+              codice_comune_residenza:
+                description: "Codice comune di residenza del beneficiario della prestazione "
+                type: string
+                minLength: 4
+                maxLength: 4
+              cap_residenza:
+                description: Codice di avviamento postale di residenza del beneficiario della prestazione
+                type: string
+                minLength: 5
+                maxLength: 5
+    PensioniMassivaResponse:
+      type: array
+      items:
+        type: object
+        required:
+          - beneficiario
+        properties:
+          beneficiario:
+            $ref: '#/components/schemas/Beneficiario'
+          pensioni:
+            type: array
+            items:
+              $ref: '#/components/schemas/Pensione'
+          problem:
+            $ref: '#/components/schemas/Problem'
+      example:
+        - beneficiario:
+            codice_fiscale: AIASVT20A02B603N
+            cognome: AIA
+            nome: SALVATORE
+            data_nascita: 1920-01-01
+            codice_comune_nascita: B603
+            luogo_nascita: CANICATTINI BAGNI
+            codice_stato_nascita: I
+            descrizione_cittadinanza: Straniera
+            indirizzo:
+              tipo_indirizzo: R
+              indirizzo_estero: false
+              descrizione_indirizzo: VIA CAVOUR
+              numero_civico: '82'
+              cap: '96010'
+              codice_comune: B603
+              provincia: SR
+              codice_stato: I
+              descrizione_nazione: ITALIA
+          prestazione:
+            denominazione_prestazione: 'Nome descrittivo della prestazione'
+            erogazioni:
+              - data_inizio: '2020-11-22'
+                data_fine: '2021-11-22'
+                data_erogazione: '2020-11-22'
+                importo: 550.00
+            codice_prestazione_siuss: 'AA.AA'
+        - beneficiario:
+            codice_fiscale: 'BBBBBB00A00A000A'
+          problem:
+            status: 502
+            title: Bad Gateway
+            type: https://www.rfc-editor.org/rfc/rfc9110.html#name-502-bad-gateway
+            detail: 'Servizi al momento non disponibili'
+    Problem:
+      description: Models the standard structure for an error response
+      x-amf-examples:
+        example_2:
+          status: '503'
+          title: CONNECTIVITY
+          type: Errore Servizio non accessibile.
+          detail: Errore Servizio non accessibile.
+      type: object
+      required:
+        - status
+        - title
+        - type
+        - detail
+      properties:
+        detail:
+          type: string
+          description: Un testo di descrizione comprensibile del problema occorso
+          example: Connection to database timed out
+          maxLength: 4096
+        instance:
+          type: string
+          description: >-
+            Collegamento ad una specifica occorrenza dove si è verificato il
+            problema
+          format: uri
+          maxLength: 4096
+        status:
+          maximum: 599
+          minimum: 100
+          type: integer
+          description: Codice http restituito
+          format: int32
+          example: 503
+        title:
+          type: string
+          description: Descrizione breve ed esplicativa del problema occorso
+          maxLength: 4096
+        type:
+          type: string
+          description: URI assoluta per la descrizione del problema occorso
+          format: uri
+          example: https://tools.ietf.org/html/rfc7231#section-6.6.4
+          default: about:blank
+          maxLength: 4096

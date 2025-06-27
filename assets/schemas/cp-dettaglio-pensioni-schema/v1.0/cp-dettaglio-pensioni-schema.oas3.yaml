@@ -1,0 +1,106 @@
+openapi: 3.0.1
+info:
+  title: Schema API del Dettaglio delle Pensioni
+  description: Schema API del Dettaglio delle Pensioni relativo all'e-service pubblicato sulla PDND al seguente link https://api.inps.it/pdnd/rest/DettaglioPensioni/v1
+  version: v1
+paths: {}
+components:
+  schemas:
+    DettaglioPensioneRequest:
+      type: object
+      properties:
+        codiceFiscale:
+          type: string
+          nullable: true
+        chiavePensione:
+          type: string
+          nullable: true
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+        codiceFiscale: https://w3id.org/italia/onto/CPV/taxCode
+        chiavePensione: https://w3id.org/italia/social-security/onto/ObisModel/chiavePensione
+      example:
+        codiceFiscale: 'AAAAAA00A00A000A'
+        chiavePensione: '030010110000000'
+    DettaglioPensioneResponse:
+      type: object
+      properties:
+        messaggio:
+          type: string
+          nullable: true
+        esecuzione:
+          type: boolean
+        classe:
+          type: string
+          nullable: true
+        decorrenza:
+          type: string
+          nullable: true
+        codiceCategoria:
+          type: string
+          nullable: true
+        trattamento:
+          type: string
+          nullable: true
+        vigente:
+          type: boolean
+      additionalProperties: false
+    ElencoPensioni:
+      type: object
+      properties:
+        chiavePensione:
+          type: string
+          nullable: true
+        vigente:
+          type: boolean
+        classePensione:
+          type: string
+          nullable: true
+        sedeCarico:
+          type: string
+          nullable: true
+        rapporto:
+          type: string
+          nullable: true
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+        chiavePensione: https://w3id.org/italia/social-security/onto/ObisModel/chiavePensione
+        vigente: prestazioneVigente
+        classePensione: codiceCategoriaPensione
+        sedeCarico: https://w3id.org/italia/social-security/onto/core/codiceSedeINPS
+        rapporto: null
+      example:
+        chiavePensione: '030010110000000'
+        vigente: false
+        classePensione: '044-INVCIV'
+        sedeCarico: 7001
+      additionalProperties: false
+    ElencoPensioniRequest:
+      type: object
+      properties:
+        codiceFiscale:
+          type: string
+          nullable: true
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensions/PrestazionePensionistica
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensions/
+        codiceFiscale: https://w3id.org/italia/onto/CPV/taxCode
+      example:
+        codiceFiscale: 'AAAAAA00A00A000A'
+      additionalProperties: false
+    ElencoPensioniResponse:
+      type: object
+      properties:
+        messaggio:
+          type: string
+          nullable: true
+        esecuzione:
+          type: boolean
+        elencoPensioni:
+          type: array
+          items:
+            $ref: '#/components/schemas/ElencoPensioni'
+          nullable: true
+      additionalProperties: false

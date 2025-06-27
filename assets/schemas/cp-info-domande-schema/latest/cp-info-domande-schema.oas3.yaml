@@ -1,0 +1,64 @@
+openapi: 3.0.1
+info:
+  title: Schema API dell'Info Domande delle Pensioni
+  description: Schema API dell'Info Domande delle Pensioni relativo all'e-service pubblicato sulla PDND al seguente link https://api.inps.it/pdnd/rest/InfoDomande/v1
+  version: '1.0'
+paths: {}
+components:
+  schemas:
+    InfoDomandeRequest:
+      type: object
+      properties:
+        codiceFiscale:
+          type: string
+          nullable: true
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/DomandaDiPensione
+      x-jsonld-context:
+        "@vocab": https://w3id.org/italia/social-security/onto/pensionProspectusLavoratore/
+        codiceFiscale: https://w3id.org/italia/onto/CPV/taxCode
+      example:
+        codiceFiscale: 'AAAAAA00A00A000A'
+      additionalProperties: false
+    InfoDomandeResponse:
+      type: object
+      properties:
+        messaggio:
+          type: string
+          nullable: true
+        esecuzione:
+          type: boolean
+        presenzaGiacenti:
+          type: boolean
+        numeroGiacenti:
+          type: integer
+          format: int32
+        presenzaAccolte:
+          type: boolean
+        numeroAccolte:
+          type: integer
+          format: int32
+        presenzaRespinte:
+          type: boolean
+        numeroRespinte:
+          type: integer
+          format: int32
+      additionalProperties: false
+    Problem:
+      type: object
+      properties:
+        detail:
+          type: string
+          nullable: true
+        instance:
+          type: string
+          nullable: true
+        status:
+          type: integer
+          format: int32
+        title:
+          type: string
+          nullable: true
+        type:
+          type: string
+          nullable: true
+      additionalProperties: false
