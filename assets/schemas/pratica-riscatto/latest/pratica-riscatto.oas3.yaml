@@ -11,29 +11,29 @@ info:
     name: Andrea Cigliano
     email: andrea.cigliano@inps.it
   description: |-
-   https://w3id.org/italia/social-security/onto/contributions/PraticaDiRiscatto
+    Lo schema dati del servizio che viene invocato per ottenere le informazioni sulla pratica di riscato che consente al lavoratore, anche già pensionato, di conseguire, a proprie spese, il riconoscimento contributivo per specifici periodi altrimenti privi di contribuzione.
 paths: {}
 servers: []
 tags: []
 components:
   schemas:
-
     IdPraticaRiscatto:
       type: string
-      x-refersTo: https://w3id.org/italia/social-security/onto/contributions/numeroPratica
-      description: https://w3id.org/italia/social-security/onto/contributions/numeroPratica
-      example: '5498553'
+      description: |-
+        Il numero della Pratica di Riscatto, si veda https://w3id.org/italia/social-security/onto/contributions/numeroPratica
+      example: "5498553"
       maxLength: 50
       minLength: 1
 
     PraticaRiscatto:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/PraticaDiRiscatto
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/PraticaAdeguamentoContributivo
       # This custom property defines the associated json-ld
       #   context that can be used to semantically describe
       #   the instances.
       x-jsonld-context:
         "@vocab": "https://w3id.org/italia/social-security/onto/contributions/"
+        id_pratica_riscatto: numeroPratica
         descrizione_pratica_riscatto: descrizionePratica
         riscatto_ha_atto_adeguamento_contributivo:
           "@id": haAttoAdeguamentoContributivo
@@ -44,10 +44,14 @@ components:
         riscatto_ha_titolare_pratica:
           "@id": haTitolarePraticaAdeguamentoContributivo
       additionalProperties: true
-      description: https://w3id.org/italia/social-security/onto/contributions/PraticaDiRiscatto
+      description: >-
+        Rappresenta la Pratica di Riscatto (adeguamento contributivo) gestita dall'INPS.
+        # Nota: abbiamo corretto alcune incongruenze del modello originale:
+        # - le proprietà che erano dichiarate come "type: object" con "items" sono state trasformate in "array" con "items".
+        # - TitolarePratica e Superstite avevano required/properties discordanti: ora sono normalizzati con PersonRole.
       required:
-      - id_pratica_riscatto
-      - descrizione_pratica_riscatto
+        - id_pratica_riscatto
+        - descrizione_pratica_riscatto
       properties:
         id_pratica_riscatto:
           $ref: "#/components/schemas/IdPraticaRiscatto"
@@ -55,33 +59,30 @@ components:
           type: string
           maxLength: 255
         riscatto_ha_domanda_adeguamento_contributivo:
-          type: object
-          items:
-            $ref: "#/components/schemas/DomandaAdeguamentoContributivo"
+          $ref: "#/components/schemas/DomandaAdeguamentoContributivo"
         riscatto_ha_atto_adeguamento_contributivo:
-          type: object
-          items:
-            $ref: "#/components/schemas/AttoAdeguamentoContributivo"
+          $ref: "#/components/schemas/AttoAdeguamentoContributivo"
         riscatto_ha_pagatore_onere:
-          type: object
-          items:
-            $ref: "#/components/schemas/Superstite"
+          $ref: "#/components/schemas/Superstite"
         riscatto_ha_titolare_pratica:
-          type: object
-          items:
-            $ref: "#/components/schemas/TitolarePratica"
+          $ref: "#/components/schemas/TitolarePratica"
       example:
-        id_pratica_riscatto:
-          $ref: "#/components/schemas/IdPraticaRiscatto/example"
-        descrizione_pratica_riscatto: 'Riscatto'
+        id_pratica_riscatto: "5498553"
+        descrizione_pratica_riscatto: "Riscatto"
         riscatto_ha_domanda_adeguamento_contributivo:
-          $ref: "#/components/schemas/DomandaAdeguamentoContributivo/example"
+          numero_domanda: "3154988"
+          data_domanda: "2022-06-25"
         riscatto_ha_atto_adeguamento_contributivo:
-          $ref: "#/components/schemas/AttoAdeguamentoContributivo/example"
+          numero_atto: "2316547"
+          data_atto: "2022-07-25"
         riscatto_ha_pagatore_onere:
-          $ref: "#/components/schemas/Superstite/example"
+          cf_titolare: "RSSFRC64G58k152L"
+          nome_titolare: "Franco"
+          cognome_titolare: "Rossi"
         riscatto_ha_titolare_pratica:
-          $ref: "#/components/schemas/TitolarePratica/example"
+          cf_titolare: "RSSFRC64G58k152L"
+          nome_titolare: "Franco"
+          cognome_titolare: "Rossi"
 
     DomandaAdeguamentoContributivo:
       type: object
@@ -91,22 +92,21 @@ components:
         numero_domanda: numeroDomanda
         data_domanda: dataDomanda
       additionalProperties: true
-      description:
-          https://w3id.org/italia/social-security/onto/contributions/DomandaAdeguamentoContributivo
+      description: |-
+        Documento di domanda relativo all'adeguamento contributivo.
+        Si veda https://w3id.org/italia/social-security/onto/contributions/DomandaAdeguamentoContributivo
       required:
-      - numero_domanda
-      - data_domanda
+        - numero_domanda
+        - data_domanda
       properties:
         numero_domanda:
           type: string
           maxLength: 50
         data_domanda:
-          type: string
-          format: date
-          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+          $ref: "#/components/schemas/Date"
       example:
-        numero_domanda: '3154988'
-        data_domanda: '2022-06-25'
+        numero_domanda: "3154988"
+        data_domanda: "2022-06-25"
 
     AttoAdeguamentoContributivo:
       type: object
@@ -116,62 +116,67 @@ components:
         numero_atto: numeroAtto
         data_atto: dataAtto
       additionalProperties: true
-      description:
-          https://w3id.org/italia/social-security/onto/contributions/AttoAdeguamentoContributivo
+      description: |-
+        Atto amministrativo relativo all'adeguamento contributivo.
+        Si veda https://w3id.org/italia/social-security/onto/contributions/AttoAdeguamentoContributivo
       required:
-      - numero_atto
-      - data_atto
+        - numero_atto
+        - data_atto
       properties:
         numero_atto:
           type: string
           maxLength: 50
         data_atto:
-          type: string
-          format: date
-          pattern: ([0-9]{4})-([0-1][0-9])-([0-3][0-9])
+          $ref: "#/components/schemas/Date"
       example:
-        numero_atto: '2316547'
-        data_atto: '2022-07-25'
+        numero_atto: "2316547"
+        data_atto: "2022-07-25"
 
     TitolarePratica:
       type: object
       x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/TitolarePraticaAdeguamentoContributivo
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/contributions/"
+        "@vocab": https://w3id.org/italia/onto/CPV/
+        cf_titolare: taxCode
+        nome_titolare: givenName
+        cognome_titolare: familyName
       additionalProperties: true
-      description:
-          https://w3id.org/italia/social-security/onto/contributions/TitolarePraticaAdeguamentoContributivo
+      description: |-
+        Questo schema rappresenta la persona a cui, facendo seguito alla presentazione di idonea domanda, sono riconosciuti i requisiti per accedere alla facoltà di riscatto, ricongiunzione o rendita.
+        Tali requisiti possono essere riconosciuti al Titolare anche se non più in vita. Nel caso in cui sia in vita, corrisponde al Richiedente.
+        Si veda https://w3id.org/italia/social-security/onto/contributions/TitolarePraticaAdeguamentoContributivo
       required:
-      - cf_titolare
-      - nome_titolare
-      - cognome_titolare
+        - cf_titolare
+        - nome_titolare
+        - cognome_titolare
       properties:
-        cf_superstite:
+        cf_titolare:
           $ref: "#/components/schemas/Cf"
-        nome_superstite:
+        nome_titolare:
           $ref: "#/components/schemas/Nome"
-        cognome_superstite:
+        cognome_titolare:
           $ref: "#/components/schemas/Cognome"
       example:
-        cf_titolare:
-          $ref: "#/components/schemas/Cf/example"
-        nome_titolare:
-          $ref: "#/components/schemas/Nome/example"
-        cognome_titolare:
-          $ref: "#/components/schemas/Cognome/example"
+        cf_titolare: "RSSFRC64G58k152L"
+        nome_titolare: "Franco"
+        cognome_titolare: "Rossi"
 
     Superstite:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolarePraticaAdeguamentoContributivo
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolareAdeguamentoContributivo
       x-jsonld-context:
-        "@vocab": "https://w3id.org/italia/social-security/onto/contributions/"
+        "@vocab": https://w3id.org/italia/onto/CPV/
+        cf_superstite: taxCode
+        nome_superstite: givenName
+        cognome_superstite: familyName
       additionalProperties: true
-      description:
-          https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolarePraticaAdeguamentoContributivo
+      description: |-
+        Superstite che assume il ruolo di pagatore/onere per la pratica di adeguamento contributivo.
+        Si veda https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolareAdeguamentoContributivo
       required:
-      - cf_superstite
-      - nome_superstite
-      - cognome_superstite
+        - cf_superstite
+        - nome_superstite
+        - cognome_superstite
       properties:
         cf_superstite:
           $ref: "#/components/schemas/Cf"
@@ -180,27 +185,33 @@ components:
         cognome_superstite:
           $ref: "#/components/schemas/Cognome"
       example:
-        cf_superstite:
-          $ref: "#/components/schemas/Cf/example"
-        nome_superstite:
-          $ref: "#/components/schemas/Nome/example"
-        cognome_superstite:
-          $ref: "#/components/schemas/Cognome/example"
+        cf_titolare: "RSSFRC64G58k152L"
+        nome_titolare: "Franco"
+        cognome_titolare: "Rossi"
+
+    Date:
+      type: string
+      description: Data in formato ISO 8601 (YYYY-MM-DD).
+      format: date
+      pattern: ^([0-9]{4})-(0[1-9]|1[0-2])-(0[1-9]|1[0-9]|2[0-9]|3[01])$
+      example: "2022-06-25"
 
     Cf:
       type: string
-      maxLength: 20
-      x-refersTo: https://w3id.org/italia/onto/CPV/taxCode
-      example: 'RSSFRC64G58k152L'
+      description: Codice fiscale della persona (almeno 11 caratteri, eventualmente 16 per codici provvisori).
+      maxLength: 16
+      minLength: 11
+      pattern: "^[A-Z0-9]{11,16}$"
+      example: "RSSFRC64G58k152L"
 
     Nome:
       type: string
+      description: Nome della persona.
       maxLength: 50
-      x-refersTo: https://w3id.org/italia/onto/CPV/givenName
-      example: 'Franco'
+      example: "Franco"
 
     Cognome:
       type: string
+      description: Cognome della persona.
       maxLength: 50
-      x-refersTo: https://w3id.org/italia/onto/CPV/familyName
-      example: 'Rossi'
+      example: "Rossi"
