@@ -135,12 +135,12 @@ components:
 
     TitolarePratica:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/TitolarePraticaAdeguamentoContributivo
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/TitolareAdeguamentoContributivo
       x-jsonld-context:
         "@vocab": "https://w3id.org/italia/social-security/onto/contributions/"
       additionalProperties: true
       description:
-          https://w3id.org/italia/social-security/onto/contributions/TitolarePraticaAdeguamentoContributivo
+          https://w3id.org/italia/social-security/onto/contributions/TitolareAdeguamentoContributivo
       required:
       - cf_titolare
       - nome_titolare
@@ -162,12 +162,12 @@ components:
 
     Superstite:
       type: object
-      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolarePraticaAdeguamentoContributivo
+      x-jsonld-type: https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolareAdeguamentoContributivo
       x-jsonld-context:
         "@vocab": "https://w3id.org/italia/social-security/onto/contributions/"
       additionalProperties: true
       description:
-          https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolarePraticaAdeguamentoContributivo
+          https://w3id.org/italia/social-security/onto/contributions/SuperstiteDiTitolareAdeguamentoContributivo
       required:
       - cf_superstite
       - nome_superstite
