@@ -36,7 +36,7 @@ CUStatement: a owl:Ontology ;
     adms:acronym "inps" ;
     adms:hasContributor <https://w3id.org/italia/social-security/data/organization/td> ;
     adms:hasFormalityLevel adms:Formal ;
-    adms:hasKeyClass CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi,
+    adms:hasKeyClass CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi,
         CUStatement:CertificazioneLavoroDipendenteAssimilatoEAssistenzaFiscale,
         CUStatement:TFR ;
     adms:hasOntologyLanguage adms:OWL ;
@@ -145,10 +145,10 @@ CUStatement:certificaAddizionaleRegionale a owl:ObjectProperty ;
 CUStatement:certificaAltreSommeNonSoggetteARitenuta a owl:ObjectProperty ;
     rdfs:label "certificaAltreSommeNonSoggetteARitenuta"@it,
         "certifiesOtherAmountsNotSubjectToWithholdingTax"@en ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:range CUStatement:AltreSommeNonSoggetteARitenuta ;
     rdfs:comment "Defines the relationship between the Self-Employment Certification, Commissions and Other Income class and the Other Amounts Not Subject to Withholding Tax class"@en,
-        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provigioni E Redditi Diversi e la classe Altre Somme Non Soggette A Ritenuta"@it .
+        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provvigioni E Redditi Diversi e la classe Altre Somme Non Soggette A Ritenuta"@it .
 
 CUStatement:certificaAnnotazioni a owl:ObjectProperty ;
     rdfs:label "certificaAnnotazioni"@it,
@@ -246,13 +246,13 @@ CUStatement:certificaDatiAssicurativiINAIL a owl:ObjectProperty ;
     rdfs:comment "Defines the relationship between the Social Security and Welfare Data class and the INAIL Insurance Data class"@en,
         "Definisce la relazione tra la classe Dati Previdenziali E Assistenziali e la classe Dati Assicurativi INAIL"@it .
 
-CUStatement:certificaDatiFiscaliLavoroAutonomoProvigioniERedditiDiversi a owl:ObjectProperty ;
-    rdfs:label "certificaDatiFiscaliLavoroAutonomoProvigioniERedditiDiversi"@it,
+CUStatement:certificaDatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi a owl:ObjectProperty ;
+    rdfs:label "certificaDatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi"@it,
         "certifyTaxDataWorkSelf-employedCommissionsAndIncomeOther"@en ;
-    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi ;
-    rdfs:range CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi ;
+    rdfs:range CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Defines the relationship between the Self-Employment Certification, Commissions and Other Income class and the Self-Employment Fiscal Data, Commissions and Other Income class"@en,
-        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provigioni E Redditi Diversi e la classe Dati Fiscali LavoroAutonom oProvigioni E Redditi Diversi"@it .
+        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provvigioni E Redditi Diversi e la classe Dati Fiscali LavoroAutonom oProvvigioni E Redditi Diversi"@it .
 
 CUStatement:certificaDatiPrevidenzialiEAssistenziali a owl:ObjectProperty ;
     rdfs:label "certificaDatiPrevidenzialiEAssistenziali"@it ;
@@ -315,13 +315,13 @@ CUStatement:certificaDatiPrevidenzialiEAssistenzialiSociCooperativeArtigiane a o
     rdfs:comment "Defines the relationship between the Social Security and Welfare Data class and the Social Security and Welfare Data class for Artisan Cooperative Members"@en,
         "Definisce la relazione tra la classe Dati Previdenziali E Assistenziali e la classe Dati Previdenziali E Assistenziali Soci Cooperative Artigiane"@it .
 
-CUStatement:certificaDatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi a owl:ObjectProperty ;
-    rdfs:label "certificaDatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi"@it,
+CUStatement:certificaDatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi a owl:ObjectProperty ;
+    rdfs:label "certificaDatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi"@it,
         "certifySocial Security DataSelf-EmploymentCommissionsAndIncomeOther"@en ;
-    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi ;
-    rdfs:range CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi ;
+    rdfs:range CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Defines the relationship between the Self-Employment Certification, Commissions and Other Income class and the Self-Employment Social Security Data, Commissions and Other Income class"@en,
-        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provigioni E Redditi Diversi e la classe Dati Previdenziali Lavoro Autonomo Provigioni E Redditi Diversi"@it .
+        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provvigioni E Redditi Diversi e la classe Dati Previdenziali Lavoro Autonomo Provvigioni E Redditi Diversi"@it .
 
 CUStatement:certificaDatiRappresentanteFirmatarioComunicazione a owl:ObjectProperty ;
     rdfs:label "certificaDatiRappresentanteFirmatarioComunicazione"@it,
@@ -550,10 +550,10 @@ CUStatement:certificaRedditiErogatiDaAltriSoggetti a owl:ObjectProperty ;
 CUStatement:certificaRedditiErogatiDaAltriSoggettiLavoroAutonomo a owl:ObjectProperty ;
     rdfs:label "certificaRedditiErogatiDaAltriSoggettiLavoroAutonomo"@it,
         "certifyIncomePaidByOtherSubjectsSelf-Employment"@en ;
-    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:range CUStatement:RedditiErogatiDaAltriSoggettiLavoroAutonomo ;
     rdfs:comment "Defines the relationship between the class Self-Employment Certification Commissions and Other Income and the class Income Paid by Other Self-Employed Persons"@en,
-        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provigioni E Redditi Diversi e la classe Redditi Erogati Da Altri Soggetti Lavoro Autonomo"@it .
+        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provvigioni E Redditi Diversi e la classe Redditi Erogati Da Altri Soggetti Lavoro Autonomo"@it .
 
 CUStatement:certificaRedditiLavoroSportivo a owl:ObjectProperty ;
     rdfs:label "certificaRedditiLavoroSportivo"@it ;
@@ -700,10 +700,10 @@ CUStatement:certificaSommeAssoggettateAImpostaSostitutiva a owl:ObjectProperty ;
 CUStatement:certificaSommeCorrisposteATitoloDiIndennitaDiEsproprioAltreIndennitaEInteressi a owl:ObjectProperty ;
     rdfs:label "certificaSommeCorrisposteATitoloDiIndennitaDiEsproprioAltreIndennitaEInteressi"@it,
         "certifyAmountsPaidToTitleOfExpropriationCompensationOtherCompensationsAndInterest"@en ;
-    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:range CUStatement:SommeCorrisposteATitoloDiIndennitaDiEsproprioAltreIndennitaEInteressi ;
     rdfs:comment "Defines the relationship between the class Self-Employment Certification Commissions and Miscellaneous Income and the class Sums Paid as Expropriation Compensation Other Compensations and Interest"@en,
-        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provigioni E Redditi Diversi e la classe Somme Corrisposte A Titolo Di Indennita Di Esproprio Altre Indennita E Interessi"@it .
+        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provvigioni E Redditi Diversi e la classe Somme Corrisposte A Titolo Di Indennita Di Esproprio Altre Indennita E Interessi"@it .
 
 CUStatement:certificaSommeErogatePerPremiDiRisultato a owl:ObjectProperty ;
     rdfs:label "certificaSommeErogatePerPremiDiRisultato"@it ;
@@ -713,10 +713,10 @@ CUStatement:certificaSommeErogatePerPremiDiRisultato a owl:ObjectProperty ;
 CUStatement:certificaSommeLiquidatePignoramentoPressoTerzi a owl:ObjectProperty ;
     rdfs:label "certificaSommeLiquidatePignoramentoPressoTerzi"@it,
         "certifies Liquidated SumsForeclosure with Third Parties"@en ;
-    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:range CUStatement:SommeLiquidatePignoramentoPressoTerzi ;
     rdfs:comment "Defines the relationship between the class Self-Employment Certification Commissions and Miscellaneous Income and the class Sums Liquidated by Garnishment from Third Parties"@en,
-        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provigioni E Redditi Diversi e la classe Somme Liquidate Pignoramento Presso Terzi"@it .
+        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provvigioni E Redditi Diversi e la classe Somme Liquidate Pignoramento Presso Terzi"@it .
 
 CUStatement:certificaTFRMaturato a owl:ObjectProperty ;
     rdfs:label "certificaTFRMaturato"@it,
@@ -734,13 +734,13 @@ CUStatement:certificaTipoDiComunicazione a owl:ObjectProperty ;
     rdfs:comment "Defines the relationship between the Single Certification Cover Page class and the Communication Type class"@en,
         "Definisce la relazione tra la classe Frontespizio Certificazione Unica e la classe Tipo di Comunicazione"@it .
 
-CUStatement:certificaTipologiaRedditualeLavoroAutonomoProvigioniERedditiDiversi a owl:ObjectProperty ;
-    rdfs:label "certificaTipologiaRedditualeLavoroAutonomoProvigioniERedditiDiversi"@it,
+CUStatement:certificaTipologiaRedditualeLavoroAutonomoProvvigioniERedditiDiversi a owl:ObjectProperty ;
+    rdfs:label "certificaTipologiaRedditualeLavoroAutonomoProvvigioniERedditiDiversi"@it,
         "certifyIncome TypeWorkSelf-employedCommissionsAndIncomeOther"@en ;
-    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi ;
-    rdfs:range CUStatement:TipologiaRedditualeLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi ;
+    rdfs:range CUStatement:TipologiaRedditualeLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Defines the relationship between the Self-Employment Certification, Commissions and Other Income class and the Self-Employment Income Type, Commissions and Other Income class"@en,
-        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provigioni E Redditi Diversi e la classe Tipologia Reddituale Lavoro Autonomo Provigioni E Redditi Diversi"@it .
+        "Definisce la relazione tra la classe Certificazione Lavoro Autonomo Provvigioni E Redditi Diversi e la classe Tipologia Reddituale Lavoro Autonomo Provvigioni E Redditi Diversi"@it .
 
 CUStatement:certificaTrattamentoDiFineRapportoEAltreIndennita a owl:ObjectProperty ;
     rdfs:label "certificaTrattamentoDiFineRapportoEAltreIndennita"@it,
@@ -1187,7 +1187,7 @@ CUStatement:annoDirittoAllaPercezione a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "anno diritto alla percezione"@it,
         "year right to perception"@en ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica l’anno in cui è sorto il diritto alla percezione in relazione alle indennità di cessazione dai codici G (indennità corrisposte per la cessazione di attività sportiva professionale), H (indennità corrisposte per la cessazione dei rapporti di agenzia delle persone fisiche e delle società di persone con esclusione delle somme maturate entro il 31 dicembre 2003, già imputate per competenza e tassate come reddito d’impresa), ed I (indennità corrisposte per la cessazione da funzioni notarili)"@it,
         "Indicates the year in which the right to receive severance pay arose in relation to codes G (severance paid for the cessation of professional sports activities), H (severance paid for the cessation of agency relationships of individuals and partnerships with the exclusion of sums accrued by 31 December 2003, already imputed for competence and taxed as business income), and I (severance paid for the cessation of notarial functions)"@en .
 
@@ -1318,7 +1318,7 @@ CUStatement:categoriaAppartenenzaIscrittoAEntePrevidenziale a owl:DatatypeProper
     rdfs:label "categoria appartenenza iscritto a ente previdenziale"@it,
         "category membership registered with a social security institution"@en ;
     rdfs:domain CUStatement:DatiPrevidenzialiEAssistenzialiAltriEnti,
-        CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+        CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Categoria di appartenenza dell’iscritto all’Ente"@it,
         "Category of membership of the member of the Institution"@en .
 
@@ -1399,7 +1399,7 @@ CUStatement:codiceAziendaEntePrevidenziale a owl:DatatypeProperty,
     rdfs:label "codice azienda ente previdenziale"@it,
         "Social security company code"@en ;
     rdfs:domain CUStatement:DatiPrevidenzialiEAssistenzialiAltriEnti,
-        CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+        CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Codice dell’Azienda eventualmente attribuito dall’Ente previdenziale"@it,
         "Company code possibly assigned by the social security institution"@en .
 
@@ -1592,7 +1592,7 @@ CUStatement:codiceFiscaleEntePrevidenziale a owl:DatatypeProperty,
     rdfs:label "codice fiscale ente previdenziale"@it,
         "tax code social security institution"@en ;
     rdfs:domain CUStatement:DatiPrevidenzialiEAssistenzialiAltriEnti,
-        CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+        CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica il codice fiscale dell’Ente previdenziale"@it,
         "Indicate the tax code of the social security institution"@en .
 
@@ -1759,7 +1759,7 @@ CUStatement:codiceFiscaleSostitutoEstintoIndennitaDiEsproprio a owl:DatatypeProp
     rdfs:label "codice fiscale sostituto estinto indennità di esproprio"@it,
         "codice fiscale sostituto estinto indennitÃ  di esproprio"@it,
         "tax code substitute extinguished expropriation compensation"@en ;
-    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Codice fiscale del sostituto estinto, nell’ipotesi in cui la certificazione (sezione indennità di esproprio) è stata rilasciata da quest’ultimo, nel caso di operazioni straordinarie con estinzione del sostituto d’imposta e con prosecuzione dell’attività da parte di altro sostituto"@it,
         "Tax code of the extinguished substitute, in the event that the certification (expropriation compensation section) was issued by the latter, in the case of extraordinary operations with extinction of the tax substitute and with continuation of the activity by another substitute"@en .
 
@@ -1767,7 +1767,7 @@ CUStatement:codiceFiscaleSostitutoEstintoLavoroAutonomoERedditiDiversi a owl:Dat
         owl:FunctionalProperty ;
     rdfs:label "codice fiscale sostituto estinto lavoro autonomo e redditi diversi"@it,
         "tax code substitute extinguished self-employment and various incomes"@en ;
-    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Codice fiscale del sostituto estinto, nell’ipotesi in cui la certificazione (sezione relativa al lavoro autonomo e ai redditi diversi) è stata rilasciata da quest’ultimo, nel caso di operazioni straordinarie con estinzione del sostituto d’imposta e con prosecuzione dell’attività da parte di altro sostituto"@it,
         "Tax code of the extinguished substitute, in the event that the certification (section relating to self-employment and other income) was issued by the latter, in the case of extraordinary operations with extinction of the tax substitute and with continuation of the activity by another substitute"@en .
 
@@ -1775,7 +1775,7 @@ CUStatement:codiceFiscaleSostitutoEstintoPignoramentoPressoTerzi a owl:DatatypeP
         owl:FunctionalProperty ;
     rdfs:label "codice fiscale sostituto estinto pignoramento presso terzi"@it,
         "tax code substitute extinguished third party seizure"@en ;
-    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Codice fiscale del sostituto estinto, nell’ipotesi in cui la certificazione (sezione pignoramento presso terzi) è stata rilasciata da quest’ultimo, nel caso di operazioni straordinarie con estinzione del sostituto d’imposta e con prosecuzione dell’attività da parte di altro sostituto"@it,
         "Tax code of the extinguished substitute, in the event that the certification (third party seizure section) was issued by the latter, in the case of extraordinary operations with extinction of the tax substitute and with continuation of the activity by another substitute"@en .
 
@@ -1959,11 +1959,11 @@ CUStatement:codiceStatoEsteroDetrazioniECrediti a owl:DatatypeProperty,
     rdfs:comment "Codice dello Stato estero"@it,
         "Foreign State Code"@en .
 
-CUStatement:codiceTipologiaRedditualeLavoroAutonomoProvigioniERedditiDiversi a owl:DatatypeProperty,
+CUStatement:codiceTipologiaRedditualeLavoroAutonomoProvvigioniERedditiDiversi a owl:DatatypeProperty,
         owl:FunctionalProperty ;
-    rdfs:label "codice tipologia reddituale lavoro autonomo provigioni e redditi diversi"@it,
+    rdfs:label "codice tipologia reddituale lavoro autonomo provvigioni e redditi diversi"@it,
         "Income type code self-employed commissions and other income"@en ;
-    rdfs:domain CUStatement:TipologiaRedditualeLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:TipologiaRedditualeLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "La classe indica la causale che individua la tipologia di reddito erogato relativamente ai i redditi che vengono dichiarati dal percettore nel modello 730 e degli altri redditi che vengono dichiarati con il modello Redditi. Le tipologie reddituali sono divise in due elenchi: il primo elenco riguarda le tipologie reddituali che possono essere indicate nel modello 730; il secondo elenco tiene conto delle tipologie reddituali che possono essere dichiarate soltanto con il modello REDDITI Persone Fisiche dell'anno in corso"@it,
         "The class indicates the reason that identifies the type of income paid in relation to the income that is declared by the recipient in the 730 form and other income that is declared with the Income form. The income types are divided into two lists: the first list concerns the income types that can be indicated in the 730 form; the second list takes into account the income types that can be declared only with the REDDITI Persone Fisiche form of the current year"@en .
 
@@ -2372,7 +2372,7 @@ CUStatement:denominazioneEntePrevidenziale a owl:DatatypeProperty,
     rdfs:label "denominazione ente previdenziale"@it,
         "name of social security institution"@en ;
     rdfs:domain CUStatement:DatiPrevidenzialiEAssistenzialiAltriEnti,
-        CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+        CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica la denominazione dell’Ente previdenziale"@it,
         "Indicates the name of the social security institution"@en .
 
@@ -2392,11 +2392,11 @@ CUStatement:descrizioneAnnotazioneCertificazioneUnica a owl:DatatypeProperty,
     rdfs:comment "Description relating to the alphabetical code corresponding to the information contained in the annotations"@en,
         "Descrizione relativa al codice alfabetico corrispondente alle informazioni contenute nelle annotazioni"@it .
 
-CUStatement:descrizioneTipologiaRedditualeLavoroAutonomoProvigioniERedditiDiversi a owl:DatatypeProperty,
+CUStatement:descrizioneTipologiaRedditualeLavoroAutonomoProvvigioniERedditiDiversi a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "description income type self-employment commissions and other income"@en,
-        "descrizione tipologia reddituale lavoro autonomo provigioni e redditi diversi"@it ;
-    rdfs:domain CUStatement:TipologiaRedditualeLavoroAutonomoProvigioniERedditiDiversi ;
+        "descrizione tipologia reddituale lavoro autonomo provvigioni e redditi diversi"@it ;
+    rdfs:domain CUStatement:TipologiaRedditualeLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "La classe indica la descrizione relativa al codice che rappresenta la tipologia di reddito erogato"@it,
         "The class indicates the description relating to the code that represents the type of income paid"@en .
 
@@ -2564,7 +2564,7 @@ CUStatement:importoAddizionaleComunaleATitoloDiAcconto a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "additional municipal amount as an advance payment"@en,
         "importo addizionale comunale a titolo di acconto"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi,
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi,
         CUStatement:RedditiErogatiDaAltriSoggettiLavoroAutonomo ;
     rdfs:comment "Indica l’importo relativo all’addizionale comunale all’IRPEF trattenuta a titolo di acconto. Nella sezione Dati Fiscali della CU Lavoro Autonomo risulta valorizzato solo nei casi in cui sono indicati i codici “N” (le indennità di trasferta, i rimborsi forfetari di spesa, i premi e i compensi erogati ai direttori artistici ed ai collaboratori tecnici per prestazioni di natura non professionale da parte di cori, bande musicali e filodrammatiche che perseguono finalità dilettantistiche) e “N1” (indennità di trasferta, rimborso forfetario di spese, premi e compensi erogati fino al 30 giugno 2023: nell’esercizio diretto di attività sportive dilettantistiche e in relazione a rapporti di collaborazione coordinata e continuativa di carattere amministrativo-gestionale di natura non professionale resi a favore di società e associazioni sportive dilettantistiche)"@it,
         "Indicates the amount relating to the municipal IRPEF surcharge withheld as an advance payment. In the Fiscal Data section of the CU Self-Employment it is valued only in cases where the codes “N” are indicated (travel allowances, lump sum reimbursements of expenses, prizes and compensation paid to artistic directors and technical collaborators for non-professional services by choirs, musical bands and amateur dramatic societies pursuing amateur purposes) and “N1” (travel allowances, lump sum reimbursement of expenses, prizes and compensation paid up to 30 June 2023: in the direct exercise of amateur sports activities and in relation to coordinated and continuous collaboration relationships of an administrative-managerial nature of a non-professional nature provided to amateur sports clubs and associations)"@en .
@@ -2573,7 +2573,7 @@ CUStatement:importoAddizionaleComunaleATitoloDiImposta a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "additional municipal tax amount"@en,
         "importo addizionale comunale a titolo di imposta"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi,
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi,
         CUStatement:RedditiErogatiDaAltriSoggettiLavoroAutonomo ;
     rdfs:comment "Indica l’importo relativo all’addizionale comunale all’IRPEF trattenuta a titolo d’imposta. Nella sezione Dati Fiscali della CU Lavoro Autonomo risulta valorizzato solo nei casi in cui sono indicati i codici “N” (le indennità di trasferta, i rimborsi forfetari di spesa, i premi e i compensi erogati ai direttori artistici ed ai collaboratori tecnici per prestazioni di natura non professionale da parte di cori, bande musicali e filodrammatiche che perseguono finalità dilettantistiche) e “N1” (indennità di trasferta, rimborso forfetario di spese, premi e compensi erogati fino al 30 giugno 2023: nell’esercizio diretto di attività sportive dilettantistiche e in relazione a rapporti di collaborazione coordinata e continuativa di carattere amministrativo-gestionale di natura non professionale resi a favore di società e associazioni sportive dilettantistiche)"@it,
         "Indicates the amount relating to the municipal IRPEF surcharge withheld as tax. In the Fiscal Data section of the CU Self-Employment it is valued only in cases where the codes “N” are indicated (travel allowances, lump sum reimbursements for expenses, prizes and compensation paid to artistic directors and technical collaborators for non-professional services by choirs, musical bands and amateur dramatic societies pursuing amateur purposes) and “N1” (travel allowances, lump sum reimbursement for expenses, prizes and compensation paid up to 30 June 2023: in the direct exercise of amateur sports activities and in relation to coordinated and continuous collaboration relationships of an administrative-managerial nature of a non-professional nature provided to amateur sports clubs and associations)"@en .
@@ -2590,7 +2590,7 @@ CUStatement:importoAddizionaleComunaleSospesaLavoroAutonomo a owl:DatatypeProper
         owl:FunctionalProperty ;
     rdfs:label "importo addizionale comunale sospesa lavoro autonomo"@it,
         "municipal additional amount suspended self-employment"@en ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi,
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi,
         CUStatement:RedditiErogatiDaAltriSoggettiLavoroAutonomo ;
     rdfs:comment "Indica l’addizionale comunale all’IRPEF eventualmente non trattenuta per effetto delle disposizioni emanate a seguito di eventi eccezionali"@it,
         "Indicates the municipal additional IRPEF tax that may not be withheld as a result of provisions issued following exceptional events"@en .
@@ -2607,7 +2607,7 @@ CUStatement:importoAddizionaleRegionaleATitoloDiAcconto a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "additional regional amount as an advance payment"@en,
         "importo addizionale regionale a titolo di acconto"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi,
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi,
         CUStatement:RedditiErogatiDaAltriSoggettiLavoroAutonomo ;
     rdfs:comment "Indica l’importo relativo all’addizionale regionale all’IRPEF trattenuta a titolo di acconto. Nella sezione Dati Fiscali della CU Lavoro Autonomo risulta valorizzato solo nei casi in cui sono indicati i codici “N” (le indennità di trasferta, i rimborsi forfetari di spesa, i premi e i compensi erogati ai direttori artistici ed ai collaboratori tecnici per prestazioni di natura non professionale da parte di cori, bande musicali e filodrammatiche che perseguono finalità dilettantistiche) e “N1” (indennità di trasferta, rimborso forfetario di spese, premi e compensi erogati fino al 30 giugno 2023: nell’esercizio diretto di attività sportive dilettantistiche e in relazione a rapporti di collaborazione coordinata e continuativa di carattere amministrativo-gestionale di natura non professionale resi a favore di società e associazioni sportive dilettantistiche)"@it,
         "Indicates the amount relating to the regional IRPEF surcharge withheld as an advance payment. In the Fiscal Data section of the CU Self-Employment it is valued only in cases where the codes “N” are indicated (travel allowances, lump sum reimbursements for expenses, prizes and compensation paid to artistic directors and technical collaborators for non-professional services by choirs, musical bands and amateur dramatic societies pursuing amateur purposes) and “N1” (travel allowances, lump sum reimbursement for expenses, prizes and compensation paid up to 30 June 2023: in the direct exercise of amateur sports activities and in relation to coordinated and continuous collaboration relationships of an administrative-managerial nature of a non-professional nature provided to amateur sports clubs and associations)"@en .
@@ -2616,7 +2616,7 @@ CUStatement:importoAddizionaleRegionaleATitoloDiImposta a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "additional regional tax amount"@en,
         "importo addizionale regionale a titolo di imposta"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi,
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi,
         CUStatement:RedditiErogatiDaAltriSoggettiLavoroAutonomo ;
     rdfs:comment "Indica l’importo relativo all’addizionale regionale all’IRPEF trattenuta a titolo d’imposta. Nella sezione Dati Fiscali della CU Lavoro Autonomo risulta valorizzato solo nei casi in cui sono indicati i codici “N” (le indennità di trasferta, i rimborsi forfetari di spesa, i premi e i compensi erogati ai direttori artistici ed ai collaboratori tecnici per prestazioni di natura non professionale da parte di cori, bande musicali e filodrammatiche che perseguono finalità dilettantistiche) e “N1” (indennità di trasferta, rimborso forfetario di spese, premi e compensi erogati fino al 30 giugno 2023: nell’esercizio diretto di attività sportive dilettantistiche e in relazione a rapporti di collaborazione coordinata e continuativa di carattere amministrativo-gestionale di natura non professionale resi a favore di società e associazioni sportive dilettantistiche)"@it,
         "Indicates the amount relating to the regional IRPEF surcharge withheld as tax. In the Fiscal Data section of the CU Self-Employment it is valued only in cases where the codes “N” are indicated (travel allowances, lump sum reimbursements for expenses, prizes and compensation paid to artistic directors and technical collaborators for non-professional services by choirs, musical bands and amateur dramatic societies pursuing amateur purposes) and “N1” (travel allowances, lump sum reimbursement for expenses, prizes and compensation paid up to 30 June 2023: in the direct exercise of amateur sports activities and in relation to coordinated and continuous collaboration relationships of an administrative-managerial nature of a non-professional nature provided to amateur sports clubs and associations)"@en .
@@ -2625,7 +2625,7 @@ CUStatement:importoAddizionaleRegionaleSospesaLavoroAutonomo a owl:DatatypePrope
         owl:FunctionalProperty ;
     rdfs:label "additional regional amount suspended self-employment"@en,
         "importo addizionale regionale sospesa lavoro autonomo"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi,
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi,
         CUStatement:RedditiErogatiDaAltriSoggettiLavoroAutonomo ;
     rdfs:comment "Indica l’Addizionale regionale all’IRPEF eventualmente non trattenuta per effetto delle disposizioni emanate a seguito di eventi eccezionali"@it,
         "Indicates the regional IRPEF surcharge that may not be withheld as a result of provisions issued following exceptional events"@en .
@@ -2722,7 +2722,7 @@ CUStatement:importoAltriContributiLavoroAutonomoInAnnoCorrente a owl:DatatypePro
         owl:FunctionalProperty ;
     rdfs:label "amount of other self-employment contributions in current year"@en,
         "importo altri contributi lavoro autonomo in anno corrente"@it ;
-    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica il totale dei contributi versati per l’anno di riferimento, relativi al versamento di altri contributi obbligatori"@it,
         "Indicates the total contributions paid for the reference year, relating to the payment of other mandatory contributions"@en .
 
@@ -2819,7 +2819,7 @@ CUStatement:importoContributiDovutiLavoroAutonomo a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "amount of contributions due for self-employment"@en,
         "importo contributi dovuti lavoro autonomo"@it ;
-    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica il totale dei contributi dovuti all’Ente in base alle aliquote stabilite dalla normativa di riferimento"@it,
         "Indicates the total contributions due to the Institution based on the rates established by the relevant legislation"@en .
 
@@ -2923,7 +2923,7 @@ CUStatement:importoContributiPrevidenzialiACaricoDelPercipiente a owl:DatatypePr
         owl:FunctionalProperty ;
     rdfs:label "amount of social security contributions payable by the recipient"@en,
         "importo contributi previdenziali a carico del percipiente"@it ;
-    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica l'importo dei contributi previdenziali a carico del percipiente dovuti in relazione ai redditi contrassegnati dal codice di causale tipologia reddituale “C” nonché ai redditi annui superiori a euro 5.000 derivanti dalle attività contrassegnate dal codice di causale tipologia reddituale “M”, “M1” e“V”.Per gli iscritti ENPAM, in questi punti indica anche l’importo dei contributi previdenziali dovuti in relazione ai redditi contrassegnati dal codice di causale tipologia reddituale “A”o in relazione al fatturato di cui all’art. 1, comma 39, della legge 23 agosto 2004, n. 243.Per gli iscritti ENPAPI, indicare anche l’importo dei contributi dovuti in relazione ai redditi annui derivanti dall’attività con codice di causale tipologia reddituale “M2”.Per gli iscritti all’INPS gestione ex ENPALS indicare i contributi previdenziali dovuti in relazione ai redditi contrassegnati dal codice di causale tipologia reddituale “A”, “O”, “O1”"@it,
         "Indicates the amount of social security contributions payable by the recipient due in relation to the income marked with the reason code income type “C” as well as to the annual income exceeding €5,000 deriving from the activities marked with the reason code income type “M”, “M1” and “V”. For ENPAM members, in these points also indicate the amount of social security contributions due in relation to the income marked with the reason code income type “A” or in relation to the turnover referred to in art. 1, paragraph 39, of Law 23 August 2004, no. 243. For ENPAPI members, also indicate the amount of contributions due in relation to the annual income deriving from the activity with reason code income type “M2”. For INPS management ex ENPALS members, indicate the social security contributions due in relation to the income marked with the reason code income type “A”, “O”, “O1”"@en .
 
@@ -2931,7 +2931,7 @@ CUStatement:importoContributiPrevidenzialiACaricoDelSoggettoErogante a owl:Datat
         owl:FunctionalProperty ;
     rdfs:label "amount of social security contributions paid by the paying entity"@en,
         "importo contributi previdenziali a carico del soggetto erogante"@it ;
-    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica l'importo dei contributi previdenziali a carico del soggetto erogante in relazione ai redditi contrassegnati dal codice di causale tipologia reddituale “C” nonché ai redditi annui superiori a euro 5.000 derivanti dalle attività contrassegnate dal codice di causale tipologia reddituale “M”, “M1” e“V”.Per gli iscritti ENPAM, in questi punti indica anche l’importo dei contributi previdenziali dovuti in relazione ai redditi contrassegnati dal codice di causale tipologia reddituale “A”o in relazione al fatturato di cui all’art. 1, comma 39, della legge 23 agosto 2004, n. 243.Per gli iscritti ENPAPI, indicare anche l’importo dei contributi dovuti in relazione ai redditi annui derivanti dall’attività con codice di causale tipologia reddituale “M2”.Per gli iscritti all’INPS gestione ex ENPALS indicare i contributi previdenziali dovuti in relazione ai redditi contrassegnati dal codice di causale tipologia reddituale “A”, “O”, “O1”"@it,
         "Indicates the amount of social security contributions payable by the paying entity in relation to the income marked with the reason code income type “C” as well as to the annual income exceeding €5,000 deriving from the activities marked with the reason code income type “M”, “M1” and “V”. For ENPAM members, in these points also indicate the amount of social security contributions due in relation to the income marked with the reason code income type “A” or in relation to the turnover referred to in art. 1, paragraph 39, of Law 23 August 2004, no. 243. For ENPAPI members, also indicate the amount of contributions due in relation to the annual income deriving from the activity with reason code income type “M2”. For INPS management ex ENPALS members, indicate the social security contributions due in relation to the income marked with the reason code income type “A”, “O”, “O1”"@en .
 
@@ -3009,7 +3009,7 @@ CUStatement:importoContributiVersatiLavoroAutonomo a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "amount of contributions paid for self-employment"@en,
         "importo contributi versati lavoro autonomo"@it ;
-    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica il totale dei contributi effettivamente versati dal sostituto d’imposta all’Ente previdenziale competente"@it,
         "Indicates the total contributions actually paid by the tax substitute to the competent social security institution"@en .
 
@@ -3198,7 +3198,7 @@ CUStatement:importoImponibileLavoroAutonomoInAnniPrecedenti a owl:DatatypeProper
         owl:FunctionalProperty ;
     rdfs:label "importo imponibile lavoro autonomo in anni precedenti"@it,
         "Taxable amount self-employed in previous years"@en ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment " Indicates the amount of sums paid in previous years in the event of advances"@en,
         "Indica l’eventuale ammontare delle somme corrisposte negli anni precedenti in caso di anticipazioni "@it .
 
@@ -3206,7 +3206,7 @@ CUStatement:importoImponibileLavoroAutonomoInAnnoCorrente a owl:DatatypeProperty
         owl:FunctionalProperty ;
     rdfs:label "importo imponibile lavoro autonomo in anno corrente"@it,
         "Taxable amount for self-employment in current year"@en ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indical’imponibile determinato dalla differenza tra l’ammontare lordo e le somme non soggette a ritenute"@it,
         "Indicates the taxable amount determined by the difference between the gross amount and the amounts not subject to withholding taxes"@en .
 
@@ -3384,7 +3384,7 @@ CUStatement:importoLordoCorrisposto a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "gross amount paid"@en,
         "importo lordo corrisposto"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica l’ammontare lordo del compenso corrisposto al netto dell’IVA eventualmente dovuta. Il contributo integrativo del 2% o 4% destinato alle Casse professionali non fa parte del compenso e, quindi, non viene indicato. Devono essere indicati anche i compensi erogati ai soggetti che godono di regimi agevolati: Regime forfettario e Lavoratori impatriati"@it,
         "Indicates the gross amount of the compensation paid net of any VAT due. The additional contribution of 2% or 4% destined for the professional Funds is not part of the compensation and, therefore, is not indicated. The compensation paid to subjects who benefit from preferential regimes: Flat-rate regime and repatriated workers"@en .
 
@@ -3745,7 +3745,7 @@ CUStatement:importoRitenuteATitoloDiAccontoInAnnoCorrente a owl:DatatypeProperty
         owl:FunctionalProperty ;
     rdfs:label "amount of withholdings as advance payment in the current year"@en,
         "importo ritenute a titolo di acconto in anno corrente"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica l’importo delle ritenute d’acconto operate nell’anno"@it,
         "Indicates the amount of withholding taxes applied in the year"@en .
 
@@ -3769,7 +3769,7 @@ CUStatement:importoRitenuteATitoloDiImpostaInAnnoCorrente a owl:DatatypeProperty
         owl:FunctionalProperty ;
     rdfs:label "Amount of withholding tax in current year"@en,
         "importo ritenute a titolo di imposta in anno corrente"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica l’importo delle ritenute a titolo di imposta operate nell’anno"@it,
         "Indicates the amount of tax withholdings made in the year"@en .
 
@@ -3793,7 +3793,7 @@ CUStatement:importoRitenuteLavoroAutonomoInAnniPrecedenti a owl:DatatypeProperty
         owl:FunctionalProperty ;
     rdfs:label "amount of withholdings for self-employment in previous years"@en,
         "importo ritenute lavoro autonomo in anni precedenti"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica  in caso di anticipazioni le ritenute dell'ammontare delle somme corrisposte negli anni precedenti"@it,
         "Indicates in case of advances the withholdings of the amount of the sums paid in previous years"@en .
 
@@ -3825,7 +3825,7 @@ CUStatement:importoRitenuteRimborsateLavoroAutonomo a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "Amount of withholdings refunded for self-employed workers"@en,
         "importo ritenute rimborsate lavoro autonomo"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica l’importo delle ritenute rimborsate ai sensi dell’art. 4 del D.Lgs. 30 maggio 2005 n. 143 nei soli casi il cui codice della tipologia reddituale è \"X\" (canoni corrisposti nel 2004 da società o enti residenti ovvero da stabili organizzazioni di società estere di cui all’art. 26-quater, comma 1, lett. a) e b) del D.P.R. 600 del 29 settembre 1973, a società o stabili organizzazioni di società, situate in altro stato membro dell’Unione Europea in presenza dei requisiti di cui al citato art. 26-quater, del D.P.R. 600 del 29 settembre 1973, per i quali è stato effettuato, nell’anno 2006, il rimborso della ritenuta ai sensi dell’art. 4 del D.Lgs. 30 maggio 2005 n. 143) o “Y” (canoni corrisposti dal 1° gennaio 2005 al 26 luglio 2005 da società o enti residenti ovvero da stabili organizzazioni di società estere di cui all’art. 26-quater, comma 1, lett. a) e b) del D.P.R. n. 600 del 29 settembre 1973, a società o stabili organizzazioni di società, situate in altro stato membro dell’Unione Europea in presenza dei requisiti di cui al citato art. 26-quater, del D.P.R. n. 600 del 29 settembre 1973, per i quali è stato effettuato, nell’anno 2006, il rimborso della ritenuta ai sensi dell’art. 4 del D.Lgs. 30 maggio 2005 n. 143)"@it,
         "Indicates the amount of withholdings refunded pursuant to art. 4 of Legislative Decree no. 143 of 30 May 2005 only in cases where the income type code is \"X\" (fees paid in 2004 by resident companies or entities or by permanent establishments of foreign companies pursuant to art. 26-quater, paragraph 1, letters a) and b) of Presidential Decree no. 600 of 29 September 1973, to companies or permanent establishments of companies located in another member state of the European Union in the presence of the requirements set out in the aforementioned art. 26-quater of Presidential Decree no. 600 of 29 September 1973, for which the refund of the withholding tax pursuant to art. 4 of Legislative Decree no. 143 of 30 May 2005 was made in 2006). 143) or “Y” (fees paid from 1 January 2005 to 26 July 2005 by resident companies or entities or by permanent establishments of foreign companies as per art. 26-quater, paragraph 1, letters a) and b) of Presidential Decree no. 600 of 29 September 1973, to companies or permanent establishments of companies, located in another member state of the European Union in the presence of the requirements set out in the aforementioned art. 26-quater, of Presidential Decree no. 600 of 29 September 1973, for which, in 2006, the withholding tax refund was made pursuant to art. 4 of Legislative Decree no. 143 of 30 May 2005)"@en .
 
@@ -3849,7 +3849,7 @@ CUStatement:importoRitenuteSospeseLavoroAutonomoInAnnoCorrente a owl:DatatypePro
         owl:FunctionalProperty ;
     rdfs:label "Amount of withholdings suspended for self-employment in the current year"@en,
         "importo ritenute sospese lavoro autonomo in anno corrente"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi,
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi,
         CUStatement:RedditiErogatiDaAltriSoggettiLavoroAutonomo ;
     rdfs:comment "Indica le ritenute eventualmente non operate per effetto delle disposizioni emanate a seguito di eventi eccezionali"@it,
         "Indicates any withholdings not applied as a result of provisions issued following exceptional events"@en .
@@ -3930,7 +3930,7 @@ CUStatement:importoSommeCorrisposteDalCuratoreOCommissario a owl:DatatypePropert
         owl:FunctionalProperty ;
     rdfs:label "amount of sums paid by the curator or commissioner"@en,
         "importo somme corrisposte dal curatore o commissario"@it ;
-    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica la parte dei compensi imponibili erogata dal curatore fallimentare o commissario liquidatore nel caso in cui il rappresentante firmatario della dichiarazione sia un curatore fallimentare o un commissario liquidatore"@it,
         "Indicates the portion of taxable compensation paid by the bankruptcy trustee or liquidator in the event that the representative signing the declaration is a bankruptcy trustee or liquidator"@en .
 
@@ -3938,7 +3938,7 @@ CUStatement:importoSommeCorrispostePrimaDellaDataDiFallimento a owl:DatatypeProp
         owl:FunctionalProperty ;
     rdfs:label "amount of sums paid before the bankruptcy date"@en,
         "importo somme corrisposte prima della data di fallimento"@it ;
-    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica la parte dei compensi imponibili erogata dal dichiarante prima dell’apertura della procedura fallimentare nel caso in cui il rappresentante firmatario della dichiarazione sia un curatore fallimentare o un commissario liquidatore"@it,
         "Indicates the portion of taxable compensation paid by the declarant before the opening of bankruptcy proceedings in the event that the representative signing the declaration is a bankruptcy trustee or a liquidator"@en .
 
@@ -3962,7 +3962,7 @@ CUStatement:importoSommeNonAssoggettateARitenutaPerRegimeConvenzionale a owl:Dat
         owl:FunctionalProperty ;
     rdfs:label "amount of sums not subject to withholding tax under the conventional regime"@en,
         "importo somme non assoggettate a ritenuta per regime convenzionale"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica le somme erogate a soggetto non residente e non assoggettate a ritenuta in virtù delle convenzioni internazionali contro la doppia imposizione. Nel caso il sostituto di imposta deve conservare, ed esibire a richiesta, il certificato di residenza fiscale del percipiente rilasciato dalla competente autorità fiscale estera. Se esiste un modello convenzionale quest’ultimo sostituisce la predetta documentazione. Gli importi indicati in questo punto sono sempre ricompresi anche nell'ammontare lordo corrisposto"@it,
         "Indicates the sums paid to a non-resident subject and not subject to withholding tax by virtue of international conventions against double taxation. In this case, the tax substitute must retain, and exhibit upon request, the recipient's tax residence certificate issued by the competent foreign tax authority . If a conventional model exists, this replaces the aforementioned documentation. The amounts indicated in this point are always included in the gross amount paid"@en .
 
@@ -3978,7 +3978,7 @@ CUStatement:importoSommeRestituiteAlNettoRitenutaSubitaLavoroAutonomo a owl:Data
         owl:FunctionalProperty ;
     rdfs:label "amount of sums returned net of withholding tax suffered self-employment"@en,
         "importo somme restituite al netto ritenuta subita lavoro autonomo"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica le somme restituite al soggetto erogatore se assoggettate a tassazione in anni precedente (ex art. 10, co. 1 lett. d-bis) del TUIR). Le somme restituite al soggetto erogatore, se assoggettate a ritenute, devono essere restituite al netto della stessa, e non costituiscono oneri deducibili"@it,
         "Indicates the sums returned to the provider if subject to taxation in previous years (pursuant to art. 10, co. 1, letter d-bis) of the TUIR). The sums returned to the provider, if subject to withholdings, must be returned net of the same, and do not constitute deductible charges."@en .
 
@@ -3986,7 +3986,7 @@ CUStatement:importoSpeseRimborsateLavoroAutonomo a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "amount of expenses reimbursed self-employed work"@en,
         "importo spese rimborsate lavoro autonomo"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Indica le spese sostenute da soggetti esercenti attività di lavoro autonomo occasionale rimborsate dal committente ai fini previdenziali la contribuzione è calcolata sul compenso lordo dedotte le spese poste a carico del committente"@it,
         "Indicates the expenses incurred by individuals carrying out occasional self-employed work reimbursed by the client for social security purposes. The contribution is calculated on the gross compensation minus the expenses charged to the client."@en .
 
@@ -4773,7 +4773,7 @@ CUStatement:presenzaAltriContributiObbligatoriLavoroAutonomo a owl:DatatypePrope
         owl:FunctionalProperty ;
     rdfs:label "presence of other mandatory contributions self-employment"@en,
         "presenza altri contributi obbligatori lavoro autonomo"@it ;
-    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "Barrato indica il caso di versamento di altri contributi obbligatori (es. contribuzione dovuta in caso di opzione dell’iscritto ENPAM per un’aliquota contributiva di tipo modulare). Il campo risulta barrato anche in caso di contribuzione dovuta ai sensi dell’art. 86 del D.Lgs. 18 agosto 2000 n. 267 (Testo unico delle leggi sull’ordinamento degli enti locali) per gli amministratori locali iscritti agli Enti previdenziali di cui al D.Lgs. 509/1994 e al D.Lgs. n. 103/1996"@it,
         "Crossed out indicates the case of payment of other mandatory contributions (e.g. contribution due in case of ENPAM member's option for a modular contribution rate). The field is also crossed out in case of contribution due pursuant to art. 86 of Legislative Decree 18 August 2000 n. 267 (Consolidated law on the organization of local authorities) for local administrators registered with the social security institutions referred to in Legislative Decree 509/1994 and Legislative Decree n. 103/1996"@en .
 
@@ -4859,7 +4859,7 @@ CUStatement:presenzaDirittoAnticipazioneAnnoCorrente a owl:DatatypeProperty,
         owl:FunctionalProperty ;
     rdfs:label "presence of right to advance payment in the current year"@en,
         "presenza diritto anticipazione anno corrente"@it ;
-    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+    rdfs:domain CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
     rdfs:comment "If ticked, indicate that the year preceding the year of declaration was indicated in the year of right of collection, therefore these are advances."@en,
         "Indica se barrata il caso in cui nell'anno di diritto della percezione è stato indicato l’anno precedente a quello dichiarativo, quindi trattasi di anticipazioni"@it .
 
@@ -5655,14 +5655,14 @@ CUStatement:CasiParticolariOperazioniStraordinarie a owl:Class ;
     rdfs:comment "La classe i dati relativi ad operazioni straordinarie con estinzione del sostituto d’imposta e con prosecuzione dell’attività da parte di altro sostituto"@it,
         "The class of data relating to extraordinary transactions with the extinction of the tax substitute and with the continuation of the activity by another substitute"@en .
 
-CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi a owl:Class ;
+CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty CUStatement:certificaDatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ;
+            owl:onProperty CUStatement:certificaDatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ;
             owl:someValuesFrom owl:Thing ],
         [ a owl:Restriction ;
-            owl:onProperty CUStatement:certificaDatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ;
+            owl:onProperty CUStatement:certificaDatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Certificazione Lavoro Autonomo Provigioni e Redditi Diversi"@it,
+    rdfs:label "Certificazione Lavoro Autonomo Provvigioni e Redditi Diversi"@it,
         "Self-employment certification and various incomes"@en,
         "Self-Employment Certification Commissions and Other Income"@en ;
     rdfs:comment "La classe rappresenta i dati della certificazione unica lavoratori autonomi che certifica i redditi soggetti a ritenuta d’acconto, erogati nell’anno di imposta precedente. La certificazione unica è obbligatoria per tutti i compensi per prestazioni di lavoro autonomo corrisposti, a titolo di prestazione occasionale o con Partita IVA, ad artisti e professionisti"@it,
@@ -5733,7 +5733,7 @@ CUStatement:CertificazioneLocazioniBrevi a owl:Class ;
 CUStatement:CertificazioneRedditoAnnoDiRiferimento a owl:Class ;
     owl:equivalentClass [ a owl:Class ;
             owl:unionOf (
-                    CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi
+                    CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi
                     CUStatement:CertificazioneLavoroDipendenteAssimilatoEAssistenzaFiscale
                     CUStatement:CertificazioneLocazioniBrevi ) ],
         [ a owl:Restriction ;
@@ -5899,7 +5899,7 @@ CUStatement:DatiAssicurativiINAIL a owl:Class ;
     rdfs:comment "La classe rappresenta tutti i dati assicurativi relativi all’INAIL"@it,
         "The class represents all the insurance data relating to INAIL"@en .
 
-CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi a owl:Class ;
+CUStatement:DatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:onProperty CUStatement:importoAddizionaleComunaleATitoloDiAcconto ;
             owl:someValuesFrom rdfs:Literal ],
@@ -5952,9 +5952,9 @@ CUStatement:DatiFiscaliLavoroAutonomoProvigioniERedditiDiversi a owl:Class ;
             owl:onProperty CUStatement:importoSpeseRimborsateLavoroAutonomo ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf CUStatement:certificaDatiFiscaliLavoroAutonomoProvigioniERedditiDiversi ] ;
+            owl:onProperty [ owl:inverseOf CUStatement:certificaDatiFiscaliLavoroAutonomoProvvigioniERedditiDiversi ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Dati Fiscali Lavoro Autonomo Provigioni E Redditi Diversi"@it,
+    rdfs:label "Dati Fiscali Lavoro Autonomo Provvigioni E Redditi Diversi"@it,
         "Self-Employment Tax Data Commissions and Other Income"@en ;
     rdfs:comment "La classe rappresenta i dati fiscali della certificazione unica lavoratori autonomi"@it,
         "The class represents the tax data of the single certification for self-employed workers"@en .
@@ -6139,7 +6139,7 @@ CUStatement:DatiPrevidenzialiEAssistenzialiSociCooperativeArtigiane a owl:Class 
     rdfs:comment "La classe rappresenta la sezione relativa ai redditi ai fini previdenziali corrisposti dal Sostituto d’imposta, che riveste la tipologia di “Cooperativa artigiana”, ai soci come previsto dalla legge 28 dicembre 2015, n. 208, art. 1, comma 114, e che hanno compilato il punto 8 della sezione “dati anagrafici relativi al dipendente” e hanno inserito il codice Z3, poiché titolari di un rapporto di lavoro in forma autonoma ai sensi dell’articolo 1, comma 3, della legge 3 aprile 2001, n. 142"@it,
         "The class represents the section relating to income for social security purposes paid by the Tax Withholding Agent, which has the type of “Artisan Cooperative”, to the members as provided for by Law 28 December 2015, n. 208, art. 1, paragraph 114, and who have filled in point 8 of the section “personal data relating to the employee” and have entered the code Z3, since they are holders of an independent employment relationship pursuant to Article 1, paragraph 3, of Law 3 April 2001, n. 142"@en .
 
-CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi a owl:Class ;
+CUStatement:DatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
             owl:onProperty CUStatement:categoriaAppartenenzaIscrittoAEntePrevidenziale ;
             owl:someValuesFrom rdfs:Literal ],
@@ -6165,9 +6165,9 @@ CUStatement:DatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi a owl:Class
             owl:onProperty CUStatement:importoContributiVersatiLavoroAutonomo ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf CUStatement:certificaDatiPrevidenzialiLavoroAutonomoProvigioniERedditiDiversi ] ;
+            owl:onProperty [ owl:inverseOf CUStatement:certificaDatiPrevidenzialiLavoroAutonomoProvvigioniERedditiDiversi ] ;
             owl:someValuesFrom owl:Thing ] ;
-    rdfs:label "Dati Previdenziali Lavoro Autonomo Provigioni E Redditi Diversi"@it,
+    rdfs:label "Dati Previdenziali Lavoro Autonomo Provvigioni E Redditi Diversi"@it,
         "Social Security Data Self-Employment Commissions and Miscellaneous Income"@en ;
     rdfs:comment "La classe rappresenta i dati previdenziali della Certificazione unica Lavoro Autonomo, Provvigioni e redditi diversi in relazione ai percipienti iscritti:- All’Enpam (Ente di previdenza ed assistenza dei medici e odontoiatri);- All’Enpapi (Ente nazionale di previdenza ed assistenza della professione infermieristica);- All’INPS gestione ex Enpals (Ente nazionale di previdenza ed assistenza per lavoratori dello spettacolo)."@it,
         "The class represents the social security data of the Single Certification for Self-Employment, Commissions and other income in relation to the recipients registered with: - Enpam (Social security and assistance institution for doctors and dentists); - Enpapi (National social security and assistance institution for the nursing profession); - INPS management ex Enpals (National social security and assistance institution for entertainment workers)."@en .
@@ -7144,18 +7144,18 @@ CUStatement:TipoDiComunicazione a owl:Class ;
     rdfs:comment "La classe rappresenta il riquadro dove sono presenti due diversi campi: Annullamento e Sostituzione. Il campo annullamento risulta barrato nell’ipotesi in cui il sostituto d’imposta intenda, prima della scadenza del termine di presentazione annullare una certificazione già presentata. Il campo sostituzione invece risulta barrato, nell’ipotesi in cui il sostituto d’imposta intenda, prima della scadenza del termine di presentazione sostituire una certificazione già presentata. La casella “Eventi eccezionali”, posta in alto a destra della facciata del frontespizio del presente modello, risulta compilata dal sostituto d’imposta che si avvale della sospensione del termine di presentazione della dichiarazione prevista al verificarsi di eventi eccezionali."@it,
         "The class represents the box where there are two different fields: Cancellation and Replacement. The cancellation field is crossed out in the event that the tax substitute intends, before the deadline for submission, to cancel a certification already submitted. The replacement field is crossed out, in the event that the tax substitute intends, before the deadline for submission, to replace a certification already submitted. The box “Exceptional events”, located at the top right of the front of the front page of this form, is filled in by the tax substitute who takes advantage of the suspension of the deadline for submitting the declaration provided for in the event of exceptional events."@en .
 
-CUStatement:TipologiaRedditualeLavoroAutonomoProvigioniERedditiDiversi a owl:Class ;
+CUStatement:TipologiaRedditualeLavoroAutonomoProvvigioniERedditiDiversi a owl:Class ;
     owl:equivalentClass [ a owl:Restriction ;
-            owl:onProperty CUStatement:codiceTipologiaRedditualeLavoroAutonomoProvigioniERedditiDiversi ;
+            owl:onProperty CUStatement:codiceTipologiaRedditualeLavoroAutonomoProvvigioniERedditiDiversi ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
-            owl:onProperty CUStatement:descrizioneTipologiaRedditualeLavoroAutonomoProvigioniERedditiDiversi ;
+            owl:onProperty CUStatement:descrizioneTipologiaRedditualeLavoroAutonomoProvvigioniERedditiDiversi ;
             owl:someValuesFrom rdfs:Literal ],
         [ a owl:Restriction ;
-            owl:onProperty [ owl:inverseOf CUStatement:certificaTipologiaRedditualeLavoroAutonomoProvigioniERedditiDiversi ] ;
+            owl:onProperty [ owl:inverseOf CUStatement:certificaTipologiaRedditualeLavoroAutonomoProvvigioniERedditiDiversi ] ;
             owl:someValuesFrom owl:Thing ] ;
     rdfs:label "Income Type Self-Employed Commissions and Miscellaneous Income"@en,
-        "Tipologia Reddituale Lavoro Autonomo Provigioni E Redditi Diversi"@it ;
+        "Tipologia Reddituale Lavoro Autonomo Provvigioni E Redditi Diversi"@it ;
     rdfs:comment "La classe rappresenta i dati relativi alle tipologia di reddito erogato"@it,
         "The class represents the data relating to the type of income paid"@en .
 
@@ -7488,7 +7488,7 @@ CUStatement:AgenziaDelleEntrate a owl:NamedIndividual ;
 
 [] a owl:AllDisjointClasses ;
     owl:members (
-            CUStatement:CertificazioneLavoroAutonomoProvigioniERedditiDiversi
+            CUStatement:CertificazioneLavoroAutonomoProvvigioniERedditiDiversi
             CUStatement:CertificazioneLavoroDipendenteAssimilatoEAssistenzaFiscale
             CUStatement:CertificazioneLocazioniBrevi ) .
 
