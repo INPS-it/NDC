@@ -1,0 +1,209 @@
+@prefix ns1: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns2: <http://xmlns.com/foaf/0.1/> .
+@prefix ns3: <https://w3id.org/italia/onto/NDC/> .
+@prefix ns4: <https://w3id.org/italia/onto/CLV/> .
+@prefix ns5: <http://www.w3.org/ns/dcat#> .
+@prefix ns6: <http://purl.org/dc/terms/> .
+@prefix ns7: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns8: <http://www.w3.org/ns/adms#> .
+@prefix ns9: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a <http://dati.gov.it/onto/dcatapit#Organization>,
+        ns7:Kind,
+        ns7:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Central Directorate for Technology, IT and Innovation",
+        "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns6:identifier "DirezioneCentraleTII" ;
+    ns7:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns7:hasEmail "mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it" ;
+    ns2:name "Central Directorate for Technology, IT and Innovation",
+        "Direzione Centrale Tecnologia, Informatica e Innovazione" .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a <http://dati.gov.it/onto/dcatapit#Agent>,
+        ns2:Agent,
+        <https://w3id.org/italia/onto/COV/PublicOrganization>,
+        owl:NamedIndividual ;
+    rdfs:label "Istituto Nazionale della Previdenza Sociale",
+        "National Institute for Social Security" ;
+    ns6:identifier "inps" ;
+    ns2:name "Istituto Nazionale della Previdenza Sociale",
+        "National Institute for Social Security" .
+
+### Annotations
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> a <http://dati.gov.it/onto/dcatapit#Dataset>,
+        ns1:ConceptScheme,
+        ns8:Asset ;
+    rdfs:label "Controlled vocabulary of the type of worker absence adopted by INPS",
+        "Vocabolario controllato sul tipo di assenza del lavoratore adottato dall'INPS" ;
+    ns1:prefLabel "Vocabolario controllato sul tipo di assenza del lavoratore adottato dall'INPS" ;
+    rdfs:comment "Classification of the type of worker absence.",
+        "Classificazione della tipologia di assenza del lavoratore." ;
+    owl:versionInfo "1.0" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> ;
+    ns6:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    ns6:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    ns6:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns6:description "Classification of the type of worker absence.",
+        "Classificazione della tipologia di assenza del lavoratore." ;
+    ns6:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza" ;
+    ns6:issued "2026-05-06" ;
+    ns6:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns6:license <https://creativecommons.org/licenses/by/4.0/> ;
+    ns6:modified "2026-05-06" ;
+    ns6:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns6:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns6:title "Controlled vocabulary of the type of worker absence adopted by INPS",
+        "Vocabolario controllato sul tipo di assenza del lavoratore adottato dall'INPS" ;
+    ns6:type <http://purl.org/adms/assettype/CodeList> ;
+    ns9:numberOfLevels "1" ;
+    ns1:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/1>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/2>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/3>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/4>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/5>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/6>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/7>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/8>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/9> ;
+    ns8:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    ns5:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    ns5:distribution <https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_assenza/distribution/TA_CSV>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_assenza/distribution/TA_JSON_LD>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_assenza/distribution/TA_RDF_TURTLE> ;
+    ns5:keyword "assenza lavoratore",
+        "cisoa",
+        "inps",
+        "worker absence" ;
+    ns5:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    ns3:keyConcept "tipologia_assenza" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/A> a ns1:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAssenza> ;
+    rdfs:label "aspettativa"@it ;
+    ns1:prefLabel "aspettativa"@it ;
+    ns6:identifier "A" ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> ;
+    ns1:notation "A" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/AV> a ns1:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAssenza> ;
+    rdfs:label "assenza volontaria"@it ;
+    ns1:prefLabel "assenza volontaria"@it ;
+    ns6:identifier "AV" ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> ;
+    ns1:notation "AV" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/F> a ns1:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAssenza> ;
+    rdfs:label "ferie"@it ;
+    ns1:prefLabel "ferie"@it ;
+    ns6:identifier "F" ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> ;
+    ns1:notation "F" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/INF> a ns1:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAssenza> ;
+    rdfs:label "infortunio"@it ;
+    ns1:prefLabel "infortunio"@it ;
+    ns6:identifier "INF" ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> ;
+    ns1:notation "INF" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/M> a ns1:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAssenza> ;
+    rdfs:label "malattia"@it ;
+    ns1:prefLabel "malattia"@it ;
+    ns6:identifier "M" ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> ;
+    ns1:notation "M" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/MAT> a ns1:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAssenza> ;
+    rdfs:label "gravidanza e puerperio"@it ;
+    ns1:prefLabel "gravidanza e puerperio"@it ;
+    ns6:identifier "MAT" ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> ;
+    ns1:notation "MAT" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/MPR> a ns1:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAssenza> ;
+    rdfs:label "malattia professionale"@it ;
+    ns1:prefLabel "malattia professionale"@it ;
+    ns6:identifier "MPR" ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> ;
+    ns1:notation "MPR" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/P> a ns1:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAssenza> ;
+    rdfs:label "permessi"@it ;
+    ns1:prefLabel "permessi"@it ;
+    ns6:identifier "P" ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> ;
+    ns1:notation "P" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/SC> a ns1:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAssenza> ;
+    rdfs:label "sciopero"@it ;
+    ns1:prefLabel "sciopero"@it ;
+    ns6:identifier "SC" ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> ;
+    ns1:notation "SC" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza/SM> a ns1:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAssenza> ;
+    rdfs:label "servizio militare"@it ;
+    ns1:prefLabel "servizio militare"@it ;
+    ns6:identifier "SM" ;
+    ns1:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_assenza> ;
+    ns1:notation "SM" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_assenza/distribution/TA_CSV> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns5:Distribution ;
+    ns6:description "Controlled vocabulary of the type of worker absence  CSV distribution",
+        "Questa è la distribuzione CSV del vocabolario controllato sul tipo di assenza del lavoratore " ;
+    ns6:format "http://publications.europa.eu/resource/authority/file-type/CSV" ;
+    ns6:license "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40" ;
+    ns6:title "Controlled vocabulary of the type of worker absence  CSV distribution",
+        "Distribuzione CSV del vocabolario controllato sul tipo di assenza del lavoratore " ;
+    ns5:accessURL "https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipologia_assenza/latest" ;
+    ns5:downloadURL "https://raw.githubusercontent.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipologia_assenza/latest/tipologia_assenza.csv" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_assenza/distribution/TA_JSON_LD> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns5:Distribution ;
+    ns6:description "Controlled vocabulary of the type of worker absence  JSON_LD distribution",
+        "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di assenza del lavoratore " ;
+    ns6:format "http://publications.europa.eu/resource/authority/file-type/JSON_LD" ;
+    ns6:license "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40" ;
+    ns6:title "Controlled vocabulary of the type of worker absence  JSON_LD distribution",
+        "Distribuzione JSON_LD del vocabolario controllato sul tipo di assenza del lavoratore " ;
+    ns5:accessURL "https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipologia_assenza/latest" ;
+    ns5:downloadURL "https://raw.githubusercontent.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipologia_assenza/latest/tipologia_assenza.json" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_assenza/distribution/TA_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns5:Distribution ;
+    ns6:description "Controlled vocabulary of the type of worker absence  RDF/turtle distribution",
+        "Questa è la distribuzione RDF/turtle del vocabolario controllato sul tipo di assenza del lavoratore " ;
+    ns6:format "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE" ;
+    ns6:license "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40" ;
+    ns6:title "Controlled vocabulary of the type of worker absence  RDF/turtle distribution",
+        "Distribuzione RDF/turtle del vocabolario controllato sul tipo di assenza del lavoratore " ;
+    ns5:accessURL "https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipologia_assenza/latest" ;
+    ns5:downloadURL "https://raw.githubusercontent.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/tipologia_assenza/latest/tipologia_assenza.ttl" .
+
+### Serialized using the ttlser deterministic serializer v1.2.0

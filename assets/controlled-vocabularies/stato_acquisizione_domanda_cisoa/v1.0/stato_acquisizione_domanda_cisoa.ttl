@@ -1,0 +1,180 @@
+@prefix ns1: <http://www.w3.org/ns/dcat#> .
+@prefix ns2: <http://purl.org/dc/terms/> .
+@prefix ns3: <https://w3id.org/italia/onto/NDC/> .
+@prefix ns4: <https://w3id.org/italia/onto/CLV/> .
+@prefix ns5: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ns6: <http://rdf-vocabulary.ddialliance.org/xkos#> .
+@prefix ns7: <http://www.w3.org/2006/vcard/ns#> .
+@prefix ns8: <http://xmlns.com/foaf/0.1/> .
+@prefix ns9: <http://www.w3.org/ns/adms#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+### Individuals
+
+<https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> a <http://dati.gov.it/onto/dcatapit#Organization>,
+        ns7:Kind,
+        ns7:Organization,
+        owl:NamedIndividual ;
+    rdfs:label "Central Directorate for Technology, IT and Innovation",
+        "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns2:identifier "DirezioneCentraleTII" ;
+    ns7:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns7:hasEmail "mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it" ;
+    ns8:name "Central Directorate for Technology, IT and Innovation",
+        "Direzione Centrale Tecnologia, Informatica e Innovazione" .
+
+<https://w3id.org/italia/social-security/data/organization/inps> a <http://dati.gov.it/onto/dcatapit#Agent>,
+        ns8:Agent,
+        <https://w3id.org/italia/onto/COV/PublicOrganization>,
+        owl:NamedIndividual ;
+    rdfs:label "Istituto Nazionale della Previdenza Sociale",
+        "National Institute for Social Security" ;
+    ns2:identifier "inps" ;
+    ns8:name "Istituto Nazionale della Previdenza Sociale",
+        "National Institute for Social Security" .
+
+### Annotations
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa> a <http://dati.gov.it/onto/dcatapit#Dataset>,
+        ns5:ConceptScheme,
+        ns9:Asset ;
+    rdfs:label "Controlled vocabulary on the type of acquisition status of the CISOA application adopted by INPS",
+        "Vocabolario controllato sul tipo di stato di acquisizione della domanda CISOA adottato dall'INPS" ;
+    ns5:prefLabel "Vocabolario controllato sul tipo di stato di acquisizione della domanda CISOA adottato dall'INPS" ;
+    rdfs:comment "Classification on the type of acquisition status of the CISOA application.",
+        "Classificazione della tipologia di stato di acquisizione della domanda CISOA." ;
+    owl:versionInfo "1.0" ;
+    rdfs:isDefinedBy <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa> ;
+    ns2:accrualPeriodicity <http://publications.europa.eu/resource/authority/frequency/IRREG> ;
+    ns2:conformsTo <https://w3id.org/italia/data/standard/SKOS> ;
+    ns2:creator <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:description "Classification on the type of acquisition status of the CISOA application.",
+        "Classificazione della tipologia di stato di acquisizione della domanda CISOA." ;
+    ns2:identifier "https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa" ;
+    ns2:issued "2026-05-06" ;
+    ns2:language <http://publications.europa.eu/resource/authority/language/ITA> ;
+    ns2:license <https://creativecommons.org/licenses/by/4.0/> ;
+    ns2:modified "2026-05-06" ;
+    ns2:publisher <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:rightsHolder <https://w3id.org/italia/social-security/data/organization/inps> ;
+    ns2:title "Controlled vocabulary on the type of acquisition status of the CISOA application adopted by INPS",
+        "Vocabolario controllato sul tipo di stato di acquisizione della domanda CISOA adottato dall'INPS" ;
+    ns2:type <http://purl.org/adms/assettype/CodeList> ;
+    ns6:numberOfLevels "1" ;
+    ns5:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/B>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/C>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/N>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/P>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/T>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/V>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/W> ;
+    ns9:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    ns1:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
+    ns1:distribution <https://w3id.org/italia/social-security/controlled-vocabulary/stato_acquisizione_domanda_cisoa/distribution/SADC_CSV>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/stato_acquisizione_domanda_cisoa/distribution/SADC_JSON_LD>,
+        <https://w3id.org/italia/social-security/controlled-vocabulary/stato_acquisizione_domanda_cisoa/distribution/SADC_RDF_TURTLE> ;
+    ns1:keyword "cisoa",
+        "cisoa application",
+        "domanda cisoa",
+        "inps" ;
+    ns1:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    ns3:keyConcept "stato_acquisizione_domanda_cisoa" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/B> a ns5:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/StatoAcquisizioneDomandaCISOA> ;
+    rdfs:label "la domanda è trasmessa alla sede di presa in carico con i beneficiari. (possono passare in B le domande che sono in P e flag protocollazione=P)"@it ;
+    ns5:prefLabel "la domanda è trasmessa alla sede di presa in carico con i beneficiari. (possono passare in B le domande che sono in P e flag protocollazione=P)"@it ;
+    ns2:identifier "B" ;
+    ns5:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa> ;
+    ns5:notation "B" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/C> a ns5:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/StatoAcquisizioneDomandaCISOA> ;
+    rdfs:label "la domanda presentata è cancellata logicamente per la sede."@it ;
+    ns5:prefLabel "la domanda presentata è cancellata logicamente per la sede."@it ;
+    ns2:identifier "C" ;
+    ns5:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa> ;
+    ns5:notation "C" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/N> a ns5:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/StatoAcquisizioneDomandaCISOA> ;
+    rdfs:label "nuova domanda (in fase di compilazione per l’azienda)"@it ;
+    ns5:prefLabel "nuova domanda (in fase di compilazione per l’azienda)"@it ;
+    ns2:identifier "N" ;
+    ns5:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa> ;
+    ns5:notation "N" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/P> a ns5:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/StatoAcquisizioneDomandaCISOA> ;
+    rdfs:label "la domanda è presentata ad INPS"@it ;
+    ns5:prefLabel "la domanda è presentata ad INPS"@it ;
+    ns2:identifier "P" ;
+    ns5:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa> ;
+    ns5:notation "P" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/T> a ns5:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/StatoAcquisizioneDomandaCISOA> ;
+    rdfs:label "la domanda è trasmessa alla sede di presa in carico. (possono passare in T le domande che sono in P e flag protocollazione=P)"@it ;
+    ns5:prefLabel "la domanda è trasmessa alla sede di presa in carico. (possono passare in T le domande che sono in P e flag protocollazione=P)"@it ;
+    ns2:identifier "T" ;
+    ns5:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa> ;
+    ns5:notation "T" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/V> a ns5:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/StatoAcquisizioneDomandaCISOA> ;
+    rdfs:label "la domanda è valida perché formalmente corretta"@it ;
+    ns5:prefLabel "la domanda è valida perché formalmente corretta"@it ;
+    ns2:identifier "V" ;
+    ns5:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa> ;
+    ns5:notation "V" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa/W> a ns5:Concept,
+        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/StatoAcquisizioneDomandaCISOA> ;
+    rdfs:label "warning. La domanda ha segnalazioni NON bloccanti;"@it ;
+    ns5:prefLabel "warning. La domanda ha segnalazioni NON bloccanti;"@it ;
+    ns2:identifier "W" ;
+    ns5:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/stato_acquisizione_domanda_cisoa> ;
+    ns5:notation "W" ;
+    ns4:hasRankOrder "1" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/stato_acquisizione_domanda_cisoa/distribution/SADC_CSV> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns1:Distribution ;
+    ns2:description "Controlled vocabulary on the type of acquisition status of the CISOA application CSV distribution",
+        "Questa è la distribuzione CSV del vocabolario controllato sul tipo di stato di acquisizione della domanda CISOA" ;
+    ns2:format "http://publications.europa.eu/resource/authority/file-type/CSV" ;
+    ns2:license "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40" ;
+    ns2:title "Controlled vocabulary on the type of acquisition status of the CISOA application CSV distribution",
+        "Distribuzione CSV del vocabolario controllato sul tipo di stato di acquisizione della domanda CISOA" ;
+    ns1:accessURL "https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/stato_acquisizione_domanda_cisoa/latest" ;
+    ns1:downloadURL "https://raw.githubusercontent.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/stato_acquisizione_domanda_cisoa/latest/stato_acquisizione_domanda_cisoa.csv" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/stato_acquisizione_domanda_cisoa/distribution/SADC_JSON_LD> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns1:Distribution ;
+    ns2:description "Controlled vocabulary on the type of acquisition status of the CISOA application JSON_LD distribution",
+        "Questa è la distribuzione JSON_LD del vocabolario controllato sul tipo di stato di acquisizione della domanda CISOA" ;
+    ns2:format "http://publications.europa.eu/resource/authority/file-type/JSON_LD" ;
+    ns2:license "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40" ;
+    ns2:title "Controlled vocabulary on the type of acquisition status of the CISOA application JSON_LD distribution",
+        "Distribuzione JSON_LD del vocabolario controllato sul tipo di stato di acquisizione della domanda CISOA " ;
+    ns1:accessURL "https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/stato_acquisizione_domanda_cisoa/latest" ;
+    ns1:downloadURL "https://raw.githubusercontent.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/stato_acquisizione_domanda_cisoa/latest/stato_acquisizione_domanda_cisoa.json" .
+
+<https://w3id.org/italia/social-security/controlled-vocabulary/stato_acquisizione_domanda_cisoa/distribution/SADC_RDF_TURTLE> a <http://dati.gov.it/onto/dcatapit#Distribution>,
+        ns1:Distribution ;
+    ns2:description "Controlled vocabulary on the type of acquisition status of the CISOA application RDF/turtle distribution",
+        "Questa è la distribuzione RDF/turtle del vocabolario controllato sul tipo di stato di acquisizione della domanda CISOA" ;
+    ns2:format "http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE" ;
+    ns2:license "https://w3id.org/italia/controlled-vocabulary/licences/A21_CCBY40" ;
+    ns2:title "Controlled vocabulary on the type of acquisition status of the CISOA application RDF/turtle distribution",
+        "Distribuzione RDF/turtle del vocabolario controllato sul tipo di stato di acquisizione della domanda CISOA" ;
+    ns1:accessURL "https://github.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/stato_acquisizione_domanda_cisoa/latest" ;
+    ns1:downloadURL "https://raw.githubusercontent.com/INPS-it/NDC/tree/main/assets/controlled-vocabularies/stato_acquisizione_domanda_cisoa/latest/stato_acquisizione_domanda_cisoa.ttl" .
+
+### Serialized using the ttlser deterministic serializer v1.2.0
