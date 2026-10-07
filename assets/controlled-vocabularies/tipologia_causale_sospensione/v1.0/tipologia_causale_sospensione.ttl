@@ -20,14 +20,14 @@
     rdfs:label "Central Directorate for Technology, IT and Innovation",
         "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
     ns1:identifier "DirezioneCentraleTII" ;
-    ns10:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
-    ns10:hasEmail "mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it" ;
     ns4:name "Central Directorate for Technology, IT and Innovation",
-        "Direzione Centrale Tecnologia, Informatica e Innovazione" .
+        "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns10:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns10:hasEmail "mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it" .
 
 <https://w3id.org/italia/social-security/data/organization/inps> a <http://dati.gov.it/onto/dcatapit#Agent>,
-        ns4:Agent,
         <https://w3id.org/italia/onto/COV/PublicOrganization>,
+        ns4:Agent,
         owl:NamedIndividual ;
     rdfs:label "Istituto Nazionale della Previdenza Sociale",
         "National Institute for Social Security" ;
@@ -62,7 +62,6 @@
     ns1:title "Controlled vocabulary of the causal type of worker suspension adopted by INPS",
         "Vocabolario controllato sul tipo di causale della sospensione del lavoratore adottato dall'INPS" ;
     ns1:type <http://purl.org/adms/assettype/CodeList> ;
-    ns8:numberOfLevels "2" ;
     ns2:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/1>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/2>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/3>,
@@ -85,7 +84,6 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/20>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22> ;
-    ns9:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
     ns6:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     ns6:distribution <https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_causale_sospensione/distribution/TCS_CSV>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_causale_sospensione/distribution/TCS_JSON_LD>,
@@ -95,7 +93,9 @@
         "cisoa",
         "inps" ;
     ns6:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
-    ns7:keyConcept "tipologia_causale_sospensione" .
+    ns7:keyConcept "tipologia_causale_sospensione" ;
+    ns8:numberOfLevels "2" ;
+    ns9:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/1> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -105,8 +105,8 @@
     ns1:type "Ordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "1" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "No" .
+    ns3:flagMassimale "No" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/2> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -116,8 +116,8 @@
     ns1:type "Ordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "2" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/3> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -127,8 +127,8 @@
     ns1:type "Ordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "3" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/4> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -138,8 +138,8 @@
     ns1:type "Ordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "4" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/5> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -149,8 +149,8 @@
     ns1:type "Ordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "5" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/6> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -160,8 +160,8 @@
     ns1:type "Ordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "6" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/7> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -171,8 +171,8 @@
     ns1:type "Straordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "7" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/8> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -182,8 +182,8 @@
     ns1:type "Straordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "8" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/9> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -193,8 +193,8 @@
     ns1:type "Straordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "9" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/10> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -204,8 +204,8 @@
     ns1:type "Straordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "10" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/11> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -215,8 +215,8 @@
     ns1:type "Ordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "11" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/12> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -226,8 +226,8 @@
     ns1:type "Ordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "12" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/13> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -237,8 +237,8 @@
     ns1:type "Straordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "13" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/14> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -248,8 +248,8 @@
     ns1:type "Ordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "14" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/15> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -259,8 +259,8 @@
     ns1:type "Straordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "15" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/16> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -270,8 +270,8 @@
     ns1:type "Straordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "16" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/17> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -281,8 +281,8 @@
     ns1:type "Ordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "17" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "No" .
+    ns3:flagMassimale "No" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/18> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -292,8 +292,8 @@
     ns1:type "Ordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "18" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "No" .
+    ns3:flagMassimale "No" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/19> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -303,8 +303,8 @@
     ns1:type "Straordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "19" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/20> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -314,8 +314,8 @@
     ns1:type "Straordinaria" ;
     ns2:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
     ns2:notation "20" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -332,8 +332,8 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-06>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-07> ;
     ns2:notation "21" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-01> a ns2:Concept,
         ns3:CausaleSospensione ;
@@ -420,8 +420,8 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-06>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-07> ;
     ns2:notation "22" ;
-    ns5:hasRankOrder "1" ;
-    ns3:flagMassimale "Si" .
+    ns3:flagMassimale "Si" ;
+    ns5:hasRankOrder "1" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-01> a ns2:Concept,
         ns3:CausaleSospensione ;

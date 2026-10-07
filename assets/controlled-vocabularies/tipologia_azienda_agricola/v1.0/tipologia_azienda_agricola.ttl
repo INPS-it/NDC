@@ -19,14 +19,14 @@
     rdfs:label "Central Directorate for Technology, IT and Innovation",
         "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
     ns1:identifier "DirezioneCentraleTII" ;
-    ns6:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
-    ns6:hasEmail "mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it" ;
     ns4:name "Central Directorate for Technology, IT and Innovation",
-        "Direzione Centrale Tecnologia, Informatica e Innovazione" .
+        "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns6:fn "Direzione Centrale Tecnologia, Informatica e Innovazione" ;
+    ns6:hasEmail "mailto:dc.tecnologiainformaticaeinnovazione@postacert.inps.gov.it" .
 
 <https://w3id.org/italia/social-security/data/organization/inps> a <http://dati.gov.it/onto/dcatapit#Agent>,
-        ns4:Agent,
         <https://w3id.org/italia/onto/COV/PublicOrganization>,
+        ns4:Agent,
         owl:NamedIndividual ;
     rdfs:label "Istituto Nazionale della Previdenza Sociale",
         "National Institute for Social Security" ;
@@ -61,7 +61,6 @@
     ns1:title "Controlled vocabulary of the type of agricultural business adopted by INPS",
         "Vocabolario controllato sul tipo di azienda agricola adottato dall'INPS" ;
     ns1:type <http://purl.org/adms/assettype/CodeList> ;
-    ns9:numberOfLevels "1" ;
     ns2:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/A>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/AIA>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/CB>,
@@ -70,7 +69,6 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/CM>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/COOP>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/EF> ;
-    ns7:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
     ns3:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     ns3:distribution <https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_azienda_agricola/distribution/TAA_CSV>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_azienda_agricola/distribution/TAA_JSON_LD>,
@@ -80,10 +78,12 @@
         "cisoa",
         "inps" ;
     ns3:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
-    ns8:keyConcept "tipologia_azienda_agricola" .
+    ns7:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
+    ns8:keyConcept "tipologia_azienda_agricola" ;
+    ns9:numberOfLevels "1" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/A> a ns2:Concept,
-        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola> ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/A> a <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola>,
+        ns2:Concept ;
     rdfs:label "altro"@it ;
     ns2:prefLabel "altro"@it ;
     ns1:identifier "A" ;
@@ -91,8 +91,8 @@
     ns2:notation "A" ;
     ns5:hasRankOrder "1" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/AIA> a ns2:Concept,
-        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola> ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/AIA> a <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola>,
+        ns2:Concept ;
     rdfs:label "associazione allevatori"@it ;
     ns2:prefLabel "associazione allevatori"@it ;
     ns1:identifier "AIA" ;
@@ -100,8 +100,8 @@
     ns2:notation "AIA" ;
     ns5:hasRankOrder "1" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/CB> a ns2:Concept,
-        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola> ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/CB> a <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola>,
+        ns2:Concept ;
     rdfs:label "consorzio di bonifica o irrigazione"@it ;
     ns2:prefLabel "consorzio di bonifica o irrigazione"@it ;
     ns1:identifier "CB" ;
@@ -109,8 +109,8 @@
     ns2:notation "CB" ;
     ns5:hasRankOrder "1" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/CD> a ns2:Concept,
-        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola> ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/CD> a <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola>,
+        ns2:Concept ;
     rdfs:label "coltivatore diretto"@it ;
     ns2:prefLabel "coltivatore diretto"@it ;
     ns1:identifier "CD" ;
@@ -118,8 +118,8 @@
     ns2:notation "CD" ;
     ns5:hasRankOrder "1" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/CE> a ns2:Concept,
-        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola> ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/CE> a <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola>,
+        ns2:Concept ;
     rdfs:label "conduzione in economia"@it ;
     ns2:prefLabel "conduzione in economia"@it ;
     ns1:identifier "CE" ;
@@ -127,8 +127,8 @@
     ns2:notation "CE" ;
     ns5:hasRankOrder "1" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/CM> a ns2:Concept,
-        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola> ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/CM> a <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola>,
+        ns2:Concept ;
     rdfs:label "mezzadria o colonia"@it ;
     ns2:prefLabel "mezzadria o colonia"@it ;
     ns1:identifier "CM" ;
@@ -136,8 +136,8 @@
     ns2:notation "CM" ;
     ns5:hasRankOrder "1" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/COOP> a ns2:Concept,
-        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola> ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/COOP> a <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola>,
+        ns2:Concept ;
     rdfs:label "cooperativa o consorzio agricolo"@it ;
     ns2:prefLabel "cooperativa o consorzio agricolo"@it ;
     ns1:identifier "COOP" ;
@@ -145,8 +145,8 @@
     ns2:notation "COOP" ;
     ns5:hasRankOrder "1" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/EF> a ns2:Concept,
-        <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola> ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_azienda_agricola/EF> a <https://w3id.org/italia/social-security/onto/wageSubsidySchemeForAgriculturalWorkers/TipoAziendaAgricola>,
+        ns2:Concept ;
     rdfs:label "ente pubblico esercente forestazione"@it ;
     ns2:prefLabel "ente pubblico esercente forestazione"@it ;
     ns1:identifier "EF" ;

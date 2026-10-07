@@ -26,8 +26,8 @@
         "Direzione Centrale Tecnologia, Informatica e Innovazione" .
 
 <https://w3id.org/italia/social-security/data/organization/inps> a <http://dati.gov.it/onto/dcatapit#Agent>,
-        ns7:Agent,
         <https://w3id.org/italia/onto/COV/PublicOrganization>,
+        ns7:Agent,
         owl:NamedIndividual ;
     rdfs:label "Istituto Nazionale della Previdenza Sociale",
         "National Institute for Social Security" ;
@@ -62,7 +62,6 @@
     ns3:title "Controlled vocabulary of the causal type of worker suspension adopted by INPS",
         "Vocabolario controllato sul tipo di causale della sospensione del lavoratore adottato dall'INPS" ;
     ns3:type <http://purl.org/adms/assettype/CodeList> ;
-    ns8:numberOfLevels "2" ;
     ns4:hasTopConcept <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/1>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/2>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/3>,
@@ -85,7 +84,6 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/20>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22> ;
-    ns9:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
     ns6:contactPoint <https://w3id.org/italia/social-security/data/organization/DirezioneCentraleTII> ;
     ns6:distribution <https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_causale_sospensione/distribution/TCS_CSV>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_causale_sospensione/distribution/TCS_JSON_LD>,
@@ -95,232 +93,236 @@
         "cisoa",
         "inps" ;
     ns6:theme <http://publications.europa.eu/resource/authority/data-theme/SOCI> ;
+    ns8:numberOfLevels "2" ;
+    ns9:representationTechnique <http://purl.org/adms/representationtechnique/SKOS> ;
     ns10:keyConcept "tipologia_causale_sospensione" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/1> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/1> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "Avversità atmosferiche"@it ;
     ns4:prefLabel "Avversità atmosferiche"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "No" ;
     ns3:identifier "1" ;
     ns3:type "Ordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "1" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "No" .
+    ns4:notation "1" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/2> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/2> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "Stasi stagionale"@it ;
     ns4:prefLabel "Stasi stagionale"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "2" ;
     ns3:type "Ordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "2" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "2" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/3> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/3> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "Fenomeni infettivi"@it ;
     ns4:prefLabel "Fenomeni infettivi"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "3" ;
     ns3:type "Ordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "3" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "3" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/4> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/4> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "Mancanza di materie prime"@it ;
     ns4:prefLabel "Mancanza di materie prime"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "4" ;
     ns3:type "Ordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "4" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "4" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/5> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/5> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "Ristrutturazione aziendale"@it ;
     ns4:prefLabel "Ristrutturazione aziendale"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "5" ;
     ns3:type "Ordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "5" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "5" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/6> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/6> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "Motivi economici"@it ;
     ns4:prefLabel "Motivi economici"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "6" ;
     ns3:type "Ordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "6" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "6" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/7> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/7> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "Fenomeni epidemici dovuti ad Afta Epizootica"@it ;
     ns4:prefLabel "Fenomeni epidemici dovuti ad Afta Epizootica"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "7" ;
     ns3:type "Straordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "7" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "7" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/8> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/8> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "Calamità naturali (Legge 223 dell'Agosto 1991)"@it ;
     ns4:prefLabel "Calamità naturali (Legge 223 dell'Agosto 1991)"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "8" ;
     ns3:type "Straordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "8" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "8" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/9> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/9> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "Fenomeni alluvionali in Valtellina ed Alto Piemonte"@it ;
     ns4:prefLabel "Fenomeni alluvionali in Valtellina ed Alto Piemonte"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "9" ;
     ns3:type "Straordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "9" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "9" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/10> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/10> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "Calamità naturali (Legge 286 e 215/1989)"@it ;
     ns4:prefLabel "Calamità naturali (Legge 286 e 215/1989)"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "10" ;
     ns3:type "Straordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "10" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "10" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/11> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/11> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "Mancanza di lavoro/Carenza di commesse"@it ;
     ns4:prefLabel "Mancanza di lavoro/Carenza di commesse"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "11" ;
     ns3:type "Ordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "11" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "11" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/12> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/12> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "COVID-19 CISOA"@it ;
     ns4:prefLabel "COVID-19 CISOA"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "12" ;
     ns3:type "Ordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "12" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "12" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/13> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/13> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "CISOA DL RILANCIO"@it ;
     ns4:prefLabel "CISOA DL RILANCIO"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "13" ;
     ns3:type "Straordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "13" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "13" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/14> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/14> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "COVID-19 Obbligo permanenza domiciliare (esclusiva per la LOMBARDIA, VENETO ed EMILIA ROMAGNA)"@it ;
     ns4:prefLabel "COVID-19 Obbligo permanenza domiciliare (esclusiva per la LOMBARDIA, VENETO ed EMILIA ROMAGNA)"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "14" ;
     ns3:type "Ordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "14" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "14" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/15> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/15> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "COVID-19 - L.178/2020"@it ;
     ns4:prefLabel "COVID-19 - L.178/2020"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "15" ;
     ns3:type "Straordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "15" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "15" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/16> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/16> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "CISOA DL 41/2021"@it ;
     ns4:prefLabel "CISOA DL 41/2021"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "16" ;
     ns3:type "Straordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "16" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "16" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/17> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/17> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "CISOA eventi atmosferici a riduzione"@it ;
     ns4:prefLabel "CISOA eventi atmosferici a riduzione"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "No" ;
     ns3:identifier "17" ;
     ns3:type "Ordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "17" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "No" .
+    ns4:notation "17" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/18> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/18> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "CISOA eventi atmosferici a sospensione ex dl 92/2025"@it ;
     ns4:prefLabel "CISOA eventi atmosferici a sospensione ex dl 92/2025"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "No" ;
     ns3:identifier "18" ;
     ns3:type "Ordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "18" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "No" .
+    ns4:notation "18" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/19> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/19> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Sospensione attività lavorativa lavoratori con contratto attivo al 18/01"@it ;
     ns4:prefLabel "DL n. 25/2026 Sospensione attività lavorativa lavoratori con contratto attivo al 18/01"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "19" ;
     ns3:type "Straordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "19" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "19" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/20> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/20> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Sospensione attività lavorativa lavoratori senza contratto attivo al 18/01"@it ;
     ns4:prefLabel "DL n. 25/2026 Sospensione attività lavorativa lavoratori senza contratto attivo al 18/01"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "20" ;
     ns3:type "Straordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "20" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "20" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "21" ;
     ns3:type "Straordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
@@ -331,84 +333,84 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-05>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-06>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-07> ;
-    ns4:notation "21" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "21" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-01> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-01> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti a un provvedimento normativo o amministrativo direttamente connesso allo straordinario evento emergenziale"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti a un provvedimento normativo o amministrativo direttamente connesso allo straordinario evento emergenziale"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "21-01" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "21-01" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "21-01" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-02> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-02> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti alla interruzione o impraticabilità delle vie di comunicazione"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti alla interruzione o impraticabilità delle vie di comunicazione"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "21-02" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "21-02" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "21-02" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-03> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-03> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti alla inutilizzabilità dei mezzi di trasporto"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti alla inutilizzabilità dei mezzi di trasporto"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "21-03" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "21-03" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "21-03" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-04> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-04> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti alla inagibilità della abitazione di residenza o domicilio"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti alla inagibilità della abitazione di residenza o domicilio"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "21-04" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "21-04" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "21-04" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-05> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-05> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti alle condizioni di salute di familiari conviventi"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti alle condizioni di salute di familiari conviventi"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "21-05" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "21-05" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "21-05" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-06> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-06> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti ad ulteriori avvenimenti che abbiano richiesto la presenza del lavoratore in luogo diverso da quello di lavoro, tutti ricollegabili all'evento straordinario ed emergenziale"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti ad ulteriori avvenimenti che abbiano richiesto la presenza del lavoratore in luogo diverso da quello di lavoro, tutti ricollegabili all'evento straordinario ed emergenziale"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "21-06" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "21-06" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "21-06" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-07> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21-07> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti Due o più delle condizioni impeditive elencate"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori residenti Due o più delle condizioni impeditive elencate"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "21-07" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/21> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "21-07" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "21-07" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati"@it ;
+    ns1:hasRankOrder "1" ;
+    ns2:flagMassimale "Si" ;
     ns3:identifier "22" ;
     ns3:type "Straordinaria" ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
@@ -419,79 +421,77 @@
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-05>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-06>,
         <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-07> ;
-    ns4:notation "22" ;
-    ns1:hasRankOrder "1" ;
-    ns2:flagMassimale "Si" .
+    ns4:notation "22" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-01> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-01> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati a un provvedimento normativo o amministrativo direttamente connesso allo straordinario evento emergenziale"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati a un provvedimento normativo o amministrativo direttamente connesso allo straordinario evento emergenziale"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "22-01" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "22-01" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "22-01" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-02> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-02> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati alla interruzione o impraticabilità delle vie di comunicazione"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati alla interruzione o impraticabilità delle vie di comunicazione"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "22-02" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "22-02" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "22-02" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-03> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-03> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati alla inutilizzabilità dei mezzi di trasporto"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati alla inutilizzabilità dei mezzi di trasporto"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "22-03" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "22-03" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "22-03" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-04> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-04> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati alla inagibilità della abitazione di residenza o domicilio"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati alla inagibilità della abitazione di residenza o domicilio"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "22-04" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "22-04" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "22-04" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-05> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-05> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati alle condizioni di salute di familiari conviventi"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati alle condizioni di salute di familiari conviventi"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "22-05" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "22-05" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "22-05" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-06> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-06> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati ad ulteriori avvenimenti che abbiano richiesto la presenza del lavoratore in luogo diverso da quello di lavoro, tutti ricollegabili all'evento straordinario ed emergenziale"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati ad ulteriori avvenimenti che abbiano richiesto la presenza del lavoratore in luogo diverso da quello di lavoro, tutti ricollegabili all'evento straordinario ed emergenziale"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "22-06" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "22-06" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "22-06" .
 
-<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-07> a ns4:Concept,
-        ns2:CausaleSospensione ;
+<https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22-07> a ns2:CausaleSospensione,
+        ns4:Concept ;
     rdfs:label "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati Due o più delle condizioni impeditive elencate"@it ;
     ns4:prefLabel "DL n. 25/2026 Impossibilità a recarsi al lavoro lavoratori domiciliati Due o più delle condizioni impeditive elencate"@it ;
+    ns1:hasRankOrder "2" ;
     ns3:identifier "22-07" ;
     ns4:broader <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione/22> ;
     ns4:inScheme <https://w3id.org/italia/social-security/controlled-vocabulary/data/tipologia_causale_sospensione> ;
-    ns4:notation "22-07" ;
-    ns1:hasRankOrder "2" .
+    ns4:notation "22-07" .
 
 <https://w3id.org/italia/social-security/controlled-vocabulary/tipologia_causale_sospensione/distribution/TCS_CSV> a <http://dati.gov.it/onto/dcatapit#Distribution>,
         ns6:Distribution ;
